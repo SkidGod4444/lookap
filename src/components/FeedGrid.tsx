@@ -1,12 +1,10 @@
-import { button } from "@/components/button";
-import Link from "next/link";
 import type { Entry } from "@/lib/data";
 import { FeedCard } from "./FeedCard";
 
-type Props = { entries: Entry[]; title?: string; blurb?: string; actions?: boolean; hero?: boolean };
+type Props = { entries: Entry[]; title?: string; blurb?: string; hero?: boolean };
 
 /* Four columns at desktop, dealt to the shortest column so heights stay even. The hero takes the first cell. */
-export function FeedGrid({ entries, title, blurb, actions = true, hero = true }: Props) {
+export function FeedGrid({ entries, title, blurb, hero = true }: Props) {
   const cols: Entry[][] = [[], [], [], []];
   const h = [hero ? 1.333 : 0, 0, 0, 0];
   entries.forEach((e) => {
@@ -14,7 +12,6 @@ export function FeedGrid({ entries, title, blurb, actions = true, hero = true }:
     cols[i].push(e);
     h[i] += 1 / e.ratio + 0.03;
   });
-  const random = entries[Math.floor(entries.length / 2)];
   return (
     <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {cols.map((c, i) => (
@@ -22,15 +19,9 @@ export function FeedGrid({ entries, title, blurb, actions = true, hero = true }:
           {i === 0 && hero && (
             <section className="flex flex-col justify-end gap-5 p-1 sm:aspect-[4/3]">
               <header>
-                <h1 className="text-[22px] leading-[1.15] font-medium tracking-[-0.015em] text-balance text-foreground">{title}</h1>
-                <p className="mt-2 text-[14px] leading-normal text-pretty text-subtle">{blurb}</p>
+                <h1 className="text-[28px] leading-[1.15] font-medium tracking-[-0.02em] text-balance text-foreground">{title}</h1>
+                <p className="mt-2 text-[14px] leading-[1.55] text-pretty text-subtle">{blurb}</p>
               </header>
-              {actions && random && (
-                <div className="flex flex-wrap gap-2">
-                  <Link href={random.kind === "website" ? `/website/${random.slug}` : `/feed/${random.slug}`} className={button("outline", "h-8 rounded-full px-3.5 text-sm")}>Surprise me</Link>
-                  <Link href="/moodboards" className={button("silver", "h-8 rounded-full px-3.5 text-sm")}>Explore Moodboards</Link>
-                </div>
-              )}
             </section>
           )}
           {c.map((e) => <FeedCard key={e.slug} entry={e} />)}

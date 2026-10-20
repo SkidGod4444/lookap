@@ -15,20 +15,19 @@ export default function McpPage() {
   return (
     <div className="mx-auto flex w-full max-w-[880px] flex-col gap-10 py-10">
       <header className="flex flex-col gap-3">
-        <span className={badge("chip", "w-fit px-2.5 py-1 text-[11px] tracking-[.06em] uppercase")}>MCP registry</span>
-        <h1 className="text-[32px] leading-tight font-medium tracking-[-0.02em] text-balance text-foreground">Design knowledge your agent can call.</h1>
-        <p className="max-w-[62ch] text-[15px] leading-relaxed text-subtle">lookap is a registry, not a service. Claude Code, Codex and Cursor connect over MCP and pull curated interfaces, measured recipes and design notes while they build. Nothing runs on our side except the lookup.</p>
+        <h1 className="text-[28px] leading-[1.15] font-medium tracking-[-0.02em] text-balance text-foreground">Design knowledge your agent can call.</h1>
+        <p className="max-w-[62ch] text-[14px] leading-[1.55] text-subtle">lookap is a registry, not a service. Claude Code, Codex and Cursor connect over MCP and pull curated interfaces, measured recipes and design notes while they build. Nothing runs on our side except the lookup.</p>
       </header>
 
       <section className="flex flex-col gap-3">
-        <h2 className="text-[13px] font-medium tracking-[.06em] text-subtle uppercase">Connect</h2>
+        <h2 className="text-[11px] font-medium tracking-[.06em] text-subtle uppercase">Connect</h2>
         <pre className="overflow-x-auto rounded-xl bg-card p-4 font-mono text-[12.5px] leading-relaxed text-silver ring-1 ring-line">{`claude mcp add --transport http lookap https://lookap.app/api/mcp \\
   --header "Authorization: Bearer lk_live_…"`}</pre>
         <p className="text-[13px] text-subtle">No key? Leave the header off. The free tier answers with a sample so you can see the shape before paying. Local dev: use http://localhost:3000/api/mcp.</p>
       </section>
 
       <section className="flex flex-col gap-3">
-        <h2 className="text-[13px] font-medium tracking-[.06em] text-subtle uppercase">Tools</h2>
+        <h2 className="text-[11px] font-medium tracking-[.06em] text-subtle uppercase">Tools</h2>
         <ul className="divide-y divide-line rounded-xl bg-card ring-1 ring-line">
           {TOOLS.map(([name, what, tier]) => (
             <li key={name} className="grid gap-1 p-4 sm:grid-cols-[180px_1fr_auto] sm:items-baseline sm:gap-4">
@@ -42,13 +41,13 @@ export default function McpPage() {
 
       <section className="grid gap-6 sm:grid-cols-2">
         <div>
-          <h2 className="text-[13px] font-medium tracking-[.06em] text-subtle uppercase">Measured recipes</h2>
+          <h2 className="text-[11px] font-medium tracking-[.06em] text-subtle uppercase">Measured recipes</h2>
           <ul className="mt-2 flex flex-col gap-1.5 text-[13px]">
             {RECIPES.map((r) => <li key={r.slug}><span className="text-foreground">{r.title}</span><span className="block text-subtle">{r.source}</span></li>)}
           </ul>
         </div>
         <div>
-          <h2 className="text-[13px] font-medium tracking-[.06em] text-subtle uppercase">Notes</h2>
+          <h2 className="text-[11px] font-medium tracking-[.06em] text-subtle uppercase">Notes</h2>
           <ul className="mt-2 flex flex-col gap-1.5 text-[13px]">
             {NOTES.map((n) => <li key={n.slug} className="text-foreground">{n.title}</li>)}
           </ul>
@@ -58,7 +57,7 @@ export default function McpPage() {
       <section className="flex flex-wrap items-center gap-3 rounded-2xl bg-card p-5 ring-1 ring-line">
         <p className="min-w-[24ch] flex-1 text-[14px] text-subtle">A Pro key opens the whole registry, recipes and media checks. Team keys add shared collections.</p>
         <Link href="/pricing" className={button("silver", "h-9 rounded-lg px-4 text-[13px]")}>Get a key</Link>
-        <Link href="/feed" className={button("outline", "h-9 rounded-lg px-4 text-[13px]")}>Browse first</Link>
+        <Link href="/feed" className="text-[13px] font-medium text-subtle transition-colors hover:text-foreground">Browse first</Link>
       </section>
     </div>
   );

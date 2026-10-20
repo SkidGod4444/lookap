@@ -14,7 +14,7 @@ export default function Home() {
           <h1 className="text-[40px] leading-[1.05] font-medium tracking-[-0.03em] text-balance text-foreground sm:text-[52px]">
             Design knowledge your agent can use.
           </h1>
-          <p className="text-[16px] leading-relaxed text-pretty text-subtle">
+          <p className="text-[14px] leading-[1.55] text-pretty text-subtle">
             A curated registry of interfaces, measured from their clips and stills, served to your coding agent over MCP. Hover the card.
           </p>
           <div className="flex flex-wrap gap-3">
@@ -34,10 +34,10 @@ export default function Home() {
       <section className="flex flex-col gap-5">
         <div className="flex items-end justify-between gap-4">
           <div>
-            <h2 className="text-[24px] leading-tight font-medium tracking-[-0.02em] text-foreground">Interfaces worth rebuilding</h2>
+            <h2 className="text-[20px] leading-[1.2] font-medium tracking-[-0.02em] text-foreground">Interfaces worth rebuilding</h2>
             <p className="mt-1 text-[14px] text-subtle">Everything here is in the registry.</p>
           </div>
-          <Link href="/feed" className={button("outline", "h-8 shrink-0 rounded-full px-3.5 text-[13px]")}>Open the feed →</Link>
+          <Link href="/feed" className="shrink-0 text-[13px] font-medium text-subtle transition-colors hover:text-foreground">Open the feed →</Link>
         </div>
         <FeedGrid entries={feed} hero={false} />
       </section>

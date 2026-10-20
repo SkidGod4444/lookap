@@ -81,8 +81,8 @@ export default function ClonePage() {
   return (
     <div className="mx-auto flex w-full max-w-[880px] flex-col gap-8 py-10">
       <header className="flex flex-col gap-2">
-        <h1 className="text-[28px] leading-tight font-medium tracking-[-0.02em] text-foreground">Clone from a screenshot or a video</h1>
-        <p className="max-w-[62ch] text-[14px] text-subtle">Paste a link or drop a file. lookap samples it, scores whether it holds an interface, and shows the verdict before any clone runs. A clip gives measured motion; a still gets motion you choose.</p>
+        <h1 className="text-[28px] leading-[1.15] font-medium tracking-[-0.02em] text-foreground">Check a clip or a still</h1>
+        <p className="max-w-[62ch] text-[14px] text-subtle">The same check the registry runs over MCP as check_media. Paste a link or drop a file to see whether it holds an interface, and what the pixels say.</p>
       </header>
 
       <form onSubmit={check} className="flex flex-col gap-2">
@@ -129,7 +129,7 @@ export default function ClonePage() {
 
           <div className="grid gap-4 md:grid-cols-2">
             <div>
-              <h2 className="text-[12px] font-medium tracking-[.06em] text-subtle uppercase">Pixel signals</h2>
+              <h2 className="text-[11px] font-medium tracking-[.06em] text-subtle uppercase">Pixel signals</h2>
               <ul className="mt-2 flex flex-col gap-1.5">
                 {(Object.keys(gate.heuristic.signals) as (keyof Heuristic["signals"])[]).map((s) => {
                   const v = gate.heuristic.signals[s];
@@ -146,7 +146,7 @@ export default function ClonePage() {
               <p className="mt-2 text-[11px] text-subtle">Heuristic score {Math.round(gate.heuristic.score * 100)} · verdict {KIND[gate.heuristic.verdict].label}{isStill ? " · no timing on a still" : ""}</p>
             </div>
             <div>
-              <h2 className="text-[12px] font-medium tracking-[.06em] text-subtle uppercase">Agent read</h2>
+              <h2 className="text-[11px] font-medium tracking-[.06em] text-subtle uppercase">Agent read</h2>
               {gate.agent ? (
                 <ul className="mt-2 flex flex-col gap-1.5 text-[12px]">
                   {gate.agent.components.map((c) => (
@@ -163,7 +163,7 @@ export default function ClonePage() {
           {isStill && k.ok && (
             <div className="border-t border-line pt-4">
               <div className="flex items-baseline justify-between gap-4">
-                <h2 className="text-[12px] font-medium tracking-[.06em] text-subtle uppercase">Motion, added</h2>
+                <h2 className="text-[11px] font-medium tracking-[.06em] text-subtle uppercase">Motion, added</h2>
                 <span className="text-[11px] text-subtle">A still has no motion to measure. This is proposed, not observed.</span>
               </div>
               {gate.agent && gate.agent.motion.length > 0 ? (
@@ -202,8 +202,7 @@ export default function ClonePage() {
           <div className="flex flex-wrap items-center gap-2 border-t border-line pt-4">
             {k.ok ? (
               <>
-                <button type="button" className={button("silver", "h-9 rounded-lg px-4 text-[13px]")}>Start the clone</button>
-                <span className="text-[12px] text-subtle">{isStill ? "Layout and colours measured; motion as chosen above." : "Layout, colours and motion measured from the clip."} Runs in your agent on Free, on our servers on Pro.</span>
+                <span className="text-[12px] text-subtle">{isStill ? "Layout and colours can be measured; motion would be as chosen above." : "Layout, colours and motion can be measured from this clip."} Your agent does the building, from the registry.</span>
               </>
             ) : (
               <span className="text-[12px] text-subtle">Nothing to clone here. Try a screenshot, a UI clip or a screen recording.</span>

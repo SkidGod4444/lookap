@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { badge, button } from "@/components/button";
 
@@ -22,20 +23,20 @@ const FAQ = [
 export default function Pricing() {
   const [yearly, setYearly] = useState(true);
   return (
-    <div className="mx-auto flex w-full max-w-[940px] flex-col gap-8 py-10">
+    <div className="mx-auto flex w-full max-w-[880px] flex-col gap-10 py-10">
       <header className="flex flex-col items-center gap-2 text-center">
-        <h1 className="text-[28px] font-medium tracking-[-0.02em] text-foreground">Pricing</h1>
+        <h1 className="text-[28px] leading-[1.15] font-medium tracking-[-0.02em] text-foreground">Pricing</h1>
         <p className="max-w-[52ch] text-sm text-pretty text-subtle">Browsing is free. A key opens the whole registry to your agent over MCP.</p>
       </header>
 
       <div className="flex justify-center">
-        <div className="inline-flex rounded-xl bg-card p-1 ring-1 ring-line">
+        <div className="inline-flex gap-1 rounded-full bg-card p-1 ring-1 ring-line">
           {(["Monthly", "Yearly"] as const).map((l) => {
             const on = (l === "Yearly") === yearly;
             return (
-              <button key={l} type="button" onClick={() => setYearly(l === "Yearly")} className={on ? button("silver", "h-9 gap-2 rounded-lg px-4 text-sm") : "relative flex h-9 items-center gap-2 rounded-lg px-4 text-sm font-medium text-subtle outline-none transition-colors hover:text-foreground"}>
+              <button key={l} type="button" onClick={() => setYearly(l === "Yearly")} className={badge(on ? "active" : "chip", "h-8 gap-2 px-3.5 text-[13px]")}>
                 {l}
-                {l === "Yearly" && <span className={badge(on ? "dark" : "dark", "h-5 px-2 text-[11px] font-semibold")}>Save 20%</span>}
+                {l === "Yearly" && <span className={on ? "text-[11px] font-semibold text-black/60" : "text-[11px] font-semibold text-subtle"}>Save 20%</span>}
               </button>
             );
           })}
@@ -68,14 +69,14 @@ export default function Pricing() {
                   </div>
                 ))}
               </div>
-              <button type="button" className={button(p.primary ? "silver" : "outline", "mt-auto h-9 w-full rounded-lg text-sm")}>{p.cta}</button>
+              {p.monthly === 0 ? <Link href="/feed" className="mt-auto inline-flex h-9 items-center justify-center text-[13px] font-medium text-subtle transition-colors hover:text-foreground">{p.cta} →</Link> : <button type="button" className={button(p.primary ? "silver" : "outline", "mt-auto h-9 w-full rounded-lg text-[13px]")}>{p.cta}</button>}
             </div>
           </div>
         ))}
       </div>
 
-      <section className="mx-auto w-full max-w-[520px] pt-6">
-        <h2 className="text-sm font-medium text-foreground">Questions</h2>
+      <section className="w-full max-w-[640px]">
+        <h2 className="text-[11px] font-medium tracking-[.06em] text-subtle uppercase">Questions</h2>
         <dl className="mt-4 divide-y divide-line">
           {FAQ.map(([q, a]) => (
             <div key={q} className="py-4">
