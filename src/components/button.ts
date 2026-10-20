@@ -10,13 +10,7 @@ const base =
   "transition-[transform,box-shadow,filter] duration-150 ease-out active:translate-y-[2px] focus-visible:ring-[3px] focus-visible:ring-ring " +
   /* glossy cap */
   "before:pointer-events-none before:absolute before:inset-x-[1.5px] before:top-[1px] before:z-[-1] before:h-[46%] before:rounded-[inherit] before:rounded-b-none " +
-  "before:bg-[radial-gradient(55%_140%_at_var(--mx,50%)_0%,rgba(255,255,255,0.5),rgba(255,255,255,0)_70%),linear-gradient(180deg,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0.18)_55%,rgba(255,255,255,0)_100%)] before:transition-[background-position] " +
-  /* specular sweep: a narrow bright core with a soft halo and a faint dark reflection trailing it, slid across with a
-     transform so it stays on the compositor. Parked off the left edge; hover sends it across once. */
-  "overflow-hidden after:pointer-events-none after:absolute after:inset-0 after:z-[-1] after:w-full after:-translate-x-[75%] after:opacity-0 after:will-change-transform " +
-  "after:bg-[linear-gradient(100deg,transparent_30%,rgba(255,255,255,calc(var(--sheen-peak,0.5)*0.35))_43%,rgba(255,255,255,var(--sheen-peak,0.5))_49%,rgba(255,255,255,calc(var(--sheen-peak,0.5)*0.35))_55%,transparent_62%,rgba(0,0,0,var(--sheen-shade,0.12))_70%,transparent_80%)] " +
-  /* visible the instant hover starts (the band is parked off-screen, so no pop); fades out only on leave; stays parked at the far side when the sweep ends */
-  "after:transition-opacity after:duration-300 after:ease-out hover:after:duration-0 hover:after:opacity-100 hover:after:animate-sheen hover:after:[animation-fill-mode:forwards] motion-reduce:hover:after:animate-none";
+  "before:bg-[radial-gradient(55%_140%_at_var(--mx,50%)_0%,rgba(255,255,255,0.5),rgba(255,255,255,0)_70%),linear-gradient(180deg,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0.18)_55%,rgba(255,255,255,0)_100%)] before:transition-[background-position]";
 
 /* bodies: note the lighter band at 90% — the reflection of the surface below, which sells the curve */
 const alloyLight =
@@ -37,9 +31,8 @@ const bevelDark =
   "active:shadow-[inset_0_1px_0_rgba(255,255,255,0.42),inset_0_-1px_0_rgba(0,0,0,0.7),inset_0_-3px_4px_rgba(0,0,0,0.4),0_0_0_1px_#0f0f0f,0_1px_0_#070707,0_2px_4px_rgba(0,0,0,0.55)]";
 
 const variants = {
-  /* the light alloy gets a brighter, whiter sweep: the sheen variables feed the shared after-layer */
-  silver: `text-[#101010] [text-shadow:0_1px_0_rgba(255,255,255,0.55)] [--sheen-peak:1] [--sheen-shade:0.14] ${alloyLight} ${alloyLightHover} ${bevelLight}`,
-  outline: `text-[#e9e9e9] [text-shadow:0_-1px_0_rgba(0,0,0,0.7)] hover:text-white [--sheen-peak:0.9] [--sheen-shade:0.2] ${alloyDark} ${alloyDarkHover} ${bevelDark}`,
+  silver: `text-[#101010] [text-shadow:0_1px_0_rgba(255,255,255,0.55)] ${alloyLight} ${alloyLightHover} ${bevelLight}`,
+  outline: `text-[#e9e9e9] [text-shadow:0_-1px_0_rgba(0,0,0,0.7)] hover:text-white ${alloyDark} ${alloyDarkHover} ${bevelDark}`,
 } as const;
 
 export function button(variant: keyof typeof variants, extra = "") {
