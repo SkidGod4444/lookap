@@ -6,6 +6,7 @@ import { hrefFor } from "./FeedCard";
 import { button } from "./button";
 import { CopySlug } from "./CopySlug";
 import { LockScroll } from "./LockScroll";
+import { Stage } from "./Stage";
 
 export function ProjectPage({ slug }: { slug: string }) {
   const entry = bySlug(slug);
@@ -18,15 +19,15 @@ export function ProjectPage({ slug }: { slug: string }) {
     /* on large screens the page does not scroll: the stage is fixed and only the panel scrolls */
     <div className="-mx-4 -mt-4 -mb-4 flex flex-1 flex-col lg:h-[calc(100vh_-_57px)] lg:flex-none lg:flex-row lg:overflow-hidden">
       <LockScroll />
-      <div className="flex min-w-0 flex-1 items-center justify-center bg-gutter p-6 sm:p-10">
-        <div className="relative w-full overflow-hidden rounded-[5px] shadow-[0_24px_80px_rgba(0,0,0,0.6)] ring-1 ring-line-strong" style={{ maxWidth: wide ? 900 : 420, aspectRatio: entry.ratio }}>
+      <Stage>
+        <div className="relative w-full cursor-default overflow-hidden rounded-[5px] shadow-[0_24px_80px_rgba(0,0,0,0.6)] ring-1 ring-line-strong" style={{ maxWidth: wide ? 900 : 420, aspectRatio: entry.ratio }}>
           {entry.video ? (
             <video className="absolute inset-0 h-full w-full object-cover" src={entry.video.src} poster={entry.video.poster} autoPlay muted loop playsInline />
           ) : (
             <Poster entry={entry} />
           )}
         </div>
-      </div>
+      </Stage>
 
       <aside className="w-full shrink-0 border-t border-line bg-canvas px-5 pt-6 pb-10 lg:h-full lg:w-[280px] lg:overflow-y-auto lg:border-t-0 lg:border-l">
         <div className="flex min-h-full flex-col gap-5">
