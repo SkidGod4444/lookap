@@ -13,10 +13,10 @@ export default function Home() {
       <section className="grid items-center gap-10 pt-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:pt-14">
         <div className="flex min-w-0 max-w-[52ch] flex-col gap-6">
           <h1 className="text-[40px] leading-[1.05] font-medium tracking-[-0.03em] text-balance text-foreground sm:text-[52px]">
-            Interfaces, measured. Served to your agent.
+            Give your agent an eye for design.
           </h1>
           <p className="text-[14px] leading-[1.55] text-pretty text-subtle">
-            lookap reads sizes, colours and timing from real interfaces and hands them to Claude Code, Codex or Cursor over MCP. Numbers from the pixels, not guesses from memory. Keys start at a dollar. Hover the card.
+            Real interfaces, measured down to the pixel, one MCP call away from Claude Code, Codex or Cursor. Your agent stops guessing and starts matching. Keys start at a dollar. Hover the card.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/mcp" className={button("silver", "h-10 rounded-full px-5 text-[14px]")}>
