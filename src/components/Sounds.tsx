@@ -111,8 +111,23 @@ export function Sounds() {
       if (el.classList.contains("sfx-button")) playButton(el.classList.contains("sfx-silver") ? "silver" : "outline");
       else if (el.matches("a, button, [role=button]")) playBadge(); /* decorative badges (avatars, tags) stay silent */
     };
+    /* the dome highlight follows the cursor across metal buttons */
+    const onMove = (e: PointerEvent) => {
+      if (!(e.target instanceof Element)) return;
+      const el = e.target.closest<HTMLElement>(".sfx-button");
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      el.style.setProperty("--mx", `${Math.round(((e.clientX - r.left) / r.width) * 100)}%`);
+    };
+    const onLeave = (e: PointerEvent) => {
+      if (!(e.target instanceof Element)) return;
+      const el = e.target.closest<HTMLElement>(".sfx-button");
+      if (el) el.style.removeProperty("--mx");
+    };
     document.addEventListener("pointerdown", onDown, { passive: true });
-    return () => document.removeEventListener("pointerdown", onDown);
+    document.addEventListener("pointermove", onMove, { passive: true });
+    document.addEventListener("pointerout", onLeave, { passive: true });
+    return () => { document.removeEventListener("pointerdown", onDown); document.removeEventListener("pointermove", onMove); document.removeEventListener("pointerout", onLeave); };
   }, []);
   return null;
 }
