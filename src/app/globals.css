@@ -37,15 +37,19 @@
 
 /* two stacked layers: a blur that ramps from nothing to strong, and a soft fade to the gutter colour */
 .bottom-blur {
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  mask-image: linear-gradient(to top, #000 0%, rgba(0,0,0,.6) 45%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to top, #000 0%, rgba(0,0,0,.6) 45%, transparent 100%);
-  background: linear-gradient(to top, rgba(10,10,10,.75) 0%, rgba(10,10,10,0) 100%);
+  /* glass, not shadow: no tint, only blur, ramping in over the band */
+  backdrop-filter: blur(18px) saturate(1.05);
+  -webkit-backdrop-filter: blur(18px) saturate(1.05);
+  mask-image: linear-gradient(to top, #000 0%, rgba(0,0,0,.7) 40%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, #000 0%, rgba(0,0,0,.7) 40%, transparent 100%);
+  background: transparent;
 }
 
 @layer base {
   html { color-scheme: dark; }
+  /* selection: silver insert with ink text, same material as the active chip */
+  ::selection { background: #d9d9d9; color: #0a0a0a; }
+  ::-moz-selection { background: #d9d9d9; color: #0a0a0a; }
   body { @apply bg-gutter font-sans text-foreground; }
   /* everything clickable shows a hand; Tailwind 4's preflight leaves buttons at the default arrow */
   a[href], button, [role="button"], label[for], select, summary, input[type="range"], input[type="checkbox"], input[type="radio"], input[type="submit"], input[type="button"] { cursor: pointer; }
