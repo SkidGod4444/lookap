@@ -30,6 +30,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <main className="relative flex min-w-0 flex-1 flex-col">{children}</main>
           <Footer />
         </div>
+        {/* progressive blur along the bottom edge: content softens and fades into the gutter as it leaves the viewport */}
+        <div aria-hidden="true" className="bottom-blur pointer-events-none fixed inset-x-0 bottom-0 z-[60] h-24" />
       </body>
     </html>
   );
