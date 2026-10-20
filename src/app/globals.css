@@ -21,14 +21,12 @@
   --radius-xl: 0.875rem;
   --radius-2xl: 1.125rem;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  /* the mascot's magnifier: lifts out of the tile up-left, spins once, drops back with overshoot, then settles */
-  --animate-glass-swag: glass-swag 1.25s cubic-bezier(0.34, 1.4, 0.4, 1) 1 both;
+  /* the mascot's magnifier: lifts out of the tile up-left, spins once, drops back with a single soft overshoot */
+  --animate-glass-swag: glass-swag 0.85s cubic-bezier(0.22, 0.9, 0.3, 1) 1 both;
   @keyframes glass-swag {
-    0%   { transform: translate(0, 0) rotate(0deg) scale(1); }
-    30%  { transform: translate(-38%, -42%) rotate(200deg) scale(1.35); }
-    55%  { transform: translate(-30%, -30%) rotate(360deg) scale(1.25); }
-    78%  { transform: translate(4%, 4%) rotate(372deg) scale(0.96); }
-    90%  { transform: translate(-2%, -1%) rotate(356deg) scale(1.03); }
+    0%   { transform: translate(0, 0) rotate(0deg) scale(1); animation-timing-function: cubic-bezier(0.2, 0.8, 0.3, 1); }
+    40%  { transform: translate(-40%, -44%) rotate(220deg) scale(1.4); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+    82%  { transform: translate(3%, 3%) rotate(366deg) scale(0.97); animation-timing-function: cubic-bezier(0.3, 0, 0.4, 1); }
     100% { transform: translate(0, 0) rotate(360deg) scale(1); }
   }
 }
