@@ -16,7 +16,7 @@ export function ProjectPage({ slug }: { slug: string }) {
 
   return (
     /* on large screens the page does not scroll: the stage is fixed and only the panel scrolls */
-    <div className="-mx-4 -mt-4 -mb-4 flex flex-1 flex-col lg:h-[calc(100vh_-_56px)] lg:flex-row lg:overflow-hidden">
+    <div className="-mx-4 -mt-4 -mb-4 flex flex-1 flex-col lg:h-[calc(100vh_-_57px)] lg:flex-none lg:flex-row lg:overflow-hidden">
       <LockScroll />
       <div className="flex min-w-0 flex-1 items-center justify-center bg-gutter p-6 sm:p-10">
         <div className="relative w-full overflow-hidden rounded-[5px] shadow-[0_24px_80px_rgba(0,0,0,0.6)] ring-1 ring-line-strong" style={{ maxWidth: wide ? 900 : 420, aspectRatio: entry.ratio }}>
