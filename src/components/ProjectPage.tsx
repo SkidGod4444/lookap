@@ -35,20 +35,32 @@ export function ProjectPage({ slug }: { slug: string }) {
             <p className="text-[14px] leading-[1.55] text-pretty text-subtle">{entry.description}</p>
           </header>
 
-          {/* credit: the designer, with a link to their X profile */}
-          <a href={`https://x.com/${entry.author}`} className="group flex items-center gap-3 rounded-xl bg-card p-2.5 ring-1 ring-line transition-colors hover:ring-line-strong">
-            <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#080808] text-[11px] font-semibold uppercase text-silver-bright ring-1 ring-line-strong">{entry.authorName.split(" ").map((w) => w[0]).slice(0, 2).join("")}</span>
-            <span className="min-w-0 flex-1">
-              <span className="block truncate text-[13px] font-medium text-foreground">{entry.authorName}</span>
-              <span className="block truncate text-[12px] text-subtle">@{entry.author}</span>
-            </span>
-            <svg className="shrink-0 text-subtle transition-colors group-hover:text-foreground" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-7.2 8.2L23 22h-6.6l-5.2-6.8L5.3 22H2.1l7.7-8.8L1.5 2h6.8l4.7 6.2L18.9 2Zm-1.2 18h1.8L7.4 3.9H5.5L17.7 20Z" /></svg>
-          </a>
+          {/* credit: links out only when we hold a verified handle or it is our own work; samples say so */}
+          {entry.x || entry.sourceUrl ? (
+            <a href={entry.x ? `https://x.com/${entry.x}` : entry.sourceUrl} className="group flex items-center gap-3 rounded-xl bg-card p-2.5 ring-1 ring-line transition-colors hover:ring-line-strong">
+              <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#080808] text-[11px] font-semibold uppercase text-silver-bright ring-1 ring-line-strong">{entry.authorName.split(" ").map((w) => w[0]).slice(0, 2).join("")}</span>
+              <span className="min-w-0 flex-1">
+                <span className="block truncate text-[13px] font-medium text-foreground">{entry.authorName}</span>
+                <span className="block truncate text-[12px] text-subtle">{entry.x ? `@${entry.x}` : "source on GitHub"}</span>
+              </span>
+              <svg className="shrink-0 text-subtle transition-colors group-hover:text-foreground" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
+            </a>
+          ) : (
+            <div className="flex items-center gap-3 rounded-xl bg-card p-2.5 ring-1 ring-line">
+              <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#080808] text-[11px] font-semibold uppercase text-silver-bright ring-1 ring-line-strong">{entry.authorName.split(" ").map((w) => w[0]).slice(0, 2).join("")}</span>
+              <span className="min-w-0 flex-1">
+                <span className="block truncate text-[13px] font-medium text-foreground">{entry.authorName}</span>
+                <span className="block truncate text-[12px] text-subtle">Sample entry. Real credits link to the designer.</span>
+              </span>
+            </div>
+          )}
 
-          <a href={entry.video ? `https://x.com/${entry.author}` : site ?? `https://x.com/${entry.author}`} className={button("silver", "h-8 justify-between rounded-lg px-3 text-[13px]")}>
-            {site && !entry.video ? "Visit site" : "Open on X"}
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
-          </a>
+          {(entry.x || site || entry.sourceUrl) && (
+            <a href={entry.x ? `https://x.com/${entry.x}` : site ?? entry.sourceUrl} className={button("silver", "h-8 justify-between rounded-lg px-3 text-[13px]")}>
+              {entry.x ? "Open on X" : site ? "Visit site" : "View source"}
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
+            </a>
+          )}
 
           <dl className="flex flex-col divide-y divide-dashed divide-line-strong [&>*]:flex [&>*]:items-start [&>*]:justify-between [&>*]:gap-3 [&>*]:py-2.5 text-[12px]">
             <div><dt className="font-medium text-foreground">Category</dt><dd><Link href={`/sections/${sectionSlug(entry.category)}`} className="text-subtle underline-offset-2 hover:text-foreground hover:underline">{entry.category}</Link></dd></div>

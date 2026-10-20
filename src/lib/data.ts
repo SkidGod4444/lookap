@@ -7,8 +7,13 @@ export type Entry = {
   ratio: number;
   category: string;
   types: string[];
-  author: string;      /* X handle, without the @ */
+  author: string;      /* short id used for the avatar bubble; not an X handle */
   authorName: string;
+  /* a real X handle we have verified, without the @. Absent on sample entries, so nothing links to a stranger. */
+  x?: string;
+  /* where our own entries come from */
+  sourceUrl?: string;
+  sample: boolean;
   description: string;
   site?: string;
   hue: number;
@@ -71,7 +76,7 @@ const slugify = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").repla
 
 /* display names for the sample authors; handles double as X links */
 const NAMES: Record<string, string> = {
-  sai: "Sai Dev Dhal", ivo: "Ivo Marek", ren: "Ren Okafor", mara: "Mara Lindqvist", jun: "Jun Park", sol: "Sol Reyes", lea: "Lea Brandt",
+  sai: "lookap", ivo: "Ivo Marek", ren: "Ren Okafor", mara: "Mara Lindqvist", jun: "Jun Park", sol: "Sol Reyes", lea: "Lea Brandt",
   tomo: "Tomo Ishida", ana: "Ana Duarte", oz: "Oz Halloran", kit: "Kit Nwosu", ben: "Ben Carver", eli: "Eli Strand", zed: "Zed Amari",
   ro: "Ro Castellano", ash: "Ash Varga", spn: "Sponsor", kai: "Kai Lindgren", may: "May Chen", cy: "Cy Okoro", pia: "Pia Novak",
   nox: "Nox Petrov", fp: "F. Pereira", nl: "N. Laurent", pay: "Payments team", vx: "VX Studio", pol: "Pol Jansen", arc: "Arc Films",
@@ -89,7 +94,9 @@ export const ENTRIES: Entry[] = SEEDS.map((s, i) => ({
   category: s[2],
   types: s[3],
   author: s[4],
-  authorName: NAMES[s[4]] ?? s[4],
+  authorName: DEMOS[s[0]] ? "lookap" : NAMES[s[4]] ?? s[4],
+  sourceUrl: DEMOS[s[0]] ? "https://github.com/SkidGod4444/lookap" : undefined,
+  sample: !DEMOS[s[0]],
   description: s[5],
   hue: s[6],
   tone: s[7],
