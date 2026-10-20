@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import { Show } from "@clerk/nextjs";
 import { UserMenu } from "./auth/UserMenu";
+import { AuthDialog } from "./auth/AuthDialog";
 import { usePathname } from "next/navigation";
 import { Mark } from "./Mark";
 import { badge, button } from "./button";
@@ -16,6 +18,7 @@ const NAV = [
 
 export function TopBar() {
   const path = usePathname();
+  const [auth, setAuth] = useState(false);
   return (
     <header className="sticky top-0 z-[80] w-full border-b border-line bg-gutter/90 backdrop-blur">
       <div className="mx-auto flex h-14 w-full max-w-[1680px] items-center gap-5 px-4">
@@ -37,14 +40,14 @@ export function TopBar() {
 
         <div className="ml-auto flex shrink-0 items-center gap-3">
           <Show when="signed-out">
-            <Link href="/sign-in" className="hidden text-[13px] font-medium text-subtle transition-colors hover:text-foreground sm:inline">Sign in</Link>
-            <Link href="/sign-up" className={button("silver", "h-8 rounded-full px-3.5 text-[13px]")}>Sign up</Link>
+            <button type="button" onClick={() => setAuth(true)} className={button("silver", "h-8 rounded-full px-3.5 text-[13px]")}>Sign in</button>
           </Show>
           <Show when="signed-in">
             <UserMenu />
           </Show>
         </div>
       </div>
+      <AuthDialog open={auth} onClose={() => setAuth(false)} />
     </header>
   );
 }

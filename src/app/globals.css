@@ -35,6 +35,12 @@
 @keyframes enter-fade-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 @keyframes enter-scale { from { opacity: 0; transform: scale(0.94); } to { opacity: 1; transform: none; } }
 
+/* Auth dialog: overlay fades, the panel zooms in from 95%, each step rises 8px, the poster fan swings up from below the edge. */
+@keyframes dlg-overlay { from { opacity: 0; } to { opacity: 1; } }
+@keyframes dlg-panel { from { opacity: 0; transform: translate(-50%, -50%) scale(0.95); } to { opacity: 1; transform: translate(-50%, -50%) scale(1); } }
+@keyframes dlg-step { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes dlg-fan { from { opacity: 0; transform: translateX(var(--fx)) translateY(72px) rotate(calc(var(--fr) * 1.6)) scale(0.7); } to { opacity: 1; transform: translateX(var(--fx)) translateY(var(--fy)) rotate(var(--fr)) scale(var(--fs)); } }
+
 
 @layer base {
   html { color-scheme: dark; }
