@@ -42,16 +42,18 @@ export function button(variant: keyof typeof variants, extra = "") {
   return `sfx-button sfx-${variant} ${base} ${variants[variant]} ${extra}`.trim();
 }
 
-/* Badges and chips are flat, so they read as labels and never compete with the metal buttons:
-   a hairline ring, a quiet fill, no gloss, no lift. The active chip is solid silver. */
-const badgeBase = "inline-flex items-center justify-center whitespace-nowrap select-none rounded-full font-medium transition-colors duration-150";
+/* Badges and chips are pressed slots: a recess cut into the surface with the label sitting inside, the inverse of the
+   convex buttons, so they never read as actions. The active chip is a light insert pressed into the same recess. */
+const badgeBase = "inline-flex items-center justify-center whitespace-nowrap select-none rounded-full font-medium transition-[color,background-color,box-shadow] duration-150";
+const slotDark = "bg-[#0c0c0c] text-silver shadow-[inset_0_2px_4px_rgba(0,0,0,0.9),inset_0_-1px_0_rgba(255,255,255,0.08),0_1px_0_rgba(255,255,255,0.05)]";
+const slotLight = "bg-[#d9d9d9] text-[#0a0a0a] shadow-[inset_0_2px_3px_rgba(0,0,0,0.35),inset_0_-1px_0_rgba(255,255,255,0.9),0_1px_0_rgba(255,255,255,0.08)]";
 
 const badges = {
-  chip: "bg-chip text-subtle ring-1 ring-inset ring-line-strong hover:bg-chip-hover hover:text-foreground",
-  active: "bg-silver-bright text-black ring-1 ring-inset ring-white/60",
-  dark: "bg-black/70 text-silver ring-1 ring-inset ring-line-strong backdrop-blur-sm",
-  silver: "bg-silver-bright text-black ring-1 ring-inset ring-white/60",
-  darkHover: "bg-black/70 text-silver ring-1 ring-inset ring-line-strong backdrop-blur-sm hover:text-white",
+  chip: `${slotDark} hover:text-white hover:shadow-[inset_0_1px_2px_rgba(0,0,0,0.8),inset_0_-1px_0_rgba(255,255,255,0.1),0_1px_0_rgba(255,255,255,0.06)] active:shadow-[inset_0_3px_6px_rgba(0,0,0,0.95),inset_0_-1px_0_rgba(255,255,255,0.06)]`,
+  active: `${slotLight} hover:bg-[#e8e8e8]`,
+  dark: slotDark,
+  silver: slotLight,
+  darkHover: `${slotDark} hover:text-white`,
 } as const;
 
 export function badge(variant: keyof typeof badges, extra = "") {
