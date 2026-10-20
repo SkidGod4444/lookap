@@ -6,6 +6,7 @@ import { TopBar } from "@/components/TopBar";
 import { ChipNav } from "@/components/ChipNav";
 import { Footer } from "@/components/Footer";
 import { Sounds } from "@/components/Sounds";
+import { BottomBlur } from "@/components/BottomBlur";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"], axes: ["opsz"] });
 const doto = Doto({ variable: "--font-doto", subsets: ["latin"], weight: "variable", axes: ["ROND"] });
@@ -30,13 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <main className="relative flex min-w-0 flex-1 flex-col">{children}</main>
           <Footer />
         </div>
-        {/* progressive blur along the bottom edge: content softens and fades into the gutter as it leaves the viewport */}
-        <div aria-hidden="true" className="pointer-events-none fixed inset-x-0 bottom-0 z-[60] h-20">
-          <i className="absolute inset-0 backdrop-blur-[1px] [mask-image:linear-gradient(to_top,#000_0%,#000_50%,transparent_100%)]" />
-          <i className="absolute inset-0 backdrop-blur-[2px] [mask-image:linear-gradient(to_top,#000_0%,#000_35%,transparent_75%)]" />
-          <i className="absolute inset-0 backdrop-blur-[4px] [mask-image:linear-gradient(to_top,#000_0%,#000_20%,transparent_50%)]" />
-          <i className="absolute inset-0 backdrop-blur-[8px] [mask-image:linear-gradient(to_top,#000_0%,#000_6%,transparent_28%)]" />
-        </div>
+        <BottomBlur />
       </body>
     </html>
   );
