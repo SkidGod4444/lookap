@@ -14,6 +14,8 @@ export type Entry = {
   tone: "light" | "dark" | "color";
   sponsored?: boolean;
   duration?: number;
+  /* a real demo clip we own; the card takes its exact aspect ratio from w/h */
+  video?: { src: string; poster: string; w: number; h: number };
 };
 
 export const SECTIONS = [
@@ -75,6 +77,11 @@ const SEEDS: Seed[] = [
 
 const slugify = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 
+const DEMOS: Record<string, Entry["video"]> = {
+  "Lamp Carriage Typewriter": { src: "/demos/typewriter.mp4", poster: "/demos/typewriter.jpg", w: 498, h: 700 },
+  "ID Card Reader Hover": { src: "/demos/card-reader.mp4", poster: "/demos/card-reader.jpg", w: 1080, h: 1080 },
+};
+
 export const ENTRIES: Entry[] = SEEDS.map((s, i) => ({
   slug: `${(i * 7919 + 1013).toString(36)}-${slugify(s[0])}`,
   title: s[0],
@@ -86,9 +93,10 @@ export const ENTRIES: Entry[] = SEEDS.map((s, i) => ({
   hue: s[6],
   tone: s[7],
   site: s[8],
-  ratio: s[1] === "og" ? 1.91 : RATIOS[i % RATIOS.length],
+  ratio: DEMOS[s[0]] ? DEMOS[s[0]]!.w / DEMOS[s[0]]!.h : s[1] === "og" ? 1.91 : RATIOS[i % RATIOS.length],
   sponsored: s[2] === "Sponsored",
-  duration: s[1] === "feed" || s[1] === "launch" ? 4 + ((i * 37) % 12) : undefined,
+  duration: DEMOS[s[0]] ? (s[0].startsWith("Lamp") ? 11 : 8) : s[1] === "feed" || s[1] === "launch" ? 4 + ((i * 37) % 12) : undefined,
+  video: DEMOS[s[0]],
 }));
 
 export const bySlug = (slug: string) => ENTRIES.find((e) => e.slug === slug);
