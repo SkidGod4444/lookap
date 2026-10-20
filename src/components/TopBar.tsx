@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { Show } from "@clerk/nextjs";
+import { UserMenu } from "./auth/UserMenu";
 import { usePathname } from "next/navigation";
 import { Mark } from "./Mark";
 import { badge, button } from "./button";
@@ -34,8 +36,13 @@ export function TopBar() {
         </nav>
 
         <div className="ml-auto flex shrink-0 items-center gap-3">
-          <Link href="/signin" className="hidden text-[13px] font-medium text-subtle transition-colors hover:text-foreground sm:inline">Sign in</Link>
-          <Link href="/signup" className={button("silver", "h-8 rounded-full px-3.5 text-[13px]")}>Sign up</Link>
+          <Show when="signed-out">
+            <Link href="/sign-in" className="hidden text-[13px] font-medium text-subtle transition-colors hover:text-foreground sm:inline">Sign in</Link>
+            <Link href="/sign-up" className={button("silver", "h-8 rounded-full px-3.5 text-[13px]")}>Sign up</Link>
+          </Show>
+          <Show when="signed-in">
+            <UserMenu />
+          </Show>
         </div>
       </div>
     </header>

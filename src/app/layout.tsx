@@ -1,3 +1,4 @@
+import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { Inter, Doto } from "next/font/google";
@@ -21,11 +22,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${inter.variable} ${doto.variable} h-full antialiased`}>
       <body className="min-h-screen bg-gutter font-sans text-foreground antialiased">
-        <Sounds />
-        <Suspense fallback={<div className="h-14" />}>
-          <TopBar />
-        </Suspense>
-        <div className="relative mx-auto flex min-h-[calc(100vh_-_57px)] w-full max-w-[1680px] flex-col bg-canvas p-4 ring-1 ring-line">
+        <ClerkProvider>
+          <Sounds />
+          <Suspense fallback={<div className="h-14" />}>
+            <TopBar />
+          </Suspense>
+          <div className="relative mx-auto flex min-h-[calc(100vh_-_57px)] w-full max-w-[1680px] flex-col bg-canvas p-4 ring-1 ring-line">
           <Suspense fallback={null}>
             <ChipNav />
           </Suspense>
@@ -33,11 +35,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <Suspense fallback={null}>
             <Footer />
           </Suspense>
-        </div>
-        <Suspense fallback={null}>
-          <BottomBlur />
-        </Suspense>
-        <Analytics />
+          </div>
+          <Suspense fallback={null}>
+            <BottomBlur />
+          </Suspense>
+          <Analytics />
+        </ClerkProvider>
       </body>
     </html>
   );
