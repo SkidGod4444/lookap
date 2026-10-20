@@ -1,60 +1,48 @@
-/* The lookap mascot: a fluffy ball with two very large eyes, looking up and to the right.
-   "look up" is the name and the pose. Drawn in the product's silver on dark; no colour.
-   The same drawing is the favicon (src/app/icon.svg). Geometry is generated symmetric: 16 tufts on a circle. */
-export function Mark({ size = 20, className = "" }: { size?: number; className?: string }) {
-  if (size < 36) return <MarkSmall size={size} className={className} />;
+/* The lookap mark: a hand torch, tilted up and to the right, with its beam on. "look up" as a searchlight.
+   Silver body on dark, white light. The beam breathes and sweeps a few degrees (see --animate-beam-* in globals.css);
+   both stop under prefers-reduced-motion. Sizes under 36 px drop the grip detail so the shape stays crisp. */
+export function Mark({ size = 20, className = "", still = false }: { size?: number; className?: string; still?: boolean }) {
+  const small = size < 36;
+  const anim = still ? "" : "motion-safe:animate-beam-sweep";
+  const breathe = still ? "" : "motion-safe:animate-beam-breathe";
   return (
-    <svg width={size} height={size} viewBox="0 0 64 64" className={className} aria-hidden="true">
+    <svg width={size} height={size} viewBox="0 0 64 64" className={className} aria-hidden="true" overflow="visible">
       <defs>
-      <radialGradient id="lk-body" cx="38%" cy="28%" r="75%"><stop offset="0" stopColor="#dedede"/><stop offset=".55" stopColor="#a8a8a8"/><stop offset="1" stopColor="#5c5c5c"/></radialGradient>
-      <radialGradient id="lk-eye" cx="45%" cy="40%" r="60%"><stop offset="0" stopColor="#ffffff"/><stop offset="1" stopColor="#d9d9d9"/></radialGradient>
+        <linearGradient id="lk-body" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#e4e4e4" />
+          <stop offset=".45" stopColor="#a9a9a9" />
+          <stop offset=".55" stopColor="#8e8e8e" />
+          <stop offset="1" stopColor="#4f4f4f" />
+        </linearGradient>
+        <linearGradient id="lk-beam" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stopColor="#ffffff" stopOpacity=".95" />
+          <stop offset=".35" stopColor="#ffffff" stopOpacity=".45" />
+          <stop offset="1" stopColor="#ffffff" stopOpacity="0" />
+        </linearGradient>
+        <radialGradient id="lk-lens" cx="50%" cy="50%" r="50%">
+          <stop offset="0" stopColor="#ffffff" />
+          <stop offset=".6" stopColor="#f3f3f3" />
+          <stop offset="1" stopColor="#bdbdbd" />
+        </radialGradient>
       </defs>
-      <g fill="url(#lk-body)" stroke="#161616" strokeWidth="2" strokeLinejoin="round">
-    <circle cx="32.0" cy="16.5" r="5.2"/>
-    <circle cx="39.5" cy="18.0" r="5.2"/>
-    <circle cx="45.8" cy="22.2" r="5.2"/>
-    <circle cx="50.0" cy="28.5" r="5.2"/>
-    <circle cx="51.5" cy="36.0" r="5.2"/>
-    <circle cx="50.0" cy="43.5" r="5.2"/>
-    <circle cx="45.8" cy="49.8" r="5.2"/>
-    <circle cx="39.5" cy="54.0" r="5.2"/>
-    <circle cx="32.0" cy="55.5" r="5.2"/>
-    <circle cx="24.5" cy="54.0" r="5.2"/>
-    <circle cx="18.2" cy="49.8" r="5.2"/>
-    <circle cx="14.0" cy="43.5" r="5.2"/>
-    <circle cx="12.5" cy="36.0" r="5.2"/>
-    <circle cx="14.0" cy="28.5" r="5.2"/>
-    <circle cx="18.2" cy="22.2" r="5.2"/>
-    <circle cx="24.5" cy="18.0" r="5.2"/>
-    </g>
-    <circle cx="32" cy="36" r="21" fill="url(#lk-body)"/>
-    <path d="M17 19 C 13 8, 24 7, 26 15" fill="url(#lk-body)" stroke="#161616" strokeWidth="2" strokeLinejoin="round"/>
-    <path d="M47 19 C 51 8, 40 7, 38 15" fill="url(#lk-body)" stroke="#161616" strokeWidth="2" strokeLinejoin="round"/>
-    <circle cx="23.5" cy="34" r="10.5" fill="url(#lk-eye)" stroke="#161616" strokeWidth="2.2"/>
-    <circle cx="40.5" cy="34" r="10.5" fill="url(#lk-eye)" stroke="#161616" strokeWidth="2.2"/>
-    <circle cx="26.5" cy="30.5" r="6" fill="#161616"/><circle cx="43.5" cy="30.5" r="6" fill="#161616"/>
-    <circle cx="28.5" cy="28.5" r="2" fill="#ffffff"/><circle cx="45.5" cy="28.5" r="2" fill="#ffffff"/>
-    <path d="M30.5 45 h3 l-1.5 2 Z" fill="#161616"/>
-    <path d="M29 49.5 q3 2.5 6 0" fill="none" stroke="#161616" strokeWidth="1.8" strokeLinecap="round"/>
-    </svg>
-  );
-}
-
-/* Small sizes (header, footer, inline): the same creature reduced to what survives at 20 px,
-   a silver disc with two oversized eyes looking up-right. Strokes are thicker so it stays crisp. */
-export function MarkSmall({ size = 20, className = "" }: { size?: number; className?: string }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 64 64" className={className} aria-hidden="true">
-      <defs>
-        <radialGradient id="lk-body-s" cx="38%" cy="28%" r="75%"><stop offset="0" stopColor="#e2e2e2" /><stop offset=".6" stopColor="#a8a8a8" /><stop offset="1" stopColor="#5c5c5c" /></radialGradient>
-      </defs>
-      <circle cx="32" cy="34" r="27" fill="url(#lk-body-s)" stroke="#161616" strokeWidth="3" />
-      <path d="M13 20 C 9 6, 24 5, 27 14" fill="url(#lk-body-s)" stroke="#161616" strokeWidth="3" strokeLinejoin="round" />
-      <path d="M51 20 C 55 6, 40 5, 37 14" fill="url(#lk-body-s)" stroke="#161616" strokeWidth="3" strokeLinejoin="round" />
-      <circle cx="21.5" cy="34" r="13" fill="#ffffff" stroke="#161616" strokeWidth="3" />
-      <circle cx="42.5" cy="34" r="13" fill="#ffffff" stroke="#161616" strokeWidth="3" />
-      <circle cx="25.5" cy="30" r="7.5" fill="#161616" /><circle cx="46.5" cy="30" r="7.5" fill="#161616" />
-      <circle cx="28" cy="27.5" r="2.6" fill="#ffffff" /><circle cx="49" cy="27.5" r="2.6" fill="#ffffff" />
+      {/* whole torch tilted 38deg up-right around its centre */}
+      <g transform="rotate(-38 32 32)">
+        {/* beam: pivots at the lens, sweeps and breathes */}
+        <g className={anim} style={{ transformOrigin: "47px 32px", transformBox: "view-box" }}>
+          <path className={breathe} d="M47 25 L 70 8 L 70 56 L 47 39 Z" fill="url(#lk-beam)" />
+        </g>
+        {/* handle */}
+        <rect x="6" y="25" width="30" height="14" rx="4" fill="url(#lk-body)" stroke="#161616" strokeWidth={small ? 3 : 2.2} />
+        {!small && <g stroke="#161616" strokeWidth="1.4" strokeOpacity=".55"><path d="M12 27v10M17 27v10M22 27v10M27 27v10" /></g>}
+        {/* tail cap */}
+        <rect x="4" y="27" width="4" height="10" rx="1.5" fill="#3a3a3a" stroke="#161616" strokeWidth={small ? 3 : 2.2} />
+        {/* head */}
+        <path d="M36 25 L 44 20 L 44 44 L 36 39 Z" fill="url(#lk-body)" stroke="#161616" strokeWidth={small ? 3 : 2.2} strokeLinejoin="round" />
+        <rect x="43" y="19" width="5" height="26" rx="1.5" fill="url(#lk-body)" stroke="#161616" strokeWidth={small ? 3 : 2.2} />
+        {/* lens */}
+        <rect x="47" y="21" width="2.5" height="22" rx="1" fill="url(#lk-lens)" />
+        {!small && <circle cx="30" cy="22.5" r="1.8" fill="#161616" />}
+      </g>
     </svg>
   );
 }

@@ -1,36 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="14" fill="#0a0a0a"/>
-  <g transform="translate(3 2) scale(0.9)">
-    <defs>
-      <radialGradient id="lk-body" cx="38%" cy="28%" r="75%"><stop offset="0" stop-color="#dedede"/><stop offset=".55" stop-color="#a8a8a8"/><stop offset="1" stop-color="#5c5c5c"/></radialGradient>
-      <radialGradient id="lk-eye" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#d9d9d9"/></radialGradient>
-    </defs>
-    <g fill="url(#lk-body)" stroke="#161616" stroke-width="2" stroke-linejoin="round">
-    <circle cx="32.0" cy="16.5" r="5.2"/>
-    <circle cx="39.5" cy="18.0" r="5.2"/>
-    <circle cx="45.8" cy="22.2" r="5.2"/>
-    <circle cx="50.0" cy="28.5" r="5.2"/>
-    <circle cx="51.5" cy="36.0" r="5.2"/>
-    <circle cx="50.0" cy="43.5" r="5.2"/>
-    <circle cx="45.8" cy="49.8" r="5.2"/>
-    <circle cx="39.5" cy="54.0" r="5.2"/>
-    <circle cx="32.0" cy="55.5" r="5.2"/>
-    <circle cx="24.5" cy="54.0" r="5.2"/>
-    <circle cx="18.2" cy="49.8" r="5.2"/>
-    <circle cx="14.0" cy="43.5" r="5.2"/>
-    <circle cx="12.5" cy="36.0" r="5.2"/>
-    <circle cx="14.0" cy="28.5" r="5.2"/>
-    <circle cx="18.2" cy="22.2" r="5.2"/>
-    <circle cx="24.5" cy="18.0" r="5.2"/>
-    </g>
-    <circle cx="32" cy="36" r="21" fill="url(#lk-body)"/>
-    <path d="M17 19 C 13 8, 24 7, 26 15" fill="url(#lk-body)" stroke="#161616" stroke-width="2" stroke-linejoin="round"/>
-    <path d="M47 19 C 51 8, 40 7, 38 15" fill="url(#lk-body)" stroke="#161616" stroke-width="2" stroke-linejoin="round"/>
-    <circle cx="23.5" cy="34" r="10.5" fill="url(#lk-eye)" stroke="#161616" stroke-width="2.2"/>
-    <circle cx="40.5" cy="34" r="10.5" fill="url(#lk-eye)" stroke="#161616" stroke-width="2.2"/>
-    <circle cx="26.5" cy="30.5" r="6" fill="#161616"/><circle cx="43.5" cy="30.5" r="6" fill="#161616"/>
-    <circle cx="28.5" cy="28.5" r="2" fill="#ffffff"/><circle cx="45.5" cy="28.5" r="2" fill="#ffffff"/>
-    <path d="M30.5 45 h3 l-1.5 2 Z" fill="#161616"/>
-    <path d="M29 49.5 q3 2.5 6 0" fill="none" stroke="#161616" stroke-width="1.8" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e4e4e4"/><stop offset=".45" stop-color="#a9a9a9"/><stop offset=".55" stop-color="#8e8e8e"/><stop offset="1" stop-color="#4f4f4f"/></linearGradient>
+    <linearGradient id="m" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset=".35" stop-color="#fff" stop-opacity=".45"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  </defs>
+  <g transform="translate(26 36) scale(0.68) translate(-32 -32) rotate(-38 32 32)">
+    <path d="M47 25 L 70 8 L 70 56 L 47 39 Z" fill="url(#m)"/>
+    <rect x="6" y="25" width="30" height="14" rx="4" fill="url(#b)" stroke="#161616" stroke-width="3"/>
+    <rect x="4" y="27" width="4" height="10" rx="1.5" fill="#3a3a3a" stroke="#161616" stroke-width="3"/>
+    <path d="M36 25 L 44 20 L 44 44 L 36 39 Z" fill="url(#b)" stroke="#161616" stroke-width="3" stroke-linejoin="round"/>
+    <rect x="43" y="19" width="5" height="26" rx="1.5" fill="url(#b)" stroke="#161616" stroke-width="3"/>
+    <rect x="47" y="21" width="2.5" height="22" rx="1" fill="#fff"/>
   </g>
 </svg>

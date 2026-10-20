@@ -21,6 +21,17 @@
   --radius-xl: 0.875rem;
   --radius-2xl: 1.125rem;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  /* torch beam: a slow sweep around the lens and a slower breath in brightness */
+  --animate-beam-sweep: beam-sweep 3.2s ease-in-out infinite alternate;
+  --animate-beam-breathe: beam-breathe 2.1s ease-in-out infinite alternate;
+  @keyframes beam-sweep {
+    from { transform: rotate(-7deg); }
+    to { transform: rotate(7deg); }
+  }
+  @keyframes beam-breathe {
+    from { opacity: 0.55; }
+    to { opacity: 1; }
+  }
 }
 
 @layer base {

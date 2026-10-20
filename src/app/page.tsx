@@ -25,7 +25,7 @@ export default function Home() {
       {/* hero */}
       <section className="grid items-center gap-10 pt-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:pt-14">
         <div className="flex max-w-[52ch] flex-col gap-6">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-10">
             <Mark size={88} />
             <span className={badge("chip", "w-fit px-2.5 py-1 text-[11px] tracking-[.06em] uppercase")}>Measured, not guessed</span>
           </div>
