@@ -7,6 +7,7 @@ import { ChipNav } from "@/components/ChipNav";
 import { Footer } from "@/components/Footer";
 import { Sounds } from "@/components/Sounds";
 import { BottomBlur } from "@/components/BottomBlur";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"], axes: ["opsz"] });
 const doto = Doto({ variable: "--font-doto", subsets: ["latin"], weight: "variable", axes: ["ROND"] });
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Suspense fallback={null}>
           <BottomBlur />
         </Suspense>
+        <Analytics />
       </body>
     </html>
   );
