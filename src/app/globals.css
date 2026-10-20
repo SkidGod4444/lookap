@@ -31,4 +31,7 @@
 @layer base {
   html { color-scheme: dark; }
   body { @apply bg-gutter font-sans text-foreground; }
+  /* everything clickable shows a hand; Tailwind 4's preflight leaves buttons at the default arrow */
+  a[href], button, [role="button"], label[for], select, summary, input[type="range"], input[type="checkbox"], input[type="radio"], input[type="submit"], input[type="button"] { cursor: pointer; }
+  button:disabled, [aria-disabled="true"] { cursor: not-allowed; }
 }
