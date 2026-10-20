@@ -11,20 +11,21 @@ const base =
   /* glossy cap */
   "before:pointer-events-none before:absolute before:inset-x-[1.5px] before:top-[1px] before:z-[-1] before:h-[46%] before:rounded-[inherit] before:rounded-b-none " +
   "before:bg-[radial-gradient(55%_140%_at_var(--mx,50%)_0%,rgba(255,255,255,0.5),rgba(255,255,255,0)_70%),linear-gradient(180deg,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0.18)_55%,rgba(255,255,255,0)_100%)] before:transition-[background-position] " +
-  /* sheen band (sweeps once on hover) over brushed grain */
-  "after:pointer-events-none after:absolute after:inset-0 after:z-[-1] after:rounded-[inherit] " +
-  "after:bg-[linear-gradient(105deg,transparent_25%,rgba(255,255,255,0.22)_42%,rgba(255,255,255,0.42)_50%,rgba(255,255,255,0.22)_58%,transparent_75%),repeating-linear-gradient(180deg,rgba(255,255,255,0.05)_0px,rgba(255,255,255,0.05)_1px,rgba(0,0,0,0.05)_1px,rgba(0,0,0,0.05)_2px)] " +
-  "after:bg-[length:70%_100%,100%_100%] after:bg-no-repeat after:bg-[position:-160%_0,0_0] after:opacity-[0.18] after:transition-opacity after:duration-700 after:ease-out hover:after:opacity-[0.55] hover:after:animate-sheen motion-reduce:hover:after:animate-none";
+  /* specular sweep: a narrow bright core with a soft halo and a faint dark reflection trailing it, slid across with a
+     transform so it stays on the compositor. Parked off the left edge; hover sends it across once. */
+  "overflow-hidden after:pointer-events-none after:absolute after:inset-0 after:z-[-1] after:w-full after:-translate-x-[120%] after:opacity-0 after:will-change-transform " +
+  "after:bg-[linear-gradient(100deg,transparent_30%,rgba(255,255,255,calc(var(--sheen-peak,0.5)*0.35))_43%,rgba(255,255,255,var(--sheen-peak,0.5))_49%,rgba(255,255,255,calc(var(--sheen-peak,0.5)*0.35))_55%,transparent_62%,rgba(0,0,0,var(--sheen-shade,0.12))_70%,transparent_80%)] " +
+  "after:transition-opacity after:duration-500 after:ease-out hover:after:opacity-100 hover:after:animate-sheen motion-reduce:hover:after:animate-none";
 
 /* bodies: note the lighter band at 90% — the reflection of the surface below, which sells the curve */
 const alloyLight =
-  "bg-[linear-gradient(180deg,#e9e9e9_0%,#cdcdcd_28%,#b1b1b1_50%,#9d9d9d_72%,#a9a9a9_90%,#7f7f7f_100%)]";
+  "bg-[repeating-linear-gradient(180deg,rgba(255,255,255,0.045)_0px,rgba(255,255,255,0.045)_1px,rgba(0,0,0,0.045)_1px,rgba(0,0,0,0.045)_2px),linear-gradient(180deg,#e9e9e9_0%,#cdcdcd_28%,#b1b1b1_50%,#9d9d9d_72%,#a9a9a9_90%,#7f7f7f_100%)]";
 const alloyLightHover =
-  "hover:bg-[linear-gradient(180deg,#f2f2f2_0%,#d8d8d8_28%,#bdbdbd_50%,#a9a9a9_72%,#b5b5b5_90%,#8a8a8a_100%)]";
+  "hover:bg-[repeating-linear-gradient(180deg,rgba(255,255,255,0.045)_0px,rgba(255,255,255,0.045)_1px,rgba(0,0,0,0.045)_1px,rgba(0,0,0,0.045)_2px),linear-gradient(180deg,#f2f2f2_0%,#d8d8d8_28%,#bdbdbd_50%,#a9a9a9_72%,#b5b5b5_90%,#8a8a8a_100%)]";
 const alloyDark =
-  "bg-[linear-gradient(180deg,#5c5c5c_0%,#434343_28%,#333333_50%,#2a2a2a_72%,#343434_90%,#1a1a1a_100%)]";
+  "bg-[repeating-linear-gradient(180deg,rgba(255,255,255,0.045)_0px,rgba(255,255,255,0.045)_1px,rgba(0,0,0,0.045)_1px,rgba(0,0,0,0.045)_2px),linear-gradient(180deg,#5c5c5c_0%,#434343_28%,#333333_50%,#2a2a2a_72%,#343434_90%,#1a1a1a_100%)]";
 const alloyDarkHover =
-  "hover:bg-[linear-gradient(180deg,#686868_0%,#4e4e4e_28%,#3d3d3d_50%,#333333_72%,#3d3d3d_90%,#222222_100%)]";
+  "hover:bg-[repeating-linear-gradient(180deg,rgba(255,255,255,0.045)_0px,rgba(255,255,255,0.045)_1px,rgba(0,0,0,0.045)_1px,rgba(0,0,0,0.045)_2px),linear-gradient(180deg,#686868_0%,#4e4e4e_28%,#3d3d3d_50%,#333333_72%,#3d3d3d_90%,#222222_100%)]";
 
 /* bevels: rim, lip, side shading, edge ring, thickness, ambient */
 const bevelLight =
@@ -35,8 +36,9 @@ const bevelDark =
   "active:shadow-[inset_0_1px_0_rgba(255,255,255,0.42),inset_0_-1px_0_rgba(0,0,0,0.7),inset_0_-3px_4px_rgba(0,0,0,0.4),0_0_0_1px_#0f0f0f,0_1px_0_#070707,0_2px_4px_rgba(0,0,0,0.55)]";
 
 const variants = {
-  silver: `text-[#101010] [text-shadow:0_1px_0_rgba(255,255,255,0.55)] ${alloyLight} ${alloyLightHover} ${bevelLight}`,
-  outline: `text-[#e9e9e9] [text-shadow:0_-1px_0_rgba(0,0,0,0.7)] hover:text-white ${alloyDark} ${alloyDarkHover} ${bevelDark}`,
+  /* the light alloy gets a brighter, whiter sweep: the sheen variables feed the shared after-layer */
+  silver: `text-[#101010] [text-shadow:0_1px_0_rgba(255,255,255,0.55)] [--sheen-peak:1] [--sheen-shade:0.14] ${alloyLight} ${alloyLightHover} ${bevelLight}`,
+  outline: `text-[#e9e9e9] [text-shadow:0_-1px_0_rgba(0,0,0,0.7)] hover:text-white [--sheen-peak:0.9] [--sheen-shade:0.2] ${alloyDark} ${alloyDarkHover} ${bevelDark}`,
 } as const;
 
 export function button(variant: keyof typeof variants, extra = "") {
