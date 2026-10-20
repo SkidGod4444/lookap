@@ -16,7 +16,7 @@ export default function Home() {
             Interfaces, measured. Served to your agent.
           </h1>
           <p className="text-[14px] leading-[1.55] text-pretty text-subtle">
-            lookap reads sizes, colours and timing from real interfaces and hands them to Claude Code, Codex or Cursor over MCP. Numbers from the pixels, not guesses from memory. Hover the card.
+            lookap reads sizes, colours and timing from real interfaces and hands them to Claude Code, Codex or Cursor over MCP. Numbers from the pixels, not guesses from memory. Keys start at a dollar. Hover the card.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/mcp" className={button("silver", "h-10 rounded-full px-5 text-[14px]")}>

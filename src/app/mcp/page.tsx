@@ -3,12 +3,12 @@ import { badge, button } from "@/components/button";
 import { NOTES, RECIPES } from "@/lib/registry";
 
 const TOOLS = [
-  ["search_designs", "Find curated interfaces by words, category or kind.", "free: 5 results"],
-  ["get_design", "Attribution, types, demo clip and the measured recipe for one entry.", "recipe paid"],
-  ["get_recipe", "Palette, geometry, type and motion table, read from the clip's pixels.", "paid"],
-  ["list_notes", "Design guidance distilled from the rebuilds.", "free"],
-  ["get_note", "One note in full.", "free: first note"],
-  ["check_media", "Does this clip or still hold an interface? Signals, verdict, score.", "paid"],
+  ["search_designs", "Find curated interfaces by words, category or kind.", "starter"],
+  ["get_design", "Attribution, types, demo clip and the measured recipe for one entry.", "starter · recipe pro"],
+  ["get_recipe", "Palette, geometry, type and motion table, read from the clip's pixels.", "pro"],
+  ["list_notes", "Design guidance distilled from the rebuilds.", "starter"],
+  ["get_note", "One note in full.", "starter"],
+  ["check_media", "Does this clip or still hold an interface? Signals, verdict, score.", "pro"],
 ];
 
 export default function McpPage() {
@@ -23,7 +23,7 @@ export default function McpPage() {
         <h2 className="text-[11px] font-medium tracking-[.06em] text-subtle uppercase">Connect</h2>
         <pre className="overflow-x-auto rounded-xl bg-card p-4 font-mono text-[12.5px] leading-relaxed text-silver ring-1 ring-line">{`claude mcp add --transport http lookap https://lookap.app/api/mcp \\
   --header "Authorization: Bearer lk_live_…"`}</pre>
-        <p className="text-[13px] text-subtle">No key? Leave the header off. The free tier answers with a sample so you can see the shape before paying. Local dev: use http://localhost:3000/api/mcp.</p>
+        <p className="text-[13px] text-subtle">Every tool needs a key. Starter is a dollar a month. Local dev: use http://localhost:3000/api/mcp.</p>
       </section>
 
       <section className="flex flex-col gap-3">

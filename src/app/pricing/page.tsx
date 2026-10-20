@@ -1,14 +1,13 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 import { badge, button } from "@/components/button";
 
 const PLANS = [
-  { name: "Free", blurb: "Browse the feed. Connect without a key and see a sample of the registry.", monthly: 0, yearly: 0, runs: "5 results per search, first note", cta: "Browse the feed", primary: false,
-    features: ["Full feed on the site", "MCP: search_designs, list_notes", "No key needed"] },
+  { name: "Starter key", blurb: "A key for one person. Search the registry and read every design note from your agent.", monthly: 1, yearly: 1, runs: "20 results per search", cta: "Get a Starter key", primary: false,
+    features: ["search_designs and get_design", "All design notes", "One key, any MCP client"] },
   { name: "Pro key", blurb: "The whole registry inside your agent: every entry, every recipe, media checks.", monthly: 12, yearly: 10, runs: "Unlimited registry reads", cta: "Get a Pro key", primary: true, popular: true,
-    features: ["All search results and notes", "Measured recipes with motion tables", "check_media on any public clip or still", "One key, any MCP client"] },
+    features: ["Everything in Starter", "Measured recipes with motion tables", "check_media on any public clip or still", "50 results per search"] },
   { name: "Team key", blurb: "For studios that want shared collections and private entries.", monthly: 39, yearly: 32, runs: "Per seat", cta: "Start a team", primary: false,
     features: ["Everything in Pro", "Shared collections and private entries", "Priority on new recipes", "Invoiced billing"] },
 ];
@@ -16,8 +15,8 @@ const PLANS = [
 const FAQ = [
   ["What is the registry?", "A curated set of interfaces, each with attribution, category and types, and for the ones we rebuilt, a recipe: palette, geometry, type and motion read from the source clip's pixels. Plus design notes distilled from that work."],
   ["What runs where?", "Nothing runs on our servers except the lookup. Your agent calls the registry over MCP and does the building on your machine."],
-  ["Why charge for a key?", "Curation and measurement are the work. The free tier shows the shape of the data; the key opens all of it."],
-  ["Can I change plans or stop?", "Upgrade or downgrade whenever you like and we only charge the difference for the days left. Stopping keeps the key working until your period ends, then it drops to Free."],
+  ["Why is there no free key?", "Curation and measurement are the work, and a dollar keeps the registry honest: every call comes from someone who chose to pay for it. Browsing the site stays free."],
+  ["Can I change plans or stop?", "Upgrade or downgrade whenever you like and we only charge the difference for the days left. Stopping keeps the key working until your period ends."],
 ];
 
 export default function Pricing() {
@@ -26,7 +25,7 @@ export default function Pricing() {
     <div className="mx-auto flex w-full max-w-[880px] flex-col gap-10 py-10">
       <header className="flex flex-col items-center gap-2 text-center">
         <h1 className="text-[28px] leading-[1.15] font-medium tracking-[-0.02em] text-foreground">Pricing</h1>
-        <p className="max-w-[52ch] text-sm text-pretty text-subtle">Browsing is free. A key opens the whole registry to your agent over MCP.</p>
+        <p className="max-w-[52ch] text-sm text-pretty text-subtle">Browsing the site is free. A key, from a dollar a month, opens the registry to your agent over MCP.</p>
       </header>
 
       <div className="flex justify-center">
@@ -58,7 +57,7 @@ export default function Pricing() {
                 <div className="text-3xl font-medium text-foreground tabular-nums md:text-4xl">${yearly ? p.yearly : p.monthly}</div>
                 <span className="text-sm text-subtle">/ month</span>
               </div>
-              <span className="mt-1 block text-sm text-subtle">{p.runs}<span className="block">{p.monthly ? (yearly ? `Billed $${p.yearly * 12} yearly` : "Billed monthly") : "No key needed"}</span></span>
+              <span className="mt-1 block text-sm text-subtle">{p.runs}<span className="block">{yearly ? `Billed $${p.yearly * 12} yearly` : "Billed monthly"}</span></span>
               <div className="mt-5 mb-4 border-t border-line pt-2">
                 {p.features.map((f) => (
                   <div key={f} className="my-4 flex items-start gap-2">
@@ -69,7 +68,7 @@ export default function Pricing() {
                   </div>
                 ))}
               </div>
-              {p.monthly === 0 ? <Link href="/feed" className="mt-auto inline-flex h-9 items-center justify-center text-[13px] font-medium text-subtle transition-colors hover:text-foreground">{p.cta} →</Link> : <button type="button" className={button(p.primary ? "silver" : "outline", "mt-auto h-9 w-full rounded-lg text-[13px]")}>{p.cta}</button>}
+              <button type="button" className={button(p.primary ? "silver" : "outline", "mt-auto h-9 w-full rounded-lg text-[13px]")}>{p.cta}</button>
             </div>
           </div>
         ))}

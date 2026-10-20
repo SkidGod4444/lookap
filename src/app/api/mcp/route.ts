@@ -10,10 +10,10 @@ import { analyse } from "@/lib/gate/heuristics";
 /* lookap MCP: the design registry for agents. Stateless Streamable HTTP, one server per request.
    Add it to Claude Code with:
      claude mcp add --transport http lookap https://<host>/api/mcp --header "Authorization: Bearer <key>"
-   Without a key the free tier answers with a small sample. */
+   Without a key every tool answers with a pointer to pricing. */
 
 const text = (v: unknown) => ({ content: [{ type: "text" as const, text: typeof v === "string" ? v : JSON.stringify(v, null, 2) }] });
-const gated = (what: string) => text({ error: `${what} needs a Pro or Team key. Get one at /pricing, then send it as Authorization: Bearer <key>.` });
+const gated = (what: string, plan: Plan) => text({ error: plan === "none" ? `${what} needs a key. Starter is $1 a month at /pricing. Send it as Authorization: Bearer <key>.` : `${what} needs a Pro or Team key. Upgrade at /pricing.` });
 
 function build(plan: Plan) {
   const lim = LIMITS[plan];
@@ -23,10 +23,11 @@ function build(plan: Plan) {
     "search_designs",
     {
       title: "Search the registry",
-      description: "Find curated interfaces by words, category or kind. Returns slugs to pass to get_design. Free keys see a sample; paid keys see everything.",
+      description: "Find curated interfaces by words, category or kind. Returns slugs to pass to get_design. Needs a key.",
       inputSchema: { query: z.string().describe("words to match in title, category, types or description"), category: z.string().optional(), kind: z.enum(["feed", "website", "launch", "og"]).optional(), limit: z.number().int().min(1).max(100).optional() },
     },
     async ({ query, category, kind, limit }) => {
+      if (plan === "none") return gated("search_designs", plan);
       const rows = searchEntries(query, { category, kind, limit: Math.min(limit ?? lim.search, lim.search) }).map(publicEntry);
       return text({ plan, count: rows.length, results: rows, categories: CATEGORIES, sections: SECTION_NAMES });
     },
@@ -40,6 +41,7 @@ function build(plan: Plan) {
       inputSchema: { slug: z.string() },
     },
     async ({ slug }) => {
+      if (plan === "none") return gated("get_design", plan);
       const e = bySlug(slug);
       if (!e) return text({ error: `No entry ${slug}` });
       const pub = publicEntry(e);
@@ -56,7 +58,7 @@ function build(plan: Plan) {
       inputSchema: { slug: z.string().describe(`one of: ${RECIPES.map((r) => r.slug).join(", ")}`) },
     },
     async ({ slug }) => {
-      if (!lim.recipes) return gated("get_recipe");
+      if (!lim.recipes) return gated("get_recipe", plan);
       const r = RECIPES.find((x) => x.slug === slug);
       return r ? text(r) : text({ error: `No recipe ${slug}`, available: RECIPES.map((x) => x.slug) });
     },
@@ -64,17 +66,17 @@ function build(plan: Plan) {
 
   server.registerTool(
     "list_notes",
-    { title: "List design notes", description: "Guidance distilled from measured rebuilds: metal buttons, pressed badges, dark silver tokens, motion for stills, measuring from video." },
-    async () => text(NOTES.map((n) => ({ slug: n.slug, title: n.title, from: n.from }))),
+    { title: "List design notes", description: "Guidance distilled from measured rebuilds: metal buttons, pressed badges, dark silver tokens, motion for stills, measuring from video. Needs a key." },
+    async () => (plan === "none" ? gated("list_notes", plan) : text(NOTES.map((n) => ({ slug: n.slug, title: n.title, from: n.from })))),
   );
 
   server.registerTool(
     "get_note",
-    { title: "Read a design note", description: "The full note. Free keys get the first note only.", inputSchema: { slug: z.string() } },
+    { title: "Read a design note", description: "The full note. Needs a key.", inputSchema: { slug: z.string() } },
     async ({ slug }) => {
       const i = NOTES.findIndex((n) => n.slug === slug);
       if (i < 0) return text({ error: `No note ${slug}`, available: NOTES.map((n) => n.slug) });
-      if (i >= lim.notes) return gated("This note");
+      if (i >= lim.notes) return gated("This note", plan);
       return text(NOTES[i]);
     },
   );
@@ -87,7 +89,7 @@ function build(plan: Plan) {
       inputSchema: { url: z.string().url() },
     },
     async ({ url }) => {
-      if (!lim.media) return gated("check_media");
+      if (!lim.media) return gated("check_media", plan);
       try {
         const set = await sampleVideo(url);
         const h = analyse(set.frames, set.fw, set.fh);
