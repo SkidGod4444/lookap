@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ENTRIES } from "@/lib/data";
 import { FeedGrid } from "@/components/FeedGrid";
 import { CardSleeve } from "@/components/demo/CardSleeve";
-import { RecipePeek } from "@/components/RecipePeek";
 import { RECIPES, NOTES } from "@/lib/registry";
 import { button } from "@/components/button";
 
@@ -33,11 +32,8 @@ export default function Home() {
             <div><dt className="text-silver-bright">6</dt><dd>MCP tools</dd></div>
           </dl>
         </div>
-        <div className="flex min-w-0 flex-col gap-3">
-          <div className="relative overflow-hidden rounded-2xl bg-black ring-1 ring-line">
-            <CardSleeve callouts />
-          </div>
-          <RecipePeek slug="id-card-reader-hover" />
+        <div className="relative min-w-0 overflow-hidden rounded-2xl bg-black ring-1 ring-line">
+          <CardSleeve callouts />
         </div>
       </section>
 
