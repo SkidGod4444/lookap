@@ -21,7 +21,7 @@ export function TopBar() {
     <header className="sticky top-0 z-[80] w-full border-b border-line bg-gutter/90 backdrop-blur">
       <div className="mx-auto flex h-14 w-full max-w-[1680px] items-center gap-5 px-4">
         <Link href="/" className="flex shrink-0 items-center gap-2 text-[15px] leading-none font-semibold tracking-[-0.02em] text-foreground">
-          <Mark />
+          <Mark size={28} />
           lookap
         </Link>
 

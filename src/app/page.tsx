@@ -3,6 +3,7 @@ import { ENTRIES } from "@/lib/data";
 import { FeedCard } from "@/components/FeedCard";
 import { CardSleeve } from "@/components/demo/CardSleeve";
 import { badge, button } from "@/components/button";
+import { Mark } from "@/components/Mark";
 
 const STEPS = [
   { n: "01", title: "Frames", body: "The clip is split at 2 fps, plus full-resolution stills of every resting state." },
@@ -24,7 +25,10 @@ export default function Home() {
       {/* hero */}
       <section className="grid items-center gap-10 pt-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:pt-14">
         <div className="flex max-w-[52ch] flex-col gap-6">
-          <span className={badge("chip", "w-fit px-2.5 py-1 text-[11px] tracking-[.06em] uppercase")}>Measured, not guessed</span>
+          <div className="flex items-center gap-4">
+            <Mark size={88} />
+            <span className={badge("chip", "w-fit px-2.5 py-1 text-[11px] tracking-[.06em] uppercase")}>Measured, not guessed</span>
+          </div>
           <h1 className="text-[40px] leading-[1.05] font-medium tracking-[-0.03em] text-balance text-foreground sm:text-[52px]">
             Rebuild any interface from its demo video.
           </h1>
