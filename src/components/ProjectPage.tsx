@@ -5,6 +5,7 @@ import { Poster } from "./Poster";
 import { hrefFor } from "./FeedCard";
 import { button } from "./button";
 import { CopySlug } from "./CopySlug";
+import { LockScroll } from "./LockScroll";
 
 export function ProjectPage({ slug }: { slug: string }) {
   const entry = bySlug(slug);
@@ -14,7 +15,9 @@ export function ProjectPage({ slug }: { slug: string }) {
   const site = entry.site && entry.site !== "example.com" ? `https://${entry.site}` : null;
 
   return (
-    <div className="-mx-4 -mt-4 -mb-4 flex min-h-[calc(100vh-56px)] flex-1 flex-col lg:flex-row">
+    /* on large screens the page does not scroll: the stage is fixed and only the panel scrolls */
+    <div className="-mx-4 -mt-4 -mb-4 flex flex-1 flex-col lg:h-[calc(100vh_-_56px)] lg:flex-row lg:overflow-hidden">
+      <LockScroll />
       <div className="flex min-w-0 flex-1 items-center justify-center bg-gutter p-6 sm:p-10">
         <div className="relative w-full overflow-hidden rounded-[5px] shadow-[0_24px_80px_rgba(0,0,0,0.6)] ring-1 ring-line-strong" style={{ maxWidth: wide ? 900 : 420, aspectRatio: entry.ratio }}>
           {entry.video ? (
@@ -25,20 +28,27 @@ export function ProjectPage({ slug }: { slug: string }) {
         </div>
       </div>
 
-      <aside className="w-full shrink-0 border-t border-line bg-canvas px-5 pt-6 pb-10 lg:w-[280px] lg:border-t-0 lg:border-l">
+      <aside className="w-full shrink-0 border-t border-line bg-canvas px-5 pt-6 pb-10 lg:h-full lg:w-[280px] lg:overflow-y-auto lg:border-t-0 lg:border-l">
         <div className="flex min-h-full flex-col gap-5">
           <header className="flex flex-col gap-2">
-            <span className="text-[12px] text-subtle">@{entry.author}</span>
             <h1 className="text-[20px] leading-[1.2] font-medium tracking-[-0.02em] text-balance text-foreground">{entry.title}</h1>
             <p className="text-[14px] leading-[1.55] text-pretty text-subtle">{entry.description}</p>
           </header>
 
-          {site && (
-            <a href={site} className={button("silver", "h-8 justify-between rounded-lg px-3 text-[13px]")}>
-              Visit site
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
-            </a>
-          )}
+          {/* credit: the designer, with a link to their X profile */}
+          <a href={`https://x.com/${entry.author}`} className="group flex items-center gap-3 rounded-xl bg-card p-2.5 ring-1 ring-line transition-colors hover:ring-line-strong">
+            <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#080808] text-[11px] font-semibold uppercase text-silver-bright ring-1 ring-line-strong">{entry.authorName.split(" ").map((w) => w[0]).slice(0, 2).join("")}</span>
+            <span className="min-w-0 flex-1">
+              <span className="block truncate text-[13px] font-medium text-foreground">{entry.authorName}</span>
+              <span className="block truncate text-[12px] text-subtle">@{entry.author}</span>
+            </span>
+            <svg className="shrink-0 text-subtle transition-colors group-hover:text-foreground" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-7.2 8.2L23 22h-6.6l-5.2-6.8L5.3 22H2.1l7.7-8.8L1.5 2h6.8l4.7 6.2L18.9 2Zm-1.2 18h1.8L7.4 3.9H5.5L17.7 20Z" /></svg>
+          </a>
+
+          <a href={entry.video ? `https://x.com/${entry.author}` : site ?? `https://x.com/${entry.author}`} className={button("silver", "h-8 justify-between rounded-lg px-3 text-[13px]")}>
+            {site && !entry.video ? "Visit site" : "Open on X"}
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
+          </a>
 
           <dl className="flex flex-col divide-y divide-dashed divide-line-strong [&>*]:flex [&>*]:items-start [&>*]:justify-between [&>*]:gap-3 [&>*]:py-2.5 text-[12px]">
             <div><dt className="font-medium text-foreground">Category</dt><dd><Link href={`/sections/${sectionSlug(entry.category)}`} className="text-subtle underline-offset-2 hover:text-foreground hover:underline">{entry.category}</Link></dd></div>

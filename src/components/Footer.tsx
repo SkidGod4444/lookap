@@ -1,9 +1,13 @@
+"use client";
+
 import Link from "next/link";
+import { useIsProject } from "./useIsProject";
 import { Mark } from "./Mark";
 
 const LINKS = [["Privacy", "/privacy"], ["Terms", "/terms"]];
 
 export function Footer() {
+  if (useIsProject()) return null;
   return (
     <footer className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-line pt-6 pb-2 text-[13px]">
       <Link href="/" className="group/brand flex items-center gap-2 font-semibold tracking-[-0.02em] text-foreground"><Mark size={26} />lookap</Link>

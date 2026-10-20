@@ -7,7 +7,8 @@ export type Entry = {
   ratio: number;
   category: string;
   types: string[];
-  author: string;
+  author: string;      /* X handle, without the @ */
+  authorName: string;
   description: string;
   site?: string;
   hue: number;
@@ -68,6 +69,14 @@ const SEEDS: Seed[] = [
 
 const slugify = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 
+/* display names for the sample authors; handles double as X links */
+const NAMES: Record<string, string> = {
+  sai: "Sai Dev Dhal", ivo: "Ivo Marek", ren: "Ren Okafor", mara: "Mara Lindqvist", jun: "Jun Park", sol: "Sol Reyes", lea: "Lea Brandt",
+  tomo: "Tomo Ishida", ana: "Ana Duarte", oz: "Oz Halloran", kit: "Kit Nwosu", ben: "Ben Carver", eli: "Eli Strand", zed: "Zed Amari",
+  ro: "Ro Castellano", ash: "Ash Varga", spn: "Sponsor", kai: "Kai Lindgren", may: "May Chen", cy: "Cy Okoro", pia: "Pia Novak",
+  nox: "Nox Petrov", fp: "F. Pereira", nl: "N. Laurent", pay: "Payments team", vx: "VX Studio", pol: "Pol Jansen", arc: "Arc Films",
+};
+
 const DEMOS: Record<string, Entry["video"]> = {
   "Lamp Carriage Typewriter": { src: "/demos/typewriter.mp4", poster: "/demos/typewriter.jpg", w: 498, h: 700 },
   "ID Card Reader Hover": { src: "/demos/card-reader.mp4", poster: "/demos/card-reader.jpg", w: 1080, h: 1080 },
@@ -80,6 +89,7 @@ export const ENTRIES: Entry[] = SEEDS.map((s, i) => ({
   category: s[2],
   types: s[3],
   author: s[4],
+  authorName: NAMES[s[4]] ?? s[4],
   description: s[5],
   hue: s[6],
   tone: s[7],

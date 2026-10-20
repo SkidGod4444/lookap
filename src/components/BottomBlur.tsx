@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useIsProject } from "./useIsProject";
 
 /* Progressive blur along the bottom of the viewport. Four stacked backdrop layers, each blurrier and masked lower,
    so content softens as it leaves the screen. Fades out while the footer is in view, so the end of the page is crisp. */
 export function BottomBlur() {
   const [hidden, setHidden] = useState(false);
+  const isProject = useIsProject();
   useEffect(() => {
     const footer = document.querySelector("footer");
     if (!footer || !("IntersectionObserver" in window)) return;
@@ -13,6 +15,7 @@ export function BottomBlur() {
     io.observe(footer);
     return () => io.disconnect();
   }, []);
+  if (isProject) return null;
   return (
     <div aria-hidden="true" className={`pointer-events-none fixed inset-x-0 bottom-0 z-[60] h-20 transition-opacity duration-300 ${hidden ? "opacity-0" : "opacity-100"}`}>
       <i className="absolute inset-0 backdrop-blur-[1px] [mask-image:linear-gradient(to_top,#000_0%,#000_50%,transparent_100%)]" />
