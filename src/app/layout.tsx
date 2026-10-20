@@ -31,7 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <Footer />
         </div>
         {/* progressive blur along the bottom edge: content softens and fades into the gutter as it leaves the viewport */}
-        <div aria-hidden="true" className="bottom-blur pointer-events-none fixed inset-x-0 bottom-0 z-[60] h-24" />
+        <div aria-hidden="true" className="bottom-blur pointer-events-none fixed inset-x-0 bottom-0 z-[60] h-40"><i /><i /><i /><i /><i /><i /></div>
       </body>
     </html>
   );

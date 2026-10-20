@@ -35,15 +35,15 @@
 @keyframes enter-fade-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 @keyframes enter-scale { from { opacity: 0; transform: scale(0.94); } to { opacity: 1; transform: none; } }
 
-/* two stacked layers: a blur that ramps from nothing to strong, and a soft fade to the gutter colour */
-.bottom-blur {
-  /* glass, not shadow: no tint, only blur, ramping in over the band */
-  backdrop-filter: blur(18px) saturate(1.05);
-  -webkit-backdrop-filter: blur(18px) saturate(1.05);
-  mask-image: linear-gradient(to top, #000 0%, rgba(0,0,0,.7) 40%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to top, #000 0%, rgba(0,0,0,.7) 40%, transparent 100%);
-  background: transparent;
-}
+/* progressive blur: six stacked backdrop layers, each blurrier than the last and masked to a lower band,
+   so sharpness falls off smoothly toward the edge instead of switching on. No tint. */
+.bottom-blur > i { position: absolute; inset: 0; display: block; }
+.bottom-blur > i:nth-child(1) { backdrop-filter: blur(1px);  -webkit-backdrop-filter: blur(1px);  mask-image: linear-gradient(to top, #000 0%, #000 60%, transparent 100%); -webkit-mask-image: linear-gradient(to top, #000 0%, #000 60%, transparent 100%); }
+.bottom-blur > i:nth-child(2) { backdrop-filter: blur(2px);  -webkit-backdrop-filter: blur(2px);  mask-image: linear-gradient(to top, #000 0%, #000 50%, transparent 85%); -webkit-mask-image: linear-gradient(to top, #000 0%, #000 50%, transparent 85%); }
+.bottom-blur > i:nth-child(3) { backdrop-filter: blur(4px);  -webkit-backdrop-filter: blur(4px);  mask-image: linear-gradient(to top, #000 0%, #000 40%, transparent 70%); -webkit-mask-image: linear-gradient(to top, #000 0%, #000 40%, transparent 70%); }
+.bottom-blur > i:nth-child(4) { backdrop-filter: blur(8px);  -webkit-backdrop-filter: blur(8px);  mask-image: linear-gradient(to top, #000 0%, #000 30%, transparent 55%); -webkit-mask-image: linear-gradient(to top, #000 0%, #000 30%, transparent 55%); }
+.bottom-blur > i:nth-child(5) { backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); mask-image: linear-gradient(to top, #000 0%, #000 20%, transparent 40%); -webkit-mask-image: linear-gradient(to top, #000 0%, #000 20%, transparent 40%); }
+.bottom-blur > i:nth-child(6) { backdrop-filter: blur(32px); -webkit-backdrop-filter: blur(32px); mask-image: linear-gradient(to top, #000 0%, #000 8%, transparent 25%);  -webkit-mask-image: linear-gradient(to top, #000 0%, #000 8%, transparent 25%); }
 
 @layer base {
   html { color-scheme: dark; }
