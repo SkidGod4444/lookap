@@ -39,9 +39,10 @@ export default function Home() {
             <Link href="/feed" className={button("outline", "h-10 rounded-full px-5 text-[14px]")}>Browse the feed</Link>
           </div>
           <dl className="flex gap-8 pt-2 font-mono text-[12px] text-subtle">
+            {/* figures from the card clone's DESIGN.md: 5.85 s clip, 13 palette entries sampled, 7 motion phases timed */}
             <div><dt className="text-silver-bright">6 s</dt><dd>source clip</dd></div>
-            <div><dt className="text-silver-bright">14</dt><dd>measured values</dd></div>
-            <div><dt className="text-silver-bright">3 min</dt><dd>to a working build</dd></div>
+            <div><dt className="text-silver-bright">13</dt><dd>colours sampled</dd></div>
+            <div><dt className="text-silver-bright">7</dt><dd>motion phases timed</dd></div>
           </dl>
         </div>
         <div className="relative overflow-hidden rounded-2xl bg-black ring-1 ring-line">
@@ -95,7 +96,7 @@ export default function Home() {
                 <p className="text-[15px] font-medium text-foreground">{p.name}</p>
                 <p className="mt-1 text-[13px] text-subtle">{p.line}</p>
               </div>
-              <span className="font-mono text-[20px] text-silver-bright tabular-nums">{p.price}</span>
+              <span className="text-right font-mono text-[20px] text-silver-bright tabular-nums">{p.price}<span className="block text-[10px] text-subtle">{p.price === "$0" ? "forever" : "/ mo, billed yearly"}</span></span>
             </div>
           ))}
         </div>
@@ -103,8 +104,8 @@ export default function Home() {
 
       {/* closing */}
       <section className="flex flex-col items-center gap-5 rounded-2xl bg-card px-6 py-14 text-center ring-1 ring-line">
-        <h2 className="text-[28px] leading-tight font-medium tracking-[-0.02em] text-balance text-foreground">Clone your first video in the next three minutes.</h2>
-        <p className="max-w-[48ch] text-[14px] text-subtle">Install the open skill, paste a link, and watch the measurements come back.</p>
+        <h2 className="text-[28px] leading-tight font-medium tracking-[-0.02em] text-balance text-foreground">Clone your first video today.</h2>
+        <p className="max-w-[48ch] text-[14px] text-subtle">Install the open skill, paste a link, and get the measurements and the component back.</p>
         <Link href="/clone" className={button("silver", "h-10 rounded-full px-5 text-[14px]")}>Clone a video</Link>
       </section>
     </div>
