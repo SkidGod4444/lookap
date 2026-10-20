@@ -31,7 +31,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <Footer />
         </div>
         {/* progressive blur along the bottom edge: content softens and fades into the gutter as it leaves the viewport */}
-        <div aria-hidden="true" className="bottom-blur pointer-events-none fixed inset-x-0 bottom-0 z-[60] h-40"><i /><i /><i /><i /><i /><i /></div>
+        <div aria-hidden="true" className="pointer-events-none fixed inset-x-0 bottom-0 z-[60] h-40">
+          <i className="absolute inset-0 backdrop-blur-[1px] [mask-image:linear-gradient(to_top,#000_0%,#000_60%,transparent_100%)]" />
+          <i className="absolute inset-0 backdrop-blur-[2px] [mask-image:linear-gradient(to_top,#000_0%,#000_50%,transparent_85%)]" />
+          <i className="absolute inset-0 backdrop-blur-[4px] [mask-image:linear-gradient(to_top,#000_0%,#000_40%,transparent_70%)]" />
+          <i className="absolute inset-0 backdrop-blur-[8px] [mask-image:linear-gradient(to_top,#000_0%,#000_30%,transparent_55%)]" />
+          <i className="absolute inset-0 backdrop-blur-[16px] [mask-image:linear-gradient(to_top,#000_0%,#000_20%,transparent_40%)]" />
+          <i className="absolute inset-0 backdrop-blur-[32px] [mask-image:linear-gradient(to_top,#000_0%,#000_8%,transparent_25%)]" />
+        </div>
       </body>
     </html>
   );

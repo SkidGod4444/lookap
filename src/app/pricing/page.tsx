@@ -75,9 +75,9 @@ export default function Pricing() {
         ))}
       </div>
 
-      <section className="w-full max-w-[640px]">
+      <section className="grid w-full gap-6 border-t border-line pt-8 md:grid-cols-[200px_1fr]">
         <h2 className="text-[11px] font-medium tracking-[.06em] text-subtle uppercase">Questions</h2>
-        <dl className="mt-4 divide-y divide-line">
+        <dl className="-mt-4 divide-y divide-line">
           {FAQ.map(([q, a]) => (
             <div key={q} className="py-4">
               <dt className="text-sm font-medium text-foreground">{q}</dt>
