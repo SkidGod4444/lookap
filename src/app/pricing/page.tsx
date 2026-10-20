@@ -4,7 +4,7 @@ import { useState } from "react";
 import { badge, button } from "@/components/button";
 
 const PLANS = [
-  { name: "Starter key", blurb: "A key for one person. Search the registry and read every design note from your agent.", monthly: 1, yearly: null, yearlyTotal: 10, runs: "20 results per search", cta: "Get a Starter key", primary: false,
+  { name: "Starter key", blurb: "A key for one person. Search the registry and read every design note from your agent.", monthly: 1, yearly: 0.83, yearlyTotal: 10, runs: "20 results per search", cta: "Get a Starter key", primary: false,
     features: ["search_designs and get_design", "All design notes", "One key, any MCP client"] },
   { name: "Pro key", blurb: "The whole registry inside your agent: every entry, every recipe, media checks.", monthly: 12, yearly: 10, yearlyTotal: 120, runs: "Unlimited registry reads", cta: "Get a Pro key", primary: true, popular: true,
     features: ["Everything in Starter", "Measured recipes with motion tables", "check_media on any public clip or still", "50 results per search"] },
@@ -54,10 +54,10 @@ export default function Pricing() {
             </div>
             <div className="flex min-w-0 flex-1 flex-col rounded-lg bg-canvas p-4 ring-1 ring-line">
               <div className="flex items-baseline gap-1">
-                <div className="text-3xl font-medium text-foreground tabular-nums md:text-4xl">${yearly ? (p.yearly ?? p.yearlyTotal) : p.monthly}</div>
-                <span className="text-sm text-subtle">{yearly && p.yearly === null ? "/ year" : "/ month"}</span>
+                <div className="text-3xl font-medium text-foreground tabular-nums md:text-4xl">${yearly ? p.yearly : p.monthly}</div>
+                <span className="text-sm text-subtle">/ month</span>
               </div>
-              <span className="mt-1 block text-sm text-subtle">{p.runs}<span className="block">{yearly ? (p.yearly === null ? "Two months free" : `Billed $${p.yearlyTotal} yearly`) : "Billed monthly"}</span></span>
+              <span className="mt-1 block text-sm text-subtle">{p.runs}<span className="block">{yearly ? `Billed $${p.yearlyTotal} yearly` : "Billed monthly"}</span></span>
               <div className="mt-5 mb-4 border-t border-line pt-2">
                 {p.features.map((f) => (
                   <div key={f} className="my-4 flex items-start gap-2">
