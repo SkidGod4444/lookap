@@ -15,7 +15,8 @@ const base =
      transform so it stays on the compositor. Parked off the left edge; hover sends it across once. */
   "overflow-hidden after:pointer-events-none after:absolute after:inset-0 after:z-[-1] after:w-full after:-translate-x-[120%] after:opacity-0 after:will-change-transform " +
   "after:bg-[linear-gradient(100deg,transparent_30%,rgba(255,255,255,calc(var(--sheen-peak,0.5)*0.35))_43%,rgba(255,255,255,var(--sheen-peak,0.5))_49%,rgba(255,255,255,calc(var(--sheen-peak,0.5)*0.35))_55%,transparent_62%,rgba(0,0,0,var(--sheen-shade,0.12))_70%,transparent_80%)] " +
-  "after:transition-opacity after:duration-500 after:ease-out hover:after:opacity-100 hover:after:animate-sheen motion-reduce:hover:after:animate-none";
+  /* visible the instant hover starts (the band is parked off-screen, so no pop); fades out only on leave; stays parked at the far side when the sweep ends */
+  "after:transition-opacity after:duration-300 after:ease-out hover:after:duration-0 hover:after:opacity-100 hover:after:animate-sheen hover:after:[animation-fill-mode:forwards] motion-reduce:hover:after:animate-none";
 
 /* bodies: note the lighter band at 90% — the reflection of the surface below, which sells the curve */
 const alloyLight =
