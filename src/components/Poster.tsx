@@ -19,7 +19,6 @@ export function Poster({ entry, className = "", compact = false }: { entry: Entr
       {!compact && (
         <>
           <div className="text-[clamp(13px,4.5cqw,22px)] font-medium leading-[1.15] tracking-[-0.015em] text-balance">{title}</div>
-          <div className="mt-1 text-[11px]" style={{ color: sub }}>{entry.category}</div>
         </>
       )}
     </div>

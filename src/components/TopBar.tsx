@@ -7,7 +7,7 @@ import { badge, button } from "./button";
 
 /* Primary navigation. Feed covers the home page, section filters and single posts. */
 const NAV = [
-  { label: "Feed", href: "/", match: (p: string) => p === "/" || p.startsWith("/feed") || p.startsWith("/sections") },
+  { label: "Feed", href: "/feed", match: (p: string) => p.startsWith("/feed") || p.startsWith("/sections") },
   { label: "Websites", href: "/websites", match: (p: string) => p.startsWith("/website") },
   { label: "Launch films", href: "/launch-videos", match: (p: string) => p.startsWith("/launch-videos") },
   { label: "Share cards", href: "/og-images", match: (p: string) => p.startsWith("/og-images") },

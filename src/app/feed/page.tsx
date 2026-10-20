@@ -1,5 +1,6 @@
-import { byKind } from "@/lib/data";
+import { ENTRIES } from "@/lib/data";
 import { FeedGrid } from "@/components/FeedGrid";
+
 export default function Page() {
-  return <FeedGrid entries={byKind("feed")} title="Best of X" blurb="UI shots and interactions posted by designers on X." />;
+  return <FeedGrid entries={ENTRIES} title="Interfaces worth rebuilding" blurb="Hand-picked websites, sections, launch films and UI clips. Pick one and clone it from the video." />;
 }

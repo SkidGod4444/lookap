@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { Inter } from "next/font/google";
+import { Inter, Doto } from "next/font/google";
 import "./globals.css";
 import { TopBar } from "@/components/TopBar";
 import { ChipNav } from "@/components/ChipNav";
@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 import { Sounds } from "@/components/Sounds";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"], axes: ["opsz"] });
+const doto = Doto({ variable: "--font-doto", subsets: ["latin"], weight: "variable", axes: ["ROND"] });
 
 export const metadata: Metadata = {
   title: "lookap",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html lang="en" className={`${inter.variable} ${doto.variable} h-full antialiased`}>
       <body className="min-h-screen bg-gutter font-sans text-foreground antialiased">
         <Sounds />
         <Suspense fallback={<div className="h-14" />}>

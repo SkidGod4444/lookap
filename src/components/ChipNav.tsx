@@ -6,7 +6,7 @@ import { SECTIONS, sectionSlug } from "@/lib/data";
 import { badge, noScrollbar } from "@/components/button";
 
 /* Filter row for feed pages: section chips on the left, sort on the right. Hidden on posts, pricing and tools. */
-const FEED_PATHS = ["/", "/feed", "/websites", "/launch-videos", "/og-images", "/favourites"];
+const FEED_PATHS = ["/feed", "/websites", "/launch-videos", "/og-images", "/favourites"];
 
 export function ChipNav() {
   const path = usePathname();
@@ -19,7 +19,7 @@ export function ChipNav() {
   return (
     <nav aria-label="Filters" className="sticky top-14 z-[70] -mx-4 -mt-4 mb-4 flex min-w-0 items-center gap-4 bg-canvas px-4 py-3">
       <div className={`${noScrollbar} flex min-w-0 flex-1 items-center gap-1.5 overflow-x-auto pr-16 [mask-image:linear-gradient(to_right,black_calc(100%-6rem),transparent_calc(100%-1rem))]`}>
-        <Link href="/" className={chip(path === "/")}>All</Link>
+        <Link href="/feed" className={chip(path === "/feed")}>All</Link>
         {SECTIONS.map((s) => {
           const href = `/sections/${sectionSlug(s)}`;
           return <Link key={s} href={href} className={chip(path === href)}>{s}</Link>;
