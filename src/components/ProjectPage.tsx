@@ -4,7 +4,6 @@ import { ENTRIES, bySlug, sectionSlug } from "@/lib/data";
 import { Poster } from "./Poster";
 import { hrefFor } from "./FeedCard";
 import { button } from "./button";
-import { CopySlug } from "./CopySlug";
 import { LockScroll } from "./LockScroll";
 import { Stage } from "./Stage";
 
@@ -67,12 +66,6 @@ export function ProjectPage({ slug }: { slug: string }) {
             <div><dt className="font-medium text-foreground">Type</dt><dd className="text-right text-subtle">{entry.types.join(", ")}</dd></div>
             <div><dt className="font-medium text-foreground">Media</dt><dd className="text-subtle">{entry.video ? `clip · ${entry.duration}s` : "still"}</dd></div>
           </dl>
-
-          <div className="rounded-xl bg-card p-3 ring-1 ring-line">
-            <p className="text-[11px] font-medium tracking-[.06em] text-subtle uppercase">In the registry</p>
-            <p className="mt-1 text-[12px] text-subtle">Your agent can fetch this entry over MCP.</p>
-            <CopySlug slug={entry.slug} />
-          </div>
 
           <section>
             <h2 className="text-[11px] font-medium tracking-[.06em] text-subtle uppercase">More like this</h2>
