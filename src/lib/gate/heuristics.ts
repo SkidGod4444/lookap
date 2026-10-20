@@ -5,7 +5,7 @@ export type Signals = {
   flatness: number;   /* share of 8x8 blocks with almost no texture: UI is mostly flat fills */
   palette: number;    /* share of pixels covered by the 8 most common colours: UI uses few colours */
   rectilinear: number;/* share of strong edges that are horizontal or vertical: UI is made of boxes */
-  stillness: number;  /* share of pixels that do not change between samples: UI changes locally, cameras move everything */
+  stillness: number;  /* share of pixels that do not change between samples: UI changes locally, cameras move everything. -1 for a still */
   sharpness: number;  /* edge contrast at the pixel scale: rendered pixels are crisp, lenses are soft */
 };
 
@@ -72,9 +72,11 @@ export function analyse(frames: Uint8Array[], w: number, h: number): Heuristic {
   const ed = fs.map(edges);
   const re = mean(ed.map((e) => e.rectilinear));
   const sh = mean(ed.map((e) => e.sharpness));
-  const st = mean(fs.slice(1).map((f, i) => stillness(fs[i], f)));
+  const single = fs.length < 2;
+  const st = single ? -1 : mean(fs.slice(1).map((f, i) => stillness(fs[i], f)));
   const signals: Signals = { flatness: fl, palette: pa, rectilinear: re, stillness: st, sharpness: sh };
-  const score = fl * 0.25 + pa * 0.2 + re * 0.25 + st * 0.2 + sh * 0.1;
+  /* a still has no stillness signal (-1); its weight is spread over the others */
+  const score = single ? (fl * 0.25 + pa * 0.2 + re * 0.25 + sh * 0.1) / 0.8 : fl * 0.25 + pa * 0.2 + re * 0.25 + st * 0.2 + sh * 0.1;
   const verdict: Heuristic["verdict"] = score >= 0.62 ? "interface" : score >= 0.48 ? "rendered" : score >= 0.36 ? "mixed" : "footage";
   return { signals, score, verdict };
 }

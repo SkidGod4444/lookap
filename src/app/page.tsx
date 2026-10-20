@@ -7,7 +7,7 @@ import { badge, button } from "@/components/button";
 const STEPS = [
   { n: "01", title: "Frames", body: "The clip is split at 2 fps, plus full-resolution stills of every resting state." },
   { n: "02", title: "Measure", body: "Sizes, radii, colours and light falloff are read from pixels, not described from memory." },
-  { n: "03", title: "Time", body: "A brightness trace over the moving region gives every transition its real duration." },
+  { n: "03", title: "Time, or give motion", body: "From a clip, a brightness trace gives every transition its real duration. From a still, the agent proposes enter, hover and press motion for you to accept or change." },
   { n: "04", title: "Render, compare, fix", body: "The build is screenshotted beside the source frame and corrected until they match." },
 ];
 
@@ -26,10 +26,10 @@ export default function Home() {
         <div className="flex max-w-[52ch] flex-col gap-6">
           <span className={badge("chip", "w-fit px-2.5 py-1 text-[11px] tracking-[.06em] uppercase")}>Measured, not guessed</span>
           <h1 className="text-[40px] leading-[1.05] font-medium tracking-[-0.03em] text-balance text-foreground sm:text-[52px]">
-            Rebuild any interface from its demo video.
+            Rebuild any interface from a screenshot or a demo video.
           </h1>
           <p className="text-[16px] leading-relaxed text-pretty text-subtle">
-            Paste a screen recording or a UI clip. lookap checks that there is an interface in it, measures sizes, colours and motion from the pixels, and hands you the component as code. The card on the right came out of a six-second clip.
+            Paste a screenshot, a UI clip or a screen recording. lookap checks that there is an interface in it, measures sizes, colours and type from the pixels, takes motion from the clip or proposes it for a still, and hands you the component as code. The card on the right came out of a six-second clip.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/clone" className={button("silver", "h-10 rounded-full px-5 text-[14px]")}>
