@@ -11,6 +11,7 @@ const NAV = [
   { label: "Websites", href: "/websites", match: (p: string) => p.startsWith("/website") },
   { label: "Launch films", href: "/launch-videos", match: (p: string) => p.startsWith("/launch-videos") },
   { label: "Share cards", href: "/og-images", match: (p: string) => p.startsWith("/og-images") },
+  { label: "MCP", href: "/mcp", match: (p: string) => p.startsWith("/mcp") },
   { label: "Tools", href: "/tools", match: (p: string) => p.startsWith("/tools") },
   { label: "Pricing", href: "/pricing", match: (p: string) => p.startsWith("/pricing") },
 ];
@@ -44,9 +45,9 @@ export function TopBar() {
 
         <div className="flex shrink-0 items-center gap-3 max-sm:ml-auto">
           <Link href="/signin" className="hidden text-[13px] font-medium text-subtle transition-colors hover:text-foreground sm:inline">Sign in</Link>
-          <Link href="/clone" className={button("silver", "h-8 rounded-full px-3.5 text-[13px]")}>
+          <Link href="/mcp" className={button("silver", "h-8 rounded-full px-3.5 text-[13px]")}>
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" /></svg>
-            Clone a video
+            Connect your agent
           </Link>
         </div>
       </div>

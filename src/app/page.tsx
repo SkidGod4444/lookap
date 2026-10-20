@@ -11,17 +11,17 @@ export default function Home() {
       {/* hero */}
       <section className="grid items-center gap-10 pt-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:pt-14">
         <div className="flex max-w-[52ch] flex-col gap-6">
-          <span className={badge("chip", "w-fit px-2.5 py-1 text-[11px] tracking-[.06em] uppercase")}>Measured, not guessed</span>
+          <span className={badge("chip", "w-fit px-2.5 py-1 text-[11px] tracking-[.06em] uppercase")}>Measured, not guessed · MCP registry</span>
           <h1 className="text-[40px] leading-[1.05] font-medium tracking-[-0.03em] text-balance text-foreground sm:text-[52px]">
-            Rebuild any interface from a screenshot or a demo video.
+            Design knowledge your agent can use.
           </h1>
           <p className="text-[16px] leading-relaxed text-pretty text-subtle">
-            Paste a screenshot, a UI clip or a screen recording. lookap checks that there is an interface in it, measures sizes, colours and type from the pixels, takes motion from the clip or proposes it for a still, and hands you the component as code. The card on the right came out of a six-second clip.
+            A curated registry of interfaces, each measured from its clip or still, served to Claude Code, Codex and Cursor over MCP. Browse free. Connect your agent with a key and it builds from what we have measured, not from memory. The card on the right came out of a six-second clip this way.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link href="/clone" className={button("silver", "h-10 rounded-full px-5 text-[14px]")}>
+            <Link href="/mcp" className={button("silver", "h-10 rounded-full px-5 text-[14px]")}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" /></svg>
-              Clone a video
+              Connect your agent
             </Link>
             <Link href="/feed" className={button("outline", "h-10 rounded-full px-5 text-[14px]")}>Browse the feed</Link>
           </div>
@@ -44,7 +44,7 @@ export default function Home() {
         <div className="flex items-end justify-between gap-4">
           <div>
             <h2 className="text-[24px] leading-tight font-medium tracking-[-0.02em] text-foreground">Interfaces worth rebuilding</h2>
-            <p className="mt-1 text-[14px] text-subtle">Every entry can be cloned from its clip or its still.</p>
+            <p className="mt-1 text-[14px] text-subtle">Every entry is in the registry. Your agent can search it, read the recipe, and build.</p>
           </div>
           <Link href="/feed" className={button("outline", "h-8 shrink-0 rounded-full px-3.5 text-[13px]")}>Open the feed →</Link>
         </div>

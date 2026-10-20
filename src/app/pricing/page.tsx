@@ -4,19 +4,19 @@ import { useState } from "react";
 import { badge, button } from "@/components/button";
 
 const PLANS = [
-  { name: "Free", blurb: "Bring your own agent. The clone pipeline runs on your machine.", monthly: 0, yearly: 0, runs: "Unlimited local clones", cta: "Install the skill", primary: false,
-    features: ["Open-source clone pipeline", "20 gallery entries a day", "Clone any video or URL you already have"] },
-  { name: "Pro", blurb: "The full gallery, a saved library, and clones we run for you.", monthly: 12, yearly: 10, runs: "30 hosted clones a month", cta: "Go Pro", primary: true, popular: true,
-    features: ["Full gallery, search and tags", "Unlimited saves and moodboards", "Hosted clone runs, no agent needed", "Private sharing links"] },
-  { name: "Team", blurb: "A shared library for studios cloning for many clients.", monthly: 39, yearly: 32, runs: "100 hosted clones a month per seat", cta: "Start a team", primary: false,
-    features: ["Everything in Pro", "Shared library and moodboards", "Design tokens exported to your repo", "Priority queue"] },
+  { name: "Free", blurb: "Browse the feed. Connect without a key and see a sample of the registry.", monthly: 0, yearly: 0, runs: "5 results per search, first note", cta: "Browse the feed", primary: false,
+    features: ["Full feed on the site", "MCP: search_designs, list_notes", "No key needed"] },
+  { name: "Pro key", blurb: "The whole registry inside your agent: every entry, every recipe, media checks.", monthly: 12, yearly: 10, runs: "Unlimited registry reads", cta: "Get a Pro key", primary: true, popular: true,
+    features: ["All search results and notes", "Measured recipes with motion tables", "check_media on any public clip or still", "One key, any MCP client"] },
+  { name: "Team key", blurb: "For studios that want shared collections and private entries.", monthly: 39, yearly: 32, runs: "Per seat", cta: "Start a team", primary: false,
+    features: ["Everything in Pro", "Shared collections and private entries", "Priority on new recipes", "Invoiced billing"] },
 ];
 
 const FAQ = [
-  ["What runs locally and what runs hosted?", "The clone pipeline is an open skill. Frame extraction, pixel measurement and the render check all run on your machine inside your own agent. Hosted runs do the same work on our servers for people without an agent."],
-  ["Why is the gallery limited on Free?", "Curation is the part that costs us time. Twenty entries a day is enough to taste it. The pipeline itself is never limited."],
-  ["What is a clone?", "A working component rebuilt from a demo video or a live page, with sizes, colours and motion timing measured from the source instead of guessed."],
-  ["Can I change plans or stop?", "Upgrade or downgrade whenever you like and we only charge the difference for the days left. Stopping keeps everything working until your current period runs out, then the account drops to Free."],
+  ["What is the registry?", "A curated set of interfaces, each with attribution, category and types, and for the ones we rebuilt, a recipe: palette, geometry, type and motion read from the source clip's pixels. Plus design notes distilled from that work."],
+  ["What runs where?", "Nothing runs on our servers except the lookup. Your agent calls the registry over MCP and does the building on your machine."],
+  ["Why charge for a key?", "Curation and measurement are the work. The free tier shows the shape of the data; the key opens all of it."],
+  ["Can I change plans or stop?", "Upgrade or downgrade whenever you like and we only charge the difference for the days left. Stopping keeps the key working until your period ends, then it drops to Free."],
 ];
 
 export default function Pricing() {
@@ -25,7 +25,7 @@ export default function Pricing() {
     <div className="mx-auto flex w-full max-w-[940px] flex-col gap-8 py-10">
       <header className="flex flex-col items-center gap-2 text-center">
         <h1 className="text-[28px] font-medium tracking-[-0.02em] text-foreground">Pricing</h1>
-        <p className="max-w-[52ch] text-sm text-pretty text-subtle">The clone pipeline is free and open. You pay for the gallery, a saved library, and clones we run for you.</p>
+        <p className="max-w-[52ch] text-sm text-pretty text-subtle">Browsing is free. A key opens the whole registry to your agent over MCP.</p>
       </header>
 
       <div className="flex justify-center">
@@ -57,7 +57,7 @@ export default function Pricing() {
                 <div className="text-3xl font-medium text-foreground tabular-nums md:text-4xl">${yearly ? p.yearly : p.monthly}</div>
                 <span className="text-sm text-subtle">/ month</span>
               </div>
-              <span className="mt-1 block text-sm text-subtle">{p.runs}<span className="block">{p.monthly ? (yearly ? `Billed $${p.yearly * 12} yearly` : "Billed monthly") : "No card needed"}</span></span>
+              <span className="mt-1 block text-sm text-subtle">{p.runs}<span className="block">{p.monthly ? (yearly ? `Billed $${p.yearly * 12} yearly` : "Billed monthly") : "No key needed"}</span></span>
               <div className="mt-5 mb-4 border-t border-line pt-2">
                 {p.features.map((f) => (
                   <div key={f} className="my-4 flex items-start gap-2">
