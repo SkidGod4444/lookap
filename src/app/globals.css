@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* lookap tokens: a near-black gutter, a slightly lighter canvas, white type, silver for emphasis. */
+@theme {
+  --color-gutter: #0a0a0a;
+  --color-canvas: #111111;
+  --color-card: #181818;
+  --color-card-hover: #1e1e1e;
+  --color-foreground: #f5f5f5;
+  --color-silver: #c9c9c9;
+  --color-silver-bright: #e8e8e8;
+  --color-subtle: #8a8a8a;
+  --color-line: rgba(255, 255, 255, 0.08);
+  --color-line-strong: rgba(255, 255, 255, 0.14);
+  --color-chip: rgba(255, 255, 255, 0.06);
+  --color-chip-hover: rgba(255, 255, 255, 0.1);
+  --color-ring: rgba(255, 255, 255, 0.35);
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.625rem;
+  --radius-xl: 0.875rem;
+  --radius-2xl: 1.125rem;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+@layer base {
+  html { color-scheme: dark; }
+  body { @apply bg-gutter font-sans text-foreground; }
+}
