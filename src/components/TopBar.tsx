@@ -7,12 +7,8 @@ import { badge, button } from "./button";
 
 /* Primary navigation. Feed covers the home page, section filters and single posts. */
 const NAV = [
-  { label: "Feed", href: "/feed", match: (p: string) => p.startsWith("/feed") || p.startsWith("/sections") },
-  { label: "Websites", href: "/websites", match: (p: string) => p.startsWith("/website") },
-  { label: "Launch films", href: "/launch-videos", match: (p: string) => p.startsWith("/launch-videos") },
-  { label: "Share cards", href: "/og-images", match: (p: string) => p.startsWith("/og-images") },
+  { label: "Feed", href: "/feed", match: (p: string) => p.startsWith("/feed") || p.startsWith("/sections") || p.startsWith("/website") },
   { label: "MCP", href: "/mcp", match: (p: string) => p.startsWith("/mcp") },
-  { label: "Tools", href: "/tools", match: (p: string) => p.startsWith("/tools") },
   { label: "Pricing", href: "/pricing", match: (p: string) => p.startsWith("/pricing") },
 ];
 
@@ -37,13 +33,7 @@ export function TopBar() {
           })}
         </nav>
 
-        <form action="/search" role="search" className="ml-auto hidden w-full max-w-[260px] items-center gap-2 rounded-full bg-card px-3 py-1.5 text-[13px] ring-1 ring-line-strong transition-shadow focus-within:ring-ring sm:flex">
-          <svg className="shrink-0 text-subtle" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
-          <input name="q" placeholder="Search" aria-label="Search" className="min-w-0 flex-1 bg-transparent text-foreground outline-none placeholder:text-subtle" />
-          <kbd className={badge("chip", "h-5 px-1.5 font-mono text-[10px]")}>/</kbd>
-        </form>
-
-        <div className="flex shrink-0 items-center gap-3 max-sm:ml-auto">
+        <div className="ml-auto flex shrink-0 items-center gap-3">
           <Link href="/signin" className="hidden text-[13px] font-medium text-subtle transition-colors hover:text-foreground sm:inline">Sign in</Link>
           <Link href="/mcp" className={button("silver", "h-8 rounded-full px-3.5 text-[13px]")}>
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" /></svg>

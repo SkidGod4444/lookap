@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Mark } from "./Mark";
 
-const LINKS = [["Newsletter", "/newsletter"], ["Contact", "/contact"], ["Sponsor", "/sponsor"], ["Privacy", "/privacy"], ["Terms", "/terms"], ["Licence", "/licence"]];
+const LINKS = [["Privacy", "/privacy"], ["Terms", "/terms"]];
 
 export function Footer() {
   return (
