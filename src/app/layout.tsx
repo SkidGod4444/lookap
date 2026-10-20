@@ -12,7 +12,7 @@ const doto = Doto({ variable: "--font-doto", subsets: ["latin"], weight: "variab
 
 export const metadata: Metadata = {
   title: "lookap",
-  description: "Hand-picked interfaces worth rebuilding, and a pipeline that turns any demo video into a working component.",
+  description: "Hand-picked interfaces worth rebuilding, and a pipeline that rebuilds any interface from its demo video.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

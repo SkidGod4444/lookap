@@ -1,9 +1,40 @@
-/* The lookap mark: a viewfinder with its focus dot pulled off-centre. Silver on dark. */
-export function Mark({ size = 16 }: { size?: number }) {
+/* The lookap mascot: a fluffy ball with two very large eyes, looking up and to the right.
+   "look up" is the name and the pose. Drawn in the product's silver on dark; no colour.
+   The same drawing is the favicon (src/app/icon.svg). Geometry is generated symmetric: 16 tufts on a circle. */
+export function Mark({ size = 20, className = "" }: { size?: number; className?: string }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 20 20" aria-hidden="true">
-      <path d="M2 7V3.5A1.5 1.5 0 0 1 3.5 2H7M13 2h3.5A1.5 1.5 0 0 1 18 3.5V7M18 13v3.5a1.5 1.5 0 0 1-1.5 1.5H13M7 18H3.5A1.5 1.5 0 0 1 2 16.5V13" fill="none" stroke="#c9c9c9" strokeWidth="1.8" strokeLinecap="round" />
-      <circle cx="11.5" cy="8.5" r="2.6" fill="#ffffff" />
+    <svg width={size} height={size} viewBox="0 0 64 64" className={className} aria-hidden="true">
+      <defs>
+      <radialGradient id="lk-body" cx="38%" cy="28%" r="75%"><stop offset="0" stopColor="#dedede"/><stop offset=".55" stopColor="#a8a8a8"/><stop offset="1" stopColor="#5c5c5c"/></radialGradient>
+      <radialGradient id="lk-eye" cx="45%" cy="40%" r="60%"><stop offset="0" stopColor="#ffffff"/><stop offset="1" stopColor="#d9d9d9"/></radialGradient>
+      </defs>
+      <g fill="url(#lk-body)" stroke="#161616" strokeWidth="2" strokeLinejoin="round">
+    <circle cx="32.0" cy="16.5" r="5.2"/>
+    <circle cx="39.5" cy="18.0" r="5.2"/>
+    <circle cx="45.8" cy="22.2" r="5.2"/>
+    <circle cx="50.0" cy="28.5" r="5.2"/>
+    <circle cx="51.5" cy="36.0" r="5.2"/>
+    <circle cx="50.0" cy="43.5" r="5.2"/>
+    <circle cx="45.8" cy="49.8" r="5.2"/>
+    <circle cx="39.5" cy="54.0" r="5.2"/>
+    <circle cx="32.0" cy="55.5" r="5.2"/>
+    <circle cx="24.5" cy="54.0" r="5.2"/>
+    <circle cx="18.2" cy="49.8" r="5.2"/>
+    <circle cx="14.0" cy="43.5" r="5.2"/>
+    <circle cx="12.5" cy="36.0" r="5.2"/>
+    <circle cx="14.0" cy="28.5" r="5.2"/>
+    <circle cx="18.2" cy="22.2" r="5.2"/>
+    <circle cx="24.5" cy="18.0" r="5.2"/>
+    </g>
+    <circle cx="32" cy="36" r="21" fill="url(#lk-body)"/>
+    <path d="M17 19 C 13 8, 24 7, 26 15" fill="url(#lk-body)" stroke="#161616" strokeWidth="2" strokeLinejoin="round"/>
+    <path d="M47 19 C 51 8, 40 7, 38 15" fill="url(#lk-body)" stroke="#161616" strokeWidth="2" strokeLinejoin="round"/>
+    <circle cx="23.5" cy="34" r="10.5" fill="url(#lk-eye)" stroke="#161616" strokeWidth="2.2"/>
+    <circle cx="40.5" cy="34" r="10.5" fill="url(#lk-eye)" stroke="#161616" strokeWidth="2.2"/>
+    <circle cx="26.5" cy="30.5" r="6" fill="#161616"/><circle cx="43.5" cy="30.5" r="6" fill="#161616"/>
+    <circle cx="28.5" cy="28.5" r="2" fill="#ffffff"/><circle cx="45.5" cy="28.5" r="2" fill="#ffffff"/>
+    <path d="M30.5 45 h3 l-1.5 2 Z" fill="#161616"/>
+    <path d="M29 49.5 q3 2.5 6 0" fill="none" stroke="#161616" strokeWidth="1.8" strokeLinecap="round"/>
     </svg>
   );
 }

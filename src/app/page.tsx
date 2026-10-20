@@ -26,10 +26,10 @@ export default function Home() {
         <div className="flex max-w-[52ch] flex-col gap-6">
           <span className={badge("chip", "w-fit px-2.5 py-1 text-[11px] tracking-[.06em] uppercase")}>Measured, not guessed</span>
           <h1 className="text-[40px] leading-[1.05] font-medium tracking-[-0.03em] text-balance text-foreground sm:text-[52px]">
-            Paste a demo video. Get the component back.
+            Rebuild any interface from its demo video.
           </h1>
           <p className="text-[16px] leading-relaxed text-pretty text-subtle">
-            lookap pulls the frames, measures sizes, colours and motion from the pixels, and rebuilds the interface as code your agent can run. The card on the right came out of a six-second clip.
+            Paste a screen recording or a UI clip. lookap checks that there is an interface in it, measures sizes, colours and motion from the pixels, and hands you the component as code. The card on the right came out of a six-second clip.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/clone" className={button("silver", "h-10 rounded-full px-5 text-[14px]")}>
