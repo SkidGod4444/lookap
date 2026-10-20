@@ -37,17 +37,16 @@ export function ProjectPage({ slug }: { slug: string }) {
 
           {/* credit: links out only when we hold a verified handle or it is our own work; samples say so */}
           {entry.x || entry.sourceUrl ? (
-            <a href={entry.x ? `https://x.com/${entry.x}` : entry.sourceUrl} className="group flex items-center gap-3 rounded-xl bg-card p-2.5 ring-1 ring-line transition-colors hover:ring-line-strong">
-              <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#080808] text-[11px] font-semibold uppercase text-silver-bright ring-1 ring-line-strong">{entry.authorName.split(" ").map((w) => w[0]).slice(0, 2).join("")}</span>
+            <a href={entry.x ? `https://x.com/${entry.x}` : entry.sourceUrl} className="group flex items-center gap-2.5">
+              <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-[#080808] text-[10px] font-semibold uppercase text-silver-bright ring-1 ring-line-strong">{entry.authorName.split(" ").map((w) => w[0]).slice(0, 2).join("")}</span>
               <span className="min-w-0 flex-1">
-                <span className="block truncate text-[13px] font-medium text-foreground">{entry.authorName}</span>
+                <span className="block truncate text-[13px] font-medium text-foreground group-hover:underline underline-offset-2">{entry.authorName}</span>
                 <span className="block truncate text-[12px] text-subtle">{entry.x ? `@${entry.x}` : "source on GitHub"}</span>
               </span>
-              <svg className="shrink-0 text-subtle transition-colors group-hover:text-foreground" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
             </a>
           ) : (
-            <div className="flex items-center gap-3 rounded-xl bg-card p-2.5 ring-1 ring-line">
-              <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#080808] text-[11px] font-semibold uppercase text-silver-bright ring-1 ring-line-strong">{entry.authorName.split(" ").map((w) => w[0]).slice(0, 2).join("")}</span>
+            <div className="flex items-center gap-2.5">
+              <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-[#080808] text-[10px] font-semibold uppercase text-silver-bright ring-1 ring-line-strong">{entry.authorName.split(" ").map((w) => w[0]).slice(0, 2).join("")}</span>
               <span className="min-w-0 flex-1">
                 <span className="block truncate text-[13px] font-medium text-foreground">{entry.authorName}</span>
                 <span className="block truncate text-[12px] text-subtle">Sample entry. Real credits link to the designer.</span>
