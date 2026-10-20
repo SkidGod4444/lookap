@@ -13,8 +13,8 @@ const base =
   "before:bg-[radial-gradient(55%_140%_at_var(--mx,50%)_0%,rgba(255,255,255,0.5),rgba(255,255,255,0)_70%),linear-gradient(180deg,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0.18)_55%,rgba(255,255,255,0)_100%)] before:transition-[background-position] " +
   /* sheen band (sweeps once on hover) over brushed grain */
   "after:pointer-events-none after:absolute after:inset-0 after:z-[-1] after:rounded-[inherit] " +
-  "after:bg-[linear-gradient(105deg,transparent_35%,rgba(255,255,255,0.55)_50%,transparent_65%),repeating-linear-gradient(180deg,rgba(255,255,255,0.05)_0px,rgba(255,255,255,0.05)_1px,rgba(0,0,0,0.05)_1px,rgba(0,0,0,0.05)_2px)] " +
-  "after:bg-[length:55%_100%,100%_100%] after:bg-no-repeat after:bg-[position:-160%_0,0_0] after:opacity-[0.18] hover:after:opacity-[0.6] hover:after:animate-sheen motion-reduce:hover:after:animate-none";
+  "after:bg-[linear-gradient(105deg,transparent_25%,rgba(255,255,255,0.22)_42%,rgba(255,255,255,0.42)_50%,rgba(255,255,255,0.22)_58%,transparent_75%),repeating-linear-gradient(180deg,rgba(255,255,255,0.05)_0px,rgba(255,255,255,0.05)_1px,rgba(0,0,0,0.05)_1px,rgba(0,0,0,0.05)_2px)] " +
+  "after:bg-[length:70%_100%,100%_100%] after:bg-no-repeat after:bg-[position:-160%_0,0_0] after:opacity-[0.18] after:transition-opacity after:duration-700 after:ease-out hover:after:opacity-[0.55] hover:after:animate-sheen motion-reduce:hover:after:animate-none";
 
 /* bodies: note the lighter band at 90% — the reflection of the surface below, which sells the curve */
 const alloyLight =
