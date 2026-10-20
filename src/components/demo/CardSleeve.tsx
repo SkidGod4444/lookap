@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 /* The ID-card reader clone from the first lookap run: every size is a measured source pixel times --u.
    Hover (or tap) inserts the card; the LCD types a report; leaving ejects it. Styles are scoped to .cs-stage. */
 const CSS = `
-.cs-stage{--u:0.5px;position:relative;width:calc(1080*var(--u));height:calc(760*var(--u));max-width:100%;margin:0 auto;cursor:pointer;
+.cs-stage{--u:min(0.5px,calc((100vw - 48px) / 1080));position:relative;width:calc(1080*var(--u));height:calc(760*var(--u));max-width:100%;margin:0 auto;cursor:pointer;
   background:radial-gradient(60% 55% at 50% 48%,rgba(255,255,255,.04),transparent 70%)}
 .cs-rig{position:absolute;left:calc(289*var(--u));top:calc(40*var(--u));width:calc(518*var(--u));height:calc(700*var(--u))}
 .cs-card{position:absolute;left:calc(59*var(--u));top:0;width:calc(376*var(--u));height:calc(240*var(--u));z-index:1;border-radius:calc(28*var(--u));background:#2170f5;
@@ -40,11 +40,21 @@ const CSS = `
 .cs-ridges i{width:calc(28*var(--u));height:100%;border-radius:calc(14*var(--u)) calc(14*var(--u)) 0 0;background:linear-gradient(180deg,#0c0c0c 0%,#111 30%,#181818 100%);
   box-shadow:inset 0 calc(2*var(--u)) calc(2*var(--u)) rgba(0,0,0,.9),inset calc(1*var(--u)) 0 0 rgba(0,0,0,.5),inset calc(-1*var(--u)) 0 0 rgba(0,0,0,.5),0 calc(-1.5*var(--u)) 0 rgba(255,255,255,.12),calc(1.5*var(--u)) 0 0 rgba(255,255,255,.06),calc(-1.5*var(--u)) 0 0 rgba(255,255,255,.06)}
 @media (prefers-reduced-motion:reduce){.cs-card,.cs-lbl,.cs-val .ok{transition:none}}
+/* measurement callouts: hairline dimension lines and mono labels in the product's silver, placed in source units */
+.cs-co{position:absolute;inset:0;pointer-events:none;z-index:5;font-family:ui-monospace,Menlo,monospace;font-size:calc(22*var(--u));color:#c9c9c9;letter-spacing:.02em}
+.cs-co .l{position:absolute;background:rgba(201,201,201,.55)}
+.cs-co .l.h{height:1px}.cs-co .l.v{width:1px}
+.cs-co .l.h::before,.cs-co .l.h::after{content:"";position:absolute;top:calc(-5*var(--u));width:1px;height:calc(11*var(--u));background:rgba(201,201,201,.7)}
+.cs-co .l.h::before{left:0}.cs-co .l.h::after{right:0}
+.cs-co .l.v::before,.cs-co .l.v::after{content:"";position:absolute;left:calc(-5*var(--u));height:1px;width:calc(11*var(--u));background:rgba(201,201,201,.7)}
+.cs-co .l.v::before{top:0}.cs-co .l.v::after{bottom:0}
+.cs-co .t{position:absolute;white-space:nowrap;background:rgba(0,0,0,.72);padding:calc(3*var(--u)) calc(8*var(--u));border-radius:calc(6*var(--u));box-shadow:0 0 0 1px rgba(255,255,255,.12)}
+.cs-co .sw{display:inline-block;width:calc(14*var(--u));height:calc(14*var(--u));border-radius:50%;vertical-align:-10%;margin-right:calc(6*var(--u));box-shadow:0 0 0 1px rgba(0,0,0,.6)}
 `;
 
 const ROWS: [string, string][] = [["Identity", "Verified"], ["Access", "Restricted"], ["Data", "Restricted"], ["AI usage", "Limited"]];
 
-export function CardSleeve() {
+export function CardSleeve({ callouts = false }: { callouts?: boolean }) {
   const rig = useRef<HTMLDivElement>(null);
   const stage = useRef<HTMLDivElement>(null);
   const timers = useRef<number[]>([]);
@@ -90,6 +100,20 @@ export function CardSleeve() {
         </div>
         <div className="cs-tab" />
       </div>
+      {callouts && (
+        <div className="cs-co" aria-hidden="true">
+          {/* card width: 376 px across its top edge (card top at y 40 in this stage) */}
+          <i className="l h" style={{ left: "calc(348 * var(--u))", top: "calc(22 * var(--u))", width: "calc(376 * var(--u))" }} />
+          <span className="t" style={{ left: "calc(740 * var(--u))", top: "calc(6 * var(--u))" }}>376 px · r 28</span>
+          {/* sleeve height: 530 px down its left edge */}
+          <i className="l v" style={{ left: "calc(268 * var(--u))", top: "calc(200 * var(--u))", height: "calc(530 * var(--u))" }} />
+          <span className="t" style={{ left: "calc(120 * var(--u))", top: "calc(450 * var(--u))" }}>530 px</span>
+          {/* the one colour, sampled */}
+          <span className="t" style={{ left: "calc(800 * var(--u))", top: "calc(84 * var(--u))" }}><span className="sw" style={{ background: "#2170f5" }} />#2170f5</span>
+          {/* the insert timing, read from the clip */}
+          <span className="t" style={{ left: "calc(800 * var(--u))", top: "calc(560 * var(--u))" }}>insert 250 ms</span>
+        </div>
+      )}
     </div>
   );
 }
