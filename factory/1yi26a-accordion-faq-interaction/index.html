@@ -349,8 +349,8 @@ h1 { position: relative; margin: 0; font-weight: 600; font-size: calc(37 * var(-
     if (open) { chord(row.dataset.notes.split(",").map(Number)); chip(row.dataset.chord, x, y); }
   };
 
-  /* keys and buttons: hover lifts, press sounds */
-  acc.querySelectorAll(".w, .b, .btn").forEach((k) => k.addEventListener("pointerdown", (e) => { e.stopPropagation(); note(Number(k.dataset.n)); k.classList.add("down"); setTimeout(() => k.classList.remove("down"), 160); }));
+  /* keys and buttons: hover lifts, press sounds; the press still bubbles, so a drag can start anywhere on the instrument */
+  acc.querySelectorAll(".w, .b, .btn").forEach((k) => k.addEventListener("pointerdown", () => { note(Number(k.dataset.n)); k.classList.add("down"); setTimeout(() => k.classList.remove("down"), 160); }));
 
   /* the bellows: press and drag down to pull (top edge pinned), up to squeeze; release and it springs */
   let y0 = 0, b0 = 1, dragging = false, pressedRow = null, px = 0, py = 0, spring = null;
@@ -369,7 +369,7 @@ h1 { position: relative; margin: 0; font-weight: 600; font-size: calc(37 * var(-
     const dy = (e.clientY - y0) / unit();
     if (!dragging && Math.abs(dy) < 5) return;
     if (!dragging) { dragging = true; acc.classList.add("dragging"); }
-    setB(dy > 0 ? Math.min(2.3, b0 + dy / 120) : Math.max(0, b0 + dy / 260));
+    setB(dy > 0 ? Math.min(2.3, b0 + dy / 100) : Math.max(0, b0 + dy / 220));
   });
   const release = (e) => {
     if (!acc.hasPointerCapture(e.pointerId)) return;
@@ -382,7 +382,7 @@ h1 { position: relative; margin: 0; font-weight: 600; font-size: calc(37 * var(-
       ? [{ "--b": b, easing: "cubic-bezier(.5,0,.3,1)" }, { "--b": .35, offset: .29, easing: "cubic-bezier(.4,0,.3,1)" }, { "--b": 1.7, offset: .45, easing: "cubic-bezier(.4,0,.6,1)" }, { "--b": .99, offset: .66, easing: "cubic-bezier(.4,0,.6,1)" }, { "--b": 1.05, offset: .82, easing: "cubic-bezier(.4,0,.6,1)" }, { "--b": 1 }]
       : [{ "--b": b, easing: "cubic-bezier(.4,0,.6,1)" }, { "--b": 1.22, offset: .51, easing: "cubic-bezier(.4,0,.6,1)" }, { "--b": 1 }];
     spring = stage.animate(frames, { duration: b > 1 ? 1100 : 450, fill: "forwards" });
-    spring.onfinish = () => { spring = null; setB(1); stage.style.setProperty("--anc", "0"); };
+    spring.onfinish = () => { setB(1); stage.style.setProperty("--anc", "0"); spring.cancel(); spring = null; };
     pressedRow = null;
   };
   acc.addEventListener("pointerup", release);
