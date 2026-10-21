@@ -6,7 +6,8 @@ import { RECIPES, NOTES } from "@/lib/registry";
 import { button } from "@/components/button";
 
 export default function Home() {
-  const feed = [...ENTRIES].sort((a, b) => Number(Boolean(b.video)) - Number(Boolean(a.video)));
+  /* the home feed is a taste: two dozen cards, clips first; the full catalog is one click away at /feed */
+  const feed = [...ENTRIES].sort((a, b) => Number(Boolean(b.video)) - Number(Boolean(a.video))).slice(0, 24);
   return (
     <div className="flex flex-col gap-20 pb-10">
       {/* hero */}

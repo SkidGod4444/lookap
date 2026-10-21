@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
   async headers() {
     return [{ source: "/(.*)", headers: [{ key: "X-Robots-Tag", value: "noai, noimageai" }, { key: "TDM-Reservation", value: "1" }, { key: "TDM-Policy", value: "https://lookap.saidev.codes/llms.txt" }] }];
   },
+  /* Catalog media lives on vibrant's CDN; next/image resizes the stills and clip posters to the card width and caches them at the edge. */
+  images: { remotePatterns: [{ protocol: "https", hostname: "cdn.vibrant.design", pathname: "/**" }], minimumCacheTTL: 2678400 /* URLs are version-hashed, so a month */ },
   cacheComponents: true,
   partialPrefetching: true,
   turbopack: {

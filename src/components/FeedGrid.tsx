@@ -3,7 +3,8 @@ import { FeedCard } from "./FeedCard";
 
 type Props = { entries: Entry[]; title?: string; blurb?: string; hero?: boolean };
 
-/* Four columns at desktop, dealt to the shortest column so heights stay even. The hero takes the first cell. */
+/* Four columns at desktop, dealt to the shortest column so heights stay even. The hero takes the first cell.
+   The first card or two in each column load eagerly: they are the fold. */
 export function FeedGrid({ entries, title, blurb, hero = true }: Props) {
   const cols: Entry[][] = [[], [], [], []];
   const h = [hero ? 1.333 : 0, 0, 0, 0];
@@ -24,7 +25,7 @@ export function FeedGrid({ entries, title, blurb, hero = true }: Props) {
               </header>
             </section>
           )}
-          {c.map((e) => <FeedCard key={e.slug} entry={e} />)}
+          {c.map((e, j) => <FeedCard key={e.slug} entry={e} eager={j < (i === 0 && hero ? 1 : 2)} />)}
         </div>
       ))}
     </div>

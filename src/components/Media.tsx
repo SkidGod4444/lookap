@@ -1,15 +1,21 @@
+import Image from "next/image";
 import type { Entry } from "@/lib/data";
 import { Poster } from "./Poster";
 import { Clip } from "./Clip";
 
-/* An entry's media, filling its box: clips play muted on loop, stills show as they are. */
-export function Media({ entry, compact = false }: { entry: Entry; compact?: boolean }) {
+/* Width hints for next/image so the optimizer serves a card-sized file, not the CDN original. */
+export const CARD_SIZES = "(min-width: 1680px) 410px, (min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw";
+export const STAGE_SIZES = "(min-width: 1024px) 900px, 100vw";
+export const TILE_SIZES = "160px";
+
+/* An entry's media, filling its box: clips play muted on loop over an instant poster, stills show as they are.
+   `eager` is for the first row: the poster is preloaded and the clip starts fetching from the HTML, before hydration. */
+export function Media({ entry, sizes = CARD_SIZES, eager = false, compact = false }: { entry: Entry; sizes?: string; eager?: boolean; compact?: boolean }) {
   if (entry.video) {
-    return <Clip src={entry.video.src} w={entry.video.w} h={entry.video.h} />;
+    return <Clip src={entry.video.src} poster={entry.poster} w={entry.video.w} h={entry.video.h} title={entry.title} sizes={sizes} eager={eager} still={compact} />;
   }
   if (entry.image) {
-    /* eslint-disable-next-line @next/next/no-img-element -- remote CDN still at its native size, no optimizer in between */
-    return <img className="absolute inset-0 h-full w-full object-cover" src={entry.image.src} width={entry.image.w} height={entry.image.h} alt={entry.title} loading="lazy" decoding="async" />;
+    return <Image src={entry.image.src} alt={entry.title} fill sizes={sizes} priority={eager} className="object-cover" />;
   }
   return <Poster entry={entry} compact={compact} />;
 }

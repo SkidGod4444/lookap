@@ -61,6 +61,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${inter.variable} ${doto.variable} h-full antialiased`}>
       <body className="min-h-screen bg-gutter font-sans text-foreground antialiased">
+        {/* catalog media comes from vibrant's CDN; open the connection before the first poster is requested */}
+        <link rel="preconnect" href="https://cdn.vibrant.design" />
         <ClerkProvider>
           <Sounds />
           <NoInspect />

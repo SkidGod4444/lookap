@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ENTRIES, bySlug, sectionSlug } from "@/lib/data";
-import { Media } from "./Media";
+import { Media, STAGE_SIZES, TILE_SIZES } from "./Media";
 import { hrefFor } from "./FeedCard";
 import { button } from "./button";
 import { LockScroll } from "./LockScroll";
@@ -20,7 +20,7 @@ export function ProjectPage({ slug }: { slug: string }) {
       <LockScroll />
       <Stage>
         <div className="relative w-full cursor-default overflow-hidden rounded-[5px] shadow-[0_24px_80px_rgba(0,0,0,0.6)] ring-1 ring-line-strong" style={{ maxWidth: wide ? 900 : 420, aspectRatio: entry.ratio }}>
-          <Media entry={entry} />
+          <Media entry={entry} sizes={STAGE_SIZES} eager />
         </div>
       </Stage>
 
@@ -68,7 +68,7 @@ export function ProjectPage({ slug }: { slug: string }) {
             <ul className="mt-2 grid grid-cols-3 gap-px overflow-hidden rounded-lg bg-line ring-1 ring-line lg:grid-cols-2">
               {similar.map((s) => (
                 <li key={s.slug} className="min-w-0 bg-canvas">
-                  <Link href={hrefFor(s)} className="block"><span className="relative block aspect-[4/3] overflow-hidden"><Media entry={s} compact /></span></Link>
+                  <Link href={hrefFor(s)} className="block"><span className="relative block aspect-[4/3] overflow-hidden"><Media entry={s} sizes={TILE_SIZES} compact /></span></Link>
                 </li>
               ))}
             </ul>
