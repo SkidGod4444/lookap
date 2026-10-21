@@ -5,25 +5,27 @@ import { useEffect, useState } from "react";
 import { hrefFor } from "./FeedCard";
 import { bySlug } from "@/lib/data";
 
-type Row = { slug: string; title: string; author: string; score: number; saves: number; agent: number; views: number; measured: boolean };
+type Row = { slug: string; title: string; author: string; score: number; saves: number; agent: number; views: number; measured: boolean; rebuilt: boolean };
 
-/* The rebuild queue, for the admin account only: entries by demand, with what drove it and whether a recipe exists. */
+/* The rebuild queue, for the admin account only: entries by demand, with what drove it and whether a recipe exists.
+   Entries that already ship a rebuild are out of the queue; they are listed below it so their demand stays visible. */
 export function DemandTable() {
   const [rows, setRows] = useState<Row[] | null>(null);
   useEffect(() => { void fetch("/api/demand").then((r) => (r.ok ? r.json() : null)).then((d) => setRows(d?.rows ?? null)).catch(() => {}); }, []);
   if (!rows) return null;
+  const queue = rows.filter((r) => !r.rebuilt), done = rows.filter((r) => r.rebuilt);
   return (
     <section className="flex flex-col gap-3">
       <h2 className="text-[16px] font-medium text-foreground">Demand</h2>
       <p className="text-[13px] text-subtle">What to measure and rebuild next. Score counts a save as five, an agent read as three, an open as one.</p>
-      {rows.length === 0 ? (
-        <p className="text-[13px] text-subtle">Nothing counted yet.</p>
+      {queue.length === 0 ? (
+        <p className="text-[13px] text-subtle">{rows.length ? "Everything with demand is rebuilt." : "Nothing counted yet."}</p>
       ) : (
         <div className="overflow-x-auto rounded-xl bg-card ring-1 ring-line">
           <table className="w-full text-[12.5px]">
             <thead><tr className="text-left text-subtle [&>th]:px-3 [&>th]:py-2 [&>th]:font-medium"><th>Entry</th><th className="text-right">Score</th><th className="text-right">Saves</th><th className="text-right">Agent</th><th className="text-right">Opens</th><th>Recipe</th></tr></thead>
             <tbody className="divide-y divide-line">
-              {rows.map((r) => {
+              {queue.map((r) => {
                 const e = bySlug(r.slug);
                 return (
                   <tr key={r.slug} className="[&>td]:px-3 [&>td]:py-2">
@@ -39,6 +41,9 @@ export function DemandTable() {
             </tbody>
           </table>
         </div>
+      )}
+      {done.length > 0 && (
+        <p className="text-[12.5px] text-subtle">Rebuilt, still drawing demand: {done.map((r, i) => { const e = bySlug(r.slug); return <span key={r.slug}>{i > 0 && ", "}{e ? <Link href={hrefFor(e)} className="text-foreground hover:underline underline-offset-2">{r.title}</Link> : r.title} ({r.score})</span>; })}</p>
       )}
     </section>
   );
