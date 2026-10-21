@@ -13,7 +13,7 @@ function prompts(slug: string, title: string, measured: boolean) {
   return [
     { label: "Analyze", text: `Use lookap: call get_design and get_brief for "${slug}" (${title}) and tell me what makes it work: layout, hierarchy, palette, motion. A short list, with the values you were given.` },
     { label: "Rebuild here", text: measured
-      ? `Rebuild lookap entry "${slug}" in this project. Call get_design, then get_recipe and treat every value in it as measured fact. Build it with this stack, then compare with the frame and fix the three largest differences.`
+      ? `Rebuild lookap entry "${slug}" in this project. If the key is Team, call get_rebuild and port the file keeping every number; otherwise call get_design, then get_recipe and treat every value in it as measured fact. Build it with this stack, screenshot it, call check_rebuild, and fix the three largest differences it reports.`
       : `Rebuild lookap entry "${slug}" in this project. Call get_design and get_brief, treat the brief's motion as proposed and say so in a comment. Build it with this stack, then compare with the frame and fix the three largest differences.` },
     { label: "Find similar", text: `Call lookap similar_designs for "${slug}" and show me the three closest entries with what they share and where they differ.` },
   ];

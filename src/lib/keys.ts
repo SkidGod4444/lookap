@@ -34,10 +34,10 @@ export function keyFromRequest(req: Request): string | null {
   return req.headers.get("x-lookap-key");
 }
 
-/* No key, no registry. Starter ($1) opens search and notes; Pro adds recipes and media checks; Team adds seats. */
-export const LIMITS: Record<Plan, { search: number; recipes: boolean; notes: number; media: boolean }> = {
-  none: { search: 0, recipes: false, notes: 0, media: false },
-  starter: { search: 20, recipes: false, notes: 100, media: false },
-  pro: { search: 50, recipes: true, notes: 100, media: true },
-  team: { search: 100, recipes: true, notes: 100, media: true },
+/* No key, no registry. Starter ($1) opens search and notes; Pro adds recipes, keyframes and checks; Team adds seats and the finished source. */
+export const LIMITS: Record<Plan, { search: number; recipes: boolean; notes: number; media: boolean; source: boolean }> = {
+  none: { search: 0, recipes: false, notes: 0, media: false, source: false },
+  starter: { search: 20, recipes: false, notes: 100, media: false, source: false },
+  pro: { search: 50, recipes: true, notes: 100, media: true, source: false },
+  team: { search: 100, recipes: true, notes: 100, media: true, source: true },
 };
