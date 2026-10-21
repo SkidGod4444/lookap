@@ -18,8 +18,8 @@ function unkey() {
   return client;
 }
 
-/* Requests per minute each plan may make against the MCP endpoint. Enforced by Unkey at verification. */
-const RPM: Record<Exclude<Plan, "none">, number> = { starter: 60, pro: 300, team: 600 };
+/* Pace is not limited per minute: tool calls are counted per day per account in Redis (usage.ts), so the keys carry no
+   Unkey rate limit. Updating a key clears any limit an older key was minted with. */
 const PLANS = new Set<Plan>(["starter", "pro", "team"]);
 
 export type Verified =
@@ -84,7 +84,6 @@ export async function createKey(userId: string, plan: Exclude<Plan, "none">, nam
     name: name.slice(0, 60) || `${plan} key`,
     externalId: userId,
     meta: { plan },
-    ratelimits: [{ name: "requests", limit: RPM[plan], duration: 60_000, autoApply: true }],
   });
   return { keyId: data.keyId, key: data.key };
 }
@@ -97,7 +96,7 @@ export async function setUserKeys(userId: string, patch: { enabled?: boolean; pl
       unkey().keys.updateKey({
         keyId: k.keyId,
         ...(patch.enabled === undefined ? {} : { enabled: patch.enabled }),
-        ...(patch.plan ? { meta: { plan: patch.plan }, ratelimits: [{ name: "requests", limit: RPM[patch.plan], duration: 60_000, autoApply: true }] } : {}),
+        ...(patch.plan ? { meta: { plan: patch.plan }, ratelimits: [] } : {}),
       }),
     ),
   );

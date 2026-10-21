@@ -252,7 +252,7 @@ export const TOOLS = [
   ["see_design", "The entry's frame as an image, or a named keyframe of the clip, for agents that can look.", "pro"],
   ["check_rebuild", "Send a screenshot of your build; get back the regions and colours that differ from the reference frame.", "pro"],
   ["get_rebuild", "The finished rebuild as one HTML file, to port to your stack.", "team"],
-  ["get_usage", "This key's plan, the account's quotas, what is used and when they reset.", "starter"],
+  ["get_usage", "Today's calls, the month's quotas, and what the next plan adds.", "starter"],
   ["get_recipe", "Palette, geometry, type and motion table, read from the clip's pixels.", "pro"],
   ["get_method", "The measuring steps behind every recipe, to apply to a clip of your own.", "starter"],
   ["list_notes", "Design guidance distilled from the rebuilds.", "starter"],

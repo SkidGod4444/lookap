@@ -4,7 +4,7 @@ import { z } from "zod";
 import { CATEGORIES, METHOD, NOTES, RECIPES, SECTION_NAMES, briefFor, facets, publicEntry, recipeFor, searchEntries, similarEntries } from "@/lib/registry";
 import { compareBuild } from "@/lib/compare";
 import { REBUILDS } from "@/lib/rebuilds";
-import { QUOTAS, charge, usageFor } from "@/lib/usage";
+import { DAILY, QUOTAS, charge, chargeDaily, usageFor } from "@/lib/usage";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { ENTRIES, bySlug } from "@/lib/data";
@@ -23,7 +23,7 @@ const REASONS: Record<string, string> = {
   NOT_FOUND: "got a key lookap does not recognise. Check it at /account, or get one at /pricing.",
   DISABLED: "got a key that is switched off. Manage it at /account.",
   EXPIRED: "got an expired key. Get a new one at /account.",
-  RATE_LIMITED: "is over this key's rate limit. Slow down for a minute, or move to a higher plan at /pricing.",
+  RATE_LIMITED: "is over this key's limit. Move to a higher plan at /pricing.",
   USAGE_EXCEEDED: "has used up this key's credits for the period.",
   NOT_CONFIGURED: "cannot verify keys right now: the server has no Unkey configuration.",
 };
@@ -48,6 +48,8 @@ async function loadFrame(poster: string): Promise<{ data: string; mimeType: stri
 const LOCK: Record<string, keyof (typeof LIMITS)["pro"]> = { get_recipe: "recipes", see_design: "media", check_rebuild: "media", check_media: "media", get_rebuild: "source" };
 const NEEDS: Record<string, string> = { recipes: "Pro", media: "Pro", source: "Team" };
 const spent = (what: string, u: { used: number; limit: number; resets: string }) => text({ error: `${what} has used its ${u.limit} calls for this month on this account. Resets ${u.resets}. A higher plan at /pricing raises it.`, usage: u });
+const NEXT: Record<Plan, string> = { none: "", starter: `Pro gets ${DAILY.pro} a day`, pro: `Team gets ${DAILY.team} a day per seat`, team: "add a seat" };
+const dayDone = (plan: Plan, u: { used: number; limit: number; resets: string }) => text({ error: `This account has used its ${u.limit} tool calls for today. Resets ${u.resets}. Upgrade at /pricing: ${NEXT[plan]}.`, today: u });
 
 function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
   const lim = LIMITS[plan];
@@ -63,13 +65,21 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
         "Every tool needs a key (Starter $1/mo at /pricing); see_design, get_recipe, check_rebuild and check_media need Pro; get_rebuild, the finished source, needs Team. " +
         (plan === "none" ? "" : `This key is ${plan}. `) +
         (hidden.length ? `Not on this plan, so not listed: ${hidden.join(", ")}; see /pricing. ` : "") +
-        (quotas.length ? `Monthly quotas on this account, shared by all its keys: ${quotas.join(", ")}; get_usage shows what is left. ` : "") +
+        (plan === "none" ? "" : `This account may make ${DAILY[plan]} tool calls a day across all its keys${plan === "team" ? " per seat" : ""}; get_usage shows what is left. `) +
+        (quotas.length ? `Monthly quotas on this account, shared by all its keys: ${quotas.join(", ")}. ` : "") +
         (stale ? "Key verification used a cached result because the key service was unreachable; limits still apply." : ""),
     },
   );
   const ro = { readOnlyHint: true, idempotentHint: true, openWorldHint: false } as const;
   const handles: Record<string, RegisteredTool> = {};
-  const reg: McpServer["registerTool"] = (...a) => { const t = server.registerTool(...a); handles[a[0]] = t; return t; };
+  /* every tool call counts against the day's allowance before it runs; get_usage is free so a spent account can still see why */
+  const reg: McpServer["registerTool"] = (...a) => {
+    const [name, config, cb] = a as unknown as [string, object, (...h: unknown[]) => unknown];
+    const counted = name === "get_usage" || plan === "none" ? cb : async (...h: unknown[]) => { const d = await chargeDaily(keyRef, plan); return d && !d.ok ? dayDone(plan, d) : cb(...h); };
+    const t = (server.registerTool as unknown as (n: string, c: object, f: unknown) => RegisteredTool)(name, config, counted);
+    handles[name] = t;
+    return t;
+  };
 
   reg(
     "search_designs",
@@ -328,8 +338,8 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     { title: "What this key has left", description: "The key's plan, the tools it opens, the account's monthly quotas with what has been used across all its keys, and when they reset. Needs a key.", annotations: ro },
     async () => {
       if (plan === "none") return gated("get_usage", plan, reason);
-      const usage = keyRef ? await usageFor(keyRef, plan) : {};
-      return text({ plan, perMinute: "rate limited by plan at the key service", quotas: usage, unmetered: Object.keys(LOCK).filter((t) => lim[LOCK[t]] && !QUOTAS[plan][t]).concat(["search_designs", "get_design", "get_brief", "similar_designs", "list_notes", "get_note", "get_method"]), notOnThisPlan: hidden, upgrade: hidden.length ? "/pricing" : null });
+      const usage = keyRef ? await usageFor(keyRef, plan) : { today: { used: 0, limit: DAILY[plan], resets: "" }, month: {} };
+      return text({ plan, today: usage.today, quotas: usage.month, unmetered: Object.keys(LOCK).filter((t) => lim[LOCK[t]] && !QUOTAS[plan][t]).concat(["search_designs", "get_design", "get_brief", "similar_designs", "list_notes", "get_note", "get_method"]), notOnThisPlan: hidden, upgrade: hidden.length ? "/pricing" : null });
     },
   );
 
