@@ -6,135 +6,17 @@
   "h": 1080
  },
  "animations": 14,
- "score": 59,
+ "score": 62,
  "stills": 65,
- "motion": 57,
+ "motion": 61,
  "keyframes": [
-  {
-   "keyframe": "0.1s",
-   "at": 0.1,
-   "still": false,
-   "score": 67,
-   "overall": 13,
-   "elements": [
-    {
-     "name": "draft 4 #f9f8f7",
-     "box": [
-      354,
-      625,
-      729,
-      56
-     ],
-     "reference": "#a16069",
-     "yours": "#86474f",
-     "delta": 77
-    },
-    {
-     "name": "draft 2 #f9f8f7",
-     "box": [
-      354,
-      689,
-      729,
-      56
-     ],
-     "reference": "#986165",
-     "yours": "#9e6b6e",
-     "delta": 62
-    },
-    {
-     "name": "draft 5 #f9f8f6",
-     "box": [
-      354,
-      431,
-      729,
-      56
-     ],
-     "reference": "#b5afa8",
-     "yours": "#b4adaa",
-     "delta": 47
-    }
-   ],
-   "regions": [
-    {
-     "cell": "D4",
-     "box": [
-      717,
-      540,
-      239,
-      180
-     ],
-     "delta": 80,
-     "over": [
-      "draft 2 #f9f8f7",
-      "draft 3 #f9f9f7",
-      "draft 4 #f9f8f7",
-      "draft 6 #f9f8f6"
-     ]
-    },
-    {
-     "cell": "D3",
-     "box": [
-      478,
-      540,
-      239,
-      180
-     ],
-     "delta": 78,
-     "over": [
-      "draft 2 #f9f8f7",
-      "draft 3 #f9f9f7",
-      "draft 4 #f9f8f7",
-      "draft 6 #f9f8f6"
-     ]
-    },
-    {
-     "cell": "C4",
-     "box": [
-      717,
-      360,
-      239,
-      180
-     ],
-     "delta": 33,
-     "over": [
-      "draft 3 #f9f9f7",
-      "draft 5 #f9f8f6",
-      "draft 12 #080706"
-     ]
-    }
-   ]
-  },
   {
    "keyframe": "0.55s",
    "at": 0.55,
    "still": false,
-   "score": 63,
+   "score": 61,
    "overall": 15,
    "elements": [
-    {
-     "name": "draft 2 #f9f8f7",
-     "box": [
-      354,
-      689,
-      729,
-      56
-     ],
-     "reference": "#a1636b",
-     "yours": "#8a575d",
-     "delta": 76
-    },
-    {
-     "name": "draft 4 #f9f8f7",
-     "box": [
-      354,
-      625,
-      729,
-      56
-     ],
-     "reference": "#d4d2d0",
-     "yours": "#d6d4cf",
-     "delta": 71
-    },
     {
      "name": "draft 8 #f0ebdf",
      "box": [
@@ -144,8 +26,32 @@
       93
      ],
      "reference": "#96928b",
-     "yours": "#918b84",
-     "delta": 60
+     "yours": "#a39f98",
+     "delta": 76
+    },
+    {
+     "name": "draft 2 #f9f8f7",
+     "box": [
+      354,
+      689,
+      729,
+      56
+     ],
+     "reference": "#a1636b",
+     "yours": "#b58187",
+     "delta": 67
+    },
+    {
+     "name": "draft 9 #e5decf",
+     "box": [
+      526,
+      751,
+      381,
+      112
+     ],
+     "reference": "#a49d96",
+     "yours": "#ada69f",
+     "delta": 62
     }
    ],
    "regions": [
@@ -157,12 +63,28 @@
       239,
       180
      ],
-     "delta": 59,
+     "delta": 50,
      "over": [
       "draft 2 #f9f8f7",
       "draft 3 #f9f9f7",
       "draft 4 #f9f8f7",
       "draft 6 #f9f8f6"
+     ]
+    },
+    {
+     "cell": "E3",
+     "box": [
+      478,
+      720,
+      239,
+      180
+     ],
+     "delta": 49,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 11 #cecac1"
      ]
     },
     {
@@ -173,12 +95,75 @@
       239,
       180
      ],
-     "delta": 58,
+     "delta": 47,
      "over": [
       "draft 2 #f9f8f7",
       "draft 3 #f9f9f7",
       "draft 4 #f9f8f7",
       "draft 6 #f9f8f6"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "1s",
+   "at": 1,
+   "still": false,
+   "score": 71,
+   "overall": 12,
+   "elements": [
+    {
+     "name": "draft 8 #f0ebdf",
+     "box": [
+      535,
+      753,
+      314,
+      93
+     ],
+     "reference": "#9b9490",
+     "yours": "#a19c97",
+     "delta": 90
+    },
+    {
+     "name": "draft 9 #e5decf",
+     "box": [
+      526,
+      751,
+      381,
+      112
+     ],
+     "reference": "#9e948f",
+     "yours": "#a59c98",
+     "delta": 82
+    },
+    {
+     "name": "draft 12 #080706",
+     "box": [
+      365,
+      300,
+      707,
+      116
+     ],
+     "reference": "#9f9b96",
+     "yours": "#9c9996",
+     "delta": 30
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      478,
+      720,
+      239,
+      180
+     ],
+     "delta": 50,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 11 #cecac1"
      ]
     },
     {
@@ -189,7 +174,7 @@
       239,
       180
      ],
-     "delta": 45,
+     "delta": 47,
      "over": [
       "draft 2 #f9f8f7",
       "draft 7 #860319",
@@ -197,6 +182,21 @@
       "draft 9 #e5decf",
       "draft 10 #c2bdb4",
       "draft 11 #cecac1"
+     ]
+    },
+    {
+     "cell": "C3",
+     "box": [
+      478,
+      360,
+      239,
+      180
+     ],
+     "delta": 28,
+     "over": [
+      "draft 3 #f9f9f7",
+      "draft 5 #f9f8f6",
+      "draft 12 #080706"
      ]
     }
    ]
@@ -217,8 +217,8 @@
       93
      ],
      "reference": "#9b958f",
-     "yours": "#837a74",
-     "delta": 98
+     "yours": "#a19c97",
+     "delta": 91
     },
     {
      "name": "draft 9 #e5decf",
@@ -229,8 +229,8 @@
       112
      ],
      "reference": "#9e958f",
-     "yours": "#887c77",
-     "delta": 93
+     "yours": "#a59c98",
+     "delta": 83
     },
     {
      "name": "draft 12 #080706",
@@ -241,102 +241,8 @@
       116
      ],
      "reference": "#a5a29d",
-     "yours": "#9e9b96",
-     "delta": 39
-    }
-   ],
-   "regions": [
-    {
-     "cell": "E4",
-     "box": [
-      717,
-      720,
-      239,
-      180
-     ],
-     "delta": 62,
-     "over": [
-      "draft 2 #f9f8f7",
-      "draft 7 #860319",
-      "draft 8 #f0ebdf",
-      "draft 9 #e5decf",
-      "draft 10 #c2bdb4",
-      "draft 11 #cecac1"
-     ]
-    },
-    {
-     "cell": "E3",
-     "box": [
-      478,
-      720,
-      239,
-      180
-     ],
-     "delta": 56,
-     "over": [
-      "draft 2 #f9f8f7",
-      "draft 8 #f0ebdf",
-      "draft 9 #e5decf",
-      "draft 11 #cecac1"
-     ]
-    },
-    {
-     "cell": "B3",
-     "box": [
-      478,
-      180,
-      239,
-      180
-     ],
-     "delta": 32,
-     "over": [
-      "draft 12 #080706"
-     ]
-    }
-   ]
-  },
-  {
-   "keyframe": "2.2s",
-   "at": 2.2,
-   "still": false,
-   "score": 52,
-   "overall": 19,
-   "elements": [
-    {
-     "name": "draft 11 #cecac1",
-     "box": [
-      332,
-      854,
-      426,
-      65
-     ],
-     "reference": "#b16571",
-     "yours": "#83454d",
-     "delta": 82
-    },
-    {
-     "name": "draft 6 #f9f8f6",
-     "box": [
-      354,
-      560,
-      729,
-      56
-     ],
-     "reference": "#a9a4a0",
-     "yours": "#ccc8c2",
-     "delta": 63
-    },
-    {
-     "name": "draft 10 #c2bdb4",
-     "box": [
-      769,
-      846,
-      335,
-      60
-     ],
-     "reference": "#98525c",
-     "yours": "#8c4c54",
-     "delta": 60
+     "yours": "#9c9996",
+     "delta": 38
     }
    ],
    "regions": [
@@ -348,7 +254,7 @@
       239,
       180
      ],
-     "delta": 52,
+     "delta": 51,
      "over": [
       "draft 2 #f9f8f7",
       "draft 8 #f0ebdf",
@@ -364,7 +270,7 @@
       239,
       180
      ],
-     "delta": 52,
+     "delta": 48,
      "over": [
       "draft 2 #f9f8f7",
       "draft 7 #860319",
@@ -382,7 +288,7 @@
       239,
       180
      ],
-     "delta": 49,
+     "delta": 35,
      "over": [
       "draft 3 #f9f9f7",
       "draft 5 #f9f8f6",
@@ -392,11 +298,11 @@
    ]
   },
   {
-   "keyframe": "2.45s",
-   "at": 2.45,
+   "keyframe": "2.2s",
+   "at": 2.2,
    "still": false,
-   "score": 47,
-   "overall": 21,
+   "score": 64,
+   "overall": 14,
    "elements": [
     {
      "name": "draft 11 #cecac1",
@@ -406,9 +312,9 @@
       426,
       65
      ],
-     "reference": "#a36c73",
-     "yours": "#956367",
-     "delta": 92
+     "reference": "#b16571",
+     "yours": "#af6b74",
+     "delta": 56
     },
     {
      "name": "draft 10 #c2bdb4",
@@ -418,24 +324,50 @@
       335,
       60
      ],
-     "reference": "#9b7276",
-     "yours": "#9b6e71",
-     "delta": 78
+     "reference": "#98525c",
+     "yours": "#8e545c",
+     "delta": 53
     },
     {
-     "name": "draft 6 #f9f8f6",
+     "name": "draft 12 #080706",
      "box": [
-      354,
-      560,
-      729,
-      56
+      365,
+      300,
+      707,
+      116
      ],
-     "reference": "#a4a09c",
-     "yours": "#c9c5be",
-     "delta": 68
+     "reference": "#a39c99",
+     "yours": "#9c9996",
+     "delta": 36
     }
    ],
    "regions": [
+    {
+     "cell": "B4",
+     "box": [
+      717,
+      180,
+      239,
+      180
+     ],
+     "delta": 39,
+     "over": [
+      "draft 12 #080706"
+     ]
+    },
+    {
+     "cell": "B3",
+     "box": [
+      478,
+      180,
+      239,
+      180
+     ],
+     "delta": 37,
+     "over": [
+      "draft 12 #080706"
+     ]
+    },
     {
      "cell": "E3",
      "box": [
@@ -444,7 +376,86 @@
       239,
       180
      ],
-     "delta": 63,
+     "delta": 37,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 11 #cecac1"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "2.92s",
+   "at": 2.92,
+   "still": false,
+   "score": 35,
+   "overall": 26,
+   "elements": [
+    {
+     "name": "draft 8 #f0ebdf",
+     "box": [
+      535,
+      753,
+      314,
+      93
+     ],
+     "reference": "#9c9590",
+     "yours": "#b6b2af",
+     "delta": 98
+    },
+    {
+     "name": "draft 9 #e5decf",
+     "box": [
+      526,
+      751,
+      381,
+      112
+     ],
+     "reference": "#9c928d",
+     "yours": "#b9b3af",
+     "delta": 92
+    },
+    {
+     "name": "draft 2 #f9f8f7",
+     "box": [
+      354,
+      689,
+      729,
+      56
+     ],
+     "reference": "#d5d4d2",
+     "yours": "#cac8c6",
+     "delta": 83
+    }
+   ],
+   "regions": [
+    {
+     "cell": "D3",
+     "box": [
+      478,
+      540,
+      239,
+      180
+     ],
+     "delta": 84,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 3 #f9f9f7",
+      "draft 4 #f9f8f7",
+      "draft 6 #f9f8f6"
+     ]
+    },
+    {
+     "cell": "E3",
+     "box": [
+      478,
+      720,
+      239,
+      180
+     ],
+     "delta": 79,
      "over": [
       "draft 2 #f9f8f7",
       "draft 8 #f0ebdf",
@@ -460,7 +471,7 @@
       239,
       180
      ],
-     "delta": 58,
+     "delta": 78,
      "over": [
       "draft 2 #f9f8f7",
       "draft 7 #860319",
@@ -469,206 +480,6 @@
       "draft 10 #c2bdb4",
       "draft 11 #cecac1"
      ]
-    },
-    {
-     "cell": "F3",
-     "box": [
-      478,
-      900,
-      239,
-      180
-     ],
-     "delta": 53,
-     "over": [
-      "draft 11 #cecac1"
-     ]
-    }
-   ]
-  },
-  {
-   "keyframe": "2.8s",
-   "at": 2.8,
-   "still": false,
-   "score": 64,
-   "overall": 15,
-   "elements": [
-    {
-     "name": "draft 4 #f9f8f7",
-     "box": [
-      354,
-      625,
-      729,
-      56
-     ],
-     "reference": "#9b545e",
-     "yours": "#89484f",
-     "delta": 65
-    },
-    {
-     "name": "draft 6 #f9f8f6",
-     "box": [
-      354,
-      560,
-      729,
-      56
-     ],
-     "reference": "#bb868d",
-     "yours": "#9f7377",
-     "delta": 58
-    },
-    {
-     "name": "draft 12 #080706",
-     "box": [
-      365,
-      300,
-      707,
-      116
-     ],
-     "reference": "#a39c99",
-     "yours": "#a09c98",
-     "delta": 50
-    }
-   ],
-   "regions": [
-    {
-     "cell": "D4",
-     "box": [
-      717,
-      540,
-      239,
-      180
-     ],
-     "delta": 68,
-     "over": [
-      "draft 2 #f9f8f7",
-      "draft 3 #f9f9f7",
-      "draft 4 #f9f8f7",
-      "draft 6 #f9f8f6"
-     ]
-    },
-    {
-     "cell": "D3",
-     "box": [
-      478,
-      540,
-      239,
-      180
-     ],
-     "delta": 62,
-     "over": [
-      "draft 2 #f9f8f7",
-      "draft 3 #f9f9f7",
-      "draft 4 #f9f8f7",
-      "draft 6 #f9f8f6"
-     ]
-    },
-    {
-     "cell": "B4",
-     "box": [
-      717,
-      180,
-      239,
-      180
-     ],
-     "delta": 51,
-     "over": [
-      "draft 12 #080706"
-     ]
-    }
-   ]
-  },
-  {
-   "keyframe": "2.92s",
-   "at": 2.92,
-   "still": false,
-   "score": 42,
-   "overall": 23,
-   "elements": [
-    {
-     "name": "draft 2 #f9f8f7",
-     "box": [
-      354,
-      689,
-      729,
-      56
-     ],
-     "reference": "#d5d4d2",
-     "yours": "#cfccc7",
-     "delta": 76
-    },
-    {
-     "name": "draft 10 #c2bdb4",
-     "box": [
-      769,
-      846,
-      335,
-      60
-     ],
-     "reference": "#a67d7d",
-     "yours": "#8e444d",
-     "delta": 72
-    },
-    {
-     "name": "draft 11 #cecac1",
-     "box": [
-      332,
-      854,
-      426,
-      65
-     ],
-     "reference": "#aa9692",
-     "yours": "#986a6c",
-     "delta": 70
-    }
-   ],
-   "regions": [
-    {
-     "cell": "D3",
-     "box": [
-      478,
-      540,
-      239,
-      180
-     ],
-     "delta": 72,
-     "over": [
-      "draft 2 #f9f8f7",
-      "draft 3 #f9f9f7",
-      "draft 4 #f9f8f7",
-      "draft 6 #f9f8f6"
-     ]
-    },
-    {
-     "cell": "E3",
-     "box": [
-      478,
-      720,
-      239,
-      180
-     ],
-     "delta": 66,
-     "over": [
-      "draft 2 #f9f8f7",
-      "draft 8 #f0ebdf",
-      "draft 9 #e5decf",
-      "draft 11 #cecac1"
-     ]
-    },
-    {
-     "cell": "D4",
-     "box": [
-      717,
-      540,
-      239,
-      180
-     ],
-     "delta": 64,
-     "over": [
-      "draft 2 #f9f8f7",
-      "draft 3 #f9f9f7",
-      "draft 4 #f9f8f7",
-      "draft 6 #f9f8f6"
-     ]
     }
    ]
   },
@@ -676,7 +487,7 @@
    "keyframe": "3.85s",
    "at": 3.85,
    "still": false,
-   "score": 66,
+   "score": 67,
    "overall": 13,
    "elements": [
     {
@@ -688,8 +499,8 @@
       93
      ],
      "reference": "#9f9893",
-     "yours": "#8d847f",
-     "delta": 91
+     "yours": "#9f9995",
+     "delta": 84
     },
     {
      "name": "draft 9 #e5decf",
@@ -700,23 +511,39 @@
       112
      ],
      "reference": "#9d948f",
-     "yours": "#8a7f7a",
-     "delta": 91
+     "yours": "#a49b98",
+     "delta": 80
     },
     {
-     "name": "draft 12 #080706",
+     "name": "draft 5 #f9f8f6",
      "box": [
-      365,
-      300,
-      707,
-      116
+      354,
+      431,
+      729,
+      56
      ],
-     "reference": "#a19b98",
-     "yours": "#97908b",
-     "delta": 45
+     "reference": "#d8d7d4",
+     "yours": "#dfdfdd",
+     "delta": 34
     }
    ],
    "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      478,
+      720,
+      239,
+      180
+     ],
+     "delta": 52,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 11 #cecac1"
+     ]
+    },
     {
      "cell": "E4",
      "box": [
@@ -725,7 +552,7 @@
       239,
       180
      ],
-     "delta": 62,
+     "delta": 48,
      "over": [
       "draft 2 #f9f8f7",
       "draft 7 #860319",
@@ -735,6 +562,356 @@
       "draft 11 #cecac1"
      ]
     },
+    {
+     "cell": "C3",
+     "box": [
+      478,
+      360,
+      239,
+      180
+     ],
+     "delta": 32,
+     "over": [
+      "draft 3 #f9f9f7",
+      "draft 5 #f9f8f6",
+      "draft 12 #080706"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "kf2",
+   "at": 4.2,
+   "still": true,
+   "score": 66,
+   "overall": 13,
+   "elements": [
+    {
+     "name": "draft 8 #f0ebdf",
+     "box": [
+      535,
+      753,
+      314,
+      93
+     ],
+     "reference": "#a19c96",
+     "yours": "#a19c98",
+     "delta": 79
+    },
+    {
+     "name": "draft 9 #e5decf",
+     "box": [
+      526,
+      751,
+      381,
+      112
+     ],
+     "reference": "#a59c97",
+     "yours": "#aaa29e",
+     "delta": 73
+    },
+    {
+     "name": "draft 12 #080706",
+     "box": [
+      365,
+      300,
+      707,
+      116
+     ],
+     "reference": "#9e9894",
+     "yours": "#948d8c",
+     "delta": 43
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      478,
+      720,
+      239,
+      180
+     ],
+     "delta": 51,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 11 #cecac1"
+     ]
+    },
+    {
+     "cell": "E4",
+     "box": [
+      717,
+      720,
+      239,
+      180
+     ],
+     "delta": 47,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 7 #860319",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 10 #c2bdb4",
+      "draft 11 #cecac1"
+     ]
+    },
+    {
+     "cell": "C3",
+     "box": [
+      478,
+      360,
+      239,
+      180
+     ],
+     "delta": 35,
+     "over": [
+      "draft 3 #f9f9f7",
+      "draft 5 #f9f8f6",
+      "draft 12 #080706"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "4.58s",
+   "at": 4.58,
+   "still": false,
+   "score": 59,
+   "overall": 16,
+   "elements": [
+    {
+     "name": "draft 8 #f0ebdf",
+     "box": [
+      535,
+      753,
+      314,
+      93
+     ],
+     "reference": "#b0aaa6",
+     "yours": "#b6b1ad",
+     "delta": 83
+    },
+    {
+     "name": "draft 9 #e5decf",
+     "box": [
+      526,
+      751,
+      381,
+      112
+     ],
+     "reference": "#aea6a2",
+     "yours": "#b3aca8",
+     "delta": 81
+    },
+    {
+     "name": "draft 11 #cecac1",
+     "box": [
+      332,
+      854,
+      426,
+      65
+     ],
+     "reference": "#a48584",
+     "yours": "#aa8485",
+     "delta": 53
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      478,
+      720,
+      239,
+      180
+     ],
+     "delta": 62,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 11 #cecac1"
+     ]
+    },
+    {
+     "cell": "E4",
+     "box": [
+      717,
+      720,
+      239,
+      180
+     ],
+     "delta": 57,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 7 #860319",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 10 #c2bdb4",
+      "draft 11 #cecac1"
+     ]
+    },
+    {
+     "cell": "C3",
+     "box": [
+      478,
+      360,
+      239,
+      180
+     ],
+     "delta": 43,
+     "over": [
+      "draft 3 #f9f9f7",
+      "draft 5 #f9f8f6",
+      "draft 12 #080706"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "kf3",
+   "at": 4.95,
+   "still": true,
+   "score": 65,
+   "overall": 14,
+   "elements": [
+    {
+     "name": "draft 9 #e5decf",
+     "box": [
+      526,
+      751,
+      381,
+      112
+     ],
+     "reference": "#b1a9a4",
+     "yours": "#b3ada9",
+     "delta": 64
+    },
+    {
+     "name": "draft 8 #f0ebdf",
+     "box": [
+      535,
+      753,
+      314,
+      93
+     ],
+     "reference": "#b7b2ac",
+     "yours": "#b6b2ae",
+     "delta": 62
+    },
+    {
+     "name": "draft 11 #cecac1",
+     "box": [
+      332,
+      854,
+      426,
+      65
+     ],
+     "reference": "#a3807f",
+     "yours": "#aa8485",
+     "delta": 46
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      478,
+      720,
+      239,
+      180
+     ],
+     "delta": 52,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 11 #cecac1"
+     ]
+    },
+    {
+     "cell": "E4",
+     "box": [
+      717,
+      720,
+      239,
+      180
+     ],
+     "delta": 47,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 7 #860319",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 10 #c2bdb4",
+      "draft 11 #cecac1"
+     ]
+    },
+    {
+     "cell": "C3",
+     "box": [
+      478,
+      360,
+      239,
+      180
+     ],
+     "delta": 36,
+     "over": [
+      "draft 3 #f9f9f7",
+      "draft 5 #f9f8f6",
+      "draft 12 #080706"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "6s",
+   "at": 6,
+   "still": false,
+   "score": 63,
+   "overall": 15,
+   "elements": [
+    {
+     "name": "draft 11 #cecac1",
+     "box": [
+      332,
+      854,
+      426,
+      65
+     ],
+     "reference": "#9d6d71",
+     "yours": "#a77278",
+     "delta": 58
+    },
+    {
+     "name": "draft 9 #e5decf",
+     "box": [
+      526,
+      751,
+      381,
+      112
+     ],
+     "reference": "#c0b9b5",
+     "yours": "#c4bfbc",
+     "delta": 55
+    },
+    {
+     "name": "draft 8 #f0ebdf",
+     "box": [
+      535,
+      753,
+      314,
+      93
+     ],
+     "reference": "#c2bdb9",
+     "yours": "#c4c0bd",
+     "delta": 53
+    }
+   ],
+   "regions": [
     {
      "cell": "E3",
      "box": [
@@ -752,66 +929,6 @@
      ]
     },
     {
-     "cell": "B4",
-     "box": [
-      717,
-      180,
-      239,
-      180
-     ],
-     "delta": 42,
-     "over": [
-      "draft 12 #080706"
-     ]
-    }
-   ]
-  },
-  {
-   "keyframe": "kf2",
-   "at": 4.2,
-   "still": true,
-   "score": 66,
-   "overall": 14,
-   "elements": [
-    {
-     "name": "draft 8 #f0ebdf",
-     "box": [
-      535,
-      753,
-      314,
-      93
-     ],
-     "reference": "#a19c96",
-     "yours": "#918883",
-     "delta": 90
-    },
-    {
-     "name": "draft 9 #e5decf",
-     "box": [
-      526,
-      751,
-      381,
-      112
-     ],
-     "reference": "#a59c97",
-     "yours": "#8f8580",
-     "delta": 89
-    },
-    {
-     "name": "draft 12 #080706",
-     "box": [
-      365,
-      300,
-      707,
-      116
-     ],
-     "reference": "#9e9894",
-     "yours": "#928984",
-     "delta": 44
-    }
-   ],
-   "regions": [
-    {
      "cell": "E4",
      "box": [
       717,
@@ -819,7 +936,7 @@
       239,
       180
      ],
-     "delta": 61,
+     "delta": 49,
      "over": [
       "draft 2 #f9f8f7",
       "draft 7 #860319",
@@ -830,219 +947,17 @@
      ]
     },
     {
-     "cell": "E3",
+     "cell": "C3",
      "box": [
       478,
-      720,
+      360,
       239,
       180
      ],
-     "delta": 55,
+     "delta": 37,
      "over": [
-      "draft 2 #f9f8f7",
-      "draft 8 #f0ebdf",
-      "draft 9 #e5decf",
-      "draft 11 #cecac1"
-     ]
-    },
-    {
-     "cell": "B4",
-     "box": [
-      717,
-      180,
-      239,
-      180
-     ],
-     "delta": 42,
-     "over": [
-      "draft 12 #080706"
-     ]
-    }
-   ]
-  },
-  {
-   "keyframe": "4.58s",
-   "at": 4.58,
-   "still": false,
-   "score": 56,
-   "overall": 18,
-   "elements": [
-    {
-     "name": "draft 8 #f0ebdf",
-     "box": [
-      535,
-      753,
-      314,
-      93
-     ],
-     "reference": "#b0aaa6",
-     "yours": "#a59d98",
-     "delta": 72
-    },
-    {
-     "name": "draft 9 #e5decf",
-     "box": [
-      526,
-      751,
-      381,
-      112
-     ],
-     "reference": "#aea6a2",
-     "yours": "#a19893",
-     "delta": 72
-    },
-    {
-     "name": "draft 4 #f9f8f7",
-     "box": [
-      354,
-      625,
-      729,
-      56
-     ],
-     "reference": "#dddbda",
-     "yours": "#d9d7d2",
-     "delta": 55
-    }
-   ],
-   "regions": [
-    {
-     "cell": "E4",
-     "box": [
-      717,
-      720,
-      239,
-      180
-     ],
-     "delta": 63,
-     "over": [
-      "draft 2 #f9f8f7",
-      "draft 7 #860319",
-      "draft 8 #f0ebdf",
-      "draft 9 #e5decf",
-      "draft 10 #c2bdb4",
-      "draft 11 #cecac1"
-     ]
-    },
-    {
-     "cell": "E3",
-     "box": [
-      478,
-      720,
-      239,
-      180
-     ],
-     "delta": 56,
-     "over": [
-      "draft 2 #f9f8f7",
-      "draft 8 #f0ebdf",
-      "draft 9 #e5decf",
-      "draft 11 #cecac1"
-     ]
-    },
-    {
-     "cell": "B4",
-     "box": [
-      717,
-      180,
-      239,
-      180
-     ],
-     "delta": 50,
-     "over": [
-      "draft 12 #080706"
-     ]
-    }
-   ]
-  },
-  {
-   "keyframe": "kf3",
-   "at": 4.95,
-   "still": true,
-   "score": 64,
-   "overall": 14,
-   "elements": [
-    {
-     "name": "draft 9 #e5decf",
-     "box": [
-      526,
-      751,
-      381,
-      112
-     ],
-     "reference": "#b1a9a4",
-     "yours": "#a29994",
-     "delta": 75
-    },
-    {
-     "name": "draft 8 #f0ebdf",
-     "box": [
-      535,
-      753,
-      314,
-      93
-     ],
-     "reference": "#b7b2ac",
-     "yours": "#a69f9a",
-     "delta": 74
-    },
-    {
-     "name": "draft 10 #c2bdb4",
-     "box": [
-      769,
-      846,
-      335,
-      60
-     ],
-     "reference": "#96565c",
-     "yours": "#98595f",
-     "delta": 45
-    }
-   ],
-   "regions": [
-    {
-     "cell": "E4",
-     "box": [
-      717,
-      720,
-      239,
-      180
-     ],
-     "delta": 61,
-     "over": [
-      "draft 2 #f9f8f7",
-      "draft 7 #860319",
-      "draft 8 #f0ebdf",
-      "draft 9 #e5decf",
-      "draft 10 #c2bdb4",
-      "draft 11 #cecac1"
-     ]
-    },
-    {
-     "cell": "E3",
-     "box": [
-      478,
-      720,
-      239,
-      180
-     ],
-     "delta": 55,
-     "over": [
-      "draft 2 #f9f8f7",
-      "draft 8 #f0ebdf",
-      "draft 9 #e5decf",
-      "draft 11 #cecac1"
-     ]
-    },
-    {
-     "cell": "B4",
-     "box": [
-      717,
-      180,
-      239,
-      180
-     ],
-     "delta": 43,
-     "over": [
+      "draft 3 #f9f9f7",
+      "draft 5 #f9f8f6",
       "draft 12 #080706"
      ]
     }
@@ -1052,9 +967,21 @@
    "keyframe": "kf4",
    "at": 7.25,
    "still": true,
-   "score": 63,
+   "score": 62,
    "overall": 15,
    "elements": [
+    {
+     "name": "draft 11 #cecac1",
+     "box": [
+      332,
+      854,
+      426,
+      65
+     ],
+     "reference": "#9f6f71",
+     "yours": "#a77278",
+     "delta": 58
+    },
     {
      "name": "draft 9 #e5decf",
      "box": [
@@ -1064,8 +991,8 @@
       112
      ],
      "reference": "#c2bbb6",
-     "yours": "#b4ada8",
-     "delta": 63
+     "yours": "#c4bfbc",
+     "delta": 54
     },
     {
      "name": "draft 8 #f0ebdf",
@@ -1076,23 +1003,27 @@
       93
      ],
      "reference": "#c4bfb9",
-     "yours": "#b7b1ac",
-     "delta": 60
-    },
-    {
-     "name": "draft 11 #cecac1",
-     "box": [
-      332,
-      854,
-      426,
-      65
-     ],
-     "reference": "#9f6f71",
-     "yours": "#936063",
-     "delta": 55
+     "yours": "#c4c0bd",
+     "delta": 51
     }
    ],
    "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      478,
+      720,
+      239,
+      180
+     ],
+     "delta": 52,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 11 #cecac1"
+     ]
+    },
     {
      "cell": "E4",
      "box": [
@@ -1101,7 +1032,7 @@
       239,
       180
      ],
-     "delta": 63,
+     "delta": 47,
      "over": [
       "draft 2 #f9f8f7",
       "draft 7 #860319",
@@ -1112,31 +1043,17 @@
      ]
     },
     {
-     "cell": "E3",
+     "cell": "C3",
      "box": [
       478,
-      720,
+      360,
       239,
       180
      ],
-     "delta": 56,
+     "delta": 38,
      "over": [
-      "draft 2 #f9f8f7",
-      "draft 8 #f0ebdf",
-      "draft 9 #e5decf",
-      "draft 11 #cecac1"
-     ]
-    },
-    {
-     "cell": "B4",
-     "box": [
-      717,
-      180,
-      239,
-      180
-     ],
-     "delta": 47,
-     "over": [
+      "draft 3 #f9f9f7",
+      "draft 5 #f9f8f6",
       "draft 12 #080706"
      ]
     }
@@ -1146,21 +1063,9 @@
    "keyframe": "9.23s",
    "at": 9.23,
    "still": false,
-   "score": 57,
-   "overall": 17,
+   "score": 66,
+   "overall": 13,
    "elements": [
-    {
-     "name": "draft 9 #e5decf",
-     "box": [
-      526,
-      751,
-      381,
-      112
-     ],
-     "reference": "#b6aeaa",
-     "yours": "#a39a95",
-     "delta": 79
-    },
     {
      "name": "draft 8 #f0ebdf",
      "box": [
@@ -1170,8 +1075,20 @@
       93
      ],
      "reference": "#bbb5b1",
-     "yours": "#a9a19c",
-     "delta": 78
+     "yours": "#b7b3af",
+     "delta": 69
+    },
+    {
+     "name": "draft 9 #e5decf",
+     "box": [
+      526,
+      751,
+      381,
+      112
+     ],
+     "reference": "#b6aeaa",
+     "yours": "#b4aeab",
+     "delta": 69
     },
     {
      "name": "draft 11 #cecac1",
@@ -1182,11 +1099,27 @@
       65
      ],
      "reference": "#9f7779",
-     "yours": "#a17879",
-     "delta": 58
+     "yours": "#a98183",
+     "delta": 51
     }
    ],
    "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      478,
+      720,
+      239,
+      180
+     ],
+     "delta": 63,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 11 #cecac1"
+     ]
+    },
     {
      "cell": "E4",
      "box": [
@@ -1195,7 +1128,7 @@
       239,
       180
      ],
-     "delta": 65,
+     "delta": 57,
      "over": [
       "draft 2 #f9f8f7",
       "draft 7 #860319",
@@ -1205,6 +1138,69 @@
       "draft 11 #cecac1"
      ]
     },
+    {
+     "cell": "D3",
+     "box": [
+      478,
+      540,
+      239,
+      180
+     ],
+     "delta": 27,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 3 #f9f9f7",
+      "draft 4 #f9f8f7",
+      "draft 6 #f9f8f6"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "9.68s",
+   "at": 9.68,
+   "still": false,
+   "score": 63,
+   "overall": 15,
+   "elements": [
+    {
+     "name": "draft 8 #f0ebdf",
+     "box": [
+      535,
+      753,
+      314,
+      93
+     ],
+     "reference": "#a8a29e",
+     "yours": "#a39e9a",
+     "delta": 92
+    },
+    {
+     "name": "draft 9 #e5decf",
+     "box": [
+      526,
+      751,
+      381,
+      112
+     ],
+     "reference": "#aaa29e",
+     "yours": "#aaa39f",
+     "delta": 86
+    },
+    {
+     "name": "draft 4 #f9f8f7",
+     "box": [
+      354,
+      625,
+      729,
+      56
+     ],
+     "reference": "#d8d6d4",
+     "yours": "#e1e0de",
+     "delta": 52
+    }
+   ],
+   "regions": [
     {
      "cell": "E3",
      "box": [
@@ -1222,66 +1218,6 @@
      ]
     },
     {
-     "cell": "B4",
-     "box": [
-      717,
-      180,
-      239,
-      180
-     ],
-     "delta": 43,
-     "over": [
-      "draft 12 #080706"
-     ]
-    }
-   ]
-  },
-  {
-   "keyframe": "9.68s",
-   "at": 9.68,
-   "still": false,
-   "score": 58,
-   "overall": 17,
-   "elements": [
-    {
-     "name": "draft 8 #f0ebdf",
-     "box": [
-      535,
-      753,
-      314,
-      93
-     ],
-     "reference": "#a8a29e",
-     "yours": "#928984",
-     "delta": 101
-    },
-    {
-     "name": "draft 9 #e5decf",
-     "box": [
-      526,
-      751,
-      381,
-      112
-     ],
-     "reference": "#aaa29e",
-     "yours": "#928782",
-     "delta": 100
-    },
-    {
-     "name": "draft 6 #f9f8f6",
-     "box": [
-      354,
-      560,
-      729,
-      56
-     ],
-     "reference": "#dcdad9",
-     "yours": "#dad8d4",
-     "delta": 49
-    }
-   ],
-   "regions": [
-    {
      "cell": "E4",
      "box": [
       717,
@@ -1289,7 +1225,7 @@
       239,
       180
      ],
-     "delta": 69,
+     "delta": 54,
      "over": [
       "draft 2 #f9f8f7",
       "draft 7 #860319",
@@ -1300,32 +1236,19 @@
      ]
     },
     {
-     "cell": "E3",
+     "cell": "D3",
      "box": [
       478,
-      720,
+      540,
       239,
       180
      ],
-     "delta": 66,
+     "delta": 40,
      "over": [
       "draft 2 #f9f8f7",
-      "draft 8 #f0ebdf",
-      "draft 9 #e5decf",
-      "draft 11 #cecac1"
-     ]
-    },
-    {
-     "cell": "B4",
-     "box": [
-      717,
-      180,
-      239,
-      180
-     ],
-     "delta": 48,
-     "over": [
-      "draft 12 #080706"
+      "draft 3 #f9f9f7",
+      "draft 4 #f9f8f7",
+      "draft 6 #f9f8f6"
      ]
     }
    ]
@@ -1346,8 +1269,8 @@
       93
      ],
      "reference": "#9b9590",
-     "yours": "#827974",
-     "delta": 117
+     "yours": "#a19b97",
+     "delta": 94
     },
     {
      "name": "draft 9 #e5decf",
@@ -1358,23 +1281,39 @@
       112
      ],
      "reference": "#978e89",
-     "yours": "#877a75",
-     "delta": 109
+     "yours": "#a59c98",
+     "delta": 90
     },
     {
-     "name": "draft 12 #080706",
+     "name": "draft 10 #c2bdb4",
      "box": [
-      365,
-      300,
-      707,
-      116
+      769,
+      846,
+      335,
+      60
      ],
-     "reference": "#a5a19d",
-     "yours": "#9c9a94",
-     "delta": 42
+     "reference": "#a98b89",
+     "yours": "#b99d9a",
+     "delta": 28
     }
    ],
    "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      478,
+      720,
+      239,
+      180
+     ],
+     "delta": 61,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 11 #cecac1"
+     ]
+    },
     {
      "cell": "E4",
      "box": [
@@ -1383,7 +1322,7 @@
       239,
       180
      ],
-     "delta": 67,
+     "delta": 56,
      "over": [
       "draft 2 #f9f8f7",
       "draft 7 #860319",
@@ -1394,96 +1333,68 @@
      ]
     },
     {
-     "cell": "E3",
+     "cell": "D3",
      "box": [
       478,
-      720,
+      540,
       239,
       180
      ],
-     "delta": 62,
+     "delta": 41,
      "over": [
       "draft 2 #f9f8f7",
-      "draft 8 #f0ebdf",
-      "draft 9 #e5decf",
-      "draft 11 #cecac1"
-     ]
-    },
-    {
-     "cell": "B4",
-     "box": [
-      717,
-      180,
-      239,
-      180
-     ],
-     "delta": 43,
-     "over": [
-      "draft 12 #080706"
+      "draft 3 #f9f9f7",
+      "draft 4 #f9f8f7",
+      "draft 6 #f9f8f6"
      ]
     }
    ]
   },
   {
-   "keyframe": "13.4s",
-   "at": 13.4,
+   "keyframe": "11.5s",
+   "at": 11.5,
    "still": false,
-   "score": 49,
-   "overall": 20,
+   "score": 68,
+   "overall": 13,
    "elements": [
     {
-     "name": "draft 11 #cecac1",
+     "name": "draft 8 #f0ebdf",
      "box": [
-      332,
-      854,
-      426,
-      65
+      535,
+      753,
+      314,
+      93
      ],
-     "reference": "#a4636b",
-     "yours": "#946367",
-     "delta": 73
+     "reference": "#99938e",
+     "yours": "#a19c97",
+     "delta": 92
     },
     {
-     "name": "draft 10 #c2bdb4",
+     "name": "draft 9 #e5decf",
      "box": [
-      769,
-      846,
-      335,
-      60
+      526,
+      751,
+      381,
+      112
      ],
-     "reference": "#915a60",
-     "yours": "#996c70",
-     "delta": 72
+     "reference": "#9d948e",
+     "yours": "#a59c98",
+     "delta": 84
     },
     {
-     "name": "draft 6 #f9f8f6",
+     "name": "draft 12 #080706",
      "box": [
-      354,
-      560,
-      729,
-      56
+      365,
+      300,
+      707,
+      116
      ],
-     "reference": "#a19c98",
-     "yours": "#c6c2bb",
-     "delta": 70
+     "reference": "#a2a09b",
+     "yours": "#9c9996",
+     "delta": 34
     }
    ],
    "regions": [
-    {
-     "cell": "C3",
-     "box": [
-      478,
-      360,
-      239,
-      180
-     ],
-     "delta": 52,
-     "over": [
-      "draft 3 #f9f9f7",
-      "draft 5 #f9f8f6",
-      "draft 12 #080706"
-     ]
-    },
     {
      "cell": "E3",
      "box": [
@@ -1492,7 +1403,7 @@
       239,
       180
      ],
-     "delta": 52,
+     "delta": 55,
      "over": [
       "draft 2 #f9f8f7",
       "draft 8 #f0ebdf",
@@ -1517,6 +1428,111 @@
       "draft 10 #c2bdb4",
       "draft 11 #cecac1"
      ]
+    },
+    {
+     "cell": "C3",
+     "box": [
+      478,
+      360,
+      239,
+      180
+     ],
+     "delta": 33,
+     "over": [
+      "draft 3 #f9f9f7",
+      "draft 5 #f9f8f6",
+      "draft 12 #080706"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "13.4s",
+   "at": 13.4,
+   "still": false,
+   "score": 55,
+   "overall": 18,
+   "elements": [
+    {
+     "name": "draft 11 #cecac1",
+     "box": [
+      332,
+      854,
+      426,
+      65
+     ],
+     "reference": "#a4636b",
+     "yours": "#956268",
+     "delta": 73
+    },
+    {
+     "name": "draft 10 #c2bdb4",
+     "box": [
+      769,
+      846,
+      335,
+      60
+     ],
+     "reference": "#915a60",
+     "yours": "#906b6e",
+     "delta": 71
+    },
+    {
+     "name": "draft 12 #080706",
+     "box": [
+      365,
+      300,
+      707,
+      116
+     ],
+     "reference": "#a39c99",
+     "yours": "#9c9996",
+     "delta": 36
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      478,
+      720,
+      239,
+      180
+     ],
+     "delta": 50,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 11 #cecac1"
+     ]
+    },
+    {
+     "cell": "F3",
+     "box": [
+      478,
+      900,
+      239,
+      180
+     ],
+     "delta": 50,
+     "over": [
+      "draft 11 #cecac1"
+     ]
+    },
+    {
+     "cell": "F4",
+     "box": [
+      717,
+      900,
+      239,
+      180
+     ],
+     "delta": 47,
+     "over": [
+      "draft 10 #c2bdb4",
+      "draft 11 #cecac1"
+     ]
     }
    ]
   },
@@ -1524,33 +1540,9 @@
    "keyframe": "14s",
    "at": 14,
    "still": false,
-   "score": 53,
-   "overall": 19,
+   "score": 57,
+   "overall": 17,
    "elements": [
-    {
-     "name": "draft 2 #f9f8f7",
-     "box": [
-      354,
-      689,
-      729,
-      56
-     ],
-     "reference": "#a75c67",
-     "yours": "#874f55",
-     "delta": 68
-    },
-    {
-     "name": "draft 5 #f9f8f6",
-     "box": [
-      354,
-      431,
-      729,
-      56
-     ],
-     "reference": "#dcd9d8",
-     "yours": "#d6d4d0",
-     "delta": 66
-    },
     {
      "name": "draft 8 #f0ebdf",
      "box": [
@@ -1560,132 +1552,67 @@
       93
      ],
      "reference": "#a09b94",
-     "yours": "#969088",
-     "delta": 66
-    }
-   ],
-   "regions": [
-    {
-     "cell": "C3",
-     "box": [
-      478,
-      360,
-      239,
-      180
-     ],
-     "delta": 62,
-     "over": [
-      "draft 3 #f9f9f7",
-      "draft 5 #f9f8f6",
-      "draft 12 #080706"
-     ]
+     "yours": "#a29e97",
+     "delta": 81
     },
     {
-     "cell": "C4",
-     "box": [
-      717,
-      360,
-      239,
-      180
-     ],
-     "delta": 57,
-     "over": [
-      "draft 3 #f9f9f7",
-      "draft 5 #f9f8f6",
-      "draft 12 #080706"
-     ]
-    },
-    {
-     "cell": "D3",
-     "box": [
-      478,
-      540,
-      239,
-      180
-     ],
-     "delta": 56,
-     "over": [
-      "draft 2 #f9f8f7",
-      "draft 3 #f9f9f7",
-      "draft 4 #f9f8f7",
-      "draft 6 #f9f8f6"
-     ]
-    }
-   ]
-  },
-  {
-   "keyframe": "14.5s",
-   "at": 14.5,
-   "still": false,
-   "score": 67,
-   "overall": 13,
-   "elements": [
-    {
-     "name": "draft 3 #f9f9f7",
+     "name": "draft 2 #f9f8f7",
      "box": [
       354,
-      495,
+      689,
       729,
       56
      ],
-     "reference": "#a25e67",
-     "yours": "#864950",
+     "reference": "#a75c67",
+     "yours": "#b37e85",
      "delta": 76
     },
     {
-     "name": "draft 6 #f9f8f6",
+     "name": "draft 9 #e5decf",
      "box": [
-      354,
-      560,
-      729,
-      56
+      526,
+      751,
+      381,
+      112
      ],
-     "reference": "#99666a",
-     "yours": "#a37879",
-     "delta": 68
-    },
-    {
-     "name": "draft 5 #f9f8f6",
-     "box": [
-      354,
-      431,
-      729,
-      56
-     ],
-     "reference": "#f0efee",
-     "yours": "#cbc9c4",
-     "delta": 52
+     "reference": "#aca49d",
+     "yours": "#aea7a0",
+     "delta": 67
     }
    ],
    "regions": [
     {
-     "cell": "C4",
+     "cell": "E3",
      "box": [
-      717,
-      360,
+      478,
+      720,
       239,
       180
      ],
-     "delta": 66,
+     "delta": 52,
      "over": [
-      "draft 3 #f9f9f7",
-      "draft 5 #f9f8f6",
-      "draft 12 #080706"
+      "draft 2 #f9f8f7",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 11 #cecac1"
      ]
     },
     {
-     "cell": "C3",
+     "cell": "E4",
      "box": [
-      478,
-      360,
+      717,
+      720,
       239,
       180
      ],
-     "delta": 65,
+     "delta": 49,
      "over": [
-      "draft 3 #f9f9f7",
-      "draft 5 #f9f8f6",
-      "draft 12 #080706"
+      "draft 2 #f9f8f7",
+      "draft 7 #860319",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 10 #c2bdb4",
+      "draft 11 #cecac1"
      ]
     },
     {
@@ -1696,7 +1623,7 @@
       239,
       180
      ],
-     "delta": 44,
+     "delta": 48,
      "over": [
       "draft 2 #f9f8f7",
       "draft 3 #f9f9f7",
@@ -1710,8 +1637,8 @@
    "keyframe": "15.03s",
    "at": 15.03,
    "still": false,
-   "score": 56,
-   "overall": 18,
+   "score": 61,
+   "overall": 16,
    "elements": [
     {
      "name": "draft 8 #f0ebdf",
@@ -1722,8 +1649,8 @@
       93
      ],
      "reference": "#a9a29e",
-     "yours": "#968d88",
-     "delta": 80
+     "yours": "#a8a39f",
+     "delta": 73
     },
     {
      "name": "draft 9 #e5decf",
@@ -1734,41 +1661,23 @@
       112
      ],
      "reference": "#a9a09c",
-     "yours": "#988e89",
-     "delta": 80
+     "yours": "#aba4a0",
+     "delta": 71
     },
     {
-     "name": "draft 4 #f9f8f7",
+     "name": "draft 11 #cecac1",
      "box": [
-      354,
-      625,
-      729,
-      56
+      332,
+      854,
+      426,
+      65
      ],
-     "reference": "#c8c6c4",
-     "yours": "#d5d3cf",
-     "delta": 48
+     "reference": "#a88686",
+     "yours": "#ad8d8c",
+     "delta": 45
     }
    ],
    "regions": [
-    {
-     "cell": "E4",
-     "box": [
-      717,
-      720,
-      239,
-      180
-     ],
-     "delta": 61,
-     "over": [
-      "draft 2 #f9f8f7",
-      "draft 7 #860319",
-      "draft 8 #f0ebdf",
-      "draft 9 #e5decf",
-      "draft 10 #c2bdb4",
-      "draft 11 #cecac1"
-     ]
-    },
     {
      "cell": "E3",
      "box": [
@@ -1786,6 +1695,24 @@
      ]
     },
     {
+     "cell": "E4",
+     "box": [
+      717,
+      720,
+      239,
+      180
+     ],
+     "delta": 50,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 7 #860319",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 10 #c2bdb4",
+      "draft 11 #cecac1"
+     ]
+    },
+    {
      "cell": "B4",
      "box": [
       717,
@@ -1793,7 +1720,7 @@
       239,
       180
      ],
-     "delta": 49,
+     "delta": 42,
      "over": [
       "draft 12 #080706"
      ]
@@ -1801,6 +1728,6 @@
    ]
   }
  ],
- "runs": 14,
- "at": "2026-10-21T14:36:30.068Z"
+ "runs": 17,
+ "at": "2026-10-21T16:06:06.923Z"
 }
