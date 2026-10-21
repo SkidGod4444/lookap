@@ -57,7 +57,7 @@ export async function listKeys(userId: string): Promise<KeyRow[]> {
 export async function createKey(userId: string, plan: Exclude<Plan, "none">, name: string) {
   const { data } = await unkey().keys.createKey({
     apiId: API_ID!,
-    prefix: "lk_live",
+    prefix: "lookap",
     byteLength: 24,
     name: name.slice(0, 60) || `${plan} key`,
     externalId: userId,
