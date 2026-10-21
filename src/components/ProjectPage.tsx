@@ -10,12 +10,17 @@ import { hrefFor } from "./FeedCard";
 import { button } from "./button";
 import { LockScroll } from "./LockScroll";
 import { Stage } from "./Stage";
+import { Compare } from "./Compare";
+import { liveFor } from "./demo/live";
 
 export function ProjectPage({ slug }: { slug: string }) {
   const entry = bySlug(slug);
   if (!entry) notFound();
   const similar = ENTRIES.filter((e) => e.slug !== entry.slug && (e.category === entry.category || e.kind === entry.kind)).slice(0, 6);
   const wide = entry.ratio >= 1;
+  const live = liveFor(entry);
+  /* the frame fits the stage height too, so the switch and caption under it stay on screen */
+  const frame = { maxWidth: `min(${wide ? 900 : 420}px, calc((100dvh - 220px) * ${entry.ratio.toFixed(4)}))`, aspectRatio: entry.ratio };
   const site = entry.site && entry.site !== "example.com" ? `https://${entry.site}` : null;
   /* the credit's picture starts loading from the document head, before any script runs */
   if (entry.x) preload(avatarUrl(entry.x), { as: "image" });
@@ -25,9 +30,7 @@ export function ProjectPage({ slug }: { slug: string }) {
     <div className="-mx-4 -mt-4 -mb-4 flex flex-1 flex-col lg:h-[calc(100vh_-_57px)] lg:flex-none lg:flex-row lg:overflow-hidden">
       <LockScroll />
       <Stage>
-        <div className="relative w-full cursor-default overflow-hidden rounded-[5px] shadow-[0_24px_80px_rgba(0,0,0,0.6)] ring-1 ring-line-strong" style={{ maxWidth: wide ? 900 : 420, aspectRatio: entry.ratio }}>
-          <Media entry={entry} sizes={STAGE_SIZES} eager />
-        </div>
+        <Compare clip={<Media entry={entry} sizes={STAGE_SIZES} eager />} live={live ? <live.Component /> : null} hint={live?.hint} style={frame} />
       </Stage>
 
       <aside className="w-full shrink-0 border-t border-line bg-canvas px-5 pt-6 pb-10 lg:h-full lg:w-[280px] lg:overflow-y-auto lg:border-t-0 lg:border-l">
@@ -70,6 +73,7 @@ export function ProjectPage({ slug }: { slug: string }) {
             <div><dt className="font-medium text-foreground">Category</dt><dd><Link href={`/sections/${sectionSlug(entry.category)}`} className="text-subtle underline-offset-2 hover:text-foreground hover:underline">{entry.category}</Link></dd></div>
             <div><dt className="font-medium text-foreground">Type</dt><dd className="text-right text-subtle">{entry.types.join(", ")}</dd></div>
             <div><dt className="font-medium text-foreground">Media</dt><dd className="text-subtle">{entry.video ? (entry.duration ? `clip · ${entry.duration}s` : "clip") : "still"}</dd></div>
+            {live && <div><dt className="font-medium text-foreground">Rebuild</dt><dd className="text-subtle">live, measured from the clip</dd></div>}
           </dl>
 
           <section>

@@ -2,7 +2,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata, Viewport } from "next";
 import { DESCRIPTION, SITE_NAME, SITE_URL, TAGLINE } from "@/lib/site";
 import { Suspense } from "react";
-import { Inter, Doto } from "next/font/google";
+import { Inter, Doto, Special_Elite, Courier_Prime } from "next/font/google";
 import "./globals.css";
 import { TopBar } from "@/components/TopBar";
 import { ChipNav } from "@/components/ChipNav";
@@ -17,6 +17,9 @@ import { AI_NOTICE } from "@/lib/bots";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"], axes: ["opsz"] });
 const doto = Doto({ variable: "--font-doto", subsets: ["latin"], weight: "variable", axes: ["ROND"] });
+/* the typewriter rebuild's faces */
+const specialElite = Special_Elite({ variable: "--font-special-elite", subsets: ["latin"], weight: "400" });
+const courierPrime = Courier_Prime({ variable: "--font-courier-prime", subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -61,7 +64,7 @@ const JSON_LD = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${inter.variable} ${doto.variable} h-full antialiased`}>
+    <html lang="en" className={`${inter.variable} ${doto.variable} ${specialElite.variable} ${courierPrime.variable} h-full antialiased`}>
       <body className="h-full overflow-hidden bg-gutter font-sans text-foreground antialiased">
         {/* catalog media comes from vibrant's CDN; open the connection before the first poster is requested */}
         <link rel="preconnect" href="https://cdn.vibrant.design" />

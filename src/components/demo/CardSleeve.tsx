@@ -5,7 +5,8 @@ import { useEffect, useRef } from "react";
 /* The ID-card reader clone from the first lookap run: every size is a measured source pixel times --u.
    Hover (or tap) inserts the card; the LCD types a report; leaving ejects it. Styles are scoped to .cs-stage. */
 const CSS = `
-.cs-stage{--u:min(0.5px,calc((100vw - 48px) / 1080));position:relative;width:calc(1080*var(--u));height:calc(760*var(--u));max-width:100%;margin:0 auto;cursor:pointer;
+.cs-wrap{container-type:inline-size;width:100%}
+.cs-stage{--u:min(1px,calc(100cqw / 1080));position:relative;width:calc(1080*var(--u));height:calc(760*var(--u));max-width:100%;margin:0 auto;cursor:pointer;
   background:radial-gradient(60% 55% at 50% 48%,rgba(255,255,255,.04),transparent 70%)}
 .cs-rig{position:absolute;left:calc(289*var(--u));top:calc(40*var(--u));width:calc(518*var(--u));height:calc(700*var(--u))}
 .cs-card{position:absolute;left:calc(59*var(--u));top:0;width:calc(376*var(--u));height:calc(240*var(--u));z-index:1;border-radius:calc(28*var(--u));background:#2170f5;
@@ -82,6 +83,7 @@ export function CardSleeve({ callouts = false }: { callouts?: boolean }) {
   }, []);
 
   return (
+    <div className="cs-wrap">
     <div ref={stage} className="cs-stage" aria-label="ID card reader demo. Hover or tap to insert the card.">
       <style>{CSS}</style>
       <div ref={rig} className="cs-rig">
@@ -114,6 +116,7 @@ export function CardSleeve({ callouts = false }: { callouts?: boolean }) {
           <span className="t" style={{ left: "calc(800 * var(--u))", top: "calc(560 * var(--u))" }}>insert 250 ms</span>
         </div>
       )}
+    </div>
     </div>
   );
 }
