@@ -19,6 +19,8 @@ const PRICE: Record<string, { month: number; year: number }> = { starter: { mont
 const KEY_LIMIT = 5;
 
 const day = (iso: string) => new Date(iso).toLocaleDateString(undefined, { day: "numeric", month: "short" });
+/* renewal and end dates carry the year: a yearly plan bought today renews on today's date next year, and "Oct 21" alone reads as today */
+const date = (iso: string) => new Date(iso).toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" });
 const hoursLeft = (iso: string) => Math.max(1, Math.round((Date.parse(iso) - Date.now()) / 3_600_000));
 
 /* The account page answers three questions in order: what can my agent do right now, what has it spent today,
@@ -111,7 +113,7 @@ function Account() {
         ? "Local development: billing is skipped and every account counts as Pro."
         : [
             price ? `${PLAN_NAME[ent.plan]}, ${ent.interval === "year" ? `$${price.year} a year` : `$${price.month} a month`}.` : "",
-            ent.renewsAt ? (ent.cancelAtPeriodEnd ? `Ends ${day(ent.renewsAt)}.` : `Renews ${day(ent.renewsAt)}.`) : "",
+            ent.renewsAt ? (ent.cancelAtPeriodEnd ? `Ends ${date(ent.renewsAt)}.` : `Renews ${date(ent.renewsAt)}.`) : "",
           ].filter(Boolean).join(" ")
       : confirming === "polling"
         ? "Payment received. Confirming your subscription with Polar."
