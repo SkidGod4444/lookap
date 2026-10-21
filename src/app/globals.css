@@ -31,6 +31,9 @@
   }
 }
 
+/* terminal cursor on the MCP page */
+@keyframes caret { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+
 /* motion presets for stills on the clone page */
 @keyframes enter-fade-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 @keyframes enter-scale { from { opacity: 0; transform: scale(0.94); } to { opacity: 1; transform: none; } }
@@ -44,13 +47,40 @@
 
 @layer base {
   html { color-scheme: dark; }
+  /* Scrollbars as rulers: a thin dark track scored with ticks every 4 px and a longer one every 20 px, and a silver
+     slider riding on it. Firefox has no track styling, so it gets the thin silver bar on the gutter. */
+  @supports not selector(::-webkit-scrollbar) {
+    * { scrollbar-width: thin; scrollbar-color: #5a5a5a #0a0a0a; }
+  }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track {
+    background:
+      repeating-linear-gradient(to bottom, transparent 0 19px, rgba(255, 255, 255, 0.22) 19px 20px),
+      repeating-linear-gradient(to bottom, transparent 0 3px, rgba(255, 255, 255, 0.1) 3px 4px),
+      #0a0a0a;
+    background-size: 7px 100%, 4px 100%, auto;
+    background-repeat: no-repeat;
+    background-position: right top, right top, 0 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  ::-webkit-scrollbar-track:horizontal {
+    background:
+      repeating-linear-gradient(to right, transparent 0 19px, rgba(255, 255, 255, 0.22) 19px 20px),
+      repeating-linear-gradient(to right, transparent 0 3px, rgba(255, 255, 255, 0.1) 3px 4px),
+      #0a0a0a;
+    background-size: 100% 7px, 100% 4px, auto;
+    background-position: left bottom, left bottom, 0 0;
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  ::-webkit-scrollbar-thumb { background: #4a4a4a; border: 2px solid #0a0a0a; border-radius: 6px; box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25); }
+  ::-webkit-scrollbar-thumb:hover { background: #6a6a6a; }
+  ::-webkit-scrollbar-corner { background: #0a0a0a; }
   /* selection: silver insert with ink text, same material as the active chip */
   ::selection { background: #d9d9d9; color: #0a0a0a; }
   ::-moz-selection { background: #d9d9d9; color: #0a0a0a; }
   body { @apply bg-gutter font-sans text-foreground; }
-  /* no text selection or long-press callout on chrome; fields and <code> (the API key on /account) stay selectable */
-  body { user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
-  input, textarea, select, [contenteditable], pre, code { user-select: text; -webkit-user-select: text; }
+  /* images are not draggable; text everywhere is selectable */
   img { -webkit-user-drag: none; }
   /* everything clickable shows a hand; Tailwind 4's preflight leaves buttons at the default arrow */
   a[href], button, [role="button"], label[for], select, summary, input[type="range"], input[type="checkbox"], input[type="radio"], input[type="submit"], input[type="button"] { cursor: pointer; }
