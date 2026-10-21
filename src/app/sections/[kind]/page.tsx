@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import Link from "next/link";
 import { bySection, SECTIONS, sectionSlug } from "@/lib/data";
@@ -5,6 +6,14 @@ import { FeedGrid } from "@/components/FeedGrid";
 
 export function generateStaticParams() {
   return SECTIONS.map((s) => ({ kind: sectionSlug(s) }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ kind: string }> }): Promise<Metadata> {
+  const { kind } = await params;
+  const name = SECTIONS.find((s) => sectionSlug(s) === kind) ?? kind;
+  const n = bySection(kind).length;
+  const description = `${n} ${n === 1 ? "interface" : "interfaces"} filed under ${name} in the lookap registry, measured and ready for your agent.`;
+  return { title: name, description, alternates: { canonical: `/sections/${kind}` } };
 }
 
 async function Inner({ params }: { params: Promise<{ kind: string }> }) {

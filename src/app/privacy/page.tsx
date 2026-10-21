@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy",
+  description: "How lookap handles your email, your key and your usage.",
+  alternates: { canonical: "/privacy" },
+};
+
 export default function Page() {
   return (
     <div className="mx-auto flex w-full max-w-[880px] flex-col gap-2 py-10">

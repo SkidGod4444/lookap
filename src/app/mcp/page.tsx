@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "MCP server",
+  description: "Connect Claude Code, Codex or Cursor to the lookap registry. Search designs, read measured recipes and design notes, check media, all over MCP.",
+  alternates: { canonical: "/mcp" },
+};
+
 import Link from "next/link";
 import { badge, button } from "@/components/button";
 import { NOTES, RECIPES } from "@/lib/registry";

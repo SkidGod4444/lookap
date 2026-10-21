@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms",
+  description: "The terms for using lookap, its registry and its MCP keys.",
+  alternates: { canonical: "/terms" },
+};
+
 export default function Page() {
   return (
     <div className="mx-auto flex w-full max-w-[880px] flex-col gap-2 py-10">

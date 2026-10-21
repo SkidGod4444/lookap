@@ -106,7 +106,7 @@ export function AuthDialog({ open, onClose }: { open: boolean; onClose: () => vo
 
   return createPortal(
     <div
-      className="fixed inset-0 z-[100] bg-black/65 backdrop-blur-[6px] motion-safe:animate-[dlg-overlay_160ms_ease-out]"
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/65 p-4 backdrop-blur-[6px] motion-safe:animate-[dlg-overlay_160ms_ease-out]"
       onPointerDown={(e) => { if (!box.current?.contains(e.target as Node)) close(); }}
     >
       <div
@@ -114,7 +114,7 @@ export function AuthDialog({ open, onClose }: { open: boolean; onClose: () => vo
         role="dialog"
         aria-modal="true"
         aria-labelledby="auth-title"
-        className="fixed top-1/2 left-1/2 w-[calc(100%_-_2rem)] max-w-[448px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-2xl bg-card pt-10 pb-0 shadow-[0_0_0_1px_rgba(255,255,255,0.1),0_32px_80px_rgba(0,0,0,0.75)] motion-safe:animate-[dlg-panel_180ms_cubic-bezier(0.2,0.8,0.2,1)]"
+        className="relative w-full max-w-[448px] overflow-hidden rounded-2xl bg-card pt-10 pb-0 shadow-[0_0_0_1px_rgba(255,255,255,0.1),0_32px_80px_rgba(0,0,0,0.75)] motion-safe:animate-[dlg-panel_180ms_cubic-bezier(0.2,0.8,0.2,1)]"
       >
         <button type="button" onClick={close} aria-label="Close" className="absolute top-4 right-4 flex size-8 items-center justify-center rounded-full text-subtle transition-colors hover:bg-chip hover:text-foreground">
           <svg width="13" height="13" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /></svg>

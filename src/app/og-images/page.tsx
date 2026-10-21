@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "OG images",
+  description: "Open Graph cards worth borrowing from, listed in the lookap registry.",
+  alternates: { canonical: "/og-images" },
+};
+
 import { byKind } from "@/lib/data";
 import { FeedGrid } from "@/components/FeedGrid";
 export default function Page() {
