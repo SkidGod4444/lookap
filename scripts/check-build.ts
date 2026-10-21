@@ -4,16 +4,21 @@
    check.json (scores and the largest differences), kfN.png (the render at each keyframe) and side.png (designer on
    the left, the render on the right, one row per keyframe). Prints the summary an agent reads.
 
-     bun --conditions=react-server scripts/check-build.ts <slug> [--html factory/<slug>/index.html] [--at 0.5,2.8]
+     bun --conditions=react-server scripts/check-build.ts <slug> [--html factory/<slug>/index.html] [--at 0.5,2.8] [--quick]
 
    Stills are not enough: a keyframe is a moment when nothing moves, so a rebuild can match every keyframe and still
    get the motion wrong. When the source clip is on disk (measure/<id>/source.mp4) the checker also scores the middle
    of every measured phase, where things are mid-flight, pulling those reference frames from the clip with ffmpeg;
-   --at adds moments of your own. Seeking works for CSS animations, transitions and Web Animations started at load; JS
-   timers cannot be seeked, which is why the factory prompt forbids them for the timeline. */
-import { spawn, spawnSync } from "node:child_process";
-import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
-import { tmpdir } from "node:os";
+   --at adds moments of your own; --quick scores only the keyframes and the --at moments, for a fast loop on one spot.
+   Seeking works for CSS animations, transitions and Web Animations started at load; JS timers cannot be seeked, which
+   is why the factory prompt forbids them for the timeline. Renders from an earlier run are deleted first, so every
+   <moment>.png in the folder is from this run.
+
+   The score is a floor, not the goal: it is a mean pixel difference per moment, so a grid of buttons that is one
+   pixel off scores worse than a missing shadow. When a box's mean colour matches but its difference is large, the
+   texture differs: zoom there (probe --zoom) and look. */
+import { spawnSync } from "node:child_process";
+import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
@@ -21,8 +26,8 @@ import { bySlug } from "../src/lib/data";
 import { recipeFor } from "../src/lib/registry";
 import { clipId, draftFor } from "../src/lib/drafts";
 import { compareBuild } from "../src/lib/compare";
+import { openPage, sleep } from "./chrome";
 
-const CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const args = process.argv.slice(2);
 const slug = args.find((a) => !a.startsWith("--"));
@@ -30,7 +35,9 @@ if (!slug) { console.error("usage: bun --conditions=react-server scripts/check-b
 const flag = (n: string) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : undefined; };
 const html = path.resolve(ROOT, flag("--html") ?? `factory/${slug}/index.html`);
 const out = path.dirname(html);
+const QUICK = args.includes("--quick");
 if (!existsSync(html)) { console.error(`no file at ${html}`); process.exit(2); }
+for (const f of readdirSync(out)) if (/^(kf\d+|[\d.]+s)\.png$/.test(f)) rmSync(path.join(out, f)); /* no stale renders from an earlier run */
 
 const e = bySlug(slug);
 if (!e) { console.error(`no entry ${slug}`); process.exit(2); }
@@ -46,7 +53,7 @@ type Moment = { name: string; at: number; src: string; still: boolean };
 const moments: Moment[] = frames.map((k) => ({ name: k.name, at: k.at, src: path.join(ROOT, "public", k.src.replace(/^\//, "")), still: true }));
 const clip = (() => { const id = clipId(e); const p = id ? path.join(ROOT, "measure", id, "source.mp4") : ""; return p && existsSync(p) ? p : null; })();
 const extra = (flag("--at") ?? "").split(",").map(Number).filter((n) => Number.isFinite(n) && n >= 0);
-const mids = draft ? draft.phases.filter(([a, b]) => b - a >= 0.1).map(([a, b]) => Number(((a + b) / 2).toFixed(2))) : [];
+const mids = draft && !QUICK ? draft.phases.filter(([a, b]) => b - a >= 0.1).map(([a, b]) => Number(((a + b) / 2).toFixed(2))) : [];
 if (clip) {
   mkdirSync(path.join(out, ".ref"), { recursive: true });
   for (const t of [...extra, ...mids].filter((t, i, arr) => arr.indexOf(t) === i && !moments.some((m) => Math.abs(m.at - t) < 0.15)).slice(0, 16).sort((a, b) => a - b)) {
@@ -57,28 +64,10 @@ if (clip) {
   moments.sort((a, b) => a.at - b.at);
 } else if (extra.length) console.error(`no clip at measure/<id>/source.mp4, so --at moments have no reference; keyframes only`);
 
-/* headless Chrome over CDP, one page */
-const port = 9400 + Math.floor(Math.random() * 100);
-const profile = path.join(tmpdir(), `lookap-check-${port}`);
-mkdirSync(profile, { recursive: true });
-const chrome = spawn(CHROME, ["--headless=new", "--disable-gpu", "--no-first-run", "--hide-scrollbars", `--user-data-dir=${profile}`, `--remote-debugging-port=${port}`, `--window-size=${W},${H}`, "about:blank"], { stdio: "ignore" });
-const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
-let targets: { type: string; webSocketDebuggerUrl: string }[] = [];
-for (let i = 0; i < 40 && !targets.length; i++) { try { targets = await (await fetch(`http://127.0.0.1:${port}/json`)).json(); } catch { await sleep(250); } }
-const page = targets.find((t) => t.type === "page");
-if (!page) { chrome.kill(); console.error("Chrome did not start"); process.exit(1); }
-const ws = new WebSocket(page.webSocketDebuggerUrl);
-await new Promise((r) => (ws.onopen = r));
-let id = 0; const pending = new Map<number, (v: { result: Record<string, unknown> }) => void>();
-ws.onmessage = (m) => { const d = JSON.parse(String(m.data)); if (d.id && pending.has(d.id)) { pending.get(d.id)!(d); pending.delete(d.id); } };
-const send = (method: string, params: Record<string, unknown> = {}) => new Promise<{ result: Record<string, unknown> }>((res) => { const i = ++id; pending.set(i, res); ws.send(JSON.stringify({ id: i, method, params })); });
-const ev = async (expression: string) => ((await send("Runtime.evaluate", { expression, returnByValue: true, awaitPromise: true })).result as { result: { value: unknown } }).result.value;
-
-await send("Emulation.setDeviceMetricsOverride", { width: W, height: H, deviceScaleFactor: 1, mobile: false });
-/* ?demo=1 asks an interactive page to replay the clip's sequence on its timeline; a page without interaction ignores it */
-await send("Page.navigate", { url: `file://${html}?demo=1` });
-await sleep(900);
-await ev("document.fonts ? document.fonts.ready.then(() => true) : true");
+/* headless Chrome, one page. ?demo=1 asks an interactive page to replay the clip's sequence on its timeline; a page
+   without interaction ignores it */
+const page = await openPage(`file://${html}?demo=1`, W, H);
+const { ev } = page;
 const animations = Number(await ev("document.getAnimations().length"));
 
 type Row = { keyframe: string; at: number; still: boolean; score: number; overall: number; elements: unknown[]; regions: unknown[] };
@@ -90,7 +79,7 @@ for (const kf of moments) {
   /* everything on the page jumps to this moment; the page itself is not reloaded, so fonts and layout are settled */
   await ev(`document.getAnimations().forEach((a) => { try { a.pause(); a.currentTime = ${Math.round(kf.at * 1000)}; } catch {} }); true`);
   await sleep(150);
-  const shot = Buffer.from(String(((await send("Page.captureScreenshot", { format: "png" })).result as { data: string }).data), "base64");
+  const shot = await page.shot();
   const mine = path.join(out, `${kf.name}.png`);
   writeFileSync(mine, shot);
   const ref = kf.src;
@@ -102,8 +91,7 @@ for (const kf of moments) {
   const right = await sharp(shot).resize(pw, ph, { fit: "fill" }).png().toBuffer();
   panels.push(await sharp({ create: { width: pw * 2 + 8, height: ph, channels: 3, background: "#ff3b30" } }).composite([{ input: left, left: 0, top: 0 }, { input: right, left: pw + 8, top: 0 }]).png().toBuffer());
 }
-ws.close(); chrome.kill();
-setTimeout(() => rmSync(profile, { recursive: true, force: true }), 500);
+page.close();
 
 /* side.png: rows of designer | yours, red gutter between and below so the rows read apart */
 const side = sharp({ create: { width: pw * 2 + 8, height: (ph + 8) * panels.length - 8, channels: 3, background: "#ff3b30" } })
@@ -122,7 +110,10 @@ writeFileSync(path.join(out, "check.json"), JSON.stringify(result, null, 1));
 console.log(`score ${score} over ${rows.length} moments: ${stills.length} stills ${avg(stills)}${moving.length ? `, ${moving.length} mid-motion ${avg(moving)}` : " (no clip on disk, so no mid-motion moments)"} (run ${result.runs}); ${animations} animation${animations === 1 ? "" : "s"} on the page${animations ? "" : ": nothing to seek, every moment shows the load state"}`);
 for (const r of rows) {
   console.log(`\n${r.keyframe} at ${r.at}s${r.still ? "" : " (mid-motion)"}: score ${r.score}, mean difference ${r.overall}`);
-  for (const el of r.elements as { name: string; box: number[]; reference: string; yours: string; delta: number }[]) console.log(`  box ${el.name} [${el.box.join(",")}] reference ${el.reference} yours ${el.yours} delta ${el.delta}`);
+  const near = (a: string, b: string) => { const v = (h: string) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16)); const [x, y] = [v(a), v(b)]; return x.every((c, i) => Math.abs(c - y[i]) < 14); };
+  for (const el of r.elements as { name: string; box: number[]; reference: string; yours: string; delta: number }[]) console.log(`  box ${el.name} [${el.box.join(",")}] reference ${el.reference} yours ${el.yours} delta ${el.delta}${near(el.reference, el.yours) && el.delta > 40 ? " (same colour, different texture or position: zoom it)" : ""}`);
   for (const c of r.regions as { cell: string; box: number[]; delta: number; over: string[] }[]) console.log(`  region ${c.cell} [${c.box.join(",")}] delta ${c.delta}${c.over.length ? ` under: ${c.over.join(", ")}` : ""}`);
+  const worst = (r.regions as { box: number[] }[])[0];
+  if (worst) console.log(`  look: bun scripts/probe.ts ${slug} --zoom ${worst.box.join(",")} --t ${r.at}`);
 }
 console.log(`\nside by side: ${path.relative(ROOT, path.join(out, "side.png"))} (designer left, yours right, one row per moment, in time order). ${recipe ? "Element boxes are measured." : "Element boxes are a draft: trust the regions and the picture over them."}`);

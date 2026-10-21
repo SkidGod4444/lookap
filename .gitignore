@@ -44,3 +44,5 @@ factory/*/*.png
 !factory/*/side.png
 factory/*/.ref/
 factory/*/sheets/
+factory/*/zoom/
+factory/*/drive/
