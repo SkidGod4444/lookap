@@ -2,6 +2,7 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { SITE_URL } from "./site";
+import type { Entry } from "./data";
 
 /* Shared Open Graph card: dark gutter, a canvas panel, the mascot tile, a headline, a line, and the domain.
    Fonts come from Google at render time and are cached per process. */
@@ -141,6 +142,70 @@ export async function ogHero({ line }: { line: string }) {
           </div>
         </div>
         <div style={{ position: "absolute", left: 0, right: 0, top: 580 * k, display: "flex", justifyContent: "center", fontSize: 20 * k, color: "#5a5a5a" }}>{host}</div>
+      </div>
+    ),
+    { ...OG_SIZE_2X, fonts: fontList(fonts) },
+  );
+}
+
+/* An entry's card, same desk as the home card: the title big on the left with its category and types, and on the right a window
+   showing the clip's poster, tilted a touch and cut by the edge. Entries without media get the same quiet tile the feed shows. */
+export async function ogEntry(e: Entry) {
+  const [fonts, mascot, poster] = await Promise.all([
+    loadFonts().catch(() => null),
+    loadMascot(),
+    e.video ? loadPublic(e.video.poster.replace(/^\//, ""), "image/jpeg") : Promise.resolve(null),
+  ]);
+  const k = OG_SIZE_2X.width / OG_SIZE.width;
+  const host = SITE_URL.replace(/^https?:\/\//, "");
+  const ring = `${k}px solid rgba(255,255,255,0.1)`;
+  const lift = `0 ${16 * k}px ${48 * k}px rgba(0,0,0,0.65)`;
+  const kicker = `${e.category} · ${e.types.join(", ")}`;
+  const big = e.title.length > 26;
+  /* window geometry: portrait clips get a tall window, the rest a wide one */
+  const portrait = e.ratio < 0.9;
+  const ww = portrait ? 300 : 420;
+  const wh = portrait ? 420 : 300;
+  const img = { w: ww, h: wh - 38 };
+  return new ImageResponse(
+    (
+      <div style={{ width: "100%", height: "100%", display: "flex", background: "#0a0a0a", fontFamily: "Inter, sans-serif", position: "relative", overflow: "hidden" }}>
+        {/* top-left: the mark and the wordmark, small */}
+        <div style={{ position: "absolute", left: 64 * k, top: 56 * k, display: "flex", alignItems: "center", gap: 14 * k }}>
+          {/* eslint-disable-next-line @next/next/no-img-element -- satori image */}
+          <img src={mascot} alt="" width={44 * k} height={44 * k} />
+          <div style={{ fontSize: 28 * k, fontWeight: 600, color: "#f5f5f5", letterSpacing: -0.8 * k }}>lookap</div>
+        </div>
+        {/* left: kicker, title, line */}
+        <div style={{ position: "absolute", left: 64 * k, top: 190 * k, width: 640 * k, display: "flex", flexDirection: "column", gap: 18 * k }}>
+          <div style={{ fontSize: 22 * k, color: "#8a8a8a", letterSpacing: 0.2 * k }}>{kicker}</div>
+          <div style={{ fontSize: (big ? 60 : 76) * k, fontWeight: 600, color: "#f5f5f5", letterSpacing: -2.4 * k, lineHeight: 1.02 }}>{e.title}</div>
+          <div style={{ fontSize: 24 * k, color: "#c9c9c9", lineHeight: 1.4, marginTop: 6 * k }}>{e.description}</div>
+        </div>
+        {/* bottom-left: a measurement in the dot-matrix face, and the domain */}
+        <div style={{ position: "absolute", left: 64 * k, top: 548 * k, display: "flex", alignItems: "baseline", gap: 28 * k }}>
+          <div style={{ display: "flex", fontFamily: "Doto, Inter, sans-serif", fontSize: 30 * k, fontWeight: 700, color: "#8a8a8a", letterSpacing: 2 * k }}>{e.video ? `${e.video.w} × ${e.video.h}` : `${Math.round(e.ratio * 100) / 100} : 1`}</div>
+          <div style={{ fontSize: 20 * k, color: "#5a5a5a" }}>{host}</div>
+        </div>
+        {/* right: the window, tilted, cut by the right edge */}
+        <div style={{ position: "absolute", left: (portrait ? 820 : 760) * k, top: (portrait ? 120 : 180) * k, width: ww * k, height: wh * k, borderRadius: 16 * k, display: "flex", flexDirection: "column", background: "#181818", border: ring, boxShadow: lift, overflow: "hidden", transform: "rotate(-4deg)", transformOrigin: "0% 100%" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 8 * k, padding: `${12 * k}px ${14 * k}px` }}>
+            <div style={{ width: 14 * k, height: 14 * k, borderRadius: 999, background: "#ff5f57" }} />
+            <div style={{ width: 14 * k, height: 14 * k, borderRadius: 999, background: "#febc2e" }} />
+            <div style={{ width: 14 * k, height: 14 * k, borderRadius: 999, background: "#28c840" }} />
+            <div style={{ marginLeft: 10 * k, fontSize: 14 * k, color: "#5a5a5a" }}>{e.video ? e.video.src.split("/").pop() : e.slug}</div>
+          </div>
+          {poster ? (
+            <div style={{ display: "flex", width: img.w * k, height: img.h * k, overflow: "hidden" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element -- satori image */}
+              <img src={poster} alt="" width={img.w * k} height={img.h * k} style={{ objectFit: "cover", objectPosition: "50% 45%" }} />
+            </div>
+          ) : (
+            <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-end", width: img.w * k, height: img.h * k, padding: 24 * k, background: `linear-gradient(160deg, hsl(${e.hue} 4% 19%), hsl(${e.hue} 3% 12%))` }}>
+              <div style={{ fontSize: 18 * k, fontWeight: 500, color: "#c9c9c9", lineHeight: 1.3 }}>{e.title}</div>
+            </div>
+          )}
+        </div>
       </div>
     ),
     { ...OG_SIZE_2X, fonts: fontList(fonts) },
