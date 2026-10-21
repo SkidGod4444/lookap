@@ -20,12 +20,16 @@ export async function GET(req: NextRequest) {
   if (!product) return NextResponse.json({ error: `No product configured for ${plan} ${interval}.` }, { status: 503 });
   const user = await currentUser();
   const email = user?.primaryEmailAddress?.emailAddress;
+  /* Polar picks the presentment currency and the local payment methods (UPI in India, for one) from the customer's IP.
+     Behind Vercel the real address is the first entry of x-forwarded-for. */
+  const ip = (req.headers.get("x-forwarded-for") ?? "").split(",")[0].trim() || req.headers.get("x-real-ip") || "";
   const base = {
     products: [product],
     success_url: `${SITE_URL}/account?checkout=success`,
     return_url: `${SITE_URL}/pricing`,
     external_customer_id: userId,
     ...(user?.fullName ? { customer_name: user.fullName } : {}),
+    ...(ip && !/^(127\.|::1|10\.|192\.168\.)/.test(ip) ? { customer_ip_address: ip } : {}),
     metadata: { plan, interval, userId },
   };
   try {
