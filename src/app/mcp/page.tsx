@@ -26,6 +26,8 @@ export default function McpPage() {
       <section className="flex flex-col gap-3">
         <h2 className="text-[11px] font-medium tracking-[.06em] text-subtle uppercase">Tools</h2>
         <p className="text-[14px] leading-[1.55] text-subtle">{TOOLS.length} tools and two workflows your agent can run: rebuild an entry (look, brief, build, check, fix) or remix two or three into something new.</p>
+        {/* changes an agent would notice, newest first; a stricter judge must not read as a worse build */}
+        <p className="text-[13px] leading-[1.55] text-subtle"><span className="text-foreground">22 Oct 2026.</span> The rebuild score is stricter: edges, text and texture count up to ten times a flat field, with two pixels of tolerance. The same file scores lower than before; a close rebuild now sits near 70. New: look_at reads any moment of a clip at full size, and the remix prompt designs new work from two or three entries.</p>
         <ul className="divide-y divide-line rounded-xl bg-card ring-1 ring-line">
           {TOOLS.map(([name, title, what, tier]) => (
             <li key={name} className="grid gap-1 p-4 sm:grid-cols-[180px_1fr_auto] sm:items-baseline sm:gap-4">
