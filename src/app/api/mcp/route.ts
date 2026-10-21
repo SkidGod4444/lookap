@@ -155,7 +155,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     },
     async ({ slug }) => {
       if (!lim.recipes) return gated("get_recipe", plan, reason);
-      const r = RECIPES.find((x) => x.slug === slug);
+      const r = RECIPES.find((x) => x.slug === slug) ?? (() => { const e = bySlug(slug); return e ? recipeFor(e) : undefined; })();
       if (!r) return text({ error: `No recipe ${slug}`, available: RECIPES.map((x) => x.slug) });
       const owner = ENTRIES.find((x) => recipeFor(x)?.slug === r.slug);
       if (owner) { const br = await touchEntry(keyRef, plan, owner.slug); if (br && !br.ok) return tooWide(br); bump(owner.slug, "agent"); }
@@ -301,7 +301,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       inputSchema: {
         slug: z.string(),
         what: z.enum(["sheet", "frame", "zoom", "colors", "track"]),
-        at: z.number().optional().describe("seconds into the clip; the nearest stored frame is used and named in the reply"),
+        at: z.union([z.number(), z.string()]).optional().describe("seconds into the clip, or a keyframe name from the brief such as kf2"),
         box: z.array(z.number()).length(4).optional().describe("[x, y, w, h] in frame pixels, for zoom"),
         col: z.number().optional().describe("x of the column to read, for colors"),
         row: z.number().optional().describe("y of the row to read, for colors"),
@@ -312,12 +312,14 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       },
       annotations: ro,
     },
-    async ({ slug, what, at, box, col, row, from, to, image, span, cls }) => {
+    async ({ slug, what, at: atArg, box, col, row, from, to, image, span, cls }) => {
+      let at: number | string | undefined = atArg;
       if (!lim.media) return gated("look_at", plan, reason);
       const e = entryFor(slug);
       if (!e) return text({ error: `No entry ${slug}` });
       const draft = draftFor(e);
       if (!draft) return text({ error: `${slug} has no clip to look at` });
+      if (typeof at === "string") { const named = [...draft.keyframes, ...(recipeFor(e)?.keyframes ?? [])].find((k) => k.name === at); if (!named) return text({ error: `No keyframe ${at}`, available: draft.keyframes.map((k) => k.name) }); at = named.at; }
       const br = await touchEntry(keyRef, plan, e.slug);
       if (br && !br.ok) return tooWide(br);
       const stored = [...draft.keyframes.map((k) => ({ at: k.at, src: k.src, name: k.name })), ...draft.mids.map((m) => ({ at: m.at, src: m.src, name: `mid-phase` }))].sort((a, b) => a.at - b.at);
