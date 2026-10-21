@@ -1,6 +1,6 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata, Viewport } from "next";
-import { DESCRIPTION, SITE_NAME, SITE_URL, TAGLINE, X_HANDLE } from "@/lib/site";
+import { DESCRIPTION, SITE_NAME, SITE_URL, TAGLINE } from "@/lib/site";
 import { Suspense } from "react";
 import { Inter, Doto } from "next/font/google";
 import "./globals.css";
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   category: "technology",
   alternates: { canonical: "/" },
   openGraph: { type: "website", siteName: SITE_NAME, url: "/", locale: "en_US" },
-  twitter: { card: "summary_large_image", site: X_HANDLE, creator: X_HANDLE },
+  twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
   formatDetection: { email: false, telephone: false, address: false },
   other: { "ai-notice": AI_NOTICE, "tdm-reservation": "1" },

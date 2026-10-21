@@ -4,4 +4,6 @@ export const SITE_NAME = "lookap";
 export const TAGLINE = "Give your coding agent good taste in UI.";
 export const DESCRIPTION =
   "lookap is a design registry for coding agents. Hundreds of real interfaces, measured recipes and design notes, one MCP call away from Claude Code, Codex, Cursor, VS Code and Gemini CLI. Keys from a dollar a month.";
-export const X_HANDLE = "@lookap";
+/* lookap has no X account of its own yet; the founder's profile, behind a redirect we control. */
+export const X_URL = "https://ref.saidev.codes/x";
+export const GITHUB_URL = "https://ref.saidev.codes/github";

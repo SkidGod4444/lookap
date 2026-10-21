@@ -46,17 +46,17 @@ const initials = (name: string) => name.replace(/[^A-Za-z0-9 ]/g, "").trim().spl
 /* Stable slugs: a short hash of the source URL so links survive reordering of the catalog. */
 const hash = (s: string) => { let h = 5381; for (let i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) >>> 0; return h.toString(36).slice(0, 6); };
 
-/* Our own measured demos, the ones the recipes in the registry are read from. */
+/* Our own measured demos, the ones the recipes in the registry are read from. lookap is closed source, so they carry no source link. */
 const OWN: Entry[] = [
   {
     slug: "s5-lamp-carriage-typewriter", title: "Lamp Carriage Typewriter", kind: "feed", category: "Interface", types: ["Motion", "Dark", "Typing"],
-    author: "sai", authorName: "lookap", sourceUrl: "https://github.com/SkidGod4444/lookap", sample: false,
+    author: "sai", authorName: "lookap", sample: false,
     description: "A writing app where a lamp on a rail lights only the line you are typing.", hue: 40, tone: "dark", duration: 11,
     video: { src: "/demos/typewriter.mp4", w: 498, h: 700 }, poster: "/demos/typewriter.jpg", ratio: 498 / 700,
   },
   {
     slug: "6w4-id-card-reader-hover", title: "ID Card Reader Hover", kind: "feed", category: "Interface", types: ["Hover", "Hardware", "Blue"],
-    author: "sai", authorName: "lookap", sourceUrl: "https://github.com/SkidGod4444/lookap", sample: false,
+    author: "sai", authorName: "lookap", sample: false,
     description: "An ID card slides into a reader and an LCD prints a verification report.", hue: 222, tone: "color", duration: 8,
     video: { src: "/demos/card-reader.mp4", w: 1080, h: 1080 }, poster: "/demos/card-reader.jpg", ratio: 1,
   },
