@@ -5,7 +5,8 @@ import { CATEGORIES, METHOD, NOTES, RECIPES, SECTION_NAMES, briefFor, facets, pu
 import { compareBuild } from "@/lib/compare";
 import { REBUILDS } from "@/lib/rebuilds";
 import { bump } from "@/lib/demand";
-import { DAILY, QUOTAS, charge, chargeDaily, usageFor } from "@/lib/usage";
+import { draftFor } from "@/lib/drafts";
+import { BREADTH, DAILY, QUOTAS, charge, chargeDaily, fingerprint, touchEntry, usageFor } from "@/lib/usage";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { ENTRIES, bySlug } from "@/lib/data";
@@ -50,6 +51,7 @@ const LOCK: Record<string, keyof (typeof LIMITS)["pro"]> = { get_recipe: "recipe
 const NEEDS: Record<string, string> = { recipes: "Pro", media: "Pro", source: "Max" };
 const spent = (what: string, u: { used: number; limit: number; resets: string }) => text({ error: `${what} has used its ${u.limit} calls for this month on this account. Resets ${u.resets}. A higher plan at /pricing raises it.`, usage: u });
 const NEXT: Record<Plan, string> = { none: "", starter: `Pro gets ${DAILY.pro} a day`, pro: `Max gets ${DAILY.team} a day`, team: "you are on the highest plan; the count resets tomorrow" };
+const tooWide = (u: { used: number; limit: number; resets: string }) => text({ error: `This account has opened its ${u.limit} entries for today. Keys are for building from entries, not for walking the registry. The count resets ${u.resets}.`, entries: u });
 const dayDone = (plan: Plan, u: { used: number; limit: number; resets: string }) => text({ error: `This account has used its ${u.limit} tool calls for today. Resets ${u.resets}. Upgrade at /pricing: ${NEXT[plan]}.`, today: u });
 
 function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
@@ -63,10 +65,11 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
         "lookap is a design registry for coding agents: curated interfaces (components, sections, full pages) with media, traits and credits, measured recipes for a few, and design notes. " +
         "Reach for it when asked to design, redesign, polish or rebuild UI, or for inspiration and reference: search_designs to find, see_design to look at the frame or a keyframe, get_brief or get_recipe for how to rebuild, check_rebuild to test your render against the reference, similar_designs to widen, list_notes for guidance. " +
         "A measured recipe is data: frame, elements with boxes, timing, states, keyframes and checks. Build from it as fact, render, call check_rebuild, fix what it reports; that is one pass instead of rounds of feedback. " +
+        "Every other clip carries a draft measurement in get_brief: phases, moves and palette measured from the clip, boxes as a first pass; its keyframes work with see_design and check_rebuild too. " +
         "Every tool needs a key (Starter $1/mo at /pricing); see_design, get_recipe, check_rebuild and check_media need Pro; get_rebuild, the finished source, needs Max. " +
         (plan === "none" ? "" : `This key is ${PLAN_NAME[plan]}. `) +
         (hidden.length ? `Not on this plan, so not listed: ${hidden.join(", ")}; see /pricing. ` : "") +
-        (plan === "none" ? "" : `This account may make ${DAILY[plan]} tool calls a day across all its keys; get_usage shows what is left. `) +
+        (plan === "none" ? "" : `This account may make ${DAILY[plan]} tool calls a day and open ${BREADTH[plan]} distinct entries a day across all its keys; get_usage shows what is left. Recipes, drafts and source files carry a mark naming the account they were issued to. `) +
         (quotas.length ? `Monthly quotas on this account, shared by all its keys: ${quotas.join(", ")}. ` : "") +
         (stale ? "Key verification used a cached result because the key service was unreachable; limits still apply." : ""),
     },
@@ -117,6 +120,8 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       if (plan === "none") return gated("get_design", plan, reason);
       const e = bySlug(slug);
       if (!e) return text({ error: `No entry ${slug}` });
+      const br = await touchEntry(keyRef, plan, e.slug);
+      if (br && !br.ok) return tooWide(br);
       bump(e.slug, "agent");
       const pub = publicEntry(e);
       const recipe = pub.recipe ? RECIPES.find((r) => r.slug === pub.recipe) : null;
@@ -137,10 +142,10 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       const r = RECIPES.find((x) => x.slug === slug);
       if (!r) return text({ error: `No recipe ${slug}`, available: RECIPES.map((x) => x.slug) });
       const owner = ENTRIES.find((x) => recipeFor(x)?.slug === r.slug);
-      if (owner) bump(owner.slug, "agent");
+      if (owner) { const br = await touchEntry(keyRef, plan, owner.slug); if (br && !br.ok) return tooWide(br); bump(owner.slug, "agent"); }
       const u = await charge(keyRef, plan, "get_recipe");
       if (u && !u.ok) return spent("get_recipe", u);
-      return text(u ? { ...r, usage: u } : r);
+      return text({ ...r, issued: { to: fingerprint(keyRef), on: new Date().toISOString().slice(0, 10) }, usage: u });
     },
   );
 
@@ -158,16 +163,20 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       const recipe = e ? recipeFor(e) : RECIPES.find((r) => r.slug === slug);
       const rb = recipe ? REBUILDS[recipe.slug] : undefined;
       if (!recipe || !rb) return text({ error: `No finished rebuild for ${slug}`, available: Object.keys(REBUILDS) });
+      const entry = e ?? ENTRIES.find((x) => recipeFor(x)?.slug === recipe.slug);
+      if (entry) { const br = await touchEntry(keyRef, plan, entry.slug); if (br && !br.ok) return tooWide(br); }
       const u = await charge(keyRef, plan, "get_rebuild");
       if (u && !u.ok) return spent("get_rebuild", u);
-      const entry = e ?? ENTRIES.find((x) => recipeFor(x)?.slug === recipe.slug);
       if (entry) bump(entry.slug, "agent");
+      const mark = fingerprint(keyRef);
       const credit = entry ? { designer: entry.authorName, x: entry.x ?? null, source: entry.sourceUrl ?? null } : null;
-      const header = `<!-- ${recipe.title}. Rebuilt by lookap (${recipe.build.model}) from ${credit?.designer ?? "the designer"}'s clip${credit?.source ? `: ${credit.source}` : ""}. Licensed to a lookap Max key holder for use in their own products; not for redistribution as a design asset. Issued ${new Date().toISOString().slice(0, 10)}. -->\n`;
+      const header = `<!-- ${recipe.title}. Rebuilt by lookap (${recipe.build.model}) from ${credit?.designer ?? "the designer"}'s clip${credit?.source ? `: ${credit.source}` : ""}. Licensed to a lookap Max key holder for use in their own products; not for redistribution as a design asset. Issued ${new Date().toISOString().slice(0, 10)} to ${mark}. -->\n`;
+      /* the same mark inside the stylesheet, where a stripped comment would not reach */
+      const body = rb.html.replace(/:root\s*\{/, `:root { --lk: "${mark}";`);
       return {
         content: [
-          { type: "text" as const, text: JSON.stringify({ slug: recipe.slug, title: recipe.title, file: rb.file, bytes: rb.html.length, needs: rb.needs, credit, build: recipe.build, usage: u, how: ["Save the second part as the file named above and open it in a browser; it runs as is.", "To port: keep --u as one source pixel and every calc(N * var(--u)); move the CSS and markup into your component; the script is plain DOM code.", "Then render, screenshot and call check_rebuild to confirm nothing drifted."] }, null, 2) },
-          { type: "text" as const, text: header + rb.html },
+          { type: "text" as const, text: JSON.stringify({ slug: recipe.slug, title: recipe.title, file: rb.file, bytes: rb.html.length, needs: rb.needs, credit, build: recipe.build, issued: { to: mark, on: new Date().toISOString().slice(0, 10) }, usage: u, how: ["Save the second part as the file named above and open it in a browser; it runs as is.", "To port: keep --u as one source pixel and every calc(N * var(--u)); move the CSS and markup into your component; the script is plain DOM code.", "Then render, screenshot and call check_rebuild to confirm nothing drifted."] }, null, 2) },
+          { type: "text" as const, text: header + body },
         ],
       };
     },
@@ -208,6 +217,8 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       if (plan === "none") return gated("similar_designs", plan, reason);
       const e = bySlug(slug);
       if (!e) return text({ error: `No entry ${slug}` });
+      const br = await touchEntry(keyRef, plan, e.slug);
+      if (br && !br.ok) return tooWide(br);
       return text({ of: e.slug, results: similarEntries(e, limit ?? 8).map(publicEntry) });
     },
   );
@@ -224,8 +235,11 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       if (plan === "none") return gated("get_brief", plan, reason);
       const e = bySlug(slug);
       if (!e) return text({ error: `No entry ${slug}` });
+      const br = await touchEntry(keyRef, plan, e.slug);
+      if (br && !br.ok) return tooWide(br);
       bump(e.slug, "agent");
-      return text(briefFor(e));
+      const brief = briefFor(e);
+      return text(brief.draft ? { ...brief, issued: { to: fingerprint(keyRef), on: new Date().toISOString().slice(0, 10) } } : brief);
     },
   );
 
@@ -241,9 +255,12 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       if (!lim.media) return gated("see_design", plan, reason);
       const e = bySlug(slug);
       if (!e) return text({ error: `No entry ${slug}` });
-      const recipe = recipeFor(e);
-      const kf = at ? recipe?.keyframes.find((k) => k.name === at) : undefined;
-      if (at && !kf) return text({ error: `No keyframe ${at} for ${slug}`, available: recipe?.keyframes.map((k) => k.name) ?? [] });
+      const br = await touchEntry(keyRef, plan, e.slug);
+      if (br && !br.ok) return tooWide(br);
+      const recipe = recipeFor(e), draft = recipe ? undefined : draftFor(e);
+      const frames = recipe?.keyframes ?? draft?.keyframes ?? [];
+      const kf = at ? frames.find((k) => k.name === at) : undefined;
+      if (at && !kf) return text({ error: `No keyframe ${at} for ${slug}`, available: frames.map((k) => k.name) });
       const src = kf?.src ?? e.poster;
       if (!src) return text({ error: `No frame for ${slug}` });
       const u = await charge(keyRef, plan, "see_design");
@@ -251,7 +268,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       bump(e.slug, "agent");
       try {
         const { data, mimeType } = await loadFrame(src);
-        const frame = { w: (e.video ?? e.image)?.w, h: (e.video ?? e.image)?.h, at: kf ? `${kf.at} s, ${kf.shows}` : e.video ? "first frame of the clip" : "the still", keyframes: recipe?.keyframes.map((k) => k.name) ?? [] };
+        const frame = { w: (e.video ?? e.image)?.w, h: (e.video ?? e.image)?.h, at: kf ? `${kf.at} s, ${"shows" in kf ? kf.shows : `a hold from ${kf.hold[0]} to ${kf.hold[1]} s`}` : e.video ? "first frame of the clip" : "the still", keyframes: frames.map((k) => k.name), measured: recipe ? "recipe" : draft ? "draft" : "none" };
         return { content: [{ type: "image" as const, data, mimeType }, { type: "text" as const, text: JSON.stringify({ ...publicEntry(e), frame, usage: u }, null, 2) }] };
       } catch (err) {
         return text({ error: err instanceof Error ? err.message : "frame unavailable" });
@@ -274,20 +291,25 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     async ({ slug, image, at }) => {
       if (!lim.media) return gated("check_rebuild", plan, reason);
       const e = bySlug(slug);
-      const recipe = e ? recipeFor(e) : undefined;
-      if (!e || !recipe) return text({ error: `No measured recipe for ${slug}`, available: RECIPES.map((r) => r.slug) });
+      const recipe = e ? recipeFor(e) : undefined, draft = e && !recipe ? draftFor(e) : undefined;
+      if (!e || (!recipe && !draft)) return text({ error: `No measurement for ${slug}`, measured: RECIPES.map((r) => r.slug) });
+      const br = await touchEntry(keyRef, plan, e.slug);
+      if (br && !br.ok) return tooWide(br);
       if (image.length > 8_000_000) return text({ error: "Image too large: keep the screenshot under 6 MB" });
-      const kf = recipe.keyframes.find((k) => k.name === (at ?? recipe.keyframes[0].name));
-      if (!kf) return text({ error: `No keyframe ${at}`, available: recipe.keyframes.map((k) => k.name) });
+      const frames = recipe?.keyframes ?? draft!.keyframes;
+      const kf = frames.find((k) => k.name === (at ?? frames[0].name));
+      if (!kf) return text({ error: `No keyframe ${at}`, available: frames.map((k) => k.name) });
+      const frame = recipe?.frame ?? draft!.frame;
+      const elements = recipe?.elements ?? draft!.elements.map((d, i) => ({ name: `draft ${i + 1} ${d.fill}`, box: d.box, fill: d.fill }));
       const u = await charge(keyRef, plan, "check_rebuild");
       if (u && !u.ok) return spent("check_rebuild", u);
       bump(e.slug, "agent");
       try {
         const buf = Buffer.from(image.replace(/^data:[^,]+,/, ""), "base64");
         const ref = path.join(process.cwd(), "public", kf.src.replace(/^\//, ""));
-        const result = await compareBuild(ref, buf, recipe.frame, recipe.elements, kf === recipe.keyframes[0]);
-        const checks = recipe.checks.filter((c) => c.at === kf.name).map((c) => c.check);
-        return text({ slug, keyframe: kf.name, ...result, checks, usage: u, reading: "delta is the mean per-channel difference over the box, 0 identical; fix the largest elements first, then the regions; the checks are what to verify by eye or by measuring your own render" });
+        const result = await compareBuild(ref, buf, frame, elements, kf === frames[0]);
+        const checks = recipe ? recipe.checks.filter((c) => c.at === kf.name).map((c) => c.check) : ["draft: the regions are reliable; the element rows use first-pass boxes, so weigh them by eye"];
+        return text({ slug, keyframe: kf.name, measured: recipe ? "recipe" : "draft", ...result, checks, usage: u, reading: "delta is the mean per-channel difference over the box, 0 identical; fix the largest elements first, then the regions; the checks are what to verify by eye or by measuring your own render" });
       } catch (err) {
         return text({ error: err instanceof Error ? err.message : "compare failed" });
       }
@@ -346,8 +368,8 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     { title: "What this key has left", description: "The key's plan, the tools it opens, the account's monthly quotas with what has been used across all its keys, and when they reset. Needs a key.", annotations: ro },
     async () => {
       if (plan === "none") return gated("get_usage", plan, reason);
-      const usage = keyRef ? await usageFor(keyRef, plan) : { today: { used: 0, limit: DAILY[plan], resets: "" }, month: {} };
-      return text({ plan: PLAN_NAME[plan], today: usage.today, quotas: usage.month, unmetered: Object.keys(LOCK).filter((t) => lim[LOCK[t]] && !QUOTAS[plan][t]).concat(["search_designs", "get_design", "get_brief", "similar_designs", "list_notes", "get_note", "get_method"]), notOnThisPlan: hidden, upgrade: hidden.length ? "/pricing" : null });
+      const usage = keyRef ? await usageFor(keyRef, plan) : { today: { used: 0, limit: DAILY[plan], resets: "" }, entries: { used: 0, limit: BREADTH[plan], resets: "" }, month: {} };
+      return text({ plan: PLAN_NAME[plan], today: usage.today, entriesToday: usage.entries, quotas: usage.month, unmetered: Object.keys(LOCK).filter((t) => lim[LOCK[t]] && !QUOTAS[plan][t]).concat(["search_designs", "get_design", "get_brief", "similar_designs", "list_notes", "get_note", "get_method"]), notOnThisPlan: hidden, upgrade: hidden.length ? "/pricing" : null });
     },
   );
 

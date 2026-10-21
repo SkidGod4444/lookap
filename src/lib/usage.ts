@@ -1,4 +1,5 @@
 import "server-only";
+import { createHash } from "node:crypto";
 import { dbReady, kv } from "./db";
 import type { Plan } from "./keys";
 
@@ -16,7 +17,31 @@ export const QUOTAS: Record<Plan, Partial<Record<string, number>>> = {
 /* Tool calls per day per account, every tool except get_usage. The ceiling a plan is sold on: hit it, upgrade. */
 export const DAILY: Record<Plan, number> = { none: 0, starter: 50, pro: 300, team: 1000 };
 
+/* Distinct entries an account may open in a day. Building touches a handful; walking the registry trips it. */
+export const BREADTH: Record<Plan, number> = { none: 0, starter: 20, pro: 40, team: 120 };
+
 export type Usage = { used: number; limit: number; resets: string };
+
+/* Note that an account opened an entry today. The same entry again is free; a new one past the limit is refused and
+   not recorded, so the day's set never grows past the limit. */
+export async function touchEntry(keyRef: string | undefined, plan: Plan, slug: string): Promise<(Usage & { ok: boolean }) | null> {
+  const limit = BREADTH[plan];
+  if (!limit || !keyRef || !dbReady) return null;
+  const k = `breadth:${keyRef}:${day()}`;
+  const r = kv();
+  if (await r.sismember(k, slug)) return { used: await r.scard(k), limit, resets: tomorrow(), ok: true };
+  const used = await r.scard(k);
+  if (used >= limit) return { used, limit, resets: tomorrow(), ok: false };
+  await r.sadd(k, slug);
+  if (used === 0) r.expire(k, 2 * 24 * 60 * 60).catch(() => {});
+  return { used: used + 1, limit, resets: tomorrow(), ok: true };
+}
+
+/* A short mark that names the account without exposing it: goes on every recipe, draft and source file an account
+   receives, so a copy found elsewhere can be traced back. Salted so the account id cannot be recovered from it. */
+export function fingerprint(keyRef: string | undefined) {
+  return createHash("sha256").update(`${process.env.LOOKAP_FINGERPRINT_SALT ?? "lookap"}:${keyRef ?? "anon"}`).digest("hex").slice(0, 10);
+}
 
 const month = () => new Date().toISOString().slice(0, 7);
 const day = () => new Date().toISOString().slice(0, 10);
@@ -47,13 +72,15 @@ export async function charge(keyRef: string | undefined, plan: Plan, tool: strin
 }
 
 /* Read-only view for the account page and get_usage: today's calls and the month's metered tools. */
-export async function usageFor(keyRef: string, plan: Plan): Promise<{ today: Usage; month: Record<string, Usage> }> {
+export async function usageFor(keyRef: string, plan: Plan): Promise<{ today: Usage; entries: Usage; month: Record<string, Usage> }> {
   const month_: Record<string, Usage> = {};
   const today: Usage = { used: 0, limit: DAILY[plan], resets: tomorrow() };
-  if (!dbReady) return { today, month: month_ };
+  const entries: Usage = { used: 0, limit: BREADTH[plan], resets: tomorrow() };
+  if (!dbReady) return { today, entries, month: month_ };
   const tools = Object.keys(QUOTAS[plan]);
   const vals = await kv().mget<(number | null)[]>(`usage:${keyRef}:${day()}:calls`, ...tools.map((t) => `usage:${keyRef}:${month()}:${t}`));
   today.used = Number(vals[0] ?? 0);
+  entries.used = await kv().scard(`breadth:${keyRef}:${day()}`);
   tools.forEach((t, i) => { month_[t] = { used: Number(vals[i + 1] ?? 0), limit: QUOTAS[plan][t]!, resets: resets() }; });
-  return { today, month: month_ };
+  return { today, entries, month: month_ };
 }
