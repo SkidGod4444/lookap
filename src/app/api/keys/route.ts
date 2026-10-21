@@ -2,6 +2,7 @@ import { auth, currentUser } from "@clerk/nextjs/server";
 import { setUser } from "@/lib/db";
 import { createKey, listKeys, revokeKey, unkeyReady } from "@/lib/unkey";
 import { entitlementFor } from "@/lib/polar";
+import { METER_LABEL, usageFor } from "@/lib/usage";
 
 /* A signed-in user's MCP keys: list, mint, revoke. The owner is the Clerk user id, so keys never cross accounts.
    Minting needs an active Polar subscription; the key is always on the plan being paid for. */
@@ -26,7 +27,10 @@ export async function GET() {
   return guarded(async () => {
     const [keys, entitlement, user] = await Promise.all([listKeys(userId), entitlementFor(userId), currentUser()]);
     await setUser(userId, { email: user?.primaryEmailAddress?.emailAddress, name: user?.fullName ?? undefined, keyCount: keys.length });
-    return json({ keys, entitlement });
+    /* the same counters the MCP endpoint charges: every key the user owns draws on user:<id> */
+    const u = entitlement.plan === "none" ? null : await usageFor(`user:${userId}`, entitlement.plan);
+    const usage = u && { today: u.today, entries: u.entries, month: Object.entries(u.month).map(([tool, m]) => ({ label: METER_LABEL[tool] ?? tool, ...m })) };
+    return json({ keys, entitlement, usage });
   });
 }
 

@@ -1,4 +1,4 @@
-import { clerkMiddleware } from "@clerk/nextjs/server";
+import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 import { AI_BOT_RE, AI_NOTICE } from "@/lib/bots";
 
@@ -6,13 +6,26 @@ import { AI_BOT_RE, AI_NOTICE } from "@/lib/bots";
    (Claude Code, Cursor and Codex call it with fetch-style user agents) and /api/webhooks receives Clerk and Polar. */
 const OPEN = /^\/(api\/|install\.sh$|robots\.txt$|sitemap\.xml$|llms\.txt$|manifest\.webmanifest$)/;
 
-export default clerkMiddleware((_auth, req) => {
+/* Pages that belong to a signed-in person. A signed-out visit never renders them: it lands on the feed with the
+   sign-in dialog open and comes back here once signed in. */
+const PRIVATE = createRouteMatcher(["/account(.*)", "/moodboards(.*)"]);
+
+export default clerkMiddleware(async (auth, req) => {
   const ua = req.headers.get("user-agent") ?? "";
   if (!OPEN.test(req.nextUrl.pathname) && AI_BOT_RE.test(ua)) {
     return new NextResponse(`${AI_NOTICE}\n`, {
       status: 403,
       headers: { "content-type": "text/plain; charset=utf-8", "x-robots-tag": "noindex, noai, noimageai", "cache-control": "no-store" },
     });
+  }
+  if (PRIVATE(req)) {
+    const { userId } = await auth();
+    if (!userId) {
+      const to = req.nextUrl.clone();
+      to.pathname = "/";
+      to.search = `?signin=1&next=${encodeURIComponent(req.nextUrl.pathname + req.nextUrl.search)}`;
+      return NextResponse.redirect(to);
+    }
   }
   return NextResponse.next();
 });
