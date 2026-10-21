@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "MCP server",
+  title: "MCP server for Claude Code, Cursor, Codex and VS Code",
   description: "Connect Claude Code, Codex, Cursor, VS Code or Gemini CLI to the lookap registry in one command. Search designs, read measured recipes and design notes, check media, all over MCP.",
   alternates: { canonical: "/mcp" },
 };

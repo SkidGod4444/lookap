@@ -1,24 +1,24 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import Link from "next/link";
-import { bySection, SECTIONS, sectionSlug } from "@/lib/data";
+import { bySection, INDEX_MIN, SECTION_KINDS, sectionName } from "@/lib/data";
 import { FeedGrid } from "@/components/FeedGrid";
 
 export function generateStaticParams() {
-  return SECTIONS.map((s) => ({ kind: sectionSlug(s) }));
+  return SECTION_KINDS().map((kind) => ({ kind }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ kind: string }> }): Promise<Metadata> {
   const { kind } = await params;
-  const name = SECTIONS.find((s) => sectionSlug(s) === kind) ?? kind;
+  const name = sectionName(kind);
   const n = bySection(kind).length;
-  const description = `${n} ${n === 1 ? "interface" : "interfaces"} filed under ${name} in the lookap registry, measured and ready for your agent.`;
-  return { title: name, description, alternates: { canonical: `/sections/${kind}` } };
+  const description = `${n} ${n === 1 ? "interface" : "interfaces"} filed under ${name} in the lookap registry: real ${name.toLowerCase()} UI examples, measured and ready for your coding agent over MCP.`;
+  return { title: `${name} UI examples`, description, alternates: { canonical: `/sections/${kind}` }, robots: n >= INDEX_MIN ? undefined : { index: false, follow: true } };
 }
 
 async function Inner({ params }: { params: Promise<{ kind: string }> }) {
   const { kind } = await params;
-  const name = SECTIONS.find((s) => sectionSlug(s) === kind) ?? kind;
+  const name = sectionName(kind);
   const list = bySection(kind);
   if (list.length === 0) {
     return (

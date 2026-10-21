@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ENTRIES, bySlug, sectionSlug } from "@/lib/data";
+import { ENTRIES, bySlug, sectionSlug, type Entry } from "@/lib/data";
 import { Media, STAGE_SIZES, TILE_SIZES } from "./Media";
 import { Avatar } from "./Avatar";
 import { SaveButton } from "./SaveButton";
@@ -16,6 +16,30 @@ import { AgentPrompts } from "./AgentPrompts";
 import { DemandPing } from "./DemandPing";
 import { recipeFor, tokens } from "@/lib/registry";
 import { FACTORY } from "@/lib/rebuilds";
+import { CATALOG_UPDATED, sectionName } from "@/lib/data";
+import { SITE_URL } from "@/lib/site";
+
+/* Structured data for crawlers: the clip or still as a VideoObject or ImageObject (Google needs name, thumbnail and
+   an upload date: the day it entered the registry) and the breadcrumb Home > Feed or Websites > section > entry. */
+function jsonLd(entry: Entry, live: boolean) {
+  const url = `${SITE_URL}${hrefFor(entry)}`;
+  const listing = entry.kind === "website" ? { name: "Websites", path: "/websites" } : { name: "Feed", path: "/feed" };
+  const media = entry.video
+    ? { "@type": "VideoObject", name: entry.title, description: entry.description, thumbnailUrl: entry.poster, contentUrl: entry.video.src, uploadDate: CATALOG_UPDATED, width: entry.video.w, height: entry.video.h, ...(entry.duration ? { duration: `PT${Math.round(entry.duration)}S` } : {}), url }
+    : { "@type": "ImageObject", name: entry.title, description: entry.description, contentUrl: entry.image?.src ?? entry.poster, width: entry.image?.w, height: entry.image?.h, url };
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      { ...media, creator: { "@type": entry.x || entry.authorName ? "Person" : "Organization", name: entry.authorName, ...(entry.x ? { url: `https://x.com/${entry.x}` } : {}) }, isPartOf: { "@id": `${SITE_URL}/#website` }, keywords: [entry.category, ...entry.types].join(", "), ...(live ? { hasPart: { "@type": "SoftwareSourceCode", name: `${entry.title}, rebuilt by lookap`, programmingLanguage: "HTML" } } : {}) },
+      { "@type": "BreadcrumbList", itemListElement: [
+        { "@type": "ListItem", position: 1, name: "lookap", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: listing.name, item: `${SITE_URL}${listing.path}` },
+        { "@type": "ListItem", position: 3, name: sectionName(sectionSlug(entry.category)), item: `${SITE_URL}/sections/${sectionSlug(entry.category)}` },
+        { "@type": "ListItem", position: 4, name: entry.title, item: url },
+      ] },
+    ],
+  };
+}
 
 export function ProjectPage({ slug }: { slug: string }) {
   const entry = bySlug(slug);
@@ -35,6 +59,7 @@ export function ProjectPage({ slug }: { slug: string }) {
     <div className="-mx-4 -mt-4 -mb-4 flex flex-1 flex-col lg:h-[calc(100vh_-_57px)] lg:flex-none lg:flex-row lg:overflow-hidden">
       <LockScroll />
       <DemandPing slug={entry.slug} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(entry, Boolean(live))) }} />
       <Stage>
         <Compare clip={<Media entry={entry} sizes={STAGE_SIZES} eager />} live={live ? <live.Component /> : null} hint={live?.hint} align={live?.align} style={frame} />
       </Stage>

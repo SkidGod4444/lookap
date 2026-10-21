@@ -86,3 +86,30 @@ export const bySlug = (slug: string) => ENTRIES.find((e) => e.slug === slug);
 export const byKind = (kind: Kind) => ENTRIES.filter((e) => e.kind === kind);
 export const bySection = (section: string) =>
   ENTRIES.filter((e) => sectionSlug(e.category) === section || e.types.some((t) => sectionSlug(t) === section));
+
+/* When the catalogue last changed; the sitemap and structured data date entries by it. Bump it when catalog.ts is
+   regenerated or rows are added by hand. */
+export const CATALOG_UPDATED = "2026-10-21";
+
+/* A section's display name: one of SECTIONS, or the category or type as an entry spells it (types like "Accordion"
+   have pages too, and their slugs must not become the heading). */
+export function sectionName(kind: string) {
+  const fixed = SECTIONS.find((s) => sectionSlug(s) === kind);
+  if (fixed) return fixed;
+  for (const e of ENTRIES) {
+    if (sectionSlug(e.category) === kind) return e.category;
+    const t = e.types.find((x) => sectionSlug(x) === kind);
+    if (t) return t;
+  }
+  return kind;
+}
+
+/* Every section slug that has a page: the fixed sections plus each category and type the entries use. Pages with fewer
+   than INDEX_MIN entries exist for browsing but ask not to be indexed, and stay out of the sitemap: a page with one
+   card is thin, and a few hundred of them would drag the rest down. */
+export const INDEX_MIN = 3;
+export const SECTION_KINDS = (): string[] => {
+  const kinds = new Set<string>(SECTIONS.map(sectionSlug));
+  for (const e of ENTRIES) { kinds.add(sectionSlug(e.category)); e.types.forEach((t) => kinds.add(sectionSlug(t))); }
+  return [...kinds];
+};

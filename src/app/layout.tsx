@@ -1,6 +1,6 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata, Viewport } from "next";
-import { DESCRIPTION, SITE_NAME, SITE_URL, TAGLINE } from "@/lib/site";
+import { DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import { Suspense } from "react";
 import { Inter, Doto, Special_Elite, Courier_Prime } from "next/font/google";
 import "./globals.css";
@@ -23,7 +23,7 @@ const courierPrime = Courier_Prime({ variable: "--font-courier-prime", subsets: 
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: `${SITE_NAME}. ${TAGLINE}`, template: `%s · ${SITE_NAME}` },
+  title: { default: `${SITE_NAME}: a design registry for coding agents, over MCP`, template: `%s · ${SITE_NAME}` },
   description: DESCRIPTION,
   applicationName: SITE_NAME,
   keywords: ["design registry", "MCP", "Claude Code", "Codex", "Cursor", "UI inspiration", "design tokens", "motion recipes", "measured interfaces", "coding agents"],
