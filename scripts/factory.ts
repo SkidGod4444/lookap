@@ -93,7 +93,7 @@ for (const e of queue) {
   const run = spawnSync("claude", [
     "-p", text, "--output-format", "json", "--model", MODEL, "--max-budget-usd", BUDGET,
     "--permission-mode", "acceptEdits", "--allowedTools", "Read", "Write", "Edit", `Bash(${CHECK}:*)`,
-    "--strict-mcp-config", "--mcp-config", "{}",
+    "--strict-mcp-config", "--mcp-config", '{"mcpServers":{}}',
   ], { cwd: ROOT, env, encoding: "utf8", maxBuffer: 1 << 28 });
   const minutes = Number(((Date.now() - t0) / 60000).toFixed(1));
   let out: Claude = {};
