@@ -2,12 +2,12 @@
 
 import { useState, type CSSProperties, type ReactNode } from "react";
 
-/* The project stage: one frame, two views. "Clip" is the designer's recording, "Live" is lookap's component built from
+/* The project stage: one frame, two views. "Clip" is the designer's own clip, "Live" is lookap's component built from
    its measurements. Both sit in the same box so the eye can compare without moving. One switch under the frame flips
    between them: a light insert sliding in a pressed slot, the same material as the chips. Posts with no rebuild yet show
    the switch locked on Clip. The clip stays mounted while hidden (it pauses off screen and resumes when shown); the
    live view mounts on first use. */
-export function Compare({ clip, live, hint, style }: { clip: ReactNode; live: ReactNode | null; hint?: string; style: CSSProperties }) {
+export function Compare({ clip, live, hint, align = "center", style }: { clip: ReactNode; live: ReactNode | null; hint?: string; align?: "start" | "center"; style: CSSProperties }) {
   const [isLive, setLive] = useState(false);
   const [opened, setOpened] = useState(false);
   const flip = () => { if (!live) return; setLive((v) => !v); setOpened(true); };
@@ -15,7 +15,7 @@ export function Compare({ clip, live, hint, style }: { clip: ReactNode; live: Re
     <div className="flex w-full flex-col items-center gap-3" style={style}>
       <div className="relative w-full cursor-default overflow-hidden rounded-[5px] bg-black shadow-[0_24px_80px_rgba(0,0,0,0.6)] ring-1 ring-line-strong" style={{ aspectRatio: style.aspectRatio }}>
         <div className={isLive ? "absolute inset-0 invisible" : "absolute inset-0"}>{clip}</div>
-        {opened && <div className={`absolute inset-0 flex items-center justify-center ${isLive ? "" : "invisible"}`}>{live}</div>}
+        {opened && <div className={`absolute inset-0 flex justify-center ${align === "start" ? "items-start" : "items-center"} ${isLive ? "" : "invisible"}`}>{live}</div>}
       </div>
       <button
         type="button"
@@ -32,7 +32,7 @@ export function Compare({ clip, live, hint, style }: { clip: ReactNode; live: Re
         <span className={`relative z-[1] flex items-center justify-center transition-colors duration-200 ${isLive ? "text-[#0a0a0a]" : "text-silver"}`}>Live</span>
       </button>
       <p className="text-center text-[12px] leading-[1.5] text-subtle">
-        {!live ? "No live rebuild of this post yet." : isLive ? `lookap's rebuild, every size read from the clip. ${hint ?? ""}` : "The clip as recorded. Flip the switch for the rebuild."}
+        {!live ? "No live rebuild of this post yet." : isLive ? `lookap\u2019s rebuild, every size read from the designer\u2019s clip. ${hint ?? ""}` : "The designer\u2019s clip. Flip the switch for lookap\u2019s rebuild."}
       </p>
     </div>
   );

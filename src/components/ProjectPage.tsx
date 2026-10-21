@@ -33,7 +33,7 @@ export function ProjectPage({ slug }: { slug: string }) {
     <div className="-mx-4 -mt-4 -mb-4 flex flex-1 flex-col lg:h-[calc(100vh_-_57px)] lg:flex-none lg:flex-row lg:overflow-hidden">
       <LockScroll />
       <Stage>
-        <Compare clip={<Media entry={entry} sizes={STAGE_SIZES} eager />} live={live ? <live.Component /> : null} hint={live?.hint} style={frame} />
+        <Compare clip={<Media entry={entry} sizes={STAGE_SIZES} eager />} live={live ? <live.Component /> : null} hint={live?.hint} align={live?.align} style={frame} />
       </Stage>
 
       <aside className="w-full shrink-0 border-t border-line bg-canvas px-5 pt-6 pb-10 lg:h-full lg:w-[280px] lg:overflow-y-auto lg:border-t-0 lg:border-l">
@@ -60,7 +60,7 @@ export function ProjectPage({ slug }: { slug: string }) {
               <Avatar name={entry.authorName} x={entry.x} />
               <span className="min-w-0 flex-1">
                 <span className="block truncate text-[13px] font-medium text-foreground">{entry.authorName}</span>
-                <span className="block truncate text-[12px] text-subtle">{entry.authorName === "lookap" ? "Built and measured by lookap." : "Sample entry. Real credits link to the designer."}</span>
+                <span className="block truncate text-[12px] text-subtle">Sample entry. Real credits link to the designer.</span>
               </span>
             </div>
           )}
@@ -89,7 +89,7 @@ export function ProjectPage({ slug }: { slug: string }) {
                 <div><dt className="font-medium text-foreground">Tokens</dt><dd className="text-right text-subtle"><span className="text-foreground">{tokens(recipe.build.outputTokens)}</span> written<br />{tokens(recipe.build.totalTokens)} read, context re-read each turn</dd></div>
                 <div><dt className="font-medium text-foreground">Work</dt><dd className="text-right text-subtle">{recipe.build.minutes} min · {recipe.build.toolCalls} tool calls<br />{recipe.build.rounds} rounds of feedback</dd></div>
               </dl>
-              <p className="mt-2 text-[11px] leading-[1.5] text-subtle">Whole-session totals, feedback rounds included. The agent measured frames, built, and compared renders side by side until it matched.</p>
+              <p className="mt-2 text-[11px] leading-[1.5] text-subtle">Whole-session totals, feedback rounds included. The agent measured the designer&apos;s clip frame by frame, built, and compared renders side by side until it matched.</p>
             </section>
           )}
 

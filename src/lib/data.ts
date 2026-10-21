@@ -1,4 +1,4 @@
-import { CATALOG } from "@/lib/catalog";
+import { CATALOG, type CatalogRow } from "@/lib/catalog";
 
 export type Kind = "feed" | "website" | "launch" | "og";
 
@@ -31,6 +31,8 @@ export type Entry = {
   image?: Media;
   /* a frame of the clip for share cards and crawlers; cards never show it, they play the clip */
   poster?: string;
+  /* the catalog page this came from; recipes attach to entries by it */
+  ref?: string;
 };
 
 export const SECTIONS = [
@@ -46,23 +48,18 @@ const initials = (name: string) => name.replace(/[^A-Za-z0-9 ]/g, "").trim().spl
 /* Stable slugs: a short hash of the source URL so links survive reordering of the catalog. */
 const hash = (s: string) => { let h = 5381; for (let i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) >>> 0; return h.toString(36).slice(0, 6); };
 
-/* Our own measured demos, the ones the recipes in the registry are read from. lookap is closed source, so they carry no source link. */
-const OWN: Entry[] = [
+/* Catalog rows the export did not carry. Same shape as the generated catalog, same credits. */
+const EXTRA: CatalogRow[] = [
   {
-    slug: "s5-lamp-carriage-typewriter", title: "Lamp Carriage Typewriter", kind: "feed", category: "Interface", types: ["Motion", "Dark", "Typing"],
-    author: "sai", authorName: "lookap", sample: false,
-    description: "A writing app where a lamp on a rail lights only the line you are typing.", hue: 40, tone: "dark", duration: 11,
-    video: { src: "/demos/typewriter.mp4", w: 498, h: 700 }, poster: "/demos/typewriter.jpg", ratio: 498 / 700,
-  },
-  {
-    slug: "6w4-id-card-reader-hover", title: "ID Card Reader Hover", kind: "feed", category: "Interface", types: ["Hover", "Hardware", "Blue"],
-    author: "sai", authorName: "lookap", sample: false,
-    description: "An ID card slides into a reader and an LCD prints a verification report.", hue: 222, tone: "color", duration: 8,
-    video: { src: "/demos/card-reader.mp4", w: 1080, h: 1080 }, poster: "/demos/card-reader.jpg", ratio: 1,
+    title: "Typewriter Writing App", kind: "feed", category: "Interface", types: ["Typing", "Skeuomorphic", "Motion", "Dark"], tone: "dark",
+    author: "Albia Hossain", x: "AlbiaHossain", source: "https://x.com/AlbiaHossain/status/2110349874608931157",
+    ref: "https://vibrant.design/feed/muhvp71-typewriter-writing-app", published: "2026-10-18T00:00:00.000Z",
+    description: "A minimalist writing app UI with a skeuomorphic typewriter carriage rolling across textured paper, paired with a dark mobile keyboard.",
+    poster: "https://cdn.vibrant.design/videos/muhvp71/card/poster/1280.webp?v=3b0e418f8c27", video: "https://cdn.vibrant.design/videos/muhvp71/card/720p.mp4?v=3b0e418f8c27", w: 332, h: 720,
   },
 ];
 
-const FROM_CATALOG: Entry[] = CATALOG.map((r) => ({
+const FROM_CATALOG: Entry[] = [...CATALOG, ...EXTRA].map((r) => ({
   slug: `${hash(r.ref)}-${slugify(r.title)}`,
   title: r.title,
   kind: r.kind,
@@ -80,9 +77,10 @@ const FROM_CATALOG: Entry[] = CATALOG.map((r) => ({
   video: r.video ? { src: r.video, w: r.w, h: r.h } : undefined,
   image: r.video ? undefined : { src: r.poster, w: r.w, h: r.h },
   poster: r.poster,
+  ref: r.ref,
 }));
 
-export const ENTRIES: Entry[] = [...OWN, ...FROM_CATALOG];
+export const ENTRIES: Entry[] = FROM_CATALOG;
 
 export const bySlug = (slug: string) => ENTRIES.find((e) => e.slug === slug);
 export const byKind = (kind: Kind) => ENTRIES.filter((e) => e.kind === kind);

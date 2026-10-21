@@ -1,13 +1,16 @@
 import { ENTRIES, SECTIONS, sectionSlug, type Entry } from "@/lib/data";
+import { METHOD, SPECS, type Spec } from "@/lib/specs";
 
 /* The lookap registry: what the MCP server serves. Three kinds of knowledge:
-   1. entries, the curated feed (title, category, types, author, demo clip when we own one)
+   1. entries, the curated feed (title, category, types, author, media, credit)
    2. recipes, measured rebuilds: values read from a clip's pixels, with the motion table
    3. notes, design guidance distilled from the work, each tied to the recipes it came from
    Everything here is ours: measured by us or written by us. */
 
 export type Recipe = {
   slug: string;
+  /* the catalog id of the clip it was measured from; the entry whose ref contains it carries the recipe */
+  ref: string;
   title: string;
   source: string;
   palette: Record<string, string>;
@@ -17,11 +20,12 @@ export type Recipe = {
   rules: string[];
   /* what the rebuild cost: read from the session transcript that produced it, not estimated */
   build: { model: string; modelId: string; outputTokens: number; totalTokens: number; toolCalls: number; minutes: number; rounds: number; date: string };
-};
+} & Spec;
 
-export const RECIPES: Recipe[] = [
+const MEASURED: Omit<Recipe, keyof Spec>[] = [
   {
     slug: "id-card-reader-hover",
+    ref: "ft7ve7j",
     title: "ID card reader, hover to insert",
     source: "5.85 s, 1080x1080, 60 fps clip; every value sampled from frames",
     palette: {
@@ -52,6 +56,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     slug: "lamp-carriage-typewriter",
+    ref: "muhvp71",
     title: "Lamp carriage typewriter",
     source: "15 s, 498x1080, 60 fps portrait clip; keyboard omitted",
     palette: { bg: "#171717", paper: "#ede6db", paperNight: "#343533", paperLit: "#e2d1ae", rod: "#585f61", olive: "#6f8164", uiText: "#adafa5", controls: "#ada69b" },
@@ -76,6 +81,10 @@ export const RECIPES: Recipe[] = [
     build: { model: "Claude Fable 5.1", modelId: "claude-fable-5-1", outputTokens: 457063, totalTokens: 31633521, toolCalls: 90, minutes: 21, rounds: 3, date: "2026-10-20" },
   },
 ];
+
+/* prose + spec = the recipe an agent gets; the method rides along so a different agent can repeat the measuring */
+export const RECIPES: Recipe[] = MEASURED.map((r) => ({ ...r, ...SPECS[r.slug] }));
+export { METHOD };
 
 export type Note = { slug: string; title: string; body: string[]; from: string[] };
 
@@ -223,6 +232,11 @@ export function briefFor(e: Entry) {
     },
     notes: notes.map((n) => ({ slug: n.slug, title: n.title })),
     credit: { author: e.authorName, x: e.x ?? null, source: e.sourceUrl ?? null },
+    method: METHOD,
+    build: recipe ? { ...recipe.build, note: "whole-session totals for the measured rebuild, feedback rounds included; with the recipe in hand expect one pass" } : null,
+    oneShot: recipe
+      ? "get_recipe has every value as data: frame, elements with boxes, timing, states, keyframes, checks. Build from it, render, then call check_rebuild with a screenshot and fix what it reports."
+      : "No measured recipe yet: see_design, build from the frame, then compare by eye against it.",
   };
 }
 
@@ -235,15 +249,17 @@ export const TOOLS = [
   ["similar_designs", "Entries that share traits with one slug.", "starter"],
   ["get_design", "Attribution, traits, media and the measured recipe for one entry.", "starter · recipe pro"],
   ["get_brief", "How to rebuild an entry: frame, tone, steps, proposed motion, notes that apply.", "starter"],
-  ["see_design", "The entry's frame as an image, for agents that can look.", "pro"],
+  ["see_design", "The entry's frame as an image, or a named keyframe of the clip, for agents that can look.", "pro"],
+  ["check_rebuild", "Send a screenshot of your build; get back the regions and colours that differ from the reference frame.", "pro"],
   ["get_recipe", "Palette, geometry, type and motion table, read from the clip's pixels.", "pro"],
+  ["get_method", "The measuring steps behind every recipe, to apply to a clip of your own.", "starter"],
   ["list_notes", "Design guidance distilled from the rebuilds.", "starter"],
   ["get_note", "One note in full.", "starter"],
   ["check_media", "Does this clip or still hold an interface? Signals, verdict, score.", "pro"],
 ] as const;
 
 export function publicEntry(e: Entry) {
-  return { slug: e.slug, title: e.title, kind: e.kind, category: e.category, types: e.types, tone: e.tone, author: e.authorName, x: e.x ?? null, sample: e.sample, description: e.description, ratio: Number(e.ratio.toFixed(3)), duration: e.duration ?? null, media: e.video ? { type: "video" as const, src: e.video.src, w: e.video.w, h: e.video.h } : e.image ? { type: "image" as const, src: e.image.src, w: e.image.w, h: e.image.h } : null, source: e.sourceUrl ?? null, demo: e.video?.src.startsWith("/") ? e.video.src : null, recipe: recipeFor(e)?.slug ?? null };
+  return { slug: e.slug, title: e.title, kind: e.kind, category: e.category, types: e.types, tone: e.tone, author: e.authorName, x: e.x ?? null, sample: e.sample, description: e.description, ratio: Number(e.ratio.toFixed(3)), duration: e.duration ?? null, media: e.video ? { type: "video" as const, src: e.video.src, w: e.video.w, h: e.video.h } : e.image ? { type: "image" as const, src: e.image.src, w: e.image.w, h: e.image.h } : null, source: e.sourceUrl ?? null, recipe: recipeFor(e)?.slug ?? null };
 }
 
 /* 108605 -> "109k", 12467511 -> "12.5M" */
@@ -252,5 +268,5 @@ export function tokens(n: number) {
 }
 
 export function recipeFor(e: Entry) {
-  return RECIPES.find((r) => e.slug.endsWith(`-${r.slug}`));
+  return e.ref ? RECIPES.find((r) => e.ref!.includes(`/${r.ref}-`) || e.ref!.endsWith(`/${r.ref}`)) : undefined;
 }

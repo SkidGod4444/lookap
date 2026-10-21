@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useUser } from "@clerk/nextjs";
 import { button } from "./button";
 
 /* "Analyze with your agent": the post handed to the reader's coding agent through MCP. One button opens three prompts
@@ -36,15 +38,36 @@ function Line({ label, text }: { label: string; text: string }) {
   );
 }
 
+/* Signed out: the click goes to sign-in and comes back here. Signed in without a plan: the panel asks for one, since the
+   prompts only work with a key. Paid: the prompts. The plan is fetched on the first click, not on every page view. */
 export function AgentPrompts({ slug, title, measured }: { slug: string; title: string; measured: boolean }) {
   const [open, setOpen] = useState(false);
+  const [plan, setPlan] = useState<"loading" | "none" | "paid">("loading");
+  const { isSignedIn } = useUser();
+  const router = useRouter();
+  const toggle = async () => {
+    if (!isSignedIn) { const path = window.location.pathname; router.push(`${path}?signin=1&next=${encodeURIComponent(path)}`); return; }
+    if (open) { setOpen(false); return; }
+    setOpen(true);
+    if (plan === "loading") {
+      try { const d = await (await fetch("/api/me")).json(); setPlan(d.plan && d.plan !== "none" ? "paid" : "none"); } catch { setPlan("none"); }
+    }
+  };
   return (
     <section className="flex flex-col gap-2">
-      <button type="button" onClick={() => setOpen((v) => !v)} aria-expanded={open} className={button("outline", "h-8 justify-between rounded-lg px-3 text-[13px]")}>
+      <button type="button" onClick={() => void toggle()} aria-expanded={open} className={button("outline", "h-8 justify-between rounded-lg px-3 text-[13px]")}>
         Analyze with your agent
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className={`transition-transform duration-150 ${open ? "rotate-180" : ""}`}><path d="m6 9 6 6 6-6" /></svg>
       </button>
-      {open && (
+      {open && plan === "loading" && <p className="text-[12px] text-subtle">Checking your plan…</p>}
+      {open && plan === "none" && (
+        <div className="flex flex-col gap-2 rounded-lg bg-card p-3 ring-1 ring-line">
+          <p className="text-[12px] leading-[1.5] text-foreground">Your agent needs a lookap key to run these.</p>
+          <p className="text-[12px] leading-[1.5] text-subtle">Starter is $1 a month and opens search, briefs and notes. Pro adds the measured recipes, keyframes and the rebuild check.</p>
+          <Link href="/pricing" className={button("silver", "h-8 rounded-lg px-3 text-[12px]")}>See plans</Link>
+        </div>
+      )}
+      {open && plan === "paid" && (
         <div className="flex flex-col gap-2">
           <p className="text-[12px] leading-[1.5] text-subtle">Paste one of these into Claude Code, Cursor, Codex or any agent with lookap connected.</p>
           <ul className="divide-y divide-line overflow-hidden rounded-lg bg-card ring-1 ring-line">

@@ -1,7 +1,8 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { WebStandardStreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js";
 import { z } from "zod";
-import { CATEGORIES, NOTES, RECIPES, SECTION_NAMES, briefFor, facets, publicEntry, searchEntries, similarEntries } from "@/lib/registry";
+import { CATEGORIES, METHOD, NOTES, RECIPES, SECTION_NAMES, briefFor, facets, publicEntry, recipeFor, searchEntries, similarEntries } from "@/lib/registry";
+import { compareBuild } from "@/lib/compare";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { bySlug } from "@/lib/data";
@@ -46,8 +47,9 @@ function build(plan: Plan, reason?: string) {
     {
       instructions:
         "lookap is a design registry for coding agents: curated interfaces (components, sections, full pages) with media, traits and credits, measured recipes for a few, and design notes. " +
-        "Reach for it when asked to design, redesign, polish or rebuild UI, or for inspiration and reference: search_designs to find, see_design to look at the frame, get_brief or get_recipe for how to rebuild, similar_designs to widen, list_notes for guidance. " +
-        "Every tool needs a key (Starter $1/mo at /pricing); see_design, get_recipe and check_media need Pro.",
+        "Reach for it when asked to design, redesign, polish or rebuild UI, or for inspiration and reference: search_designs to find, see_design to look at the frame or a keyframe, get_brief or get_recipe for how to rebuild, check_rebuild to test your render against the reference, similar_designs to widen, list_notes for guidance. " +
+        "A measured recipe is data: frame, elements with boxes, timing, states, keyframes and checks. Build from it as fact, render, call check_rebuild, fix what it reports; that is one pass instead of rounds of feedback. " +
+        "Every tool needs a key (Starter $1/mo at /pricing); see_design, get_recipe, check_rebuild and check_media need Pro.",
     },
   );
   const ro = { readOnlyHint: true, idempotentHint: true, openWorldHint: false } as const;
@@ -79,7 +81,7 @@ function build(plan: Plan, reason?: string) {
     "get_design",
     {
       title: "Get one design",
-      description: "Full record for a slug: attribution, category, types, demo clip when lookap owns one, and the measured recipe when one exists (paid).",
+      description: "Full record for a slug: attribution, category, types, media, and the measured recipe when one exists (paid).",
       inputSchema: { slug: z.string() },
       annotations: ro,
     },
@@ -97,7 +99,7 @@ function build(plan: Plan, reason?: string) {
     "get_recipe",
     {
       title: "Get a measured recipe",
-      description: "Palette, geometry, type and the motion table for a rebuild, every value read from the source clip's pixels. Paid.",
+      description: "The measured recipe as data: palette, geometry and type in prose, then frame size, every element with its box in frame pixels, fill, radius and layer, the timing table in ms with easings, the states, named keyframes for see_design, and checks to test a build against. Also how it was measured (method) and what the first rebuild cost (build). Paid.",
       inputSchema: { slug: z.string().describe(`one of: ${RECIPES.map((r) => r.slug).join(", ")}`) },
       annotations: ro,
     },
@@ -106,6 +108,12 @@ function build(plan: Plan, reason?: string) {
       const r = RECIPES.find((x) => x.slug === slug);
       return r ? text(r) : text({ error: `No recipe ${slug}`, available: RECIPES.map((x) => x.slug) });
     },
+  );
+
+  server.registerTool(
+    "get_method",
+    { title: "How lookap measures a clip", description: "The steps behind every measured recipe, so an agent can apply them to a new clip of its own. Needs a key.", annotations: ro },
+    async () => (plan === "none" ? gated("get_method", plan, reason) : text({ steps: METHOD })),
   );
 
   server.registerTool(
@@ -161,20 +169,57 @@ function build(plan: Plan, reason?: string) {
     "see_design",
     {
       title: "See a design",
-      description: "The entry's frame as an image, so a vision-capable agent can read layout, type and colour from the pixels, with the record alongside. Paid.",
-      inputSchema: { slug: z.string() },
+      description: "The entry's frame as an image, so a vision-capable agent can read layout, type and colour from the pixels, with the record alongside. For entries with a measured recipe, pass `at` with a keyframe name (listed in get_recipe) to see that moment of the clip instead of the first frame. Paid.",
+      inputSchema: { slug: z.string(), at: z.string().optional().describe("a keyframe name from the recipe, e.g. inserted or lamp") },
       annotations: ro,
     },
-    async ({ slug }) => {
+    async ({ slug, at }) => {
       if (!lim.media) return gated("see_design", plan, reason);
       const e = bySlug(slug);
       if (!e) return text({ error: `No entry ${slug}` });
-      if (!e.poster) return text({ error: `No frame for ${slug}` });
+      const recipe = recipeFor(e);
+      const kf = at ? recipe?.keyframes.find((k) => k.name === at) : undefined;
+      if (at && !kf) return text({ error: `No keyframe ${at} for ${slug}`, available: recipe?.keyframes.map((k) => k.name) ?? [] });
+      const src = kf?.src ?? e.poster;
+      if (!src) return text({ error: `No frame for ${slug}` });
       try {
-        const { data, mimeType } = await loadFrame(e.poster);
-        return { content: [{ type: "image" as const, data, mimeType }, { type: "text" as const, text: JSON.stringify({ ...publicEntry(e), frame: { w: (e.video ?? e.image)?.w, h: (e.video ?? e.image)?.h, from: e.video ? "first frame of the clip" : "the still" } }, null, 2) }] };
+        const { data, mimeType } = await loadFrame(src);
+        const frame = { w: (e.video ?? e.image)?.w, h: (e.video ?? e.image)?.h, at: kf ? `${kf.at} s, ${kf.shows}` : e.video ? "first frame of the clip" : "the still", keyframes: recipe?.keyframes.map((k) => k.name) ?? [] };
+        return { content: [{ type: "image" as const, data, mimeType }, { type: "text" as const, text: JSON.stringify({ ...publicEntry(e), frame }, null, 2) }] };
       } catch (err) {
         return text({ error: err instanceof Error ? err.message : "frame unavailable" });
+      }
+    },
+  );
+
+  server.registerTool(
+    "check_rebuild",
+    {
+      title: "Check a rebuild against the reference",
+      description: "Send a screenshot of your build (base64 PNG or JPEG, any size; it is resized to the frame) for an entry with a measured recipe. Returns a 0..100 score, the five elements whose mean colour differs most (reference vs yours), and the three grid regions that differ most with the elements under them. Use it after building, then fix the top differences and call again. Moving elements are only compared at the first keyframe. Paid.",
+      inputSchema: {
+        slug: z.string(),
+        image: z.string().describe("base64 of a PNG or JPEG screenshot of your build, cropped to the recipe's frame (its crop box when it has one)"),
+        at: z.string().optional().describe("the keyframe your screenshot shows; default the first (rest state)"),
+      },
+      annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+    },
+    async ({ slug, image, at }) => {
+      if (!lim.media) return gated("check_rebuild", plan, reason);
+      const e = bySlug(slug);
+      const recipe = e ? recipeFor(e) : undefined;
+      if (!e || !recipe) return text({ error: `No measured recipe for ${slug}`, available: RECIPES.map((r) => r.slug) });
+      if (image.length > 8_000_000) return text({ error: "Image too large: keep the screenshot under 6 MB" });
+      const kf = recipe.keyframes.find((k) => k.name === (at ?? recipe.keyframes[0].name));
+      if (!kf) return text({ error: `No keyframe ${at}`, available: recipe.keyframes.map((k) => k.name) });
+      try {
+        const buf = Buffer.from(image.replace(/^data:[^,]+,/, ""), "base64");
+        const ref = path.join(process.cwd(), "public", kf.src.replace(/^\//, ""));
+        const result = await compareBuild(ref, buf, recipe.frame, recipe.elements, kf === recipe.keyframes[0]);
+        const checks = recipe.checks.filter((c) => c.at === kf.name).map((c) => c.check);
+        return text({ slug, keyframe: kf.name, ...result, checks, reading: "delta is the mean per-channel difference over the box, 0 identical; fix the largest elements first, then the regions; the checks are what to verify by eye or by measuring your own render" });
+      } catch (err) {
+        return text({ error: err instanceof Error ? err.message : "compare failed" });
       }
     },
   );
@@ -183,21 +228,21 @@ function build(plan: Plan, reason?: string) {
     "rebuild",
     {
       title: "Rebuild a lookap design",
-      description: "A workflow for rebuilding one entry in the current project: look, brief, build, compare.",
-      argsSchema: { slug: z.string().describe("the entry slug from search_designs"), where: z.string().optional().describe("the file or component to build it in") },
+      description: "A workflow for rebuilding one entry in the current project in one pass: recipe, build, render, check, fix.",
+      argsSchema: { slug: z.string().describe("the entry slug from search_designs"), where: z.string().optional().describe("the file or component to build it in"), stack: z.string().optional().describe("the stack to build with, e.g. React + Tailwind, Svelte, plain HTML") },
     },
-    ({ slug, where }) => ({
+    ({ slug, where, stack }) => ({
       messages: [{
         role: "user" as const,
         content: {
           type: "text" as const,
           text: [
-            `Rebuild the lookap entry \`${slug}\`${where ? ` in ${where}` : " in this project"}.`,
-            "1. Call get_design for the record and see_design for the frame. Describe the layout you see in one paragraph before writing code: regions, alignment, type sizes, radii, spacing.",
-            "2. Call get_brief. If it says a measured recipe exists, call get_recipe and treat every value in it as fact. Otherwise treat the brief's motion as proposed and say so in a code comment.",
-            "3. Build it with this project's stack and tokens. Match proportion and hierarchy first, then colour, then motion.",
-            "4. Compare your result with the frame and list what still differs. Fix the three largest differences.",
-            "5. Credit the designer in a comment with the source link from the record.",
+            `Rebuild the lookap entry \`${slug}\`${where ? ` in ${where}` : " in this project"}${stack ? ` with ${stack}` : " with this project's stack"}.`,
+            "1. Call get_design for the record and get_brief. If the brief says measured, call get_recipe and use it as data: one unit equal to a frame pixel, every element placed from its box, every fill and radius as given, every timing in ms with its easing. Treat nothing in it as a suggestion.",
+            "2. If the brief says there is no recipe, call see_design, describe the layout in one paragraph (regions, alignment, type sizes, radii, spacing), and build from that; label the motion as proposed in a comment.",
+            "3. Build it. Match proportion and hierarchy first, then colour, then motion. Credit the designer in a comment with the source link from the record.",
+            "4. Render your build at the frame size and take a screenshot of the first state. Call check_rebuild with it. Fix the largest differences it reports, then call it again. Stop after three rounds or at a score above 90.",
+            "5. For each keyframe in the recipe, call see_design with `at` and compare your build in that state against the checks for it. Report what still differs, in one list, with numbers.",
           ].join("\n"),
         },
       }],
