@@ -14,7 +14,7 @@ Three passes: the factory's first build (score 69 on stills, 47 on mid-motion mo
 
 ## Differences
 
-- The checker scores 62 over 18 moments (stills 65, mid-motion 61; the rest frame 71). The two red marble blocks are the clip's own pixels at rest (caps and veins included); keys, buttons, folds and strap are drawn over them from measured colours: rows are 1 px #d6d5d1 edged over a 7 px #3b3a36 gap (not bordered), the pulled gap is a brown valley darkest at its crease, the shut gap is a 2 px #bab9b7 line, black keys run 334 to 411 on 2 px stems, white keys sit at #e4e1e2 under a shaded lip.
+- The checker scores 62 over 18 moments (stills 65, mid-motion 61; the rest frame 71). The red marble is two small patches sampled from the clip's rest frame where nothing sits on it (x 362 to 520 and 915 to 1078, y 753 to 859), stretched under each block's ends; rims, caps, keys, buttons, folds and strap are drawn from measured colours: rows are 1 px #d6d5d1 edged over a 7 px #3b3a36 gap (not bordered), the pulled gap is a brown valley darkest at its crease, the shut gap is a 2 px #bab9b7 line, black keys run 334 to 411 on 2 px stems, white keys sit at #e4e1e2 under a shaded lip.
 - The keyboard block is 21 px taller in the closed intro frame and sits 10 px higher mid-spring; neither is reproduced.
 - The cursor and its hover states are not drawn. The keyboard hover at 10.6 to 12.3 s is not reproduced.
 - The spring's small wobble after 3.0 s is approximated with three keyframes.
