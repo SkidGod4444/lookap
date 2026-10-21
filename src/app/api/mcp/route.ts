@@ -400,7 +400,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     "check_rebuild",
     {
       title: "Check a rebuild against the reference",
-      description: "Send a screenshot of your build (base64 PNG or JPEG, any size; it is resized to the frame) for any measured entry: a recipe, or a draft (every clip has one). Returns a 0..100 score, the five elements whose mean colour differs most (reference vs yours), and the three grid regions that differ most with the elements under them. Use it after building, then fix the top differences and call again. Moving elements are only compared at the first keyframe. Paid.",
+      description: "Send a screenshot of your build (base64 PNG or JPEG, any size; it is resized to the frame) for any measured entry: a recipe, or a draft (every clip has one). Returns a 0..100 score (detail-weighted: edges, text and texture count up to ten times a flat field, with two pixels of tolerance; a close rebuild sits near 70, a wrong one under 20), the five elements whose mean colour differs most (reference vs yours), and the three grid regions that differ most with the elements under them. Use it after building, then fix the top differences and call again. Moving elements are only compared at the first keyframe. Paid.",
       inputSchema: {
         slug: z.string(),
         image: z.string().describe("base64 of a PNG or JPEG screenshot of your build, cropped to the recipe's frame (its crop box when it has one)"),
@@ -429,7 +429,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
         const ref = path.join(process.cwd(), "public", kf.src.replace(/^\//, ""));
         const result = await compareBuild(ref, buf, frame, elements, kf === frames[0]);
         const checks = recipe ? recipe.checks.filter((c) => c.at === kf.name).map((c) => c.check) : ["draft: the regions are reliable; the element rows use first-pass boxes, so weigh them by eye"];
-        return text({ slug, keyframe: kf.name, measured: recipe ? "recipe" : "draft", ...result, checks, usage: u, reading: "delta is the mean per-channel difference over the box, 0 identical; fix the largest elements first, then the regions; the checks are what to verify by eye or by measuring your own render" });
+        return text({ slug, keyframe: kf.name, measured: recipe ? "recipe" : "draft", ...result, scale: "since 2026-10-22 the score weighs edges, text and texture up to ten times a flat field and judges each pixel against the closest match within two pixels: a close rebuild sits near 70, a wrong one under 20; files scored before read higher on the old scale", checks, usage: u, reading: "delta is the mean per-channel difference over the box, 0 identical; fix the largest elements first, then the regions; the checks are what to verify by eye or by measuring your own render" });
       } catch (err) {
         return text({ error: err instanceof Error ? err.message : "compare failed" });
       }
