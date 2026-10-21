@@ -1,9 +1,10 @@
-import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { McpServer, type RegisteredTool } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { WebStandardStreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js";
 import { z } from "zod";
 import { CATEGORIES, METHOD, NOTES, RECIPES, SECTION_NAMES, briefFor, facets, publicEntry, recipeFor, searchEntries, similarEntries } from "@/lib/registry";
 import { compareBuild } from "@/lib/compare";
 import { REBUILDS } from "@/lib/rebuilds";
+import { QUOTAS, charge, usageFor } from "@/lib/usage";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { ENTRIES, bySlug } from "@/lib/data";
@@ -41,21 +42,36 @@ async function loadFrame(poster: string): Promise<{ data: string; mimeType: stri
   return { data: Buffer.from(await res.arrayBuffer()).toString("base64"), mimeType };
 }
 
-function build(plan: Plan, reason?: string) {
+/* Which plan flag each paid tool needs. On a paid key the tools its plan lacks are hidden from tools/list, so an agent
+   only sees what it can call; the instructions name what the next plan adds. A keyless request sees everything, each
+   call answering with the pointer to pricing. */
+const LOCK: Record<string, keyof (typeof LIMITS)["pro"]> = { get_recipe: "recipes", see_design: "media", check_rebuild: "media", check_media: "media", get_rebuild: "source" };
+const NEEDS: Record<string, string> = { recipes: "Pro", media: "Pro", source: "Team" };
+const spent = (what: string, u: { used: number; limit: number; resets: string }) => text({ error: `${what} has used its ${u.limit} calls for this month on this key. Resets ${u.resets}. A higher plan at /pricing raises it.`, usage: u });
+
+function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
   const lim = LIMITS[plan];
+  const hidden = plan === "none" ? [] : Object.entries(LOCK).filter(([, need]) => !lim[need]).map(([name, need]) => `${name} (${NEEDS[need]})`);
+  const quotas = Object.entries(QUOTAS[plan]).map(([t, n]) => `${t} ${n}/month`);
   const server = new McpServer(
-    { name: "lookap", version: "0.2.0" },
+    { name: "lookap", version: "0.3.0" },
     {
       instructions:
         "lookap is a design registry for coding agents: curated interfaces (components, sections, full pages) with media, traits and credits, measured recipes for a few, and design notes. " +
         "Reach for it when asked to design, redesign, polish or rebuild UI, or for inspiration and reference: search_designs to find, see_design to look at the frame or a keyframe, get_brief or get_recipe for how to rebuild, check_rebuild to test your render against the reference, similar_designs to widen, list_notes for guidance. " +
         "A measured recipe is data: frame, elements with boxes, timing, states, keyframes and checks. Build from it as fact, render, call check_rebuild, fix what it reports; that is one pass instead of rounds of feedback. " +
-        "Every tool needs a key (Starter $1/mo at /pricing); see_design, get_recipe, check_rebuild and check_media need Pro; get_rebuild, the finished source, needs Team.",
+        "Every tool needs a key (Starter $1/mo at /pricing); see_design, get_recipe, check_rebuild and check_media need Pro; get_rebuild, the finished source, needs Team. " +
+        (plan === "none" ? "" : `This key is ${plan}. `) +
+        (hidden.length ? `Not on this plan, so not listed: ${hidden.join(", ")}; see /pricing. ` : "") +
+        (quotas.length ? `Monthly quotas on this key: ${quotas.join(", ")}; get_usage shows what is left. ` : "") +
+        (stale ? "Key verification used a cached result because the key service was unreachable; limits still apply." : ""),
     },
   );
   const ro = { readOnlyHint: true, idempotentHint: true, openWorldHint: false } as const;
+  const handles: Record<string, RegisteredTool> = {};
+  const reg: McpServer["registerTool"] = (...a) => { const t = server.registerTool(...a); handles[a[0]] = t; return t; };
 
-  server.registerTool(
+  reg(
     "search_designs",
     {
       title: "Search the registry",
@@ -78,7 +94,7 @@ function build(plan: Plan, reason?: string) {
     },
   );
 
-  server.registerTool(
+  reg(
     "get_design",
     {
       title: "Get one design",
@@ -96,7 +112,7 @@ function build(plan: Plan, reason?: string) {
     },
   );
 
-  server.registerTool(
+  reg(
     "get_recipe",
     {
       title: "Get a measured recipe",
@@ -107,11 +123,14 @@ function build(plan: Plan, reason?: string) {
     async ({ slug }) => {
       if (!lim.recipes) return gated("get_recipe", plan, reason);
       const r = RECIPES.find((x) => x.slug === slug);
-      return r ? text(r) : text({ error: `No recipe ${slug}`, available: RECIPES.map((x) => x.slug) });
+      if (!r) return text({ error: `No recipe ${slug}`, available: RECIPES.map((x) => x.slug) });
+      const u = await charge(keyRef, plan, "get_recipe");
+      if (u && !u.ok) return spent("get_recipe", u);
+      return text(u ? { ...r, usage: u } : r);
     },
   );
 
-  server.registerTool(
+  reg(
     "get_rebuild",
     {
       title: "Get the finished rebuild",
@@ -125,31 +144,33 @@ function build(plan: Plan, reason?: string) {
       const recipe = e ? recipeFor(e) : RECIPES.find((r) => r.slug === slug);
       const rb = recipe ? REBUILDS[recipe.slug] : undefined;
       if (!recipe || !rb) return text({ error: `No finished rebuild for ${slug}`, available: Object.keys(REBUILDS) });
+      const u = await charge(keyRef, plan, "get_rebuild");
+      if (u && !u.ok) return spent("get_rebuild", u);
       const entry = e ?? ENTRIES.find((x) => recipeFor(x)?.slug === recipe.slug);
       const credit = entry ? { designer: entry.authorName, x: entry.x ?? null, source: entry.sourceUrl ?? null } : null;
       const header = `<!-- ${recipe.title}. Rebuilt by lookap (${recipe.build.model}) from ${credit?.designer ?? "the designer"}'s clip${credit?.source ? `: ${credit.source}` : ""}. Licensed to a lookap Team key holder for use in their own products; not for redistribution as a design asset. Issued ${new Date().toISOString().slice(0, 10)}. -->\n`;
       return {
         content: [
-          { type: "text" as const, text: JSON.stringify({ slug: recipe.slug, title: recipe.title, file: rb.file, bytes: rb.html.length, needs: rb.needs, credit, build: recipe.build, how: ["Save the second part as the file named above and open it in a browser; it runs as is.", "To port: keep --u as one source pixel and every calc(N * var(--u)); move the CSS and markup into your component; the script is plain DOM code.", "Then render, screenshot and call check_rebuild to confirm nothing drifted."] }, null, 2) },
+          { type: "text" as const, text: JSON.stringify({ slug: recipe.slug, title: recipe.title, file: rb.file, bytes: rb.html.length, needs: rb.needs, credit, build: recipe.build, usage: u, how: ["Save the second part as the file named above and open it in a browser; it runs as is.", "To port: keep --u as one source pixel and every calc(N * var(--u)); move the CSS and markup into your component; the script is plain DOM code.", "Then render, screenshot and call check_rebuild to confirm nothing drifted."] }, null, 2) },
           { type: "text" as const, text: header + rb.html },
         ],
       };
     },
   );
 
-  server.registerTool(
+  reg(
     "get_method",
     { title: "How lookap measures a clip", description: "The steps behind every measured recipe, so an agent can apply them to a new clip of its own. Needs a key.", annotations: ro },
     async () => (plan === "none" ? gated("get_method", plan, reason) : text({ steps: METHOD })),
   );
 
-  server.registerTool(
+  reg(
     "list_notes",
     { title: "List design notes", description: "Guidance distilled from measured rebuilds: metal buttons, pressed badges, dark silver tokens, motion for stills, measuring from video. Needs a key.", annotations: ro },
     async () => (plan === "none" ? gated("list_notes", plan, reason) : text(NOTES.map((n) => ({ slug: n.slug, title: n.title, from: n.from })))),
   );
 
-  server.registerTool(
+  reg(
     "get_note",
     { title: "Read a design note", description: "The full note. Needs a key.", inputSchema: { slug: z.string() }, annotations: ro },
     async ({ slug }) => {
@@ -160,7 +181,7 @@ function build(plan: Plan, reason?: string) {
     },
   );
 
-  server.registerTool(
+  reg(
     "similar_designs",
     {
       title: "Designs like this one",
@@ -176,7 +197,7 @@ function build(plan: Plan, reason?: string) {
     },
   );
 
-  server.registerTool(
+  reg(
     "get_brief",
     {
       title: "Rebuild brief",
@@ -192,7 +213,7 @@ function build(plan: Plan, reason?: string) {
     },
   );
 
-  server.registerTool(
+  reg(
     "see_design",
     {
       title: "See a design",
@@ -209,17 +230,19 @@ function build(plan: Plan, reason?: string) {
       if (at && !kf) return text({ error: `No keyframe ${at} for ${slug}`, available: recipe?.keyframes.map((k) => k.name) ?? [] });
       const src = kf?.src ?? e.poster;
       if (!src) return text({ error: `No frame for ${slug}` });
+      const u = await charge(keyRef, plan, "see_design");
+      if (u && !u.ok) return spent("see_design", u);
       try {
         const { data, mimeType } = await loadFrame(src);
         const frame = { w: (e.video ?? e.image)?.w, h: (e.video ?? e.image)?.h, at: kf ? `${kf.at} s, ${kf.shows}` : e.video ? "first frame of the clip" : "the still", keyframes: recipe?.keyframes.map((k) => k.name) ?? [] };
-        return { content: [{ type: "image" as const, data, mimeType }, { type: "text" as const, text: JSON.stringify({ ...publicEntry(e), frame }, null, 2) }] };
+        return { content: [{ type: "image" as const, data, mimeType }, { type: "text" as const, text: JSON.stringify({ ...publicEntry(e), frame, usage: u }, null, 2) }] };
       } catch (err) {
         return text({ error: err instanceof Error ? err.message : "frame unavailable" });
       }
     },
   );
 
-  server.registerTool(
+  reg(
     "check_rebuild",
     {
       title: "Check a rebuild against the reference",
@@ -239,12 +262,14 @@ function build(plan: Plan, reason?: string) {
       if (image.length > 8_000_000) return text({ error: "Image too large: keep the screenshot under 6 MB" });
       const kf = recipe.keyframes.find((k) => k.name === (at ?? recipe.keyframes[0].name));
       if (!kf) return text({ error: `No keyframe ${at}`, available: recipe.keyframes.map((k) => k.name) });
+      const u = await charge(keyRef, plan, "check_rebuild");
+      if (u && !u.ok) return spent("check_rebuild", u);
       try {
         const buf = Buffer.from(image.replace(/^data:[^,]+,/, ""), "base64");
         const ref = path.join(process.cwd(), "public", kf.src.replace(/^\//, ""));
         const result = await compareBuild(ref, buf, recipe.frame, recipe.elements, kf === recipe.keyframes[0]);
         const checks = recipe.checks.filter((c) => c.at === kf.name).map((c) => c.check);
-        return text({ slug, keyframe: kf.name, ...result, checks, reading: "delta is the mean per-channel difference over the box, 0 identical; fix the largest elements first, then the regions; the checks are what to verify by eye or by measuring your own render" });
+        return text({ slug, keyframe: kf.name, ...result, checks, usage: u, reading: "delta is the mean per-channel difference over the box, 0 identical; fix the largest elements first, then the regions; the checks are what to verify by eye or by measuring your own render" });
       } catch (err) {
         return text({ error: err instanceof Error ? err.message : "compare failed" });
       }
@@ -276,7 +301,7 @@ function build(plan: Plan, reason?: string) {
     }),
   );
 
-  server.registerTool(
+  reg(
     "check_media",
     {
       title: "Check whether a clip or still holds an interface",
@@ -286,22 +311,37 @@ function build(plan: Plan, reason?: string) {
     },
     async ({ url }) => {
       if (!lim.media) return gated("check_media", plan, reason);
+      const u = await charge(keyRef, plan, "check_media");
+      if (u && !u.ok) return spent("check_media", u);
       try {
         const set = await sampleVideo(url);
         const h = analyse(set.frames, set.fw, set.fh);
-        return text({ kind: set.kind, width: set.width, height: set.height, duration: set.duration, verdict: h.verdict, score: Math.round(h.score * 100), signals: h.signals });
+        return text({ kind: set.kind, width: set.width, height: set.height, duration: set.duration, verdict: h.verdict, score: Math.round(h.score * 100), signals: h.signals, usage: u });
       } catch (e) {
         return text({ error: e instanceof Error ? e.message : "check failed" });
       }
     },
   );
 
+  reg(
+    "get_usage",
+    { title: "What this key has left", description: "The key's plan, the tools it opens, the monthly quotas on it with what has been used, and when they reset. Needs a key.", annotations: ro },
+    async () => {
+      if (plan === "none") return gated("get_usage", plan, reason);
+      const usage = keyRef ? await usageFor(keyRef, plan) : {};
+      return text({ plan, perMinute: "rate limited by plan at the key service", quotas: usage, unmetered: Object.keys(LOCK).filter((t) => lim[LOCK[t]] && !QUOTAS[plan][t]).concat(["search_designs", "get_design", "get_brief", "similar_designs", "list_notes", "get_note", "get_method"]), notOnThisPlan: hidden, upgrade: hidden.length ? "/pricing" : null });
+    },
+  );
+
+  /* a paid key does not see the tools its plan lacks */
+  if (plan !== "none") for (const [name, need] of Object.entries(LOCK)) if (!lim[need]) handles[name]?.disable();
+
   return server;
 }
 
 async function handle(req: Request) {
-  const { plan, reason } = await resolvePlan(req);
-  const server = build(plan, reason);
+  const { plan, reason, keyRef, stale } = await resolvePlan(req);
+  const server = build(plan, reason, keyRef, stale);
   const transport = new WebStandardStreamableHTTPServerTransport({ sessionIdGenerator: undefined, enableJsonResponse: true });
   await server.connect(transport);
   try {

@@ -15,17 +15,17 @@ export function planFromEnv(key: string): Plan | null {
   return null;
 }
 
-export type Resolved = { plan: Plan; reason?: string; subscription?: Record<string, unknown> };
+export type Resolved = { plan: Plan; reason?: string; subscription?: Record<string, unknown>; keyRef?: string; stale?: boolean };
 
 /* The plan behind a request: env list first (dev), then Unkey. No key, or a key Unkey rejects, is "none" with the reason kept. */
 export async function resolvePlan(req: Request): Promise<Resolved> {
   const key = keyFromRequest(req);
   if (!key) return { plan: "none", reason: "missing" };
   const env = planFromEnv(key);
-  if (env) return { plan: env };
+  if (env) return { plan: env, keyRef: `env:${key.slice(-8)}` };
   const { verifyKey } = await import("./unkey");
   const v = await verifyKey(key);
-  return v.plan === "none" ? { plan: "none", reason: v.code } : { plan: v.plan, subscription: v.subscription };
+  return v.plan === "none" ? { plan: "none", reason: v.code } : { plan: v.plan, subscription: v.subscription, keyRef: v.keyId, stale: v.stale };
 }
 
 export function keyFromRequest(req: Request): string | null {

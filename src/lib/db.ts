@@ -9,6 +9,8 @@ const TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
 export const dbReady = Boolean(URL_ && TOKEN);
 
 let client: Redis | null = null;
+/* the shared client, for the few other small records (usage counters, verification cache) */
+export function kv() { return redis(); }
 function redis() {
   if (!URL_ || !TOKEN) throw new Error("Upstash Redis is not configured");
   client ??= new Redis({ url: URL_, token: TOKEN });

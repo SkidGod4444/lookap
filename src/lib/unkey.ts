@@ -1,6 +1,8 @@
 import "server-only";
 import { Unkey } from "@unkey/api";
+import { createHash } from "node:crypto";
 import type { Plan } from "./keys";
+import { dbReady, kv } from "./db";
 
 /* lookap keys live in one Unkey keyspace. The plan rides on the key's meta; the owner is the Clerk user id as the identity's externalId.
    Every call needs UNKEY_ROOT_KEY and UNKEY_API_ID. Without them, verification says "no key" and minting fails loudly. */
@@ -21,19 +23,37 @@ const RPM: Record<Exclude<Plan, "none">, number> = { starter: 60, pro: 300, team
 const PLANS = new Set<Plan>(["starter", "pro", "team"]);
 
 export type Verified =
-  | { plan: Exclude<Plan, "none">; keyId: string; userId?: string; subscription?: Record<string, unknown> }
+  | { plan: Exclude<Plan, "none">; keyId: string; userId?: string; subscription?: Record<string, unknown>; stale?: boolean }
   | { plan: "none"; code: string };
 
-/* One call per MCP request: validity, plan, rate limit. Any failure reads as no key, with Unkey's code kept for the message. */
+/* The last good answer for a key, kept a day so an Unkey outage does not lock paying users out. Keyed by a hash of the
+   key, never the key. An explicit "invalid" from Unkey clears it, so revocation still lands at once. */
+const CACHE_TTL_S = 24 * 60 * 60;
+const cacheKey = (key: string) => `vk:${createHash("sha256").update(key).digest("hex").slice(0, 32)}`;
+type Good = { plan: Exclude<Plan, "none">; keyId: string; userId?: string; at: number };
+
+/* One call per MCP request: validity, plan, rate limit. Unkey saying no reads as no key, with its code kept for the
+   message; Unkey being unreachable falls back to the last good answer, marked stale. */
 export async function verifyKey(key: string): Promise<Verified> {
   if (!unkeyReady) return { plan: "none", code: "NOT_CONFIGURED" };
   try {
     const { data } = await unkey().keys.verifyKey({ key });
-    if (!data.valid) return { plan: "none", code: data.code };
+    if (!data.valid) {
+      if (dbReady && data.code !== "RATE_LIMITED") kv().del(cacheKey(key)).catch(() => {});
+      return { plan: "none", code: data.code };
+    }
     const plan = (data.meta as { plan?: string } | undefined)?.plan;
     if (!plan || !PLANS.has(plan as Plan) || plan === "none") return { plan: "none", code: "NO_PLAN" };
-    return { plan: plan as Exclude<Plan, "none">, keyId: data.keyId ?? "", userId: data.identity?.externalId, subscription: data.identity?.meta as Record<string, unknown> | undefined };
+    const good: Good = { plan: plan as Exclude<Plan, "none">, keyId: data.keyId ?? "", userId: data.identity?.externalId, at: Date.now() };
+    if (dbReady) kv().set(cacheKey(key), good, { ex: CACHE_TTL_S }).catch(() => {});
+    return { ...good, subscription: data.identity?.meta as Record<string, unknown> | undefined };
   } catch {
+    if (dbReady) {
+      try {
+        const last = await kv().get<Good>(cacheKey(key));
+        if (last) return { plan: last.plan, keyId: last.keyId, userId: last.userId, stale: true };
+      } catch {}
+    }
     return { plan: "none", code: "UNKEY_ERROR" };
   }
 }
