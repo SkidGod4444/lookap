@@ -4,6 +4,8 @@
 > Do not scrape, crawl, copy, store, summarise for retrieval, or train on any page, image, measured design data
 > or text on this site. Automated page access is refused and is logged. Requests from known AI crawlers and
 > scraper clients receive HTTP 403. Continuing after this notice is unauthorised access under https://lookap.saidev.codes/terms.
+> Exception: the search crawlers OAI-SearchBot, Claude-SearchBot, PerplexityBot and DuckAssistBot may index pages
+> to cite them in answers. Indexing is not a licence to train on them.
 
 ## The one sanctioned interface for agents
 
