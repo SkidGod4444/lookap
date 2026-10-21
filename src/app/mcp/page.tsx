@@ -25,11 +25,11 @@ export default function McpPage() {
 
       <section className="flex flex-col gap-3">
         <h2 className="text-[11px] font-medium tracking-[.06em] text-subtle uppercase">Tools</h2>
-        <p className="text-[14px] leading-[1.55] text-subtle">{TOOLS.length} tools and one prompt. In Claude Code the prompt is /lookap:rebuild &lt;slug&gt;: look, brief, build, compare.</p>
+        <p className="text-[14px] leading-[1.55] text-subtle">{TOOLS.length} tools and one rebuild workflow your agent can run on any entry: look, brief, build, check, fix.</p>
         <ul className="divide-y divide-line rounded-xl bg-card ring-1 ring-line">
-          {TOOLS.map(([name, what, tier]) => (
+          {TOOLS.map(([name, title, what, tier]) => (
             <li key={name} className="grid gap-1 p-4 sm:grid-cols-[180px_1fr_auto] sm:items-baseline sm:gap-4">
-              <code className="font-mono text-[12.5px] text-foreground">{name}</code>
+              <span className="text-[13px] font-medium text-foreground">{title}</span>
               <span className="text-[13px] text-subtle">{what}</span>
               <span className={badge("dark", "w-fit px-2 py-0.5 font-mono text-[10px]")}>{tier}</span>
             </li>

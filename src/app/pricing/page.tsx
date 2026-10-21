@@ -6,11 +6,11 @@ import { BuyButton } from "@/components/BuyButton";
 
 const PLANS = [
   { name: "Starter key", blurb: "A key for one person. Search the registry and read every design note from your agent.", monthly: 1, yearly: 0.83, yearlyTotal: 10, runs: "50 tool calls a day", cta: "Get a Starter key", primary: false,
-    features: ["Search, similar, get_design and get_brief", "All design notes", "20 results per search", "One key, any MCP client"] },
+    features: ["Search the registry and find similar work", "Every record and rebuild brief", "All design notes", "20 results per search", "One key, any MCP client"] },
   { name: "Pro key", blurb: "The whole registry inside your agent: every entry, every recipe, media checks.", monthly: 12, yearly: 10, yearlyTotal: 120, runs: "300 tool calls a day", cta: "Get a Pro key", primary: true, popular: true,
-    features: ["Everything in Starter", "Measured recipes as data, with keyframes", "see_design: the frame as an image", "check_rebuild: your render against the designer's", "check_media on any public clip or still", "50 results per search"] },
+    features: ["Everything in Starter", "Measured recipes as data, with keyframes", "Frames your agent can look at", "Checks your rebuild against the designer's frame", "Clip checks on any public video or still", "50 results per search"] },
   { name: "Team key", blurb: "For studios that want shared collections and private entries.", monthly: 39, yearly: 32, yearlyTotal: 384, runs: "1,000 tool calls a day, per seat", cta: "Start a team", primary: false,
-    features: ["Everything in Pro", "get_rebuild: the finished source, 50 a month", "Shared collections and private entries", "Priority on new recipes", "Invoiced billing"] },
+    features: ["Everything in Pro", "The finished rebuild as source, 50 a month", "Shared collections and private entries", "Priority on new recipes", "Invoiced billing"] },
 ];
 
 const FAQ = [

@@ -244,20 +244,21 @@ export const CATEGORIES = Array.from(new Set(ENTRIES.map((e) => e.category))).so
 export const SECTION_NAMES = [...SECTIONS];
 
 /* The tools the MCP server registers, with the plan that opens each. The /mcp page and the home count read this. */
+/* name for the protocol, title and line for people, plan that opens it */
 export const TOOLS = [
-  ["search_designs", "Find interfaces by words, section, kind, tone or designer. Returns facets too.", "starter"],
-  ["similar_designs", "Entries that share traits with one slug.", "starter"],
-  ["get_design", "Attribution, traits, media and the measured recipe for one entry.", "starter · recipe pro"],
-  ["get_brief", "How to rebuild an entry: frame, tone, steps, proposed motion, notes that apply.", "starter"],
-  ["see_design", "The entry's frame as an image, or a named keyframe of the clip, for agents that can look.", "pro"],
-  ["check_rebuild", "Send a screenshot of your build; get back the regions and colours that differ from the reference frame.", "pro"],
-  ["get_rebuild", "The finished rebuild as one HTML file, to port to your stack.", "team"],
-  ["get_usage", "Today's calls, the month's quotas, and what the next plan adds.", "starter"],
-  ["get_recipe", "Palette, geometry, type and motion table, read from the clip's pixels.", "pro"],
-  ["get_method", "The measuring steps behind every recipe, to apply to a clip of your own.", "starter"],
-  ["list_notes", "Design guidance distilled from the rebuilds.", "starter"],
-  ["get_note", "One note in full.", "starter"],
-  ["check_media", "Does this clip or still hold an interface? Signals, verdict, score.", "pro"],
+  ["search_designs", "Search the registry", "Find interfaces by words, section, kind, tone or designer. Returns facets too.", "starter"],
+  ["similar_designs", "Designs like this one", "Entries that share traits with one slug.", "starter"],
+  ["get_design", "One design, in full", "Attribution, traits, media and the measured recipe for one entry.", "starter · recipe pro"],
+  ["get_brief", "Rebuild brief", "How to rebuild an entry: frame, tone, steps, proposed motion, notes that apply.", "starter"],
+  ["see_design", "See a design", "The entry's frame as an image, or a named keyframe of the clip, for agents that can look.", "pro"],
+  ["check_rebuild", "Check a rebuild", "Send a screenshot of your build; get back the regions and colours that differ from the reference frame.", "pro"],
+  ["get_rebuild", "The finished rebuild", "The finished rebuild as one HTML file, to port to your stack.", "team"],
+  ["get_usage", "What is left", "Today's calls, the month's quotas, and what the next plan adds.", "starter"],
+  ["get_recipe", "Measured recipe", "Palette, geometry, type and motion table, read from the clip's pixels.", "pro"],
+  ["get_method", "How clips are measured", "The measuring steps behind every recipe, to apply to a clip of your own.", "starter"],
+  ["list_notes", "Design notes", "Design guidance distilled from the rebuilds.", "starter"],
+  ["get_note", "One note", "One note in full.", "starter"],
+  ["check_media", "Check a clip", "Does this clip or still hold an interface? Signals, verdict, score.", "pro"],
 ] as const;
 
 export function publicEntry(e: Entry) {
