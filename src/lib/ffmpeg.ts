@@ -3,6 +3,7 @@
    Clips are fetched from the CDN once per warm instance and kept in the temp dir, so a session of look_at calls
    on one entry downloads it once. */
 import { execFile } from "node:child_process";
+import { createHash } from "node:crypto";
 import { promisify } from "node:util";
 import { access, chmod, copyFile, mkdir, readFile, stat, writeFile } from "node:fs/promises";
 import { constants } from "node:fs";
@@ -101,4 +102,57 @@ export async function trackEdge(clip: string, info: ClipInfo, axis: "col" | "row
     prev = key;
   }
   return lines;
+}
+
+/* a user's own file, fetched once per instance and kept under a hash of its address; the same size cap as the gate */
+export async function cachedUrl(url: string): Promise<{ file: string; id: string }> {
+  const u = new URL(url);
+  if (u.protocol !== "http:" && u.protocol !== "https:") throw new Error("Only http(s) URLs are accepted");
+  if (/^(localhost|127\.|10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.|0\.|\[::1\]|169\.254\.)/.test(u.hostname)) throw new Error("Private hosts are not allowed");
+  const id = "u" + createHash("sha256").update(url).digest("hex").slice(0, 32);
+  return { file: await cachedClip(id, url), id };
+}
+
+export type Measured = {
+  frame: { w: number; h: number }; fps: number; duration: number; still: boolean;
+  phases: [number, number][]; holds: [number, number][]; moments: { at: number; name: string }[];
+  background: string; palette: { hex: string; share: number }[];
+};
+
+/* a draft measurement of any clip: where it moves (frame-to-frame change at 10 fps, read at 160 px wide), the holds
+   between and their midpoints as moments, the first frame's palette and its background (the colour at the edges) */
+export async function measureClip(file: string): Promise<Measured> {
+  const info = await clipInfo(file);
+  const W = info.width, H = info.height;
+  const sw = 160, sh = Math.max(2, Math.round((160 * H) / W));
+  const still = /^(png|mjpeg|webp|bmp|tiff)$/.test(info.codec) || info.duration < 0.2;
+  const raw = join(tmpdir(), `lookap-measure-${process.pid}-${Math.random().toString(36).slice(2)}.rgb`);
+  const FPS = 10;
+  await ffmpeg(["-v", "error", "-y", "-i", file, ...(still ? ["-frames:v", "1"] : ["-vf", `fps=${FPS},scale=${sw}:${sh}`, "-t", "60"]), ...(still ? ["-vf", `scale=${sw}:${sh}`] : []), "-f", "rawvideo", "-pix_fmt", "rgb24", raw], 90_000);
+  const d = await readFile(raw);
+  const per = sw * sh * 3, n = Math.max(1, Math.floor(d.length / per));
+  /* phases: spans where consecutive frames differ by more than a little */
+  const diffs: number[] = [];
+  for (let i = 1; i < n; i++) { let s = 0; for (let j = 0; j < per; j += 3) s += Math.abs(d[i * per + j] - d[(i - 1) * per + j]) + Math.abs(d[i * per + j + 1] - d[(i - 1) * per + j + 1]) + Math.abs(d[i * per + j + 2] - d[(i - 1) * per + j + 2]); diffs.push(s / (per)); }
+  const moving = diffs.map((v) => v > 1.2);
+  const phases: [number, number][] = [];
+  for (let i = 0; i < moving.length; i++) { if (!moving[i]) continue; let j = i; while (j + 1 < moving.length && moving[j + 1]) j++; phases.push([Number((i / FPS).toFixed(2)), Number(((j + 1) / FPS).toFixed(2))]); i = j; }
+  const merged: [number, number][] = [];
+  for (const p of phases) { const last = merged[merged.length - 1]; if (last && p[0] - last[1] <= 0.15) last[1] = p[1]; else merged.push([...p] as [number, number]); }
+  const holds: [number, number][] = [];
+  let t = 0; for (const [a, b] of merged) { if (a - t >= 0.3) holds.push([Number(t.toFixed(2)), a]); t = b; }
+  const end = Number((n / FPS).toFixed(2)); if (end - t >= 0.3) holds.push([Number(t.toFixed(2)), end]);
+  const moments = [...holds.slice(0, 6).map((h, i) => ({ at: Number(((h[0] + h[1]) / 2).toFixed(2)), name: `hold ${i + 1}` })), ...merged.slice(0, 6).map(([a, b]) => ({ at: Number(((a + b) / 2).toFixed(2)), name: "mid-phase" }))].sort((p, q) => p.at - q.at);
+  /* palette and background from the first frame */
+  const counts = new Map<string, number>();
+  const edge = new Map<string, number>();
+  for (let y = 0; y < sh; y++) for (let x = 0; x < sw; x++) {
+    const o = (y * sw + x) * 3; const k = (d[o] >> 4).toString(16) + (d[o + 1] >> 4).toString(16) + (d[o + 2] >> 4).toString(16);
+    counts.set(k, (counts.get(k) ?? 0) + 1);
+    if (x < 3 || y < 3 || x >= sw - 3 || y >= sh - 3) edge.set(k, (edge.get(k) ?? 0) + 1);
+  }
+  const hexOf = (k: string) => "#" + k.split("").map((c) => (parseInt(c, 16) * 17).toString(16).padStart(2, "0")).join("");
+  const palette = [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 6).map(([k, c]) => ({ hex: hexOf(k), share: Number((c / (sw * sh)).toFixed(3)) }));
+  const bgKey = [...edge.entries()].sort((a, b) => b[1] - a[1])[0]?.[0];
+  return { frame: { w: W, h: H }, fps: info.fps, duration: still ? 0 : Number(info.duration.toFixed(2)), still, phases: still ? [] : merged, holds: still ? [] : holds, moments: still ? [{ at: 0, name: "the still" }] : moments, background: bgKey ? hexOf(bgKey) : palette[0]?.hex ?? "#000000", palette };
 }

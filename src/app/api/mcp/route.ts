@@ -14,7 +14,7 @@ import sharp from "sharp";
 import { ENTRIES, bySlug } from "@/lib/data";
 import { LIMITS, PLAN_NAME, resolvePlan, type Plan } from "@/lib/keys";
 import { sampleVideo } from "@/lib/gate/frames";
-import { cachedClip, clipInfo, frameAt, sheetOf, trackEdge } from "@/lib/ffmpeg";
+import { cachedClip, cachedUrl, clipInfo, frameAt, measureClip, sheetOf, trackEdge } from "@/lib/ffmpeg";
 import { clipId } from "@/lib/drafts";
 import { analyse } from "@/lib/gate/heuristics";
 
@@ -54,7 +54,7 @@ async function loadFrame(poster: string): Promise<{ data: string; mimeType: stri
 /* Which plan flag each paid tool needs. On a paid key the tools its plan lacks are hidden from tools/list, so an agent
    only sees what it can call; the instructions name what the next plan adds. A keyless request sees everything, each
    call answering with the pointer to pricing. */
-const LOCK: Record<string, keyof (typeof LIMITS)["pro"]> = { get_recipe: "recipes", see_design: "media", look_at: "media", check_rebuild: "media", check_media: "media", get_rebuild: "source" };
+const LOCK: Record<string, keyof (typeof LIMITS)["pro"]> = { get_recipe: "recipes", see_design: "media", look_at: "media", measure: "media", check_rebuild: "media", check_media: "media", get_rebuild: "source" };
 /* the notes an agent can read: the hand-written ones, then what the factory learned rebuilding entries */
 const allNotes = () => [...NOTES, ...factoryNotes()];
 const NEEDS: Record<string, string> = { recipes: "Pro", media: "Pro", source: "Max" };
@@ -75,7 +75,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
         "Reach for it when asked to design, redesign, polish or rebuild UI, or for inspiration and reference: search_designs to find, see_design to look at the frame or a keyframe, get_brief or get_recipe for how to rebuild, check_rebuild to test your render against the reference, similar_designs to widen, list_notes for guidance. " +
         "A measured recipe is data: frame, elements with boxes, timing, states, keyframes and checks. Build from it as fact, render, call check_rebuild, fix what it reports; that is one pass instead of rounds of feedback. " +
         "Every other clip carries a draft measurement in get_brief: phases, moves and palette measured from the clip, boxes as a first pass; its keyframes work with see_design and check_rebuild too. " +
-        "look_at is how a clip is measured rather than remembered: its contact sheet, the frame nearest any moment, a crop at 3x beside your own render, exact colours along a line. Use it before deciding a timeline or a material. " +
+        "look_at is how a catalogue clip is measured rather than remembered: its contact sheet, the frame at any moment, a crop beside your own render, exact colours along a line, an edge tracked per frame. For a clip or still that is not in the catalogue (the user's own video, a URL), measure does the same from that file: a draft measurement first, then the same reads, and a check of your render against any moment. look_at, see_design and check_rebuild work on entries only. " +
         "To design something new rather than rebuild, the remix prompt takes two or three entries and a purpose and borrows their principles, proportions and timing, not their pixels; the notes are the transferable part. " +
         "Every tool needs a key (Starter $1/mo at /pricing); see_design, look_at, get_recipe, check_rebuild and check_media need Pro; get_rebuild, the finished source, needs Max. " +
         (plan === "none" ? "" : `This key is ${PLAN_NAME[plan]}. `) +
@@ -396,6 +396,85 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       const line: string[] = [];
       for (let i = a; i <= b; i++) line.push(`${i}:${along === "y" ? px(Math.round(col! * sx), Math.round(i * sy)) : px(Math.round(i * sx), Math.round(row! * sy))}`);
       return text({ ...about, line: along === "y" ? `x=${col}, y ${a} to ${b}` : `y=${row}, x ${a} to ${b}`, colors: line.join(" "), note: full ? "one hex per frame pixel, read from the clip at full size" : "one hex per frame pixel, read from a stored frame smaller than the source, so neighbours repeat", usage: u });
+    },
+  );
+
+  reg(
+    "measure",
+    {
+      title: "Measure a clip of your own",
+      description: "The same measuring as look_at, for a clip or still that is not in the catalogue: a public http(s) URL to an mp4, webm, gif, png, jpg or webp, up to 80 MB. what=draft (the default): frame size, fps, duration, the phases where something moves (read at 10 fps), the holds between them, the moments worth checking, the first frame's palette and background. Then on the same URL: what=sheet (the whole clip at 2 fps, or span=[a, b] up to 4 s at 10 fps), what=frame with at, what=zoom with at and box=[x, y, w, h] in the clip's own pixels plus image (your render) to see the two crops side by side, what=colors with at and col or row plus from and to, what=track with col or row, span and cls, and what=check with at and image: your render scored against that moment of the clip, with the regions that differ most. The file is fetched once and kept while this server instance is warm, so measure first, then read. Needs Pro; metered as Looks.",
+      inputSchema: {
+        url: z.string().describe("public http(s) address of the clip or still"),
+        what: z.enum(["draft", "sheet", "frame", "zoom", "colors", "track", "check"]).optional(),
+        at: z.number().optional().describe("seconds into the clip"),
+        box: z.array(z.number()).length(4).optional().describe("[x, y, w, h] in the clip's pixels, for zoom"),
+        col: z.number().optional(), row: z.number().optional(), from: z.number().optional(), to: z.number().optional(),
+        image: z.string().optional().describe("base64 PNG or JPEG of your render, for zoom (beside the clip's crop) and check (scored against the frame)"),
+        span: z.array(z.number()).length(2).optional().describe("[from, to] in seconds, for sheet (10 fps) and track; at most 4 s"),
+        cls: z.enum(["red", "dark", "light"]).optional(),
+      },
+      annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: true },
+    },
+    async ({ url, what = "draft", at, box, col, row, from, to, image, span, cls }) => {
+      if (!lim.media) return gated("measure", plan, reason);
+      let file: string;
+      try { file = (await cachedUrl(url)).file; } catch (err) { return text({ error: err instanceof Error ? err.message : "could not fetch that address" }); }
+      const u = await charge(keyRef, plan, "look_at");
+      if (u && !u.ok) return spent("measure", u);
+      let m: Awaited<ReturnType<typeof measureClip>>;
+      try { m = await measureClip(file); } catch (err) { return text({ error: err instanceof Error ? err.message : "could not read that file as a clip or image" }); }
+      const W = m.frame.w, H = m.frame.h;
+      const spanOk = (sp: [number, number]) => sp[0] >= 0 && sp[1] > sp[0] && sp[1] - sp[0] <= 4 && sp[1] <= m.duration + 0.5;
+      if (what === "draft") return text({ url, ...m, next: m.still ? "frame, zoom and colors read the still (at 0); check scores your render against it" : "sheet for the whole clip, then frame and zoom at the moments listed; track an edge through a phase; check your render against any moment", usage: u });
+      if (m.still && (what === "sheet" || what === "track")) return text({ error: `${what} needs a clip; this is a still` });
+      if (what === "sheet") {
+        const sp = (span ?? [0, Math.min(m.duration, 4)]) as [number, number];
+        if (span && !spanOk(sp)) return text({ error: `span must be [from, to] within the ${m.duration}s clip and at most 4 s long` });
+        const whole = !span;
+        const data = (whole ? await sheetOf(file, 0, Math.min(m.duration, 24), 2, 6, 240) : await sheetOf(file, sp[0], sp[1], 10, 6, 450)).toString("base64");
+        return { content: [{ type: "image" as const, data, mimeType: "image/jpeg" }, { type: "text" as const, text: JSON.stringify({ url, sheet: whole ? { frames: Math.ceil(Math.min(m.duration, 24) * 2), fps: 2, cols: 6, read: "left to right, then down; frame n is at (n - 1) / 2 s; the first 24 s" } : { span: sp, fps: 10, cols: 6, read: `left to right, then down; frame n is at ${sp[0]} + (n - 1) / 10 s` }, clip: `${W}x${H}, ${m.duration}s, ${m.fps} fps`, phases: m.phases, usage: u }, null, 2) }] };
+      }
+      if (what === "track") {
+        if (col === undefined && row === undefined) return text({ error: "track needs col (x) or row (y) and span [from, to]" });
+        if (!span || !spanOk(span as [number, number])) return text({ error: `track needs span [from, to] within the ${m.duration}s clip and at most 4 s long` });
+        const info = await clipInfo(file);
+        const lines = await trackEdge(file, info, col !== undefined ? "col" : "row", col ?? row!, span[0], span[1], cls ?? "dark");
+        return text({ url, track: { along: col !== undefined ? `x=${col}` : `y=${row}`, span, cls: cls ?? "dark", fps: info.fps, read: "first and last pixel of that colour along the line per frame, only the frames where they moved" }, frames: lines, usage: u });
+      }
+      const t = Math.max(0, Math.min(m.duration, at ?? 0));
+      let buf: Buffer;
+      try { buf = m.still ? await sharp(await readFile(file)).png().toBuffer() : await frameAt(file, t); } catch { return text({ error: "could not read a frame at that time" }); }
+      const about = { url, at: t, frame: `${W}x${H}` };
+      if (what === "frame") { const jpg = await sharp(buf).jpeg({ quality: 88 }).toBuffer(); return { content: [{ type: "image" as const, data: jpg.toString("base64"), mimeType: "image/jpeg" }, { type: "text" as const, text: JSON.stringify({ ...about, moments: m.moments, usage: u }, null, 2) }] }; }
+      if (what === "check") {
+        if (!image) return text({ error: "check needs image: base64 of your render at that moment" });
+        const tmp = path.join(tmpdir(), `lookap-uref-${process.pid}-${Math.random().toString(36).slice(2)}.png`);
+        await writeFile(tmp, buf);
+        const r = await compareBuild(tmp, Buffer.from(image.replace(/^data:[^,]+,/, ""), "base64"), { w: W, h: H }, [], true);
+        return text({ ...about, score: r.score, overall: r.overall, regions: r.regions, scale: "detail-weighted, two pixels of tolerance: a close rebuild sits near 70, a wrong one under 20", reading: "no element boxes for a clip of your own: the three regions that differ most name where to zoom next (measure what=zoom with the same image)", usage: u });
+      }
+      if (what === "zoom") {
+        if (!box) return text({ error: "zoom needs box [x, y, w, h] in the clip's pixels" });
+        const [x, y, w, h] = box.map((n) => Math.max(0, Math.round(n)));
+        if (w < 4 || h < 4 || x + w > W || y + h > H) return text({ error: `box must sit inside the ${W}x${H} frame` });
+        const S = Math.max(1, Math.min(4, Math.floor(900 / w)));
+        const crop = async (img: Buffer) => sharp(img).extract({ left: x, top: y, width: w, height: h }).resize(w * S, h * S, { kernel: "nearest" }).png().toBuffer();
+        const panels = [await crop(await sharp(buf).png().toBuffer())];
+        if (image) panels.push(await crop(await sharp(Buffer.from(image.replace(/^data:[^,]+,/, ""), "base64")).resize(W, H, { fit: "fill" }).png().toBuffer()));
+        const out = await sharp({ create: { width: w * S * panels.length + 12 * (panels.length - 1), height: h * S, channels: 3, background: "#ff3b30" } }).composite(panels.map((pn, i) => ({ input: pn, left: i * (w * S + 12), top: 0 }))).png().toBuffer();
+        return { content: [{ type: "image" as const, data: out.toString("base64"), mimeType: "image/png" }, { type: "text" as const, text: JSON.stringify({ ...about, box: [x, y, w, h], scale: S, panels: image ? "the clip on the left, your render on the right" : "the clip", usage: u }, null, 2) }] };
+      }
+      /* colors */
+      if (col === undefined && row === undefined) return text({ error: "colors needs col (x) or row (y), with from and to" });
+      const along = col !== undefined ? "y" : "x";
+      const a = Math.max(0, Math.round(from ?? 0)), b = Math.min(along === "y" ? H - 1 : W - 1, Math.round(to ?? (along === "y" ? H - 1 : W - 1)));
+      if (b - a > 400) return text({ error: "keep the line under 400 pixels" });
+      const { data, info } = await sharp(buf).raw().toBuffer({ resolveWithObject: true });
+      const px = (ix: number, iy: number) => { const o = (Math.min(info.height - 1, iy) * info.width + Math.min(info.width - 1, ix)) * info.channels; return "#" + [0, 1, 2].map((k) => data[o + k].toString(16).padStart(2, "0")).join(""); };
+      const line: string[] = [];
+      for (let i = a; i <= b; i++) line.push(`${i}:${along === "y" ? px(col!, i) : px(i, row!)}`);
+      return text({ ...about, line: along === "y" ? `x=${col}, y ${a} to ${b}` : `y=${row}, x ${a} to ${b}`, colors: line.join(" "), usage: u });
     },
   );
 
