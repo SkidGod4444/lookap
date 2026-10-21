@@ -75,7 +75,8 @@ const send = (method: string, params: Record<string, unknown> = {}) => new Promi
 const ev = async (expression: string) => ((await send("Runtime.evaluate", { expression, returnByValue: true, awaitPromise: true })).result as { result: { value: unknown } }).result.value;
 
 await send("Emulation.setDeviceMetricsOverride", { width: W, height: H, deviceScaleFactor: 1, mobile: false });
-await send("Page.navigate", { url: `file://${html}` });
+/* ?demo=1 asks an interactive page to replay the clip's sequence on its timeline; a page without interaction ignores it */
+await send("Page.navigate", { url: `file://${html}?demo=1` });
 await sleep(900);
 await ev("document.fonts ? document.fonts.ready.then(() => true) : true");
 const animations = Number(await ev("document.getAnimations().length"));

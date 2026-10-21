@@ -1,6 +1,6 @@
 # Accordion FAQ Interaction, rebuild notes
 
-Two passes: the factory's first build (score 69 on stills, 47 on mid-motion moments), then a hand pass from the clip at 60 fps.
+Two passes: the factory's first build (score 69 on stills, 47 on mid-motion moments), then a hand pass from the clip at 60 fps. The page is interactive (click rows, hover and play keys, drag the bellows down to pull or up to squeeze, release to spring); with ?demo=1 it replays the clip's sequence for the checker.
 
 ## Timeline (measured)
 

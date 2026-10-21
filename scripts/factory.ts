@@ -68,9 +68,10 @@ ${kfs}
 Rules for the file
 - The page is exactly the frame: html and body margin 0, overflow hidden, a #stage of ${draft.frame.w} x ${draft.frame.h} px, background ${draft.background}. Set --u: 1px on #stage and write every size as calc(N * var(--u)). Nothing outside the stage.
 - Place elements from the keyframes you looked at. The draft boxes are a first pass: trust your eyes over them. Fills from the palette, exact hex. Match proportion and hierarchy first, then colour, then motion.
-- Motion as CSS animations that start at load: animation-delay for when a move starts, duration and distance from draft.phases and draft.motion, so the state at t seconds matches the keyframe at t. No JS timers for the timeline. JS only for what CSS cannot express, and then through element.animate so the checker can seek it. Respect prefers-reduced-motion.
+- Interaction is the design. Whatever the clip's cursor does (hover, click, press, drag) the page must do for a real pointer, with the same response and timing. A load-time entrance is fine if the clip has one.
+- Demo mode for the checker: when the URL has ?demo=1 the page replays the clip's sequence on the clip's own timeline (animation-delay for when each move starts, duration and distance from draft.phases, draft.motion and your own probing) as CSS animations or element.animate calls created at load, so the state at t seconds matches the clip at t and the checker can seek it. No JS timers for the timeline. Respect prefers-reduced-motion.
 - Materials are part of the design: rims, bevels, inner highlights, the lip under a key, the ring around a button, a strap's stitching. Zoom into the frames (crop with --col/--row numbers in mind, or Read a keyframe) and draw what is there. A texture that is not drawable (marble, wood, a photo) may be sampled from the clip as a small JPEG data URI, cropped where no UI covers it; say so in NOTES.md.
-- Fonts only from Google Fonts through a <link>; no other network. Credit the designer in a comment at the top with the source link from brief.json. Keep the file under 450 lines.
+- Fonts only from Google Fonts through a <link>; no other network. Credit the designer in a comment at the top with the source link from brief.json. Keep the file under 500 lines.
 
 Loop
 1. Read the sheets for the whole clip. Write the timeline as a list of events with numbers (what, from when to when, how far, which easing) from --track, and the layout from --col and the keyframes. Then build.

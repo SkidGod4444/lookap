@@ -27,7 +27,7 @@
      ],
      "reference": "#a16069",
      "yours": "#86474f",
-     "delta": 76
+     "delta": 77
     },
     {
      "name": "draft 2 #f9f8f7",
@@ -38,7 +38,7 @@
       56
      ],
      "reference": "#986165",
-     "yours": "#a06d70",
+     "yours": "#9e6b6e",
      "delta": 62
     },
     {
@@ -50,7 +50,7 @@
       56
      ],
      "reference": "#b5afa8",
-     "yours": "#b3aba8",
+     "yours": "#b4adaa",
      "delta": 47
     }
    ],
@@ -120,7 +120,7 @@
       56
      ],
      "reference": "#a1636b",
-     "yours": "#8b585d",
+     "yours": "#8a575d",
      "delta": 76
     },
     {
@@ -132,7 +132,7 @@
       56
      ],
      "reference": "#d4d2d0",
-     "yours": "#d7d4d0",
+     "yours": "#d6d4cf",
      "delta": 71
     },
     {
@@ -144,7 +144,7 @@
       93
      ],
      "reference": "#96928b",
-     "yours": "#928c85",
+     "yours": "#918b84",
      "delta": 60
     }
    ],
@@ -157,7 +157,7 @@
       239,
       180
      ],
-     "delta": 58,
+     "delta": 59,
      "over": [
       "draft 2 #f9f8f7",
       "draft 3 #f9f9f7",
@@ -229,7 +229,7 @@
       112
      ],
      "reference": "#9e958f",
-     "yours": "#897c77",
+     "yours": "#887c77",
      "delta": 93
     },
     {
@@ -241,7 +241,7 @@
       116
      ],
      "reference": "#a5a29d",
-     "yours": "#9d9a96",
+     "yours": "#9e9b96",
      "delta": 39
     }
    ],
@@ -254,7 +254,7 @@
       239,
       180
      ],
-     "delta": 63,
+     "delta": 62,
      "over": [
       "draft 2 #f9f8f7",
       "draft 7 #860319",
@@ -323,8 +323,8 @@
       56
      ],
      "reference": "#a9a4a0",
-     "yours": "#cecbc4",
-     "delta": 64
+     "yours": "#ccc8c2",
+     "delta": 63
     },
     {
      "name": "draft 10 #c2bdb4",
@@ -335,8 +335,8 @@
       60
      ],
      "reference": "#98525c",
-     "yours": "#8d4d55",
-     "delta": 61
+     "yours": "#8c4c54",
+     "delta": 60
     }
    ],
    "regions": [
@@ -348,7 +348,7 @@
       239,
       180
      ],
-     "delta": 53,
+     "delta": 52,
      "over": [
       "draft 2 #f9f8f7",
       "draft 8 #f0ebdf",
@@ -364,7 +364,7 @@
       239,
       180
      ],
-     "delta": 53,
+     "delta": 52,
      "over": [
       "draft 2 #f9f8f7",
       "draft 7 #860319",
@@ -382,7 +382,7 @@
       239,
       180
      ],
-     "delta": 50,
+     "delta": 49,
      "over": [
       "draft 3 #f9f9f7",
       "draft 5 #f9f8f6",
@@ -395,7 +395,7 @@
    "keyframe": "2.45s",
    "at": 2.45,
    "still": false,
-   "score": 46,
+   "score": 47,
    "overall": 21,
    "elements": [
     {
@@ -407,8 +407,8 @@
       65
      ],
      "reference": "#a36c73",
-     "yours": "#956468",
-     "delta": 91
+     "yours": "#956367",
+     "delta": 92
     },
     {
      "name": "draft 10 #c2bdb4",
@@ -419,7 +419,7 @@
       60
      ],
      "reference": "#9b7276",
-     "yours": "#9b6f72",
+     "yours": "#9b6e71",
      "delta": 78
     },
     {
@@ -431,8 +431,8 @@
       56
      ],
      "reference": "#a4a09c",
-     "yours": "#cac6bf",
-     "delta": 69
+     "yours": "#c9c5be",
+     "delta": 68
     }
    ],
    "regions": [
@@ -471,19 +471,16 @@
      ]
     },
     {
-     "cell": "D3",
+     "cell": "F3",
      "box": [
       478,
-      540,
+      900,
       239,
       180
      ],
      "delta": 53,
      "over": [
-      "draft 2 #f9f8f7",
-      "draft 3 #f9f9f7",
-      "draft 4 #f9f8f7",
-      "draft 6 #f9f8f6"
+      "draft 11 #cecac1"
      ]
     }
    ]
@@ -492,7 +489,7 @@
    "keyframe": "2.8s",
    "at": 2.8,
    "still": false,
-   "score": 63,
+   "score": 64,
    "overall": 15,
    "elements": [
     {
@@ -528,8 +525,8 @@
       116
      ],
      "reference": "#a39c99",
-     "yours": "#9f9a96",
-     "delta": 51
+     "yours": "#a09c98",
+     "delta": 50
     }
    ],
    "regions": [
@@ -596,8 +593,8 @@
       56
      ],
      "reference": "#d5d4d2",
-     "yours": "#d0cdc8",
-     "delta": 75
+     "yours": "#cfccc7",
+     "delta": 76
     },
     {
      "name": "draft 10 #c2bdb4",
@@ -620,8 +617,8 @@
       65
      ],
      "reference": "#aa9692",
-     "yours": "#9a6b6d",
-     "delta": 71
+     "yours": "#986a6c",
+     "delta": 70
     }
    ],
    "regions": [
@@ -633,7 +630,7 @@
       239,
       180
      ],
-     "delta": 71,
+     "delta": 72,
      "over": [
       "draft 2 #f9f8f7",
       "draft 3 #f9f9f7",
@@ -691,7 +688,7 @@
       93
      ],
      "reference": "#9f9893",
-     "yours": "#8e857f",
+     "yours": "#8d847f",
      "delta": 91
     },
     {
@@ -715,7 +712,7 @@
       116
      ],
      "reference": "#a19b98",
-     "yours": "#98908b",
+     "yours": "#97908b",
      "delta": 45
     }
    ],
@@ -728,7 +725,7 @@
       239,
       180
      ],
-     "delta": 61,
+     "delta": 62,
      "over": [
       "draft 2 #f9f8f7",
       "draft 7 #860319",
@@ -773,7 +770,7 @@
    "keyframe": "kf2",
    "at": 4.2,
    "still": true,
-   "score": 65,
+   "score": 66,
    "overall": 14,
    "elements": [
     {
@@ -785,7 +782,7 @@
       93
      ],
      "reference": "#a19c96",
-     "yours": "#918983",
+     "yours": "#918883",
      "delta": 90
     },
     {
@@ -797,7 +794,7 @@
       112
      ],
      "reference": "#a59c97",
-     "yours": "#908580",
+     "yours": "#8f8580",
      "delta": 89
     },
     {
@@ -809,7 +806,7 @@
       116
      ],
      "reference": "#9e9894",
-     "yours": "#928985",
+     "yours": "#928984",
      "delta": 44
     }
    ],
@@ -840,7 +837,7 @@
       239,
       180
      ],
-     "delta": 56,
+     "delta": 55,
      "over": [
       "draft 2 #f9f8f7",
       "draft 8 #f0ebdf",
@@ -879,8 +876,8 @@
       93
      ],
      "reference": "#b0aaa6",
-     "yours": "#a59e98",
-     "delta": 71
+     "yours": "#a59d98",
+     "delta": 72
     },
     {
      "name": "draft 9 #e5decf",
@@ -891,8 +888,8 @@
       112
      ],
      "reference": "#aea6a2",
-     "yours": "#a29994",
-     "delta": 71
+     "yours": "#a19893",
+     "delta": 72
     },
     {
      "name": "draft 4 #f9f8f7",
@@ -903,8 +900,8 @@
       56
      ],
      "reference": "#dddbda",
-     "yours": "#d9d7d3",
-     "delta": 54
+     "yours": "#d9d7d2",
+     "delta": 55
     }
    ],
    "regions": [
@@ -962,7 +959,7 @@
    "at": 4.95,
    "still": true,
    "score": 64,
-   "overall": 15,
+   "overall": 14,
    "elements": [
     {
      "name": "draft 9 #e5decf",
@@ -985,7 +982,7 @@
       93
      ],
      "reference": "#b7b2ac",
-     "yours": "#a79f9a",
+     "yours": "#a69f9a",
      "delta": 74
     },
     {
@@ -997,8 +994,8 @@
       60
      ],
      "reference": "#96565c",
-     "yours": "#995a60",
-     "delta": 47
+     "yours": "#98595f",
+     "delta": 45
     }
    ],
    "regions": [
@@ -1055,7 +1052,7 @@
    "keyframe": "kf4",
    "at": 7.25,
    "still": true,
-   "score": 62,
+   "score": 63,
    "overall": 15,
    "elements": [
     {
@@ -1067,8 +1064,8 @@
       112
      ],
      "reference": "#c2bbb6",
-     "yours": "#b5ada9",
-     "delta": 62
+     "yours": "#b4ada8",
+     "delta": 63
     },
     {
      "name": "draft 8 #f0ebdf",
@@ -1091,8 +1088,8 @@
       65
      ],
      "reference": "#9f6f71",
-     "yours": "#946164",
-     "delta": 56
+     "yours": "#936063",
+     "delta": 55
     }
    ],
    "regions": [
@@ -1185,7 +1182,7 @@
       65
      ],
      "reference": "#9f7779",
-     "yours": "#a27979",
+     "yours": "#a17879",
      "delta": 58
     }
    ],
@@ -1255,7 +1252,7 @@
       93
      ],
      "reference": "#a8a29e",
-     "yours": "#928a84",
+     "yours": "#928984",
      "delta": 101
     },
     {
@@ -1279,8 +1276,8 @@
       56
      ],
      "reference": "#dcdad9",
-     "yours": "#dbd9d5",
-     "delta": 48
+     "yours": "#dad8d4",
+     "delta": 49
     }
    ],
    "regions": [
@@ -1337,7 +1334,7 @@
    "keyframe": "10.18s",
    "at": 10.18,
    "still": false,
-   "score": 64,
+   "score": 65,
    "overall": 14,
    "elements": [
     {
@@ -1373,8 +1370,8 @@
       116
      ],
      "reference": "#a5a19d",
-     "yours": "#9d9a95",
-     "delta": 43
+     "yours": "#9c9a94",
+     "delta": 42
     }
    ],
    "regions": [
@@ -1404,7 +1401,7 @@
       239,
       180
      ],
-     "delta": 61,
+     "delta": 62,
      "over": [
       "draft 2 #f9f8f7",
       "draft 8 #f0ebdf",
@@ -1431,8 +1428,8 @@
    "keyframe": "13.4s",
    "at": 13.4,
    "still": false,
-   "score": 48,
-   "overall": 21,
+   "score": 49,
+   "overall": 20,
    "elements": [
     {
      "name": "draft 11 #cecac1",
@@ -1443,8 +1440,8 @@
       65
      ],
      "reference": "#a4636b",
-     "yours": "#966469",
-     "delta": 74
+     "yours": "#946367",
+     "delta": 73
     },
     {
      "name": "draft 10 #c2bdb4",
@@ -1455,8 +1452,8 @@
       60
      ],
      "reference": "#915a60",
-     "yours": "#9b6e71",
-     "delta": 73
+     "yours": "#996c70",
+     "delta": 72
     },
     {
      "name": "draft 6 #f9f8f6",
@@ -1467,8 +1464,8 @@
       56
      ],
      "reference": "#a19c98",
-     "yours": "#c8c4bd",
-     "delta": 71
+     "yours": "#c6c2bb",
+     "delta": 70
     }
    ],
    "regions": [
@@ -1480,7 +1477,7 @@
       239,
       180
      ],
-     "delta": 53,
+     "delta": 52,
      "over": [
       "draft 3 #f9f9f7",
       "draft 5 #f9f8f6",
@@ -1511,7 +1508,7 @@
       239,
       180
      ],
-     "delta": 51,
+     "delta": 50,
      "over": [
       "draft 2 #f9f8f7",
       "draft 7 #860319",
@@ -1543,18 +1540,6 @@
      "delta": 68
     },
     {
-     "name": "draft 8 #f0ebdf",
-     "box": [
-      535,
-      753,
-      314,
-      93
-     ],
-     "reference": "#a09b94",
-     "yours": "#979189",
-     "delta": 67
-    },
-    {
      "name": "draft 5 #f9f8f6",
      "box": [
       354,
@@ -1564,6 +1549,18 @@
      ],
      "reference": "#dcd9d8",
      "yours": "#d6d4d0",
+     "delta": 66
+    },
+    {
+     "name": "draft 8 #f0ebdf",
+     "box": [
+      535,
+      753,
+      314,
+      93
+     ],
+     "reference": "#a09b94",
+     "yours": "#969088",
      "delta": 66
     }
    ],
@@ -1644,8 +1641,8 @@
       56
      ],
      "reference": "#99666a",
-     "yours": "#a47a7a",
-     "delta": 69
+     "yours": "#a37879",
+     "delta": 68
     },
     {
      "name": "draft 5 #f9f8f6",
@@ -1656,7 +1653,7 @@
       56
      ],
      "reference": "#f0efee",
-     "yours": "#cbc9c5",
+     "yours": "#cbc9c4",
      "delta": 52
     }
    ],
@@ -1669,7 +1666,7 @@
       239,
       180
      ],
-     "delta": 67,
+     "delta": 66,
      "over": [
       "draft 3 #f9f9f7",
       "draft 5 #f9f8f6",
@@ -1684,7 +1681,7 @@
       239,
       180
      ],
-     "delta": 66,
+     "delta": 65,
      "over": [
       "draft 3 #f9f9f7",
       "draft 5 #f9f8f6",
@@ -1692,14 +1689,14 @@
      ]
     },
     {
-     "cell": "D4",
+     "cell": "D3",
      "box": [
-      717,
+      478,
       540,
       239,
       180
      ],
-     "delta": 45,
+     "delta": 44,
      "over": [
       "draft 2 #f9f8f7",
       "draft 3 #f9f9f7",
@@ -1725,7 +1722,7 @@
       93
      ],
      "reference": "#a9a29e",
-     "yours": "#968e89",
+     "yours": "#968d88",
      "delta": 80
     },
     {
@@ -1737,7 +1734,7 @@
       112
      ],
      "reference": "#a9a09c",
-     "yours": "#998e8a",
+     "yours": "#988e89",
      "delta": 80
     },
     {
@@ -1749,8 +1746,8 @@
       56
      ],
      "reference": "#c8c6c4",
-     "yours": "#d6d4d0",
-     "delta": 49
+     "yours": "#d5d3cf",
+     "delta": 48
     }
    ],
    "regions": [
@@ -1780,7 +1777,7 @@
       239,
       180
      ],
-     "delta": 54,
+     "delta": 55,
      "over": [
       "draft 2 #f9f8f7",
       "draft 8 #f0ebdf",
@@ -1789,23 +1786,21 @@
      ]
     },
     {
-     "cell": "C3",
+     "cell": "B4",
      "box": [
-      478,
-      360,
+      717,
+      180,
       239,
       180
      ],
-     "delta": 50,
+     "delta": 49,
      "over": [
-      "draft 3 #f9f9f7",
-      "draft 5 #f9f8f6",
       "draft 12 #080706"
      ]
     }
    ]
   }
  ],
- "runs": 12,
- "at": "2026-10-21T14:24:44.976Z"
+ "runs": 14,
+ "at": "2026-10-21T14:36:30.068Z"
 }

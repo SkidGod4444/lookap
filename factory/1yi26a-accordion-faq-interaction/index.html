@@ -3,24 +3,25 @@
   Accordion FAQ Interaction, rebuilt from the clip by Damir Sokolovsky (@heydamir)
   Source: https://x.com/heydamir/status/2111801972152225896
 
-  Timeline, measured from the clip at 60 fps (red body top and bottom edges per frame, row profile at x 700):
+  Interactive: click a row to open it (its key presses and the chord sounds), hover and click the keys, press on the
+  instrument and drag down to pull the bellows or up to squeeze them, release and it springs back.
+  With ?demo=1 in the URL the page instead replays the clip's own sequence on the clip's timeline, as CSS animations
+  started at load, so a checker can seek it:
     0.00-0.37  closed: rows 11 px at a 13 px pitch, text hidden, body centred on y 578
     0.37-0.73  rows open top to bottom, 50 ms apart, 160 ms each with a 6% overshoot; rows 57 px at a 65 px pitch
     2.05-2.33  pulled: bottom edge down 120 px (inner gaps +23, top +8, bottom +11), top edge fixed; held to 2.50
     2.50-2.82  released: snaps past rest to 35% (rows 27 px), then 1.7 at 3.00, 0.99 at 3.23, 1.05 at 3.40, rest by 3.60
-    3.80-4.05  row 3 opens, 32 px, body grows 16 px each way; row 2 at 4.45-4.65; row 4 at 5.25-5.40
-    5.40-6.60  the chord chip shows by the third click
+    3.80-4.05  row 3 opens, 32 px, body grows 16 px each way; row 2 at 4.45-4.65; row 4 at 5.25-5.40; chord chip 5.40-6.60
     9.15-9.35  row 4 closes; row 3 at 9.60-9.80; row 2 at 10.05-10.27
-   13.23-13.50 pulled again to 2.1, held to 13.83
-   13.83-14.20 released straight to closed, all rows together (top edge fixed this time), held to 14.80
-   14.80-15.03 reopens to 1.22, rest by 15.25
+   13.23-13.50 pulled again to 2.1, held to 13.83; 13.83-14.20 squeezed shut, held to 14.80; 14.80-15.03 reopens to 1.22
   The title and subtitle never move. --b is the bellows: 0 closed, 1 rest, 2 pulled. --i is each row's share of the
-  intro. --anc is 0 while the body grows around its centre and 1 while its top edge is pinned (both pulls).
+  intro. --anc is 0 while the body grows around its centre and 1 while its top edge is pinned (pulls and squeezes).
   The red marble is two small patches of the designer's own veined texture, embedded, since veins are not a gradient.
 -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Accordion FAQ Interaction</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,8 +40,7 @@ html, body { margin: 0; overflow: hidden; background: #e5e1d9; }
   --pull: max(var(--b) - 1, 0);
   position: relative; width: calc(1434 * var(--u)); height: calc(1080 * var(--u)); overflow: hidden;
   background: radial-gradient(ellipse 75% 70% at 50% 20%, #edeae3 0, #e8e5dc 45%, #e5e1d9 75%, #e2ded5 100%);
-  font-family: Inter, system-ui, sans-serif; color: #1a1816;
-  animation: bellows 15.4s linear both, anchor 15.4s linear both;
+  font-family: Inter, system-ui, sans-serif; color: #1a1816; user-select: none; -webkit-user-select: none;
 }
 #bar { position: absolute; left: 0; top: 0; right: 0; height: calc(4 * var(--u)); background: #1c1b1a; }
 
@@ -59,8 +59,9 @@ h1 {
 #acc {
   position: absolute; left: calc(333 * var(--u)); width: calc(772 * var(--u));
   top: calc((578 + var(--anc) * (56 * var(--pull) - 133 * (1 - var(--open)))) * var(--u));
-  transform: translateY(-50%);
+  transform: translateY(-50%); cursor: grab; touch-action: none;
 }
+#acc.dragging { cursor: grabbing; }
 .shadow { position: absolute; inset: calc(20 * var(--u)) calc(30 * var(--u)) calc(-10 * var(--u)); box-shadow: 0 calc(30 * var(--u)) calc(60 * var(--u)) rgba(70, 58, 44, .22); border-radius: calc(20 * var(--u)); }
 
 /* red marble blocks: the designer's veined texture, a pink rim on top, a dark edge, a shade at the bottom */
@@ -68,7 +69,7 @@ h1 {
   position: relative; border-radius: calc(6 * var(--u));
   background: url("data:image/jpeg;base64,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") left top / auto 100% repeat-x, #a01c33;
   box-shadow: inset 0 calc(1.5 * var(--u)) 0 rgba(255, 190, 200, .55), inset 0 0 0 calc(1 * var(--u)) rgba(90, 0, 14, .55),
-              inset 0 calc(-2 * var(--u)) calc(4 * var(--u)) rgba(40, 0, 6, .35);
+              inset 0 calc(-2 * var(--u)) calc(4 * var(--u)) rgba(40, 0, 6, .35), 0 calc(1 * var(--u)) calc(2 * var(--u)) rgba(0, 0, 0, .25);
 }
 .red.bot { background: url("data:image/jpeg;base64,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") right top / auto 100% repeat-x, #a01c33; }
 .cap {
@@ -87,24 +88,28 @@ h1 {
   position: absolute; left: calc(29 * var(--u)); top: calc(8 * var(--u));
   width: calc(714 * var(--u)); height: calc(119 * var(--u)); box-sizing: border-box;
   padding: calc(3 * var(--u)); background: #15130f; border-radius: calc(10 * var(--u));
-  box-shadow: inset 0 0 0 calc(1 * var(--u)) #3a3632, 0 calc(1 * var(--u)) 0 rgba(255, 255, 255, .25);
+  box-shadow: inset 0 0 0 calc(1 * var(--u)) #3a3632, 0 0 0 calc(1 * var(--u)) rgba(255, 255, 255, .35);
   display: flex; gap: calc(1.5 * var(--u));
 }
 .w {
-  flex: 1; background: linear-gradient(180deg, #fcfbf8 0%, #f6f3ec 60%, #ebe6dc 88%, #d6d0c4 100%);
+  flex: 1; cursor: pointer;
+  background: linear-gradient(180deg, #fcfbf8 0%, #f7f4ee 55%, #ece7dd 86%, #d3cdc1 94%, #b9b2a5 100%);
   border-radius: 0 0 calc(4 * var(--u)) calc(4 * var(--u));
-  box-shadow: inset calc(-1 * var(--u)) 0 0 rgba(0, 0, 0, .08);
+  box-shadow: inset calc(-1 * var(--u)) 0 0 rgba(0, 0, 0, .1), inset calc(1 * var(--u)) 0 0 rgba(255, 255, 255, .6);
+  transition: filter .12s, transform .12s;
 }
-.w.k1 { animation: k1 15.4s linear both; }
-.w.k2 { animation: k2 15.4s linear both; }
-.w.k4 { animation: k4 15.4s linear both; }
+.w:hover { filter: brightness(.94); }
+.w.down, .w:active { filter: brightness(.86) sepia(.25); transform: translateY(calc(1 * var(--u))); }
 .b {
   position: absolute; top: calc(27 * var(--u)); width: calc(34 * var(--u)); height: calc(84 * var(--u));
-  margin-left: calc(-17 * var(--u));
-  background: linear-gradient(90deg, #0b0a09 0%, #35322e 18%, #1d1b18 50%, #0e0d0b 100%);
+  margin-left: calc(-17 * var(--u)); cursor: pointer; z-index: 1;
+  background: linear-gradient(90deg, #0b0a09 0%, #3a3732 16%, #22201d 45%, #15130f 100%);
   border-radius: calc(2 * var(--u)) calc(2 * var(--u)) calc(4 * var(--u)) calc(4 * var(--u));
-  box-shadow: 0 calc(2 * var(--u)) calc(3 * var(--u)) rgba(0, 0, 0, .45), inset 0 calc(1 * var(--u)) 0 rgba(255, 255, 255, .12);
+  box-shadow: 0 calc(2 * var(--u)) calc(3 * var(--u)) rgba(0, 0, 0, .5), inset 0 calc(1 * var(--u)) 0 rgba(255, 255, 255, .14), inset 0 calc(-3 * var(--u)) 0 rgba(0, 0, 0, .5);
+  transition: filter .12s, transform .12s;
 }
+.b:hover { filter: brightness(1.25); }
+.b.down, .b:active { transform: translateY(calc(1 * var(--u))); filter: brightness(1.4); }
 .b::before { /* the key hangs from the frame on a thin stem */
   content: ""; position: absolute; left: 50%; top: calc(-27 * var(--u)); width: calc(2 * var(--u)); height: calc(27 * var(--u));
   margin-left: calc(-1 * var(--u)); background: #15130f;
@@ -120,22 +125,19 @@ h1 {
   display: flex; flex-direction: column; gap: var(--gap); position: relative;
 }
 .row {
-  position: relative; box-sizing: border-box; border: var(--bw) solid #2a2724;
-  border-radius: calc(14 * var(--u)); background: linear-gradient(180deg, #fcfbf9 0%, #f6f4ef 70%, #efece5 100%);
-  box-shadow: inset 0 calc(2 * var(--open) * var(--u)) 0 #ffffff, inset 0 calc(-1 * var(--u)) 0 rgba(0, 0, 0, .06), 0 calc(1 * var(--u)) 0 #2a2724;
-  padding: 0 calc(23 * var(--u));                                          /* no overflow clip: the folds sit outside */
+  position: relative; box-sizing: border-box; border: var(--bw) solid #2a2724; cursor: pointer;
+  border-radius: calc(14 * var(--u)); background: linear-gradient(180deg, #fdfcfa 0%, #f7f5f0 60%, #efece5 100%);
+  box-shadow: inset 0 calc(2 * var(--open) * var(--u)) 0 #ffffff, inset 0 calc(-1 * var(--u)) 0 rgba(0, 0, 0, .06), 0 calc(1 * var(--u)) 0 #2a2724, 0 calc(2 * var(--u)) calc(3 * var(--u)) rgba(0, 0, 0, .18);
+  padding: 0 calc(23 * var(--u));
+  transition: --o .25s cubic-bezier(.2, .8, .2, 1);
 }
+.row:hover { background: linear-gradient(180deg, #ffffff 0%, #faf8f4 60%, #f3f0ea 100%); }
 .q {
   height: calc((9 + 48 * var(--open) * var(--i)) * var(--u));                /* 9 closed, 57 at rest; --i is the intro cascade */
   display: flex; align-items: center; justify-content: space-between; overflow: hidden;
   font-weight: 600; font-size: calc(17 * var(--u)); letter-spacing: calc(-0.2 * var(--u));
   opacity: calc((var(--open) * var(--i) - 0.35) / 0.65);
 }
-.row:nth-child(1) { animation: i1 15.4s linear both; }
-.row:nth-child(2) { animation: r2 15.4s linear both, i2 15.4s linear both; }
-.row:nth-child(3) { animation: r3 15.4s linear both, i3 15.4s linear both; }
-.row:nth-child(4) { animation: r4 15.4s linear both, i4 15.4s linear both; }
-.row:nth-child(5) { animation: i5 15.4s linear both; }
 .ic {
   position: relative; width: calc(16 * var(--u)); height: calc(16 * var(--u)); margin-right: calc(-2 * var(--u));
   transform: rotate(calc(var(--o) * 180deg));                                /* the plus flips over as it becomes a minus */
@@ -151,12 +153,13 @@ h1 {
   font-size: calc(14.5 * var(--u)); line-height: calc(20 * var(--u)); color: #8f8a83;
 }
 
-/* bellows folds on the sides: a grey chevron per row, lit from above, with a rivet at its tip */
+/* bellows folds on the sides: a grey chevron per row, lit from above, edged, with a rivet at its tip */
 .sp {
   position: absolute; top: 50%; width: calc(26 * var(--u));
   height: calc((6 + 22 * var(--open) + 16 * var(--pull)) * var(--u));
   transform: translateY(-50%);
-  background: linear-gradient(180deg, #d2cdc3 0%, #b9b3a8 48%, #7f7a71 52%, #a19b90 100%);
+  background: linear-gradient(180deg, #ddd8ce 0%, #bdb7ac 46%, #6f6a62 50%, #8f897f 54%, #aca599 100%);
+  filter: drop-shadow(0 calc(1 * var(--u)) 0 rgba(0, 0, 0, .35));
 }
 .sp.l { left: calc(-27 * var(--u) - var(--bw)); clip-path: polygon(0 50%, 100% 0, 100% 100%); }
 .sp.r { right: calc(-27 * var(--u) - var(--bw)); clip-path: polygon(0 0, 100% 50%, 0 100%); }
@@ -197,16 +200,40 @@ h1 {
   border-radius: 0 0 calc(92 * var(--u)) calc(92 * var(--u)) / 0 0 calc(40 * var(--u)) calc(40 * var(--u));
   box-shadow: inset 0 calc(-2 * var(--u)) 0 rgba(255, 255, 255, .12), 0 calc(3 * var(--u)) calc(4 * var(--u)) rgba(0, 0, 0, .3);
 }
-.chip { /* the chord that sounded, shown after the third click */
-  position: absolute; left: calc(389 * var(--u)); top: calc(372 * var(--u)); z-index: 3;
+.chip { /* the chord that sounded, by the pointer */
+  position: absolute; z-index: 3; pointer-events: none;
   display: flex; align-items: center; gap: calc(5 * var(--u)); padding: 0 calc(9 * var(--u)); height: calc(22 * var(--u));
   background: #fff; border-radius: calc(7 * var(--u)); font-size: calc(11.5 * var(--u)); font-weight: 500; color: #3a3733; white-space: nowrap;
   box-shadow: 0 calc(1 * var(--u)) calc(4 * var(--u)) rgba(0, 0, 0, .18), 0 0 0 calc(.5 * var(--u)) rgba(0, 0, 0, .06);
-  animation: chip 15.4s linear both; opacity: 0;
+  opacity: 0;
 }
 .chip i { color: #c0213f; font-style: normal; font-size: calc(11 * var(--u)); }
+.chip.live { animation: chip-live 1.3s ease-out both; }
+@keyframes chip-live { 0% { opacity: 0; transform: translateY(calc(4 * var(--u))); } 12%, 70% { opacity: 1; transform: none; } 100% { opacity: 0; } }
 
-/* the bellows over 15.4 s; percentages are seconds / 15.4 */
+/* the entrance: bellows open and the rows cascade, once, on load */
+.intro { animation: intro-b .23s cubic-bezier(.3, .3, .3, 1) .37s both; }
+.intro .row { animation: intro-i .23s cubic-bezier(.4, 0, .3, 1) both; }
+.intro .row:nth-child(1) { animation-delay: .37s; }
+.intro .row:nth-child(2) { animation-delay: .42s; }
+.intro .row:nth-child(3) { animation-delay: .47s; }
+.intro .row:nth-child(4) { animation-delay: .52s; }
+.intro .row:nth-child(5) { animation-delay: .57s; }
+@keyframes intro-b { from { --b: 0; } to { --b: 1; } }
+@keyframes intro-i { 0% { --i: 0; } 70% { --i: 1.06; animation-timing-function: ease-in-out; } 100% { --i: 1; } }
+
+/* ?demo=1: the clip's own sequence over 15.4 s; percentages are seconds / 15.4 */
+.demo { animation: bellows 15.4s linear both, anchor 15.4s linear both; }
+.demo .row:nth-child(1) { animation: i1 15.4s linear both; }
+.demo .row:nth-child(2) { animation: r2 15.4s linear both, i2 15.4s linear both; }
+.demo .row:nth-child(3) { animation: r3 15.4s linear both, i3 15.4s linear both; }
+.demo .row:nth-child(4) { animation: r4 15.4s linear both, i4 15.4s linear both; }
+.demo .row:nth-child(5) { animation: i5 15.4s linear both; }
+.demo .row { transition: none; }
+.demo .w.k1 { animation: k1 15.4s linear both; }
+.demo .w.k2 { animation: k2 15.4s linear both; }
+.demo .w.k4 { animation: k4 15.4s linear both; }
+.demo .chip.demo-chip { left: calc(389 * var(--u)); top: calc(372 * var(--u)); animation: chip 15.4s linear both; }
 @keyframes bellows {
   0%, 2.40%          { --b: 0;    animation-timing-function: cubic-bezier(.3, .3, .3, 1); }   /* closed to 0.37; rows cascade via --i */
   3.90%, 13.31%      { --b: 1;    animation-timing-function: cubic-bezier(.25, .1, .25, 1); } /* open by 0.60; pull from 2.05 */
@@ -221,43 +248,28 @@ h1 {
   97.60%             { --b: 1.22; animation-timing-function: cubic-bezier(.4, 0, .6, 1); }    /* 15.03 */
   99.03%, 100%       { --b: 1; }                                                             /* 15.25 rest */
 }
-/* centred growth except during the two pulls, when the top edge stays put */
 @keyframes anchor {
   0%, 12.98%         { --anc: 0; }
   12.99%, 23.37%     { --anc: 1; }   /* 2.00 to 3.60 */
   23.38%, 84.40%     { --anc: 0; }
   84.41%, 100%       { --anc: 1; }   /* 13.00 on */
 }
-/* the intro: each row opens 50 ms after the one above, 160 ms each, 6% over and back */
 @keyframes i1 { 0%, 2.40% { --i: 0; animation-timing-function: cubic-bezier(.4, 0, .3, 1); } 3.44% { --i: 1.06; animation-timing-function: ease-in-out; } 5.06%, 100% { --i: 1; } }
 @keyframes i2 { 0%, 2.73% { --i: 0; animation-timing-function: cubic-bezier(.4, 0, .3, 1); } 3.77% { --i: 1.06; animation-timing-function: ease-in-out; } 5.39%, 100% { --i: 1; } }
 @keyframes i3 { 0%, 3.05% { --i: 0; animation-timing-function: cubic-bezier(.4, 0, .3, 1); } 4.09% { --i: 1.06; animation-timing-function: ease-in-out; } 5.71%, 100% { --i: 1; } }
 @keyframes i4 { 0%, 3.38% { --i: 0; animation-timing-function: cubic-bezier(.4, 0, .3, 1); } 4.42% { --i: 1.06; animation-timing-function: ease-in-out; } 6.04%, 100% { --i: 1; } }
 @keyframes i5 { 0%, 3.70% { --i: 0; animation-timing-function: cubic-bezier(.4, 0, .3, 1); } 4.74% { --i: 1.06; animation-timing-function: ease-in-out; } 6.36%, 100% { --i: 1; } }
-/* rows: row 3 at 3.80, row 2 at 4.45, row 4 at 5.25; closing 9.15, 9.60, 10.05 */
-@keyframes r3 {
-  0%, 24.68%         { --o: 0; animation-timing-function: cubic-bezier(.2, .8, .2, 1); }
-  26.30%, 62.34%     { --o: 1; animation-timing-function: cubic-bezier(.2, .8, .2, 1); }
-  63.64%, 100%       { --o: 0; }
-}
-@keyframes r2 {
-  0%, 28.90%         { --o: 0; animation-timing-function: cubic-bezier(.2, .8, .2, 1); }
-  30.19%, 65.26%     { --o: 1; animation-timing-function: cubic-bezier(.2, .8, .2, 1); }
-  66.69%, 100%       { --o: 0; }
-}
-@keyframes r4 {
-  0%, 34.09%         { --o: 0; animation-timing-function: cubic-bezier(.2, .8, .2, 1); }
-  35.06%, 59.42%     { --o: 1; animation-timing-function: cubic-bezier(.2, .8, .2, 1); }
-  60.71%, 100%       { --o: 0; }
-}
-/* the key that sounds with each opening stays shaded while the row is open */
+@keyframes r3 { 0%, 24.68% { --o: 0; animation-timing-function: cubic-bezier(.2, .8, .2, 1); } 26.30%, 62.34% { --o: 1; animation-timing-function: cubic-bezier(.2, .8, .2, 1); } 63.64%, 100% { --o: 0; } }
+@keyframes r2 { 0%, 28.90% { --o: 0; animation-timing-function: cubic-bezier(.2, .8, .2, 1); } 30.19%, 65.26% { --o: 1; animation-timing-function: cubic-bezier(.2, .8, .2, 1); } 66.69%, 100% { --o: 0; } }
+@keyframes r4 { 0%, 34.09% { --o: 0; animation-timing-function: cubic-bezier(.2, .8, .2, 1); } 35.06%, 59.42% { --o: 1; animation-timing-function: cubic-bezier(.2, .8, .2, 1); } 60.71%, 100% { --o: 0; } }
 @keyframes k2 { 0%, 24.6% { filter: none; } 24.68%, 63.6% { filter: brightness(.86) sepia(.25); } 63.64%, 100% { filter: none; } }
 @keyframes k1 { 0%, 28.8% { filter: none; } 28.9%, 66.6% { filter: brightness(.86) sepia(.25); } 66.69%, 100% { filter: none; } }
 @keyframes k4 { 0%, 34.0% { filter: none; } 34.09%, 60.7% { filter: brightness(.86) sepia(.25); } 60.71%, 100% { filter: none; } }
 @keyframes chip { 0%, 35.06% { opacity: 0; } 35.71%, 41.56% { opacity: 1; } 42.86%, 100% { opacity: 0; } }
 
 @media (prefers-reduced-motion: reduce) {
-  #stage, .row, .w.k1, .w.k2, .w.k4, .chip { animation: none; }
+  .intro, .intro .row, .demo, .demo .row, .demo .w, .chip { animation: none !important; }
+  .row { transition: none; }
 }
 </style>
 </head>
@@ -268,44 +280,44 @@ h1 {
   <p class="sub">The questions we hear the most, now you can hear them too</p>
   <div id="acc">
     <div class="shadow"></div>
-    <div class="chip"><i>&#9835;</i>E minor 7</div>
+    <div class="chip demo-chip"><i>&#9835;</i>E minor 7</div>
 
     <div class="red top">
       <span class="cap tl"></span><span class="cap tr"></span>
       <div class="kb">
-        <i class="w"></i><i class="w k1"></i><i class="w k2"></i><i class="w"></i><i class="w k4"></i>
-        <i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i>
-        <i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i>
-        <i class="b" style="left: calc(50 * var(--u))"></i><i class="b" style="left: calc(98 * var(--u))"></i>
-        <i class="b" style="left: calc(194 * var(--u))"></i><i class="b" style="left: calc(241 * var(--u))"></i>
-        <i class="b" style="left: calc(287 * var(--u))"></i><i class="b" style="left: calc(379 * var(--u))"></i>
-        <i class="b" style="left: calc(427 * var(--u))"></i><i class="b" style="left: calc(520 * var(--u))"></i>
-        <i class="b" style="left: calc(568 * var(--u))"></i><i class="b" style="left: calc(614 * var(--u))"></i>
+        <i class="w" data-n="0"></i><i class="w k1" data-n="2"></i><i class="w k2" data-n="4"></i><i class="w" data-n="5"></i><i class="w k4" data-n="7"></i>
+        <i class="w" data-n="9"></i><i class="w" data-n="11"></i><i class="w" data-n="12"></i><i class="w" data-n="14"></i><i class="w" data-n="16"></i>
+        <i class="w" data-n="17"></i><i class="w" data-n="19"></i><i class="w" data-n="21"></i><i class="w" data-n="23"></i><i class="w" data-n="24"></i>
+        <i class="b" data-n="1" style="left: calc(50 * var(--u))"></i><i class="b" data-n="3" style="left: calc(98 * var(--u))"></i>
+        <i class="b" data-n="6" style="left: calc(194 * var(--u))"></i><i class="b" data-n="8" style="left: calc(241 * var(--u))"></i>
+        <i class="b" data-n="10" style="left: calc(287 * var(--u))"></i><i class="b" data-n="13" style="left: calc(379 * var(--u))"></i>
+        <i class="b" data-n="15" style="left: calc(427 * var(--u))"></i><i class="b" data-n="18" style="left: calc(520 * var(--u))"></i>
+        <i class="b" data-n="20" style="left: calc(568 * var(--u))"></i><i class="b" data-n="22" style="left: calc(614 * var(--u))"></i>
       </div>
     </div>
 
     <div class="mid">
-      <div class="row">
+      <div class="row" data-chord="C major 7" data-key="k1" data-notes="0,4,7,11">
         <i class="sp l"></i><i class="sp r"></i>
         <div class="q">How does the free trial work?<span class="ic"></span></div>
         <div class="a"><p>Fourteen days with every feature, and no card until you decide to stay</p></div>
       </div>
-      <div class="row">
+      <div class="row" data-chord="D minor 7" data-key="k1" data-notes="2,5,9,12">
         <i class="sp l"></i><i class="sp r"></i>
         <div class="q">Can I cancel anytime?<span class="ic"></span></div>
         <div class="a"><p>Yes, in two clicks from your settings, with no calls and no sad goodbye emails</p></div>
       </div>
-      <div class="row">
+      <div class="row" data-chord="E minor 7" data-key="k2" data-notes="4,7,11,14">
         <i class="sp l"></i><i class="sp r"></i>
         <div class="q">Do you offer refunds?<span class="ic"></span></div>
         <div class="a"><p>If it's not working for you in the first 30 days, we refund the full amount</p></div>
       </div>
-      <div class="row">
+      <div class="row" data-chord="F major 7" data-key="k4" data-notes="5,9,12,16">
         <i class="sp l"></i><i class="sp r"></i>
         <div class="q">Can I change my plan later?<span class="ic"></span></div>
         <div class="a"><p>Upgrade or downgrade whenever you like and we prorate the difference down to the day</p></div>
       </div>
-      <div class="row">
+      <div class="row" data-chord="G 7" data-key="k1" data-notes="7,11,14,17">
         <i class="sp l"></i><i class="sp r"></i>
         <div class="q">Is my data secure?<span class="ic"></span></div>
         <div class="a"><p>Encrypted in transit and at rest, and never shared with anyone</p></div>
@@ -324,5 +336,89 @@ h1 {
     </div>
   </div>
 </div>
+<script>
+(() => {
+  const stage = document.getElementById("stage"), acc = document.getElementById("acc");
+  if (/[?&]demo/.test(location.search)) { stage.classList.add("demo"); return; }   /* the clip's sequence, for the checker */
+
+  /* entrance, once */
+  stage.classList.add("intro");
+  stage.addEventListener("animationend", (e) => { if (e.animationName === "intro-b") { stage.classList.remove("intro"); stage.style.setProperty("--b", "1"); } });
+
+  /* a quiet instrument: a reed-like tone per note, a chord when a row opens */
+  let ac = null;
+  const audio = () => { ac ??= new (window.AudioContext || window.webkitAudioContext)(); if (ac.state === "suspended") ac.resume(); return ac; };
+  const tone = (semi, t0, dur, gain) => {
+    const a = audio(), f = 261.63 * Math.pow(2, semi / 12);
+    const g = a.createGain(); g.gain.setValueAtTime(0.0001, t0); g.gain.exponentialRampToValueAtTime(gain, t0 + 0.02); g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+    g.connect(a.destination);
+    for (const [ratio, type, level] of [[1, "sawtooth", 1], [2, "sine", .35]]) {
+      const o = a.createOscillator(); o.type = type; o.frequency.value = f * ratio;
+      const lp = a.createBiquadFilter(); lp.type = "lowpass"; lp.frequency.value = 1800; lp.Q.value = .7;
+      const og = a.createGain(); og.gain.value = level;
+      o.connect(lp).connect(og).connect(g); o.start(t0); o.stop(t0 + dur + .05);
+    }
+  };
+  const note = (semi) => { try { tone(semi, audio().currentTime, .5, .08); } catch {} };
+  const chord = (semis) => { try { const t = audio().currentTime; semis.forEach((s, i) => tone(s, t + i * .012, .9, .045)); } catch {} };
+
+  /* the chip by the pointer: what chord that was */
+  const unit = () => parseFloat(getComputedStyle(stage).getPropertyValue("--u")) || 1;
+  const chip = (text, x, y) => {
+    const r = acc.getBoundingClientRect(), u = unit();
+    const el = document.createElement("div"); el.className = "chip live"; el.innerHTML = "<i>&#9835;</i>" + text;
+    el.style.left = `calc(${(x - r.left) / u + 14} * var(--u))`; el.style.top = `calc(${(y - r.top) / u + 10} * var(--u))`;
+    acc.appendChild(el); el.addEventListener("animationend", () => el.remove(), { once: true });
+  };
+
+  /* rows: click to toggle; the key that sounds stays down while the row is open */
+  const toggle = (row, x, y) => {
+    const open = row.style.getPropertyValue("--o") !== "1";
+    row.style.setProperty("--o", open ? "1" : "0");
+    const key = acc.querySelector("." + row.dataset.key);
+    if (key) key.classList.toggle("down", open);
+    if (open) { chord(row.dataset.notes.split(",").map(Number)); chip(row.dataset.chord, x, y); }
+  };
+
+  /* keys: hover lifts, press sounds */
+  acc.querySelectorAll(".w, .b").forEach((k) => k.addEventListener("pointerdown", (e) => { e.stopPropagation(); note(Number(k.dataset.n)); k.classList.add("down"); setTimeout(() => k.classList.remove("down"), 160); }));
+
+  /* the bellows: press and drag down to pull (top edge pinned), up to squeeze; release and it springs */
+  let y0 = 0, b0 = 1, dragging = false, pressedRow = null, px = 0, py = 0, spring = null;
+  const setB = (v) => stage.style.setProperty("--b", String(v));
+  const current = () => parseFloat(getComputedStyle(stage).getPropertyValue("--b")) || 1;
+  acc.addEventListener("pointerdown", (e) => {
+    if (e.button !== 0) return;
+    if (spring) { spring.cancel(); spring = null; }
+    y0 = e.clientY; b0 = current(); dragging = false; px = e.clientX; py = e.clientY;
+    pressedRow = e.target.closest(".row");
+    acc.setPointerCapture(e.pointerId);
+    stage.style.setProperty("--anc", "1");
+  });
+  acc.addEventListener("pointermove", (e) => {
+    if (!acc.hasPointerCapture(e.pointerId)) return;
+    const dy = (e.clientY - y0) / unit();
+    if (!dragging && Math.abs(dy) < 5) return;
+    if (!dragging) { dragging = true; acc.classList.add("dragging"); }
+    setB(dy > 0 ? Math.min(2.3, b0 + dy / 120) : Math.max(0, b0 + dy / 260));
+  });
+  const release = (e) => {
+    if (!acc.hasPointerCapture(e.pointerId)) return;
+    acc.releasePointerCapture(e.pointerId);
+    acc.classList.remove("dragging");
+    if (!dragging) { stage.style.setProperty("--anc", "0"); if (pressedRow) toggle(pressedRow, px, py); pressedRow = null; return; }
+    /* spring: a pull snaps through rest and settles in four swings, a squeeze opens past rest once; measured from the clip */
+    const b = current();
+    const frames = b > 1
+      ? [{ "--b": b, easing: "cubic-bezier(.5,0,.3,1)" }, { "--b": .35, offset: .29, easing: "cubic-bezier(.4,0,.3,1)" }, { "--b": 1.7, offset: .45, easing: "cubic-bezier(.4,0,.6,1)" }, { "--b": .99, offset: .66, easing: "cubic-bezier(.4,0,.6,1)" }, { "--b": 1.05, offset: .82, easing: "cubic-bezier(.4,0,.6,1)" }, { "--b": 1 }]
+      : [{ "--b": b, easing: "cubic-bezier(.4,0,.6,1)" }, { "--b": 1.22, offset: .51, easing: "cubic-bezier(.4,0,.6,1)" }, { "--b": 1 }];
+    spring = stage.animate(frames, { duration: b > 1 ? 1100 : 450, fill: "forwards" });
+    spring.onfinish = () => { spring = null; setB(1); stage.style.setProperty("--anc", "0"); };
+    pressedRow = null;
+  };
+  acc.addEventListener("pointerup", release);
+  acc.addEventListener("pointercancel", release);
+})();
+</script>
 </body>
 </html>
