@@ -37,6 +37,7 @@ export function Inertia() {
 
     const onWheel = (e: WheelEvent) => {
       if (e.ctrlKey || e.metaKey) return;                         /* pinch zoom and browser zoom stay native */
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;        /* a sideways swipe belongs to whatever row is under it */
       if (getComputedStyle(el).overflowY === "hidden") return;    /* project pages lock the page; their panel scrolls itself */
       const inner = scrollableAncestor(e.target as Element, el);
       if (inner) {

@@ -28,7 +28,7 @@ export default function Home() {
           </div>
           <dl className="flex flex-wrap gap-x-8 gap-y-2 pt-1 font-mono text-[12px] text-subtle">
             <div><dt className="text-silver-bright">{ENTRIES.filter((e) => !e.sponsored).length}</dt><dd>entries</dd></div>
-            <div><dt className="text-silver-bright">{RECIPES.length}</dt><dd>measured recipes</dd></div>
+            <div><dt className="text-silver-bright">{RECIPES.length}</dt><dd>recipes</dd></div>
             <div><dt className="text-silver-bright">{NOTES.length}</dt><dd>design notes</dd></div>
             <div><dt className="text-silver-bright">{TOOLS.length}</dt><dd>MCP tools</dd></div>
           </dl>
