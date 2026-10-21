@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "MCP server",
@@ -29,7 +30,7 @@ export default function McpPage() {
 
       <section className="flex flex-col gap-3">
         <h2 className="text-[11px] font-medium tracking-[.06em] text-subtle uppercase">Connect</h2>
-        <pre className="overflow-x-auto rounded-xl bg-card p-4 font-mono text-[12.5px] leading-relaxed text-silver ring-1 ring-line">{`claude mcp add --transport http lookap https://lookap.app/api/mcp \\
+        <pre className="overflow-x-auto rounded-xl bg-card p-4 font-mono text-[12.5px] leading-relaxed text-silver ring-1 ring-line">{`claude mcp add --transport http lookap ${SITE_URL}/api/mcp \\
   --header "Authorization: Bearer lk_live_…"`}</pre>
         <p className="text-[13px] text-subtle">Every tool needs a key. Starter is a dollar a month. Local dev: use http://localhost:3000/api/mcp.</p>
       </section>
