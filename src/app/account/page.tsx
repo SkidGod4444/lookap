@@ -50,6 +50,28 @@ function Account() {
   // eslint-disable-next-line react-hooks/set-state-in-effect -- the fetch resolves later; nothing is set synchronously
   useEffect(() => { if (isSignedIn) void load(); }, [isSignedIn, load]);
 
+  /* Live counters: while the tab is visible, re-read the account's Upstash counters every few seconds and on focus,
+     so a tool call from an agent shows up here as it lands. Only the usage changes; keys and plan stay as loaded. */
+  const paidPlan = Boolean(data && data.entitlement.plan !== "none");
+  useEffect(() => {
+    if (!isSignedIn || !paidPlan) return;
+    let stop = false;
+    const tick = async () => {
+      if (document.visibilityState !== "visible") return;
+      try {
+        const r = await fetch("/api/usage", { cache: "no-store" });
+        if (!r.ok || stop) return;
+        const d = await r.json();
+        if (d.usage) setData((cur) => (cur ? { ...cur, usage: d.usage } : cur));
+      } catch { /* next tick */ }
+    };
+    const id = setInterval(tick, 4000);
+    const onShow = () => { if (document.visibilityState === "visible") void tick(); };
+    document.addEventListener("visibilitychange", onShow);
+    window.addEventListener("focus", onShow);
+    return () => { stop = true; clearInterval(id); document.removeEventListener("visibilitychange", onShow); window.removeEventListener("focus", onShow); };
+  }, [isSignedIn, paidPlan]);
+
   /* After checkout Polar's webhook and customer state can trail the redirect by a few seconds: poll until the plan shows up. */
   useEffect(() => {
     if (!justPaid || !isSignedIn) return;
@@ -154,7 +176,7 @@ function Account() {
       {paid && usage && (
         <section className="flex flex-col gap-5">
           <div className="flex items-baseline justify-between gap-4">
-            <h2 className="text-[11px] font-medium tracking-[.06em] text-subtle uppercase">Today</h2>
+            <h2 className="flex items-center gap-2 text-[11px] font-medium tracking-[.06em] text-subtle uppercase">Today<span className="inline-flex items-center gap-1 normal-case tracking-normal" title="Counts update every few seconds while this page is open"><span aria-hidden="true" className="size-1.5 rounded-full bg-[#6ee7a0] shadow-[0_0_6px_#6ee7a0]" />Live</span></h2>
             <span className="text-[12px] text-subtle">Resets in {hoursLeft(usage.today.resets)} h</span>
           </div>
           <div className="grid gap-5 sm:grid-cols-2">
