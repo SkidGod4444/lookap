@@ -71,7 +71,8 @@ export async function entitlementFromPolar(userId: string): Promise<Entitlement>
 /* The plan a user is paying for right now. Redis answers first; Polar is asked when the record is missing or stale, and the
    answer is written back. LOOKAP_FREE_MINT=1 (local dev only) grants pro without a subscription. */
 export async function entitlementFor(userId: string): Promise<Entitlement> {
-  if (process.env.LOOKAP_FREE_MINT === "1") return { plan: "pro", status: "dev" };
+  /* dev-only shortcut; never honoured in production, whatever the environment says */
+  if (process.env.LOOKAP_FREE_MINT === "1" && process.env.NODE_ENV !== "production") return { plan: "pro", status: "dev" };
   const rec = await getUser(userId);
   const fresh = rec?.entitlementCheckedAt && Date.now() - Date.parse(rec.entitlementCheckedAt) < ENTITLEMENT_TTL_MS;
   if (rec && fresh && rec.plan) {
