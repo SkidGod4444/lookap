@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { Show } from "@clerk/nextjs";
 import { UserMenu } from "./auth/UserMenu";
 import { AuthDialog } from "./auth/AuthDialog";
@@ -22,7 +22,9 @@ export function TopBar() {
   const wantsSignIn = params.get("signin") === "1";
   const next = params.get("next");
   const [auth, setAuth] = useState(false);
-  const open = auth || wantsSignIn;
+  /* The dialog is a portal, so a URL-driven open must wait for the client: on the server it renders nothing. */
+  const mounted = useSyncExternalStore(() => () => {}, () => true, () => false);
+  const open = auth || (mounted && wantsSignIn);
   return (
     <header className="sticky top-0 z-[80] w-full border-b border-line bg-gutter/90 backdrop-blur">
       <div className="mx-auto flex h-14 w-full max-w-[1680px] items-center gap-5 px-4">
