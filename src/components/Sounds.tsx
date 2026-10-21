@@ -13,6 +13,28 @@ function audio() {
   return ctx;
 }
 
+/* iOS keeps Web Audio silent until the page's audio session is opened from inside a touch, and the ring/silent switch
+   mutes it until a media element has played. So on the first touch or key: make the context, resume it, push one empty
+   buffer through it, and play a few milliseconds of silence through an <audio> element. After that every sound is
+   immediate, including the scroll ticks, which never happen inside a gesture. Desktop browsers just resume. */
+let unlocked = false;
+const SILENCE = "data:audio/wav;base64,UklGRkQDAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YSADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==";
+function unlock() {
+  if (unlocked) return;
+  unlocked = true;
+  const ac = audio();
+  const src = ac.createBufferSource();
+  src.buffer = ac.createBuffer(1, 1, ac.sampleRate);
+  src.connect(ac.destination);
+  src.start(0);
+  const el = document.createElement("audio");
+  el.setAttribute("playsinline", "");
+  el.preload = "auto";
+  el.src = SILENCE;
+  el.volume = 0.01;
+  void el.play().catch(() => { unlocked = false; });
+}
+
 function noise(ac: AudioContext, seconds: number) {
   const buf = ac.createBuffer(1, Math.ceil(ac.sampleRate * seconds), ac.sampleRate);
   const d = buf.getChannelData(0);
@@ -147,6 +169,10 @@ export function Sounds() {
       playTick(Math.floor(notch / 5) !== Math.floor(prev / 5));
     };
     document.addEventListener("scroll", onScroll, { passive: true, capture: true });
+    const onFirst = () => { unlock(); document.removeEventListener("touchend", onFirst); document.removeEventListener("pointerdown", onFirst); document.removeEventListener("keydown", onFirst); };
+    document.addEventListener("touchend", onFirst, { passive: true });
+    document.addEventListener("pointerdown", onFirst, { passive: true });
+    document.addEventListener("keydown", onFirst, { passive: true });
     const onDown = (e: PointerEvent) => {
       if (e.button !== 0 || !(e.target instanceof Element)) return;
       const el = e.target.closest(".sfx-button, .sfx-badge");
@@ -170,7 +196,7 @@ export function Sounds() {
     document.addEventListener("pointerdown", onDown, { passive: true });
     document.addEventListener("pointermove", onMove, { passive: true });
     document.addEventListener("pointerout", onLeave, { passive: true });
-    return () => { document.removeEventListener("scroll", onScroll, { capture: true }); document.removeEventListener("pointerdown", onDown); document.removeEventListener("pointermove", onMove); document.removeEventListener("pointerout", onLeave); };
+    return () => { document.removeEventListener("scroll", onScroll, { capture: true }); document.removeEventListener("touchend", onFirst); document.removeEventListener("pointerdown", onFirst); document.removeEventListener("keydown", onFirst); document.removeEventListener("pointerdown", onDown); document.removeEventListener("pointermove", onMove); document.removeEventListener("pointerout", onLeave); };
   }, []);
   return null;
 }
