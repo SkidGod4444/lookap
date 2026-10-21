@@ -8,6 +8,7 @@
         "@anthropic-ai/sdk": "^0.136.0",
         "@clerk/nextjs": "^7.9.18",
         "@modelcontextprotocol/sdk": "^1.32.1",
+        "@unkey/api": "2.5.4",
         "@vercel/analytics": "^2.0.1",
         "next": "16.4.2",
         "react": "19.3.0",
@@ -283,6 +284,8 @@
     "@typescript-eslint/utils": ["@typescript-eslint/utils@8.72.0", "", { "dependencies": { "@eslint-community/eslint-utils": "^4.9.1", "@typescript-eslint/scope-manager": "8.72.0", "@typescript-eslint/types": "8.72.0", "@typescript-eslint/typescript-estree": "8.72.0" }, "peerDependencies": { "eslint": "^8.57.0 || ^9.0.0 || ^10.0.0", "typescript": ">=4.8.4 <6.1.0" } }, "sha512-0up3oArJZBYnzOaEXKo8DmI43QvMZyPoFEt9LWzRJcyl/RcJjfKKPebknN1VbTgXBf3M/KggUh5uUMdURLnseg=="],
 
     "@typescript-eslint/visitor-keys": ["@typescript-eslint/visitor-keys@8.72.0", "", { "dependencies": { "@typescript-eslint/types": "8.72.0", "eslint-visitor-keys": "^5.0.0" } }, "sha512-E2mroviasaWecDzTGiGMtuEguuLVOeRggnrIn93CJuxYJzQBHbyymlT08aVQydbBal5538o+JkBKXh2sRuCyIA=="],
+
+    "@unkey/api": ["@unkey/api@2.5.4", "", { "dependencies": { "zod": "^3.25.0 || ^4.0.0" } }, "sha512-EI9f3ECD2TNcJ3hLjyGFcxoXsGyANKg3VJNvf7UZm8QVEc6d6VSzAiRNP1HsvDQz0VJv7uup/yGdkG+E40WcTQ=="],
 
     "@unrs/resolver-binding-android-arm-eabi": ["@unrs/resolver-binding-android-arm-eabi@1.12.2", "", { "os": "android", "cpu": "arm" }, "sha512-g5T90pqg1bo/7mytQx6F4iBNC0Wsh9cu+z9veDbFjc7HjpesJFWD7QMS0NGStXM075+7dJPPVvBbpZlnrdpi/w=="],
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { useClerk, useUser } from "@clerk/nextjs";
 
 /* Signed-in control: the avatar, and a small menu with the account and a sign-out. */
@@ -46,6 +47,7 @@ export function UserMenu() {
             <p className="truncate text-[12px] text-subtle">{email}</p>
           </div>
           <div className="my-1 h-px bg-line" />
+          <Link href="/account" role="menuitem" onClick={() => setOpen(false)} className="block rounded-lg px-2.5 py-2 text-[13px] text-subtle transition-colors hover:bg-chip hover:text-foreground">Account and keys</Link>
           <button
             type="button"
             role="menuitem"

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { badge, button } from "@/components/button";
 
 const PLANS = [
@@ -68,7 +69,7 @@ export default function Pricing() {
                   </div>
                 ))}
               </div>
-              <button type="button" className={button(p.primary ? "silver" : "outline", "mt-auto h-9 w-full rounded-lg text-[13px]")}>{p.cta}</button>
+              <Link href={`/account?plan=${p.name.split(" ")[0].toLowerCase()}`} className={button(p.primary ? "silver" : "outline", "mt-auto h-9 w-full rounded-lg text-[13px]")}>{p.cta}</Link>
             </div>
           </div>
         ))}

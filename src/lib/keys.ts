@@ -1,18 +1,31 @@
 import "server-only";
 
-/* API keys for the MCP endpoint. For now keys live in the LOOKAP_API_KEYS env var as a comma-separated list of
-   `key:plan` pairs, e.g. "lk_live_abc:pro,lk_live_def:team". Billing through Polar replaces this with a lookup. */
+/* API keys for the MCP endpoint. Real keys are minted and verified by Unkey (see unkey.ts); the plan rides on the key.
+   LOOKAP_API_KEYS stays as a local-dev fallback: a comma-separated list of `key:plan` pairs, e.g. "lk_test_pro:pro". */
 
 export type Plan = "none" | "starter" | "pro" | "team";
 
-export function planForKey(key: string | null): Plan {
-  if (!key) return "none";
+/* Dev fallback only: keys listed in the env var. */
+export function planFromEnv(key: string): Plan | null {
   const list = (process.env.LOOKAP_API_KEYS ?? "").split(",").map((s) => s.trim()).filter(Boolean);
   for (const pair of list) {
     const [k, plan] = pair.split(":");
     if (k === key) return plan === "team" ? "team" : plan === "pro" ? "pro" : "starter";
   }
-  return "none";
+  return null;
+}
+
+export type Resolved = { plan: Plan; reason?: string };
+
+/* The plan behind a request: env list first (dev), then Unkey. No key, or a key Unkey rejects, is "none" with the reason kept. */
+export async function resolvePlan(req: Request): Promise<Resolved> {
+  const key = keyFromRequest(req);
+  if (!key) return { plan: "none", reason: "missing" };
+  const env = planFromEnv(key);
+  if (env) return { plan: env };
+  const { verifyKey } = await import("./unkey");
+  const v = await verifyKey(key);
+  return v.plan === "none" ? { plan: "none", reason: v.code } : { plan: v.plan };
 }
 
 export function keyFromRequest(req: Request): string | null {
