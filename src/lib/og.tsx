@@ -7,6 +7,8 @@ import { SITE_URL } from "./site";
    Fonts come from Google at render time and are cached per process. */
 
 export const OG_SIZE = { width: 1200, height: 630 };
+/* The home card renders at 2x so the mascot, the posters and the dot-matrix face stay crisp when platforms downscale it. */
+export const OG_SIZE_2X = { width: 2400, height: 1260 };
 
 const FONT_CSS = "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Doto:wght@700&display=swap";
 let fontsPromise: Promise<{ regular: ArrayBuffer; semibold: ArrayBuffer; doto: ArrayBuffer }> | null = null;
@@ -87,58 +89,60 @@ function loadPublic(rel: string, mime: string) {
 }
 
 /* The home card: a big centred wordmark with the mascot, one line under it, and bits of the product scattered at the edges
-   like things left on a desk: a clip thumbnail with its filename, a colour swatch, the mascot tile, a measurement, a window. */
+   like things left on a desk: a clip thumbnail with its filename, a colour swatch, the mascot tile, a measurement, a window.
+   Laid out in 1200x630 units and drawn at 2x (k) so the mascot, posters and dot-matrix face stay crisp after platforms downscale. */
 export async function ogHero({ line }: { line: string }) {
-  const [fonts, mascot, typewriter, cardReader] = await Promise.all([
+  const [fonts, mascot, tile, typewriter, cardReader] = await Promise.all([
     loadFonts().catch(() => null),
     loadMascot(),
+    readFile(path.join(process.cwd(), "src/app/icon.png")).then((b) => `data:image/png;base64,${b.toString("base64")}`),
     loadPublic("demos/typewriter.jpg", "image/jpeg"),
     loadPublic("demos/card-reader.jpg", "image/jpeg"),
   ]);
+  const k = OG_SIZE_2X.width / OG_SIZE.width;
   const host = SITE_URL.replace(/^https?:\/\//, "");
-  const ring = "1px solid rgba(255,255,255,0.1)";
+  const ring = `${k}px solid rgba(255,255,255,0.1)`;
+  const lift = `0 ${12 * k}px ${32 * k}px rgba(0,0,0,0.6)`;
   return new ImageResponse(
     (
       <div style={{ width: "100%", height: "100%", display: "flex", background: "#0a0a0a", fontFamily: "Inter, sans-serif", position: "relative", overflow: "hidden" }}>
         {/* top-left: a clip thumbnail, cut by the top edge, with its filename under it */}
-        <div style={{ position: "absolute", left: 128, top: -84, display: "flex", flexDirection: "column", alignItems: "center", gap: 14 }}>
-          <div style={{ display: "flex", width: 316, height: 184, borderRadius: 16, background: "#181818", border: ring, padding: 10, boxShadow: "0 12px 32px rgba(0,0,0,0.6)" }}>
+        <div style={{ position: "absolute", left: 128 * k, top: -84 * k, display: "flex", flexDirection: "column", alignItems: "center", gap: 14 * k }}>
+          <div style={{ display: "flex", width: 316 * k, height: 184 * k, borderRadius: 16 * k, background: "#181818", border: ring, padding: 10 * k, boxShadow: lift }}>
             {/* eslint-disable-next-line @next/next/no-img-element -- satori image */}
-            <img src={typewriter} alt="" width={296} height={164} style={{ borderRadius: 8, objectFit: "cover", objectPosition: "50% 42%" }} />
+            <img src={typewriter} alt="" width={296 * k} height={164 * k} style={{ borderRadius: 8 * k, objectFit: "cover", objectPosition: "50% 42%" }} />
           </div>
-          <div style={{ fontSize: 20, color: "#8a8a8a" }}>typewriter.mp4</div>
+          <div style={{ fontSize: 20 * k, color: "#8a8a8a" }}>typewriter.mp4</div>
         </div>
         {/* top centre-right: the card colour, as a swatch */}
-        <div style={{ position: "absolute", left: 784, top: 72, width: 40, height: 40, borderRadius: 999, background: "#2170f5", boxShadow: "0 0 0 6px rgba(33,112,245,0.18), 0 6px 16px rgba(0,0,0,0.6)" }} />
-        {/* top-right: the mascot tile */}
-        <div style={{ position: "absolute", left: 1098, top: 54, width: 82, height: 82, borderRadius: 20, display: "flex", background: "linear-gradient(180deg,#ececec 0%,#cfcfcf 50%,#a8a8a8 100%)", boxShadow: "0 1px 2px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.08)" }}>
-          {/* eslint-disable-next-line @next/next/no-img-element -- satori image */}
-          <img src={mascot} alt="" width={62} height={62} style={{ margin: 10 }} />
-        </div>
+        <div style={{ position: "absolute", left: 784 * k, top: 72 * k, width: 40 * k, height: 40 * k, borderRadius: 999, background: "#2170f5", boxShadow: `0 0 0 ${6 * k}px rgba(33,112,245,0.18), 0 ${6 * k}px ${16 * k}px rgba(0,0,0,0.6)` }} />
+        {/* top-right: the mascot tile, the flat 1024px icon */}
+        {/* eslint-disable-next-line @next/next/no-img-element -- satori image */}
+        <img src={tile} alt="" width={82 * k} height={82 * k} style={{ position: "absolute", left: 1098 * k, top: 54 * k, borderRadius: 20 * k, boxShadow: `0 ${k}px ${2 * k}px rgba(0,0,0,0.6), 0 0 0 ${k}px rgba(255,255,255,0.08)` }} />
         {/* centre: the mark and the wordmark */}
-        <div style={{ position: "absolute", left: 0, right: 0, top: 196, display: "flex", alignItems: "center", justifyContent: "center", gap: 34 }}>
+        <div style={{ position: "absolute", left: 0, right: 0, top: 196 * k, display: "flex", alignItems: "center", justifyContent: "center", gap: 34 * k }}>
           {/* eslint-disable-next-line @next/next/no-img-element -- satori image */}
-          <img src={mascot} alt="" width={168} height={168} />
-          <div style={{ fontSize: 196, fontWeight: 600, color: "#f5f5f5", letterSpacing: -11, lineHeight: 0.95, marginTop: -16 }}>lookap</div>
+          <img src={mascot} alt="" width={168 * k} height={168 * k} />
+          <div style={{ fontSize: 196 * k, fontWeight: 600, color: "#f5f5f5", letterSpacing: -11 * k, lineHeight: 0.95, marginTop: -16 * k }}>lookap</div>
         </div>
-        <div style={{ position: "absolute", left: 0, right: 0, top: 418, display: "flex", justifyContent: "center", fontSize: 40, color: "#c9c9c9", letterSpacing: -0.6 }}>{line}</div>
+        <div style={{ position: "absolute", left: 0, right: 0, top: 418 * k, display: "flex", justifyContent: "center", fontSize: 40 * k, color: "#c9c9c9", letterSpacing: -0.6 * k }}>{line}</div>
         {/* bottom-left: a measurement, in the dot-matrix face we use for callouts */}
-        <div style={{ position: "absolute", left: 38, top: 528, display: "flex", fontFamily: "Doto, Inter, sans-serif", fontSize: 36, fontWeight: 700, color: "#8a8a8a", letterSpacing: 2 }}>376 px · r 28</div>
+        <div style={{ position: "absolute", left: 38 * k, top: 528 * k, display: "flex", fontFamily: "Doto, Inter, sans-serif", fontSize: 36 * k, fontWeight: 700, color: "#8a8a8a", letterSpacing: 2 * k }}>376 px · r 28</div>
         {/* bottom-right: a window, cut by the right and bottom edges, showing the card reader */}
-        <div style={{ position: "absolute", left: 1010, top: 500, width: 360, height: 260, borderRadius: 16, display: "flex", flexDirection: "column", background: "#181818", border: ring, boxShadow: "0 12px 32px rgba(0,0,0,0.6)", overflow: "hidden" }}>
-          <div style={{ display: "flex", gap: 8, padding: "12px 14px" }}>
-            <div style={{ width: 14, height: 14, borderRadius: 999, background: "#ff5f57" }} />
-            <div style={{ width: 14, height: 14, borderRadius: 999, background: "#febc2e" }} />
-            <div style={{ width: 14, height: 14, borderRadius: 999, background: "#28c840" }} />
+        <div style={{ position: "absolute", left: 1010 * k, top: 500 * k, width: 360 * k, height: 260 * k, borderRadius: 16 * k, display: "flex", flexDirection: "column", background: "#181818", border: ring, boxShadow: lift, overflow: "hidden" }}>
+          <div style={{ display: "flex", gap: 8 * k, padding: `${12 * k}px ${14 * k}px` }}>
+            <div style={{ width: 14 * k, height: 14 * k, borderRadius: 999, background: "#ff5f57" }} />
+            <div style={{ width: 14 * k, height: 14 * k, borderRadius: 999, background: "#febc2e" }} />
+            <div style={{ width: 14 * k, height: 14 * k, borderRadius: 999, background: "#28c840" }} />
           </div>
-          <div style={{ display: "flex", width: 360, height: 222, overflow: "hidden" }}>
+          <div style={{ display: "flex", width: 360 * k, height: 222 * k, overflow: "hidden" }}>
             {/* eslint-disable-next-line @next/next/no-img-element -- satori image */}
-            <img src={cardReader} alt="" width={360} height={222} style={{ objectFit: "cover", objectPosition: "50% 50%", transform: "scale(1.35)", transformOrigin: "50% 40%" }} />
+            <img src={cardReader} alt="" width={360 * k} height={222 * k} style={{ objectFit: "cover", objectPosition: "50% 50%", transform: "scale(1.35)", transformOrigin: "50% 40%" }} />
           </div>
         </div>
-        <div style={{ position: "absolute", left: 0, right: 0, top: 580, display: "flex", justifyContent: "center", fontSize: 20, color: "#5a5a5a" }}>{host}</div>
+        <div style={{ position: "absolute", left: 0, right: 0, top: 580 * k, display: "flex", justifyContent: "center", fontSize: 20 * k, color: "#5a5a5a" }}>{host}</div>
       </div>
     ),
-    { ...OG_SIZE, fonts: fontList(fonts) },
+    { ...OG_SIZE_2X, fonts: fontList(fonts) },
   );
 }
