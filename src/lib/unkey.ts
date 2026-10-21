@@ -67,6 +67,21 @@ export async function createKey(userId: string, plan: Exclude<Plan, "none">, nam
   return { keyId: data.keyId, key: data.key };
 }
 
+/* Billing changes reach every key a user owns: switch them on or off, and move them to the plan they now pay for. */
+export async function setUserKeys(userId: string, patch: { enabled?: boolean; plan?: Exclude<Plan, "none"> }) {
+  const mine = await listKeys(userId);
+  await Promise.all(
+    mine.map((k) =>
+      unkey().keys.updateKey({
+        keyId: k.keyId,
+        ...(patch.enabled === undefined ? {} : { enabled: patch.enabled }),
+        ...(patch.plan ? { meta: { plan: patch.plan }, ratelimits: [{ name: "requests", limit: RPM[patch.plan], duration: 60_000, autoApply: true }] } : {}),
+      }),
+    ),
+  );
+  return mine.length;
+}
+
 /* Delete a key, but only one the user owns. */
 export async function revokeKey(userId: string, keyId: string) {
   const mine = await listKeys(userId);

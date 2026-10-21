@@ -27,7 +27,7 @@ const FAN = [
 /* The only way in: an email and the code we send to it. Known addresses sign in; new ones give a name first, then become accounts.
    Rendered through a portal so the header's backdrop filter cannot trap the fixed overlay. Layout follows the same bones as
    Vibrant's dialog (title row, a hairline band holding the form card, a poster fan peeking under the edge) in our dark silver tokens. */
-export function AuthDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
+export function AuthDialog({ open, onClose, next }: { open: boolean; onClose: () => void; next?: string }) {
   const { signIn, fetchStatus: inStatus } = useSignIn();
   const { signUp, fetchStatus: upStatus } = useSignUp();
   const router = useRouter();
@@ -52,8 +52,8 @@ export function AuthDialog({ open, onClose }: { open: boolean; onClose: () => vo
   }, [open]);
 
   const navigate = ({ decorateUrl }: { decorateUrl: (u: string) => string }) => {
-    const url = decorateUrl(window.location.pathname);
-    if (url.startsWith("http")) window.location.href = url;
+    const url = decorateUrl(next ?? window.location.pathname);
+    if (url.startsWith("http") || next) window.location.href = url;
     else done();
   };
 

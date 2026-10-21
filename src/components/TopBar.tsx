@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Show } from "@clerk/nextjs";
 import { UserMenu } from "./auth/UserMenu";
 import { AuthDialog } from "./auth/AuthDialog";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { Mark } from "./Mark";
 import { badge, button } from "./button";
 
@@ -18,7 +18,11 @@ const NAV = [
 
 export function TopBar() {
   const path = usePathname();
+  const params = useSearchParams();
+  const wantsSignIn = params.get("signin") === "1";
+  const next = params.get("next");
   const [auth, setAuth] = useState(false);
+  const open = auth || wantsSignIn;
   return (
     <header className="sticky top-0 z-[80] w-full border-b border-line bg-gutter/90 backdrop-blur">
       <div className="mx-auto flex h-14 w-full max-w-[1680px] items-center gap-5 px-4">
@@ -47,7 +51,7 @@ export function TopBar() {
           </Show>
         </div>
       </div>
-      <AuthDialog open={auth} onClose={() => setAuth(false)} />
+      <AuthDialog open={open} next={next && next.startsWith("/") ? next : undefined} onClose={() => { setAuth(false); if (wantsSignIn) window.history.replaceState(null, "", path); }} />
     </header>
   );
 }

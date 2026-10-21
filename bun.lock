@@ -8,6 +8,8 @@
         "@anthropic-ai/sdk": "^0.136.0",
         "@clerk/nextjs": "^7.9.18",
         "@modelcontextprotocol/sdk": "^1.32.1",
+        "@polar-sh/nextjs": "1.1.0",
+        "@polar-sh/sdk": "1.0.2",
         "@unkey/api": "2.5.4",
         "@vercel/analytics": "^2.0.1",
         "next": "16.4.2",
@@ -212,6 +214,12 @@
     "@nolyfill/is-core-module": ["@nolyfill/is-core-module@1.0.39", "", {}, "sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA=="],
 
     "@opentelemetry/api": ["@opentelemetry/api@1.10.0", "", {}, "sha512-lMkyes8iHrG+mk6WH7X70MdCLI2RS0FwNBY1PyQ8UemaijE2m5mv5A0Niy3HtbYTFrgkUEQjFMXmSAk2hQDuPQ=="],
+
+    "@polar-sh/adapter-utils": ["@polar-sh/adapter-utils@1.1.0", "", { "dependencies": { "@polar-sh/sdk": "1.0.2", "zod": "^4.6.5" } }, "sha512-v2bh7wggBx7Sp4E9qFWDI3IN4vojSq0q2isl/ek2mi86JoNzjfgn+xJkYGgwGoc+e45P0egJTmiueEWTLGgPxw=="],
+
+    "@polar-sh/nextjs": ["@polar-sh/nextjs@1.1.0", "", { "dependencies": { "@polar-sh/adapter-utils": "1.1.0", "@polar-sh/sdk": "1.0.2" }, "peerDependencies": { "next": "^15.0.0 || ^16.0.0" } }, "sha512-90FMdGyJ+XfLuSQ/rD2r9Y3axtFKE/18P3v518Fai+QloB8W+oTCWSslNb+z+RofEM0SAKmikyrLlAzd9OZhAg=="],
+
+    "@polar-sh/sdk": ["@polar-sh/sdk@1.0.2", "", {}, "sha512-c3jdqYloVfcejKsAqYfYcW4bG7KkXj5bXkgdsdx4GHlJPzHFV5tysfeZGf9V7dJReLBirAluchsuHWiAIBco8w=="],
 
     "@rtsao/scc": ["@rtsao/scc@1.1.0", "", {}, "sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g=="],
 
