@@ -4,7 +4,7 @@ import { AI_BOT_RE, AI_NOTICE } from "@/lib/bots";
 
 /* AI crawlers and scraper clients get a 403 with the notice on every page. /api stays open: /api/mcp is the product
    (Claude Code, Cursor and Codex call it with fetch-style user agents) and /api/webhooks receives Clerk and Polar. */
-const OPEN = /^\/(api\/|robots\.txt$|sitemap\.xml$|llms\.txt$|manifest\.webmanifest$)/;
+const OPEN = /^\/(api\/|install\.sh$|robots\.txt$|sitemap\.xml$|llms\.txt$|manifest\.webmanifest$)/;
 
 export default clerkMiddleware((_auth, req) => {
   const ua = req.headers.get("user-agent") ?? "";
