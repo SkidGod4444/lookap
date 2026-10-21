@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ENTRIES } from "@/lib/data";
 import { FeedGrid } from "@/components/FeedGrid";
 import { CardSleeve } from "@/components/demo/CardSleeve";
-import { RECIPES, NOTES } from "@/lib/registry";
+import { RECIPES, NOTES, TOOLS } from "@/lib/registry";
 import { button } from "@/components/button";
 
 export default function Home() {
@@ -30,7 +30,7 @@ export default function Home() {
             <div><dt className="text-silver-bright">{ENTRIES.filter((e) => !e.sponsored).length}</dt><dd>entries</dd></div>
             <div><dt className="text-silver-bright">{RECIPES.length}</dt><dd>measured recipes</dd></div>
             <div><dt className="text-silver-bright">{NOTES.length}</dt><dd>design notes</dd></div>
-            <div><dt className="text-silver-bright">6</dt><dd>MCP tools</dd></div>
+            <div><dt className="text-silver-bright">{TOOLS.length}</dt><dd>MCP tools</dd></div>
           </dl>
         </div>
         <div className="relative min-w-0 overflow-hidden rounded-2xl bg-black ring-1 ring-line">

@@ -1,4 +1,4 @@
-import { ENTRIES, SECTIONS, type Entry } from "@/lib/data";
+import { ENTRIES, SECTIONS, sectionSlug, type Entry } from "@/lib/data";
 
 /* The lookap registry: what the MCP server serves. Three kinds of knowledge:
    1. entries, the curated feed (title, category, types, author, demo clip when we own one)
@@ -131,15 +131,30 @@ export const NOTES: Note[] = [
   },
 ];
 
-export function searchEntries(q: string, opts: { category?: string; kind?: Entry["kind"]; limit?: number } = {}) {
+export type SearchOpts = { category?: string; kind?: Entry["kind"]; section?: string; tone?: Entry["tone"]; author?: string; limit?: number };
+
+/* Ranked search. Title hits outrank type hits, which outrank description hits; a whole-phrase title match tops all.
+   Filters narrow before ranking. An empty query with filters is a browse. */
+export function searchEntries(q: string, opts: SearchOpts = {}) {
   const needle = q.trim().toLowerCase();
-  const words = needle ? needle.split(/\s+/) : [];
+  const words = needle ? needle.split(/\s+/).filter((w) => w.length > 1) : [];
+  const section = opts.section ? sectionSlug(opts.section) : null;
   const scored = ENTRIES.filter((e) => !e.sponsored)
     .filter((e) => (opts.category ? e.category.toLowerCase() === opts.category.toLowerCase() : true))
     .filter((e) => (opts.kind ? e.kind === opts.kind : true))
+    .filter((e) => (opts.tone ? e.tone === opts.tone : true))
+    .filter((e) => (opts.author ? e.authorName.toLowerCase().includes(opts.author.toLowerCase()) || e.x?.toLowerCase() === opts.author.toLowerCase().replace(/^@/, "") : true))
+    .filter((e) => (section ? sectionSlug(e.category) === section || e.types.some((t) => sectionSlug(t) === section) : true))
     .map((e) => {
-      const hay = `${e.title} ${e.category} ${e.types.join(" ")} ${e.description}`.toLowerCase();
-      const score = words.length ? words.reduce((n, w) => n + (hay.includes(w) ? 1 : 0), 0) + (e.title.toLowerCase().includes(needle) ? 2 : 0) : 1;
+      const title = e.title.toLowerCase(), types = e.types.map((t) => t.toLowerCase()), desc = e.description.toLowerCase(), cat = e.category.toLowerCase();
+      let score = words.length ? 0 : 1;
+      for (const w of words) {
+        if (title.includes(w)) score += 4;
+        if (cat === w || types.some((t) => t === w)) score += 3;
+        else if (types.some((t) => t.includes(w))) score += 2;
+        if (desc.includes(w)) score += 1;
+      }
+      if (needle && title.includes(needle)) score += 6;
       return { e, score };
     })
     .filter((x) => x.score > 0)
@@ -147,11 +162,84 @@ export function searchEntries(q: string, opts: { category?: string; kind?: Entry
   return scored.slice(0, opts.limit ?? 12).map((x) => x.e);
 }
 
+/* Entries that share types with this one, then category, then kind. A rare shared type (Segmented) counts for more
+   than a common one (Dark). The entry itself is never returned. */
+const TYPE_COUNT = new Map<string, number>();
+for (const e of ENTRIES) for (const t of e.types) TYPE_COUNT.set(t.toLowerCase(), (TYPE_COUNT.get(t.toLowerCase()) ?? 0) + 1);
+const rarity = (t: string) => 1 / Math.log(2 + (TYPE_COUNT.get(t.toLowerCase()) ?? 1));
+
+export function similarEntries(e: Entry, limit = 8) {
+  const mine = new Set(e.types.map((t) => t.toLowerCase()));
+  return ENTRIES.filter((x) => x.slug !== e.slug && !x.sponsored)
+    .map((x) => ({ x, score: x.types.filter((t) => mine.has(t.toLowerCase())).reduce((n, t) => n + 6 * rarity(t), 0) + (x.category === e.category ? 1.5 : 0) + (x.kind === e.kind ? 0.5 : 0) + (x.tone === e.tone ? 0.5 : 0) }))
+    .filter((r) => r.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map((r) => r.x);
+}
+
+/* What the catalog is made of, so an agent learns the vocabulary before it searches. */
+export function facets() {
+  const count = (pick: (e: Entry) => string[]) => {
+    const m = new Map<string, number>();
+    for (const e of ENTRIES) if (!e.sponsored) for (const k of pick(e)) m.set(k, (m.get(k) ?? 0) + 1);
+    return [...m.entries()].sort((a, b) => b[1] - a[1]).map(([name, n]) => ({ name, n }));
+  };
+  return { kinds: count((e) => [e.kind]), categories: count((e) => [e.category]), tones: count((e) => [e.tone]), types: count((e) => e.types).slice(0, 40) };
+}
+
+/* A rebuild brief for an entry with no measured recipe: everything the record and the notes can say, with timing
+   labeled as proposed. When a measured recipe exists it is the brief, and this points at it. */
+export function briefFor(e: Entry) {
+  const recipe = recipeFor(e);
+  const wide = e.ratio >= 1.2, tall = e.ratio < 0.85;
+  const notes = NOTES.filter((n) => n.slug === "motion-from-stills" || (e.tone === "dark" && n.slug === "dark-silver-tokens") || (e.types.some((t) => /button|toggle|switch/i.test(t)) && n.slug === "machined-metal-buttons"));
+  return {
+    slug: e.slug,
+    title: e.title,
+    measured: Boolean(recipe),
+    recipe: recipe?.slug ?? null,
+    what: e.description,
+    frame: { ratio: Number(e.ratio.toFixed(3)), shape: tall ? "portrait" : wide ? "landscape" : "square", media: e.video ? "clip" : "still" },
+    tone: e.tone === "dark" ? "dark surface, light type" : e.tone === "light" ? "light surface, dark type" : "coloured surface; take the palette from the media",
+    traits: e.types,
+    section: e.category,
+    steps: [
+      "Call see_design for the frame and read the layout from it: regions, alignment, type scale, corner radii, spacing rhythm.",
+      e.video ? "The media is a clip: name each state you can see (rest, hover, press, open) and the order they occur in." : "The media is a still: it carries layout, colour and type, not timing.",
+      "Build with the project's own stack and tokens; match proportion and hierarchy before matching pixels.",
+      e.video ? "Timing below is proposed, not measured. Ask for get_recipe when a measured one exists." : "Timing below is proposed, not observed. Label it so in the code.",
+    ],
+    motion: {
+      status: recipe ? "measured, see get_recipe" : "proposed",
+      enter: "fade up 12 px, 320 ms, cubic-bezier(0.2, 0.8, 0.2, 1)",
+      hover: e.types.some((t) => /hover|card/i.test(t)) ? "ring brightens or lift 2 px with shadow, 150 ms" : "colour or ring only, 150 ms",
+      press: "scale 0.98, 120 ms",
+      reducedMotion: "respect prefers-reduced-motion: no entrance, instant hover",
+    },
+    notes: notes.map((n) => ({ slug: n.slug, title: n.title })),
+    credit: { author: e.authorName, x: e.x ?? null, source: e.sourceUrl ?? null },
+  };
+}
+
 export const CATEGORIES = Array.from(new Set(ENTRIES.map((e) => e.category))).sort();
 export const SECTION_NAMES = [...SECTIONS];
 
+/* The tools the MCP server registers, with the plan that opens each. The /mcp page and the home count read this. */
+export const TOOLS = [
+  ["search_designs", "Find interfaces by words, section, kind, tone or designer. Returns facets too.", "starter"],
+  ["similar_designs", "Entries that share traits with one slug.", "starter"],
+  ["get_design", "Attribution, traits, media and the measured recipe for one entry.", "starter · recipe pro"],
+  ["get_brief", "How to rebuild an entry: frame, tone, steps, proposed motion, notes that apply.", "starter"],
+  ["see_design", "The entry's frame as an image, for agents that can look.", "pro"],
+  ["get_recipe", "Palette, geometry, type and motion table, read from the clip's pixels.", "pro"],
+  ["list_notes", "Design guidance distilled from the rebuilds.", "starter"],
+  ["get_note", "One note in full.", "starter"],
+  ["check_media", "Does this clip or still hold an interface? Signals, verdict, score.", "pro"],
+] as const;
+
 export function publicEntry(e: Entry) {
-  return { slug: e.slug, title: e.title, kind: e.kind, category: e.category, types: e.types, author: e.authorName, x: e.x ?? null, sample: e.sample, description: e.description, ratio: Number(e.ratio.toFixed(3)), duration: e.duration ?? null, media: e.video ? { type: "video" as const, src: e.video.src, w: e.video.w, h: e.video.h } : e.image ? { type: "image" as const, src: e.image.src, w: e.image.w, h: e.image.h } : null, source: e.sourceUrl ?? null, demo: e.video?.src.startsWith("/") ? e.video.src : null, recipe: recipeFor(e)?.slug ?? null };
+  return { slug: e.slug, title: e.title, kind: e.kind, category: e.category, types: e.types, tone: e.tone, author: e.authorName, x: e.x ?? null, sample: e.sample, description: e.description, ratio: Number(e.ratio.toFixed(3)), duration: e.duration ?? null, media: e.video ? { type: "video" as const, src: e.video.src, w: e.video.w, h: e.video.h } : e.image ? { type: "image" as const, src: e.image.src, w: e.image.w, h: e.image.h } : null, source: e.sourceUrl ?? null, demo: e.video?.src.startsWith("/") ? e.video.src : null, recipe: recipeFor(e)?.slug ?? null };
 }
 
 export function recipeFor(e: Entry) {
