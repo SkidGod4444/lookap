@@ -73,7 +73,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           </Suspense>
           {/* The page scrolls here, under the top bar, so the scrollbar never runs through it. 57 = bar 56 + its border. */}
           <div id="scroll" className="h-[calc(100%_-_57px)] overflow-y-auto overflow-x-hidden">
-            <ScrollReset />
+            {/* reads the URL, so it streams in after the static shell */}
+            <Suspense fallback={null}>
+              <ScrollReset />
+            </Suspense>
             <Inertia />
             <div className="relative mx-auto flex min-h-full w-full max-w-[1680px] flex-col bg-canvas p-4 ring-1 ring-line">
               <Suspense fallback={null}>

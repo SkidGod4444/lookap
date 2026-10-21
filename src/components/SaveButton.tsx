@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useUser } from "@clerk/nextjs";
 import { badge, button } from "./button";
 import { createBoard, loadBoards, toggleItem, useBoards } from "@/lib/boards-client";
@@ -11,7 +11,6 @@ import { createBoard, loadBoards, toggleItem, useBoards } from "@/lib/boards-cli
 export function SaveButton({ slug, className = "", label = false }: { slug: string; className?: string; label?: boolean }) {
   const { isSignedIn } = useUser();
   const router = useRouter();
-  const path = usePathname();
   const { boards, loading, error } = useBoards();
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
@@ -32,7 +31,7 @@ export function SaveButton({ slug, className = "", label = false }: { slug: stri
   const saved = Boolean(boards?.some((b) => b.slugs.includes(slug)));
 
   const onClick = () => {
-    if (!isSignedIn) { router.push(`${path}?signin=1&next=${encodeURIComponent(path)}`); return; }
+    if (!isSignedIn) { const path = window.location.pathname; router.push(`${path}?signin=1&next=${encodeURIComponent(path)}`); return; }
     setNote(null);
     setOpen((v) => !v);
   };
