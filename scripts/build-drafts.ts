@@ -17,7 +17,7 @@ export type Draft = {
   /* per measured phase: the box of everything that is not background at its start and at its end, and which edges
      moved. "top fixed, bottom +120" is a pull with the top pinned; "all edges" is a layout shift; "none" a change
      inside the box (a colour, text, a row opening without growing the whole) */
-  anchors: { phase: [number, number]; start: [number, number, number, number]; end: [number, number, number, number]; moved: { top: number; bottom: number; left: number; right: number }; read: string }[];
+  anchors: { phase: [number, number]; start: [number, number, number, number]; end: [number, number, number, number]; moved: { top: number; bottom: number; left: number; right: number }; read: string; reliable: boolean }[];
   background: string; palette: { hex: string; share: number }[];
   elements: { box: [number, number, number, number]; fill: string }[];
   motion: { element: string; box: [number, number, number, number]; moves: { from: number; to: number; dTop: number; dLeft: number; ms: number }[] }[];
@@ -72,8 +72,10 @@ for (const id of ids) {
       const still = (v: number) => Math.abs(v) <= 6;
       const parts = (["top", "bottom", "left", "right"] as const).filter((k) => !still(moved[k])).map((k) => `${k} ${moved[k] > 0 ? "+" : ""}${moved[k]}`);
       const fixed = (["top", "bottom", "left", "right"] as const).filter((k) => still(moved[k]));
-      const read = parts.length === 0 ? "none of the content's edges moved: the change is inside the box" : fixed.length === 0 ? `all edges moved (${parts.join(", ")}): the whole shifts or the page reflows` : `${fixed.join(" and ")} fixed, ${parts.join(", ")}`;
-      anchors.push({ phase: [a, b], start: s0, end: s1, moved, read });
+      /* on a gradient, a photo or a browser window the content box is the whole frame and says nothing about edges */
+      const reliable = (s0[2] * s0[3]) / (W * H) < 0.85 && (s1[2] * s1[3]) / (W * H) < 0.85;
+      const read = !reliable ? "the content fills the frame (a gradient, photo or window behind it), so its edges cannot be read against the background: use look_at what=track on a column through the moving part" : parts.length === 0 ? "none of the content's edges moved: the change is inside the box" : fixed.length === 0 ? `all edges moved (${parts.join(", ")}): the whole shifts or the page reflows` : `${fixed.join(" and ")} fixed, ${parts.join(", ")}`;
+      anchors.push({ phase: [a, b], start: s0, end: s1, moved, read, reliable });
     }
   }
   out[id] = {

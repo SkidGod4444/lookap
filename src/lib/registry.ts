@@ -231,7 +231,7 @@ export function briefFor(e: Entry) {
       /* every moment a checker scores: the keyframes and the middle of each phase, where things are mid-flight; look_at serves them all */
       moments: [...draft.keyframes.map((k) => ({ at: k.at, name: k.name })), ...draft.mids.map((m) => ({ at: m.at, name: "mid-phase" }))].sort((p, q) => p.at - q.at),
       /* which edges of the content moved in each phase: a pull with the top pinned reads "top fixed, bottom +112"; a reflow moves every edge */
-      anchors: draft.anchors.map((a) => ({ phase: a.phase, read: a.read, moved: a.moved })),
+      anchors: draft.anchors.map((a) => (a.reliable ? { phase: a.phase, read: a.read, moved: a.moved, reliable: true } : { phase: a.phase, read: a.read, reliable: false })),
       background: draft.background, palette: draft.palette,
       /* boxes near the background's own colour are shadows and glows, not parts; they are left out here */
       elements: draft.elements.filter((el) => { const c = (h: string) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16)); const [a, b] = [c(el.fill), c(draft.background)]; return Math.abs(a[0] - b[0]) + Math.abs(a[1] - b[1]) + Math.abs(a[2] - b[2]) > 84; }),
