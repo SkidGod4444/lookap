@@ -23,7 +23,7 @@ const REASONS: Record<string, string> = {
   NOT_FOUND: "got a key lookap does not recognise. Check it at /account, or get one at /pricing.",
   DISABLED: "got a key that is switched off. Manage it at /account.",
   EXPIRED: "got an expired key. Get a new one at /account.",
-  RATE_LIMITED: "is over this key's limit. Move to a higher plan at /pricing.",
+  RATE_LIMITED: "is going too fast: more than 30 requests in a minute on this key. Wait a minute and continue; the daily allowance is unchanged.",
   USAGE_EXCEEDED: "has used up this key's credits for the period.",
   NOT_CONFIGURED: "cannot verify keys right now: the server has no Unkey configuration.",
 };

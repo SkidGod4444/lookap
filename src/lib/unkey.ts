@@ -18,8 +18,9 @@ function unkey() {
   return client;
 }
 
-/* Pace is not limited per minute: tool calls are counted per day per account in Redis (usage.ts), so the keys carry no
-   Unkey rate limit. Updating a key clears any limit an older key was minted with. */
+/* One flat brake on every key, whatever the plan: 30 requests a minute, enforced by Unkey at verification. It is not a
+   tier, only protection against a looping agent; the plan's ceiling is the daily allowance counted in Redis (usage.ts). */
+const BRAKE = [{ name: "requests", limit: 30, duration: 60_000, autoApply: true }];
 const PLANS = new Set<Plan>(["starter", "pro", "team"]);
 
 export type Verified =
@@ -84,6 +85,7 @@ export async function createKey(userId: string, plan: Exclude<Plan, "none">, nam
     name: name.slice(0, 60) || `${plan} key`,
     externalId: userId,
     meta: { plan },
+    ratelimits: BRAKE,
   });
   return { keyId: data.keyId, key: data.key };
 }
@@ -96,7 +98,7 @@ export async function setUserKeys(userId: string, patch: { enabled?: boolean; pl
       unkey().keys.updateKey({
         keyId: k.keyId,
         ...(patch.enabled === undefined ? {} : { enabled: patch.enabled }),
-        ...(patch.plan ? { meta: { plan: patch.plan }, ratelimits: [] } : {}),
+        ...(patch.plan ? { meta: { plan: patch.plan }, ratelimits: BRAKE } : {}),
       }),
     ),
   );
