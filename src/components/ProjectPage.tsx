@@ -2,6 +2,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ENTRIES, bySlug, sectionSlug } from "@/lib/data";
 import { Media, STAGE_SIZES, TILE_SIZES } from "./Media";
+import { Avatar } from "./Avatar";
+import { avatarUrl } from "@/lib/avatar";
+import { preload } from "react-dom";
 import { hrefFor } from "./FeedCard";
 import { button } from "./button";
 import { LockScroll } from "./LockScroll";
@@ -13,6 +16,8 @@ export function ProjectPage({ slug }: { slug: string }) {
   const similar = ENTRIES.filter((e) => e.slug !== entry.slug && (e.category === entry.category || e.kind === entry.kind)).slice(0, 6);
   const wide = entry.ratio >= 1;
   const site = entry.site && entry.site !== "example.com" ? `https://${entry.site}` : null;
+  /* the credit's picture starts loading from the document head, before any script runs */
+  if (entry.x) preload(avatarUrl(entry.x), { as: "image" });
 
   return (
     /* on large screens the page does not scroll: the stage is fixed and only the panel scrolls */
@@ -34,7 +39,7 @@ export function ProjectPage({ slug }: { slug: string }) {
           {/* credit: links out only when we hold a verified handle or it is our own work; samples say so */}
           {entry.x || entry.sourceUrl ? (
             <a href={entry.x ? `https://x.com/${entry.x}` : entry.sourceUrl} className="group flex items-center gap-2.5">
-              <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-[#080808] text-[10px] font-semibold uppercase text-silver-bright ring-1 ring-line-strong">{entry.authorName.split(" ").map((w) => w[0]).slice(0, 2).join("")}</span>
+              <Avatar name={entry.authorName} x={entry.x} />
               <span className="min-w-0 flex-1">
                 <span className="block truncate text-[13px] font-medium text-foreground group-hover:underline underline-offset-2">{entry.authorName}</span>
                 <span className="block truncate text-[12px] text-subtle">{entry.x ? `@${entry.x}` : entry.sourceUrl?.includes("github.com") ? "source on GitHub" : "source"}</span>
@@ -42,7 +47,7 @@ export function ProjectPage({ slug }: { slug: string }) {
             </a>
           ) : (
             <div className="flex items-center gap-2.5">
-              <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-[#080808] text-[10px] font-semibold uppercase text-silver-bright ring-1 ring-line-strong">{entry.authorName.split(" ").map((w) => w[0]).slice(0, 2).join("")}</span>
+              <Avatar name={entry.authorName} x={entry.x} />
               <span className="min-w-0 flex-1">
                 <span className="block truncate text-[13px] font-medium text-foreground">{entry.authorName}</span>
                 <span className="block truncate text-[12px] text-subtle">Sample entry. Real credits link to the designer.</span>
