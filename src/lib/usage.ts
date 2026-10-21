@@ -2,9 +2,10 @@ import "server-only";
 import { dbReady, kv } from "./db";
 import type { Plan } from "./keys";
 
-/* Monthly quotas per key for the tools that cost us something (an image, a diff, a download). Search and the text
-   tools are only rate limited per minute by Unkey. Counters live in Redis as usage:<key>:<month>:<tool>, expire on
-   their own, and reset on the first of the month (UTC). A tool with no entry for a plan is unmetered on that plan. */
+/* Monthly quotas per account for the tools that cost us something (an image, a diff, a download). Search and the text
+   tools are only rate limited per minute by Unkey. Counters live in Redis as usage:user:<id>:<month>:<tool>, so every
+   key a user mints draws on one counter; they expire on their own and reset on the first of the month (UTC). A tool
+   with no entry for a plan is unmetered on that plan. */
 export const QUOTAS: Record<Plan, Partial<Record<string, number>>> = {
   none: {},
   starter: {},

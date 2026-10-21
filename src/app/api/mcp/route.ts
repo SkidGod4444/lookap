@@ -47,7 +47,7 @@ async function loadFrame(poster: string): Promise<{ data: string; mimeType: stri
    call answering with the pointer to pricing. */
 const LOCK: Record<string, keyof (typeof LIMITS)["pro"]> = { get_recipe: "recipes", see_design: "media", check_rebuild: "media", check_media: "media", get_rebuild: "source" };
 const NEEDS: Record<string, string> = { recipes: "Pro", media: "Pro", source: "Team" };
-const spent = (what: string, u: { used: number; limit: number; resets: string }) => text({ error: `${what} has used its ${u.limit} calls for this month on this key. Resets ${u.resets}. A higher plan at /pricing raises it.`, usage: u });
+const spent = (what: string, u: { used: number; limit: number; resets: string }) => text({ error: `${what} has used its ${u.limit} calls for this month on this account. Resets ${u.resets}. A higher plan at /pricing raises it.`, usage: u });
 
 function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
   const lim = LIMITS[plan];
@@ -63,7 +63,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
         "Every tool needs a key (Starter $1/mo at /pricing); see_design, get_recipe, check_rebuild and check_media need Pro; get_rebuild, the finished source, needs Team. " +
         (plan === "none" ? "" : `This key is ${plan}. `) +
         (hidden.length ? `Not on this plan, so not listed: ${hidden.join(", ")}; see /pricing. ` : "") +
-        (quotas.length ? `Monthly quotas on this key: ${quotas.join(", ")}; get_usage shows what is left. ` : "") +
+        (quotas.length ? `Monthly quotas on this account, shared by all its keys: ${quotas.join(", ")}; get_usage shows what is left. ` : "") +
         (stale ? "Key verification used a cached result because the key service was unreachable; limits still apply." : ""),
     },
   );
@@ -325,7 +325,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
 
   reg(
     "get_usage",
-    { title: "What this key has left", description: "The key's plan, the tools it opens, the monthly quotas on it with what has been used, and when they reset. Needs a key.", annotations: ro },
+    { title: "What this key has left", description: "The key's plan, the tools it opens, the account's monthly quotas with what has been used across all its keys, and when they reset. Needs a key.", annotations: ro },
     async () => {
       if (plan === "none") return gated("get_usage", plan, reason);
       const usage = keyRef ? await usageFor(keyRef, plan) : {};
