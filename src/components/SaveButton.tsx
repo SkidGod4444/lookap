@@ -8,7 +8,8 @@ import { createBoard, loadBoards, toggleItem, useBoards } from "@/lib/boards-cli
 
 /* The bookmark on a card. Signed out, it opens sign-in and comes back here. Signed in, it opens a picker of the
    person's moodboards: tick to add, untick to remove, or make a new one in place. Filled when the entry is on any board. */
-export function SaveButton({ slug, className = "", label = false }: { slug: string; className?: string; label?: boolean }) {
+/* `className` must position the wrapper (relative or absolute); the picker is anchored to it. */
+export function SaveButton({ slug, className = "relative", label = false }: { slug: string; className?: string; label?: boolean }) {
   const { isSignedIn } = useUser();
   const router = useRouter();
   const { boards, loading, error } = useBoards();
@@ -51,7 +52,7 @@ export function SaveButton({ slug, className = "", label = false }: { slug: stri
   };
 
   return (
-    <div ref={ref} className={`relative ${className}`}>
+    <div ref={ref} className={className}>
       <button
         type="button"
         onClick={onClick}

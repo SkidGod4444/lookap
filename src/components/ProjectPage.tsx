@@ -35,7 +35,7 @@ export function ProjectPage({ slug }: { slug: string }) {
           <header className="flex flex-col gap-2">
             <div className="flex items-start justify-between gap-3">
               <h1 className="text-[20px] leading-[1.2] font-medium tracking-[-0.02em] text-balance text-foreground">{entry.title}</h1>
-              <SaveButton slug={entry.slug} label className="shrink-0" />
+              <SaveButton slug={entry.slug} label className="relative shrink-0" />
             </div>
             <p className="text-[14px] leading-[1.55] text-pretty text-subtle">{entry.description}</p>
           </header>
