@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "measure": "bun scripts/measure.ts",
-    "bench:measure": "bun scripts/bench-measure.ts"
+    "bench:measure": "bun scripts/bench-measure.ts",
+    "measure:all": "bun scripts/measure-all.ts",
+    "drafts": "bun scripts/build-drafts.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.136.0",

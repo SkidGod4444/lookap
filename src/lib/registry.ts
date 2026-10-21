@@ -1,5 +1,6 @@
 import { ENTRIES, SECTIONS, sectionSlug, type Entry } from "@/lib/data";
 import { METHOD, SPECS, type Spec } from "@/lib/specs";
+import { DRAFT_NOTE, draftFor } from "@/lib/drafts";
 
 /* The lookap registry: what the MCP server serves. Three kinds of knowledge:
    1. entries, the curated feed (title, category, types, author, media, credit)
@@ -205,6 +206,7 @@ export function facets() {
    labeled as proposed. When a measured recipe exists it is the brief, and this points at it. */
 export function briefFor(e: Entry) {
   const recipe = recipeFor(e);
+  const draft = recipe ? undefined : draftFor(e);
   const wide = e.ratio >= 1.2, tall = e.ratio < 0.85;
   const notes = NOTES.filter((n) => n.slug === "motion-from-stills" || (e.tone === "dark" && n.slug === "dark-silver-tokens") || (e.types.some((t) => /button|toggle|switch/i.test(t)) && n.slug === "machined-metal-buttons"));
   return {
@@ -221,10 +223,11 @@ export function briefFor(e: Entry) {
       "Call see_design for the frame and read the layout from it: regions, alignment, type scale, corner radii, spacing rhythm.",
       e.video ? "The media is a clip: name each state you can see (rest, hover, press, open) and the order they occur in." : "The media is a still: it carries layout, colour and type, not timing.",
       "Build with the project's own stack and tokens; match proportion and hierarchy before matching pixels.",
-      e.video ? "Timing below is proposed, not measured. Ask for get_recipe when a measured one exists." : "Timing below is proposed, not observed. Label it so in the code.",
+      draft ? "A draft measurement is attached: its phases, moves and palette are measured from the clip; its boxes are a first pass to check against the keyframes." : e.video ? "Timing below is proposed, not measured. Ask for get_recipe when a measured one exists." : "Timing below is proposed, not observed. Label it so in the code.",
     ],
+    draft: draft ? { frame: draft.frame, duration: draft.duration, phases: draft.phases, keyframes: draft.keyframes.map((k) => ({ name: k.name, at: k.at, hold: k.hold })), background: draft.background, palette: draft.palette, elements: draft.elements, motion: draft.motion, coverage: draft.coverage, confidence: DRAFT_NOTE } : null,
     motion: {
-      status: recipe ? "measured, see get_recipe" : "proposed",
+      status: recipe ? "measured, see get_recipe" : draft ? "draft measured: see draft.phases and draft.motion for what moved, when and how far" : "proposed",
       enter: "fade up 12 px, 320 ms, cubic-bezier(0.2, 0.8, 0.2, 1)",
       hover: e.types.some((t) => /hover|card/i.test(t)) ? "ring brightens or lift 2 px with shadow, 150 ms" : "colour or ring only, 150 ms",
       press: "scale 0.98, 120 ms",
@@ -236,7 +239,9 @@ export function briefFor(e: Entry) {
     build: recipe ? { ...recipe.build, note: "whole-session totals for the measured rebuild, feedback rounds included; with the recipe in hand expect one pass" } : null,
     oneShot: recipe
       ? "get_recipe has every value as data: frame, elements with boxes, timing, states, keyframes, checks. Build from it, render, then call check_rebuild with a screenshot and fix what it reports. A Max key can call get_rebuild for the finished file and port it."
-      : "No measured recipe yet: see_design, build from the frame, then compare by eye against it.",
+      : draft
+        ? "No measured recipe, but a draft: build from draft.elements and draft.motion, look at each keyframe with see_design (at), then call check_rebuild with a screenshot; its regions are reliable, its element rows are as good as the draft boxes."
+        : "No measured recipe yet: see_design, build from the frame, then compare by eye against it.",
   };
 }
 
@@ -262,7 +267,7 @@ export const TOOLS = [
 ] as const;
 
 export function publicEntry(e: Entry) {
-  return { slug: e.slug, title: e.title, kind: e.kind, category: e.category, types: e.types, tone: e.tone, author: e.authorName, x: e.x ?? null, sample: e.sample, description: e.description, ratio: Number(e.ratio.toFixed(3)), duration: e.duration ?? null, media: e.video ? { type: "video" as const, src: e.video.src, w: e.video.w, h: e.video.h } : e.image ? { type: "image" as const, src: e.image.src, w: e.image.w, h: e.image.h } : null, source: e.sourceUrl ?? null, recipe: recipeFor(e)?.slug ?? null };
+  return { slug: e.slug, title: e.title, kind: e.kind, category: e.category, types: e.types, tone: e.tone, author: e.authorName, x: e.x ?? null, sample: e.sample, description: e.description, ratio: Number(e.ratio.toFixed(3)), duration: e.duration ?? null, media: e.video ? { type: "video" as const, src: e.video.src, w: e.video.w, h: e.video.h } : e.image ? { type: "image" as const, src: e.image.src, w: e.image.w, h: e.image.h } : null, source: e.sourceUrl ?? null, recipe: recipeFor(e)?.slug ?? null, draft: !recipeFor(e) && Boolean(draftFor(e)) };
 }
 
 /* 108605 -> "109k", 12467511 -> "12.5M" */
