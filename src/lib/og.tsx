@@ -5,27 +5,23 @@ import { SITE_URL } from "./site";
 import type { Entry } from "./data";
 
 /* Shared Open Graph card: dark gutter, a canvas panel, the mascot tile, a headline, a line, and the domain.
-   Fonts come from Google at render time and are cached per process. */
+   Fonts are read from disk and cached per process. */
 
 export const OG_SIZE = { width: 1200, height: 630 };
 /* The home card renders at 2x so the mascot, the posters and the dot-matrix face stay crisp when platforms downscale it. */
 export const OG_SIZE_2X = { width: 2400, height: 1260 };
 
-const FONT_CSS = "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Doto:wght@700&display=swap";
+/* The faces live in src/lib/fonts, read once per process. Literal paths under process.cwd() keep them in the server bundle. */
 let fontsPromise: Promise<{ regular: ArrayBuffer; semibold: ArrayBuffer; doto: ArrayBuffer }> | null = null;
-
-async function loadFonts() {
-  if (fontsPromise) return fontsPromise;
-  fontsPromise = (async () => {
-    const css = await fetch(FONT_CSS, { headers: { "User-Agent": "Mozilla/5.0 (compatible; lookap-og)" } }).then((r) => r.text());
-    const faces = [...css.matchAll(/font-family:\s*'([^']+)';[^}]*?font-weight:\s*(\d+)[^}]*?src:\s*url\(([^)]+)\)/g)];
-    const pick = (family: string, w: string) => faces.find((m) => m[1] === family && m[2] === w)?.[3];
-    const get = (u?: string) => (u ? fetch(u).then((r) => r.arrayBuffer()) : Promise.reject(new Error("font url missing")));
-    const [regular, semibold, doto] = await Promise.all([get(pick("Inter", "400")), get(pick("Inter", "600")), get(pick("Doto", "700"))]);
-    return { regular, semibold, doto };
-  })();
+function loadFonts() {
+  fontsPromise ??= Promise.all([
+    readFile(path.join(process.cwd(), "src/lib/fonts/inter-400.ttf")),
+    readFile(path.join(process.cwd(), "src/lib/fonts/inter-600.ttf")),
+    readFile(path.join(process.cwd(), "src/lib/fonts/doto-700.ttf")),
+  ]).then(([a, b, c]) => ({ regular: toArrayBuffer(a), semibold: toArrayBuffer(b), doto: toArrayBuffer(c) }));
   return fontsPromise;
 }
+const toArrayBuffer = (b: Buffer) => b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength) as ArrayBuffer;
 
 /* The mascot tile, read from public/ once per process. A literal path under process.cwd() keeps it in the server bundle. */
 let mascotPromise: Promise<string> | null = null;
@@ -35,7 +31,7 @@ function loadMascot() {
 }
 
 export async function ogCard({ title, line, kicker }: { title: string; line: string; kicker?: string }) {
-  const [fonts, src] = await Promise.all([loadFonts().catch(() => null), loadMascot()]);
+  const [fonts, src] = await Promise.all([loadFonts(), loadMascot()]);
   const host = SITE_URL.replace(/^https?:\/\//, "");
   return new ImageResponse(
     (
@@ -71,14 +67,12 @@ export async function ogCard({ title, line, kicker }: { title: string; line: str
   );
 }
 
-function fontList(fonts: Awaited<ReturnType<typeof loadFonts>> | null) {
-  return fonts
-    ? [
-        { name: "Inter", data: fonts.regular, weight: 400 as const, style: "normal" as const },
-        { name: "Inter", data: fonts.semibold, weight: 600 as const, style: "normal" as const },
-        { name: "Doto", data: fonts.doto, weight: 700 as const, style: "normal" as const },
-      ]
-    : undefined;
+function fontList(fonts: Awaited<ReturnType<typeof loadFonts>>) {
+  return [
+    { name: "Inter", data: fonts.regular, weight: 400 as const, style: "normal" as const },
+    { name: "Inter", data: fonts.semibold, weight: 600 as const, style: "normal" as const },
+    { name: "Doto", data: fonts.doto, weight: 700 as const, style: "normal" as const },
+  ];
 }
 
 /* Files from public/, read once per process and handed to satori as data URLs. */
@@ -94,7 +88,7 @@ function loadPublic(rel: string, mime: string) {
    Laid out in 1200x630 units and drawn at 2x (k) so the mascot, posters and dot-matrix face stay crisp after platforms downscale. */
 export async function ogHero({ line }: { line: string }) {
   const [fonts, mascot, tile, typewriter, cardReader] = await Promise.all([
-    loadFonts().catch(() => null),
+    loadFonts(),
     loadMascot(),
     readFile(path.join(process.cwd(), "src/app/icon.png")).then((b) => `data:image/png;base64,${b.toString("base64")}`),
     loadPublic("demos/typewriter.jpg", "image/jpeg"),
@@ -152,7 +146,7 @@ export async function ogHero({ line }: { line: string }) {
    showing the clip's poster, tilted a touch and cut by the edge. Entries without media get the same quiet tile the feed shows. */
 export async function ogEntry(e: Entry) {
   const [fonts, mascot, poster] = await Promise.all([
-    loadFonts().catch(() => null),
+    loadFonts(),
     loadMascot(),
     e.video ? loadPublic(e.video.poster.replace(/^\//, ""), "image/jpeg") : Promise.resolve(null),
   ]);
