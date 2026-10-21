@@ -15,6 +15,8 @@ export type Recipe = {
   type: string[];
   motion: { phase: string; at: string; what: string }[];
   rules: string[];
+  /* what the rebuild cost: read from the session transcript that produced it, not estimated */
+  build: { model: string; modelId: string; outputTokens: number; totalTokens: number; toolCalls: number; minutes: number; rounds: number; date: string };
 };
 
 export const RECIPES: Recipe[] = [
@@ -46,6 +48,7 @@ export const RECIPES: Recipe[] = [
       "lights wrap rounded corners with inset box-shadows on one overlay, never stacked linear gradients (they show a seam)",
       "the body dissolves into black toward its base: a mask, not a gradient fill",
     ],
+    build: { model: "Claude Fable 5.1", modelId: "claude-fable-5-1", outputTokens: 108605, totalTokens: 12467511, toolCalls: 49, minutes: 17, rounds: 8, date: "2026-10-20" },
   },
   {
     slug: "lamp-carriage-typewriter",
@@ -70,6 +73,7 @@ export const RECIPES: Recipe[] = [
       "a strike effect belongs inside the object it comes from, not floating above it",
       "the light must follow the carriage through its easing (animate the custom property), or it snaps ahead",
     ],
+    build: { model: "Claude Fable 5.1", modelId: "claude-fable-5-1", outputTokens: 457063, totalTokens: 31633521, toolCalls: 90, minutes: 21, rounds: 3, date: "2026-10-20" },
   },
 ];
 
@@ -240,6 +244,11 @@ export const TOOLS = [
 
 export function publicEntry(e: Entry) {
   return { slug: e.slug, title: e.title, kind: e.kind, category: e.category, types: e.types, tone: e.tone, author: e.authorName, x: e.x ?? null, sample: e.sample, description: e.description, ratio: Number(e.ratio.toFixed(3)), duration: e.duration ?? null, media: e.video ? { type: "video" as const, src: e.video.src, w: e.video.w, h: e.video.h } : e.image ? { type: "image" as const, src: e.image.src, w: e.image.w, h: e.image.h } : null, source: e.sourceUrl ?? null, demo: e.video?.src.startsWith("/") ? e.video.src : null, recipe: recipeFor(e)?.slug ?? null };
+}
+
+/* 108605 -> "109k", 12467511 -> "12.5M" */
+export function tokens(n: number) {
+  return n >= 1e6 ? `${(n / 1e6).toFixed(1).replace(/\.0$/, "")}M` : n >= 1e3 ? `${Math.round(n / 1e3)}k` : String(n);
 }
 
 export function recipeFor(e: Entry) {

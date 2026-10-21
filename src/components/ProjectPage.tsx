@@ -13,7 +13,7 @@ import { Stage } from "./Stage";
 import { Compare } from "./Compare";
 import { liveFor } from "./demo/live";
 import { AgentPrompts } from "./AgentPrompts";
-import { recipeFor } from "@/lib/registry";
+import { recipeFor, tokens } from "@/lib/registry";
 
 export function ProjectPage({ slug }: { slug: string }) {
   const entry = bySlug(slug);
@@ -21,6 +21,7 @@ export function ProjectPage({ slug }: { slug: string }) {
   const similar = ENTRIES.filter((e) => e.slug !== entry.slug && (e.category === entry.category || e.kind === entry.kind)).slice(0, 6);
   const wide = entry.ratio >= 1;
   const live = liveFor(entry);
+  const recipe = recipeFor(entry);
   /* the frame fits the stage height too, so the switch and caption under it stay on screen */
   const frame = { maxWidth: `min(${wide ? 900 : 420}px, calc((100dvh - 220px) * ${entry.ratio.toFixed(4)}))`, aspectRatio: entry.ratio };
   const site = entry.site && entry.site !== "example.com" ? `https://${entry.site}` : null;
@@ -71,14 +72,26 @@ export function ProjectPage({ slug }: { slug: string }) {
             </a>
           )}
 
-          <AgentPrompts slug={entry.slug} title={entry.title} measured={Boolean(recipeFor(entry))} />
+          <AgentPrompts slug={entry.slug} title={entry.title} measured={Boolean(recipe)} />
 
           <dl className="flex flex-col divide-y divide-dashed divide-line-strong [&>*]:flex [&>*]:items-start [&>*]:justify-between [&>*]:gap-3 [&>*]:py-2.5 text-[12px]">
             <div><dt className="font-medium text-foreground">Category</dt><dd><Link href={`/sections/${sectionSlug(entry.category)}`} className="text-subtle underline-offset-2 hover:text-foreground hover:underline">{entry.category}</Link></dd></div>
             <div><dt className="font-medium text-foreground">Type</dt><dd className="text-right text-subtle">{entry.types.join(", ")}</dd></div>
             <div><dt className="font-medium text-foreground">Media</dt><dd className="text-subtle">{entry.video ? (entry.duration ? `clip · ${entry.duration}s` : "clip") : "still"}</dd></div>
-            {live && <div><dt className="font-medium text-foreground">Rebuild</dt><dd className="text-subtle">live, measured from the clip</dd></div>}
           </dl>
+
+          {/* the cost of the rebuild, read from the transcript of the session that made it */}
+          {recipe && (
+            <section>
+              <h2 className="text-[11px] font-medium tracking-[.06em] text-subtle uppercase">Rebuilt by</h2>
+              <dl className="mt-2 flex flex-col divide-y divide-dashed divide-line-strong [&>*]:flex [&>*]:items-start [&>*]:justify-between [&>*]:gap-3 [&>*]:py-2.5 text-[12px]">
+                <div><dt className="font-medium text-foreground">Model</dt><dd className="text-right text-subtle"><span className="text-foreground">{recipe.build.model}</span><br />{recipe.build.modelId}</dd></div>
+                <div><dt className="font-medium text-foreground">Tokens</dt><dd className="text-right text-subtle"><span className="text-foreground">{tokens(recipe.build.outputTokens)}</span> written<br />{tokens(recipe.build.totalTokens)} read</dd></div>
+                <div><dt className="font-medium text-foreground">Work</dt><dd className="text-right text-subtle">{recipe.build.minutes} min · {recipe.build.toolCalls} tool calls<br />{recipe.build.rounds} rounds of feedback</dd></div>
+              </dl>
+              <p className="mt-2 text-[11px] leading-[1.5] text-subtle">Every number comes from the clip&apos;s pixels: the agent measured frames, built, and compared renders side by side until it matched.</p>
+            </section>
+          )}
 
           <section>
             <h2 className="text-[11px] font-medium tracking-[.06em] text-subtle uppercase">More like this</h2>
