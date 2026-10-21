@@ -13,6 +13,8 @@ export type Spec = {
   states: { name: string; trigger: string; what: string }[];
   keyframes: { name: string; at: number; src: string; shows: string }[];
   checks: { at: string; check: string }[];
+  /* the words on screen, by role, read from the frames: so a rebuild carries the designer's copy instead of inventing it */
+  text?: Record<string, string>;
 };
 
 /* How every recipe was made. An agent that follows this on a new clip gets the same kind of numbers. */
@@ -30,6 +32,7 @@ const c = (x: number, y: number, w: number, h: number): Box => [CARD_ORIGIN.x + 
 
 export const SPECS: Record<string, Spec> = {
   "id-card-reader-hover": {
+    text: { cardName: "Jordan Lee", cardCompany: "Acme, Inc.", row1: "Identity", row1Value: "Verified", row2: "Access", row2Value: "Restricted", row3: "Data", row3Value: "Restricted", row4: "AI usage", row4Value: "Limited" },
     frame: { w: 1080, h: 1080, unit: "1 source px; the rig is 518 x 700 at (289, 192), centred" },
     elements: [
       { name: "rig", box: c(0, 0, 518, 700), note: "container; nothing outside it but black" },
@@ -74,6 +77,7 @@ export const SPECS: Record<string, Spec> = {
     ],
   },
   "lamp-carriage-typewriter": {
+    text: { counter: "14 / 3 000, then 32 / 3 000 once the line is typed", typed: "Testing halloween capsule skins", hint: "Need a first line?", lightLabel: "LIGHT", lightValue: "Low", spreadLabel: "SPREAD", spreadValue: "144°", reachLabel: "REACH", reachValue: "210%", suggestions: "“hallo”  hallowed  hallows (the keyboard's own row, not rebuilt)" },
     frame: { w: 498, h: 1080, unit: "1 source px of the designer's clip; the recipe covers the top 700 px, the keyboard below is not rebuilt", crop: [0, 0, 498, 700] },
     elements: [
       { name: "top", box: [0, 0, 498, 140], fill: "#171717", note: "back arrow 16 px at (46, 91); count in mono 13 px, letter-spacing .08em, right edge at x 416, top 86; share glyph 19 x 20 at (443, 87); all #adafa5" },

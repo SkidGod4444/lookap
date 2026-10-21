@@ -10,6 +10,7 @@ export type Draft = {
   /* mid-phase frames and a 2 fps contact sheet, for look_at */
   mids: { at: number; src: string }[];
   sheet: { src: string; fps: number; cols: number; frames: number; tile: number } | null;
+  anchors: { phase: [number, number]; start: [number, number, number, number]; end: [number, number, number, number]; moved: { top: number; bottom: number; left: number; right: number }; read: string }[];
   background: string; palette: { hex: string; share: number }[];
   elements: { box: [number, number, number, number]; fill: string }[];
   motion: { element: string; box: [number, number, number, number]; moves: { from: number; to: number; dTop: number; dLeft: number; ms: number }[] }[];

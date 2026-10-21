@@ -225,20 +225,36 @@ export function briefFor(e: Entry) {
       "Build with the project's own stack and tokens; match proportion and hierarchy before matching pixels.",
       draft ? "A draft measurement is attached: its phases, moves and palette are measured from the clip; its boxes are a first pass to check against the keyframes." : e.video ? "Timing below is proposed, not measured. Ask for get_recipe when a measured one exists." : "Timing below is proposed, not observed. Label it so in the code.",
     ],
-    draft: draft ? { frame: draft.frame, duration: draft.duration, phases: draft.phases, keyframes: draft.keyframes.map((k) => ({ name: k.name, at: k.at, hold: k.hold })), background: draft.background, palette: draft.palette, elements: draft.elements, motion: draft.motion, coverage: draft.coverage, confidence: DRAFT_NOTE } : null,
-    motion: {
-      status: recipe ? "measured, see get_recipe" : draft ? "draft measured: see draft.phases and draft.motion for what moved, when and how far" : "proposed",
-      enter: "fade up 12 px, 320 ms, cubic-bezier(0.2, 0.8, 0.2, 1)",
-      hover: e.types.some((t) => /hover|card/i.test(t)) ? "ring brightens or lift 2 px with shadow, 150 ms" : "colour or ring only, 150 ms",
-      press: "scale 0.98, 120 ms",
-      reducedMotion: "respect prefers-reduced-motion: no entrance, instant hover",
-    },
+    draft: draft ? {
+      frame: draft.frame, duration: draft.duration, phases: draft.phases,
+      keyframes: draft.keyframes.map((k) => ({ name: k.name, at: k.at, hold: k.hold })),
+      /* every moment a checker scores: the keyframes and the middle of each phase, where things are mid-flight; look_at serves them all */
+      moments: [...draft.keyframes.map((k) => ({ at: k.at, name: k.name })), ...draft.mids.map((m) => ({ at: m.at, name: "mid-phase" }))].sort((p, q) => p.at - q.at),
+      /* which edges of the content moved in each phase: a pull with the top pinned reads "top fixed, bottom +112"; a reflow moves every edge */
+      anchors: draft.anchors.map((a) => ({ phase: a.phase, read: a.read, moved: a.moved })),
+      background: draft.background, palette: draft.palette,
+      /* boxes near the background's own colour are shadows and glows, not parts; they are left out here */
+      elements: draft.elements.filter((el) => { const c = (h: string) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16)); const [a, b] = [c(el.fill), c(draft.background)]; return Math.abs(a[0] - b[0]) + Math.abs(a[1] - b[1]) + Math.abs(a[2] - b[2]) > 84; }),
+      motion: draft.motion, coverage: draft.coverage, confidence: DRAFT_NOTE,
+    } : null,
+    motion: recipe
+      ? { status: "measured: the timing table in get_recipe (and in get_design on a Pro key) is the motion; nothing here is proposed", timings: recipe.timing.map((t) => `${t.name}: ${t.property} ${t.from} to ${t.to}, ${t.ms} ms${t.easing ? ` ${t.easing}` : ""}`) }
+      : draft
+        ? { status: "draft measured: draft.phases say when things move, draft.anchors which edges, draft.motion how far; the presets below are only for states the clip never shows", enter: "fade up 12 px, 320 ms, cubic-bezier(0.2, 0.8, 0.2, 1)", hover: "colour or ring only, 150 ms", press: "scale 0.98, 120 ms", reducedMotion: "respect prefers-reduced-motion: no entrance, instant hover" }
+        : {
+            status: "proposed",
+            enter: "fade up 12 px, 320 ms, cubic-bezier(0.2, 0.8, 0.2, 1)",
+            hover: e.types.some((t) => /hover|card/i.test(t)) ? "ring brightens or lift 2 px with shadow, 150 ms" : "colour or ring only, 150 ms",
+            press: "scale 0.98, 120 ms",
+            reducedMotion: "respect prefers-reduced-motion: no entrance, instant hover",
+          },
+    text: recipe?.text ?? null,
     notes: notes.map((n) => ({ slug: n.slug, title: n.title })),
     credit: { author: e.authorName, x: e.x ?? null, source: e.sourceUrl ?? null },
     method: METHOD,
     build: recipe ? { ...recipe.build, note: "whole-session totals for the measured rebuild, feedback rounds included; with the recipe in hand expect one pass" } : null,
     oneShot: recipe
-      ? "get_recipe has every value as data: frame, elements with boxes, timing, states, keyframes, checks. Build from it, render, then call check_rebuild with a screenshot and fix what it reports. A Max key can call get_rebuild for the finished file and port it."
+      ? "The recipe has every value as data: frame, elements with boxes, timing, states, keyframes, checks, and the words on screen (get_design returns it on a Pro key; get_recipe is the same data alone). Build from it, render, then call check_rebuild with a screenshot and fix what it reports, zooming the worst box with look_at and your render beside the clip. A Max key can call get_rebuild for the finished file and port it."
       : draft
         ? "No measured recipe, but a draft: build from draft.elements and draft.motion, look at each keyframe with see_design (at), then call check_rebuild with a screenshot; its regions are reliable, its element rows are as good as the draft boxes."
         : "No measured recipe yet: see_design, build from the frame, then compare by eye against it.",

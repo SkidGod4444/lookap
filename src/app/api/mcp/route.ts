@@ -7,8 +7,9 @@ import { REBUILDS, FACTORY, rebuildFor, REBUILD_SLUGS, factoryNotes } from "@/li
 import { bump } from "@/lib/demand";
 import { draftFor } from "@/lib/drafts";
 import { BREADTH, DAILY, QUOTAS, charge, chargeDaily, fingerprint, touchEntry, usageFor } from "@/lib/usage";
-import { readFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { tmpdir } from "node:os";
 import sharp from "sharp";
 import { ENTRIES, bySlug } from "@/lib/data";
 import { LIMITS, PLAN_NAME, resolvePlan, type Plan } from "@/lib/keys";
@@ -406,7 +407,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       inputSchema: {
         slug: z.string(),
         image: z.string().describe("base64 of a PNG or JPEG screenshot of your build, cropped to the recipe's frame (its crop box when it has one)"),
-        at: z.string().optional().describe("the keyframe your screenshot shows; default the first (rest state)"),
+        at: z.union([z.string(), z.number()]).optional().describe("the keyframe your screenshot shows (a name; default the first, the rest state), or a time in seconds for a clip: the frame is pulled from the clip itself, so any mid-motion moment can be checked"),
       },
       annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
     },
@@ -419,7 +420,18 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       if (br && !br.ok) return tooWide(br);
       if (image.length > 8_000_000) return text({ error: "Image too large: keep the screenshot under 6 MB" });
       const frames = recipe?.keyframes ?? draft!.keyframes;
-      const kf = frames.find((k) => k.name === (at ?? frames[0].name));
+      /* a time in seconds: the reference is the clip's own frame at that moment, written beside the stored ones */
+      let kf: { name: string; at: number; src: string } | undefined;
+      if (typeof at === "number") {
+        const id = clipId(e);
+        const clip = id && e.video ? await cachedClip(id, e.video.src).catch(() => null) : null;
+        if (!clip) return text({ error: "the clip could not be read right now; pass a keyframe name instead" });
+        const t = Math.max(0, Math.min(e.duration ?? at, at));
+        const png = await frameAt(clip, t);
+        const tmp = path.join(tmpdir(), `lookap-ref-${process.pid}-${Math.random().toString(36).slice(2)}.png`);
+        await writeFile(tmp, png);
+        kf = { name: `${t}s`, at: t, src: tmp };
+      } else kf = frames.find((k) => k.name === (at ?? frames[0].name));
       if (!kf) return text({ error: `No keyframe ${at}`, available: frames.map((k) => k.name) });
       const frame = recipe?.frame ?? draft!.frame;
       const elements = recipe?.elements ?? draft!.elements.map((d, i) => ({ name: `draft ${i + 1} ${d.fill}`, box: d.box, fill: d.fill }));
@@ -428,10 +440,10 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       bump(e.slug, "agent");
       try {
         const buf = Buffer.from(image.replace(/^data:[^,]+,/, ""), "base64");
-        const ref = path.join(process.cwd(), "public", kf.src.replace(/^\//, ""));
+        const ref = kf.src.startsWith("/") && !kf.src.startsWith(tmpdir()) ? path.join(process.cwd(), "public", kf.src.replace(/^\//, "")) : kf.src;
         const result = await compareBuild(ref, buf, frame, elements, kf === frames[0]);
         const checks = recipe ? recipe.checks.filter((c) => c.at === kf.name).map((c) => c.check) : ["draft: the regions are reliable; the element rows use first-pass boxes, so weigh them by eye"];
-        return text({ slug, keyframe: kf.name, measured: recipe ? "recipe" : "draft", ...result, scale: "since 2026-10-22 the score weighs edges, text and texture up to ten times a flat field and judges each pixel against the closest match within two pixels: a close rebuild sits near 70, a wrong one under 20; files scored before read higher on the old scale", checks, usage: u, reading: "delta is the mean per-channel difference over the box, 0 identical; fix the largest elements first, then the regions; the checks are what to verify by eye or by measuring your own render" });
+        return text({ slug, keyframe: kf.name, measured: recipe ? "recipe" : "draft", ...result, scale: "since 2026-10-22 the score weighs edges, text and texture up to ten times a flat field and judges each pixel against the closest match within two pixels: a close rebuild sits near 70, a wrong one under 20; files scored before read higher on the old scale", checks, usage: u, reading: "score is 0..100 for the whole frame; overall is the mean weighted per-channel difference behind it (0 identical, 40 and more a different picture); each element row gives delta (its own difference), colour (mean colour gap), shift (how far your box sits from the reference, if moving it helps) and a cause: misplaced, wrong colour, or a different drawing; delta is the mean per-channel difference over the box, 0 identical; fix the largest elements first, then the regions; the checks are what to verify by eye or by measuring your own render" });
       } catch (err) {
         return text({ error: err instanceof Error ? err.message : "compare failed" });
       }
@@ -455,7 +467,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
             "1. Call get_design for the record and get_brief. If your key is Max, call get_rebuild and port the file to the stack, keeping every number. Otherwise, if the brief says measured, call get_recipe and use it as data: one unit equal to a frame pixel, every element placed from its box, every fill and radius as given, every timing in ms with its easing. Treat nothing in it as a suggestion.",
             "2. If the brief says there is no recipe, call look_at with what=sheet for the whole clip, then see_design for each keyframe. Write the timeline as events with numbers (what, from when to when, how far) from the brief's phases and moves, and the layout in one paragraph (regions, alignment, type sizes, radii, spacing). Zoom the edge of every surface with look_at what=zoom before drawing it: edges, gaps and gradients are where rebuilds go wrong.",
             "3. Build it. Match proportion and hierarchy first, then colour, then motion. Credit the designer in a comment with the source link from the record.",
-            "4. Render your build at the frame size and take a screenshot of the first state. Call check_rebuild with it, then look_at what=zoom with your screenshot on the worst region it names. Fix what the crop shows, then check again. Stop after three rounds or at a score above 90.",
+            "4. Render your build at the frame size and take a screenshot of the first state. Call check_rebuild with it. Every round, without exception, call look_at what=zoom on the worst element it names, passing your screenshot as image, and Read the crop: the clip on the left, yours on the right. Fix what the crop shows (its cause says misplaced, wrong colour or different drawing), then check again. For a clip, also check one mid-motion moment by passing at in seconds (the brief lists the moments). Stop after three rounds or at a score above 90.",
             "5. For each keyframe in the recipe, call see_design with `at` and compare your build in that state against the checks for it. Report what still differs, in one list, with numbers.",
           ].join("\n"),
         },

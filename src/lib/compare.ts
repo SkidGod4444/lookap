@@ -33,6 +33,21 @@ function detail(d: Buffer, W: number, i: number, x: number, y: number, H: number
   return (Math.abs(d[i] - d[r]) + Math.abs(d[i + 1] - d[r + 1]) + Math.abs(d[i + 2] - d[r + 2]) + Math.abs(d[i] - d[dn]) + Math.abs(d[i + 1] - d[dn + 1]) + Math.abs(d[i + 2] - d[dn + 2])) / 2;
 }
 
+/* the submission moved by (dx, dy): a translated copy, so the same diff reads it against the reference's box */
+const shiftCache = new WeakMap<Buffer, Map<string, Buffer>>();
+function subShifted(sub: Buffer, W: number, H: number, dx: number, dy: number) {
+  let m = shiftCache.get(sub); if (!m) { m = new Map(); shiftCache.set(sub, m); }
+  const k = `${dx},${dy}`; const hit = m.get(k); if (hit) return hit;
+  const out = Buffer.alloc(sub.length);
+  for (let y = 0; y < H; y++) {
+    const sy = y + dy; if (sy < 0 || sy >= H) continue;
+    const x0 = Math.max(0, -dx), x1 = Math.min(W, W - dx);
+    if (x1 > x0) sub.copy(out, (y * W + x0) * 3, (sy * W + x0 + dx) * 3, (sy * W + x1 + dx) * 3);
+  }
+  m.set(k, out);
+  return out;
+}
+
 function diff(a: Buffer, b: Buffer, W: number, box: [number, number, number, number]) {
   const [x0, y0, bw, bh] = box.map(Math.round);
   const H = Math.floor(a.length / (W * 3));
@@ -62,11 +77,29 @@ export async function compareBuild(referencePath: string, submitted: Buffer, fra
   const w = frame.crop ? frame.crop[2] : frame.w, h = frame.crop ? frame.crop[3] : frame.h;
   const [ref, sub] = await Promise.all([raw(referencePath, w, h, frame.crop), raw(submitted, w, h)]);
   const overall = diff(ref, sub, w, [0, 0, w, h]);
+  /* per element: the colour difference, and whether moving your box a few pixels would close the gap. A box that
+     matches once shifted is misplaced; one that stays different at its best shift is the wrong colour or the wrong
+     drawing. The shift is yours relative to the reference, in frame pixels. */
+  const shifted = (box: [number, number, number, number]) => {
+    const base = diff(ref, sub, w, box);
+    let best = { dx: 0, dy: 0, delta: base };
+    for (let dy = -8; dy <= 8; dy += 2) for (let dx = -8; dx <= 8; dx += 2) {
+      if (!dx && !dy) continue;
+      const d = diff(ref, subShifted(sub, w, h, dx, dy), w, box);
+      if (d < best.delta - 0.5) best = { dx, dy, delta: d };
+    }
+    return best;
+  };
   const els = elements
     .filter((e) => firstKeyframe || e.static !== false)
     .map((e) => {
       const a = mean(ref, w, e.box), b = mean(sub, w, e.box);
-      return { name: e.name, box: e.box, reference: hex(a[0], a[1], a[2]), yours: hex(b[0], b[1], b[2]), delta: Math.round(diff(ref, sub, w, e.box)) };
+      const delta = Math.round(diff(ref, sub, w, e.box));
+      const colour = Math.round((Math.abs(a[0] - b[0]) + Math.abs(a[1] - b[1]) + Math.abs(a[2] - b[2])) / 3);
+      const best = delta > 12 ? shifted(e.box) : { dx: 0, dy: 0, delta };
+      const atBest = Math.round(best.delta);
+      const cause = delta <= 12 ? "matches" : colour > 24 && atBest > delta * 0.7 ? "wrong colour" : atBest < delta * 0.55 ? `misplaced: yours sits ${best.dx > 0 ? `${best.dx} px left` : best.dx < 0 ? `${-best.dx} px right` : ""}${best.dx && best.dy ? " and " : ""}${best.dy > 0 ? `${best.dy} px above` : best.dy < 0 ? `${-best.dy} px below` : ""} the reference` : "different drawing: size, shape or texture";
+      return { name: e.name, box: e.box, reference: hex(a[0], a[1], a[2]), yours: hex(b[0], b[1], b[2]), delta, colour, shift: best.dx || best.dy ? [best.dx, best.dy] : null, afterShift: atBest, cause };
     })
     .sort((p, q) => q.delta - p.delta);
   const N = 6, cw = w / N, ch = h / N, cells: { cell: string; box: [number, number, number, number]; delta: number; over: string[] }[] = [];
