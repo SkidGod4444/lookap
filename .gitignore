@@ -40,6 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 measure/
-factory/*/kf*.png
+factory/*/*.png
+!factory/*/side.png
 factory/*/.ref/
 factory/*/sheets/
