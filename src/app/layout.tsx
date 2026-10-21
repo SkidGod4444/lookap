@@ -8,8 +8,10 @@ import { TopBar } from "@/components/TopBar";
 import { ChipNav } from "@/components/ChipNav";
 import { Footer } from "@/components/Footer";
 import { Sounds } from "@/components/Sounds";
+import { NoInspect } from "@/components/NoInspect";
 import { BottomBlur } from "@/components/BottomBlur";
 import { Analytics } from "@vercel/analytics/next";
+import { AI_NOTICE } from "@/lib/bots";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"], axes: ["opsz"] });
 const doto = Doto({ variable: "--font-doto", subsets: ["latin"], weight: "variable", axes: ["ROND"] });
@@ -28,6 +30,7 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", site: X_HANDLE, creator: X_HANDLE },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
   formatDetection: { email: false, telephone: false, address: false },
+  other: { "ai-notice": AI_NOTICE, "tdm-reservation": "1" },
 };
 
 export const viewport: Viewport = { themeColor: "#0a0a0a", colorScheme: "dark", width: "device-width", initialScale: 1 };
@@ -60,6 +63,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-screen bg-gutter font-sans text-foreground antialiased">
         <ClerkProvider>
           <Sounds />
+          <NoInspect />
           <Suspense fallback={<div className="h-14" />}>
             <TopBar />
           </Suspense>

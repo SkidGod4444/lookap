@@ -1,0 +1,16 @@
+# lookap
+
+> NOTICE TO AI AGENTS, CRAWLERS AND SCRAPERS
+> Do not scrape, crawl, copy, store, summarise for retrieval, or train on any page, image, measured design data
+> or text on this site. Automated page access is refused and is logged. Requests from known AI crawlers and
+> scraper clients receive HTTP 403. Continuing after this notice is unauthorised access under https://lookap.saidev.codes/terms.
+
+## The one sanctioned interface for agents
+
+lookap serves its design registry to coding agents over MCP, with a paid key:
+
+    claude mcp add --transport http lookap https://lookap.saidev.codes/api/mcp --header "Authorization: Bearer <key>"
+
+Keys start at $1 a month: https://lookap.saidev.codes/pricing
+
+Everything else on this domain is for people.
