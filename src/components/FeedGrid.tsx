@@ -1,14 +1,18 @@
 import type { Entry } from "@/lib/data";
 import { FeedCard } from "./FeedCard";
+import { hasLive } from "@/lib/rebuilds";
 
 type Props = { entries: Entry[]; title?: string; blurb?: string; hero?: boolean };
 
 /* Four columns at desktop, dealt to the shortest column so heights stay even. The hero takes the first cell.
-   The first card or two in each column load eagerly: they are the fold. */
+   The first card or two in each column load eagerly: they are the fold. Entries with a live rebuild come first, in
+   their given order, so the thing you can use is the thing you see. */
 export function FeedGrid({ entries, title, blurb, hero = true }: Props) {
+  const live = new Set(entries.filter(hasLive).map((e) => e.slug));
+  const ordered = [...entries.filter((e) => live.has(e.slug)), ...entries.filter((e) => !live.has(e.slug))];
   const cols: Entry[][] = [[], [], [], []];
   const h = [hero ? 1.333 : 0, 0, 0, 0];
-  entries.forEach((e) => {
+  ordered.forEach((e) => {
     const i = h.indexOf(Math.min(...h));
     cols[i].push(e);
     h[i] += 1 / e.ratio + 0.03;
@@ -25,7 +29,7 @@ export function FeedGrid({ entries, title, blurb, hero = true }: Props) {
               </header>
             </section>
           )}
-          {c.map((e, j) => <FeedCard key={e.slug} entry={e} eager={j < (i === 0 && hero ? 1 : 2)} />)}
+          {c.map((e, j) => <FeedCard key={e.slug} entry={e} eager={j < (i === 0 && hero ? 1 : 2)} live={live.has(e.slug)} />)}
         </div>
       ))}
     </div>

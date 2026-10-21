@@ -2,6 +2,8 @@
    that the recipes were read from; the values in them are the recipe's values. Fonts load from Google Fonts; nothing
    else is fetched. Kept out of public/ on purpose: this is the asset the plan pays for. */
 
+/* Server code only: the route handlers and server components import this; no client module may, since the files in
+   it are the asset. ("server-only" itself is not used because the MCP route's bundle rejects it.) */
 import FACTORY_JSON from "./factory.json";
 import type { Entry } from "../data";
 import { recipeFor } from "../registry";
@@ -18,6 +20,8 @@ export function rebuildFor(e: Entry): (Rebuild & { title: string; build: { model
   if (r && REBUILDS[r.slug]) return { ...REBUILDS[r.slug], title: r.title, build: r.build };
   return FACTORY[e.slug] ?? null;
 }
+/* whether the project page has a Live switch for this entry: a measured component or a factory rebuild */
+export const hasLive = (e: Entry) => rebuildFor(e) !== null;
 export const REBUILD_SLUGS = () => [...Object.keys(REBUILDS), ...Object.keys(FACTORY)];
 
 export const REBUILDS: Record<string, Rebuild> = {
