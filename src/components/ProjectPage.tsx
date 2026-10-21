@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ENTRIES, bySlug, sectionSlug } from "@/lib/data";
 import { Media, STAGE_SIZES, TILE_SIZES } from "./Media";
 import { Avatar } from "./Avatar";
+import { SaveButton } from "./SaveButton";
 import { avatarUrl } from "@/lib/avatar";
 import { preload } from "react-dom";
 import { hrefFor } from "./FeedCard";
@@ -32,7 +33,10 @@ export function ProjectPage({ slug }: { slug: string }) {
       <aside className="w-full shrink-0 border-t border-line bg-canvas px-5 pt-6 pb-10 lg:h-full lg:w-[280px] lg:overflow-y-auto lg:border-t-0 lg:border-l">
         <div className="flex min-h-full flex-col gap-5">
           <header className="flex flex-col gap-2">
-            <h1 className="text-[20px] leading-[1.2] font-medium tracking-[-0.02em] text-balance text-foreground">{entry.title}</h1>
+            <div className="flex items-start justify-between gap-3">
+              <h1 className="text-[20px] leading-[1.2] font-medium tracking-[-0.02em] text-balance text-foreground">{entry.title}</h1>
+              <SaveButton slug={entry.slug} label className="shrink-0" />
+            </div>
             <p className="text-[14px] leading-[1.55] text-pretty text-subtle">{entry.description}</p>
           </header>
 
@@ -42,7 +46,7 @@ export function ProjectPage({ slug }: { slug: string }) {
               <Avatar name={entry.authorName} x={entry.x} />
               <span className="min-w-0 flex-1">
                 <span className="block truncate text-[13px] font-medium text-foreground group-hover:underline underline-offset-2">{entry.authorName}</span>
-                <span className="block truncate text-[12px] text-subtle">{entry.x ? `@${entry.x}` : entry.sourceUrl?.includes("github.com") ? "source on GitHub" : "source"}</span>
+                <span className="block truncate text-[12px] text-subtle">{entry.x ? `@${entry.x}` : "source"}</span>
               </span>
             </a>
           ) : (
@@ -50,7 +54,7 @@ export function ProjectPage({ slug }: { slug: string }) {
               <Avatar name={entry.authorName} x={entry.x} />
               <span className="min-w-0 flex-1">
                 <span className="block truncate text-[13px] font-medium text-foreground">{entry.authorName}</span>
-                <span className="block truncate text-[12px] text-subtle">Sample entry. Real credits link to the designer.</span>
+                <span className="block truncate text-[12px] text-subtle">{entry.authorName === "lookap" ? "Built and measured by lookap." : "Sample entry. Real credits link to the designer."}</span>
               </span>
             </div>
           )}

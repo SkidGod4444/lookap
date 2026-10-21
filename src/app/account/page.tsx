@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Suspense, useCallback, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useUser } from "@clerk/nextjs";
@@ -128,6 +129,14 @@ function Account() {
           <pre className="overflow-x-auto rounded-lg bg-canvas p-3 font-mono text-[12px] leading-relaxed text-silver ring-1 ring-line">{`claude mcp add --transport http lookap ${SITE_URL}/api/mcp --header "Authorization: Bearer ${fresh.key}"`}</pre>
         </div>
       )}
+
+      <section className="flex items-center justify-between gap-4 rounded-xl bg-card px-5 py-4 ring-1 ring-line">
+        <div>
+          <h2 className="text-[16px] font-medium text-foreground">Moodboards</h2>
+          <p className="text-[13px] text-subtle">Collections of work you have saved. Free on every account.</p>
+        </div>
+        <Link href="/moodboards" className={button("outline", "h-8 rounded-lg px-3 text-[12px]")}>Open</Link>
+      </section>
 
       <section className="flex flex-col gap-4">
         <h2 className="text-[20px] leading-[1.2] font-medium tracking-[-0.02em] text-foreground">Keys</h2>
