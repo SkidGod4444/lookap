@@ -31,5 +31,16 @@ export async function GET(req: NextRequest) {
   if (user?.primaryEmailAddress?.emailAddress) url.searchParams.set("customer_email", user.primaryEmailAddress.emailAddress);
   if (user?.fullName) url.searchParams.set("customer_name", user.fullName);
   url.searchParams.set("metadata", JSON.stringify({ plan, interval, userId }));
-  return handler(new NextRequest(url, { headers: req.headers }));
+  try {
+    return await handler(new NextRequest(url, { headers: req.headers }));
+  } catch (e) {
+    /* Polar validates the prefilled email against the domain's mail setup. If it objects, let Checkout ask for the email itself. */
+    const msg = e instanceof Error ? e.message : String(e);
+    if (/customer_email/.test(msg) && url.searchParams.has("customer_email")) {
+      url.searchParams.delete("customer_email");
+      return handler(new NextRequest(url, { headers: req.headers }));
+    }
+    console.error("[polar] checkout failed", msg.slice(0, 300));
+    return NextResponse.json({ error: "Checkout could not be started. Try again in a moment." }, { status: 502 });
+  }
 }

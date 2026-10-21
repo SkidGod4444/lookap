@@ -60,7 +60,9 @@ export async function entitlementFromPolar(userId: string): Promise<Entitlement>
     }
     return best;
   } catch (e) {
-    if (e && typeof e === "object" && "status" in e && (e as { status?: number }).status === 404) return { plan: "none" };
+    /* No customer with this external id yet: they have never checked out. Quiet. */
+    const msg = e instanceof Error ? `${e.name} ${e.message}` : String(e);
+    if (/ResourceNotFound|\b404\b/.test(msg)) return { plan: "none" };
     console.error("[polar] entitlement lookup failed", e);
     return { plan: "none" };
   }
