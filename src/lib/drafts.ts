@@ -7,6 +7,9 @@ export type Draft = {
   id: string; frame: { w: number; h: number }; fps: number; duration: number;
   phases: [number, number][];
   keyframes: { name: string; at: number; src: string; hold: [number, number] }[];
+  /* mid-phase frames and a 2 fps contact sheet, for look_at */
+  mids: { at: number; src: string }[];
+  sheet: { src: string; fps: number; cols: number; frames: number; tile: number } | null;
   background: string; palette: { hex: string; share: number }[];
   elements: { box: [number, number, number, number]; fill: string }[];
   motion: { element: string; box: [number, number, number, number]; moves: { from: number; to: number; dTop: number; dLeft: number; ms: number }[] }[];

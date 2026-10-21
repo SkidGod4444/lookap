@@ -256,6 +256,7 @@ export const TOOLS = [
   ["get_design", "One design, in full", "Attribution, traits, media and the measured recipe for one entry.", "starter · recipe pro"],
   ["get_brief", "Rebuild brief", "How to rebuild an entry: frame, tone, steps, proposed motion, notes that apply.", "starter"],
   ["see_design", "See a design", "The entry's frame as an image, or a named keyframe of the clip, for agents that can look.", "pro"],
+  ["look_at", "Look at a clip", "A contact sheet of the clip, the frame nearest any moment, a crop enlarged beside your own render, exact colours along a line.", "pro"],
   ["check_rebuild", "Check a rebuild", "Send a screenshot of your build; get back the regions and colours that differ from the reference frame.", "pro"],
   ["get_rebuild", "The finished rebuild", "The finished rebuild as one HTML file, to port to your stack.", "max"],
   ["get_usage", "What is left", "Today's calls, the month's quotas, and what the next plan adds.", "starter"],

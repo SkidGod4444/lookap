@@ -22,6 +22,20 @@ export function rebuildFor(e: Entry): (Rebuild & { title: string; build: { model
 }
 /* whether the project page has a Live switch for this entry: a measured component or a factory rebuild */
 export const hasLive = (e: Entry) => rebuildFor(e) !== null;
+/* the factory's design notes: each bold paragraph of a rebuild's "Pattern" section is one note, so what an agent
+   learned rebuilding one entry reaches every agent on the MCP */
+export function factoryNotes(): { slug: string; title: string; body: string[]; from: string[] }[] {
+  const notes: { slug: string; title: string; body: string[]; from: string[] }[] = [];
+  for (const rb of Object.values(FACTORY)) {
+    for (const para of rb.pattern.split(/\n\s*\n/)) {
+      const m = para.trim().match(/^\*\*(.+?)\*\*\s*([\s\S]+)$/);
+      if (!m) continue;
+      const title = m[1].replace(/\.$/, "");
+      notes.push({ slug: title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""), title, body: m[2].split(/(?<=\.)\s+/).map((x) => x.trim()).filter(Boolean), from: [rb.slug] });
+    }
+  }
+  return notes;
+}
 export const REBUILD_SLUGS = () => [...Object.keys(REBUILDS), ...Object.keys(FACTORY)];
 
 export const REBUILDS: Record<string, Rebuild> = {

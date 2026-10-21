@@ -3,12 +3,13 @@ import { WebStandardStreamableHTTPServerTransport } from "@modelcontextprotocol/
 import { z } from "zod";
 import { CATEGORIES, METHOD, NOTES, RECIPES, SECTION_NAMES, briefFor, facets, publicEntry, recipeFor, searchEntries, similarEntries } from "@/lib/registry";
 import { compareBuild } from "@/lib/compare";
-import { REBUILDS, rebuildFor, REBUILD_SLUGS } from "@/lib/rebuilds";
+import { REBUILDS, FACTORY, rebuildFor, REBUILD_SLUGS, factoryNotes } from "@/lib/rebuilds";
 import { bump } from "@/lib/demand";
 import { draftFor } from "@/lib/drafts";
 import { BREADTH, DAILY, QUOTAS, charge, chargeDaily, fingerprint, touchEntry, usageFor } from "@/lib/usage";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import sharp from "sharp";
 import { ENTRIES, bySlug } from "@/lib/data";
 import { LIMITS, PLAN_NAME, resolvePlan, type Plan } from "@/lib/keys";
 import { sampleVideo } from "@/lib/gate/frames";
@@ -47,7 +48,9 @@ async function loadFrame(poster: string): Promise<{ data: string; mimeType: stri
 /* Which plan flag each paid tool needs. On a paid key the tools its plan lacks are hidden from tools/list, so an agent
    only sees what it can call; the instructions name what the next plan adds. A keyless request sees everything, each
    call answering with the pointer to pricing. */
-const LOCK: Record<string, keyof (typeof LIMITS)["pro"]> = { get_recipe: "recipes", see_design: "media", check_rebuild: "media", check_media: "media", get_rebuild: "source" };
+const LOCK: Record<string, keyof (typeof LIMITS)["pro"]> = { get_recipe: "recipes", see_design: "media", look_at: "media", check_rebuild: "media", check_media: "media", get_rebuild: "source" };
+/* the notes an agent can read: the hand-written ones, then what the factory learned rebuilding entries */
+const allNotes = () => [...NOTES, ...factoryNotes()];
 const NEEDS: Record<string, string> = { recipes: "Pro", media: "Pro", source: "Max" };
 const spent = (what: string, u: { used: number; limit: number; resets: string }) => text({ error: `${what} has used its ${u.limit} calls for this month on this account. Resets ${u.resets}. A higher plan at /pricing raises it.`, usage: u });
 const NEXT: Record<Plan, string> = { none: "", starter: `Pro gets ${DAILY.pro} a day`, pro: `Max gets ${DAILY.team} a day`, team: "you are on the highest plan; the count resets tomorrow" };
@@ -66,7 +69,9 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
         "Reach for it when asked to design, redesign, polish or rebuild UI, or for inspiration and reference: search_designs to find, see_design to look at the frame or a keyframe, get_brief or get_recipe for how to rebuild, check_rebuild to test your render against the reference, similar_designs to widen, list_notes for guidance. " +
         "A measured recipe is data: frame, elements with boxes, timing, states, keyframes and checks. Build from it as fact, render, call check_rebuild, fix what it reports; that is one pass instead of rounds of feedback. " +
         "Every other clip carries a draft measurement in get_brief: phases, moves and palette measured from the clip, boxes as a first pass; its keyframes work with see_design and check_rebuild too. " +
-        "Every tool needs a key (Starter $1/mo at /pricing); see_design, get_recipe, check_rebuild and check_media need Pro; get_rebuild, the finished source, needs Max. " +
+        "look_at is how a clip is measured rather than remembered: its contact sheet, the frame nearest any moment, a crop at 3x beside your own render, exact colours along a line. Use it before deciding a timeline or a material. " +
+        "To design something new rather than rebuild, the remix prompt takes two or three entries and a purpose and borrows their principles, proportions and timing, not their pixels; the notes are the transferable part. " +
+        "Every tool needs a key (Starter $1/mo at /pricing); see_design, look_at, get_recipe, check_rebuild and check_media need Pro; get_rebuild, the finished source, needs Max. " +
         (plan === "none" ? "" : `This key is ${PLAN_NAME[plan]}. `) +
         (hidden.length ? `Not on this plan, so not listed: ${hidden.join(", ")}; see /pricing. ` : "") +
         (plan === "none" ? "" : `This account may make ${DAILY[plan]} tool calls a day and open ${BREADTH[plan]} distinct entries a day across all its keys; get_usage shows what is left. Recipes, drafts and source files carry a mark naming the account they were issued to. `) +
@@ -125,7 +130,11 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       bump(e.slug, "agent");
       const pub = publicEntry(e);
       const recipe = pub.recipe ? RECIPES.find((r) => r.slug === pub.recipe) : null;
-      return text({ ...pub, recipe: recipe ? (lim.recipes ? recipe : { slug: recipe.slug, title: recipe.title, locked: true }) : null });
+      const rb = rebuildFor(e), fr = FACTORY[e.slug];
+      const rebuild = rb
+        ? { finished: true, file: lim.source ? "get_rebuild" : "get_rebuild, on a Max key", measured: Boolean(recipe), live: `https://lookap.saidev.codes/feed/${e.slug}`, preview: fr?.preview ? `https://lookap.saidev.codes${fr.preview}` : null, built: rb.build.model }
+        : { finished: false, how: recipe ? "get_recipe, then build" : "get_brief and look_at, then build" };
+      return text({ ...pub, recipe: recipe ? (lim.recipes ? recipe : { slug: recipe.slug, title: recipe.title, locked: true }) : null, rebuild });
     },
   );
 
@@ -191,17 +200,18 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
   reg(
     "list_notes",
     { title: "List design notes", description: "Guidance distilled from measured rebuilds: metal buttons, pressed badges, dark silver tokens, motion for stills, measuring from video. Needs a key.", annotations: ro },
-    async () => (plan === "none" ? gated("list_notes", plan, reason) : text(NOTES.map((n) => ({ slug: n.slug, title: n.title, from: n.from })))),
+    async () => (plan === "none" ? gated("list_notes", plan, reason) : text(allNotes().map((n) => ({ slug: n.slug, title: n.title, from: n.from })))),
   );
 
   reg(
     "get_note",
     { title: "Read a design note", description: "The full note. Needs a key.", inputSchema: { slug: z.string() }, annotations: ro },
     async ({ slug }) => {
-      const i = NOTES.findIndex((n) => n.slug === slug);
-      if (i < 0) return text({ error: `No note ${slug}`, available: NOTES.map((n) => n.slug) });
+      const notes = allNotes();
+      const i = notes.findIndex((n) => n.slug === slug);
+      if (i < 0) return text({ error: `No note ${slug}`, available: notes.map((n) => n.slug) });
       if (i >= lim.notes) return gated("This note", plan, reason);
-      return text(NOTES[i]);
+      return text(notes[i]);
     },
   );
 
@@ -277,6 +287,82 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
   );
 
   reg(
+    "look_at",
+    {
+      title: "Look at a clip the way it was measured",
+      description: "Frames and numbers from the clip, not impressions. what=sheet: a contact sheet of the whole clip at 2 fps, 6 columns, read left to right then down (frame n is at (n - 1) / 2 s), so you see what moves and in what order before you decide a timeline. what=frame with at (seconds): the clip's frame nearest that moment, from the keyframes plus the middle of every measured phase, where things are mid-flight. what=zoom with at and box [x, y, w, h] in frame pixels: that crop enlarged, the judge of edges, radii, gradients, shadows and gaps; add image (base64 PNG or JPEG of your own render at that moment, any size) to get your crop beside it. what=colors with at and col (an x) or row (a y) plus from and to: one hex per frame pixel along that line, the true colour of a border, a gradient or a gap. Clips only. Frames are stored at 560 to 720 px wide, so detail below about two frame pixels is not there. Needs Pro; metered like see_design.",
+      inputSchema: {
+        slug: z.string(),
+        what: z.enum(["sheet", "frame", "zoom", "colors"]),
+        at: z.number().optional().describe("seconds into the clip; the nearest stored frame is used and named in the reply"),
+        box: z.array(z.number()).length(4).optional().describe("[x, y, w, h] in frame pixels, for zoom"),
+        col: z.number().optional().describe("x of the column to read, for colors"),
+        row: z.number().optional().describe("y of the row to read, for colors"),
+        from: z.number().optional(), to: z.number().optional(),
+        image: z.string().optional().describe("base64 of your render at that moment, for zoom: shown beside the clip's crop"),
+      },
+      annotations: ro,
+    },
+    async ({ slug, what, at, box, col, row, from, to, image }) => {
+      if (!lim.media) return gated("look_at", plan, reason);
+      const e = bySlug(slug);
+      if (!e) return text({ error: `No entry ${slug}` });
+      const draft = draftFor(e);
+      if (!draft) return text({ error: `${slug} has no clip to look at` });
+      const br = await touchEntry(keyRef, plan, e.slug);
+      if (br && !br.ok) return tooWide(br);
+      const stored = [...draft.keyframes.map((k) => ({ at: k.at, src: k.src, name: k.name })), ...draft.mids.map((m) => ({ at: m.at, src: m.src, name: `mid-phase` }))].sort((a, b) => a.at - b.at);
+      /* the nearest stored frame; a keyframe wins a near tie, since a still is the better reference */
+      const nearest = (t: number) => stored.reduce((best, f) => { const d = Math.abs(f.at - t) - Math.abs(best.at - t); return d < -0.1 || (Math.abs(d) <= 0.1 && f.name !== "mid-phase" && best.name === "mid-phase") ? f : best; });
+      const file = (src: string) => readFile(path.join(process.cwd(), "public", src.replace(/^\//, "")));
+      const W = draft.frame.w, H = draft.frame.h;
+      if (what === "sheet") {
+        if (!draft.sheet) return text({ error: `No contact sheet for ${slug}` });
+        const u = await charge(keyRef, plan, "look_at");
+        if (u && !u.ok) return spent("look_at", u);
+        bump(e.slug, "agent");
+        const data = (await file(draft.sheet.src)).toString("base64");
+        return { content: [{ type: "image" as const, data, mimeType: "image/jpeg" }, { type: "text" as const, text: JSON.stringify({ slug, sheet: { frames: draft.sheet.frames, fps: draft.sheet.fps, cols: draft.sheet.cols, read: "left to right, then down; frame n is at (n - 1) / 2 s", clip: `${W}x${H}, ${draft.duration}s, ${draft.fps} fps` }, phases: draft.phases, stored: stored.map((f) => f.at), usage: u }, null, 2) }] };
+      }
+      if (at === undefined) return text({ error: `${what} needs at (seconds)`, stored: stored.map((f) => f.at) });
+      const f = nearest(at);
+      const buf = await file(f.src);
+      const meta = await sharp(buf).metadata();
+      const sx = (meta.width ?? W) / W, sy = (meta.height ?? H) / H;
+      const u = await charge(keyRef, plan, "look_at");
+      if (u && !u.ok) return spent("look_at", u);
+      bump(e.slug, "agent");
+      const about = { slug, asked: at, frame: { at: f.at, name: f.name, stored: `${meta.width}x${meta.height}`, source: `${W}x${H}` }, moments: stored.map((x) => x.at) };
+      if (what === "frame") return { content: [{ type: "image" as const, data: buf.toString("base64"), mimeType: "image/jpeg" }, { type: "text" as const, text: JSON.stringify({ ...about, usage: u }, null, 2) }] };
+      if (what === "zoom") {
+        if (!box) return text({ error: "zoom needs box [x, y, w, h] in frame pixels" });
+        const [x, y, w, h] = box.map((n) => Math.max(0, Math.round(n)));
+        if (w < 4 || h < 4 || x + w > W || y + h > H) return text({ error: `box must sit inside the ${W}x${H} frame` });
+        const S = Math.max(1, Math.min(4, Math.floor(900 / w)));
+        const crop = async (img: Buffer, fx: number, fy: number) => sharp(img).extract({ left: Math.round(x * fx), top: Math.round(y * fy), width: Math.max(1, Math.round(w * fx)), height: Math.max(1, Math.round(h * fy)) }).resize(w * S, h * S, { kernel: "nearest" }).png().toBuffer();
+        const panels = [await crop(buf, sx, sy)];
+        if (image) {
+          const mine = await sharp(Buffer.from(image, "base64")).resize(W, H, { fit: "fill" }).png().toBuffer();
+          panels.push(await crop(mine, 1, 1));
+        }
+        const out = await sharp({ create: { width: w * S * panels.length + 12 * (panels.length - 1), height: h * S, channels: 3, background: "#ff3b30" } })
+          .composite(panels.map((pn, i) => ({ input: pn, left: i * (w * S + 12), top: 0 }))).png().toBuffer();
+        return { content: [{ type: "image" as const, data: out.toString("base64"), mimeType: "image/png" }, { type: "text" as const, text: JSON.stringify({ ...about, box: [x, y, w, h], scale: S, panels: image ? "the clip on the left, your render on the right" : "the clip", usage: u }, null, 2) }] };
+      }
+      /* colors */
+      if (col === undefined && row === undefined) return text({ error: "colors needs col (x) or row (y), with from and to" });
+      const along = col !== undefined ? "y" : "x";
+      const a = Math.max(0, Math.round(from ?? 0)), b = Math.min(along === "y" ? H - 1 : W - 1, Math.round(to ?? (along === "y" ? H - 1 : W - 1)));
+      if (b - a > 400) return text({ error: "keep the line under 400 frame pixels" });
+      const { data, info } = await sharp(buf).raw().toBuffer({ resolveWithObject: true });
+      const px = (ix: number, iy: number) => { const o = (Math.min(info.height - 1, iy) * info.width + Math.min(info.width - 1, ix)) * info.channels; return "#" + [0, 1, 2].map((k) => data[o + k].toString(16).padStart(2, "0")).join(""); };
+      const line: string[] = [];
+      for (let i = a; i <= b; i++) line.push(`${i}:${along === "y" ? px(Math.round(col! * sx), Math.round(i * sy)) : px(Math.round(i * sx), Math.round(row! * sy))}`);
+      return text({ ...about, line: along === "y" ? `x=${col}, y ${a} to ${b}` : `y=${row}, x ${a} to ${b}`, colors: line.join(" "), note: "one hex per frame pixel, read from the stored frame; neighbours repeat where the stored frame is smaller than the source", usage: u });
+    },
+  );
+
+  reg(
     "check_rebuild",
     {
       title: "Check a rebuild against the reference",
@@ -331,10 +417,35 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
           text: [
             `Rebuild the lookap entry \`${slug}\`${where ? ` in ${where}` : " in this project"}${stack ? ` with ${stack}` : " with this project's stack"}.`,
             "1. Call get_design for the record and get_brief. If your key is Max, call get_rebuild and port the file to the stack, keeping every number. Otherwise, if the brief says measured, call get_recipe and use it as data: one unit equal to a frame pixel, every element placed from its box, every fill and radius as given, every timing in ms with its easing. Treat nothing in it as a suggestion.",
-            "2. If the brief says there is no recipe, call see_design, describe the layout in one paragraph (regions, alignment, type sizes, radii, spacing), and build from that; label the motion as proposed in a comment.",
+            "2. If the brief says there is no recipe, call look_at with what=sheet for the whole clip, then see_design for each keyframe. Write the timeline as events with numbers (what, from when to when, how far) from the brief's phases and moves, and the layout in one paragraph (regions, alignment, type sizes, radii, spacing). Zoom the edge of every surface with look_at what=zoom before drawing it: edges, gaps and gradients are where rebuilds go wrong.",
             "3. Build it. Match proportion and hierarchy first, then colour, then motion. Credit the designer in a comment with the source link from the record.",
-            "4. Render your build at the frame size and take a screenshot of the first state. Call check_rebuild with it. Fix the largest differences it reports, then call it again. Stop after three rounds or at a score above 90.",
+            "4. Render your build at the frame size and take a screenshot of the first state. Call check_rebuild with it, then look_at what=zoom with your screenshot on the worst region it names. Fix what the crop shows, then check again. Stop after three rounds or at a score above 90.",
             "5. For each keyframe in the recipe, call see_design with `at` and compare your build in that state against the checks for it. Report what still differs, in one list, with numbers.",
+          ].join("\n"),
+        },
+      }],
+    }),
+  );
+
+  server.registerPrompt(
+    "remix",
+    {
+      title: "Design something new from lookap references",
+      description: "A workflow for making a new component or section in the spirit of two or three entries: read what makes each work, borrow principles, proportions and timing, never pixels or copy, build for a real purpose, then judge it by the references' own standard.",
+      argsSchema: { slugs: z.string().describe("two or three entry slugs from search_designs, comma-separated"), purpose: z.string().describe("what to make and for whom, e.g. a pricing section for a developer tool"), stack: z.string().optional().describe("the stack to build with") },
+    },
+    ({ slugs, purpose, stack }) => ({
+      messages: [{
+        role: "user" as const,
+        content: {
+          type: "text" as const,
+          text: [
+            `Design ${purpose}${stack ? ` with ${stack}` : " with this project's stack"}, in the spirit of the lookap entries ${slugs.split(",").map((x) => `\`${x.trim()}\``).join(", ")}. New work, not a rebuild.`,
+            "1. For each entry call get_design and get_brief, then see_design; for a clip, look_at with what=sheet. Write one paragraph per entry naming what makes it work in numbers: the spacing rhythm, the type scale, how its surfaces are lit (rims, shadows, inner highlights), the one motion and its timing. Adjectives are not findings.",
+            "2. Call list_notes and get_note for the notes whose titles touch the purpose or the references. The notes are the transferable part.",
+            "3. Decide what to borrow: a proportion, a material, a timing, a way of answering the pointer. Not a layout, not a palette wholesale, not the copy. Name the one element that will be the memorable thing and keep everything else quiet.",
+            "4. Build for the purpose with real content. No pixel, texture or line of copy from the references. Credit them in a comment as inspiration, with the source links from their records.",
+            "5. Render it and judge it the way each reference's designer would: does it hold their standard of spacing, material and motion? Fix the three largest gaps. End with one list: what was borrowed, from which entry, and what is new.",
           ].join("\n"),
         },
       }],

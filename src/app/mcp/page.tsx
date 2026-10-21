@@ -25,7 +25,7 @@ export default function McpPage() {
 
       <section className="flex flex-col gap-3">
         <h2 className="text-[11px] font-medium tracking-[.06em] text-subtle uppercase">Tools</h2>
-        <p className="text-[14px] leading-[1.55] text-subtle">{TOOLS.length} tools and one rebuild workflow your agent can run on any entry: look, brief, build, check, fix.</p>
+        <p className="text-[14px] leading-[1.55] text-subtle">{TOOLS.length} tools and two workflows your agent can run: rebuild an entry (look, brief, build, check, fix) or remix two or three into something new.</p>
         <ul className="divide-y divide-line rounded-xl bg-card ring-1 ring-line">
           {TOOLS.map(([name, title, what, tier]) => (
             <li key={name} className="grid gap-1 p-4 sm:grid-cols-[180px_1fr_auto] sm:items-baseline sm:gap-4">
