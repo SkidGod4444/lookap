@@ -4,18 +4,24 @@ import { isInterval, isPaidPlan, polar, polarReady, productFor } from "@/lib/pol
 import { SITE_URL } from "@/lib/site";
 
 /* /api/checkout?plan=pro&interval=month → a Polar Checkout for that product, tied to the signed-in user by external id.
-   Signed out: back to pricing with signin=1 so the header opens the dialog, then here again. */
+   Plain requests are redirected to Polar's hosted page. With embed=1 the route answers JSON { url } for the embedded
+   checkout, and the session is created with embed_origin set to the page's origin so Polar lets it be framed there.
+   Signed out: a redirect back to pricing with signin=1 (or 401 JSON in embed mode) so the header opens the dialog. */
 
 export async function GET(req: NextRequest) {
   const plan = req.nextUrl.searchParams.get("plan") ?? "starter";
   const interval = req.nextUrl.searchParams.get("interval") ?? "month";
   if (!isPaidPlan(plan) || !isInterval(interval)) return NextResponse.json({ error: "Unknown plan or interval." }, { status: 400 });
+  const embed = req.nextUrl.searchParams.get("embed") === "1";
   const { userId } = await auth();
   if (!userId) {
+    if (embed) return NextResponse.json({ error: "Sign in first." }, { status: 401 });
     const next = `/api/checkout?plan=${plan}&interval=${interval}`;
     return NextResponse.redirect(new URL(`/pricing?signin=1&next=${encodeURIComponent(next)}`, req.url));
   }
   if (!polarReady) return NextResponse.json({ error: "Billing is not configured." }, { status: 503 });
+  /* The origin that will frame the embedded checkout: the page's own, as the browser reports it. */
+  const origin = req.headers.get("origin") ?? (req.headers.get("x-forwarded-host") ? `https://${req.headers.get("x-forwarded-host")}` : req.nextUrl.origin);
   const product = productFor(plan, interval);
   if (!product) return NextResponse.json({ error: `No product configured for ${plan} ${interval}.` }, { status: 503 });
   const user = await currentUser();
@@ -30,6 +36,7 @@ export async function GET(req: NextRequest) {
     external_customer_id: userId,
     ...(user?.fullName ? { customer_name: user.fullName } : {}),
     ...(ip && !/^(127\.|::1|10\.|192\.168\.)/.test(ip) ? { customer_ip_address: ip } : {}),
+    ...(embed ? { embed_origin: origin } : {}),
     metadata: { plan, interval, userId },
   };
   try {
@@ -42,6 +49,7 @@ export async function GET(req: NextRequest) {
       if (!email || !/customer_email/.test(msg)) throw e;
       checkout = await polar().checkouts.create(base);
     }
+    if (embed) return NextResponse.json({ url: checkout.url });
     return NextResponse.redirect(checkout.url, 303);
   } catch (e) {
     console.error("[polar] checkout failed", (e instanceof Error ? e.message : String(e)).slice(0, 300));

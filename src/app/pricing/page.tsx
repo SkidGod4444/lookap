@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import { badge, button } from "@/components/button";
+import { Suspense, useState } from "react";
+import { badge } from "@/components/button";
+import { BuyButton } from "@/components/BuyButton";
 
 const PLANS = [
   { name: "Starter key", blurb: "A key for one person. Search the registry and read every design note from your agent.", monthly: 1, yearly: 0.83, yearlyTotal: 10, runs: "20 results per search", cta: "Get a Starter key", primary: false,
@@ -19,7 +20,7 @@ const FAQ = [
   ["Can I change plans or stop?", "Upgrade or downgrade whenever you like and we only charge the difference for the days left. Stopping keeps the key working until your period ends."],
 ];
 
-export default function Pricing() {
+function Pricing() {
   const [yearly, setYearly] = useState(true);
   return (
     <div className="mx-auto flex w-full max-w-[880px] flex-col gap-10 py-10">
@@ -68,7 +69,7 @@ export default function Pricing() {
                   </div>
                 ))}
               </div>
-              <a href={`/api/checkout?plan=${p.name.split(" ")[0].toLowerCase()}&interval=${yearly ? "year" : "month"}`} className={button(p.primary ? "silver" : "outline", "mt-auto h-9 w-full rounded-lg text-[13px]")}>{p.cta}</a>
+              <BuyButton plan={p.name.split(" ")[0].toLowerCase()} interval={yearly ? "year" : "month"} label={p.cta} primary={p.primary} className="mt-auto h-9 w-full rounded-lg text-[13px]" />
             </div>
           </div>
         ))}
@@ -87,4 +88,8 @@ export default function Pricing() {
       </section>
     </div>
   );
+}
+
+export default function Page() {
+  return <Suspense fallback={null}><Pricing /></Suspense>;
 }
