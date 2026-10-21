@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Entry } from "@/lib/data";
-import { Poster } from "./Poster";
+import { Media } from "./Media";
 import { badge } from "./button";
 
 export const hrefFor = (e: Entry) => (e.kind === "website" ? `/website/${e.slug}` : `/feed/${e.slug}`);
@@ -10,22 +10,7 @@ export function FeedCard({ entry }: { entry: Entry }) {
     <article className="group relative">
       <Link href={hrefFor(entry)} aria-label={`View ${entry.title}`} className="relative block overflow-hidden rounded-md bg-card ring-1 ring-line transition-[transform,box-shadow] duration-200 hover:ring-line-strong active:scale-[0.98]">
         <div className="relative w-full" style={{ aspectRatio: entry.ratio }}>
-          {entry.video ? (
-            <video
-              className="absolute inset-0 h-full w-full object-cover"
-              src={entry.video.src}
-              poster={entry.video.poster}
-              width={entry.video.w}
-              height={entry.video.h}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-            />
-          ) : (
-            <Poster entry={entry} />
-          )}
+          <Media entry={entry} />
         </div>
         {entry.sponsored && <span className={badge("dark", "absolute right-2 bottom-2 px-2 py-0.5 text-[11px]")}>Sponsored</span>}
         <span className={badge("dark", "pointer-events-none absolute top-2 right-2 size-7 opacity-0 transition-opacity duration-150 group-hover:opacity-100")} title="Save">

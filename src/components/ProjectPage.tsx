@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ENTRIES, bySlug, sectionSlug } from "@/lib/data";
-import { Poster } from "./Poster";
+import { Media } from "./Media";
 import { hrefFor } from "./FeedCard";
 import { button } from "./button";
 import { LockScroll } from "./LockScroll";
@@ -20,11 +20,7 @@ export function ProjectPage({ slug }: { slug: string }) {
       <LockScroll />
       <Stage>
         <div className="relative w-full cursor-default overflow-hidden rounded-[5px] shadow-[0_24px_80px_rgba(0,0,0,0.6)] ring-1 ring-line-strong" style={{ maxWidth: wide ? 900 : 420, aspectRatio: entry.ratio }}>
-          {entry.video ? (
-            <video className="absolute inset-0 h-full w-full object-cover" src={entry.video.src} poster={entry.video.poster} autoPlay muted loop playsInline />
-          ) : (
-            <Poster entry={entry} />
-          )}
+          <Media entry={entry} />
         </div>
       </Stage>
 
@@ -41,7 +37,7 @@ export function ProjectPage({ slug }: { slug: string }) {
               <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-[#080808] text-[10px] font-semibold uppercase text-silver-bright ring-1 ring-line-strong">{entry.authorName.split(" ").map((w) => w[0]).slice(0, 2).join("")}</span>
               <span className="min-w-0 flex-1">
                 <span className="block truncate text-[13px] font-medium text-foreground group-hover:underline underline-offset-2">{entry.authorName}</span>
-                <span className="block truncate text-[12px] text-subtle">{entry.x ? `@${entry.x}` : "source on GitHub"}</span>
+                <span className="block truncate text-[12px] text-subtle">{entry.x ? `@${entry.x}` : entry.sourceUrl?.includes("github.com") ? "source on GitHub" : "source"}</span>
               </span>
             </a>
           ) : (
@@ -55,8 +51,8 @@ export function ProjectPage({ slug }: { slug: string }) {
           )}
 
           {(entry.x || site || entry.sourceUrl) && (
-            <a href={entry.x ? `https://x.com/${entry.x}` : site ?? entry.sourceUrl} className={button("silver", "h-8 justify-between rounded-lg px-3 text-[13px]")}>
-              {entry.x ? "Open on X" : site ? "Visit site" : "View source"}
+            <a href={entry.sourceUrl ?? (entry.x ? `https://x.com/${entry.x}` : site!)} className={button("silver", "h-8 justify-between rounded-lg px-3 text-[13px]")}>
+              {entry.sourceUrl?.includes("x.com/") ? "Open post on X" : entry.x ? "Open on X" : site ? "Visit site" : "View source"}
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
             </a>
           )}
@@ -64,7 +60,7 @@ export function ProjectPage({ slug }: { slug: string }) {
           <dl className="flex flex-col divide-y divide-dashed divide-line-strong [&>*]:flex [&>*]:items-start [&>*]:justify-between [&>*]:gap-3 [&>*]:py-2.5 text-[12px]">
             <div><dt className="font-medium text-foreground">Category</dt><dd><Link href={`/sections/${sectionSlug(entry.category)}`} className="text-subtle underline-offset-2 hover:text-foreground hover:underline">{entry.category}</Link></dd></div>
             <div><dt className="font-medium text-foreground">Type</dt><dd className="text-right text-subtle">{entry.types.join(", ")}</dd></div>
-            <div><dt className="font-medium text-foreground">Media</dt><dd className="text-subtle">{entry.video ? `clip · ${entry.duration}s` : "still"}</dd></div>
+            <div><dt className="font-medium text-foreground">Media</dt><dd className="text-subtle">{entry.video ? (entry.duration ? `clip · ${entry.duration}s` : "clip") : "still"}</dd></div>
           </dl>
 
           <section>
@@ -72,7 +68,7 @@ export function ProjectPage({ slug }: { slug: string }) {
             <ul className="mt-2 grid grid-cols-3 gap-px overflow-hidden rounded-lg bg-line ring-1 ring-line lg:grid-cols-2">
               {similar.map((s) => (
                 <li key={s.slug} className="min-w-0 bg-canvas">
-                  <Link href={hrefFor(s)} className="block"><span className="relative block aspect-[4/3] overflow-hidden"><Poster entry={s} compact /></span></Link>
+                  <Link href={hrefFor(s)} className="block"><span className="relative block aspect-[4/3] overflow-hidden"><Media entry={s} compact /></span></Link>
                 </li>
               ))}
             </ul>

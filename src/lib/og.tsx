@@ -148,7 +148,7 @@ export async function ogEntry(e: Entry) {
   const [fonts, mascot, poster] = await Promise.all([
     loadFonts(),
     loadMascot(),
-    e.video ? loadPublic(e.video.poster.replace(/^\//, ""), "image/jpeg") : Promise.resolve(null),
+    e.poster ? (e.poster.startsWith("/") ? loadPublic(e.poster.replace(/^\//, ""), "image/jpeg") : Promise.resolve(e.poster)) : Promise.resolve(null),
   ]);
   const k = OG_SIZE_2X.width / OG_SIZE.width;
   const host = SITE_URL.replace(/^https?:\/\//, "");

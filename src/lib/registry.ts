@@ -151,9 +151,9 @@ export const CATEGORIES = Array.from(new Set(ENTRIES.map((e) => e.category))).so
 export const SECTION_NAMES = [...SECTIONS];
 
 export function publicEntry(e: Entry) {
-  return { slug: e.slug, title: e.title, kind: e.kind, category: e.category, types: e.types, author: e.authorName, x: e.x ?? null, sample: e.sample, description: e.description, ratio: Number(e.ratio.toFixed(3)), duration: e.duration ?? null, demo: e.video ? e.video.src : null, recipe: recipeFor(e)?.slug ?? null };
+  return { slug: e.slug, title: e.title, kind: e.kind, category: e.category, types: e.types, author: e.authorName, x: e.x ?? null, sample: e.sample, description: e.description, ratio: Number(e.ratio.toFixed(3)), duration: e.duration ?? null, media: e.video ? { type: "video" as const, src: e.video.src, w: e.video.w, h: e.video.h } : e.image ? { type: "image" as const, src: e.image.src, w: e.image.w, h: e.image.h } : null, source: e.sourceUrl ?? null, demo: e.video?.src.startsWith("/") ? e.video.src : null, recipe: recipeFor(e)?.slug ?? null };
 }
 
 export function recipeFor(e: Entry) {
-  return RECIPES.find((r) => e.title.toLowerCase().includes(r.title.split(",")[0].toLowerCase().split(" ")[0]) && e.video);
+  return RECIPES.find((r) => e.slug.endsWith(`-${r.slug}`));
 }
