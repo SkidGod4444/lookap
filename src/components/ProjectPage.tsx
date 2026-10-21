@@ -86,10 +86,10 @@ export function ProjectPage({ slug }: { slug: string }) {
               <h2 className="text-[11px] font-medium tracking-[.06em] text-subtle uppercase">Rebuilt by</h2>
               <dl className="mt-2 flex flex-col divide-y divide-dashed divide-line-strong [&>*]:flex [&>*]:items-start [&>*]:justify-between [&>*]:gap-3 [&>*]:py-2.5 text-[12px]">
                 <div><dt className="font-medium text-foreground">Model</dt><dd className="text-right text-subtle"><span className="text-foreground">{recipe.build.model}</span><br />{recipe.build.modelId}</dd></div>
-                <div><dt className="font-medium text-foreground">Tokens</dt><dd className="text-right text-subtle"><span className="text-foreground">{tokens(recipe.build.outputTokens)}</span> written<br />{tokens(recipe.build.totalTokens)} read</dd></div>
+                <div><dt className="font-medium text-foreground">Tokens</dt><dd className="text-right text-subtle"><span className="text-foreground">{tokens(recipe.build.outputTokens)}</span> written<br />{tokens(recipe.build.totalTokens)} read, context re-read each turn</dd></div>
                 <div><dt className="font-medium text-foreground">Work</dt><dd className="text-right text-subtle">{recipe.build.minutes} min · {recipe.build.toolCalls} tool calls<br />{recipe.build.rounds} rounds of feedback</dd></div>
               </dl>
-              <p className="mt-2 text-[11px] leading-[1.5] text-subtle">Every number comes from the clip&apos;s pixels: the agent measured frames, built, and compared renders side by side until it matched.</p>
+              <p className="mt-2 text-[11px] leading-[1.5] text-subtle">Whole-session totals, feedback rounds included. The agent measured frames, built, and compared renders side by side until it matched.</p>
             </section>
           )}
 
