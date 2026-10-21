@@ -15,6 +15,7 @@ import { liveFor } from "./demo/live";
 import { AgentPrompts } from "./AgentPrompts";
 import { DemandPing } from "./DemandPing";
 import { recipeFor, tokens } from "@/lib/registry";
+import { FACTORY } from "@/lib/rebuilds";
 
 export function ProjectPage({ slug }: { slug: string }) {
   const entry = bySlug(slug);
@@ -83,6 +84,16 @@ export function ProjectPage({ slug }: { slug: string }) {
           </dl>
 
           {/* the cost of the rebuild, read from the transcript of the session that made it */}
+          {!recipe && FACTORY[entry.slug] && (
+            <div className="flex flex-col gap-2">
+              <h2 className="text-[11px] font-medium tracking-[0.04em] text-subtle uppercase">Rebuilt by lookap</h2>
+              <dl className="flex flex-col gap-1.5 text-[12px] leading-[1.4]">
+                <div className="flex justify-between gap-3"><dt className="font-medium text-foreground">Model</dt><dd className="text-right text-subtle"><span className="text-foreground">{FACTORY[entry.slug].build.model}</span><br />{FACTORY[entry.slug].build.modelId}</dd></div>
+                <div className="flex justify-between gap-3"><dt className="font-medium text-foreground">Work</dt><dd className="text-right text-subtle">{FACTORY[entry.slug].build.passes} passes over the clip at 60 fps<br />{FACTORY[entry.slug].build.date}</dd></div>
+              </dl>
+              <p className="mt-2 text-[11px] leading-[1.5] text-subtle">Every size, colour and motion read from the designer&apos;s clip frame by frame, then compared side by side until it matched. Flip the switch above to use it. The file is on Max.</p>
+            </div>
+          )}
           {recipe && (
             <section>
               <h2 className="text-[11px] font-medium tracking-[.06em] text-subtle uppercase">Rebuilt by</h2>

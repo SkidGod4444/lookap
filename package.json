@@ -10,7 +10,8 @@
     "measure": "bun scripts/measure.ts",
     "bench:measure": "bun scripts/bench-measure.ts",
     "measure:all": "bun scripts/measure-all.ts",
-    "drafts": "bun scripts/build-drafts.ts"
+    "drafts": "bun scripts/build-drafts.ts",
+    "rebuilds": "bun scripts/build-rebuilds.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.136.0",

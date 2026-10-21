@@ -3,7 +3,9 @@ import { NextResponse } from "next/server";
 import { AI_BOT_RE, AI_NOTICE } from "@/lib/bots";
 
 /* AI crawlers and scraper clients get a 403 with the notice on every page. /api stays open: /api/mcp is the product
-   (Claude Code, Cursor and Codex call it with fetch-style user agents) and /api/webhooks receives Clerk and Polar. */
+   (Claude Code, Cursor and Codex call it with fetch-style user agents) and /api/webhooks receives Clerk and Polar.
+   /api/live/ is left out of the matcher below: it serves a rebuild into a sandboxed frame with no cookies, and Clerk's
+   handshake redirect would loop it; the route gates itself on the browser's fetch metadata. */
 const OPEN = /^\/(api\/|install\.sh$|robots\.txt$|sitemap\.xml$|llms\.txt$|manifest\.webmanifest$)/;
 
 /* Pages that belong to a signed-in person. A signed-out visit never renders them: it lands on the feed with the
@@ -32,7 +34,7 @@ export default clerkMiddleware(async (auth, req) => {
 
 export const config = {
   matcher: [
-    "/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)",
-    "/(api|trpc)(.*)",
+    "/((?!_next|api/live/|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)",
+    "/(api(?!/live/)|trpc)(.*)",
   ],
 };

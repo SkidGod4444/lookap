@@ -33,6 +33,8 @@ export async function openPage(url: string, W: number, H: number): Promise<Page>
   const send = (method: string, params: Record<string, unknown> = {}) => new Promise<{ result: Record<string, unknown> }>((res) => { const i = ++id; pending.set(i, res); ws.send(JSON.stringify({ id: i, method, params })); });
   const ev = async (expression: string) => ((await send("Runtime.evaluate", { expression, returnByValue: true, awaitPromise: true })).result as { result: { value: unknown } }).result.value;
   await send("Emulation.setDeviceMetricsOverride", { width: W, height: H, deviceScaleFactor: 1, mobile: false });
+  /* a plain Chrome user agent: the site's own proxy turns scrapers away by name, and HeadlessChrome is one of them */
+  await send("Network.setUserAgentOverride", { userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" });
   const goto = async (u: string) => {
     await send("Page.navigate", { url: u });
     await sleep(900);

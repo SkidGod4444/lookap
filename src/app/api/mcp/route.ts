@@ -3,7 +3,7 @@ import { WebStandardStreamableHTTPServerTransport } from "@modelcontextprotocol/
 import { z } from "zod";
 import { CATEGORIES, METHOD, NOTES, RECIPES, SECTION_NAMES, briefFor, facets, publicEntry, recipeFor, searchEntries, similarEntries } from "@/lib/registry";
 import { compareBuild } from "@/lib/compare";
-import { REBUILDS } from "@/lib/rebuilds";
+import { REBUILDS, rebuildFor, REBUILD_SLUGS } from "@/lib/rebuilds";
 import { bump } from "@/lib/demand";
 import { draftFor } from "@/lib/drafts";
 import { BREADTH, DAILY, QUOTAS, charge, chargeDaily, fingerprint, touchEntry, usageFor } from "@/lib/usage";
@@ -161,21 +161,21 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       if (!lim.source) return gated("get_rebuild", plan, reason, "a Max key");
       const e = bySlug(slug);
       const recipe = e ? recipeFor(e) : RECIPES.find((r) => r.slug === slug);
-      const rb = recipe ? REBUILDS[recipe.slug] : undefined;
-      if (!recipe || !rb) return text({ error: `No finished rebuild for ${slug}`, available: Object.keys(REBUILDS) });
-      const entry = e ?? ENTRIES.find((x) => recipeFor(x)?.slug === recipe.slug);
+      const entry = e ?? ENTRIES.find((x) => recipe && recipeFor(x)?.slug === recipe.slug);
+      const rb = entry ? rebuildFor(entry) : recipe ? { ...REBUILDS[recipe.slug], title: recipe.title, build: recipe.build } : null;
+      if (!rb || !rb.html) return text({ error: `No finished rebuild for ${slug}`, available: REBUILD_SLUGS() });
       if (entry) { const br = await touchEntry(keyRef, plan, entry.slug); if (br && !br.ok) return tooWide(br); }
       const u = await charge(keyRef, plan, "get_rebuild");
       if (u && !u.ok) return spent("get_rebuild", u);
       if (entry) bump(entry.slug, "agent");
       const mark = fingerprint(keyRef);
       const credit = entry ? { designer: entry.authorName, x: entry.x ?? null, source: entry.sourceUrl ?? null } : null;
-      const header = `<!-- ${recipe.title}. Rebuilt by lookap (${recipe.build.model}) from ${credit?.designer ?? "the designer"}'s clip${credit?.source ? `: ${credit.source}` : ""}. Licensed to a lookap Max key holder for use in their own products; not for redistribution as a design asset. Issued ${new Date().toISOString().slice(0, 10)} to ${mark}. -->\n`;
+      const header = `<!-- ${rb.title}. Rebuilt by lookap (${rb.build.model}) from ${credit?.designer ?? "the designer"}'s clip${credit?.source ? `: ${credit.source}` : ""}. Licensed to a lookap Max key holder for use in their own products; not for redistribution as a design asset. Issued ${new Date().toISOString().slice(0, 10)} to ${mark}. -->\n`;
       /* the same mark inside the stylesheet, where a stripped comment would not reach */
-      const body = rb.html.replace(/:root\s*\{/, `:root { --lk: "${mark}";`);
+      const body = rb.html.replace(/(:root|#stage)\s*\{/, `$1 { --lk: "${mark}";`);
       return {
         content: [
-          { type: "text" as const, text: JSON.stringify({ slug: recipe.slug, title: recipe.title, file: rb.file, bytes: rb.html.length, needs: rb.needs, credit, build: recipe.build, issued: { to: mark, on: new Date().toISOString().slice(0, 10) }, usage: u, how: ["Save the second part as the file named above and open it in a browser; it runs as is.", "To port: keep --u as one source pixel and every calc(N * var(--u)); move the CSS and markup into your component; the script is plain DOM code.", "Then render, screenshot and call check_rebuild to confirm nothing drifted."] }, null, 2) },
+          { type: "text" as const, text: JSON.stringify({ slug: entry?.slug ?? recipe?.slug ?? slug, title: rb.title, file: rb.file, bytes: rb.html.length, needs: rb.needs, credit, build: rb.build, measured: Boolean(recipe), issued: { to: mark, on: new Date().toISOString().slice(0, 10) }, usage: u, how: ["Save the second part as the file named above and open it in a browser; it runs as is.", "To port: keep --u as one source pixel and every calc(N * var(--u)); move the CSS and markup into your component; the script is plain DOM code.", "Then render, screenshot and call check_rebuild to confirm nothing drifted."] }, null, 2) },
           { type: "text" as const, text: header + body },
         ],
       };
