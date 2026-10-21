@@ -1,4 +1,5 @@
 import "server-only";
+import { bump } from "@/lib/demand";
 import { Redis } from "@upstash/redis";
 import { bySlug } from "@/lib/data";
 
@@ -74,13 +75,13 @@ export async function addItem(userId: string, id: string, slug: string) {
   const r = redis();
   if (!(await r.sismember(K.list(userId), id))) return { error: "No such moodboard.", status: 404 };
   if ((await r.scard(K.items(userId, id))) >= MAX_ITEMS) return { error: `${MAX_ITEMS} entries per moodboard is the limit.`, status: 400 };
-  await r.sadd(K.items(userId, id), slug);
+  if (await r.sadd(K.items(userId, id), slug)) bump(slug, "save");
   return { ok: true };
 }
 
 export async function removeItem(userId: string, id: string, slug: string) {
   const r = redis();
   if (!(await r.sismember(K.list(userId), id))) return { error: "No such moodboard.", status: 404 };
-  await r.srem(K.items(userId, id), slug);
+  if (await r.srem(K.items(userId, id), slug)) bump(slug, "save", -1);
   return { ok: true };
 }

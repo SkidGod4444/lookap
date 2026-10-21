@@ -13,6 +13,7 @@ import { Stage } from "./Stage";
 import { Compare } from "./Compare";
 import { liveFor } from "./demo/live";
 import { AgentPrompts } from "./AgentPrompts";
+import { DemandPing } from "./DemandPing";
 import { recipeFor, tokens } from "@/lib/registry";
 
 export function ProjectPage({ slug }: { slug: string }) {
@@ -32,6 +33,7 @@ export function ProjectPage({ slug }: { slug: string }) {
     /* on large screens the page does not scroll: the stage is fixed and only the panel scrolls */
     <div className="-mx-4 -mt-4 -mb-4 flex flex-1 flex-col lg:h-[calc(100vh_-_57px)] lg:flex-none lg:flex-row lg:overflow-hidden">
       <LockScroll />
+      <DemandPing slug={entry.slug} />
       <Stage>
         <Compare clip={<Media entry={entry} sizes={STAGE_SIZES} eager />} live={live ? <live.Component /> : null} hint={live?.hint} align={live?.align} style={frame} />
       </Stage>

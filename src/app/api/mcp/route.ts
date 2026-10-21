@@ -4,6 +4,7 @@ import { z } from "zod";
 import { CATEGORIES, METHOD, NOTES, RECIPES, SECTION_NAMES, briefFor, facets, publicEntry, recipeFor, searchEntries, similarEntries } from "@/lib/registry";
 import { compareBuild } from "@/lib/compare";
 import { REBUILDS } from "@/lib/rebuilds";
+import { bump } from "@/lib/demand";
 import { DAILY, QUOTAS, charge, chargeDaily, usageFor } from "@/lib/usage";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
@@ -116,6 +117,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       if (plan === "none") return gated("get_design", plan, reason);
       const e = bySlug(slug);
       if (!e) return text({ error: `No entry ${slug}` });
+      bump(e.slug, "agent");
       const pub = publicEntry(e);
       const recipe = pub.recipe ? RECIPES.find((r) => r.slug === pub.recipe) : null;
       return text({ ...pub, recipe: recipe ? (lim.recipes ? recipe : { slug: recipe.slug, title: recipe.title, locked: true }) : null });
@@ -134,6 +136,8 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       if (!lim.recipes) return gated("get_recipe", plan, reason);
       const r = RECIPES.find((x) => x.slug === slug);
       if (!r) return text({ error: `No recipe ${slug}`, available: RECIPES.map((x) => x.slug) });
+      const owner = ENTRIES.find((x) => recipeFor(x)?.slug === r.slug);
+      if (owner) bump(owner.slug, "agent");
       const u = await charge(keyRef, plan, "get_recipe");
       if (u && !u.ok) return spent("get_recipe", u);
       return text(u ? { ...r, usage: u } : r);
@@ -157,6 +161,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       const u = await charge(keyRef, plan, "get_rebuild");
       if (u && !u.ok) return spent("get_rebuild", u);
       const entry = e ?? ENTRIES.find((x) => recipeFor(x)?.slug === recipe.slug);
+      if (entry) bump(entry.slug, "agent");
       const credit = entry ? { designer: entry.authorName, x: entry.x ?? null, source: entry.sourceUrl ?? null } : null;
       const header = `<!-- ${recipe.title}. Rebuilt by lookap (${recipe.build.model}) from ${credit?.designer ?? "the designer"}'s clip${credit?.source ? `: ${credit.source}` : ""}. Licensed to a lookap Max key holder for use in their own products; not for redistribution as a design asset. Issued ${new Date().toISOString().slice(0, 10)}. -->\n`;
       return {
@@ -219,6 +224,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       if (plan === "none") return gated("get_brief", plan, reason);
       const e = bySlug(slug);
       if (!e) return text({ error: `No entry ${slug}` });
+      bump(e.slug, "agent");
       return text(briefFor(e));
     },
   );
@@ -242,6 +248,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       if (!src) return text({ error: `No frame for ${slug}` });
       const u = await charge(keyRef, plan, "see_design");
       if (u && !u.ok) return spent("see_design", u);
+      bump(e.slug, "agent");
       try {
         const { data, mimeType } = await loadFrame(src);
         const frame = { w: (e.video ?? e.image)?.w, h: (e.video ?? e.image)?.h, at: kf ? `${kf.at} s, ${kf.shows}` : e.video ? "first frame of the clip" : "the still", keyframes: recipe?.keyframes.map((k) => k.name) ?? [] };
@@ -274,6 +281,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       if (!kf) return text({ error: `No keyframe ${at}`, available: recipe.keyframes.map((k) => k.name) });
       const u = await charge(keyRef, plan, "check_rebuild");
       if (u && !u.ok) return spent("check_rebuild", u);
+      bump(e.slug, "agent");
       try {
         const buf = Buffer.from(image.replace(/^data:[^,]+,/, ""), "base64");
         const ref = path.join(process.cwd(), "public", kf.src.replace(/^\//, ""));

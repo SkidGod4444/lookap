@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { useUser } from "@clerk/nextjs";
 import { badge, button } from "@/components/button";
 import { PLAN_NAME } from "@/lib/plan-names";
+import { DemandTable } from "@/components/DemandTable";
 import { SITE_URL } from "@/lib/site";
 
 type KeyRow = { keyId: string; start: string; name?: string; plan: string; createdAt: number; enabled: boolean };
@@ -130,6 +131,8 @@ function Account() {
           <pre className="overflow-x-auto rounded-lg bg-canvas p-3 font-mono text-[12px] leading-relaxed text-silver ring-1 ring-line">{`claude mcp add --transport http lookap ${SITE_URL}/api/mcp --header "Authorization: Bearer ${fresh.key}"`}</pre>
         </div>
       )}
+
+      <DemandTable />
 
       <section className="flex items-center justify-between gap-4 rounded-xl bg-card px-5 py-4 ring-1 ring-line">
         <div>
