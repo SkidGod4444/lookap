@@ -48,10 +48,8 @@
 @layer base {
   html { color-scheme: dark; }
   /* Scrollbars as rulers: a thin dark track scored with ticks every 4 px and a longer one every 20 px, and a silver
-     slider riding on it. Firefox has no track styling, so it gets the thin silver bar on the gutter. */
-  @supports not selector(::-webkit-scrollbar) {
-    * { scrollbar-width: thin; scrollbar-color: #5a5a5a #0a0a0a; }
-  }
+     slider riding on it. WebKit only. Never set scrollbar-width or scrollbar-color here: Chrome 121+ drops every
+     ::-webkit-scrollbar rule on an element that has them, and the minifier removes an @supports guard around them. */
   ::-webkit-scrollbar { width: 10px; height: 10px; }
   ::-webkit-scrollbar-track {
     background:
@@ -81,7 +79,7 @@
   ::-moz-selection { background: #d9d9d9; color: #0a0a0a; }
   body { @apply bg-gutter font-sans text-foreground; }
   /* images are not draggable; text everywhere is selectable */
-  img { -webkit-user-drag: none; }
+  img { -webkit-user-drag: none }
   /* everything clickable shows a hand; Tailwind 4's preflight leaves buttons at the default arrow */
   a[href], button, [role="button"], label[for], select, summary, input[type="range"], input[type="checkbox"], input[type="radio"], input[type="submit"], input[type="button"] { cursor: pointer; }
   button:disabled, [aria-disabled="true"] { cursor: not-allowed; }

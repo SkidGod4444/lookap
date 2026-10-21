@@ -10,6 +10,8 @@ import { Footer } from "@/components/Footer";
 import { Sounds } from "@/components/Sounds";
 import { NoInspect } from "@/components/NoInspect";
 import { BottomBlur } from "@/components/BottomBlur";
+import { ScrollReset } from "@/components/ScrollReset";
+import { Inertia } from "@/components/Inertia";
 import { Analytics } from "@vercel/analytics/next";
 import { AI_NOTICE } from "@/lib/bots";
 
@@ -60,7 +62,7 @@ const JSON_LD = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${inter.variable} ${doto.variable} h-full antialiased`}>
-      <body className="min-h-screen bg-gutter font-sans text-foreground antialiased">
+      <body className="h-full overflow-hidden bg-gutter font-sans text-foreground antialiased">
         {/* catalog media comes from vibrant's CDN; open the connection before the first poster is requested */}
         <link rel="preconnect" href="https://cdn.vibrant.design" />
         <ClerkProvider>
@@ -69,14 +71,19 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <Suspense fallback={<div className="h-14" />}>
             <TopBar />
           </Suspense>
-          <div className="relative mx-auto flex min-h-[calc(100vh_-_57px)] w-full max-w-[1680px] flex-col bg-canvas p-4 ring-1 ring-line">
-          <Suspense fallback={null}>
-            <ChipNav />
-          </Suspense>
-          <main className="relative flex min-h-0 min-w-0 flex-1 flex-col">{children}</main>
-          <Suspense fallback={null}>
-            <Footer />
-          </Suspense>
+          {/* The page scrolls here, under the top bar, so the scrollbar never runs through it. 57 = bar 56 + its border. */}
+          <div id="scroll" className="h-[calc(100%_-_57px)] overflow-y-auto overflow-x-hidden">
+            <ScrollReset />
+            <Inertia />
+            <div className="relative mx-auto flex min-h-full w-full max-w-[1680px] flex-col bg-canvas p-4 ring-1 ring-line">
+              <Suspense fallback={null}>
+                <ChipNav />
+              </Suspense>
+              <main className="relative flex min-h-0 min-w-0 flex-1 flex-col">{children}</main>
+              <Suspense fallback={null}>
+                <Footer />
+              </Suspense>
+            </div>
           </div>
           <Suspense fallback={null}>
             <BottomBlur />

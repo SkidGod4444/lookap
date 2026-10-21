@@ -101,9 +101,52 @@ export function playBadge() {
   o.stop(t + 0.06);
 }
 
-/* Mount once. Any element carrying .sfx-button or .sfx-badge (set by the button() and badge() recipes) plays on pointer down. */
+/* Ruler tick: the scrollbar is a ruler, so the slider clicks over its ticks. A 3 ms filtered noise click, with a
+   slightly lower, fuller one on the long tick every fifth notch. Far quieter than a badge. */
+export function playTick(accent = false) {
+  const ac = audio();
+  if (ac.state !== "running") return; /* no gesture yet: the browser keeps the context silent, so skip rather than queue */
+  const t = ac.currentTime;
+  const out = ac.createGain();
+  out.gain.value = accent ? 0.16 : 0.09;
+  out.connect(ac.destination);
+  const n = noise(ac, 0.012);
+  const f = ac.createBiquadFilter();
+  f.type = "bandpass";
+  f.frequency.value = accent ? 1800 : 3200;
+  f.Q.value = 1.2;
+  const g = ac.createGain();
+  g.gain.setValueAtTime(0.5, t);
+  g.gain.exponentialRampToValueAtTime(0.0001, t + (accent ? 0.012 : 0.006));
+  n.connect(f).connect(g).connect(out);
+  n.start(t);
+}
+
+/* Mount once. Any element carrying .sfx-button or .sfx-badge (set by the button() and badge() recipes) plays on pointer down.
+   Every scroller on the page ticks as its slider crosses the ruler marks (the page in #scroll, a project's panel, a chip
+   rail): one notch per 4 px of slider travel, the long mark every fifth. Scroll events do not bubble, so they are caught
+   in the capture phase at the document. Ticks are rate-limited so a flick reads as a ratchet, not a buzz. */
 export function Sounds() {
   useEffect(() => {
+    const notches = new WeakMap<Element, number>();
+    let lastAt = 0;
+    const onScroll = (e: Event) => {
+      const el = e.target;
+      if (!(el instanceof HTMLElement) || document.hidden) return;
+      const horizontal = el.scrollWidth > el.clientWidth + 1 && el.scrollHeight <= el.clientHeight + 1;
+      const track = horizontal ? el.clientWidth : el.clientHeight, content = horizontal ? el.scrollWidth : el.scrollHeight, pos = horizontal ? el.scrollLeft : el.scrollTop;
+      if (content <= track + 1) return;
+      const thumb = (pos / (content - track)) * (track - track * (track / content)); /* slider travel in px */
+      const notch = Math.floor(thumb / 4);
+      const prev = notches.get(el) ?? -1;
+      if (notch === prev) return;
+      notches.set(el, notch);
+      const now = performance.now();
+      if (now - lastAt < 28) return;
+      lastAt = now;
+      playTick(Math.floor(notch / 5) !== Math.floor(prev / 5));
+    };
+    document.addEventListener("scroll", onScroll, { passive: true, capture: true });
     const onDown = (e: PointerEvent) => {
       if (e.button !== 0 || !(e.target instanceof Element)) return;
       const el = e.target.closest(".sfx-button, .sfx-badge");
@@ -127,7 +170,7 @@ export function Sounds() {
     document.addEventListener("pointerdown", onDown, { passive: true });
     document.addEventListener("pointermove", onMove, { passive: true });
     document.addEventListener("pointerout", onLeave, { passive: true });
-    return () => { document.removeEventListener("pointerdown", onDown); document.removeEventListener("pointermove", onMove); document.removeEventListener("pointerout", onLeave); };
+    return () => { document.removeEventListener("scroll", onScroll, { capture: true }); document.removeEventListener("pointerdown", onDown); document.removeEventListener("pointermove", onMove); document.removeEventListener("pointerout", onLeave); };
   }, []);
   return null;
 }
