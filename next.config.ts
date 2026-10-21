@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
   },
   /* Catalog media lives on vibrant's CDN; next/image resizes the stills and clip posters to the card width and caches them at the edge. */
   images: { remotePatterns: [{ protocol: "https", hostname: "cdn.vibrant.design", pathname: "/**" }], minimumCacheTTL: 2678400 /* URLs are version-hashed, so a month */ },
+  /* the static ffmpeg rides along with the MCP function, so look_at and check_media can read clips on Vercel */
+  serverExternalPackages: ["ffmpeg-static"],
+  outputFileTracingIncludes: { "/api/mcp": ["./node_modules/ffmpeg-static/ffmpeg"] },
   cacheComponents: true,
   partialPrefetching: true,
   turbopack: {

@@ -13,6 +13,8 @@ import sharp from "sharp";
 import { ENTRIES, bySlug } from "@/lib/data";
 import { LIMITS, PLAN_NAME, resolvePlan, type Plan } from "@/lib/keys";
 import { sampleVideo } from "@/lib/gate/frames";
+import { cachedClip, clipInfo, frameAt, sheetOf, trackEdge } from "@/lib/ffmpeg";
+import { clipId } from "@/lib/drafts";
 import { analyse } from "@/lib/gate/heuristics";
 
 /* lookap MCP: the design registry for agents. Stateless Streamable HTTP, one server per request.
@@ -290,20 +292,22 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     "look_at",
     {
       title: "Look at a clip the way it was measured",
-      description: "Frames and numbers from the clip, not impressions. what=sheet: a contact sheet of the whole clip at 2 fps, 6 columns, read left to right then down (frame n is at (n - 1) / 2 s), so you see what moves and in what order before you decide a timeline. what=frame with at (seconds): the clip's frame nearest that moment, from the keyframes plus the middle of every measured phase, where things are mid-flight. what=zoom with at and box [x, y, w, h] in frame pixels: that crop enlarged, the judge of edges, radii, gradients, shadows and gaps; add image (base64 PNG or JPEG of your own render at that moment, any size) to get your crop beside it. what=colors with at and col (an x) or row (a y) plus from and to: one hex per frame pixel along that line, the true colour of a border, a gradient or a gap. Clips only. Frames are stored at 560 to 720 px wide, so detail below about two frame pixels is not there. Needs Pro; metered like see_design.",
+      description: "Frames and numbers from the clip itself, at full size, not impressions. what=sheet: a contact sheet, the whole clip at 2 fps, or with span [a, b] (seconds, up to 4 s) that stretch at 10 fps in 6 columns, read left to right then down, so you see what moves and in what order before you decide a timeline. what=frame with at (seconds): the clip's frame at that moment. what=zoom with at and box [x, y, w, h] in frame pixels: that crop enlarged, the judge of edges, radii, gradients, shadows and gaps; add image (base64 PNG or JPEG of your own render at that moment, any size) to get your crop beside it. what=colors with at and col (an x) or row (a y) plus from and to: one hex per frame pixel along that line, the true colour of a border, a gradient or a gap. what=track with col or row, span [a, b] (up to 4 s) and cls (red, dark or light): per frame at the clip's own rate, the first and last pixel of that colour along the line, only where it changed, so a motion reads as start, end, distance and shape; track a heading too, since if it moves the page reflows. Clips only. Needs Pro; metered like see_design.",
       inputSchema: {
         slug: z.string(),
-        what: z.enum(["sheet", "frame", "zoom", "colors"]),
+        what: z.enum(["sheet", "frame", "zoom", "colors", "track"]),
         at: z.number().optional().describe("seconds into the clip; the nearest stored frame is used and named in the reply"),
         box: z.array(z.number()).length(4).optional().describe("[x, y, w, h] in frame pixels, for zoom"),
         col: z.number().optional().describe("x of the column to read, for colors"),
         row: z.number().optional().describe("y of the row to read, for colors"),
         from: z.number().optional(), to: z.number().optional(),
         image: z.string().optional().describe("base64 of your render at that moment, for zoom: shown beside the clip's crop"),
+        span: z.array(z.number()).length(2).optional().describe("[from, to] in seconds, for sheet (10 fps) and track; at most 4 s"),
+        cls: z.enum(["red", "dark", "light"]).optional().describe("the colour class to track; default dark"),
       },
       annotations: ro,
     },
-    async ({ slug, what, at, box, col, row, from, to, image }) => {
+    async ({ slug, what, at, box, col, row, from, to, image, span, cls }) => {
       if (!lim.media) return gated("look_at", plan, reason);
       const e = bySlug(slug);
       if (!e) return text({ error: `No entry ${slug}` });
@@ -316,24 +320,49 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       const nearest = (t: number) => stored.reduce((best, f) => { const d = Math.abs(f.at - t) - Math.abs(best.at - t); return d < -0.1 || (Math.abs(d) <= 0.1 && f.name !== "mid-phase" && best.name === "mid-phase") ? f : best; });
       const file = (src: string) => readFile(path.join(process.cwd(), "public", src.replace(/^\//, "")));
       const W = draft.frame.w, H = draft.frame.h;
+      /* the clip itself, from the CDN, kept on this instance; the stored frames stand in if it cannot be read */
+      const id = clipId(e)!;
+      const clip = e.video ? await cachedClip(id, e.video.src).catch(() => null) : null;
+      const spanOk = (s: [number, number]) => s[0] >= 0 && s[1] > s[0] && s[1] - s[0] <= 4 && s[1] <= draft.duration + 0.5;
       if (what === "sheet") {
-        if (!draft.sheet) return text({ error: `No contact sheet for ${slug}` });
         const u = await charge(keyRef, plan, "look_at");
         if (u && !u.ok) return spent("look_at", u);
         bump(e.slug, "agent");
+        if (span && clip) {
+          if (!spanOk(span as [number, number])) return text({ error: `span must be [from, to] within the ${draft.duration}s clip and at most 4 s long` });
+          const data = (await sheetOf(clip, span[0], span[1], 10, 6, 450)).toString("base64");
+          return { content: [{ type: "image" as const, data, mimeType: "image/jpeg" }, { type: "text" as const, text: JSON.stringify({ slug, sheet: { span, frames: Math.ceil((span[1] - span[0]) * 10), fps: 10, cols: 6, read: `left to right, then down; frame n is at ${span[0]} + (n - 1) / 10 s`, clip: `${W}x${H}, ${draft.duration}s, ${draft.fps} fps` }, phases: draft.phases, usage: u }, null, 2) }] };
+        }
+        if (!draft.sheet) return text({ error: `No contact sheet for ${slug}` });
         const data = (await file(draft.sheet.src)).toString("base64");
-        return { content: [{ type: "image" as const, data, mimeType: "image/jpeg" }, { type: "text" as const, text: JSON.stringify({ slug, sheet: { frames: draft.sheet.frames, fps: draft.sheet.fps, cols: draft.sheet.cols, read: "left to right, then down; frame n is at (n - 1) / 2 s", clip: `${W}x${H}, ${draft.duration}s, ${draft.fps} fps` }, phases: draft.phases, stored: stored.map((f) => f.at), usage: u }, null, 2) }] };
+        return { content: [{ type: "image" as const, data, mimeType: "image/jpeg" }, { type: "text" as const, text: JSON.stringify({ slug, sheet: { frames: draft.sheet.frames, fps: draft.sheet.fps, cols: draft.sheet.cols, read: "left to right, then down; frame n is at (n - 1) / 2 s", clip: `${W}x${H}, ${draft.duration}s, ${draft.fps} fps` }, phases: draft.phases, next: "sheet with span [a, b] for any 4 s stretch at 10 fps", usage: u }, null, 2) }] };
+      }
+      if (what === "track") {
+        if (!clip) return text({ error: "the clip could not be read right now; try again" });
+        if (col === undefined && row === undefined) return text({ error: "track needs col (x) or row (y) and span [from, to]" });
+        if (!span || !spanOk(span as [number, number])) return text({ error: `track needs span [from, to] within the ${draft.duration}s clip and at most 4 s long` });
+        const u = await charge(keyRef, plan, "look_at");
+        if (u && !u.ok) return spent("look_at", u);
+        bump(e.slug, "agent");
+        const info = await clipInfo(clip);
+        /* the CDN rendition may be smaller than the measured frame: positions go in and come out in frame pixels */
+        const k = info.width / W, kb = col !== undefined ? H / info.height : W / info.width;
+        const lines = await trackEdge(clip, info, col !== undefined ? "col" : "row", Math.round((col ?? row!) * (col !== undefined ? k : info.height / H)), span[0], span[1], cls ?? "dark");
+        const frames = lines.map((l) => ({ at: l.at, first: l.first < 0 ? -1 : Math.round(l.first * kb), last: l.last < 0 ? -1 : Math.round(l.last * kb) }));
+        return text({ slug, track: { along: col !== undefined ? `x=${col}` : `y=${row}`, span, cls: cls ?? "dark", fps: info.fps, clip: `${info.width}x${info.height}, read in ${W}x${H} frame pixels`, read: "first and last pixel of that colour along the line per frame, only the frames where they moved; a motion reads as start, end, distance and shape" }, frames, usage: u });
       }
       if (at === undefined) return text({ error: `${what} needs at (seconds)`, stored: stored.map((f) => f.at) });
-      const f = nearest(at);
-      const buf = await file(f.src);
-      const meta = await sharp(buf).metadata();
-      const sx = (meta.width ?? W) / W, sy = (meta.height ?? H) / H;
       const u = await charge(keyRef, plan, "look_at");
       if (u && !u.ok) return spent("look_at", u);
       bump(e.slug, "agent");
-      const about = { slug, asked: at, frame: { at: f.at, name: f.name, stored: `${meta.width}x${meta.height}`, source: `${W}x${H}` }, moments: stored.map((x) => x.at) };
-      if (what === "frame") return { content: [{ type: "image" as const, data: buf.toString("base64"), mimeType: "image/jpeg" }, { type: "text" as const, text: JSON.stringify({ ...about, usage: u }, null, 2) }] };
+      let buf: Buffer, frame: Record<string, unknown>;
+      const full = clip ? await frameAt(clip, Math.max(0, Math.min(draft.duration, at))).catch(() => null) : null;
+      if (full) { buf = full; frame = { at, from: "the clip, full size" }; }
+      else { const f = nearest(at); buf = await file(f.src); frame = { at: f.at, name: f.name, from: "a stored frame, the clip was not readable just now", moments: stored.map((x) => x.at) }; }
+      const meta = await sharp(buf).metadata();
+      const sx = (meta.width ?? W) / W, sy = (meta.height ?? H) / H;
+      const about = { slug, asked: at, frame: { ...frame, size: `${meta.width}x${meta.height}`, source: `${W}x${H}` } };
+      if (what === "frame") { const jpg = await sharp(buf).jpeg({ quality: 88 }).toBuffer(); return { content: [{ type: "image" as const, data: jpg.toString("base64"), mimeType: "image/jpeg" }, { type: "text" as const, text: JSON.stringify({ ...about, usage: u }, null, 2) }] }; }
       if (what === "zoom") {
         if (!box) return text({ error: "zoom needs box [x, y, w, h] in frame pixels" });
         const [x, y, w, h] = box.map((n) => Math.max(0, Math.round(n)));
@@ -358,7 +387,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       const px = (ix: number, iy: number) => { const o = (Math.min(info.height - 1, iy) * info.width + Math.min(info.width - 1, ix)) * info.channels; return "#" + [0, 1, 2].map((k) => data[o + k].toString(16).padStart(2, "0")).join(""); };
       const line: string[] = [];
       for (let i = a; i <= b; i++) line.push(`${i}:${along === "y" ? px(Math.round(col! * sx), Math.round(i * sy)) : px(Math.round(i * sx), Math.round(row! * sy))}`);
-      return text({ ...about, line: along === "y" ? `x=${col}, y ${a} to ${b}` : `y=${row}, x ${a} to ${b}`, colors: line.join(" "), note: "one hex per frame pixel, read from the stored frame; neighbours repeat where the stored frame is smaller than the source", usage: u });
+      return text({ ...about, line: along === "y" ? `x=${col}, y ${a} to ${b}` : `y=${row}, x ${a} to ${b}`, colors: line.join(" "), note: full ? "one hex per frame pixel, read from the clip at full size" : "one hex per frame pixel, read from a stored frame smaller than the source, so neighbours repeat", usage: u });
     },
   );
 
@@ -502,6 +531,9 @@ async function handle(req: Request) {
     void server.close();
   }
 }
+
+/* a look_at on a cold instance fetches the clip and runs ffmpeg; give it room */
+export const maxDuration = 60;
 
 export async function POST(req: Request) { return handle(req); }
 export async function GET(req: Request) { return handle(req); }
