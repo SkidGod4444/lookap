@@ -12,6 +12,8 @@ import { LockScroll } from "./LockScroll";
 import { Stage } from "./Stage";
 import { Compare } from "./Compare";
 import { liveFor } from "./demo/live";
+import { AgentPrompts } from "./AgentPrompts";
+import { recipeFor } from "@/lib/registry";
 
 export function ProjectPage({ slug }: { slug: string }) {
   const entry = bySlug(slug);
@@ -68,6 +70,8 @@ export function ProjectPage({ slug }: { slug: string }) {
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
             </a>
           )}
+
+          <AgentPrompts slug={entry.slug} title={entry.title} measured={Boolean(recipeFor(entry))} />
 
           <dl className="flex flex-col divide-y divide-dashed divide-line-strong [&>*]:flex [&>*]:items-start [&>*]:justify-between [&>*]:gap-3 [&>*]:py-2.5 text-[12px]">
             <div><dt className="font-medium text-foreground">Category</dt><dd><Link href={`/sections/${sectionSlug(entry.category)}`} className="text-subtle underline-offset-2 hover:text-foreground hover:underline">{entry.category}</Link></dd></div>
