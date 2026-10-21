@@ -1,0 +1,466 @@
+{
+ "slug": "1yi26a-accordion-faq-interaction",
+ "title": "Accordion FAQ Interaction",
+ "measured": false,
+ "recipe": null,
+ "what": "A playful FAQ section where the accordion instrument visually expands like an accordion as questions open and close.",
+ "frame": {
+  "ratio": 1.328,
+  "shape": "landscape",
+  "media": "clip"
+ },
+ "tone": "light surface, dark type",
+ "traits": [
+  "Accordion",
+  "Playful"
+ ],
+ "section": "FAQ",
+ "steps": [
+  "Call see_design for the frame and read the layout from it: regions, alignment, type scale, corner radii, spacing rhythm.",
+  "The media is a clip: name each state you can see (rest, hover, press, open) and the order they occur in.",
+  "Build with the project's own stack and tokens; match proportion and hierarchy before matching pixels.",
+  "A draft measurement is attached: its phases, moves and palette are measured from the clip; its boxes are a first pass to check against the keyframes."
+ ],
+ "draft": {
+  "frame": {
+   "w": 1434,
+   "h": 1080
+  },
+  "duration": 15.4,
+  "phases": [
+   [
+    0.4,
+    0.7
+   ],
+   [
+    0.8,
+    0.85
+   ],
+   [
+    2.05,
+    2.35
+   ],
+   [
+    2.5,
+    3.35
+   ],
+   [
+    3.45,
+    3.5
+   ],
+   [
+    3.8,
+    3.9
+   ],
+   [
+    4.5,
+    4.65
+   ],
+   [
+    5.25,
+    5.35
+   ],
+   [
+    9.15,
+    9.3
+   ],
+   [
+    9.6,
+    9.75
+   ],
+   [
+    10.1,
+    10.25
+   ],
+   [
+    13.25,
+    13.55
+   ],
+   [
+    13.8,
+    14.2
+   ],
+   [
+    14.8,
+    15.25
+   ],
+   [
+    15.35,
+    15.35
+   ]
+  ],
+  "keyframes": [
+   {
+    "name": "kf1",
+    "at": 1.45,
+    "hold": [
+     0.9,
+     2
+    ]
+   },
+   {
+    "name": "kf2",
+    "at": 4.2,
+    "hold": [
+     3.95,
+     4.45
+    ]
+   },
+   {
+    "name": "kf3",
+    "at": 4.95,
+    "hold": [
+     4.7,
+     5.2
+    ]
+   },
+   {
+    "name": "kf4",
+    "at": 7.25,
+    "hold": [
+     5.4,
+     9.1
+    ]
+   }
+  ],
+  "background": "#e5e1d9",
+  "palette": [
+   {
+    "hex": "#e2ded5",
+    "share": 35.1
+   },
+   {
+    "hex": "#e8e5dc",
+    "share": 19.2
+   },
+   {
+    "hex": "#f9f9f7",
+    "share": 12.7
+   },
+   {
+    "hex": "#edeae3",
+    "share": 10.4
+   },
+   {
+    "hex": "#f1eee7",
+    "share": 4.3
+   },
+   {
+    "hex": "#f5f3ec",
+    "share": 1.5
+   },
+   {
+    "hex": "#ddd9d2",
+    "share": 1.4
+   },
+   {
+    "hex": "#d9d4cb",
+    "share": 1.3
+   }
+  ],
+  "elements": [
+   {
+    "box": [
+     464,
+     4,
+     641,
+     150
+    ],
+    "fill": "#f1eee8"
+   },
+   {
+    "box": [
+     354,
+     689,
+     729,
+     56
+    ],
+    "fill": "#f9f8f7"
+   },
+   {
+    "box": [
+     354,
+     495,
+     729,
+     56
+    ],
+    "fill": "#f9f9f7"
+   },
+   {
+    "box": [
+     354,
+     625,
+     729,
+     56
+    ],
+    "fill": "#f9f8f7"
+   },
+   {
+    "box": [
+     354,
+     431,
+     729,
+     56
+    ],
+    "fill": "#f9f8f6"
+   },
+   {
+    "box": [
+     354,
+     560,
+     729,
+     56
+    ],
+    "fill": "#f9f8f6"
+   },
+   {
+    "box": [
+     903,
+     805,
+     197,
+     57
+    ],
+    "fill": "#860319"
+   },
+   {
+    "box": [
+     535,
+     753,
+     314,
+     93
+    ],
+    "fill": "#f0ebdf"
+   },
+   {
+    "box": [
+     526,
+     751,
+     381,
+     112
+    ],
+    "fill": "#e5decf"
+   },
+   {
+    "box": [
+     769,
+     846,
+     335,
+     60
+    ],
+    "fill": "#c2bdb4"
+   },
+   {
+    "box": [
+     332,
+     854,
+     426,
+     65
+    ],
+    "fill": "#cecac1"
+   },
+   {
+    "box": [
+     365,
+     300,
+     707,
+     116
+    ],
+    "fill": "#080706"
+   }
+  ],
+  "motion": [
+   {
+    "element": "#f1eee8",
+    "box": [
+     464,
+     4,
+     641,
+     150
+    ],
+    "moves": [
+     {
+      "from": 0.55,
+      "to": 0.6,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     }
+    ]
+   },
+   {
+    "element": "#f9f8f7",
+    "box": [
+     354,
+     689,
+     729,
+     56
+    ],
+    "moves": [
+     {
+      "from": 0.25,
+      "to": 0.3,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 0.35,
+      "to": 0.8,
+      "dTop": 0,
+      "dLeft": -184,
+      "ms": 450
+     },
+     {
+      "from": 2,
+      "to": 2.25,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 250
+     },
+     {
+      "from": 2.35,
+      "to": 3.35,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 1000
+     }
+    ]
+   },
+   {
+    "element": "#f9f9f7",
+    "box": [
+     354,
+     495,
+     729,
+     56
+    ],
+    "moves": [
+     {
+      "from": 0.3,
+      "to": 0.4,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 0.45,
+      "to": 0.7,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 250
+     },
+     {
+      "from": 0.8,
+      "to": 0.9,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 2.05,
+      "to": 2.3,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 250
+     }
+    ]
+   },
+   {
+    "element": "#f9f8f7",
+    "box": [
+     354,
+     625,
+     729,
+     56
+    ],
+    "moves": [
+     {
+      "from": 0.3,
+      "to": 0.6,
+      "dTop": -4,
+      "dLeft": 0,
+      "ms": 300
+     },
+     {
+      "from": 0.65,
+      "to": 0.7,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 2,
+      "to": 2.3,
+      "dTop": 27,
+      "dLeft": 0,
+      "ms": 300
+     },
+     {
+      "from": 2.35,
+      "to": 3,
+      "dTop": -27,
+      "dLeft": 0,
+      "ms": 650
+     }
+    ]
+   }
+  ],
+  "coverage": "flat regions found; boxes and fills are usable as given",
+  "confidence": {
+   "phases": "measured: sampled every 50 ms",
+   "motion": "measured: moves of the first keyframe's big parts, edges read at full resolution; dTop and dLeft are the distance in source px",
+   "palette": "measured for areas; small things do not reach it",
+   "elements": "draft: flat regions at the first keyframe; nested parts split or merge, text and thin parts are missing; check each box against the keyframe (see_design with at) before trusting it"
+  }
+ },
+ "motion": {
+  "status": "draft measured: see draft.phases and draft.motion for what moved, when and how far",
+  "enter": "fade up 12 px, 320 ms, cubic-bezier(0.2, 0.8, 0.2, 1)",
+  "hover": "colour or ring only, 150 ms",
+  "press": "scale 0.98, 120 ms",
+  "reducedMotion": "respect prefers-reduced-motion: no entrance, instant hover"
+ },
+ "notes": [
+  {
+   "slug": "motion-from-stills",
+   "title": "Giving motion to a still, honestly"
+  }
+ ],
+ "credit": {
+  "author": "Damir Sokolovsky",
+  "x": "heydamir",
+  "source": "https://x.com/heydamir/status/2111801972152225896"
+ },
+ "method": [
+  "Fetch the clip; read size, fps and duration from the container.",
+  "Dump frames at 2 fps plus a contact sheet; pick the idle and active moments and dump those at full resolution.",
+  "Convert the chosen frames to raw RGB and measure: bounding boxes of every element, exact hex at flat regions, luminance profiles across edges for the lighting, a per-frame luma trace of the moving region for timing.",
+  "Build with one unit, --u, equal to one source pixel at the design size, and write every size as calc(N * var(--u)).",
+  "Light rounded objects with inset box-shadows on one overlay (rim, near glow, wide falloff); stacked linear gradients show a seam at the corner.",
+  "Render the build headless at --u: 1px, crop to the frame, put it beside the source frame, and look. Fix the three largest differences. Repeat."
+ ],
+ "build": null,
+ "oneShot": "No measured recipe, but a draft: build from draft.elements and draft.motion, look at each keyframe with see_design (at), then call check_rebuild with a screenshot; its regions are reliable, its element rows are as good as the draft boxes.",
+ "keyframeFiles": [
+  {
+   "name": "kf1",
+   "at": 1.45,
+   "file": "public/drafts/oork06q/kf1.jpg"
+  },
+  {
+   "name": "kf2",
+   "at": 4.2,
+   "file": "public/drafts/oork06q/kf2.jpg"
+  },
+  {
+   "name": "kf3",
+   "at": 4.95,
+   "file": "public/drafts/oork06q/kf3.jpg"
+  },
+  {
+   "name": "kf4",
+   "at": 7.25,
+   "file": "public/drafts/oork06q/kf4.jpg"
+  }
+ ]
+}

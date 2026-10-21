@@ -1,0 +1,328 @@
+<!doctype html>
+<!--
+  Accordion FAQ Interaction, rebuilt from the clip by Damir Sokolovsky (@heydamir)
+  Source: https://x.com/heydamir/status/2111801972152225896
+
+  Timeline, measured from the clip at 60 fps (red body top and bottom edges per frame, row profile at x 700):
+    0.00-0.37  closed: rows 11 px at a 13 px pitch, text hidden, body centred on y 578
+    0.37-0.73  rows open top to bottom, 50 ms apart, 160 ms each with a 6% overshoot; rows 57 px at a 65 px pitch
+    2.05-2.33  pulled: bottom edge down 120 px (inner gaps +23, top +8, bottom +11), top edge fixed; held to 2.50
+    2.50-2.82  released: snaps past rest to 35% (rows 27 px), then 1.7 at 3.00, 0.99 at 3.23, 1.05 at 3.40, rest by 3.60
+    3.80-4.05  row 3 opens, 32 px, body grows 16 px each way; row 2 at 4.45-4.65; row 4 at 5.25-5.40
+    5.40-6.60  the chord chip shows by the third click
+    9.15-9.35  row 4 closes; row 3 at 9.60-9.80; row 2 at 10.05-10.27
+   13.23-13.50 pulled again to 2.1, held to 13.83
+   13.83-14.20 released straight to closed, all rows together (top edge fixed this time), held to 14.80
+   14.80-15.03 reopens to 1.22, rest by 15.25
+  The title and subtitle never move. --b is the bellows: 0 closed, 1 rest, 2 pulled. --i is each row's share of the
+  intro. --anc is 0 while the body grows around its centre and 1 while its top edge is pinned (both pulls).
+  The red marble is two small patches of the designer's own veined texture, embedded, since veins are not a gradient.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Accordion FAQ Interaction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+@property --b { syntax: "<number>"; inherits: true; initial-value: 1; }
+@property --i { syntax: "<number>"; inherits: true; initial-value: 1; }
+@property --anc { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --o { syntax: "<number>"; inherits: true; initial-value: 0; }
+html, body { margin: 0; overflow: hidden; background: #e5e1d9; }
+#stage {
+  --u: 1px;
+  --b: 1; --anc: 0;
+  /* the bellows, derived once: how far open (0..1) and how far pulled past rest (0..1) */
+  --open: min(var(--b), 1);
+  --pull: max(var(--b) - 1, 0);
+  position: relative; width: calc(1434 * var(--u)); height: calc(1080 * var(--u)); overflow: hidden;
+  background: radial-gradient(ellipse 75% 70% at 50% 20%, #edeae3 0, #e8e5dc 45%, #e5e1d9 75%, #e2ded5 100%);
+  font-family: Inter, system-ui, sans-serif; color: #1a1816;
+  animation: bellows 15.4s linear both, anchor 15.4s linear both;
+}
+#bar { position: absolute; left: 0; top: 0; right: 0; height: calc(4 * var(--u)); background: #1c1b1a; }
+
+h1 {
+  position: absolute; left: 0; right: 0; top: calc(174 * var(--u)); margin: 0;
+  text-align: center; font-weight: 600; font-size: calc(38 * var(--u)); line-height: calc(44 * var(--u));
+  letter-spacing: calc(-0.8 * var(--u));
+}
+.sub {
+  position: absolute; left: 0; right: 0; top: calc(232 * var(--u)); margin: 0;
+  text-align: center; font-size: calc(15.5 * var(--u)); line-height: calc(20 * var(--u)); color: #8b867f;
+}
+
+/* the instrument: centred on y 578, so rows opening and the intro grow it both ways; while a pull is on, --anc
+   pins the top edge by moving the centre down half the height change the bellows caused */
+#acc {
+  position: absolute; left: calc(333 * var(--u)); width: calc(772 * var(--u));
+  top: calc((578 + var(--anc) * (56 * var(--pull) - 133 * (1 - var(--open)))) * var(--u));
+  transform: translateY(-50%);
+}
+.shadow { position: absolute; inset: calc(20 * var(--u)) calc(30 * var(--u)) calc(-10 * var(--u)); box-shadow: 0 calc(30 * var(--u)) calc(60 * var(--u)) rgba(70, 58, 44, .22); border-radius: calc(20 * var(--u)); }
+
+/* red marble blocks: the designer's veined texture, a pink rim on top, a dark edge, a shade at the bottom */
+.red {
+  position: relative; border-radius: calc(6 * var(--u));
+  background: url("data:image/jpeg;base64,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") left top / auto 100% repeat-x, #a01c33;
+  box-shadow: inset 0 calc(1.5 * var(--u)) 0 rgba(255, 190, 200, .55), inset 0 0 0 calc(1 * var(--u)) rgba(90, 0, 14, .55),
+              inset 0 calc(-2 * var(--u)) calc(4 * var(--u)) rgba(40, 0, 6, .35);
+}
+.red.bot { background: url("data:image/jpeg;base64,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") right top / auto 100% repeat-x, #a01c33; }
+.cap {
+  position: absolute; width: calc(26 * var(--u)); height: calc(30 * var(--u)); z-index: 2;
+  background: linear-gradient(160deg, #f7f5f0 0%, #d9d5cc 45%, #a9a49a 100%); border-radius: calc(6 * var(--u));
+  box-shadow: 0 calc(1 * var(--u)) calc(2 * var(--u)) rgba(0, 0, 0, .35), inset 0 calc(1 * var(--u)) 0 #fff;
+}
+.cap.tl { left: calc(-3 * var(--u)); top: calc(-3 * var(--u)); }
+.cap.tr { right: calc(-3 * var(--u)); top: calc(-3 * var(--u)); }
+.cap.bl { left: calc(-3 * var(--u)); bottom: calc(-3 * var(--u)); }
+.cap.br { right: calc(-3 * var(--u)); bottom: calc(-3 * var(--u)); }
+
+/* keyboard: dark frame with a lighter inner line, ivory keys with a shaded lip, black keys hanging on thin stems */
+.top { height: calc((135 - 7 * (1 - var(--open)) * var(--anc)) * var(--u)); }                    /* squeezes a little when snapped */
+.kb {
+  position: absolute; left: calc(29 * var(--u)); top: calc(8 * var(--u));
+  width: calc(714 * var(--u)); height: calc(119 * var(--u)); box-sizing: border-box;
+  padding: calc(3 * var(--u)); background: #15130f; border-radius: calc(10 * var(--u));
+  box-shadow: inset 0 0 0 calc(1 * var(--u)) #3a3632, 0 calc(1 * var(--u)) 0 rgba(255, 255, 255, .25);
+  display: flex; gap: calc(1.5 * var(--u));
+}
+.w {
+  flex: 1; background: linear-gradient(180deg, #fcfbf8 0%, #f6f3ec 60%, #ebe6dc 88%, #d6d0c4 100%);
+  border-radius: 0 0 calc(4 * var(--u)) calc(4 * var(--u));
+  box-shadow: inset calc(-1 * var(--u)) 0 0 rgba(0, 0, 0, .08);
+}
+.w.k1 { animation: k1 15.4s linear both; }
+.w.k2 { animation: k2 15.4s linear both; }
+.w.k4 { animation: k4 15.4s linear both; }
+.b {
+  position: absolute; top: calc(27 * var(--u)); width: calc(34 * var(--u)); height: calc(84 * var(--u));
+  margin-left: calc(-17 * var(--u));
+  background: linear-gradient(90deg, #0b0a09 0%, #35322e 18%, #1d1b18 50%, #0e0d0b 100%);
+  border-radius: calc(2 * var(--u)) calc(2 * var(--u)) calc(4 * var(--u)) calc(4 * var(--u));
+  box-shadow: 0 calc(2 * var(--u)) calc(3 * var(--u)) rgba(0, 0, 0, .45), inset 0 calc(1 * var(--u)) 0 rgba(255, 255, 255, .12);
+}
+.b::before { /* the key hangs from the frame on a thin stem */
+  content: ""; position: absolute; left: 50%; top: calc(-27 * var(--u)); width: calc(2 * var(--u)); height: calc(27 * var(--u));
+  margin-left: calc(-1 * var(--u)); background: #15130f;
+}
+
+/* the bellows: row height, border and gaps all follow --b */
+.mid {
+  --bw: calc((1 + 2 * var(--open)) * var(--u));                              /* border 1 closed, 3 at rest */
+  --gap: calc((2 * var(--open) + 23.4 * var(--pull)) * var(--u));            /* gap 0 closed, 2 at rest, 25 pulled */
+  margin: 0 calc(18 * var(--u)); padding: calc((1 + 8 * var(--pull)) * var(--u)) 0 calc((1 + 11 * var(--pull)) * var(--u));
+  /* the bellows fabric shows between rows when pulled: pale folds, a shaded crease every 11 px */
+  background: repeating-linear-gradient(180deg, #e2ddd3 0, #d3cec4 calc(4 * var(--u)), #9f998e calc(7 * var(--u)), #c9c4ba calc(8 * var(--u)), #e2ddd3 calc(11 * var(--u)));
+  display: flex; flex-direction: column; gap: var(--gap); position: relative;
+}
+.row {
+  position: relative; box-sizing: border-box; border: var(--bw) solid #2a2724;
+  border-radius: calc(14 * var(--u)); background: linear-gradient(180deg, #fcfbf9 0%, #f6f4ef 70%, #efece5 100%);
+  box-shadow: inset 0 calc(2 * var(--open) * var(--u)) 0 #ffffff, inset 0 calc(-1 * var(--u)) 0 rgba(0, 0, 0, .06), 0 calc(1 * var(--u)) 0 #2a2724;
+  padding: 0 calc(23 * var(--u));                                          /* no overflow clip: the folds sit outside */
+}
+.q {
+  height: calc((9 + 48 * var(--open) * var(--i)) * var(--u));                /* 9 closed, 57 at rest; --i is the intro cascade */
+  display: flex; align-items: center; justify-content: space-between; overflow: hidden;
+  font-weight: 600; font-size: calc(17 * var(--u)); letter-spacing: calc(-0.2 * var(--u));
+  opacity: calc((var(--open) * var(--i) - 0.35) / 0.65);
+}
+.row:nth-child(1) { animation: i1 15.4s linear both; }
+.row:nth-child(2) { animation: r2 15.4s linear both, i2 15.4s linear both; }
+.row:nth-child(3) { animation: r3 15.4s linear both, i3 15.4s linear both; }
+.row:nth-child(4) { animation: r4 15.4s linear both, i4 15.4s linear both; }
+.row:nth-child(5) { animation: i5 15.4s linear both; }
+.ic {
+  position: relative; width: calc(16 * var(--u)); height: calc(16 * var(--u)); margin-right: calc(-2 * var(--u));
+  transform: rotate(calc(var(--o) * 180deg));                                /* the plus flips over as it becomes a minus */
+}
+.ic::before, .ic::after {
+  content: ""; position: absolute; left: 0; top: calc(7 * var(--u)); width: 100%; height: calc(2 * var(--u));
+  background: #1a1816; border-radius: calc(1 * var(--u));
+}
+.ic::after { transform: rotate(90deg) scaleX(calc(1 - var(--o))); }
+.a { height: calc(var(--o) * 32 * var(--u)); opacity: var(--o); overflow: visible; }
+.a p {
+  margin: 0; position: relative; top: calc(-11 * var(--u)); white-space: nowrap;
+  font-size: calc(14.5 * var(--u)); line-height: calc(20 * var(--u)); color: #8f8a83;
+}
+
+/* bellows folds on the sides: a grey chevron per row, lit from above, with a rivet at its tip */
+.sp {
+  position: absolute; top: 50%; width: calc(26 * var(--u));
+  height: calc((6 + 22 * var(--open) + 16 * var(--pull)) * var(--u));
+  transform: translateY(-50%);
+  background: linear-gradient(180deg, #d2cdc3 0%, #b9b3a8 48%, #7f7a71 52%, #a19b90 100%);
+}
+.sp.l { left: calc(-27 * var(--u) - var(--bw)); clip-path: polygon(0 50%, 100% 0, 100% 100%); }
+.sp.r { right: calc(-27 * var(--u) - var(--bw)); clip-path: polygon(0 0, 100% 50%, 0 100%); }
+.sp::after {
+  content: ""; position: absolute; top: 50%; width: calc(14 * var(--u)); height: calc(6 * var(--u)); margin-top: calc(-3 * var(--u));
+  border-radius: calc(3 * var(--u)); background: linear-gradient(180deg, #ffffff, #cfcac1); box-shadow: 0 calc(1 * var(--u)) calc(1 * var(--u)) rgba(0, 0, 0, .3);
+}
+.sp.l::after { left: calc(-4 * var(--u)); }
+.sp.r::after { right: calc(-4 * var(--u)); }
+
+/* bass block: a slanted cream panel with four rows of matte domes, the top row in chrome rings, and a leather strap */
+.bot { height: calc(111 * var(--u)); }
+.panel {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, #f3eee3 0%, #ebe5d8 60%, #e2dbcc 100%);
+  clip-path: polygon(calc(232 * var(--u)) 0, calc(582 * var(--u)) 0, calc(556 * var(--u)) 100%, calc(206 * var(--u)) 100%);
+}
+.btns {
+  position: absolute; width: calc(351 * var(--u)); height: calc(26 * var(--u));
+  background:
+    radial-gradient(circle at 50% 58%, rgba(0, 0, 0, .35) 0, rgba(0, 0, 0, .35) calc(9.5 * var(--u)), transparent calc(12 * var(--u))),
+    radial-gradient(circle at 42% 36%, #5c5a57 0, #34322f calc(4 * var(--u)), #1f1e1c calc(8 * var(--u)), #171614 calc(9.6 * var(--u)), transparent calc(10.4 * var(--u)));
+  background-size: calc(27 * var(--u)) calc(26 * var(--u));
+}
+.btns.ring {
+  background:
+    radial-gradient(circle at 42% 36%, #5c5a57 0, #34322f calc(4 * var(--u)), #1f1e1c calc(8 * var(--u)), #171614 calc(9.4 * var(--u)), #e8e3d8 calc(10 * var(--u)), #f7f4ee calc(11 * var(--u)), #b9b3a8 calc(12.2 * var(--u)), transparent calc(13 * var(--u)));
+  background-size: calc(27 * var(--u)) calc(26 * var(--u));
+}
+.btn-light { /* the one pale button on the second row */
+  position: absolute; width: calc(20 * var(--u)); height: calc(20 * var(--u)); border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #ffffff 0, #d9d5cc 45%, #8e897f 100%);
+  box-shadow: 0 calc(1 * var(--u)) calc(2 * var(--u)) rgba(0, 0, 0, .4);
+}
+.handle {
+  position: absolute; left: calc(294 * var(--u)); top: 100%; width: calc(185 * var(--u)); height: calc(40 * var(--u));
+  box-sizing: border-box; border: calc(18 * var(--u)) solid #262320; border-top: 0;
+  border-radius: 0 0 calc(92 * var(--u)) calc(92 * var(--u)) / 0 0 calc(40 * var(--u)) calc(40 * var(--u));
+  box-shadow: inset 0 calc(-2 * var(--u)) 0 rgba(255, 255, 255, .12), 0 calc(3 * var(--u)) calc(4 * var(--u)) rgba(0, 0, 0, .3);
+}
+.chip { /* the chord that sounded, shown after the third click */
+  position: absolute; left: calc(389 * var(--u)); top: calc(372 * var(--u)); z-index: 3;
+  display: flex; align-items: center; gap: calc(5 * var(--u)); padding: 0 calc(9 * var(--u)); height: calc(22 * var(--u));
+  background: #fff; border-radius: calc(7 * var(--u)); font-size: calc(11.5 * var(--u)); font-weight: 500; color: #3a3733; white-space: nowrap;
+  box-shadow: 0 calc(1 * var(--u)) calc(4 * var(--u)) rgba(0, 0, 0, .18), 0 0 0 calc(.5 * var(--u)) rgba(0, 0, 0, .06);
+  animation: chip 15.4s linear both; opacity: 0;
+}
+.chip i { color: #c0213f; font-style: normal; font-size: calc(11 * var(--u)); }
+
+/* the bellows over 15.4 s; percentages are seconds / 15.4 */
+@keyframes bellows {
+  0%, 2.40%          { --b: 0;    animation-timing-function: cubic-bezier(.3, .3, .3, 1); }   /* closed to 0.37; rows cascade via --i */
+  3.90%, 13.31%      { --b: 1;    animation-timing-function: cubic-bezier(.25, .1, .25, 1); } /* open by 0.60; pull from 2.05 */
+  15.13%, 16.23%     { --b: 2;    animation-timing-function: cubic-bezier(.35, .1, .25, 1); } /* 2.33 pulled, held to 2.50 */
+  18.31%             { --b: .35;  animation-timing-function: cubic-bezier(.5, 0, .3, 1); }    /* 2.82 snapped past rest */
+  19.48%             { --b: 1.7;  animation-timing-function: cubic-bezier(.4, 0, .3, 1); }    /* 3.00 */
+  20.97%             { --b: .99;  animation-timing-function: cubic-bezier(.4, 0, .6, 1); }    /* 3.23 */
+  22.08%             { --b: 1.05; animation-timing-function: cubic-bezier(.4, 0, .6, 1); }    /* 3.40 */
+  23.38%, 85.91%     { --b: 1;    animation-timing-function: cubic-bezier(.25, .1, .25, 1); } /* 3.60 rest; pull from 13.23 */
+  87.66%, 89.81%     { --b: 2.1;  animation-timing-function: cubic-bezier(.5, 0, .25, 1); }   /* 13.50 pulled, held to 13.83 */
+  92.21%, 96.10%     { --b: 0;    animation-timing-function: cubic-bezier(.4, 0, .3, 1); }    /* 14.20 closed, held to 14.80 */
+  97.60%             { --b: 1.22; animation-timing-function: cubic-bezier(.4, 0, .6, 1); }    /* 15.03 */
+  99.03%, 100%       { --b: 1; }                                                             /* 15.25 rest */
+}
+/* centred growth except during the two pulls, when the top edge stays put */
+@keyframes anchor {
+  0%, 12.98%         { --anc: 0; }
+  12.99%, 23.37%     { --anc: 1; }   /* 2.00 to 3.60 */
+  23.38%, 84.40%     { --anc: 0; }
+  84.41%, 100%       { --anc: 1; }   /* 13.00 on */
+}
+/* the intro: each row opens 50 ms after the one above, 160 ms each, 6% over and back */
+@keyframes i1 { 0%, 2.40% { --i: 0; animation-timing-function: cubic-bezier(.4, 0, .3, 1); } 3.44% { --i: 1.06; animation-timing-function: ease-in-out; } 5.06%, 100% { --i: 1; } }
+@keyframes i2 { 0%, 2.73% { --i: 0; animation-timing-function: cubic-bezier(.4, 0, .3, 1); } 3.77% { --i: 1.06; animation-timing-function: ease-in-out; } 5.39%, 100% { --i: 1; } }
+@keyframes i3 { 0%, 3.05% { --i: 0; animation-timing-function: cubic-bezier(.4, 0, .3, 1); } 4.09% { --i: 1.06; animation-timing-function: ease-in-out; } 5.71%, 100% { --i: 1; } }
+@keyframes i4 { 0%, 3.38% { --i: 0; animation-timing-function: cubic-bezier(.4, 0, .3, 1); } 4.42% { --i: 1.06; animation-timing-function: ease-in-out; } 6.04%, 100% { --i: 1; } }
+@keyframes i5 { 0%, 3.70% { --i: 0; animation-timing-function: cubic-bezier(.4, 0, .3, 1); } 4.74% { --i: 1.06; animation-timing-function: ease-in-out; } 6.36%, 100% { --i: 1; } }
+/* rows: row 3 at 3.80, row 2 at 4.45, row 4 at 5.25; closing 9.15, 9.60, 10.05 */
+@keyframes r3 {
+  0%, 24.68%         { --o: 0; animation-timing-function: cubic-bezier(.2, .8, .2, 1); }
+  26.30%, 62.34%     { --o: 1; animation-timing-function: cubic-bezier(.2, .8, .2, 1); }
+  63.64%, 100%       { --o: 0; }
+}
+@keyframes r2 {
+  0%, 28.90%         { --o: 0; animation-timing-function: cubic-bezier(.2, .8, .2, 1); }
+  30.19%, 65.26%     { --o: 1; animation-timing-function: cubic-bezier(.2, .8, .2, 1); }
+  66.69%, 100%       { --o: 0; }
+}
+@keyframes r4 {
+  0%, 34.09%         { --o: 0; animation-timing-function: cubic-bezier(.2, .8, .2, 1); }
+  35.06%, 59.42%     { --o: 1; animation-timing-function: cubic-bezier(.2, .8, .2, 1); }
+  60.71%, 100%       { --o: 0; }
+}
+/* the key that sounds with each opening stays shaded while the row is open */
+@keyframes k2 { 0%, 24.6% { filter: none; } 24.68%, 63.6% { filter: brightness(.86) sepia(.25); } 63.64%, 100% { filter: none; } }
+@keyframes k1 { 0%, 28.8% { filter: none; } 28.9%, 66.6% { filter: brightness(.86) sepia(.25); } 66.69%, 100% { filter: none; } }
+@keyframes k4 { 0%, 34.0% { filter: none; } 34.09%, 60.7% { filter: brightness(.86) sepia(.25); } 60.71%, 100% { filter: none; } }
+@keyframes chip { 0%, 35.06% { opacity: 0; } 35.71%, 41.56% { opacity: 1; } 42.86%, 100% { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  #stage, .row, .w.k1, .w.k2, .w.k4, .chip { animation: none; }
+}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="bar"></div>
+  <h1>Frequently asked questions</h1>
+  <p class="sub">The questions we hear the most, now you can hear them too</p>
+  <div id="acc">
+    <div class="shadow"></div>
+    <div class="chip"><i>&#9835;</i>E minor 7</div>
+
+    <div class="red top">
+      <span class="cap tl"></span><span class="cap tr"></span>
+      <div class="kb">
+        <i class="w"></i><i class="w k1"></i><i class="w k2"></i><i class="w"></i><i class="w k4"></i>
+        <i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i>
+        <i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i>
+        <i class="b" style="left: calc(50 * var(--u))"></i><i class="b" style="left: calc(98 * var(--u))"></i>
+        <i class="b" style="left: calc(194 * var(--u))"></i><i class="b" style="left: calc(241 * var(--u))"></i>
+        <i class="b" style="left: calc(287 * var(--u))"></i><i class="b" style="left: calc(379 * var(--u))"></i>
+        <i class="b" style="left: calc(427 * var(--u))"></i><i class="b" style="left: calc(520 * var(--u))"></i>
+        <i class="b" style="left: calc(568 * var(--u))"></i><i class="b" style="left: calc(614 * var(--u))"></i>
+      </div>
+    </div>
+
+    <div class="mid">
+      <div class="row">
+        <i class="sp l"></i><i class="sp r"></i>
+        <div class="q">How does the free trial work?<span class="ic"></span></div>
+        <div class="a"><p>Fourteen days with every feature, and no card until you decide to stay</p></div>
+      </div>
+      <div class="row">
+        <i class="sp l"></i><i class="sp r"></i>
+        <div class="q">Can I cancel anytime?<span class="ic"></span></div>
+        <div class="a"><p>Yes, in two clicks from your settings, with no calls and no sad goodbye emails</p></div>
+      </div>
+      <div class="row">
+        <i class="sp l"></i><i class="sp r"></i>
+        <div class="q">Do you offer refunds?<span class="ic"></span></div>
+        <div class="a"><p>If it's not working for you in the first 30 days, we refund the full amount</p></div>
+      </div>
+      <div class="row">
+        <i class="sp l"></i><i class="sp r"></i>
+        <div class="q">Can I change my plan later?<span class="ic"></span></div>
+        <div class="a"><p>Upgrade or downgrade whenever you like and we prorate the difference down to the day</p></div>
+      </div>
+      <div class="row">
+        <i class="sp l"></i><i class="sp r"></i>
+        <div class="q">Is my data secure?<span class="ic"></span></div>
+        <div class="a"><p>Encrypted in transit and at rest, and never shared with anyone</p></div>
+      </div>
+    </div>
+
+    <div class="red bot">
+      <span class="cap bl"></span><span class="cap br"></span>
+      <div class="panel"></div>
+      <div class="btns ring" style="left: calc(229 * var(--u)); top: calc(2 * var(--u))"></div>
+      <div class="btns" style="left: calc(222 * var(--u)); top: calc(28 * var(--u))"></div>
+      <div class="btns" style="left: calc(215 * var(--u)); top: calc(54 * var(--u))"></div>
+      <div class="btns" style="left: calc(207 * var(--u)); top: calc(80 * var(--u))"></div>
+      <div class="btn-light" style="left: calc(541 * var(--u)); top: calc(31 * var(--u))"></div>
+      <div class="handle"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

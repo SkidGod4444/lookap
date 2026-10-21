@@ -1,0 +1,397 @@
+{
+ "slug": "1yi26a-accordion-faq-interaction",
+ "title": "Accordion FAQ Interaction",
+ "author": "Damir Sokolovsky",
+ "model": "opus",
+ "score": 69,
+ "keyframes": [
+  {
+   "keyframe": "kf1",
+   "at": 1.45,
+   "score": 70,
+   "overall": 12,
+   "elements": [
+    {
+     "name": "draft 8 #f0ebdf",
+     "box": [
+      535,
+      753,
+      314,
+      93
+     ],
+     "reference": "#9b958f",
+     "yours": "#98918b",
+     "delta": 55
+    },
+    {
+     "name": "draft 9 #e5decf",
+     "box": [
+      526,
+      751,
+      381,
+      112
+     ],
+     "reference": "#9e958f",
+     "yours": "#a0958f",
+     "delta": 52
+    },
+    {
+     "name": "draft 12 #080706",
+     "box": [
+      365,
+      300,
+      707,
+      116
+     ],
+     "reference": "#a5a29d",
+     "yours": "#a8a7a3",
+     "delta": 32
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      478,
+      720,
+      239,
+      180
+     ],
+     "delta": 39,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 11 #cecac1"
+     ]
+    },
+    {
+     "cell": "E4",
+     "box": [
+      717,
+      720,
+      239,
+      180
+     ],
+     "delta": 38,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 7 #860319",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 10 #c2bdb4",
+      "draft 11 #cecac1"
+     ]
+    },
+    {
+     "cell": "B4",
+     "box": [
+      717,
+      180,
+      239,
+      180
+     ],
+     "delta": 30,
+     "over": [
+      "draft 12 #080706"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "kf2",
+   "at": 4.2,
+   "score": 69,
+   "overall": 12,
+   "elements": [
+    {
+     "name": "draft 8 #f0ebdf",
+     "box": [
+      535,
+      753,
+      314,
+      93
+     ],
+     "reference": "#a19c96",
+     "yours": "#a19994",
+     "delta": 52
+    },
+    {
+     "name": "draft 9 #e5decf",
+     "box": [
+      526,
+      751,
+      381,
+      112
+     ],
+     "reference": "#a59c97",
+     "yours": "#a19792",
+     "delta": 48
+    },
+    {
+     "name": "draft 10 #c2bdb4",
+     "box": [
+      769,
+      846,
+      335,
+      60
+     ],
+     "reference": "#a27576",
+     "yours": "#b38789",
+     "delta": 33
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      478,
+      720,
+      239,
+      180
+     ],
+     "delta": 39,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 11 #cecac1"
+     ]
+    },
+    {
+     "cell": "E4",
+     "box": [
+      717,
+      720,
+      239,
+      180
+     ],
+     "delta": 38,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 7 #860319",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 10 #c2bdb4",
+      "draft 11 #cecac1"
+     ]
+    },
+    {
+     "cell": "B4",
+     "box": [
+      717,
+      180,
+      239,
+      180
+     ],
+     "delta": 27,
+     "over": [
+      "draft 12 #080706"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "kf3",
+   "at": 4.95,
+   "score": 69,
+   "overall": 12,
+   "elements": [
+    {
+     "name": "draft 8 #f0ebdf",
+     "box": [
+      535,
+      753,
+      314,
+      93
+     ],
+     "reference": "#b7b2ac",
+     "yours": "#b1aaa5",
+     "delta": 40
+    },
+    {
+     "name": "draft 9 #e5decf",
+     "box": [
+      526,
+      751,
+      381,
+      112
+     ],
+     "reference": "#b1a9a4",
+     "yours": "#b0a7a2",
+     "delta": 40
+    },
+    {
+     "name": "draft 10 #c2bdb4",
+     "box": [
+      769,
+      846,
+      335,
+      60
+     ],
+     "reference": "#96565c",
+     "yours": "#aa6a71",
+     "delta": 35
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      478,
+      720,
+      239,
+      180
+     ],
+     "delta": 39,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 11 #cecac1"
+     ]
+    },
+    {
+     "cell": "E4",
+     "box": [
+      717,
+      720,
+      239,
+      180
+     ],
+     "delta": 37,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 7 #860319",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 10 #c2bdb4",
+      "draft 11 #cecac1"
+     ]
+    },
+    {
+     "cell": "D3",
+     "box": [
+      478,
+      540,
+      239,
+      180
+     ],
+     "delta": 25,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 3 #f9f9f7",
+      "draft 4 #f9f8f7",
+      "draft 6 #f9f8f6"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "kf4",
+   "at": 7.25,
+   "score": 68,
+   "overall": 13,
+   "elements": [
+    {
+     "name": "draft 2 #f9f8f7",
+     "box": [
+      354,
+      689,
+      729,
+      56
+     ],
+     "reference": "#dcdad5",
+     "yours": "#cac8c3",
+     "delta": 40
+    },
+    {
+     "name": "draft 10 #c2bdb4",
+     "box": [
+      769,
+      846,
+      335,
+      60
+     ],
+     "reference": "#944650",
+     "yours": "#a35560",
+     "delta": 33
+    },
+    {
+     "name": "draft 11 #cecac1",
+     "box": [
+      332,
+      854,
+      426,
+      65
+     ],
+     "reference": "#9f6f71",
+     "yours": "#a27174",
+     "delta": 33
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      478,
+      720,
+      239,
+      180
+     ],
+     "delta": 39,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 11 #cecac1"
+     ]
+    },
+    {
+     "cell": "E4",
+     "box": [
+      717,
+      720,
+      239,
+      180
+     ],
+     "delta": 37,
+     "over": [
+      "draft 2 #f9f8f7",
+      "draft 7 #860319",
+      "draft 8 #f0ebdf",
+      "draft 9 #e5decf",
+      "draft 10 #c2bdb4",
+      "draft 11 #cecac1"
+     ]
+    },
+    {
+     "cell": "B4",
+     "box": [
+      717,
+      180,
+      239,
+      180
+     ],
+     "delta": 24,
+     "over": [
+      "draft 12 #080706"
+     ]
+    }
+   ]
+  }
+ ],
+ "checkerRuns": 3,
+ "minutes": 3.9,
+ "turns": 25,
+ "costUsd": 1.0949974,
+ "tokens": {
+  "written": 21614,
+  "read": 684413
+ },
+ "ended": "completed",
+ "notes": true,
+ "summary": "The rebuild ended at a checker score of **69/100**, short of the 90 target. I stopped there because the brief allows 3 checker runs (scores were 66, 67, 69).\n\nOpen `factory/1yi26a-accordion-faq-interaction/side.png` to compare: the designer's clip is on the left, mine on the right.\n\n**What matches:**\n- **Layout:** the title, subtitle, keyboard, five FAQ rows and bass block sit within about 2px of the clip at all four keyframes.\n- **Opening motion:** row 3 opens at 2.05s, row 2 at 4.45s and row 4 at 5.2s. They close again from 9.15s. The instrument grows evenly around a fixed centre, so each opened row pushes it 16px further outward, as in the clip.\n- **Keys:** the right piano keys show as pressed at each keyframe.\n- **File rules:** the timeline is pure CSS animations that the checker can seek, with no JS. Reduced motion turns them off, and the designer is credited at the top of the file.\n\n**What still costs the score:**\n1. **Bottom bass block (difference 37–39 on every keyframe):** the clip's red is a photographic marble with sharp veins; mine is soft gradients. The buttons are missing their chrome rims, and a thin light strip shows under my red block that the clip doesn't have.\n2.",
+ "checker": "score 69 over 4 keyframes (run 4); 6 animations on the page",
+ "at": "2026-10-21T13:55:26.126Z"
+}
