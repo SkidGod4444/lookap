@@ -15,7 +15,7 @@ export function planFromEnv(key: string): Plan | null {
   return null;
 }
 
-export type Resolved = { plan: Plan; reason?: string };
+export type Resolved = { plan: Plan; reason?: string; subscription?: Record<string, unknown> };
 
 /* The plan behind a request: env list first (dev), then Unkey. No key, or a key Unkey rejects, is "none" with the reason kept. */
 export async function resolvePlan(req: Request): Promise<Resolved> {
@@ -25,7 +25,7 @@ export async function resolvePlan(req: Request): Promise<Resolved> {
   if (env) return { plan: env };
   const { verifyKey } = await import("./unkey");
   const v = await verifyKey(key);
-  return v.plan === "none" ? { plan: "none", reason: v.code } : { plan: v.plan };
+  return v.plan === "none" ? { plan: "none", reason: v.code } : { plan: v.plan, subscription: v.subscription };
 }
 
 export function keyFromRequest(req: Request): string | null {

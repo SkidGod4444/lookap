@@ -20,7 +20,9 @@ function unkey() {
 const RPM: Record<Exclude<Plan, "none">, number> = { starter: 60, pro: 300, team: 600 };
 const PLANS = new Set<Plan>(["starter", "pro", "team"]);
 
-export type Verified = { plan: Exclude<Plan, "none">; keyId: string } | { plan: "none"; code: string };
+export type Verified =
+  | { plan: Exclude<Plan, "none">; keyId: string; userId?: string; subscription?: Record<string, unknown> }
+  | { plan: "none"; code: string };
 
 /* One call per MCP request: validity, plan, rate limit. Any failure reads as no key, with Unkey's code kept for the message. */
 export async function verifyKey(key: string): Promise<Verified> {
@@ -30,7 +32,7 @@ export async function verifyKey(key: string): Promise<Verified> {
     if (!data.valid) return { plan: "none", code: data.code };
     const plan = (data.meta as { plan?: string } | undefined)?.plan;
     if (!plan || !PLANS.has(plan as Plan) || plan === "none") return { plan: "none", code: "NO_PLAN" };
-    return { plan: plan as Exclude<Plan, "none">, keyId: data.keyId ?? "" };
+    return { plan: plan as Exclude<Plan, "none">, keyId: data.keyId ?? "", userId: data.identity?.externalId, subscription: data.identity?.meta as Record<string, unknown> | undefined };
   } catch {
     return { plan: "none", code: "UNKEY_ERROR" };
   }
@@ -80,6 +82,21 @@ export async function setUserKeys(userId: string, patch: { enabled?: boolean; pl
     ),
   );
   return mine.length;
+}
+
+/* The user's subscription, as Polar told us, stored on their Unkey identity. It comes back on every keys.verifyKey,
+   so the MCP endpoint knows the plan, the renewal date and the customer without another lookup. */
+export async function setIdentitySubscription(userId: string, sub: { plan: string; status?: string; subscriptionId?: string; renewsAt?: string; polarCustomerId?: string }) {
+  try {
+    await unkey().identities.updateIdentity({ identity: userId, meta: { ...sub, syncedAt: new Date().toISOString() } });
+  } catch (e) {
+    /* No identity yet (no keys minted): create it carrying the same details. */
+    if (e instanceof Error && /not found/i.test(e.message)) {
+      await unkey().identities.createIdentity({ externalId: userId, meta: { ...sub, syncedAt: new Date().toISOString() } });
+      return;
+    }
+    throw e;
+  }
 }
 
 /* Delete a key, but only one the user owns. */

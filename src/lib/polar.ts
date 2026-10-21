@@ -1,6 +1,7 @@
 import "server-only";
 import { createPolar, type Environment } from "@polar-sh/sdk/2026-10";
 import type { Plan } from "./keys";
+import { ENTITLEMENT_TTL_MS, getUser, setUser } from "./db";
 
 /* Billing through Polar. One subscription product per plan and interval; the Polar customer's external_id is the Clerk user id,
    so a user's entitlement is one lookup of their customer state. Needs POLAR_ACCESS_TOKEN, POLAR_WEBHOOK_SECRET and the six product ids. */
@@ -40,29 +41,55 @@ export function polar() {
   return client;
 }
 
-export type Entitlement = { plan: Plan; interval?: Interval; renewsAt?: string; cancelAtPeriodEnd?: boolean; status?: string };
+export type Entitlement = { plan: Plan; interval?: Interval; renewsAt?: string; cancelAtPeriodEnd?: boolean; status?: string; subscriptionId?: string; polarCustomerId?: string };
 
-/* The plan a user is paying for right now. The highest active subscription wins. No Polar, or no customer yet, means "none".
-   LOOKAP_FREE_MINT=1 (local dev only) grants pro without a subscription so the key flow can be exercised without a checkout. */
-export async function entitlementFor(userId: string): Promise<Entitlement> {
-  if (process.env.LOOKAP_FREE_MINT === "1") return { plan: "pro", status: "dev" };
+/* Ask Polar for the customer's state and reduce it to one plan: the highest active subscription wins.
+   An unknown customer is a 404: they have never checked out. */
+export async function entitlementFromPolar(userId: string): Promise<Entitlement> {
   if (!polarReady) return { plan: "none" };
   try {
     const state = await polar().customers.getStateExternal(userId);
     const rank: Record<PaidPlan, number> = { starter: 1, pro: 2, team: 3 };
-    let best: Entitlement = { plan: "none" };
+    let best: Entitlement = { plan: "none", polarCustomerId: state.id };
     for (const s of state.active_subscriptions ?? []) {
       const plan = planForProduct(s.product_id);
       if (!plan) continue;
       if (best.plan === "none" || rank[plan] > rank[best.plan as PaidPlan]) {
-        best = { plan, interval: s.recurring_interval === "year" ? "year" : "month", renewsAt: s.current_period_end, cancelAtPeriodEnd: s.cancel_at_period_end, status: s.status };
+        best = { plan, interval: s.recurring_interval === "year" ? "year" : "month", renewsAt: s.current_period_end, cancelAtPeriodEnd: s.cancel_at_period_end, status: s.status, subscriptionId: s.id, polarCustomerId: state.id };
       }
     }
     return best;
   } catch (e) {
-    /* An unknown customer is a 404: they have never checked out. Anything else is a real failure we still treat as no plan. */
     if (e && typeof e === "object" && "status" in e && (e as { status?: number }).status === 404) return { plan: "none" };
     console.error("[polar] entitlement lookup failed", e);
     return { plan: "none" };
   }
+}
+
+/* The plan a user is paying for right now. Redis answers first; Polar is asked when the record is missing or stale, and the
+   answer is written back. LOOKAP_FREE_MINT=1 (local dev only) grants pro without a subscription. */
+export async function entitlementFor(userId: string): Promise<Entitlement> {
+  if (process.env.LOOKAP_FREE_MINT === "1") return { plan: "pro", status: "dev" };
+  const rec = await getUser(userId);
+  const fresh = rec?.entitlementCheckedAt && Date.now() - Date.parse(rec.entitlementCheckedAt) < ENTITLEMENT_TTL_MS;
+  if (rec && fresh && rec.plan) {
+    return { plan: (rec.plan as Plan) ?? "none", interval: rec.interval as Interval | undefined, renewsAt: rec.renewsAt, cancelAtPeriodEnd: rec.cancelAtPeriodEnd, status: rec.status, subscriptionId: rec.subscriptionId, polarCustomerId: rec.polarCustomerId };
+  }
+  const live = await entitlementFromPolar(userId);
+  await rememberEntitlement(userId, live);
+  return live;
+}
+
+/* Write what Polar said into the user's record. Called from lookups and from webhooks. */
+export async function rememberEntitlement(userId: string, e: Entitlement) {
+  await setUser(userId, {
+    plan: e.plan,
+    interval: e.interval ?? "",
+    status: e.status ?? "",
+    subscriptionId: e.subscriptionId ?? "",
+    renewsAt: e.renewsAt ?? "",
+    cancelAtPeriodEnd: e.cancelAtPeriodEnd ?? false,
+    polarCustomerId: e.polarCustomerId,
+    entitlementCheckedAt: new Date().toISOString(),
+  });
 }

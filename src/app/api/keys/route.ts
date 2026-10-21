@@ -1,4 +1,5 @@
-import { auth } from "@clerk/nextjs/server";
+import { auth, currentUser } from "@clerk/nextjs/server";
+import { setUser } from "@/lib/db";
 import { createKey, listKeys, revokeKey, unkeyReady } from "@/lib/unkey";
 import { entitlementFor } from "@/lib/polar";
 
@@ -23,7 +24,8 @@ export async function GET() {
   if (!userId) return json({ error: "Sign in first." }, 401);
   if (!unkeyReady) return json({ error: "Key service is not configured." }, 503);
   return guarded(async () => {
-    const [keys, entitlement] = await Promise.all([listKeys(userId), entitlementFor(userId)]);
+    const [keys, entitlement, user] = await Promise.all([listKeys(userId), entitlementFor(userId), currentUser()]);
+    await setUser(userId, { email: user?.primaryEmailAddress?.emailAddress, name: user?.fullName ?? undefined, keyCount: keys.length });
     return json({ keys, entitlement });
   });
 }
@@ -39,6 +41,7 @@ export async function POST(req: Request) {
     const existing = await listKeys(userId);
     if (existing.length >= 5) return json({ error: "Five keys is the limit. Revoke one first." }, 400);
     const made = await createKey(userId, entitlement.plan, String(body.name ?? "").trim());
+    await setUser(userId, { keyCount: existing.length + 1 });
     return json({ keyId: made.keyId, key: made.key, plan: entitlement.plan });
   });
 }
