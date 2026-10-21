@@ -5,7 +5,11 @@ import type { Element } from "@/lib/specs";
 /* Compare a screenshot of a rebuild with a reference keyframe, region by region. Both are resized to the frame size,
    then each spec element's box gets a mean colour on both sides, and a 6 x 6 grid gets a mean absolute difference.
    This finds the wrong colour, the missing element and the misplaced block; it is not a pixel-perfect judge, and
-   says so. Moving elements are only compared at the first keyframe, where the spec's boxes hold. */
+   says so. Moving elements are only compared at the first keyframe, where the spec's boxes hold.
+
+   Differences are weighted by detail: a pixel on an edge, in text or in a texture counts up to ten times a pixel in
+   a flat field, on whichever side has the detail. A mostly black frame with garbled text no longer scores 91 because
+   the black matched; a flat background that is the wrong shade still counts, just less than the thing on it. */
 
 const hex = (r: number, g: number, b: number) => `#${[r, g, b].map((v) => Math.round(v).toString(16).padStart(2, "0")).join("")}`;
 
@@ -23,10 +27,33 @@ function mean(d: Buffer, W: number, box: [number, number, number, number]) {
   return n ? [r / n, g / n, b / n] : [0, 0, 0];
 }
 
+/* how much is going on at a sampled pixel: the colour change to its neighbours two pixels right and down, 0..255 */
+function detail(d: Buffer, W: number, i: number, x: number, y: number, H: number) {
+  const r = x + 2 < W ? i + 6 : i, dn = y + 2 < H ? i + W * 6 : i;
+  return (Math.abs(d[i] - d[r]) + Math.abs(d[i + 1] - d[r + 1]) + Math.abs(d[i + 2] - d[r + 2]) + Math.abs(d[i] - d[dn]) + Math.abs(d[i + 1] - d[dn + 1]) + Math.abs(d[i + 2] - d[dn + 2])) / 2;
+}
+
 function diff(a: Buffer, b: Buffer, W: number, box: [number, number, number, number]) {
   const [x0, y0, bw, bh] = box.map(Math.round);
+  const H = Math.floor(a.length / (W * 3));
   let s = 0, n = 0;
-  for (let y = y0; y < y0 + bh; y += 2) for (let x = x0; x < x0 + bw; x += 2) { const i = (y * W + x) * 3; if (i + 2 >= a.length || x < 0 || y < 0) continue; s += Math.abs(a[i] - b[i]) + Math.abs(a[i + 1] - b[i + 1]) + Math.abs(a[i + 2] - b[i + 2]); n++; }
+  /* a pixel is judged against the closest match within two pixels on the other side, so an edge drawn one pixel off
+     is a small fault and a missing edge a large one */
+  const near = (d: Buffer, i: number, r: number, g: number, bl: number, x: number, y: number) => {
+    let best = 765;
+    for (const dy of [-2, 0, 2]) for (const dx of [-2, 0, 2]) {
+      const xx = x + dx, yy = y + dy; if (xx < 0 || yy < 0 || xx >= W || yy >= H) continue;
+      const j = (yy * W + xx) * 3; const v = Math.abs(d[j] - r) + Math.abs(d[j + 1] - g) + Math.abs(d[j + 2] - bl);
+      if (v < best) best = v;
+    }
+    return best;
+  };
+  for (let y = y0; y < y0 + bh; y += 2) for (let x = x0; x < x0 + bw; x += 2) {
+    const i = (y * W + x) * 3; if (i + 2 >= a.length || x < 0 || y < 0) continue;
+    const wgt = 1 + Math.min(9, Math.max(detail(a, W, i, x, y, H), detail(b, W, i, x, y, H)) / 8);
+    const v = Math.max(near(b, i, a[i], a[i + 1], a[i + 2], x, y), near(a, i, b[i], b[i + 1], b[i + 2], x, y));
+    s += wgt * v; n += wgt;
+  }
   return n ? s / (n * 3) : 0;
 }
 
@@ -49,7 +76,7 @@ export async function compareBuild(referencePath: string, submitted: Buffer, fra
     cells.push({ cell: `${"ABCDEF"[gy]}${gx + 1}`, box: box.map(Math.round) as [number, number, number, number], delta: Math.round(diff(ref, sub, w, box)), over });
   }
   cells.sort((p, q) => q.delta - p.delta);
-  /* 0 is identical; a mean channel difference of 40 or more reads as a different picture */
-  const score = Math.max(0, Math.round(100 - overall * 2.5));
+  /* 0 is identical; with detail weighted and two pixels of tolerance, a close rebuild sits near 20 and a wrong one past 50 */
+  const score = Math.max(0, Math.round(100 - overall * 1.6));
   return { score, overall: Math.round(overall), elements: els.slice(0, 5), regions: cells.slice(0, 3), skipped: firstKeyframe ? [] : elements.filter((e) => e.static === false).map((e) => e.name) };
 }
