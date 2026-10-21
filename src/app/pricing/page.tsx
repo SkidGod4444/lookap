@@ -9,8 +9,8 @@ const PLANS = [
     features: ["Search the registry and find similar work", "Every record and rebuild brief", "All design notes", "20 results per search", "One key, any MCP client"] },
   { name: "Pro key", blurb: "The whole registry inside your agent: every entry, every recipe, media checks.", monthly: 12, yearly: 10, yearlyTotal: 120, runs: "300 tool calls a day", cta: "Get a Pro key", primary: true, popular: true,
     features: ["Everything in Starter", "Measured recipes as data, with keyframes", "Frames your agent can look at", "Checks your rebuild against the designer's frame", "Clip checks on any public video or still", "50 results per search"] },
-  { name: "Team key", blurb: "For studios that want shared collections and private entries.", monthly: 39, yearly: 32, yearlyTotal: 384, runs: "1,000 tool calls a day, per seat", cta: "Start a team", primary: false,
-    features: ["Everything in Pro", "The finished rebuild as source, 50 a month", "Shared collections and private entries", "Priority on new recipes", "Invoiced billing"] },
+  { name: "Max key", blurb: "Everything lookap has, at the highest allowance, with the finished rebuilds.", monthly: 39, yearly: 32, yearlyTotal: 384, runs: "1,000 tool calls a day", cta: "Get a Max key", primary: false,
+    features: ["Everything in Pro", "The finished rebuild as source, 50 a month", "100 results per search", "Priority on new recipes", "Invoiced billing"] },
 ];
 
 const FAQ = [

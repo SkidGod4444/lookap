@@ -1,4 +1,4 @@
-/* The finished rebuilds as single HTML files, served by get_rebuild to Team keys. Generated from the measured builds
+/* The finished rebuilds as single HTML files, served by get_rebuild to Max keys. Generated from the measured builds
    that the recipes were read from; the values in them are the recipe's values. Fonts load from Google Fonts; nothing
    else is fetched. Kept out of public/ on purpose: this is the asset the plan pays for. */
 

@@ -235,7 +235,7 @@ export function briefFor(e: Entry) {
     method: METHOD,
     build: recipe ? { ...recipe.build, note: "whole-session totals for the measured rebuild, feedback rounds included; with the recipe in hand expect one pass" } : null,
     oneShot: recipe
-      ? "get_recipe has every value as data: frame, elements with boxes, timing, states, keyframes, checks. Build from it, render, then call check_rebuild with a screenshot and fix what it reports. A Team key can call get_rebuild for the finished file and port it."
+      ? "get_recipe has every value as data: frame, elements with boxes, timing, states, keyframes, checks. Build from it, render, then call check_rebuild with a screenshot and fix what it reports. A Max key can call get_rebuild for the finished file and port it."
       : "No measured recipe yet: see_design, build from the frame, then compare by eye against it.",
   };
 }
@@ -252,7 +252,7 @@ export const TOOLS = [
   ["get_brief", "Rebuild brief", "How to rebuild an entry: frame, tone, steps, proposed motion, notes that apply.", "starter"],
   ["see_design", "See a design", "The entry's frame as an image, or a named keyframe of the clip, for agents that can look.", "pro"],
   ["check_rebuild", "Check a rebuild", "Send a screenshot of your build; get back the regions and colours that differ from the reference frame.", "pro"],
-  ["get_rebuild", "The finished rebuild", "The finished rebuild as one HTML file, to port to your stack.", "team"],
+  ["get_rebuild", "The finished rebuild", "The finished rebuild as one HTML file, to port to your stack.", "max"],
   ["get_usage", "What is left", "Today's calls, the month's quotas, and what the next plan adds.", "starter"],
   ["get_recipe", "Measured recipe", "Palette, geometry, type and motion table, read from the clip's pixels.", "pro"],
   ["get_method", "How clips are measured", "The measuring steps behind every recipe, to apply to a clip of your own.", "starter"],

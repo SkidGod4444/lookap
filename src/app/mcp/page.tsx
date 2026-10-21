@@ -53,7 +53,7 @@ export default function McpPage() {
       </section>
 
       <section className="flex flex-wrap items-center gap-3 rounded-2xl bg-card p-5 ring-1 ring-line">
-        <p className="min-w-[24ch] flex-1 text-[14px] text-subtle">A Pro key opens the whole registry, recipes and media checks. Team keys add shared collections.</p>
+        <p className="min-w-[24ch] flex-1 text-[14px] text-subtle">A Pro key opens the whole registry, recipes and checks. A Max key adds the finished rebuilds and the highest daily allowance.</p>
         <Link href="/pricing" className={button("outline", "h-9 rounded-lg px-4 text-[13px]")}>See pricing</Link>
         <Link href="/feed" className="text-[13px] font-medium text-subtle transition-colors hover:text-foreground">Browse first</Link>
       </section>

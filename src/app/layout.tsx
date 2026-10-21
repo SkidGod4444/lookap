@@ -56,7 +56,7 @@ const JSON_LD = {
       offers: [
         { "@type": "Offer", name: "Starter key", price: "1", priceCurrency: "USD", url: `${SITE_URL}/pricing` },
         { "@type": "Offer", name: "Pro key", price: "12", priceCurrency: "USD", url: `${SITE_URL}/pricing` },
-        { "@type": "Offer", name: "Team key", price: "39", priceCurrency: "USD", url: `${SITE_URL}/pricing` },
+        { "@type": "Offer", name: "Max key", price: "39", priceCurrency: "USD", url: `${SITE_URL}/pricing` },
       ],
     },
   ],

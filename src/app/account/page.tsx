@@ -5,6 +5,7 @@ import { Suspense, useCallback, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useUser } from "@clerk/nextjs";
 import { badge, button } from "@/components/button";
+import { PLAN_NAME } from "@/lib/plan-names";
 import { SITE_URL } from "@/lib/site";
 
 type KeyRow = { keyId: string; start: string; name?: string; plan: string; createdAt: number; enabled: boolean };
@@ -99,7 +100,7 @@ function Account() {
             {ent === null ? (
               <span className="text-[13px] text-subtle">Loading…</span>
             ) : paid ? (
-              <span className={badge("active", "px-2.5 py-1 text-[12px] capitalize")}>{ent.plan}</span>
+              <span className={badge("active", "px-2.5 py-1 text-[12px]")}>{PLAN_NAME[ent.plan] ?? ent.plan}</span>
             ) : (
               <span className={badge("chip", "px-2.5 py-1 text-[12px]")}>None</span>
             )}
@@ -149,7 +150,7 @@ function Account() {
             {keys.map((k) => (
               <li key={k.keyId} className="flex items-center gap-4 px-4 py-3">
                 <code className="font-mono text-[13px] text-foreground">{k.start}…</code>
-                <span className={badge("chip", "px-2 py-0.5 text-[11px] capitalize")}>{k.plan}</span>
+                <span className={badge("chip", "px-2 py-0.5 text-[11px]")}>{PLAN_NAME[k.plan] ?? k.plan}</span>
                 {!k.enabled && <span className={badge("chip", "px-2 py-0.5 text-[11px]")}>off</span>}
                 <span className="min-w-0 flex-1 truncate text-[13px] text-subtle">{k.name}</span>
                 <span className="hidden text-[12px] text-subtle sm:inline">{new Date(k.createdAt).toLocaleDateString()}</span>
@@ -162,7 +163,7 @@ function Account() {
 
       {paid && (
         <form onSubmit={mint} className="flex flex-col gap-4 rounded-xl bg-card p-5 ring-1 ring-line">
-          <h2 className="text-[16px] font-medium text-foreground">Mint a <span className="capitalize">{ent?.plan}</span> key</h2>
+          <h2 className="text-[16px] font-medium text-foreground">Mint a {PLAN_NAME[ent?.plan ?? ""] ?? ent?.plan} key</h2>
           <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Name, like “laptop” or “CI”" maxLength={60} className="h-10 rounded-lg bg-canvas px-3 text-[14px] text-foreground ring-1 ring-line-strong outline-none placeholder:text-subtle focus:ring-ring" />
           {note && <p className="text-[12px] text-silver">{note}</p>}
           <button type="submit" disabled={busy} className={button("silver", "h-10 self-start rounded-lg px-4 text-[13px]")}>{busy ? "Minting…" : "Create key"}</button>

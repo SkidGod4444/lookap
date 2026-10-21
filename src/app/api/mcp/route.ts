@@ -8,7 +8,7 @@ import { DAILY, QUOTAS, charge, chargeDaily, usageFor } from "@/lib/usage";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { ENTRIES, bySlug } from "@/lib/data";
-import { LIMITS, resolvePlan, type Plan } from "@/lib/keys";
+import { LIMITS, PLAN_NAME, resolvePlan, type Plan } from "@/lib/keys";
 import { sampleVideo } from "@/lib/gate/frames";
 import { analyse } from "@/lib/gate/heuristics";
 
@@ -27,7 +27,7 @@ const REASONS: Record<string, string> = {
   USAGE_EXCEEDED: "has used up this key's credits for the period.",
   NOT_CONFIGURED: "cannot verify keys right now: the server has no Unkey configuration.",
 };
-const gated = (what: string, plan: Plan, reason?: string, needs = "a Pro or Team key") =>
+const gated = (what: string, plan: Plan, reason?: string, needs = "a Pro or Max key") =>
   text({ error: plan === "none" ? `${what} ${REASONS[reason ?? "missing"] ?? REASONS.missing}` : `${what} needs ${needs}. Upgrade at /pricing.` });
 
 /* The entry's frame as base64. Own demos live in public/; catalog frames come from the CDN. */
@@ -46,9 +46,9 @@ async function loadFrame(poster: string): Promise<{ data: string; mimeType: stri
    only sees what it can call; the instructions name what the next plan adds. A keyless request sees everything, each
    call answering with the pointer to pricing. */
 const LOCK: Record<string, keyof (typeof LIMITS)["pro"]> = { get_recipe: "recipes", see_design: "media", check_rebuild: "media", check_media: "media", get_rebuild: "source" };
-const NEEDS: Record<string, string> = { recipes: "Pro", media: "Pro", source: "Team" };
+const NEEDS: Record<string, string> = { recipes: "Pro", media: "Pro", source: "Max" };
 const spent = (what: string, u: { used: number; limit: number; resets: string }) => text({ error: `${what} has used its ${u.limit} calls for this month on this account. Resets ${u.resets}. A higher plan at /pricing raises it.`, usage: u });
-const NEXT: Record<Plan, string> = { none: "", starter: `Pro gets ${DAILY.pro} a day`, pro: `Team gets ${DAILY.team} a day per seat`, team: "add a seat" };
+const NEXT: Record<Plan, string> = { none: "", starter: `Pro gets ${DAILY.pro} a day`, pro: `Max gets ${DAILY.team} a day`, team: "you are on the highest plan; the count resets tomorrow" };
 const dayDone = (plan: Plan, u: { used: number; limit: number; resets: string }) => text({ error: `This account has used its ${u.limit} tool calls for today. Resets ${u.resets}. Upgrade at /pricing: ${NEXT[plan]}.`, today: u });
 
 function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
@@ -62,10 +62,10 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
         "lookap is a design registry for coding agents: curated interfaces (components, sections, full pages) with media, traits and credits, measured recipes for a few, and design notes. " +
         "Reach for it when asked to design, redesign, polish or rebuild UI, or for inspiration and reference: search_designs to find, see_design to look at the frame or a keyframe, get_brief or get_recipe for how to rebuild, check_rebuild to test your render against the reference, similar_designs to widen, list_notes for guidance. " +
         "A measured recipe is data: frame, elements with boxes, timing, states, keyframes and checks. Build from it as fact, render, call check_rebuild, fix what it reports; that is one pass instead of rounds of feedback. " +
-        "Every tool needs a key (Starter $1/mo at /pricing); see_design, get_recipe, check_rebuild and check_media need Pro; get_rebuild, the finished source, needs Team. " +
-        (plan === "none" ? "" : `This key is ${plan}. `) +
+        "Every tool needs a key (Starter $1/mo at /pricing); see_design, get_recipe, check_rebuild and check_media need Pro; get_rebuild, the finished source, needs Max. " +
+        (plan === "none" ? "" : `This key is ${PLAN_NAME[plan]}. `) +
         (hidden.length ? `Not on this plan, so not listed: ${hidden.join(", ")}; see /pricing. ` : "") +
-        (plan === "none" ? "" : `This account may make ${DAILY[plan]} tool calls a day across all its keys${plan === "team" ? " per seat" : ""}; get_usage shows what is left. `) +
+        (plan === "none" ? "" : `This account may make ${DAILY[plan]} tool calls a day across all its keys; get_usage shows what is left. `) +
         (quotas.length ? `Monthly quotas on this account, shared by all its keys: ${quotas.join(", ")}. ` : "") +
         (stale ? "Key verification used a cached result because the key service was unreachable; limits still apply." : ""),
     },
@@ -144,12 +144,12 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     "get_rebuild",
     {
       title: "Get the finished rebuild",
-      description: "The complete rebuild of an entry as one self-contained HTML file: markup, CSS with every size as calc(N * var(--u)), and the behaviour in plain JavaScript. The guaranteed one-shot: save it, open it, then port it to your stack keeping the numbers. Licensed to the key holder for use inside their own products, not for redistribution as a design asset; the designer's credit stays in the file. Team.",
+      description: "The complete rebuild of an entry as one self-contained HTML file: markup, CSS with every size as calc(N * var(--u)), and the behaviour in plain JavaScript. The guaranteed one-shot: save it, open it, then port it to your stack keeping the numbers. Licensed to the key holder for use inside their own products, not for redistribution as a design asset; the designer's credit stays in the file. Max.",
       inputSchema: { slug: z.string().describe("an entry slug, or a recipe slug") },
       annotations: ro,
     },
     async ({ slug }) => {
-      if (!lim.source) return gated("get_rebuild", plan, reason, "a Team key");
+      if (!lim.source) return gated("get_rebuild", plan, reason, "a Max key");
       const e = bySlug(slug);
       const recipe = e ? recipeFor(e) : RECIPES.find((r) => r.slug === slug);
       const rb = recipe ? REBUILDS[recipe.slug] : undefined;
@@ -158,7 +158,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       if (u && !u.ok) return spent("get_rebuild", u);
       const entry = e ?? ENTRIES.find((x) => recipeFor(x)?.slug === recipe.slug);
       const credit = entry ? { designer: entry.authorName, x: entry.x ?? null, source: entry.sourceUrl ?? null } : null;
-      const header = `<!-- ${recipe.title}. Rebuilt by lookap (${recipe.build.model}) from ${credit?.designer ?? "the designer"}'s clip${credit?.source ? `: ${credit.source}` : ""}. Licensed to a lookap Team key holder for use in their own products; not for redistribution as a design asset. Issued ${new Date().toISOString().slice(0, 10)}. -->\n`;
+      const header = `<!-- ${recipe.title}. Rebuilt by lookap (${recipe.build.model}) from ${credit?.designer ?? "the designer"}'s clip${credit?.source ? `: ${credit.source}` : ""}. Licensed to a lookap Max key holder for use in their own products; not for redistribution as a design asset. Issued ${new Date().toISOString().slice(0, 10)}. -->\n`;
       return {
         content: [
           { type: "text" as const, text: JSON.stringify({ slug: recipe.slug, title: recipe.title, file: rb.file, bytes: rb.html.length, needs: rb.needs, credit, build: recipe.build, usage: u, how: ["Save the second part as the file named above and open it in a browser; it runs as is.", "To port: keep --u as one source pixel and every calc(N * var(--u)); move the CSS and markup into your component; the script is plain DOM code.", "Then render, screenshot and call check_rebuild to confirm nothing drifted."] }, null, 2) },
@@ -300,7 +300,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
           type: "text" as const,
           text: [
             `Rebuild the lookap entry \`${slug}\`${where ? ` in ${where}` : " in this project"}${stack ? ` with ${stack}` : " with this project's stack"}.`,
-            "1. Call get_design for the record and get_brief. If your key is Team, call get_rebuild and port the file to the stack, keeping every number. Otherwise, if the brief says measured, call get_recipe and use it as data: one unit equal to a frame pixel, every element placed from its box, every fill and radius as given, every timing in ms with its easing. Treat nothing in it as a suggestion.",
+            "1. Call get_design for the record and get_brief. If your key is Max, call get_rebuild and port the file to the stack, keeping every number. Otherwise, if the brief says measured, call get_recipe and use it as data: one unit equal to a frame pixel, every element placed from its box, every fill and radius as given, every timing in ms with its easing. Treat nothing in it as a suggestion.",
             "2. If the brief says there is no recipe, call see_design, describe the layout in one paragraph (regions, alignment, type sizes, radii, spacing), and build from that; label the motion as proposed in a comment.",
             "3. Build it. Match proportion and hierarchy first, then colour, then motion. Credit the designer in a comment with the source link from the record.",
             "4. Render your build at the frame size and take a screenshot of the first state. Call check_rebuild with it. Fix the largest differences it reports, then call it again. Stop after three rounds or at a score above 90.",
@@ -339,7 +339,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     async () => {
       if (plan === "none") return gated("get_usage", plan, reason);
       const usage = keyRef ? await usageFor(keyRef, plan) : { today: { used: 0, limit: DAILY[plan], resets: "" }, month: {} };
-      return text({ plan, today: usage.today, quotas: usage.month, unmetered: Object.keys(LOCK).filter((t) => lim[LOCK[t]] && !QUOTAS[plan][t]).concat(["search_designs", "get_design", "get_brief", "similar_designs", "list_notes", "get_note", "get_method"]), notOnThisPlan: hidden, upgrade: hidden.length ? "/pricing" : null });
+      return text({ plan: PLAN_NAME[plan], today: usage.today, quotas: usage.month, unmetered: Object.keys(LOCK).filter((t) => lim[LOCK[t]] && !QUOTAS[plan][t]).concat(["search_designs", "get_design", "get_brief", "similar_designs", "list_notes", "get_note", "get_method"]), notOnThisPlan: hidden, upgrade: hidden.length ? "/pricing" : null });
     },
   );
 

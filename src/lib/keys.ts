@@ -4,6 +4,7 @@ import "server-only";
    LOOKAP_API_KEYS stays as a local-dev fallback: a comma-separated list of `key:plan` pairs, e.g. "lk_test_pro:pro". */
 
 export type Plan = "none" | "starter" | "pro" | "team";
+export { PLAN_NAME } from "./plan-names";
 
 /* Dev fallback only: keys listed in the env var. */
 export function planFromEnv(key: string): Plan | null {
@@ -36,7 +37,7 @@ export function keyFromRequest(req: Request): string | null {
   return req.headers.get("x-lookap-key");
 }
 
-/* No key, no registry. Starter ($1) opens search and notes; Pro adds recipes, keyframes and checks; Team adds seats and the finished source. */
+/* No key, no registry. Starter ($1) opens search and notes; Pro adds recipes, keyframes and checks; Max adds the highest allowance and the finished source. */
 export const LIMITS: Record<Plan, { search: number; recipes: boolean; notes: number; media: boolean; source: boolean }> = {
   none: { search: 0, recipes: false, notes: 0, media: false, source: false },
   starter: { search: 20, recipes: false, notes: 100, media: false, source: false },
