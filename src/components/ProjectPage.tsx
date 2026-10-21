@@ -84,16 +84,21 @@ export function ProjectPage({ slug }: { slug: string }) {
           </dl>
 
           {/* the cost of the rebuild, read from the transcript of the session that made it */}
-          {!recipe && FACTORY[entry.slug] && (
+          {!recipe && FACTORY[entry.slug] && (() => { const f = FACTORY[entry.slug]; return (
             <div className="flex flex-col gap-2">
               <h2 className="text-[11px] font-medium tracking-[0.04em] text-subtle uppercase">Rebuilt by lookap</h2>
               <dl className="flex flex-col gap-1.5 text-[12px] leading-[1.4]">
-                <div className="flex justify-between gap-3"><dt className="font-medium text-foreground">Model</dt><dd className="text-right text-subtle"><span className="text-foreground">{FACTORY[entry.slug].build.model}</span><br />{FACTORY[entry.slug].build.modelId}</dd></div>
-                <div className="flex justify-between gap-3"><dt className="font-medium text-foreground">Work</dt><dd className="text-right text-subtle">{FACTORY[entry.slug].build.passes} passes over the clip at 60 fps<br />{FACTORY[entry.slug].build.date}</dd></div>
+                <div className="flex justify-between gap-3"><dt className="font-medium text-foreground">Finished by</dt><dd className="text-right text-subtle"><span className="text-foreground">{f.build.model}</span><br />{f.build.modelId}, {f.build.date}</dd></div>
+                {f.build.run && (
+                  <>
+                    <div className="flex justify-between gap-3"><dt className="font-medium text-foreground">Agent run</dt><dd className="text-right text-subtle"><span className="text-foreground">{f.build.run.model}</span><br />{f.build.run.turns} turns, {f.build.run.minutes} min, ${f.build.run.costUsd.toFixed(2)}</dd></div>
+                    <div className="flex justify-between gap-3"><dt className="font-medium text-foreground">Tokens</dt><dd className="text-right text-subtle"><span className="text-foreground">{tokens(f.build.run.outputTokens)}</span> written<br />{tokens(f.build.run.totalTokens)} read, context re-read each turn</dd></div>
+                  </>
+                )}
               </dl>
-              <p className="mt-2 text-[11px] leading-[1.5] text-subtle">Every size, colour and motion read from the designer&apos;s clip frame by frame, then compared side by side until it matched. Flip the switch above to use it. The file is on Max.</p>
+              <p className="mt-2 text-[11px] leading-[1.5] text-subtle">{f.build.run ? `The agent run above is metered; it matched the clip's stills at ${f.build.run.score}/100 and missed the motion. ` : ""}{f.build.hand ? `Then ${f.build.hand}, not metered. ` : ""}Flip the switch above to use it. The file is on Max.</p>
             </div>
-          )}
+          ); })()}
           {recipe && (
             <section>
               <h2 className="text-[11px] font-medium tracking-[.06em] text-subtle uppercase">Rebuilt by</h2>

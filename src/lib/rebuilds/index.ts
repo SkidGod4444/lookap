@@ -9,7 +9,7 @@ import { recipeFor } from "../registry";
 export type Rebuild = { file: string; html: string; needs: string[] };
 /* the factory's rebuilds (scripts/build-rebuilds.ts), keyed by entry slug: the file, the same file scaled for the
    project page's frame, and the record of who built it */
-export type FactoryRebuild = Rebuild & { slug: string; title: string; embed: string; frame: { w: number; h: number }; score: number | null; build: { model: string; modelId: string; passes: number; date: string }; hint: string; pattern: string };
+export type FactoryRebuild = Rebuild & { slug: string; title: string; embed: string; frame: { w: number; h: number }; score: number | null; build: { model: string; modelId: string; date: string; run?: { model: string; turns: number; outputTokens: number; totalTokens: number; costUsd: number; minutes: number; score: number }; hand?: string }; hint: string; pattern: string };
 export const FACTORY = FACTORY_JSON as Record<string, FactoryRebuild>;
 
 /* the finished rebuild for an entry, from the measured set by recipe slug or from the factory by entry slug */

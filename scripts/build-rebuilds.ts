@@ -1,6 +1,7 @@
 /* Pack the factory's finished rebuilds into src/lib/rebuilds/factory.json, so the site's Live switch and the MCP's
    get_rebuild can serve them from Vercel. A rebuild ships when factory/<slug>/ has index.html, NOTES.md and build.json
-   (the record of who built it and how to use it; the factory's result.json is the run's receipt, not the file's).
+   (who finished it, the metered agent run if there was one, what was done by hand, and the hint for the Live switch;
+   the factory's result.json is the run's receipt and build.json is the file's record).
    Two copies of the file go in: the file as written (one source pixel per --u, for get_rebuild) and the embed, the
    same file with --u scaled to the iframe so it fills the project page's frame. bun scripts/build-rebuilds.ts */
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -9,7 +10,8 @@ import { join } from "node:path";
 export type FactoryRebuild = {
   slug: string; title: string; file: string; html: string; embed: string; needs: string[];
   frame: { w: number; h: number }; score: number | null;
-  build: { model: string; modelId: string; passes: number; date: string }; hint: string; pattern: string;
+  build: { model: string; modelId: string; date: string; run?: { model: string; turns: number; outputTokens: number; totalTokens: number; costUsd: number; minutes: number; score: number }; hand?: string };
+  hint: string; pattern: string;
 };
 
 const out: Record<string, FactoryRebuild> = {};

@@ -16,8 +16,17 @@
   "build": {
    "model": "Claude Fable 5.1",
    "modelId": "claude-fable-5-1",
-   "passes": 3,
-   "date": "2026-10-21"
+   "date": "2026-10-21",
+   "run": {
+    "model": "Claude Opus",
+    "turns": 25,
+    "outputTokens": 21614,
+    "totalTokens": 684413,
+    "costUsd": 1.09,
+    "minutes": 3.9,
+    "score": 69
+   },
+   "hand": "two passes by hand from the clip's frames: edge tracks at 60 fps for the motion, then zoomed crops for materials and layout"
   },
   "hint": "Click a row to open it. Play the keys. Press on the body and drag down to pull the bellows, up to squeeze them, then let go.",
   "pattern": "**Keyframes hide the choreography.** A still is a moment when nothing moves, so matching every still proves nothing about the motion between them. Trace an edge per frame (the red body's top and bottom here) and the timeline reads straight off it: which parts move, in what order, how far, and whether the curve is a snap (ease-out), a settle (ease-in-out) or a cascade (one element after another). Build the timeline from those numbers first and the stills fall into place.\n\n**Two kinds of motion, read from the title.** Track something that should not move. The title drops 131 px when the rows are shut on load and 16 px per opened row, but 2 px on a pull: the page is one column centred in the viewport, so the intro and the row openings are layout (real height), while pulls and squeezes are transforms with the top edge pinned. Build it the same way: heights for what reflows, translateY plus a clip-path cut for what does not, and one 0/1 property that says which mode the bellows are in. The side-by-side with the heading in it catches this; a crop of the instrument alone never would.\n\n**One bellows value.** A single --b (0 closed, 1 rest, 2 pulled) drives row offset, cut, gap colour and fold size, so every part of the instrument breathes together, in the demo timeline and under the pointer alike."
