@@ -20,7 +20,7 @@ function unkey() {
 
 /* One flat brake on every key, whatever the plan: 30 requests a minute, enforced by Unkey at verification. It is not a
    tier, only protection against a looping agent; the plan's ceiling is the daily allowance counted in Redis (usage.ts). */
-const BRAKE = [{ name: "requests", limit: 30, duration: 60_000, autoApply: true }];
+const BRAKE = [{ name: "requests", limit: 60, duration: 60_000, autoApply: true }];
 const PLANS = new Set<Plan>(["starter", "pro", "team"]);
 
 export type Verified =

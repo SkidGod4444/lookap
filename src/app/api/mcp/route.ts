@@ -28,10 +28,13 @@ const REASONS: Record<string, string> = {
   NOT_FOUND: "got a key lookap does not recognise. Check it at /account, or get one at /pricing.",
   DISABLED: "got a key that is switched off. Manage it at /account.",
   EXPIRED: "got an expired key. Get a new one at /account.",
-  RATE_LIMITED: "is going too fast: more than 30 requests in a minute on this key. Wait a minute and continue; the daily allowance is unchanged.",
+  RATE_LIMITED: "is going too fast: more than 60 requests in a minute on this key, errors included. Pause 20 seconds, then continue at a steadier pace; retrying at once keeps the brake on. The daily allowance is unchanged.",
   USAGE_EXCEEDED: "has used up this key's credits for the period.",
   NOT_CONFIGURED: "cannot verify keys right now: the server has no Unkey configuration.",
 };
+/* an entry by its slug, or by its recipe's slug: both appear in replies (list_notes names recipes), so both resolve */
+const entryFor = (slug: string) => bySlug(slug) ?? ENTRIES.find((x) => recipeFor(x)?.slug === slug);
+
 const gated = (what: string, plan: Plan, reason?: string, needs = "a Pro or Max key") =>
   text({ error: plan === "none" ? `${what} ${REASONS[reason ?? "missing"] ?? REASONS.missing}` : `${what} needs ${needs}. Upgrade at /pricing.` });
 
@@ -125,7 +128,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     },
     async ({ slug }) => {
       if (plan === "none") return gated("get_design", plan, reason);
-      const e = bySlug(slug);
+      const e = entryFor(slug);
       if (!e) return text({ error: `No entry ${slug}` });
       const br = await touchEntry(keyRef, plan, e.slug);
       if (br && !br.ok) return tooWide(br);
@@ -136,7 +139,9 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       const rebuild = rb
         ? { finished: true, file: lim.source ? "get_rebuild" : "get_rebuild, on a Max key", measured: Boolean(recipe), live: `https://lookap.saidev.codes/feed/${e.slug}`, preview: fr?.preview ? `https://lookap.saidev.codes${fr.preview}` : null, built: rb.build.model }
         : { finished: false, how: recipe ? "get_recipe, then build" : "get_brief and look_at, then build" };
-      return text({ ...pub, recipe: recipe ? (lim.recipes ? recipe : { slug: recipe.slug, title: recipe.title, locked: true }) : null, rebuild });
+      const d = draftFor(e);
+      const frame = recipe ? { ...recipe.frame, from: "the measured recipe: build at this size" } : d ? { w: d.frame.w, h: d.frame.h, from: "the draft measurement: build at this size; media.w and media.h are the CDN rendition of the clip, smaller" } : null;
+      return text({ ...pub, frame, recipe: recipe ? (lim.recipes ? recipe : { slug: recipe.slug, title: recipe.title, locked: true }) : null, rebuild });
     },
   );
 
@@ -170,7 +175,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     },
     async ({ slug }) => {
       if (!lim.source) return gated("get_rebuild", plan, reason, "a Max key");
-      const e = bySlug(slug);
+      const e = entryFor(slug);
       const recipe = e ? recipeFor(e) : RECIPES.find((r) => r.slug === slug);
       const entry = e ?? ENTRIES.find((x) => recipe && recipeFor(x)?.slug === recipe.slug);
       const rb = entry ? rebuildFor(entry) : recipe ? { ...REBUILDS[recipe.slug], title: recipe.title, build: recipe.build } : null;
@@ -201,8 +206,8 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
 
   reg(
     "list_notes",
-    { title: "List design notes", description: "Guidance distilled from measured rebuilds: metal buttons, pressed badges, dark silver tokens, motion for stills, measuring from video. Needs a key.", annotations: ro },
-    async () => (plan === "none" ? gated("list_notes", plan, reason) : text(allNotes().map((n) => ({ slug: n.slug, title: n.title, from: n.from })))),
+    { title: "List design notes", description: "Every design note in full, one call: guidance distilled from the measured and factory rebuilds (materials, motion, how clips are read), each with the entries it came from. Notes past the plan's allowance come as titles only. Needs a key.", annotations: ro },
+    async () => (plan === "none" ? gated("list_notes", plan, reason) : text(allNotes().map((n, i) => (i < lim.notes ? n : { slug: n.slug, title: n.title, from: n.from, locked: true })))),
   );
 
   reg(
@@ -227,7 +232,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     },
     async ({ slug, limit }) => {
       if (plan === "none") return gated("similar_designs", plan, reason);
-      const e = bySlug(slug);
+      const e = entryFor(slug);
       if (!e) return text({ error: `No entry ${slug}` });
       const br = await touchEntry(keyRef, plan, e.slug);
       if (br && !br.ok) return tooWide(br);
@@ -245,7 +250,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     },
     async ({ slug }) => {
       if (plan === "none") return gated("get_brief", plan, reason);
-      const e = bySlug(slug);
+      const e = entryFor(slug);
       if (!e) return text({ error: `No entry ${slug}` });
       const br = await touchEntry(keyRef, plan, e.slug);
       if (br && !br.ok) return tooWide(br);
@@ -265,7 +270,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     },
     async ({ slug, at }) => {
       if (!lim.media) return gated("see_design", plan, reason);
-      const e = bySlug(slug);
+      const e = entryFor(slug);
       if (!e) return text({ error: `No entry ${slug}` });
       const br = await touchEntry(keyRef, plan, e.slug);
       if (br && !br.ok) return tooWide(br);
@@ -309,7 +314,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     },
     async ({ slug, what, at, box, col, row, from, to, image, span, cls }) => {
       if (!lim.media) return gated("look_at", plan, reason);
-      const e = bySlug(slug);
+      const e = entryFor(slug);
       if (!e) return text({ error: `No entry ${slug}` });
       const draft = draftFor(e);
       if (!draft) return text({ error: `${slug} has no clip to look at` });
@@ -376,7 +381,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
         }
         const out = await sharp({ create: { width: w * S * panels.length + 12 * (panels.length - 1), height: h * S, channels: 3, background: "#ff3b30" } })
           .composite(panels.map((pn, i) => ({ input: pn, left: i * (w * S + 12), top: 0 }))).png().toBuffer();
-        return { content: [{ type: "image" as const, data: out.toString("base64"), mimeType: "image/png" }, { type: "text" as const, text: JSON.stringify({ ...about, box: [x, y, w, h], scale: S, panels: image ? "the clip on the left, your render on the right" : "the clip", usage: u }, null, 2) }] };
+        return { content: [{ type: "image" as const, data: out.toString("base64"), mimeType: "image/png" }, { type: "text" as const, text: JSON.stringify({ ...about, box: [x, y, w, h], scale: S, panels: image ? "the clip on the left, your render on the right" : "the clip", mapping: `box is in ${W}x${H} frame pixels; the clip is read at ${meta.width}x${meta.height} and scaled to match`, usage: u }, null, 2) }] };
       }
       /* colors */
       if (col === undefined && row === undefined) return text({ error: "colors needs col (x) or row (y), with from and to" });
@@ -395,7 +400,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     "check_rebuild",
     {
       title: "Check a rebuild against the reference",
-      description: "Send a screenshot of your build (base64 PNG or JPEG, any size; it is resized to the frame) for an entry with a measured recipe. Returns a 0..100 score, the five elements whose mean colour differs most (reference vs yours), and the three grid regions that differ most with the elements under them. Use it after building, then fix the top differences and call again. Moving elements are only compared at the first keyframe. Paid.",
+      description: "Send a screenshot of your build (base64 PNG or JPEG, any size; it is resized to the frame) for any measured entry: a recipe, or a draft (every clip has one). Returns a 0..100 score, the five elements whose mean colour differs most (reference vs yours), and the three grid regions that differ most with the elements under them. Use it after building, then fix the top differences and call again. Moving elements are only compared at the first keyframe. Paid.",
       inputSchema: {
         slug: z.string(),
         image: z.string().describe("base64 of a PNG or JPEG screenshot of your build, cropped to the recipe's frame (its crop box when it has one)"),
@@ -405,7 +410,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     },
     async ({ slug, image, at }) => {
       if (!lim.media) return gated("check_rebuild", plan, reason);
-      const e = bySlug(slug);
+      const e = entryFor(slug);
       const recipe = e ? recipeFor(e) : undefined, draft = e && !recipe ? draftFor(e) : undefined;
       if (!e || (!recipe && !draft)) return text({ error: `No measurement for ${slug}`, measured: RECIPES.map((r) => r.slug) });
       const br = await touchEntry(keyRef, plan, e.slug);

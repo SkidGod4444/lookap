@@ -99,7 +99,7 @@ export const NOTES: Note[] = [
       "Trace mean luminance over the moving region per frame to get every transition's duration. Easing is still a judgement call.",
       "Render the rebuild headlessly beside the source frame and fix what differs. Stills miss motion defects, so capture the hover timeline too.",
     ],
-    from: ["id-card-reader-hover", "lamp-carriage-typewriter"],
+    from: ["qw9pku-skeuomorphic-privacy-data-vault", "35ihv-typewriter-writing-app"],
   },
   {
     slug: "machined-metal-buttons",
