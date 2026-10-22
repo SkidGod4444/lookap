@@ -16,9 +16,31 @@
                                                          reads as start time, end time, distance and shape. Track
                                                          something that should not move too (a heading): if it moves,
                                                          the page reflows and you copy the layout rule, not coordinates
+     bun scripts/probe.ts <slug> --diff 1.0,1.5           what moved between two moments: the clip at the first, at the
+                                                         second, and their difference amplified (white where pixels
+                                                         changed), written to factory/<slug>/diff/; the quickest way
+                                                         to see which thing moves and which only has something pass
+                                                         over it
      bun scripts/probe.ts <slug> --zoom x,y,w,h --t 1.0   that crop of the clip at 3x beside the same crop of your render
                                                          at that moment (from the checker's last run; run it with --at t
                                                          first), written to factory/<slug>/zoom/; the judge of materials
+     bun scripts/probe.ts <slug> --patch x,y,w,h --t 1.0 --as sky [--max 480] [--q 72]
+                                                         that crop of the clip as a small JPEG, written to
+                                                         factory/<slug>/patches/<name>.jpg and set into your file as
+                                                         --patch-<name>: url(data:...) in <style id="patches"> so you
+                                                         never retype base64; use it as background-image:
+                                                         var(--patch-sky). For textures that cannot be drawn (a
+                                                         painting, marble, a photo, fabric), cropped where nothing sits
+                                                         on them; never a block with its chrome or controls. A crop
+                                                         larger than 8% of the frame, or wider or taller than 40% of
+                                                         it, is refused unless factory/<slug>/licence.json says
+                                                         {"sampling": true}: a texture, never the whole picture
+     bun scripts/probe.ts <slug> --placeholder x,y,w,h --t 1.0 --as painting
+                                                         the dominant colours of that region as a coarse grid (cells of
+                                                         about 50 px, nothing finer), set into your file as
+                                                         --placeholder-<name>; the lawful stand-in for a photograph,
+                                                         painting or screenshot the rebuild may not copy: same box,
+                                                         same colour layout, no detail, marked as not reproduced
      bun scripts/probe.ts <slug> --drive "press 700,588; move 700,700; shot pulled; release; wait 400; shot sprung"
                                                          real pointer gestures on your page (no ?demo), screenshots to
                                                          factory/<slug>/drive/<name>.png: press, move, release, click,
@@ -32,18 +54,19 @@ import { fileURLToPath } from "node:url";
 import { tmpdir } from "node:os";
 import sharp from "sharp";
 import { bySlug } from "../src/lib/data";
-import { clipId } from "../src/lib/drafts";
+import { clipId, draftFor } from "../src/lib/drafts";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const args = process.argv.slice(2);
 const slug = args.find((a) => !a.startsWith("--"));
 const flag = (n: string) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : undefined; };
-if (!slug) { console.error("usage: bun scripts/probe.ts <slug> --sheet a,b | --col x --t t1,t2 [--hex a,b] | --row y --t t | --track x --from a --to b | --zoom x,y,w,h --t t | --drive \"...\""); process.exit(2); }
+if (!slug) { console.error("usage: bun scripts/probe.ts <slug> --sheet a,b | --col x --t t1,t2 [--hex a,b] | --row y --t t | --track x --from a --to b | --diff a,b | --zoom x,y,w,h --t t | --patch x,y,w,h --t t --as name | --placeholder x,y,w,h --t t --as name | --drive \"...\""); process.exit(2); }
 const e = bySlug(slug);
 const id = e && clipId(e);
 const clip = id ? path.join(ROOT, "measure", id, "source.mp4") : "";
 if (!e || !clip || !existsSync(clip)) { console.error(`no clip on disk for ${slug} (expected measure/<id>/source.mp4)`); process.exit(2); }
 const dir = path.join(ROOT, "factory", slug);
+const draft = draftFor(e);
 const html = path.resolve(ROOT, flag("--html") ?? `factory/${slug}/index.html`);
 
 const probe = spawnSync("ffprobe", ["-v", "error", "-select_streams", "v", "-show_entries", "stream=width,height,r_frame_rate,duration", "-of", "csv=p=0", clip], { encoding: "utf8" }).stdout.trim().split(",");
@@ -111,6 +134,38 @@ if (flag("--sheet")) {
   }
   console.log(`${what} in column x=${x}, ${from}s to ${to}s at ${FPS} fps; only frames where the edges moved:`);
   console.log(lines.join("\n"));
+} else if (flag("--diff")) {
+  /* two moments and what changed between them, cropped to the content so small subjects read: the difference is
+     amplified, so a thing that moves reads white and a thing that stays reads black */
+  const [a, b] = flag("--diff")!.split(",").map(Number);
+  if (![a, b].every(Number.isFinite)) { console.error("--diff needs two times a,b"); process.exit(2); }
+  const out = path.join(dir, "diff", `${a}-${b}.png`);
+  mkdirSync(path.dirname(out), { recursive: true });
+  const [fa, fb] = [frameAt(a), frameAt(b)];
+  const [ra, rb] = await Promise.all([fa, fb].map((f) => sharp(f).removeAlpha().raw().toBuffer()));
+  /* the content box: everything that is not the frame's background colour in either frame, plus everything that changed */
+  const bgc = [1, 3, 5].map((i) => parseInt((draft?.background ?? "#ffffff").slice(i, i + 2), 16));
+  let x0 = W, y0 = H, x1 = -1, y1 = -1, n = 0;
+  const d = Buffer.alloc(ra.length);
+  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
+    const i = (y * W + x) * 3;
+    const v = Math.min(255, (Math.abs(ra[i] - rb[i]) + Math.abs(ra[i + 1] - rb[i + 1]) + Math.abs(ra[i + 2] - rb[i + 2])) * 2);
+    d[i] = d[i + 1] = d[i + 2] = v;
+    const content = v > 60 || Math.abs(ra[i] - bgc[0]) + Math.abs(ra[i + 1] - bgc[1]) + Math.abs(ra[i + 2] - bgc[2]) > 96;
+    if (v > 60) n++;
+    if (content) { if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y; }
+  }
+  if (x1 < 0) { x0 = 0; y0 = 0; x1 = W - 1; y1 = H - 1; }
+  const pad = 16, cx = Math.max(0, x0 - pad), cy = Math.max(0, y0 - pad), cw = Math.min(W - cx, x1 - x0 + 1 + 2 * pad), ch = Math.min(H - cy, y1 - y0 + 1 + 2 * pad);
+  const S = Math.max(0.25, Math.min(2, 600 / cw, 900 / ch));
+  const sw = Math.round(cw * S), sh = Math.round(ch * S);
+  const panels = await Promise.all([ra, rb, d].map((buf) => sharp(buf, { raw: { width: W, height: H, channels: 3 } }).extract({ left: cx, top: cy, width: cw, height: ch }).resize(sw, sh, { kernel: "lanczos3" }).png().toBuffer()));
+  await sharp({ create: { width: sw * 3 + 24, height: sh, channels: 3, background: "#ff3b30" } })
+    .composite(panels.map((p, i) => ({ input: p, left: i * (sw + 12), top: 0 }))).png().toFile(out);
+  /* where the change is, in frame px, so the reader can name the moving thing */
+  let dx0 = W, dy0 = H, dx1 = -1, dy1 = -1;
+  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) if (d[(y * W + x) * 3] > 60) { if (x < dx0) dx0 = x; if (x > dx1) dx1 = x; if (y < dy0) dy0 = y; if (y > dy1) dy1 = y; }
+  console.log(`${path.relative(ROOT, out)}: the clip at ${a}s, at ${b}s, and what changed (white = changed), cropped to [${cx},${cy},${cw},${ch}] of the frame at ${S.toFixed(2)}x. ${n ? `${((100 * n) / (W * H)).toFixed(1)}% of the frame changed, inside [${dx0},${dy0},${dx1 - dx0 + 1},${dy1 - dy0 + 1}] in frame px.` : "Nothing changed."} Read it: the white shapes are the things that move; a region that is white only along an edge had something pass over it; a thing that stays black does not move even if the draft's motion rows say it does.`);
 } else if (flag("--zoom")) {
   /* the clip's crop and the render's crop at 3x, side by side: the thing the score cannot tell you */
   const [x, y, w, h] = flag("--zoom")!.split(",").map(Number);
@@ -128,6 +183,75 @@ if (flag("--sheet")) {
   await sharp({ create: { width: (w * S) * panels.length + 12 * (panels.length - 1), height: h * S, channels: 3, background: "#ff3b30" } })
     .composite(panels.map((p, i) => ({ input: p, left: i * (w * S + 12), top: 0 }))).png().toFile(out);
   console.log(`${path.relative(ROOT, out)}: the clip at ${t}s on the left, ${mine ? "your render on the right" : "no render of yours at that moment (run the checker with --at " + t + " first)"}, ${S}x. Read it and name what differs: edges, radii, gradients, shadows, gaps.`);
+} else if (flag("--patch")) {
+  /* a texture from the clip, as a JPEG the file can carry: written to patches/ and, with --as, set into the HTML as a
+     custom property, so the agent never spends its output on base64 */
+  const [x, y, w, h] = flag("--patch")!.split(",").map(Number);
+  const t = times[0];
+  if (!Number.isFinite(t)) { console.error("--patch needs --t <time>"); process.exit(2); }
+  if (![x, y, w, h].every(Number.isFinite) || w < 1 || h < 1 || x < 0 || y < 0 || x + w > W || y + h > H) { console.error(`--patch box must sit inside the ${W}x${H} frame`); process.exit(2); }
+  const licence = path.join(dir, "licence.json");
+  const licensed = existsSync(licence) && Boolean((JSON.parse(readFileSync(licence, "utf8")) as { sampling?: boolean }).sampling);
+  if (!licensed && ((w * h) / (W * H) > 0.08 || w > 0.4 * W || h > 0.4 * H)) {
+    console.error(`--patch refused: ${w}x${h} is ${((100 * w * h) / (W * H)).toFixed(1)}% of the ${W}x${H} frame (${w > 0.4 * W ? "wider" : h > 0.4 * H ? "taller" : "larger"} than the limit). A patch is a texture, never the whole picture: crop a tile of the material where nothing sits on it (under 8% of the frame, under 40% of its width and height) and tile or stretch it yourself. For a photograph, painting or screenshot that cannot be tiled, use --placeholder ${x},${y},${w},${h} --t ${t} --as <name> instead: the same box with its colour layout and no detail, marked as not reproduced. Sampling the whole thing needs ${path.relative(ROOT, licence)} with {"sampling": true}, which only the maintainer writes after the designer agrees.`);
+    process.exit(2);
+  }
+  const name = (flag("--as") ?? `${t}s-${x}-${y}`).replace(/[^a-z0-9-]/gi, "-").toLowerCase();
+  const max = Number(flag("--max") ?? 480), q = Number(flag("--q") ?? 72);
+  const scale = Math.min(1, max / Math.max(w, h));
+  const jpg = await sharp(frameAt(t)).extract({ left: x, top: y, width: w, height: h })
+    .resize(Math.max(1, Math.round(w * scale)), Math.max(1, Math.round(h * scale)), { kernel: "lanczos3" }).jpeg({ quality: q, mozjpeg: true }).toBuffer();
+  const out = path.join(dir, "patches", `${name}.jpg`);
+  mkdirSync(path.dirname(out), { recursive: true });
+  writeFileSync(out, jpg);
+  const uri = `data:image/jpeg;base64,${jpg.toString("base64")}`;
+  const kb = (jpg.length / 1024).toFixed(1);
+  if (flag("--as")) {
+    if (!existsSync(html)) { console.error(`no file at ${html} to set the patch into; write the file first`); process.exit(2); }
+    let doc = readFileSync(html, "utf8");
+    const line = `  --patch-${name}: url("${uri}"); /* ${w}x${h} of the clip at ${t}s from ${x},${y}, ${kb} KB */`;
+    const block = /<style id="patches">\n:root \{\n([\s\S]*?)\}\n<\/style>/;
+    const m = doc.match(block);
+    if (m) {
+      const lines = m[1].split("\n").filter((l) => l.trim() && !l.includes(`--patch-${name}:`));
+      doc = doc.replace(block, `<style id="patches">\n:root {\n${[...lines, line].join("\n")}\n}\n</style>`);
+    } else if (doc.includes("</head>")) {
+      doc = doc.replace("</head>", `<style id="patches">\n:root {\n${line}\n}\n</style>\n</head>`);
+    } else { console.error("no </head> in the file to put the patches block before"); process.exit(2); }
+    writeFileSync(html, doc);
+    console.log(`${path.relative(ROOT, out)}: ${w}x${h} of the clip at ${t}s, ${kb} KB, set in ${path.relative(ROOT, html)} as --patch-${name}. Use it: background-image: var(--patch-${name}); background-size: cover (or repeat for a tile). Read the .jpg once to confirm it holds only the texture. Say in the header comment and NOTES.md what was sampled and from where.`);
+  } else {
+    console.log(`${path.relative(ROOT, out)}: ${w}x${h} of the clip at ${t}s, ${kb} KB. Re-run with --as <name> to set it into your file as --patch-<name> (do not retype the base64 yourself).`);
+  }
+} else if (flag("--placeholder")) {
+  /* a region's colour layout at a coarse grain: the stand-in for imagery the rebuild may not copy. Cells of about
+     50 px, so a painting becomes its palette in place and nothing a person would call the painting */
+  const [x, y, w, h] = flag("--placeholder")!.split(",").map(Number);
+  const t = times[0];
+  if (!Number.isFinite(t)) { console.error("--placeholder needs --t <time>"); process.exit(2); }
+  if (![x, y, w, h].every(Number.isFinite) || w < 1 || h < 1 || x < 0 || y < 0 || x + w > W || y + h > H) { console.error(`--placeholder box must sit inside the ${W}x${H} frame`); process.exit(2); }
+  const name = (flag("--as") ?? `${t}s-${x}-${y}`).replace(/[^a-z0-9-]/gi, "-").toLowerCase();
+  const cols = Math.max(2, Math.min(8, Math.round(w / 50))), rows = Math.max(2, Math.min(14, Math.round(h / 50)));
+  const png = await sharp(frameAt(t)).extract({ left: x, top: y, width: w, height: h }).resize(cols, rows, { kernel: "lanczos3", fit: "fill" }).png().toBuffer();
+  const out = path.join(dir, "patches", `${name}.placeholder.png`);
+  mkdirSync(path.dirname(out), { recursive: true });
+  writeFileSync(out, png);
+  const uri = `data:image/png;base64,${png.toString("base64")}`;
+  const line = `  --placeholder-${name}: url("${uri}"); /* ${cols}x${rows} colour grid of the ${w}x${h} region at ${x},${y} (clip at ${t}s): a stand-in, not the picture */`;
+  if (flag("--as")) {
+    if (!existsSync(html)) { console.error(`no file at ${html} to set the placeholder into; write the file first`); process.exit(2); }
+    let doc = readFileSync(html, "utf8");
+    const block = /<style id="patches">\n:root \{\n([\s\S]*?)\}\n<\/style>/;
+    const m = doc.match(block);
+    if (m) {
+      const lines = m[1].split("\n").filter((l) => l.trim() && !l.includes(`--placeholder-${name}:`));
+      doc = doc.replace(block, `<style id="patches">\n:root {\n${[...lines, line].join("\n")}\n}\n</style>`);
+    } else if (doc.includes("</head>")) {
+      doc = doc.replace("</head>", `<style id="patches">\n:root {\n${line}\n}\n</style>\n</head>`);
+    } else { console.error("no </head> in the file to put the patches block before"); process.exit(2); }
+    writeFileSync(html, doc);
+  }
+  console.log(`${path.relative(ROOT, out)}: ${cols}x${rows} colour grid of ${w}x${h} at ${x},${y}, ${png.length} bytes${flag("--as") ? `, set in ${path.relative(ROOT, html)} as --placeholder-${name}` : " (re-run with --as <name> to set it into your file)"}. Use it on the element that stands where the picture was: background: var(--placeholder-${name}) center / 100% 100% no-repeat; add filter: blur(calc(6 * var(--u))) or a grain overlay if the clip's region reads soft or textured, and put data-imagery="not reproduced: <what the clip shows>" on that element. Draw everything that sits on the picture (text, controls, glass, rings) yourself.`);
 } else if (flag("--drive")) {
   /* real pointer gestures on the page as a person would make them; screenshots in between */
   if (!existsSync(html)) { console.error(`no file at ${html}`); process.exit(2); }
