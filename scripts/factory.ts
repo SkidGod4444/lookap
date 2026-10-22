@@ -6,7 +6,7 @@
    is no score to reach: a number was what the old loop stopped at while the result looked wrong.
 
      bun --conditions=react-server scripts/factory.ts [--top 20] [--slug <slug>]... [--rounds 3] [--budget 4]
-                                                      [--model fable] [--judge-model sonnet] [--judge-votes 3] [--rubric-model opus]
+                                                      [--model opus] [--judge-model sonnet] [--judge-votes 3] [--rubric-model opus]
                                                       [--force] [--pr] [--dry]
 
    Queue: --slug entries, or the top N by demand (src/lib/demand.ts) that have a draft and no recipe, skipping entries
@@ -43,7 +43,7 @@ const slugs = args.flatMap((a, i) => (a === "--slug" ? [args[i + 1]] : []));
 const TOP = Number(flag("--top", "20"));
 const ROUNDS = Number(flag("--rounds", "3"));
 const BUDGET = flag("--budget", "4");
-const MODEL = flag("--model", "fable");
+const MODEL = flag("--model", "opus"); /* Opus 5.5 builds; the judge stays on sonnet so the judge is never the builder */
 const JUDGE_MODEL = flag("--judge-model", "sonnet"), RUBRIC_MODEL = flag("--rubric-model", "opus"), VOTES = flag("--judge-votes", "3");
 const FORCE = has("--force"), PR = has("--pr"), DRY = has("--dry");
 const CHECK = "bun --conditions=react-server scripts/check-build.ts";
