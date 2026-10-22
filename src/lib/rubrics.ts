@@ -17,9 +17,10 @@ export const RUBRICS = rubrics as unknown as Record<string, EntryRubric>;
 export const rubricFor = (e: Entry): EntryRubric | undefined => RUBRICS[e.slug];
 
 /* the rule for each imagery class: what a rebuild does with a pictorial region */
-export const IMAGERY_RULE: Record<ImageryClass, string> = {
+export const IMAGERY_RULE: Record<ImageryClass | "licensed", string> = {
   css: "drawn: CSS or inline SVG, exact to the crops (gradients, rings, glass, lenses, spinners, shadows, text art are all drawable)",
   structured: "an original SVG with the same silhouette, weight and colours, judged on silhouette and colour rather than pixels",
-  photo: "not copied from the clip: a placeholder of the same box and colour layout with no detail, softened or grained to the clip's look, carrying data-imagery=\"not reproduced: <what the clip shows>\"; everything that sits on it (text, controls, glass) is drawn. Sampling the picture itself needs the designer's licence, recorded on the entry",
+  photo: "this designer declined sampling: a placeholder of the same box and colour layout with no detail, softened or grained to the clip's look, carrying data-imagery=\"not reproduced: <what the clip shows>\"; everything that sits on it (text, controls, glass) is drawn",
+  licensed: "licensed (the default for every entry): the picture is taken from the clip itself, from a frame where nothing moving covers it, cropped free of UI, text and controls, which are drawn; the file's header says what was sampled and from which frame",
 };
-export const SAMPLING_RULE = "A texture that is not UI and cannot be drawn (marble, wood, fabric, grain) may be sampled from the clip as a tile, cropped where nothing sits on it and tiled or stretched by you: a texture, never the whole picture. A photograph, painting or screenshot is a photo-class region and follows its rule. Say in the file's header what was sampled or stood in, and from which frame.";
+export const SAMPLING_RULE = "Every entry is licensed for sampling unless its brief says the designer declined. A texture (marble, wood, fabric, grain) is sampled as a tile and repeated; a photograph, painting or screenshot is sampled whole from a frame where nothing moving covers it; UI, text and controls are never pasted, they are drawn. Say in the file's header what was sampled and from which frame.";

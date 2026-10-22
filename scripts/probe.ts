@@ -31,10 +31,11 @@
                                                          never retype base64; use it as background-image:
                                                          var(--patch-sky). For textures that cannot be drawn (a
                                                          painting, marble, a photo, fabric), cropped where nothing sits
-                                                         on them; never a block with its chrome or controls. A crop
-                                                         larger than 8% of the frame, or wider or taller than 40% of
-                                                         it, is refused unless factory/<slug>/licence.json says
-                                                         {"sampling": true}: a texture, never the whole picture
+                                                         on them; never a block with its chrome or controls. Every
+                                                         entry is licensed for sampling unless factory/<slug>/
+                                                         licence.json says {"sampling": false}; for one that is not, a
+                                                         crop over 8% of the frame or over 40% of its width or height
+                                                         is refused: a texture, never the whole picture
      bun scripts/probe.ts <slug> --placeholder x,y,w,h --t 1.0 --as painting
                                                          the dominant colours of that region as a coarse grid (cells of
                                                          about 50 px, nothing finer), set into your file as
@@ -55,6 +56,7 @@ import { tmpdir } from "node:os";
 import sharp from "sharp";
 import { bySlug } from "../src/lib/data";
 import { clipId, draftFor } from "../src/lib/drafts";
+import { isLicensed } from "../src/lib/licence";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const args = process.argv.slice(2);
@@ -190,10 +192,9 @@ if (flag("--sheet")) {
   const t = times[0];
   if (!Number.isFinite(t)) { console.error("--patch needs --t <time>"); process.exit(2); }
   if (![x, y, w, h].every(Number.isFinite) || w < 1 || h < 1 || x < 0 || y < 0 || x + w > W || y + h > H) { console.error(`--patch box must sit inside the ${W}x${H} frame`); process.exit(2); }
-  const licence = path.join(dir, "licence.json");
-  const licensed = existsSync(licence) && Boolean((JSON.parse(readFileSync(licence, "utf8")) as { sampling?: boolean }).sampling);
+  const licensed = isLicensed(dir);
   if (!licensed && ((w * h) / (W * H) > 0.08 || w > 0.4 * W || h > 0.4 * H)) {
-    console.error(`--patch refused: ${w}x${h} is ${((100 * w * h) / (W * H)).toFixed(1)}% of the ${W}x${H} frame (${w > 0.4 * W ? "wider" : h > 0.4 * H ? "taller" : "larger"} than the limit). A patch is a texture, never the whole picture: crop a tile of the material where nothing sits on it (under 8% of the frame, under 40% of its width and height) and tile or stretch it yourself. For a photograph, painting or screenshot that cannot be tiled, use --placeholder ${x},${y},${w},${h} --t ${t} --as <name> instead: the same box with its colour layout and no detail, marked as not reproduced. Sampling the whole thing needs ${path.relative(ROOT, licence)} with {"sampling": true}, which only the maintainer writes after the designer agrees.`);
+    console.error(`--patch refused: ${w}x${h} is ${((100 * w * h) / (W * H)).toFixed(1)}% of the ${W}x${H} frame (${w > 0.4 * W ? "wider" : h > 0.4 * H ? "taller" : "larger"} than the limit). This entry's designer has not licensed sampling (factory/${slug}/licence.json says so), so a patch is a texture, never the whole picture: crop a tile of the material where nothing sits on it (under 8% of the frame, under 40% of its width and height) and tile or stretch it yourself. For a photograph, painting or screenshot that cannot be tiled, use --placeholder ${x},${y},${w},${h} --t ${t} --as <name> instead: the same box with its colour layout and no detail, marked as not reproduced.`);
     process.exit(2);
   }
   const name = (flag("--as") ?? `${t}s-${x}-${y}`).replace(/[^a-z0-9-]/gi, "-").toLowerCase();

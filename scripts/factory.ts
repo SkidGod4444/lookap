@@ -34,6 +34,7 @@ import { briefFor, recipeFor } from "../src/lib/registry";
 import { draftFor } from "../src/lib/drafts";
 import { topDemand } from "../src/lib/demand";
 import type { Rubric } from "./rubric";
+import { isLicensed } from "../src/lib/licence";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const args = process.argv.slice(2);
@@ -76,7 +77,8 @@ type VerdictFile = {
 const POLICY = {
   css: "draw it: CSS or inline SVG, exact to the crops (gradients, rings, glass, lenses, spinners, shadows, text art are all drawable)",
   structured: "draw an original SVG with the same silhouette, weight and colours; it is judged on silhouette and colour, not pixels",
-  photo: "do not copy the clip's pixels. Stand it in with `--placeholder x,y,w,h --t t --as name` (a coarse colour grid of the region: same box, same colour layout, no detail), blur or grain it to the clip's softness, put data-imagery=\"not reproduced: <what the clip shows>\" on that element, and draw everything that sits on it yourself. --patch refuses anything bigger than a texture tile without a licence file",
+  photo: "this designer has not licensed sampling: do not copy the clip's pixels. Stand it in with `--placeholder x,y,w,h --t t --as name` (a coarse colour grid of the region: same box, same colour layout, no detail), blur or grain it to the clip's softness, put data-imagery=\"not reproduced: <what the clip shows>\" on that element, and draw everything that sits on it yourself. --patch refuses anything bigger than a texture tile for this entry",
+  licensed: "licensed: take it from the clip with --patch at a moment when nothing moving covers it (a tile to repeat, or the whole region as one patch; keep it under 120 KB and crop out any UI, text or controls, which you draw), then name what was sampled and from which frame in the header comment and NOTES.md. When something moving passes over it, sample from the frame where it is clear, or several frames stitched",
 } as const;
 
 function prompt(e: Entry, dir: string, rubric: Rubric | null, licensed: boolean) {
@@ -85,7 +87,7 @@ function prompt(e: Entry, dir: string, rubric: Rubric | null, licensed: boolean)
   const rel = path.relative(ROOT, dir);
   const criteria = rubric ? rubric.criteria.map((c) => `  ${c.id} [${c.axis}, ${c.element}] ${c.check}${c.then == null ? ` (look at ${c.at}s)` : ` (compare ${c.at}s with ${c.then}s)`}`).join("\n") : "  (no rubric: judge by the crops)";
   const imagery = rubric && rubric.imagery.length
-    ? rubric.imagery.map((m) => `  - ${m.name} [${m.box.join(",")}] is ${m.class}: ${m.what}. Rule: ${m.class === "photo" && licensed ? "licensed by the designer for this entry: --patch may sample it; say so in the header comment" : POLICY[m.class]}`).join("\n")
+    ? rubric.imagery.map((m) => `  - ${m.name} [${m.box.join(",")}] is ${m.class}: ${m.what}. Rule: ${m.class === "photo" && licensed ? POLICY.licensed : POLICY[m.class]}`).join("\n")
     : "  - nothing pictorial was found; everything is UI and is drawn";
   return `Rebuild the lookap entry "${e.title}" by ${e.authorName} as one self-contained HTML file at ${rel}/index.html.
 
@@ -123,14 +125,14 @@ How to look (this is where rebuilds go wrong)
 - Track something that should not move. Run --track through the heading with --class dark over the whole clip. If the heading moves when a panel opens or the thing enters, the page is a centred column that reflows, and you copy that layout rule rather than absolute coordinates. If it does not move during a drag, that gesture is a transform, not layout.
 - Zoom before you draw. For every surface, --zoom a 150 x 130 crop of its edge at the rest moment and read it: how thick is the edge, what colour, is there a gap behind it, which side is lit. Then --hex a column through it for the real numbers.
 - Materials are part of the design: a glass ring refracts what is behind it at its rim (the background shifts and a highlight runs along the edge), it is not an outline; a frosted panel shows the picture through it; rims, bevels, inner highlights, the lip under a key, the shade inside a fold. Draw what the crop shows, not what a component library would do.
-- Known ways rebuilds fail, in order of how often: a lens or glass drawn as a stroked outline; type dimmer, lighter or a different weight than the clip's; a texture as a flat gradient where the clip has grain; a seam where a patch tiles; a page that does not move while the clip does (the checker says STATIC); a wrong count (spokes, dots, rows, rings); the wrong thing moving (the background drifting when it is the rings that grow); timing read from the stills instead of tracked.
+- Known ways rebuilds fail, in order of how often: a water ripple or lens drawn as hard concentric rings or a stroked outline, where the clip shows the picture beneath bending softly with a faint crest (build it as displacement or magnification of the background with soft falloff, never as a drawn ring); type dimmer, lighter or a different weight than the clip's; a texture as a flat gradient where the clip has grain; a seam where a patch tiles; a page that does not move while the clip does (the checker says STATIC); a wrong count (spokes, dots, rows, rings); the wrong thing moving (the background drifting when it is the rings that grow); timing read from the stills instead of tracked.
 - Interaction is the design. Whatever the clip's cursor does (hover, click, press, drag) the page must do for a real pointer, with the same response and timing. Test with --drive and Read the screenshots.
 
 Rules for the file
 - The page is exactly the frame: html and body margin 0, overflow hidden, a #stage of ${draft.frame.w} x ${draft.frame.h} px, background ${draft.background}. Set --u: 1px on #stage and write every size as calc(N * var(--u)). Nothing outside the stage.
 - Place elements from the keyframes and crops you looked at. The draft boxes are a first pass and the rubric boxes a second: trust your eyes over both. Fills from --hex, exact. Match proportion and hierarchy first, then colour, then motion.
 - Demo mode for the checker: when the URL has ?demo=1 the page replays the clip's sequence on the clip's own timeline (animation-delay for when each move starts, duration and distance from draft.phases, draft.motion and your own probing) as CSS animations or element.animate calls created at load, so the state at t seconds matches the clip at t and the checker can seek it. Without ?demo the page only answers the pointer (a load-time entrance is fine if the clip has one). No JS timers for the timeline. Respect prefers-reduced-motion.
-- Sampling: a texture that is not UI and cannot be drawn (marble, wood, fabric, grain) is taken from the clip with --patch as a tile, cropped where nothing sits on it, at a moment when it is at rest, and tiled, stretched or layered by you; keep each under 60 KB. A texture, never the whole picture: a photograph, painting or screenshot is a photo-class region and follows its rule above. Say in the header comment and in NOTES.md exactly what was sampled or stood in, and from which frame.
+- Sampling: a texture that is not UI and cannot be drawn (marble, wood, fabric, grain) is taken from the clip with --patch as a tile, cropped where nothing sits on it, at a moment when it is at rest, and tiled, stretched or layered by you; keep each under 60 KB. A photograph, painting or screenshot is a photo-class region and follows its rule above${licensed ? " (this entry is licensed: the picture itself may be sampled)" : ""}. Never paste a block with its chrome, text or controls: those you draw. Say in the header comment and in NOTES.md exactly what was sampled or stood in, and from which frame.
 - Fonts only from Google Fonts through a <link>; no other network. Credit the designer in a comment at the top with the source link from brief.json. Keep the file under 500 lines.
 
 Loop
@@ -170,7 +172,7 @@ for (const e of queue) {
   const rubricPath = path.join(dir, "rubric.json");
   if (!existsSync(rubricPath)) { const r = bun("scripts/rubric.ts", [e.slug, "--model", RUBRIC_MODEL]); process.stdout.write(r.stdout); if (r.status !== 0) console.error(r.stderr.slice(-800)); }
   const rubric: Rubric | null = existsSync(rubricPath) ? (JSON.parse(readFileSync(rubricPath, "utf8")) as Rubric) : null;
-  const licensed = existsSync(path.join(dir, "licence.json")) && Boolean((JSON.parse(readFileSync(path.join(dir, "licence.json"), "utf8")) as { sampling?: boolean }).sampling);
+  const licensed = isLicensed(dir);
   const base = prompt(e, dir, rubric, licensed);
   writeFileSync(path.join(dir, "PROMPT.md"), base);
   if (DRY) { console.log(`${e.slug}: brief, rubric and prompt written`); continue; }
@@ -230,7 +232,7 @@ for (const e of queue) {
     bucket, ended, bestRound: best?.round ?? null, rank: v?.rank ?? null, allPass: v?.allPass ?? false,
     rubric: v?.rubric ? { pass: v.rubric.pass, fail: v.rubric.fail, unsure: v.rubric.unsure, of: v.rubric.counted, failed: v.rubric.criteria.filter((c) => c.pass === "no" && !c.policy).map((c) => `${c.id} ${c.check}`) } : null,
     score: v?.pixel.score ?? null, motion: v?.motion.read ?? null,
-    imagery: (rubric?.imagery ?? []).map((m) => ({ name: m.name, class: m.class, box: m.box, reproduced: m.class !== "photo" || licensed, how: m.class === "photo" ? (licensed ? "sampled under licence" : "placeholder by policy") : m.class === "structured" ? "original SVG" : "drawn" })),
+    imagery: (rubric?.imagery ?? []).map((m) => ({ name: m.name, class: m.class, box: m.box, reproduced: m.class !== "photo" || licensed, how: m.class === "photo" ? (licensed ? "sampled under licence" : "placeholder: designer declined sampling") : m.class === "structured" ? "original SVG" : "drawn" })),
     rounds: roundRows, minutes,
     cost: { codingUsd: Number(codingUsd.toFixed(2)), judgeUsd: Number(judgeUsd.toFixed(2)), rubricUsd, totalUsd: Number((codingUsd + judgeUsd + rubricUsd).toFixed(2)) },
     notes: existsSync(path.join(dir, "NOTES.md")), at: new Date().toISOString(),

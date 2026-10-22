@@ -33,6 +33,7 @@ import { recipeFor } from "../src/lib/registry";
 import { clipId, draftFor } from "../src/lib/drafts";
 import { bestShift, changedArea as changed, compareBuild, contentBox, deltaE76, mean, motionRead as readMotion, raw } from "../src/lib/compare";
 import { JUDGE_INSTRUCTION, JUDGE_SCHEMA, judgeBox, judgeScale, judgeTile } from "../src/lib/judge";
+import { isLicensed } from "../src/lib/licence";
 import { openPage, sleep } from "./chrome";
 import type { Rubric, Criterion } from "./rubric";
 
@@ -60,7 +61,7 @@ const W = frame.crop ? frame.crop[2] : frame.w, H = frame.crop ? frame.crop[3] :
 type Box = [number, number, number, number];
 const rubricPath = path.join(ROOT, "factory", slug, "rubric.json");
 const rubric: Rubric | null = existsSync(rubricPath) ? (JSON.parse(readFileSync(rubricPath, "utf8")) as Rubric) : null;
-const licensed = existsSync(path.join(ROOT, "factory", slug, "licence.json")) && Boolean((JSON.parse(readFileSync(path.join(ROOT, "factory", slug, "licence.json"), "utf8")) as { sampling?: boolean }).sampling);
+const licensed = isLicensed(path.join(ROOT, "factory", slug));
 if (JUDGE && !rubric) console.error(`no rubric at ${path.relative(ROOT, rubricPath)}: run scripts/rubric.ts ${slug} first; judging skipped`);
 
 /* the moments to score: the keyframes, then mid-phase, rubric and --at moments pulled from the clip when it is here */
@@ -257,7 +258,7 @@ if (judge) {
   console.log(`verdict: ${allPass ? "PASS" : "not yet"}. rubric ${passed.length}/${counted.length} pass, ${failed.length} fail, ${unsure.length} unsure${unjudged.length ? `, ${unjudged.length} not judged` : ""}${policyRows.length ? ` (+${policyRows.length} on photo-class imagery, by policy, not counted)` : ""}; pixel ${score}; motion: ${motionRead}; judge ${judge.model} $${judge.costUsd} in ${judge.calls} call${judge.calls === 1 ? "" : "s"}${judge.votes > 1 ? `, ${judge.votes} votes, yes-counts per vote ${judge.spread.join("/")}` : ""} (run ${result.runs})`);
   for (const c of failed) console.log(`  FAIL ${c.id} [${c.axis}] ${c.element}: ${c.check}\n       seen: ${c.verdict!.seen}\n       ${verdict.rubric!.criteria.find((x) => x.id === c.id)!.image}  |  ${zoom(c)}`);
   for (const c of unsure) console.log(`  ?    ${c.id} [${c.axis}] ${c.element}: ${c.check}\n       seen: ${c.verdict!.seen}  |  ${zoom(c)}`);
-  for (const c of policyRows) console.log(`  photo-class, by policy${licensed ? " (licensed: counts as judged)" : " (no licence.json: a placeholder of the box and palette is the rule)"}: ${c.id} ${c.verdict?.pass ?? "-"}: ${c.check}`);
+  for (const c of policyRows) console.log(`  photo-class, by policy (this designer has not licensed sampling: a placeholder of the box and palette is the rule): ${c.id} ${c.verdict?.pass ?? "-"}: ${c.check}`);
 } else {
   console.log(`score ${score} over ${rows.length} moments: ${stills.length} stills ${avg(stills)}${moving.length ? `, ${moving.length} mid-motion ${avg(moving)}` : " (no clip on disk, so no mid-motion moments)"} (run ${result.runs}); ${animations} animation${animations === 1 ? "" : "s"} on the page${animations ? "" : ": nothing to seek, every moment shows the load state"}; motion: ${motionRead}${rubric ? `; rubric: ${rubric.criteria.length} criteria in ${path.relative(ROOT, rubricPath)} (the orchestrator judges them with --judge; read them and check each by eye)` : ""}`);
 }
