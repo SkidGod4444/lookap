@@ -1,0 +1,16 @@
+{
+ "model": "Claude Fable 5.1",
+ "modelId": "claude-fable-5-1",
+ "date": "2026-10-23",
+ "run": {
+  "model": "Claude Fable 5.1",
+  "turns": 54,
+  "outputTokens": 50574,
+  "totalTokens": 2060428,
+  "costUsd": 6.5,
+  "minutes": 13.3,
+  "score": 90
+ },
+ "hand": "finished by hand from the clip: the painting as a temporal-median plate of the phone region (the ripples move, so the median is the painting with no ripple in it), the static UI painted out of it, the ripples rebuilt as fisheye lenses measured as frame minus plate by radius (birth every 2 s, 53 px/s, a 4 px dark lip), the spinner, copy and pill measured to the pixel; then judged against the entry's rubric with three votes",
+ "hint": "Watch the ripples spread from the spinner across the painting. Hover and press Get Started."
+}

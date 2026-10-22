@@ -1,0 +1,414 @@
+{
+ "slug": "i61wwn-painterly-finance-app-onboarding",
+ "title": "Painterly Finance App Onboarding",
+ "measured": false,
+ "recipe": null,
+ "what": "A mobile finance app splash screen layering a classical painting texture over glassmorphism, with a minimal spinner and pill CTA for budgeting copy.",
+ "frame": {
+  "ratio": 1.508,
+  "shape": "landscape",
+  "media": "clip"
+ },
+ "tone": "light surface, dark type",
+ "traits": [
+  "Onboarding",
+  "Mobile",
+  "Glass"
+ ],
+ "section": "Interface",
+ "steps": [
+  "Call see_design for the frame and read the layout from it: regions, alignment, type scale, corner radii, spacing rhythm.",
+  "The media is a clip: name each state you can see (rest, hover, press, open) and the order they occur in.",
+  "Build with the project's own stack and tokens; match proportion and hierarchy before matching pixels.",
+  "A draft measurement is attached: its phases, moves and palette are measured from the clip; its boxes are a first pass to check against the keyframes."
+ ],
+ "draft": {
+  "frame": {
+   "w": 1628,
+   "h": 1080
+  },
+  "duration": 24.18,
+  "phases": [
+   [
+    11.95,
+    11.95
+   ],
+   [
+    24,
+    24
+   ]
+  ],
+  "keyframes": [
+   {
+    "name": "kf1",
+    "at": 5.95,
+    "hold": [
+     0,
+     11.9
+    ]
+   },
+   {
+    "name": "kf2",
+    "at": 18,
+    "hold": [
+     12,
+     23.95
+    ]
+   }
+  ],
+  "moments": [
+   {
+    "at": 5.95,
+    "name": "kf1"
+   },
+   {
+    "at": 18,
+    "name": "kf2"
+   }
+  ],
+  "anchors": [],
+  "background": "#fdfdfd",
+  "palette": [
+   {
+    "hex": "#fdfdfd",
+    "share": 88.4
+   },
+   {
+    "hex": "#a9a88a",
+    "share": 1.8
+   },
+   {
+    "hex": "#1b2624",
+    "share": 1
+   },
+   {
+    "hex": "#b4ab8b",
+    "share": 0.8
+   },
+   {
+    "hex": "#353b38",
+    "share": 0.5
+   },
+   {
+    "hex": "#2b3734",
+    "share": 0.5
+   },
+   {
+    "hex": "#232b28",
+    "share": 0.5
+   },
+   {
+    "hex": "#37453a",
+    "share": 0.5
+   }
+  ],
+  "elements": [
+   {
+    "box": [
+     656,
+     200,
+     314,
+     286
+    ],
+    "fill": "#abaa8c"
+   },
+   {
+    "box": [
+     769,
+     291,
+     200,
+     507
+    ],
+    "fill": "#1c2724"
+   },
+   {
+    "box": [
+     736,
+     648,
+     233,
+     202
+    ],
+    "fill": "#2f3e36"
+   },
+   {
+    "box": [
+     661,
+     593,
+     196,
+     213
+    ],
+    "fill": "#444b3b"
+   },
+   {
+    "box": [
+     656,
+     478,
+     134,
+     132
+    ],
+    "fill": "#706d6c"
+   },
+   {
+    "box": [
+     710,
+     819,
+     259,
+     64
+    ],
+    "fill": "#2e4b25"
+   },
+   {
+    "box": [
+     858,
+     741,
+     93,
+     64
+    ],
+    "fill": "#395940"
+   },
+   {
+    "box": [
+     722,
+     452,
+     58,
+     47
+    ],
+    "fill": "#928575"
+   },
+   {
+    "box": [
+     656,
+     799,
+     56,
+     84
+    ],
+    "fill": "#2d3826"
+   },
+   {
+    "box": [
+     771,
+     440,
+     42,
+     43
+    ],
+    "fill": "#7d7873"
+   },
+   {
+    "box": [
+     760,
+     618,
+     52,
+     32
+    ],
+    "fill": "#2f3c30"
+   }
+  ],
+  "motion": [
+   {
+    "element": "#1c2724",
+    "box": [
+     769,
+     291,
+     200,
+     507
+    ],
+    "moves": [
+     {
+      "from": 0,
+      "to": 0.3,
+      "dTop": -12,
+      "dLeft": 0,
+      "ms": 300
+     },
+     {
+      "from": 0.4,
+      "to": 0.45,
+      "dTop": -1,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 0.55,
+      "to": 0.65,
+      "dTop": -2,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 0.9,
+      "to": 0.95,
+      "dTop": -2,
+      "dLeft": 0,
+      "ms": 50
+     }
+    ]
+   },
+   {
+    "element": "#2f3e36",
+    "box": [
+     736,
+     648,
+     233,
+     202
+    ],
+    "moves": [
+     {
+      "from": 1.9,
+      "to": 2,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 2.7,
+      "to": 2.75,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 3.1,
+      "to": 3.25,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 150
+     },
+     {
+      "from": 3.45,
+      "to": 3.6,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 150
+     }
+    ]
+   },
+   {
+    "element": "#444b3b",
+    "box": [
+     661,
+     593,
+     196,
+     213
+    ],
+    "moves": [
+     {
+      "from": 1.25,
+      "to": 1.35,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 3.5,
+      "to": 3.55,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 7.3,
+      "to": 7.4,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 9.3,
+      "to": 9.4,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     }
+    ]
+   },
+   {
+    "element": "#706d6c",
+    "box": [
+     656,
+     478,
+     134,
+     132
+    ],
+    "moves": [
+     {
+      "from": 0.05,
+      "to": 0.1,
+      "dTop": 5,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 0.5,
+      "to": 0.6,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 0.65,
+      "to": 0.7,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 0.75,
+      "to": 0.8,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     }
+    ]
+   }
+  ],
+  "coverage": "flat regions found; boxes and fills are usable as given",
+  "confidence": {
+   "phases": "measured: sampled every 50 ms",
+   "motion": "measured: moves of the first keyframe's big parts, edges read at full resolution; dTop and dLeft are the distance in source px",
+   "palette": "measured for areas; small things do not reach it",
+   "anchors": "measured where the content stands clear of its background (reliable true): the box of everything that is not background at a phase's start and end, and which edges moved; where the content fills the frame the field says so and look_at what=track is the way to read an edge",
+   "elements": "draft: flat regions at the first keyframe; nested parts split or merge, text and thin parts are missing; check each box against the keyframe (see_design with at) before trusting it"
+  }
+ },
+ "motion": {
+  "status": "draft measured: draft.phases say when things move, draft.anchors which edges, draft.motion how far; the presets below are only for states the clip never shows",
+  "enter": "fade up 12 px, 320 ms, cubic-bezier(0.2, 0.8, 0.2, 1)",
+  "hover": "colour or ring only, 150 ms",
+  "press": "scale 0.98, 120 ms",
+  "reducedMotion": "respect prefers-reduced-motion: no entrance, instant hover"
+ },
+ "text": null,
+ "notes": [
+  {
+   "slug": "motion-from-stills",
+   "title": "Giving motion to a still, honestly"
+  }
+ ],
+ "credit": {
+  "author": "Moiz Arshi",
+  "x": "MoizArshi29",
+  "source": "https://x.com/MoizArshi29/status/2109139298004172909"
+ },
+ "method": [
+  "Fetch the clip; read size, fps and duration from the container.",
+  "Dump frames at 2 fps plus a contact sheet; pick the idle and active moments and dump those at full resolution.",
+  "Convert the chosen frames to raw RGB and measure: bounding boxes of every element, exact hex at flat regions, luminance profiles across edges for the lighting, a per-frame luma trace of the moving region for timing.",
+  "Build with one unit, --u, equal to one source pixel at the design size, and write every size as calc(N * var(--u)).",
+  "Light rounded objects with inset box-shadows on one overlay (rim, near glow, wide falloff); stacked linear gradients show a seam at the corner.",
+  "Render the build headless at --u: 1px, crop to the frame, put it beside the source frame, and look. Fix the three largest differences. Repeat."
+ ],
+ "build": null,
+ "oneShot": "No measured recipe, but a draft: build from draft.elements and draft.motion, look at each keyframe with see_design (at), then call check_rebuild with a screenshot; its regions are reliable, its element rows are as good as the draft boxes.",
+ "keyframeFiles": [
+  {
+   "name": "kf1",
+   "at": 5.95,
+   "file": "public/drafts/8sxtm9v/kf1.jpg"
+  },
+  {
+   "name": "kf2",
+   "at": 18,
+   "file": "public/drafts/8sxtm9v/kf2.jpg"
+  }
+ ]
+}

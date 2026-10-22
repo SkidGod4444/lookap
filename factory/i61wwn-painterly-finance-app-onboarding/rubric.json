@@ -1,0 +1,808 @@
+{
+ "slug": "i61wwn-painterly-finance-app-onboarding",
+ "frame": {
+  "w": 1628,
+  "h": 1080
+ },
+ "at": "2026-10-22T21:17:22.492Z",
+ "model": "opus",
+ "costUsd": 0.62,
+ "summary": "A single mobile screen centred on a near-white (#fdfdfd) canvas: a rounded phone panel (656,200 → 970,883, corner radius ~40 px) filled edge to edge with an oil-painting landscape. It has a pale beige-teal sky at the top, a dark green tree mass on the right with a brown trunk running down the centre, purple hills on the left and yellow-green foliage at the lower left. Across the painting, concentric water-like ripples spread from one point at the spinner (~812,650). Each ring bends and offsets the painted strokes, with a faint bright crest along its leading edge and no drawn stroke. The rings travel outward continuously at about 60 px/s, ~100 px apart, so a new crest leaves the centre about every 1.7–1.9 s. This runs the whole 24 s, and the rest of the screen holds still. The foreground UI is static and centred on x≈812. A small translucent light disc (~68 px) sits at ~812,650 and holds a white 8-spoke spinner icon with a dark centre dot. The spinner does not rotate. Below it sits a translucent, slightly lightened rounded card (674,648, 277×158, radius ~22) whose top edge passes behind the spinner disc. The card holds three centred lines of ~13 px white body copy. At the bottom is a solid white pill button (674,824, 277×44) labelled \"Get Started\" in ~13 px dark medium-weight type. Type is a neutral grotesk (Inter-like).",
+ "elements": [
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1628,
+    1080
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "flat near-white #fdfdfd, no texture"
+  },
+  {
+   "name": "phone panel",
+   "box": [
+    656,
+    200,
+    314,
+    684
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "rounded rectangle, corner radius ~40 px, no border or shadow visible, clips the painting"
+  },
+  {
+   "name": "painting backdrop",
+   "box": [
+    656,
+    200,
+    314,
+    684
+   ],
+   "kind": "image",
+   "class": "photo",
+   "note": "oil-painting landscape filling the panel: sky, dark tree, purple hills, yellow-green foliage"
+  },
+  {
+   "name": "ripple distortion",
+   "box": [
+    656,
+    200,
+    314,
+    684
+   ],
+   "kind": "motion",
+   "class": "css",
+   "note": "concentric rings centred ~812,650 that refract and offset the painting, faint bright crest, expanding ~60 px/s"
+  },
+  {
+   "name": "spinner disc",
+   "box": [
+    778,
+    616,
+    68,
+    68
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "translucent light circle over the painting"
+  },
+  {
+   "name": "spinner icon",
+   "box": [
+    790,
+    628,
+    44,
+    44
+   ],
+   "kind": "icon",
+   "class": "css",
+   "note": "8 white rounded spokes around a dark centre dot, static"
+  },
+  {
+   "name": "copy card",
+   "box": [
+    674,
+    648,
+    277,
+    158
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "translucent lightened rounded panel, radius ~22, painting visible through it"
+  },
+  {
+   "name": "body copy",
+   "box": [
+    704,
+    700,
+    218,
+    54
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "3 centred lines, ~13 px, white: 'Take control of your finances with / budgets that fit your needs and help / you reach your goals faster.'"
+  },
+  {
+   "name": "Get Started button",
+   "box": [
+    674,
+    824,
+    277,
+    44
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "solid white pill, fully rounded ends"
+  },
+  {
+   "name": "button label",
+   "box": [
+    777,
+    838,
+    69,
+    15
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Get Started', ~13 px, near-black, medium weight, centred"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "page background",
+   "axis": "style",
+   "check": "The area outside the phone panel is a flat near-white (#fdfdfd) with no texture or gradient",
+   "box": [
+    0,
+    0,
+    1628,
+    1080
+   ],
+   "scope": "frame",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "phone panel",
+   "axis": "position",
+   "check": "The phone panel spans about x 656–970 and y 200–883 (≈314×684 px), centred horizontally at x≈812",
+   "box": [
+    656,
+    200,
+    314,
+    684
+   ],
+   "scope": "frame",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "phone panel",
+   "axis": "style",
+   "check": "The panel's four corners are rounded with a radius of about 40 px",
+   "box": [
+    646,
+    190,
+    334,
+    704
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "phone panel",
+   "axis": "style",
+   "check": "The panel has no visible border stroke or drop shadow: the painting meets the white page directly",
+   "box": [
+    646,
+    190,
+    334,
+    704
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "painting backdrop",
+   "axis": "present",
+   "check": "The panel is filled edge to edge with a painted landscape, with no empty or flat-colour areas",
+   "box": [
+    656,
+    200,
+    314,
+    684
+   ],
+   "scope": "frame",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "painting backdrop",
+   "axis": "imagery",
+   "check": "The painting shows the same picture as the clip: pale beige-teal sky at the top, a dark green tree mass on the right, a brown trunk running down near the centre, purple hills at the left middle, and yellow-green foliage at the lower left",
+   "box": [
+    656,
+    200,
+    314,
+    684
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "painting backdrop",
+   "axis": "style",
+   "check": "The painting shows visible brush strokes and canvas grain, not a smooth gradient or flat vector shapes",
+   "box": [
+    656,
+    200,
+    314,
+    300
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "painting backdrop",
+   "axis": "style",
+   "check": "The painting has no visible tile seams or repeats anywhere in the panel",
+   "box": [
+    656,
+    200,
+    314,
+    684
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "ripple distortion",
+   "axis": "present",
+   "check": "Concentric circular ripples are visible across the painting, sharing one centre at about (812,650) on the spinner",
+   "box": [
+    656,
+    200,
+    314,
+    684
+   ],
+   "scope": "frame",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "ripple distortion",
+   "axis": "style",
+   "check": "Each ripple reads as the painting bending: strokes are shifted and offset across the arc (e.g. the dark tree edge breaks into stepped arcs at x 870–970)",
+   "box": [
+    820,
+    250,
+    150,
+    300
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "ripple distortion",
+   "axis": "style",
+   "check": "Ripples are NOT drawn rings: no solid or outlined circle strokes, no flat coloured bands, and no uniform-width line lies on top of the painting",
+   "box": [
+    656,
+    250,
+    314,
+    600
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "ripple distortion",
+   "axis": "style",
+   "check": "Each ripple crest carries a faint, soft bright rim on its outer edge (a light glint along the arc), not a hard line",
+   "box": [
+    656,
+    260,
+    314,
+    250
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "ripple distortion",
+   "axis": "position",
+   "check": "About 4 ripple crests are visible above the spinner along the centre line at x≈812 (near y 277, 383, 488 and 590), spaced roughly 100–105 px apart",
+   "box": [
+    656,
+    200,
+    314,
+    460
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "ripple distortion",
+   "axis": "motion",
+   "check": "The ripple crests have moved outward (away from the spinner) by about 25–30 px between the two moments, while the painting underneath stays in place",
+   "box": [
+    656,
+    200,
+    314,
+    684
+   ],
+   "scope": "frame",
+   "at": 5.95,
+   "then": 6.45
+  },
+  {
+   "id": "c15",
+   "element": "ripple distortion",
+   "axis": "motion",
+   "check": "Ripples expand at a steady ~60 px/s: a crest edge in column x≈880 climbs from y≈368 to y≈308 between the two moments",
+   "box": [
+    860,
+    280,
+    40,
+    120
+   ],
+   "scope": "crop",
+   "at": 6.4,
+   "then": 7.5
+  },
+  {
+   "id": "c16",
+   "element": "ripple distortion",
+   "axis": "motion",
+   "check": "Ripples keep spreading throughout the clip: crest positions differ between 18 s and 18.5 s just as they do earlier",
+   "box": [
+    656,
+    200,
+    314,
+    684
+   ],
+   "scope": "frame",
+   "at": 18,
+   "then": 18.5
+  },
+  {
+   "id": "c17",
+   "element": "ripple distortion",
+   "axis": "motion",
+   "check": "New rings keep appearing at the centre: the ring pattern repeats with a new crest leaving the spinner every ~1.7–1.9 s, with no pause or reset jump",
+   "box": [
+    656,
+    200,
+    314,
+    684
+   ],
+   "scope": "frame",
+   "at": 5.95,
+   "then": 7.8
+  },
+  {
+   "id": "c18",
+   "element": "ripple distortion",
+   "axis": "motion",
+   "check": "The panel's silhouette, page background, card, spinner and button do not move; only the painting inside the panel changes between the two moments",
+   "box": [
+    656,
+    200,
+    314,
+    684
+   ],
+   "scope": "frame",
+   "at": 18,
+   "then": 18.5
+  },
+  {
+   "id": "c19",
+   "element": "spinner disc",
+   "axis": "position",
+   "check": "A translucent circular disc about 68 px across is centred at about (812,650)",
+   "box": [
+    770,
+    608,
+    84,
+    84
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "spinner disc",
+   "axis": "style",
+   "check": "The disc lightens the painting behind it slightly (semi-transparent white tint), with the painting still visible through it and no hard outline",
+   "box": [
+    770,
+    608,
+    84,
+    84
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "spinner icon",
+   "axis": "present",
+   "check": "A white spinner icon sits at the centre of the disc",
+   "box": [
+    786,
+    624,
+    52,
+    52
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "spinner icon",
+   "axis": "style",
+   "check": "The spinner has exactly 8 spokes evenly spaced around the centre",
+   "box": [
+    786,
+    624,
+    52,
+    52
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "spinner icon",
+   "axis": "style",
+   "check": "The spokes are solid white bars with rounded ends, all the same brightness (no fading tail)",
+   "box": [
+    786,
+    624,
+    52,
+    52
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "spinner icon",
+   "axis": "style",
+   "check": "A small dark round dot (~8 px) sits at the spinner's centre, inside the ring of spokes",
+   "box": [
+    800,
+    638,
+    24,
+    24
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c25",
+   "element": "spinner icon",
+   "axis": "position",
+   "check": "The spinner spans about 44 px across (x 790–834, y 628–672), centred at (812,650)",
+   "box": [
+    780,
+    618,
+    64,
+    64
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c26",
+   "element": "spinner icon",
+   "axis": "motion",
+   "check": "The spinner does not rotate: its spokes are at the same angles at both moments",
+   "box": [
+    786,
+    624,
+    52,
+    52
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": 6.45
+  },
+  {
+   "id": "c27",
+   "element": "copy card",
+   "axis": "position",
+   "check": "A rounded translucent card spans about x 674–951, y 648–806 (≈277×158 px), centred at x≈812",
+   "box": [
+    664,
+    638,
+    297,
+    178
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "copy card",
+   "axis": "style",
+   "check": "The card's corners are rounded with a radius of about 20–24 px",
+   "box": [
+    664,
+    638,
+    297,
+    178
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c29",
+   "element": "copy card",
+   "axis": "style",
+   "check": "The card is a soft translucent light tint: the painting and ripples stay visible and nearly sharp through it, slightly lighter than outside",
+   "box": [
+    674,
+    648,
+    277,
+    158
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c30",
+   "element": "copy card",
+   "axis": "style",
+   "check": "The card is NOT opaque, NOT a heavy frosted blur, and has no visible border stroke",
+   "box": [
+    674,
+    648,
+    277,
+    158
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c31",
+   "element": "copy card",
+   "axis": "position",
+   "check": "The spinner disc overlaps the card's top edge: the disc centre (y≈650) sits on the card's top edge (y≈648)",
+   "box": [
+    740,
+    600,
+    150,
+    100
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c32",
+   "element": "body copy",
+   "axis": "text",
+   "check": "The card reads exactly 'Take control of your finances with' / 'budgets that fit your needs and help' / 'you reach your goals faster.' as three lines",
+   "box": [
+    694,
+    694,
+    238,
+    66
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c33",
+   "element": "body copy",
+   "axis": "style",
+   "check": "The body copy is centred on x≈812, with line baselines about 19 px apart (lines centred near y 708, 727, 746)",
+   "box": [
+    694,
+    694,
+    238,
+    66
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c34",
+   "element": "body copy",
+   "axis": "style",
+   "check": "The body copy is ~13 px regular-weight sans-serif in near-white (slightly soft, ~90% white), not pure bold white",
+   "box": [
+    694,
+    694,
+    238,
+    66
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c35",
+   "element": "Get Started button",
+   "axis": "position",
+   "check": "The button spans about x 674–951, y 824–867 (≈277×44 px), the same width as the card and ~18 px below it",
+   "box": [
+    664,
+    814,
+    297,
+    64
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c36",
+   "element": "Get Started button",
+   "axis": "style",
+   "check": "The button is a solid opaque white pill with fully rounded ends and no border or shadow",
+   "box": [
+    664,
+    814,
+    297,
+    64
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c37",
+   "element": "button label",
+   "axis": "text",
+   "check": "The button label reads exactly 'Get Started'",
+   "box": [
+    760,
+    832,
+    104,
+    28
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c38",
+   "element": "button label",
+   "axis": "style",
+   "check": "The label is ~13 px medium-weight near-black type, centred in the button at x≈812, y≈846",
+   "box": [
+    760,
+    832,
+    104,
+    28
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c39",
+   "element": "phone panel",
+   "axis": "position",
+   "check": "The button's bottom edge sits about 16 px above the panel's bottom edge, with painting visible below and beside it",
+   "box": [
+    656,
+    820,
+    314,
+    64
+   ],
+   "scope": "crop",
+   "at": 5.95,
+   "then": null
+  },
+  {
+   "id": "c40",
+   "element": "page background",
+   "axis": "present",
+   "check": "No other UI appears on the page: no status bar, no title, no page indicator dots, nothing outside the panel",
+   "box": [
+    0,
+    0,
+    1628,
+    1080
+   ],
+   "scope": "frame",
+   "at": 5.95,
+   "then": null
+  }
+ ],
+ "imagery": [
+  {
+   "name": "painting backdrop",
+   "box": [
+    656,
+    200,
+    314,
+    684
+   ],
+   "class": "photo",
+   "what": "An oil-painting landscape with visible brushwork and canvas grain: pale beige-teal sky across the top, a dark green tree mass on the right with a brown trunk down the centre, purple hills and a pinkish building at the left middle, and yellow-green foliage and grass at the lower left and bottom",
+   "at": 5.95
+  },
+  {
+   "name": "ripple distortion",
+   "box": [
+    656,
+    200,
+    314,
+    684
+   ],
+   "class": "css",
+   "what": "Concentric refractive ripples centred at ~812,650 that bend and offset the painting, with a faint soft bright crest on each ring and no drawn stroke",
+   "at": 5.95
+  },
+  {
+   "name": "spinner icon",
+   "box": [
+    790,
+    628,
+    44,
+    44
+   ],
+   "class": "css",
+   "what": "White 8-spoke loading spinner with rounded spokes and a dark centre dot, on a translucent light disc",
+   "at": 5.95
+  },
+  {
+   "name": "copy card",
+   "box": [
+    674,
+    648,
+    277,
+    158
+   ],
+   "class": "css",
+   "what": "Translucent lightly tinted rounded glass panel over the painting, no blur to speak of and no border",
+   "at": 5.95
+  }
+ ],
+ "moves": [
+  {
+   "element": "ripple distortion",
+   "what": "Concentric refractive rings expand outward from the spinner centre at a steady ~60 px/s, a new crest about every 1.7–1.9 s, ~100–105 px apart, running continuously through the clip",
+   "from": 0,
+   "to": 24.18,
+   "px": 60
+  },
+  {
+   "element": "ripple distortion",
+   "what": "Measured crest edge at column x=880 climbs from y≈368 to y≈308 (outward from the centre)",
+   "from": 6.38,
+   "to": 7.5,
+   "px": 60
+  },
+  {
+   "element": "spinner icon, card, button, panel",
+   "what": "Static: no rotation, fade or position change at any moment",
+   "from": 0,
+   "to": 24.18,
+   "px": null
+  }
+ ]
+}

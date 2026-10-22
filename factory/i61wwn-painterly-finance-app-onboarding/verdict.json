@@ -1,0 +1,1255 @@
+{
+ "slug": "i61wwn-painterly-finance-app-onboarding",
+ "at": "2026-10-22T19:29:09.115Z",
+ "runs": 34,
+ "html": "factory/i61wwn-painterly-finance-app-onboarding/index.html",
+ "pixel": {
+  "score": 94,
+  "stills": 94,
+  "motion": 94,
+  "moments": 10
+ },
+ "animations": 5,
+ "rank": 93,
+ "allPass": false,
+ "elements": [
+  {
+   "name": "button label",
+   "box": [
+    777,
+    839,
+    69,
+    14
+   ],
+   "deltaE": 2.9,
+   "delta": 19,
+   "shift": [
+    4,
+    0
+   ],
+   "afterShift": 17,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "spinner",
+   "box": [
+    790,
+    628,
+    45,
+    44
+   ],
+   "deltaE": 1.4,
+   "delta": 18,
+   "shift": [
+    0,
+    2
+   ],
+   "afterShift": 15,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "body copy",
+   "box": [
+    704,
+    700,
+    217,
+    54
+   ],
+   "deltaE": 1.7,
+   "delta": 15,
+   "shift": null,
+   "afterShift": 15,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "spinner halo disc",
+   "box": [
+    778,
+    616,
+    68,
+    68
+   ],
+   "deltaE": 0.5,
+   "delta": 12,
+   "shift": [
+    0,
+    2
+   ],
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "phone screen",
+   "box": [
+    655,
+    199,
+    315,
+    685
+   ],
+   "deltaE": 0.8,
+   "delta": 11,
+   "shift": null,
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "painting backdrop",
+   "box": [
+    655,
+    199,
+    315,
+    685
+   ],
+   "deltaE": 0.8,
+   "delta": 11,
+   "shift": null,
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "frosted text card",
+   "box": [
+    674,
+    648,
+    277,
+    158
+   ],
+   "deltaE": 0.8,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "Get Started button",
+   "box": [
+    674,
+    824,
+    277,
+    44
+   ],
+   "deltaE": 2.8,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1628,
+    1080
+   ],
+   "deltaE": 0.1,
+   "delta": 4,
+   "shift": null,
+   "afterShift": 4,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "the render changes where the clip changes",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "0.5s",
+    "clip": 1.4,
+    "render": 0.7,
+    "read": "both move"
+   },
+   {
+    "from": "0.5s",
+    "to": "3s",
+    "clip": 1.3,
+    "render": 0.6,
+    "read": "both move"
+   },
+   {
+    "from": "3s",
+    "to": "3.3s",
+    "clip": 1.2,
+    "render": 0.4,
+    "read": "both move"
+   },
+   {
+    "from": "3.3s",
+    "to": "5.5s",
+    "clip": 1.2,
+    "render": 0.5,
+    "read": "both move"
+   },
+   {
+    "from": "5.5s",
+    "to": "kf1",
+    "clip": 1.4,
+    "render": 0.6,
+    "read": "both move"
+   },
+   {
+    "from": "kf1",
+    "to": "6.45s",
+    "clip": 1.4,
+    "render": 0.7,
+    "read": "both move"
+   },
+   {
+    "from": "6.45s",
+    "to": "7.5s",
+    "clip": 1.7,
+    "render": 0.6,
+    "read": "both move"
+   },
+   {
+    "from": "7.5s",
+    "to": "kf2",
+    "clip": 1.6,
+    "render": 0.6,
+    "read": "both move"
+   },
+   {
+    "from": "kf2",
+    "to": "18.5s",
+    "clip": 1.4,
+    "render": 0.7,
+    "read": "both move"
+   }
+  ],
+  "trajectories": [
+   {
+    "element": "#1c2724",
+    "box": [
+     769,
+     291,
+     200,
+     507
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 3,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 3.3,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 5.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 5.95,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 6.45,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 7.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 18,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 18.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     }
+    ],
+    "read": "in step"
+   },
+   {
+    "element": "#2f3e36",
+    "box": [
+     736,
+     648,
+     233,
+     202
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 3,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 3.3,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 5.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 5.95,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 6.45,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 7.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 18,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 18.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     }
+    ],
+    "read": "in step"
+   },
+   {
+    "element": "#444b3b",
+    "box": [
+     661,
+     593,
+     196,
+     213
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 3,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 3.3,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 5.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 5.95,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 6.45,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 7.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 18,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 18.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     }
+    ],
+    "read": "in step"
+   },
+   {
+    "element": "#706d6c",
+    "box": [
+     656,
+     478,
+     134,
+     132
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 3,
+      "dx": 0,
+      "dy": 0,
+      "delta": 8
+     },
+     {
+      "at": 3.3,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 5.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 5.95,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 6.45,
+      "dx": 2,
+      "dy": 2,
+      "delta": 9
+     },
+     {
+      "at": 7.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 18,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 18.5,
+      "dx": 2,
+      "dy": 2,
+      "delta": 9
+     }
+    ],
+    "read": "in step"
+   }
+  ]
+ },
+ "rubric": {
+  "file": "factory/i61wwn-painterly-finance-app-onboarding/rubric.json",
+  "total": 40,
+  "counted": 36,
+  "pass": 33,
+  "fail": 2,
+  "unsure": 1,
+  "unjudged": 0,
+  "passRate": 92,
+  "licensed": false,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "style",
+    "element": "page background",
+    "check": "The canvas around the phone is flat near-white (about #fdfdfd) with no gradient, pattern or shadow",
+    "box": [
+     0,
+     0,
+     1628,
+     1080
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both canvases are flat near-white with no gradient or shadow. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "present",
+    "element": "phone screen",
+    "check": "A single portrait phone screen is visible, centred horizontally in the frame",
+    "box": [
+     655,
+     199,
+     315,
+     685
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "One portrait phone screen, centred, in both. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "position",
+    "element": "phone screen",
+    "check": "The screen spans about x 655–970 and y 199–883 (about 315x685 px)",
+    "box": [
+     655,
+     199,
+     315,
+     685
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Screen box is about 313x685 px in both, in the same position. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "style",
+    "element": "phone screen",
+    "check": "All four screen corners are rounded with a radius of about 36px, and there is no device bezel, border or drop shadow",
+    "box": [
+     655,
+     199,
+     315,
+     685
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both have four rounded corners of about 36 px and no bezel or shadow. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "present",
+    "element": "painting backdrop",
+    "check": "A painterly landscape with visible brush/canvas texture fills the entire screen edge to edge",
+    "box": [
+     655,
+     199,
+     315,
+     685
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": "photo",
+    "pass": "yes",
+    "seen": "The rebuild's painterly canvas-textured landscape fills the screen edge to edge like the clip's. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "style",
+    "element": "painting backdrop",
+    "check": "The top third of the screen is a pale beige/sage sky tone (about #b4ab8b to #a9a88a)",
+    "box": [
+     655,
+     199,
+     315,
+     230
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": "photo",
+    "pass": "yes",
+    "seen": "Top third is beige/sage in both, though the rebuild has a faint rectangular teal patch at the very top. [votes: yes/no/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "style",
+    "element": "painting backdrop",
+    "check": "A tall dark green (about #1c2724) tree mass occupies the right side of the screen from about y 290 to y 800",
+    "box": [
+     769,
+     291,
+     200,
+     507
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": "photo",
+    "pass": "yes",
+    "seen": "A tall dark green tree mass sits on the right from about y 290 to 800 in both. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "style",
+    "element": "painting backdrop",
+    "check": "The bottom strip of the screen (y ~800–883) is saturated green foliage with yellow-green patches at the lower left",
+    "box": [
+     656,
+     799,
+     314,
+     84
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": "photo",
+    "pass": "yes",
+    "seen": "The bottom strip is saturated green foliage with some yellow-green at the left in both. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "imagery",
+    "element": "painting backdrop",
+    "check": "The painting is either a licensed texture or a placeholder covering the same full-screen box with the same dominant colours (beige sky top, dark green right, lilac/yellow-green lower left, green bottom); the clip's pixels are not copied",
+    "box": [
+     655,
+     199,
+     315,
+     685
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same dominant colours and layout: beige top, dark green right, lilac and yellow-green lower left, green bottom. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "present",
+    "element": "glass lens rings",
+    "check": "At least 3 concentric circular arcs cross the screen, each showing the painting refracted and displaced at a bright rim rather than as a drawn outline",
+    "box": [
+     655,
+     199,
+     315,
+     685
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "The rebuild's rings are thin faint stroked arcs with a smeared dark patch, where the clip's rims bend and refract the painting with a bright edge. [votes: no/no/no]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "position",
+    "element": "glass lens rings",
+    "check": "The rings share a centre near the spinner at about (812,650), and their top edges cross the centre column near y 278, 383 and 487",
+    "box": [
+     655,
+     199,
+     315,
+     685
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "unsure",
+    "seen": "Ring centres look similar, but the rebuild's rings are faint and their top edges are hard to place against the clip's. [votes: no/unsure/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "position",
+    "element": "glass lens rings",
+    "check": "Neighbouring rings are spaced about 104px apart radially",
+    "box": [
+     700,
+     250,
+     230,
+     350
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Neighbouring rim spacing is about 100 px in both crops. [votes: yes/no/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "style",
+    "element": "glass lens rings",
+    "check": "The rings are wider than the screen: their arcs run off both the left and right screen edges and are clipped by the rounded screen",
+    "box": [
+     655,
+     199,
+     315,
+     685
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The rings run off both left and right screen edges in both, clipped by the rounded screen. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "imagery",
+    "element": "glass lens rings",
+    "check": "The ring material is glass: inside each band the painting is shifted and magnified, with a light highlight along the rim (e.g. the tree edge jumps sideways where it crosses a ring)",
+    "box": [
+     780,
+     330,
+     190,
+     200
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "The rebuild shows a drawn tan stroke with a dark smear and no magnified, shifted painting or bright rim highlight like the clip's. [votes: no/no/no]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "motion",
+    "element": "glass lens rings",
+    "check": "The rings expand outward: the ring top edge in column x=812 moves up from about y 382 to about y 357 (about 25px) between the two moments",
+    "box": [
+     760,
+     330,
+     110,
+     80
+    ],
+    "at": 5.95,
+    "then": 6.45,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The rim moves up by about 85 px at 2.75x, roughly 30 px, in both. [votes: yes/no/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "motion",
+    "element": "glass lens rings",
+    "check": "The expansion is steady and linear at about 50px/s with no pause, easing or stop between the two moments",
+    "box": [
+     760,
+     330,
+     110,
+     120
+    ],
+    "at": 5.5,
+    "then": 7.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Over 5.5s to 7.5s the rim returns to nearly the same position in both, consistent with steady motion on a 104 px period. [votes: yes/no/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "motion",
+    "element": "glass lens rings",
+    "check": "New rings keep spawning from the centre throughout the clip, so the pattern at 6.45s looks the same as at 18.5s (a loop of about 12s)",
+    "box": [
+     655,
+     199,
+     315,
+     685
+    ],
+    "at": 6.45,
+    "then": 18.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both rows look alike at 6.45s and 18.5s, so the ring pattern loops in the rebuild too. [votes: yes/no/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "motion",
+    "element": "painting backdrop",
+    "check": "Outside the ring rims the underlying painting does not pan, zoom or change: the beige sky at the very top of the screen stays the same",
+    "box": [
+     660,
+     205,
+     300,
+     30
+    ],
+    "at": 5.95,
+    "then": 6.45,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The beige sky at the top stays unchanged between the two moments in both. [votes: yes/no/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "present",
+    "element": "frosted text card",
+    "check": "A translucent frosted rectangle sits in the lower third of the screen, with the painting visible through it",
+    "box": [
+     674,
+     648,
+     277,
+     158
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A translucent frosted card with the painting visible through it sits in the lower third in both. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "position",
+    "element": "frosted text card",
+    "check": "The card spans about x 674–951 and y 648–806, inset about 19px from each side of the screen",
+    "box": [
+     674,
+     648,
+     277,
+     158
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The card spans about x 19–296 px inside the screen in the rebuild versus 18–295 px in the clip, at the same height. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "style",
+    "element": "frosted text card",
+    "check": "The card has rounded corners of about 16px and no visible border line",
+    "box": [
+     674,
+     648,
+     277,
+     158
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild card has similar rounded corners and no clear border, though a faint vertical edge sliver shows at its right side. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "style",
+    "element": "frosted text card",
+    "check": "The card lightens the painting behind it slightly (a whitish veil of low opacity) without hiding the painting's shapes",
+    "box": [
+     674,
+     648,
+     277,
+     158
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows a similar low-opacity light veil with the painting's shapes still visible. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "present",
+    "element": "spinner halo disc",
+    "check": "A circular translucent lighter disc about 68px across sits behind the spinner",
+    "box": [
+     778,
+     616,
+     68,
+     68
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Translucent lighter disc around the spinner is present in both, similar size. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "position",
+    "element": "spinner halo disc",
+    "check": "The disc is centred at about (812,650), straddling the card's top edge, with about half of it above the card",
+    "box": [
+     770,
+     605,
+     85,
+     90
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild disc is centred on the spinner and straddles the card top edge like the clip. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "present",
+    "element": "spinner",
+    "check": "A white radial spinner icon is centred in the halo disc",
+    "box": [
+     790,
+     628,
+     45,
+     44
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White radial spinner is centred in the disc in both. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "style",
+    "element": "spinner",
+    "check": "The spinner has exactly 9 white rectangular spokes radiating from the centre",
+    "box": [
+     785,
+     623,
+     55,
+     55
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows 9 white rectangular spokes, similar thickness to the clip, though at a different rotation. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "style",
+    "element": "spinner",
+    "check": "The spinner centre is a dark grey filled dot about 8px across, ringed by the spokes",
+    "box": [
+     800,
+     638,
+     25,
+     25
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Dark grey centre dot ringed by spokes in both, about the same size. [votes: yes/yes/no]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "position",
+    "element": "spinner",
+    "check": "The spinner spans about 45px wide, centred at about (812,650)",
+    "box": [
+     790,
+     628,
+     45,
+     44
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Spinner spans roughly 45px and is centred at the same spot in both. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "motion",
+    "element": "spinner",
+    "check": "The spinner does not rotate: its spokes are in the same orientation at both moments",
+    "box": [
+     785,
+     623,
+     55,
+     55
+    ],
+    "at": 3,
+    "then": 3.3,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild spokes keep the same orientation between 3s and 3.3s, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "text",
+    "element": "body copy",
+    "check": "The card text reads exactly \"Take control of your finances with budgets that fit your needs and help you reach your goals faster.\"",
+    "box": [
+     704,
+     700,
+     217,
+     54
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild text reads the same full sentence as the clip. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "text",
+    "element": "body copy",
+    "check": "The copy breaks into exactly 3 centred lines: \"Take control of your finances with\" / \"budgets that fit your needs and help\" / \"you reach your goals faster.\"",
+    "box": [
+     704,
+     700,
+     217,
+     54
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same three centred lines with identical break points. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "style",
+    "element": "body copy",
+    "check": "The copy is white or near-white, regular weight, about 13px, sans-serif, at high but slightly soft brightness",
+    "box": [
+     704,
+     700,
+     217,
+     54
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild text is white, regular weight, similar size and brightness (line 2 about 540 vs 533 px in the crop). [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "position",
+    "element": "body copy",
+    "check": "The text lines' baselines sit at about y 712, 731 and 750 (line pitch ~19px), horizontally centred on x ≈ 812",
+    "box": [
+     704,
+     700,
+     217,
+     54
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild baselines are within about 1px of the clip's and centred on the same x. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "present",
+    "element": "Get Started button",
+    "check": "A solid white pill button sits near the bottom of the screen",
+    "box": [
+     674,
+     824,
+     277,
+     44
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Solid white pill button sits near the bottom in both. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "position",
+    "element": "Get Started button",
+    "check": "The button spans about x 674–951 and y 824–867, about 16px above the screen bottom edge",
+    "box": [
+     674,
+     824,
+     277,
+     44
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Button spans the same width and sits about 1px lower than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "style",
+    "element": "Get Started button",
+    "check": "The button is fully rounded (semicircular ends) and pure opaque white with no border or visible shadow",
+    "box": [
+     674,
+     824,
+     277,
+     44
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Fully rounded, opaque white pill with no border or shadow in both. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "text",
+    "element": "button label",
+    "check": "The button label reads exactly \"Get Started\"",
+    "box": [
+     777,
+     839,
+     69,
+     14
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Label reads \"Get Started\" in both. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "style",
+    "element": "button label",
+    "check": "The label is near-black, medium weight, about 13px, centred in the pill",
+    "box": [
+     777,
+     839,
+     69,
+     14
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Near-black medium-weight label, centred, with similar size to the clip. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "motion",
+    "element": "frosted text card",
+    "check": "The card, its text and the button stay in place with no shift, fade or scale between the two moments (only the painting refracted through them changes)",
+    "box": [
+     674,
+     648,
+     277,
+     220
+    ],
+    "at": 5.95,
+    "then": 18,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Card, text and button are in the same positions at 5.95s and 18s; only the painting behind changes. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c39.png"
+   },
+   {
+    "id": "c40",
+    "axis": "motion",
+    "element": "phone screen",
+    "check": "The phone screen's outline and position do not change across the clip",
+    "box": [
+     655,
+     199,
+     315,
+     685
+    ],
+    "at": 0.5,
+    "then": 18,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Phone screen outline and position are identical at 0.5s and 18s, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/i61wwn-painterly-finance-app-onboarding/judge/c40.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 0.818,
+  "calls": 6,
+  "images": "factory/i61wwn-painterly-finance-app-onboarding/judge",
+  "votes": 3,
+  "spread": [
+   37,
+   31,
+   37
+  ]
+ }
+}

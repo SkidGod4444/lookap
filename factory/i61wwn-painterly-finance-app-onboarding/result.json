@@ -1,0 +1,137 @@
+{
+ "slug": "i61wwn-painterly-finance-app-onboarding",
+ "title": "Painterly Finance App Onboarding",
+ "author": "Moiz Arshi",
+ "model": "fable",
+ "judgeModel": "sonnet",
+ "bucket": "review",
+ "ended": "round limit",
+ "bestRound": 1,
+ "rank": 89,
+ "allPass": false,
+ "rubric": {
+  "pass": 32,
+  "fail": 4,
+  "unsure": 0,
+  "of": 36,
+  "failed": [
+   "c09 The painting is either a licensed texture or a placeholder covering the same full-screen box with the same dominant colours (beige sky top, dark green right, lilac/yellow-green lower left, green bottom); the clip's pixels are not copied",
+   "c11 The rings share a centre near the spinner at about (812,650), and their top edges cross the centre column near y 278, 383 and 487",
+   "c20 The card spans about x 674–951 and y 648–806, inset about 19px from each side of the screen",
+   "c22 The card lightens the painting behind it slightly (a whitish veil of low opacity) without hiding the painting's shapes"
+  ]
+ },
+ "score": 86,
+ "motion": "the render changes where the clip changes",
+ "imagery": [
+  {
+   "name": "painting backdrop",
+   "class": "photo",
+   "box": [
+    655,
+    199,
+    315,
+    685
+   ],
+   "reproduced": false,
+   "how": "placeholder by policy"
+  },
+  {
+   "name": "glass lens rings",
+   "class": "css",
+   "box": [
+    655,
+    199,
+    315,
+    685
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "frosted text card",
+   "class": "css",
+   "box": [
+    674,
+    648,
+    277,
+    158
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "spinner halo disc",
+   "class": "css",
+   "box": [
+    778,
+    616,
+    68,
+    68
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "spinner",
+   "class": "css",
+   "box": [
+    790,
+    628,
+    45,
+    44
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 7,
+   "turns": 32,
+   "costUsd": 2.9692897499999997,
+   "judgeUsd": 0.21,
+   "ended": "completed",
+   "score": 86,
+   "rank": 89,
+   "allPass": false,
+   "rubric": {
+    "pass": 32,
+    "fail": 4,
+    "unsure": 0,
+    "of": 36
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 5.6,
+   "turns": 22,
+   "costUsd": 2.2779144999999996,
+   "judgeUsd": 0.208,
+   "ended": "completed",
+   "score": 86,
+   "rank": 82,
+   "allPass": false,
+   "rubric": {
+    "pass": 28,
+    "fail": 8,
+    "unsure": 0,
+    "of": 36
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": false
+  }
+ ],
+ "minutes": 12.6,
+ "cost": {
+  "codingUsd": 5.25,
+  "judgeUsd": 0.42,
+  "rubricUsd": 0.705,
+  "totalUsd": 6.37
+ },
+ "notes": true,
+ "at": "2026-10-22T18:57:25.609Z"
+}
