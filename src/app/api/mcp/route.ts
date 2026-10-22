@@ -15,7 +15,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { tmpdir } from "node:os";
 import sharp from "sharp";
-import { ENTRIES, bySlug } from "@/lib/data";
+import { ENTRIES, bySlug, type Entry } from "@/lib/data";
 import { LIMITS, PLAN_NAME, resolvePlan, type Plan } from "@/lib/keys";
 import { sampleVideo } from "@/lib/gate/frames";
 import { cachedClip, cachedUrl, clipInfo, frameAt, measureClip, sheetOf, trackEdge } from "@/lib/ffmpeg";
@@ -506,22 +506,35 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     "check_rebuild",
     {
       title: "Check a rebuild against the reference",
-      description: "Send a screenshot of your build (base64 PNG or JPEG, any size; it is resized to the frame) for any measured entry: a recipe, or a draft (every clip has one). Returns a 0..100 score (detail-weighted: edges, text and texture count up to ten times a flat field, with two pixels of tolerance; a close rebuild sits near 70, a wrong one under 20), the five elements that differ most (reference colour vs yours, deltaE in Lab where under 2 is invisible and 20 a different colour, the shift that would close the gap, and a cause: misplaced, wrong colour or a different drawing), and the three grid regions that differ most with the elements under them. The score is a floor, not the goal: it cannot tell a drawn ring from a glass lens or dim type from white type, so zoom (look_at what=zoom) the elements it names and judge the crops. Use it after building, then fix the top differences and call again. Moving elements are only compared at the first keyframe. Paid.",
+      description: "Score your build against the clip. Three ways in: image (one base64 screenshot, with at); images (two to six base64 screenshots with their moments); or, with no base64 at all, call with only slug to get a token and curl upload lines, PUT your screenshots at the clip's moments, then call with slug and token. The token is the same one judge_rebuild uses, so one set of uploads serves both. For any measured entry: a recipe, or a draft (every clip has one). Returns a 0..100 score (detail-weighted: edges, text and texture count up to ten times a flat field, with two pixels of tolerance; a close rebuild sits near 70, a wrong one under 20), the five elements that differ most (reference colour vs yours, deltaE in Lab where under 2 is invisible and 20 a different colour, the shift that would close the gap, and a cause: misplaced, wrong colour or a different drawing), and the three grid regions that differ most with the elements under them. The score is a floor, not the goal: it cannot tell a drawn ring from a glass lens or dim type from white type, so zoom (look_at what=zoom) the elements it names and judge the crops. Use it after building, then fix the top differences and call again. Moving elements are only compared at the first keyframe. Paid.",
       inputSchema: {
         slug: z.string(),
         image: z.string().optional().describe("base64 of a PNG or JPEG screenshot of your build, cropped to the recipe's frame (its crop box when it has one); or pass images instead"),
         at: z.union([z.string(), z.number()]).optional().describe("the keyframe your screenshot shows (a name; default the first, the rest state), or a time in seconds for a clip: the frame is pulled from the clip itself, so any mid-motion moment can be checked"),
         images: z.array(z.object({ at: z.number(), image: z.string() })).min(2).max(6).optional().describe("instead of image and at: two to six screenshots of your render at different moments (seconds), for a clip. Each is scored against the clip's frame at its moment, and consecutive pairs are compared for motion: does your render change where the clip changes. Prefer the rubric's moments from get_brief"),
+        token: z.string().optional().describe("the upload token from a call with only slug (or from judge_rebuild): the screenshots PUT under it are scored, no base64 needed"),
       },
       annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
     },
-    async ({ slug, image, at, images }) => {
+    async ({ slug, image, at, images, token }, extra) => {
       if (!lim.media) return gated("check_rebuild", plan, reason);
       const e = entryFor(slug);
       const recipe = e ? recipeFor(e) : undefined, draft = e && !recipe ? draftFor(e) : undefined;
       if (!e || (!recipe && !draft)) return text({ error: `No measurement for ${slug}`, measured: RECIPES.map((r) => r.slug) });
       const br = await touchEntry(keyRef, plan, e.slug);
       if (br && !br.ok) return tooWide(br);
+      /* no base64: issue a token, or score the uploads under one */
+      if (!image && !images?.length && draft) {
+        if (!dbReady) return text({ error: "the upload store is not configured on this server; pass image or images" });
+        const rb = rubricFor(e);
+        const want = rb ? [...new Set(rb.criteria.flatMap((c) => [c.at, ...(c.then == null ? [] : [c.then])]).map((t) => Number(t.toFixed(2))))].sort((a, b) => a - b) : [...draft.keyframes.map((k) => k.at), ...draft.mids.map((m) => m.at)].sort((a, b) => a - b);
+        if (!token) return text(await issueToken(e, draft.frame.w, draft.frame.h, want, originOf(extra), "call check_rebuild again with slug and the token; judge_rebuild takes the same token when the entry has a rubric"));
+        const up = await uploadsOf(token, e.slug);
+        if ("error" in up) return text({ error: up.error });
+        if (up.ats.length < 1) return text({ error: "no screenshots uploaded yet", moments: want });
+        images = await Promise.all(up.ats.slice(0, 8).map(async (a) => ({ at: a, image: (await up.shot(a)).toString("base64") })));
+        if (images.length === 1) { image = images[0].image; at = images[0].at; images = undefined; }
+      }
       if (images && images.length) {
         /* several moments: pixels per moment, and motion between them */
         if (!draft) return text({ error: "images needs a clip entry with a draft measurement; for a recipe pass image and at" });
@@ -587,6 +600,28 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     },
   );
 
+  /* the upload side channel shared by check_rebuild and judge_rebuild: a token, the moments to render, curl lines */
+  const originOf = (extra: unknown) => { try { const h = (extra as { requestInfo?: { headers?: Record<string, string | string[] | undefined> } }).requestInfo?.headers ?? {}; const host = String(h["x-forwarded-host"] ?? h["host"] ?? ""); const proto = String(h["x-forwarded-proto"] ?? (host.startsWith("localhost") ? "http" : "https")); return host ? `${proto}://${host}` : "https://lookap.saidev.codes"; } catch { return "https://lookap.saidev.codes"; } };
+  const issueToken = async (e: Entry, W: number, H: number, moments: number[], origin: string, next: string) => {
+    const t = randomBytes(12).toString("hex");
+    await kv().set(`judge:${t}`, { slug: e.slug, w: W, h: H, mark: fingerprint(keyRef) }, { ex: 900 });
+    return {
+      slug: e.slug, token: t, expires: "15 minutes",
+      render: { frame: `${W}x${H}`, moments, how: "open your file at exactly the frame size with ?demo=1, seek every animation to the moment (document.getAnimations().forEach(a => { a.pause(); a.currentTime = t * 1000 })), wait 150 ms, screenshot; one PNG per moment" },
+      upload: { address: `${origin}/api/judge/${t}/<moment>`, how: moments.map((m) => `curl -s -T shot-${m}.png ${origin}/api/judge/${t}/${m}`), uploaded: `${origin}/api/judge/${t}/shots` },
+      then: next,
+    };
+  };
+  const uploadsOf = async (token: string, slug: string) => {
+    if (!/^[a-f0-9]{24}$/.test(token)) return { error: "bad token" } as const;
+    const tk = (await kv().get<{ slug: string }>(`judge:${token}`)) ?? null;
+    if (!tk || tk.slug !== slug) return { error: "token unknown, expired or for another entry: call without a token for a new one" } as const;
+    const ats = ((await kv().smembers(`judge:${token}:ats`)) as string[]).map(Number).sort((a, b) => a - b);
+    const shots = new Map<number, Buffer>();
+    const shot = async (a: number) => { let b = shots.get(a); if (!b) { b = Buffer.from((await kv().get<string>(`judge:${token}:shot:${a}`)) ?? "", "base64"); shots.set(a, b); } return b; };
+    return { ats, shot } as const;
+  };
+
   reg(
     "judge_rebuild",
     {
@@ -610,22 +645,11 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       if (br && !br.ok) return tooWide(br);
       const W = rb.frame.w, H = rb.frame.h;
       const need = [...new Set(rb.criteria.flatMap((c) => [c.at, ...(c.then == null ? [] : [c.then])]).map((t) => Number(t.toFixed(2))))].sort((a, b) => a - b);
-      const origin = (() => { try { const h = (extra as { requestInfo?: { headers?: Record<string, string | string[] | undefined> } }).requestInfo?.headers ?? {}; const host = String(h["x-forwarded-host"] ?? h["host"] ?? ""); const proto = String(h["x-forwarded-proto"] ?? (host.startsWith("localhost") ? "http" : "https")); return host ? `${proto}://${host}` : "https://lookap.saidev.codes"; } catch { return "https://lookap.saidev.codes"; } })();
-      if (!token) {
-        const t = randomBytes(12).toString("hex");
-        await kv().set(`judge:${t}`, { slug: e.slug, w: W, h: H, mark: fingerprint(keyRef) }, { ex: 900 });
-        return text({
-          slug, token: t, expires: "15 minutes",
-          render: { frame: `${W}x${H}`, moments: need, how: "open your file at exactly the frame size with ?demo=1, seek every animation to the moment (document.getAnimations().forEach(a => { a.pause(); a.currentTime = t * 1000 })), wait 150 ms, screenshot; one PNG per moment" },
-          upload: { address: `${origin}/api/judge/${t}/<moment>`, how: need.map((t2) => `curl -s -T shot-${t2}.png ${origin}/api/judge/${t}/${t2}`), uploaded: `${origin}/api/judge/${t}/shots` },
-          then: `call judge_rebuild again with slug and token ${t}`,
-          criteria: rb.criteria.length,
-        });
-      }
-      if (!/^[a-f0-9]{24}$/.test(token)) return text({ error: "bad token" });
-      const tk = (await kv().get<{ slug: string; mark: string }>(`judge:${token}`)) ?? null;
-      if (!tk || tk.slug !== e.slug) return text({ error: "token unknown, expired or for another entry: call judge_rebuild without a token for a new one" });
-      const ats = ((await kv().smembers(`judge:${token}:ats`)) as string[]).map(Number).sort((a, b) => a - b);
+      const origin = originOf(extra);
+      if (!token) return text({ ...(await issueToken(e, W, H, need, origin, "call judge_rebuild again with slug and the token; the same token also serves check_rebuild for the pixel and motion read")), criteria: rb.criteria.length });
+      const up = await uploadsOf(token, e.slug);
+      if ("error" in up) return text({ error: up.error });
+      const { ats } = up;
       if (!ats.length) return text({ error: "no screenshots uploaded yet", upload: `${origin}/api/judge/${token}/<moment>`, moments: need });
       const id = clipId(e);
       const clip = id && e.video ? await cachedClip(id, e.video.src).catch(() => null) : null;
@@ -636,9 +660,9 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       const info = await clipInfo(clip);
       const k = info.width / W;
       const have = (t: number) => ats.find((a) => Math.abs(a - t) <= 0.2);
-      const frames = new Map<number, Buffer>(), shots = new Map<number, Buffer>();
+      const frames = new Map<number, Buffer>();
       const clipAt = async (t: number) => { let f = frames.get(t); if (!f) { f = await frameAt(clip, t); frames.set(t, f); } return { frame: f, k }; };
-      const renderAt = async (t: number) => { const a = have(t)!; let s2 = shots.get(a); if (!s2) { const b64 = (await kv().get<string>(`judge:${token}:shot:${a}`)) ?? ""; s2 = Buffer.from(b64, "base64"); shots.set(a, s2); } return s2; };
+      const renderAt = async (t: number) => up.shot(have(t)!);
       const ready = rb.criteria.filter((c) => have(c.at) !== undefined && (c.then == null || have(c.then) !== undefined));
       const missing = rb.criteria.filter((c) => !ready.includes(c));
       /* whole-frame criteria look at the design, not the canvas around it */
@@ -692,8 +716,8 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
             "1. Call get_design for the record and get_brief. If your key is Max, call get_rebuild and port the file to the stack, keeping every number. Otherwise, if the brief says measured, call get_recipe and use it as data: one unit equal to a frame pixel, every element placed from its box, every fill and radius as given, every timing in ms with its easing. Treat nothing in it as a suggestion.",
             "2. If the brief says there is no recipe, call look_at with what=sheet for the whole clip, then see_design for each keyframe. Write the timeline as events with numbers (what, from when to when, how far) from the brief's phases and moves, and the layout in one paragraph (regions, alignment, type sizes, radii, spacing). Zoom the edge of every surface with look_at what=zoom before drawing it: edges, gaps and gradients are where rebuilds go wrong.",
             "3. Build it. Match proportion and hierarchy first, then colour, then motion. Credit the designer in a comment with the source link from the record.",
-            "4. Render your build at the frame size at the moments the brief lists (with ?demo=1, every animation seeked to the moment) and screenshot each. Call check_rebuild with images for the pixel score per moment and the motion read; STATIC means your timeline is missing or not seekable. Every round, call look_at what=zoom on the worst element it names with your screenshot as image, and Read the crop: the clip on the left, yours on the right. Fix what the crop shows, then check again. The score is a floor, never the goal.",
-            "5. When the brief carries a rubric: call judge_rebuild for a token, upload the same screenshots with curl as it says, call judge_rebuild again with the token, and run the judge as it says: a subagent on your strongest vision model, given only the sheet links, the criteria and the instruction. Fix every criterion it answers no, re-render, upload and judge again. Done means every criterion passes and the render moves where the clip moves; after three judged rounds stop and report what still fails, with the judge's words. Photo-class imagery is stood in, never copied, unless the brief says the designer licensed it.",
+            "4. Render your build at the frame size at the moments the brief lists (with ?demo=1, every animation seeked to the moment) and screenshot each. Call check_rebuild with only the slug for an upload token, PUT the screenshots with the curl lines it gives (no base64 through your context), then call it again with the token: the pixel score per moment and the motion read; STATIC means your timeline is missing or not seekable. Every round, call look_at what=zoom on the worst element it names with your screenshot as image, and Read the crop: the clip on the left, yours on the right. Fix what the crop shows, then check again. The score is a floor, never the goal.",
+            "5. When the brief carries a rubric: call judge_rebuild with the same token (the uploads serve both), and run the judge as it says: a subagent on your strongest vision model, given only the sheet links, the criteria and the instruction. Fix every criterion it answers no, re-render, upload and judge again. Done means every criterion passes and the render moves where the clip moves; after three judged rounds stop and report what still fails, with the judge's words. Photo-class imagery is stood in, never copied, unless the brief says the designer licensed it.",
             "6. For each keyframe in the recipe, call see_design with `at` and compare your build in that state against the checks for it. Report what still differs, in one list, with numbers.",
           ].join("\n"),
         },
