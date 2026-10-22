@@ -35,10 +35,12 @@ type Good = { plan: Exclude<Plan, "none">; keyId: string; userId?: string; at: n
 
 /* One call per MCP request: validity, plan, rate limit. Unkey saying no reads as no key, with its code kept for the
    message; Unkey being unreachable falls back to the last good answer, marked stale. */
-export async function verifyKey(key: string): Promise<Verified> {
+export async function verifyKey(key: string, opts: { count?: boolean } = {}): Promise<Verified> {
   if (!unkeyReady) return { plan: "none", code: "NOT_CONFIGURED" };
   try {
-    const { data } = await unkey().keys.verifyKey({ key });
+    /* only a tool call spends the brake; a handshake, a tools/list or a client's reconnect does not, so an agent that
+       keeps a connection open cannot lock its own key out */
+    const { data } = await unkey().keys.verifyKey(opts.count === false ? { key, ratelimits: [{ name: "requests", cost: 0 }] } : { key });
     if (!data.valid) {
       if (dbReady && data.code !== "RATE_LIMITED") kv().del(cacheKey(key)).catch(() => {});
       return { plan: "none", code: data.code };

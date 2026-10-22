@@ -764,13 +764,20 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
   return server;
 }
 
+/* The brake (60 a minute on a key) counts tool calls only. A handshake, tools/list, a ping or a notification is
+   verified at no cost, so a client that reconnects or lists often cannot lock its own key out of the tools. */
 async function handle(req: Request) {
-  const { plan, reason, keyRef, stale } = await resolvePlan(req);
+  let body: string | undefined, counts = false;
+  if (req.method === "POST") {
+    body = await req.text();
+    try { const msg = JSON.parse(body) as { method?: string } | { method?: string }[]; counts = (Array.isArray(msg) ? msg : [msg]).some((m) => m?.method === "tools/call"); } catch { counts = false; }
+  }
+  const { plan, reason, keyRef, stale } = await resolvePlan(req, { count: counts });
   const server = build(plan, reason, keyRef, stale);
   const transport = new WebStandardStreamableHTTPServerTransport({ sessionIdGenerator: undefined, enableJsonResponse: true });
   await server.connect(transport);
   try {
-    return await transport.handleRequest(req);
+    return await transport.handleRequest(body === undefined ? req : new Request(req.url, { method: req.method, headers: req.headers, body }));
   } finally {
     void transport.close();
     void server.close();
@@ -781,5 +788,6 @@ async function handle(req: Request) {
 export const maxDuration = 60;
 
 export async function POST(req: Request) { return handle(req); }
-export async function GET(req: Request) { return handle(req); }
+/* stateless: there is no server-initiated stream to open, so a GET is answered at once and never verified */
+export async function GET() { return new Response(null, { status: 405, headers: { allow: "POST, DELETE" } }); }
 export async function DELETE(req: Request) { return handle(req); }
