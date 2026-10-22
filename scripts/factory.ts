@@ -201,9 +201,15 @@ for (const e of queue) {
     if (!existsSync(path.join(dir, "index.html"))) { roundRows.push({ round, minutes: Number(((Date.now() - tr) / 60000).toFixed(1)), turns: out.num_turns ?? null, costUsd: out.total_cost_usd ?? 0, judgeUsd: 0, ended: sessionEnded, score: null, rank: null, allPass: false, rubric: null, motion: null, kept: false }); console.log(`  round ${round}: no file written (${sessionEnded})`); continue; }
 
     /* the judge, once per round */
-    const check = bun("scripts/check-build.ts", [e.slug, "--judge", "--judge-model", JUDGE_MODEL, "--judge-votes", VOTES]);
-    if (check.status !== 0) console.error(check.stderr.slice(-600));
-    const v = existsSync(path.join(dir, "verdict.json")) ? (JSON.parse(readFileSync(path.join(dir, "verdict.json"), "utf8")) as VerdictFile) : null;
+    /* the judge, once per round; a run that dies before judging (a runtime crash under load) is retried, never scored as zero */
+    const judgeOnce = () => {
+      const c = bun("scripts/check-build.ts", [e.slug, "--judge", "--judge-model", JUDGE_MODEL, "--judge-votes", VOTES]);
+      const vf = existsSync(path.join(dir, "verdict.json")) ? (JSON.parse(readFileSync(path.join(dir, "verdict.json"), "utf8")) as VerdictFile) : null;
+      return { c, vf, ok: Boolean(vf && (!rubric || vf.judge)) };
+    };
+    let j = judgeOnce();
+    for (let tries = 1; !j.ok && tries < 3; tries++) { console.error(`  judge did not finish (status ${j.c.status}, signal ${j.c.signal ?? "none"}): ${(j.c.stderr || "").slice(-300)}; retrying`); j = judgeOnce(); }
+    const v = j.ok ? j.vf : null;
     copyFileSync(path.join(dir, "index.html"), path.join(dir, "rounds", `round-${round}.html`));
     if (v) copyFileSync(path.join(dir, "verdict.json"), path.join(dir, "rounds", `round-${round}.verdict.json`));
     if (existsSync(path.join(dir, "side.png"))) copyFileSync(path.join(dir, "side.png"), path.join(dir, "rounds", `round-${round}.side.png`));
