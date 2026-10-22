@@ -2,7 +2,11 @@ import { McpServer, type RegisteredTool } from "@modelcontextprotocol/sdk/server
 import { WebStandardStreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js";
 import { z } from "zod";
 import { CATEGORIES, METHOD, NOTES, RECIPES, SECTION_NAMES, briefFor, facets, publicEntry, recipeFor, searchEntries, similarEntries } from "@/lib/registry";
-import { compareBuild } from "@/lib/compare";
+import { changedArea, compareBuild, contentBox, diffView, motionRead, raw } from "@/lib/compare";
+import { IMAGERY_RULE, SAMPLING_RULE, rubricFor } from "@/lib/rubrics";
+import { JUDGE_DELEGATION, JUDGE_INSTRUCTION, JUDGE_SCHEMA, judgeTile, packSheets } from "@/lib/judge";
+import { kv, dbReady } from "@/lib/db";
+import { randomBytes } from "node:crypto";
 import { REBUILDS, FACTORY, rebuildFor, REBUILD_SLUGS, factoryNotes } from "@/lib/rebuilds";
 import { bump } from "@/lib/demand";
 import { draftFor } from "@/lib/drafts";
@@ -54,7 +58,7 @@ async function loadFrame(poster: string): Promise<{ data: string; mimeType: stri
 /* Which plan flag each paid tool needs. On a paid key the tools its plan lacks are hidden from tools/list, so an agent
    only sees what it can call; the instructions name what the next plan adds. A keyless request sees everything, each
    call answering with the pointer to pricing. */
-const LOCK: Record<string, keyof (typeof LIMITS)["pro"]> = { get_recipe: "recipes", see_design: "media", look_at: "media", measure: "media", check_rebuild: "media", check_media: "media", get_rebuild: "source" };
+const LOCK: Record<string, keyof (typeof LIMITS)["pro"]> = { get_recipe: "recipes", see_design: "media", look_at: "media", measure: "media", check_rebuild: "media", judge_rebuild: "media", check_media: "media", get_rebuild: "source" };
 /* the notes an agent can read: the hand-written ones, then what the factory learned rebuilding entries */
 const allNotes = () => [...NOTES, ...factoryNotes()];
 const NEEDS: Record<string, string> = { recipes: "Pro", media: "Pro", source: "Max" };
@@ -75,7 +79,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
         "Reach for it when asked to design, redesign, polish or rebuild UI, or for inspiration and reference: search_designs to find, see_design to look at the frame or a keyframe, get_brief or get_recipe for how to rebuild, check_rebuild to test your render against the reference, similar_designs to widen, list_notes for guidance. " +
         "A measured recipe is data: frame, elements with boxes, timing, states, keyframes and checks. Build from it as fact, render, call check_rebuild, fix what it reports; that is one pass instead of rounds of feedback. " +
         "Every other clip carries a draft measurement in get_brief: phases, moves and palette measured from the clip, boxes as a first pass; its keyframes work with see_design and check_rebuild too. " +
-        "look_at is how a catalogue clip is measured rather than remembered: its contact sheet, the frame at any moment, a crop beside your own render, exact colours along a line, an edge tracked per frame. For a clip or still that is not in the catalogue (the user's own video, a URL), measure does the same from that file: a draft measurement first, then the same reads, and a check of your render against any moment. look_at, see_design and check_rebuild work on entries only. " +
+        "look_at is how a catalogue clip is measured rather than remembered: its contact sheet, the frame at any moment, what changed between two moments, a crop beside your own render, exact colours along a line, an edge tracked per frame. Where an entry carries a rubric (get_brief says so) the checklist is the goal: check_rebuild with several screenshots reads pixels and motion, and judge_rebuild composes the evidence for a judge you run on your own model; a rebuild is done when every criterion passes, not at a score. For a clip or still that is not in the catalogue (the user's own video, a URL), measure does the same from that file: a draft measurement first, then the same reads, and a check of your render against any moment. look_at, see_design and check_rebuild work on entries only. " +
         "To design something new rather than rebuild, the remix prompt takes two or three entries and a purpose and borrows their principles, proportions and timing, not their pixels; the notes are the transferable part. " +
         "Every tool needs a key (Starter $1/mo at /pricing); see_design, look_at, get_recipe, check_rebuild and check_media need Pro; get_rebuild, the finished source, needs Max. " +
         (plan === "none" ? "" : `This key is ${PLAN_NAME[plan]}. `) +
@@ -257,7 +261,15 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       if (br && !br.ok) return tooWide(br);
       bump(e.slug, "agent");
       const brief = briefFor(e);
-      return text(brief.draft ? { ...brief, issued: { to: fingerprint(keyRef), on: new Date().toISOString().slice(0, 10) } } : brief);
+      const rb = rubricFor(e);
+      const rubric = rb
+        ? { written: rb.written, summary: rb.summary, criteria: rb.criteria, elements: rb.elements, moves: rb.moves,
+            moments: [...new Set(rb.criteria.flatMap((c) => [c.at, ...(c.then == null ? [] : [c.then])]))].sort((a, b) => a - b),
+            imagery: rb.imagery.map((m) => ({ ...m, rule: m.class === "photo" && rb.licensed ? "licensed by the designer for this entry: the clip's pixels may be sampled; say so in the file" : IMAGERY_RULE[m.class] })),
+            how: "every criterion must be true of your file; the judge looks at a crop of the clip beside the same crop of your render at the moment named (two for motion). Render at the moments listed, call check_rebuild with those screenshots for pixels and motion, then judge_rebuild for the checklist. Done means every criterion passes and your render moves where the clip moves." }
+        : null;
+      const policy = { imagery: IMAGERY_RULE, sampling: SAMPLING_RULE, rubric: rb ? "this entry has a rubric: see rubric" : "no rubric yet for this entry: judge by the crops (look_at what=zoom) and the brief's moments; the sampling and imagery rules still apply" };
+      return text(brief.draft ? { ...brief, rubric, policy, issued: { to: fingerprint(keyRef), on: new Date().toISOString().slice(0, 10) } } : { ...brief, rubric, policy });
     },
   );
 
@@ -298,17 +310,17 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     "look_at",
     {
       title: "Look at a clip the way it was measured",
-      description: "Frames and numbers from the clip itself, at full size, not impressions. what=sheet: a contact sheet, the whole clip at 2 fps, or with span [a, b] (seconds, up to 4 s) that stretch at 10 fps in 6 columns, read left to right then down, so you see what moves and in what order before you decide a timeline. what=frame with at (seconds): the clip's frame at that moment. what=zoom with at and box [x, y, w, h] in frame pixels: that crop enlarged, the judge of edges, radii, gradients, shadows and gaps; add image (base64 PNG or JPEG of your own render at that moment, any size) to get your crop beside it. what=colors with at and col (an x) or row (a y) plus from and to: one hex per frame pixel along that line, the true colour of a border, a gradient or a gap. what=track with col or row, span [a, b] (up to 4 s) and cls (red, dark or light): per frame at the clip's own rate, the first and last pixel of that colour along the line, only where it changed, so a motion reads as start, end, distance and shape; track a heading too, since if it moves the page reflows. Clips only. Needs Pro; metered like see_design.",
+      description: "Frames and numbers from the clip itself, at full size, not impressions. what=sheet: a contact sheet, the whole clip at 2 fps, or with span [a, b] (seconds, up to 4 s) that stretch at 10 fps in 6 columns, read left to right then down, so you see what moves and in what order before you decide a timeline. what=frame with at (seconds): the clip's frame at that moment. what=diff with span [a, b]: the clip at a, at b, and what changed between them in white, cropped to the content, with the share of the frame that changed and where: which thing moves and which only has something pass over it, read before you decide a timeline. what=zoom with at and box [x, y, w, h] in frame pixels: that crop enlarged, the judge of edges, radii, gradients, shadows and gaps; add image (base64 PNG or JPEG of your own render at that moment, any size) to get your crop beside it. what=colors with at and col (an x) or row (a y) plus from and to: one hex per frame pixel along that line, the true colour of a border, a gradient or a gap. what=track with col or row, span [a, b] (up to 4 s) and cls (red, dark or light): per frame at the clip's own rate, the first and last pixel of that colour along the line, only where it changed, so a motion reads as start, end, distance and shape; track a heading too, since if it moves the page reflows. Clips only. Needs Pro; metered like see_design.",
       inputSchema: {
         slug: z.string(),
-        what: z.enum(["sheet", "frame", "zoom", "colors", "track"]),
+        what: z.enum(["sheet", "frame", "diff", "zoom", "colors", "track"]),
         at: z.union([z.number(), z.string()]).optional().describe("seconds into the clip, or a keyframe name from the brief such as kf2"),
         box: z.array(z.number()).length(4).optional().describe("[x, y, w, h] in frame pixels, for zoom"),
         col: z.number().optional().describe("x of the column to read, for colors"),
         row: z.number().optional().describe("y of the row to read, for colors"),
         from: z.number().optional(), to: z.number().optional(),
         image: z.string().optional().describe("base64 of your render at that moment, for zoom: shown beside the clip's crop"),
-        span: z.array(z.number()).length(2).optional().describe("[from, to] in seconds, for sheet (10 fps) and track; at most 4 s"),
+        span: z.array(z.number()).length(2).optional().describe("[from, to] in seconds, for sheet (10 fps) and track, at most 4 s; for diff, the two moments to compare"),
         cls: z.enum(["red", "dark", "light"]).optional().describe("the colour class to track; default dark"),
       },
       annotations: ro,
@@ -358,6 +370,18 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
         const lines = await trackEdge(clip, info, col !== undefined ? "col" : "row", Math.round((col ?? row!) * (col !== undefined ? k : info.height / H)), span[0], span[1], cls ?? "dark");
         const frames = lines.map((l) => ({ at: l.at, first: l.first < 0 ? -1 : Math.round(l.first * kb), last: l.last < 0 ? -1 : Math.round(l.last * kb) }));
         return text({ slug, track: { along: col !== undefined ? `x=${col}` : `y=${row}`, span, cls: cls ?? "dark", fps: info.fps, clip: `${info.width}x${info.height}, read in ${W}x${H} frame pixels`, read: "first and last pixel of that colour along the line per frame, only the frames where they moved; a motion reads as start, end, distance and shape" }, frames, usage: u });
+      }
+      if (what === "diff") {
+        if (!clip) return text({ error: "the clip could not be read right now; try again" });
+        if (!span || span[0] < 0 || span[1] < 0 || span[0] > draft.duration + 0.5 || span[1] > draft.duration + 0.5 || span[0] === span[1]) return text({ error: `diff needs span [a, b]: two different moments within the ${draft.duration}s clip` });
+        const u = await charge(keyRef, plan, "look_at");
+        if (u && !u.ok) return spent("look_at", u);
+        bump(e.slug, "agent");
+        const [fa, fb] = await Promise.all(span.map((t) => frameAt(clip, Math.max(0, Math.min(draft.duration, t)))));
+        const v = await diffView(fa, fb, draft.background);
+        const k = W / v.size.w;
+        const inFrame = (b: number[] | null) => b && b.map((n) => Math.round(n * k));
+        return { content: [{ type: "image" as const, data: v.image.toString("base64"), mimeType: "image/jpeg" }, { type: "text" as const, text: JSON.stringify({ slug, diff: { span, panels: `the clip at ${span[0]}s, at ${span[1]}s, and what changed (white = changed), cropped to frame box ${JSON.stringify(inFrame(v.crop))} at ${v.scale.toFixed(2)}x`, changed: `${v.changed}% of the frame`, changedBox: inFrame(v.changedBox), read: "the white shapes are the things that move; a region white only along an edge had something pass over it; a thing that stays black does not move even if the draft's motion rows say it does" }, usage: u }, null, 2) }] };
       }
       if (at === undefined) return text({ error: `${what} needs at (seconds)`, stored: stored.map((f) => f.at) });
       const u = await charge(keyRef, plan, "look_at");
@@ -411,7 +435,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
         box: z.array(z.number()).length(4).optional().describe("[x, y, w, h] in the clip's pixels, for zoom"),
         col: z.number().optional(), row: z.number().optional(), from: z.number().optional(), to: z.number().optional(),
         image: z.string().optional().describe("base64 PNG or JPEG of your render, for zoom (beside the clip's crop) and check (scored against the frame)"),
-        span: z.array(z.number()).length(2).optional().describe("[from, to] in seconds, for sheet (10 fps) and track; at most 4 s"),
+        span: z.array(z.number()).length(2).optional().describe("[from, to] in seconds, for sheet (10 fps) and track, at most 4 s; for diff, the two moments to compare"),
         cls: z.enum(["red", "dark", "light"]).optional(),
       },
       annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: true },
@@ -482,21 +506,55 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     "check_rebuild",
     {
       title: "Check a rebuild against the reference",
-      description: "Send a screenshot of your build (base64 PNG or JPEG, any size; it is resized to the frame) for any measured entry: a recipe, or a draft (every clip has one). Returns a 0..100 score (detail-weighted: edges, text and texture count up to ten times a flat field, with two pixels of tolerance; a close rebuild sits near 70, a wrong one under 20), the five elements whose mean colour differs most (reference vs yours), and the three grid regions that differ most with the elements under them. Use it after building, then fix the top differences and call again. Moving elements are only compared at the first keyframe. Paid.",
+      description: "Send a screenshot of your build (base64 PNG or JPEG, any size; it is resized to the frame) for any measured entry: a recipe, or a draft (every clip has one). Returns a 0..100 score (detail-weighted: edges, text and texture count up to ten times a flat field, with two pixels of tolerance; a close rebuild sits near 70, a wrong one under 20), the five elements that differ most (reference colour vs yours, deltaE in Lab where under 2 is invisible and 20 a different colour, the shift that would close the gap, and a cause: misplaced, wrong colour or a different drawing), and the three grid regions that differ most with the elements under them. The score is a floor, not the goal: it cannot tell a drawn ring from a glass lens or dim type from white type, so zoom (look_at what=zoom) the elements it names and judge the crops. Use it after building, then fix the top differences and call again. Moving elements are only compared at the first keyframe. Paid.",
       inputSchema: {
         slug: z.string(),
-        image: z.string().describe("base64 of a PNG or JPEG screenshot of your build, cropped to the recipe's frame (its crop box when it has one)"),
+        image: z.string().optional().describe("base64 of a PNG or JPEG screenshot of your build, cropped to the recipe's frame (its crop box when it has one); or pass images instead"),
         at: z.union([z.string(), z.number()]).optional().describe("the keyframe your screenshot shows (a name; default the first, the rest state), or a time in seconds for a clip: the frame is pulled from the clip itself, so any mid-motion moment can be checked"),
+        images: z.array(z.object({ at: z.number(), image: z.string() })).min(2).max(6).optional().describe("instead of image and at: two to six screenshots of your render at different moments (seconds), for a clip. Each is scored against the clip's frame at its moment, and consecutive pairs are compared for motion: does your render change where the clip changes. Prefer the rubric's moments from get_brief"),
       },
       annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
     },
-    async ({ slug, image, at }) => {
+    async ({ slug, image, at, images }) => {
       if (!lim.media) return gated("check_rebuild", plan, reason);
       const e = entryFor(slug);
       const recipe = e ? recipeFor(e) : undefined, draft = e && !recipe ? draftFor(e) : undefined;
       if (!e || (!recipe && !draft)) return text({ error: `No measurement for ${slug}`, measured: RECIPES.map((r) => r.slug) });
       const br = await touchEntry(keyRef, plan, e.slug);
       if (br && !br.ok) return tooWide(br);
+      if (images && images.length) {
+        /* several moments: pixels per moment, and motion between them */
+        if (!draft) return text({ error: "images needs a clip entry with a draft measurement; for a recipe pass image and at" });
+        if (images.some((m) => m.image.length > 8_000_000)) return text({ error: "keep each screenshot under 6 MB" });
+        const id = clipId(e);
+        const clip = id && e.video ? await cachedClip(id, e.video.src).catch(() => null) : null;
+        if (!clip) return text({ error: "the clip could not be read right now; try again" });
+        const u = await charge(keyRef, plan, "check_rebuild");
+        if (u && !u.ok) return spent("check_rebuild", u);
+        bump(e.slug, "agent");
+        const W = draft.frame.w, H = draft.frame.h;
+        const els = draft.elements.map((d, i) => ({ name: `draft ${i + 1} ${d.fill}`, box: d.box, fill: d.fill }));
+        const sorted = [...images].sort((a, b) => a.at - b.at).map((m) => ({ ...m, at: Math.max(0, Math.min(draft.duration, m.at)) }));
+        const moments: { at: number; score: number; elements: unknown[]; regions: unknown[] }[] = [];
+        const changes: { from: number; to: number; clip: number; render: number; read: string }[] = [];
+        let prev: { at: number; ref: Buffer; sub: Buffer } | null = null;
+        for (const m of sorted) {
+          const refPng = await frameAt(clip, m.at);
+          const tmp = path.join(tmpdir(), `lookap-ref-${process.pid}-${Math.random().toString(36).slice(2)}.png`);
+          await writeFile(tmp, refPng);
+          const sub = Buffer.from(m.image.replace(/^data:[^,]+,/, ""), "base64");
+          const r = await compareBuild(tmp, sub, draft.frame, els, m === sorted[0]);
+          moments.push({ at: m.at, score: r.score, elements: r.elements.slice(0, 3), regions: r.regions.slice(0, 2) });
+          const [rawRef, rawSub] = await Promise.all([raw(refPng, W, H), raw(sub, W, H)]);
+          if (prev) { const c = changedArea(prev.ref, rawRef, W, H), sr = changedArea(prev.sub, rawSub, W, H); changes.push({ from: prev.at, to: m.at, clip: c, render: sr, read: motionRead(c, sr) }); }
+          prev = { at: m.at, ref: rawRef, sub: rawSub };
+        }
+        const still = changes.filter((c) => c.read === "render still where the clip moves");
+        const clipMoves = changes.some((c) => c.clip > 0.3), renderMoves = changes.some((c) => c.render > 0.3);
+        const motion = !clipMoves ? "the clip does not move between these moments; pick moments inside a measured phase (get_brief lists them)" : !renderMoves ? "STATIC: the clip moves between these moments and your render does not; the timeline is missing or not seekable (use CSS animations or element.animate started at load, no timers)" : still.length ? `your render stays still in ${still.length} of ${changes.length} spans where the clip moves` : "your render changes where the clip changes";
+        return text({ slug, measured: "draft", score: Math.round(moments.reduce((s, m) => s + m.score, 0) / moments.length), moments, motion: { read: motion, changes, scale: "clip and render are the share of the frame whose colour changed between the two moments, in percent" }, usage: u, reading: "score per moment as for a single image; the motion block is what one screenshot cannot show. The score is a floor: zoom (look_at what=zoom with your image) the elements named, and run judge_rebuild for the checklist when the entry has a rubric" });
+      }
+      if (!image) return text({ error: "pass image (one screenshot, with at) or images (two to six, each with its moment)" });
       if (image.length > 8_000_000) return text({ error: "Image too large: keep the screenshot under 6 MB" });
       const frames = recipe?.keyframes ?? draft!.keyframes;
       /* a time in seconds: the reference is the clip's own frame at that moment, written beside the stored ones */
@@ -522,10 +580,98 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
         const ref = kf.src.startsWith("/") && !kf.src.startsWith(tmpdir()) ? path.join(process.cwd(), "public", kf.src.replace(/^\//, "")) : kf.src;
         const result = await compareBuild(ref, buf, frame, elements, kf === frames[0]);
         const checks = recipe ? recipe.checks.filter((c) => c.at === kf.name).map((c) => c.check) : ["draft: the regions are reliable; the element rows use first-pass boxes, so weigh them by eye"];
-        return text({ slug, keyframe: kf.name, measured: recipe ? "recipe" : "draft", ...result, scale: "since 2026-10-22 the score weighs edges, text and texture up to ten times a flat field and judges each pixel against the closest match within two pixels: a close rebuild sits near 70, a wrong one under 20; files scored before read higher on the old scale", checks, usage: u, reading: "score is 0..100 for the whole frame; overall is the mean weighted per-channel difference behind it (0 identical, 40 and more a different picture); each element row gives delta (its own difference), colour (mean colour gap), shift (how far your box sits from the reference, if moving it helps) and a cause: misplaced, wrong colour, or a different drawing; delta is the mean per-channel difference over the box, 0 identical; fix the largest elements first, then the regions; the checks are what to verify by eye or by measuring your own render" });
+        return text({ slug, keyframe: kf.name, measured: recipe ? "recipe" : "draft", ...result, scale: "since 2026-10-22 the score weighs edges, text and texture up to ten times a flat field and judges each pixel against the closest match within two pixels: a close rebuild sits near 70, a wrong one under 20; files scored before read higher on the old scale", checks, usage: u, reading: "score is 0..100 for the whole frame; overall is the mean weighted per-channel difference behind it (0 identical, 40 and more a different picture); each element row gives delta (its own difference), colour (mean colour gap), deltaE (the same gap in Lab: under 2 invisible, 5 a shade, 20 a different colour), shift (how far your box sits from the reference, if moving it helps) and a cause: misplaced, wrong colour, or a different drawing; delta is the mean per-channel difference over the box, 0 identical; fix the largest elements first, then the regions; the checks are what to verify by eye or by measuring your own render" });
       } catch (err) {
         return text({ error: err instanceof Error ? err.message : "compare failed" });
       }
+    },
+  );
+
+  reg(
+    "judge_rebuild",
+    {
+      title: "Judge a rebuild against its rubric",
+      description: "The checklist, judged by a model you run, on evidence lookap composes: for every criterion, a crop of the clip beside the same crop of your render at the criterion's moment (two rows for motion), packed into a few sheets. No screenshot or sheet passes through your context as base64. Call it once without a token: you get a token, the moments to render, and an upload address for curl. Render your page at the frame size at each moment, PUT each screenshot to the address, then call again with the token: you get the sheet links, the criteria per sheet, the judge instruction and the output schema. Run the judge as a subagent on your strongest vision model (not the one that wrote the file) with only those, fix every no, and repeat. Needs an entry with a rubric (get_brief says) and Pro; metered as a rebuild check.",
+      inputSchema: {
+        slug: z.string(),
+        token: z.string().optional().describe("the token from the first call, once the screenshots are uploaded"),
+        inline: z.boolean().optional().describe("with the token: also return the sheets as images in this result, for a client that cannot fetch a link; this spends your own context on them, so leave it off when you can run curl"),
+      },
+      annotations: { readOnlyHint: false, idempotentHint: false, openWorldHint: false },
+    },
+    async ({ slug, token, inline }, extra) => {
+      if (!lim.media) return gated("judge_rebuild", plan, reason);
+      const e = entryFor(slug);
+      if (!e) return text({ error: `No entry ${slug}` });
+      const rb = rubricFor(e), draft = draftFor(e);
+      if (!rb || !draft) return text({ error: `${slug} has no rubric yet; check_rebuild with several screenshots and look_at what=zoom are the checks for it` });
+      if (!dbReady) return text({ error: "the judge's store is not configured on this server" });
+      const br = await touchEntry(keyRef, plan, e.slug);
+      if (br && !br.ok) return tooWide(br);
+      const W = rb.frame.w, H = rb.frame.h;
+      const need = [...new Set(rb.criteria.flatMap((c) => [c.at, ...(c.then == null ? [] : [c.then])]).map((t) => Number(t.toFixed(2))))].sort((a, b) => a - b);
+      const origin = (() => { try { const h = (extra as { requestInfo?: { headers?: Record<string, string | string[] | undefined> } }).requestInfo?.headers ?? {}; const host = String(h["x-forwarded-host"] ?? h["host"] ?? ""); const proto = String(h["x-forwarded-proto"] ?? (host.startsWith("localhost") ? "http" : "https")); return host ? `${proto}://${host}` : "https://lookap.saidev.codes"; } catch { return "https://lookap.saidev.codes"; } })();
+      if (!token) {
+        const t = randomBytes(12).toString("hex");
+        await kv().set(`judge:${t}`, { slug: e.slug, w: W, h: H, mark: fingerprint(keyRef) }, { ex: 900 });
+        return text({
+          slug, token: t, expires: "15 minutes",
+          render: { frame: `${W}x${H}`, moments: need, how: "open your file at exactly the frame size with ?demo=1, seek every animation to the moment (document.getAnimations().forEach(a => { a.pause(); a.currentTime = t * 1000 })), wait 150 ms, screenshot; one PNG per moment" },
+          upload: { address: `${origin}/api/judge/${t}/<moment>`, how: need.map((t2) => `curl -s -T shot-${t2}.png ${origin}/api/judge/${t}/${t2}`), uploaded: `${origin}/api/judge/${t}/shots` },
+          then: `call judge_rebuild again with slug and token ${t}`,
+          criteria: rb.criteria.length,
+        });
+      }
+      if (!/^[a-f0-9]{24}$/.test(token)) return text({ error: "bad token" });
+      const tk = (await kv().get<{ slug: string; mark: string }>(`judge:${token}`)) ?? null;
+      if (!tk || tk.slug !== e.slug) return text({ error: "token unknown, expired or for another entry: call judge_rebuild without a token for a new one" });
+      const ats = ((await kv().smembers(`judge:${token}:ats`)) as string[]).map(Number).sort((a, b) => a - b);
+      if (!ats.length) return text({ error: "no screenshots uploaded yet", upload: `${origin}/api/judge/${token}/<moment>`, moments: need });
+      const id = clipId(e);
+      const clip = id && e.video ? await cachedClip(id, e.video.src).catch(() => null) : null;
+      if (!clip) return text({ error: "the clip could not be read right now; try again" });
+      const u = await charge(keyRef, plan, "check_rebuild");
+      if (u && !u.ok) return spent("check_rebuild", u);
+      bump(e.slug, "agent");
+      const info = await clipInfo(clip);
+      const k = info.width / W;
+      const have = (t: number) => ats.find((a) => Math.abs(a - t) <= 0.2);
+      const frames = new Map<number, Buffer>(), shots = new Map<number, Buffer>();
+      const clipAt = async (t: number) => { let f = frames.get(t); if (!f) { f = await frameAt(clip, t); frames.set(t, f); } return { frame: f, k }; };
+      const renderAt = async (t: number) => { const a = have(t)!; let s2 = shots.get(a); if (!s2) { const b64 = (await kv().get<string>(`judge:${token}:shot:${a}`)) ?? ""; s2 = Buffer.from(b64, "base64"); shots.set(a, s2); } return s2; };
+      const ready = rb.criteria.filter((c) => have(c.at) !== undefined && (c.then == null || have(c.then) !== undefined));
+      const missing = rb.criteria.filter((c) => !ready.includes(c));
+      /* whole-frame criteria look at the design, not the canvas around it */
+      const first = await clipAt(ready[0]?.at ?? draft.keyframes[0].at);
+      const cb = await contentBox(first.frame, draft.background);
+      const frameBox = cb.map((n) => Math.round(n / k)) as [number, number, number, number];
+      const tiles: { id: string; png: Buffer }[] = [];
+      for (const c of ready.slice(0, 60)) tiles.push({ id: c.id, png: await judgeTile(c, W, H, clipAt, renderAt, 420, frameBox) });
+      const sheets = await packSheets(tiles, 1600, 1600, 70);
+      await Promise.all(sheets.map((sh, i) => kv().set(`judge:${token}:sheet:${i + 1}`, sh.jpeg.toString("base64"), { ex: 900 })));
+      const photo = new Set(rb.imagery.filter((m) => m.class === "photo").map((m) => m.name.toLowerCase()));
+      const policy = (c: (typeof rb.criteria)[number]) => !rb.licensed && photo.has(c.element.toLowerCase()) && !["imagery", "position", "motion"].includes(c.axis);
+      /* motion from the uploads, as check_rebuild reads it */
+      const changes: { from: number; to: number; clip: number; render: number; read: string }[] = [];
+      let prev: { at: number; ref: Buffer; sub: Buffer } | null = null;
+      for (const a of ats.slice(0, 8)) {
+        const [rr, rs] = await Promise.all([raw((await clipAt(a)).frame, W, H), raw(await renderAt(a), W, H)]);
+        if (prev) { const c = changedArea(prev.ref, rr, W, H), s2 = changedArea(prev.sub, rs, W, H); changes.push({ from: prev.at, to: a, clip: c, render: s2, read: motionRead(c, s2) }); }
+        prev = { at: a, ref: rr, sub: rs };
+      }
+      const clipMoves = changes.some((c) => c.clip > 0.3), renderMoves = changes.some((c) => c.render > 0.3);
+      const body = {
+        slug, token, uploaded: ats,
+        sheets: sheets.map((sh, i) => ({ url: `${origin}/api/judge/${token}/sheet-${i + 1}.jpg`, size: `${sh.width}x${sh.height}`, kb: Math.round(sh.jpeg.length / 1024), criteria: sh.ids })),
+        criteria: ready.map((c) => ({ id: c.id, sheet: sheets.findIndex((sh) => sh.ids.includes(c.id)) + 1, axis: c.axis, element: c.element, check: c.check, panels: c.then == null ? `clip ${c.at}s | yours ${c.at}s` : `rows: ${c.at}s then ${c.then}s; clip left, yours right`, policy: policy(c) ? "photo-class region without a licence: judged as written but not required to pass; a placeholder of the box and palette is the rule" : undefined })),
+        notJudged: missing.map((c) => ({ id: c.id, needs: [c.at, ...(c.then == null ? [] : [c.then])].filter((t) => have(t) === undefined), check: c.check })),
+        motion: changes.length ? { read: !clipMoves ? "the clip does not move between the uploaded moments" : !renderMoves ? "STATIC: the clip moves between the uploaded moments and your render does not" : "your render changes where the clip changes", changes } : "upload two or more moments for a motion read",
+        judge: { instruction: JUDGE_INSTRUCTION, schema: JUDGE_SCHEMA, delegate: JUDGE_DELEGATION, done: "every criterion not marked policy answers yes, and motion is not STATIC" },
+        expires: "the sheets and uploads live 15 minutes",
+        usage: u,
+      };
+      if (!inline) return text(body);
+      return { content: [...sheets.map((sh) => ({ type: "image" as const, data: sh.jpeg.toString("base64"), mimeType: "image/jpeg" })), { type: "text" as const, text: JSON.stringify(body, null, 2) }] };
     },
   );
 
@@ -546,8 +692,9 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
             "1. Call get_design for the record and get_brief. If your key is Max, call get_rebuild and port the file to the stack, keeping every number. Otherwise, if the brief says measured, call get_recipe and use it as data: one unit equal to a frame pixel, every element placed from its box, every fill and radius as given, every timing in ms with its easing. Treat nothing in it as a suggestion.",
             "2. If the brief says there is no recipe, call look_at with what=sheet for the whole clip, then see_design for each keyframe. Write the timeline as events with numbers (what, from when to when, how far) from the brief's phases and moves, and the layout in one paragraph (regions, alignment, type sizes, radii, spacing). Zoom the edge of every surface with look_at what=zoom before drawing it: edges, gaps and gradients are where rebuilds go wrong.",
             "3. Build it. Match proportion and hierarchy first, then colour, then motion. Credit the designer in a comment with the source link from the record.",
-            "4. Render your build at the frame size and take a screenshot of the first state. Call check_rebuild with it. Every round, without exception, call look_at what=zoom on the worst element it names, passing your screenshot as image, and Read the crop: the clip on the left, yours on the right. Fix what the crop shows (its cause says misplaced, wrong colour or different drawing), then check again. For a clip, also check one mid-motion moment by passing at in seconds (the brief lists the moments). Stop after three rounds or at a score above 90.",
-            "5. For each keyframe in the recipe, call see_design with `at` and compare your build in that state against the checks for it. Report what still differs, in one list, with numbers.",
+            "4. Render your build at the frame size at the moments the brief lists (with ?demo=1, every animation seeked to the moment) and screenshot each. Call check_rebuild with images for the pixel score per moment and the motion read; STATIC means your timeline is missing or not seekable. Every round, call look_at what=zoom on the worst element it names with your screenshot as image, and Read the crop: the clip on the left, yours on the right. Fix what the crop shows, then check again. The score is a floor, never the goal.",
+            "5. When the brief carries a rubric: call judge_rebuild for a token, upload the same screenshots with curl as it says, call judge_rebuild again with the token, and run the judge as it says: a subagent on your strongest vision model, given only the sheet links, the criteria and the instruction. Fix every criterion it answers no, re-render, upload and judge again. Done means every criterion passes and the render moves where the clip moves; after three judged rounds stop and report what still fails, with the judge's words. Photo-class imagery is stood in, never copied, unless the brief says the designer licensed it.",
+            "6. For each keyframe in the recipe, call see_design with `at` and compare your build in that state against the checks for it. Report what still differs, in one list, with numbers.",
           ].join("\n"),
         },
       }],
@@ -607,7 +754,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     async () => {
       if (plan === "none") return gated("get_usage", plan, reason);
       const usage = keyRef ? await usageFor(keyRef, plan) : { today: { used: 0, limit: DAILY[plan], resets: "" }, entries: { used: 0, limit: BREADTH[plan], resets: "" }, month: {} };
-      return text({ plan: PLAN_NAME[plan], today: usage.today, entriesToday: usage.entries, quotas: usage.month, unmetered: Object.keys(LOCK).filter((t) => lim[LOCK[t]] && !QUOTAS[plan][t]).concat(["search_designs", "get_design", "get_brief", "similar_designs", "list_notes", "get_note", "get_method"]), notOnThisPlan: hidden, upgrade: hidden.length ? "/pricing" : null });
+      return text({ plan: PLAN_NAME[plan], today: usage.today, entriesToday: usage.entries, quotas: usage.month, unmetered: Object.keys(LOCK).filter((t) => lim[LOCK[t]] && !QUOTAS[plan][t] && t !== "judge_rebuild").concat(["search_designs", "get_design", "get_brief", "similar_designs", "list_notes", "get_note", "get_method"]), sharedMeters: { judge_rebuild: "check_rebuild" }, notOnThisPlan: hidden, upgrade: hidden.length ? "/pricing" : null });
     },
   );
 

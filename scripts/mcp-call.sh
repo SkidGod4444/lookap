@@ -6,8 +6,8 @@
 #   scripts/mcp-call.sh look_at '{"slug":"...","what":"frame","at":2.4}' --image out.jpg   (images land in the file)
 # The key is the one Claude Code already holds for this server (~/.claude.json); it is never printed.
 set -e
-H=https://lookap.saidev.codes/api/mcp
-KEY=$(python3 -c "import json,os; c=json.load(open(os.path.expanduser('~/.claude.json'))); print(c['mcpServers']['lookap']['headers']['Authorization'].split(' ',1)[1])")
+H=${LOOKAP_MCP:-https://lookap.saidev.codes/api/mcp}
+KEY=${LOOKAP_KEY:-$(python3 -c "import json,os; c=json.load(open(os.path.expanduser('~/.claude.json'))); print(c['mcpServers']['lookap']['headers']['Authorization'].split(' ',1)[1])")}
 IMG=""; ARGS=(); for a in "$@"; do if [ "$PREV" = "--image" ]; then IMG="$a"; PREV=""; continue; fi; if [ "$a" = "--image" ]; then PREV="--image"; continue; fi; ARGS+=("$a"); done
 rpc() { curl -s --max-time 90 -X POST $H -H "content-type: application/json" -H "accept: application/json, text/event-stream" -H "authorization: Bearer $KEY" -d "$1" | sed 's/^data: //' | grep '^{' | head -1; }
 if [ "${ARGS[0]}" = "--list" ]; then
