@@ -139,7 +139,7 @@ export function AgentPrompts({ slug, title, rebuilt = false, react = false }: { 
           {plan === "none" && (
             <div className="flex flex-col gap-2 p-3">
               <p className="text-[12px] leading-[1.5] text-foreground">Your agent needs a lookap key to run these.</p>
-              <p className="text-[12px] leading-[1.5] text-subtle">Starter is $1 a month: the frames and the checklist. Pro measures the clip and judges the rebuild. Max hands over the finished file.</p>
+              <p className="text-[12px] leading-[1.5] text-subtle">Starter starts with 7 days free: the frames and the checklist. Pro measures the clip and judges the rebuild. Max hands over the finished file.</p>
               <Link href="/pricing" className={button("silver", "h-8 rounded-lg px-3 text-[12px]")}>See plans</Link>
             </div>
           )}

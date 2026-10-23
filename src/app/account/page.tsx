@@ -135,7 +135,7 @@ function Account() {
         ? "Local development: billing is skipped and every account counts as Pro."
         : [
             price ? `${PLAN_NAME[ent.plan]}, ${ent.interval === "year" ? `$${price.year} a year` : `$${price.month} a month`}.` : "",
-            ent.renewsAt ? (ent.cancelAtPeriodEnd ? `Ends ${date(ent.renewsAt)}.` : `Renews ${date(ent.renewsAt)}.`) : "",
+            ent.renewsAt ? (ent.cancelAtPeriodEnd ? `Ends ${date(ent.renewsAt)}.` : ent.status === "trialing" ? `Free trial until ${date(ent.renewsAt)}, then billed.` : `Renews ${date(ent.renewsAt)}.`) : "",
           ].filter(Boolean).join(" ")
       : confirming === "polling"
         ? "Payment received. Confirming your subscription with Polar."

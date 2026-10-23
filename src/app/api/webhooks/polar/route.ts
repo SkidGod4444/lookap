@@ -43,10 +43,12 @@ async function sync(sub: Sub, enabled: boolean) {
 
 export const POST = Webhooks({
   webhookSecret: process.env.POLAR_WEBHOOK_SECRET ?? "",
+  /* a trial starts as subscription.created with status trialing; active comes when the first charge goes through */
+  onSubscriptionCreated: async ({ data }) => { if (data.status === "trialing" || data.status === "active") await sync(data, true); },
   onSubscriptionActive: async ({ data }) => sync(data, true),
   onSubscriptionUncanceled: async ({ data }) => sync(data, true),
   onSubscriptionResumed: async ({ data }) => sync(data, true),
-  onSubscriptionUpdated: async ({ data }) => { if (data.status === "active") await sync(data, true); },
+  onSubscriptionUpdated: async ({ data }) => { if (data.status === "active" || data.status === "trialing") await sync(data, true); },
   onSubscriptionRevoked: async ({ data }) => sync(data, false),
   onSubscriptionPaused: async ({ data }) => sync(data, false),
   onCustomerCreated: async ({ data }) => { if (data.external_id) await setUser(data.external_id, { polarCustomerId: data.id, email: data.email ?? undefined, name: data.name ?? undefined }); },

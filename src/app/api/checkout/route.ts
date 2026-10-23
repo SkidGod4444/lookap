@@ -2,6 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 import { auth, currentUser } from "@clerk/nextjs/server";
 import { isInterval, isPaidPlan, polar, polarReady, productFor } from "@/lib/polar";
 import { SITE_URL } from "@/lib/site";
+import { getUser } from "@/lib/db";
+
+/* Starter opens with 7 days free. Only for an account that has never had a subscription; Polar itself also refuses a
+   second trial to the same customer. The card is taken at checkout and charged when the trial ends. */
+const TRIAL_DAYS = 7;
 
 /* /api/checkout?plan=pro&interval=month → a Polar Checkout for that product, tied to the signed-in user by external id.
    Plain requests are redirected to Polar's hosted page. With embed=1 the route answers JSON { url } for the embedded
@@ -39,6 +44,8 @@ export async function GET(req: NextRequest) {
     ...(embed ? { embed_origin: origin } : {}),
     metadata: { plan, interval, userId },
   };
+  const trial = plan === "starter" && !(await getUser(userId).catch(() => null))?.subscriptionId;
+  if (trial) Object.assign(base, { trial_interval: "day" as const, trial_interval_count: TRIAL_DAYS });
   try {
     let checkout;
     try {

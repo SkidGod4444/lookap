@@ -5,7 +5,7 @@ import { badge } from "@/components/button";
 import { BuyButton } from "@/components/BuyButton";
 
 const PLANS = [
-  { name: "Starter key", blurb: "Your agent builds from sight: it sees the designer's frames and knows exactly what done looks like.", monthly: 1, yearly: 0.83, yearlyTotal: 10, runs: "50 tool calls a day", cta: "Get a Starter key", primary: false,
+  { name: "Starter key", blurb: "Your agent builds from sight: it sees the designer's frames and knows exactly what done looks like.", monthly: 1, yearly: 0.83, yearlyTotal: 10, runs: "50 tool calls a day", cta: "Start 7 days free", trial: "7 days free, then billed. Cancel any time before.", primary: false,
     features: ["Search the registry and find similar work", "Every record and rebuild brief", "The checklist each rebuild is judged against", "The designer's frames, 60 a month", "All design notes", "One key, any MCP client"] },
   { name: "Pro key", blurb: "Your agent measures the clip and proves its rebuild against it, round after round, until it matches.", monthly: 12, yearly: 10, yearlyTotal: 120, runs: "300 tool calls a day", cta: "Get a Pro key", primary: true, popular: true,
     features: ["Everything in Starter", "What moves, how far and how fast, read from the clip", "Exact colours and zoomed crops beside your render", "A pixel and motion score at every moment", "The checklist judged on crop pairs by your own model", "React, Tailwind and Motion guide: measured moves as Motion transitions", "Measured recipes as data", "Frames 500 a month, 50 results per search"] },
@@ -16,6 +16,7 @@ const PLANS = [
 const FAQ = [
   ["What is the registry?", "A curated set of interfaces, each with attribution, category and types, and for the ones we rebuilt, a recipe: palette, geometry, type and motion read from the source clip's pixels. Plus design notes distilled from that work."],
   ["What runs where?", "Your agent does the building on your machine. Our servers serve the registry, read the clip and compose the evidence; the judging runs on your agent's own model, so a check never waits on ours."],
+  ["Is there a free trial?", "Starter opens with 7 days free. Your card is taken at checkout and charged only when the trial ends; cancel before then and you pay nothing. One trial per account."],
   ["What does each plan change in the result?", "Starter builds from the frames and a checklist, and checks by eye. Pro measures the clip and scores every moment, so the rebuild converges on the original instead of stopping at a guess. Max begins from a finished rebuild that already passed the checklist."],
   ["Why is there no free key?", "Curation and measurement are the work, and a dollar keeps the registry honest: every call comes from someone who chose to pay for it. Browsing the site stays free."],
   ["Can I change plans or stop?", "Upgrade or downgrade whenever you like and we only charge the difference for the days left. Stopping keeps the key working until your period ends."],
@@ -60,6 +61,7 @@ function Pricing() {
                 <span className="text-sm text-subtle">/ month</span>
               </div>
               <span className="mt-1 block text-sm text-subtle">{p.runs}<span className="block">{yearly ? `Billed $${p.yearlyTotal} yearly` : "Billed monthly"}</span></span>
+              {"trial" in p && p.trial && <span className={badge("silver", "mt-3 self-start px-2.5 py-0.5 text-[12px]")}>{p.trial}</span>}
               <div className="mt-5 mb-4 border-t border-line pt-2">
                 {p.features.map((f) => (
                   <div key={f} className="my-4 flex items-start gap-2">

@@ -1,7 +1,7 @@
 import "server-only";
-import { entitlementFromPolar, rememberEntitlement } from "./polar";
+import { entitlementFromPolar, isPaidPlan, rememberEntitlement } from "./polar";
 import { allKeys, setKey } from "./unkey";
-import { kv, dbReady } from "./db";
+import { getUser, kv, dbReady } from "./db";
 
 /* The daily check. The Polar webhook switches keys on and off as subscriptions change; if every delivery of one event
    failed, a cancelled user would keep working keys (or a paying one stay locked out). Once a day this walks every key,
@@ -24,7 +24,12 @@ export async function reconcile(opts: { dryRun?: boolean } = {}) {
   for (const [userId, mine] of byUser) {
     let ent;
     try { ent = await entitlementFromPolar(userId, { strict: true }); } catch { failed.push(userId); continue; }
-    const paid = ent.plan !== "none" ? ent.plan : null;
+    let paid = ent.plan !== "none" ? ent.plan : null;
+    /* a running trial: if Polar's state ever leaves trialing subscriptions out, the webhook's record keeps the keys on */
+    if (!paid) {
+      const rec = await getUser(userId).catch(() => null);
+      if (rec?.status === "trialing" && rec.plan && rec.plan !== "none" && rec.renewsAt && Date.parse(rec.renewsAt) > Date.now()) if (isPaidPlan(rec.plan)) paid = rec.plan;
+    }
     for (const k of mine) {
       const wantOn = Boolean(paid);
       if (k.enabled === wantOn && (!paid || k.plan === paid)) continue;
