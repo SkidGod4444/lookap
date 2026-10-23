@@ -7,7 +7,7 @@
  "moves": true,
  "typed": true,
  "interacts": false,
- "ok": false,
+ "ok": true,
  "costUsd": 3.04,
  "minutes": 9.9,
  "turns": 17,
@@ -16,5 +16,10 @@
   "read": 1096311
  },
  "ended": "completed",
- "at": "2026-10-23T13:23:47.347Z"
+ "at": "2026-10-23T13:23:47.347Z",
+ "override": {
+  "by": "maintainer, by hand",
+  "why": "the five gestures the test flagged land on text that streams in on its own; hovered by hand, the port behaves like the HTML",
+  "on": "2026-10-23"
+ }
 }

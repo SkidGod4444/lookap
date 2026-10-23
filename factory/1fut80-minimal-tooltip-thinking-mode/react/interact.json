@@ -1,0 +1,345 @@
+{
+ "slug": "1fut80-minimal-tooltip-thinking-mode",
+ "ok": false,
+ "rest": 0.1,
+ "gestures": [
+  {
+   "step": "hover source chips",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press source chips",
+   "html": 8.3,
+   "port": 12.9,
+   "mismatch": false
+  },
+  {
+   "step": "release source chips",
+   "html": 32.9,
+   "port": 32.1,
+   "mismatch": false
+  },
+  {
+   "step": "hover user message pill",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press user message pill",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release user message pill",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover pill text",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press pill text",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release pill text",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover header status icon",
+   "html": 0.5,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press header status icon",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release header status icon",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover header label",
+   "html": 0,
+   "port": 1.8,
+   "mismatch": false
+  },
+  {
+   "step": "press header label",
+   "html": 2,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release header label",
+   "html": 0.1,
+   "port": 0.8,
+   "mismatch": false
+  },
+  {
+   "step": "hover header timer",
+   "html": 1.7,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press header timer",
+   "html": 0,
+   "port": 13.1,
+   "mismatch": true
+  },
+  {
+   "step": "release header timer",
+   "html": 12.6,
+   "port": 1,
+   "mismatch": true
+  },
+  {
+   "step": "hover thinking stream text",
+   "html": 14,
+   "port": 22.4,
+   "mismatch": false
+  },
+  {
+   "step": "press thinking stream text",
+   "html": 19.6,
+   "port": 0,
+   "mismatch": true
+  },
+  {
+   "step": "release thinking stream text",
+   "html": 0,
+   "port": 3.5,
+   "mismatch": true
+  },
+  {
+   "step": "hover timeline rail",
+   "html": 8.1,
+   "port": 2.3,
+   "mismatch": true
+  },
+  {
+   "step": "press timeline rail",
+   "html": 2.1,
+   "port": 1.6,
+   "mismatch": false
+  },
+  {
+   "step": "release timeline rail",
+   "html": 1.8,
+   "port": 1.4,
+   "mismatch": false
+  }
+ ],
+ "frames": [
+  {
+   "step": "at rest",
+   "diff": 0.1
+  },
+  {
+   "step": "hover source chips",
+   "diff": 0.1
+  },
+  {
+   "step": "press source chips",
+   "diff": 0.7
+  },
+  {
+   "step": "release source chips",
+   "diff": 0.7
+  },
+  {
+   "step": "hover user message pill",
+   "diff": 22.4
+  },
+  {
+   "step": "press user message pill",
+   "diff": 23.2
+  },
+  {
+   "step": "release user message pill",
+   "diff": 20.2
+  },
+  {
+   "step": "hover pill text",
+   "diff": 1.1
+  },
+  {
+   "step": "press pill text",
+   "diff": 11.4
+  },
+  {
+   "step": "release pill text",
+   "diff": 1
+  },
+  {
+   "step": "hover header status icon",
+   "diff": 0
+  },
+  {
+   "step": "press header status icon",
+   "diff": 3
+  },
+  {
+   "step": "release header status icon",
+   "diff": 3.4
+  },
+  {
+   "step": "hover header label",
+   "diff": 0.6
+  },
+  {
+   "step": "press header label",
+   "diff": 0.2
+  },
+  {
+   "step": "release header label",
+   "diff": 2.2
+  },
+  {
+   "step": "hover header timer",
+   "diff": 0.5
+  },
+  {
+   "step": "press header timer",
+   "diff": 2
+  },
+  {
+   "step": "release header timer",
+   "diff": 0
+  },
+  {
+   "step": "hover thinking stream text",
+   "diff": 7.6
+  },
+  {
+   "step": "press thinking stream text",
+   "diff": 0
+  },
+  {
+   "step": "release thinking stream text",
+   "diff": 1.4
+  },
+  {
+   "step": "hover timeline rail",
+   "diff": 6.9
+  },
+  {
+   "step": "press timeline rail",
+   "diff": 5.2
+  },
+  {
+   "step": "release timeline rail",
+   "diff": 0.4
+  }
+ ],
+ "targets": [
+  {
+   "name": "source chips",
+   "box": [
+    149,
+    509,
+    735,
+    112
+   ],
+   "x": 517,
+   "y": 565
+  },
+  {
+   "name": "user message pill",
+   "box": [
+    607,
+    108,
+    383,
+    85
+   ],
+   "x": 799,
+   "y": 151
+  },
+  {
+   "name": "pill text",
+   "box": [
+    635,
+    133,
+    327,
+    36
+   ],
+   "x": 799,
+   "y": 151
+  },
+  {
+   "name": "header status icon",
+   "box": [
+    104,
+    272,
+    22,
+    22
+   ],
+   "x": 115,
+   "y": 283
+  },
+  {
+   "name": "header label",
+   "box": [
+    149,
+    268,
+    200,
+    32
+   ],
+   "x": 249,
+   "y": 284
+  },
+  {
+   "name": "header timer",
+   "box": [
+    273,
+    270,
+    50,
+    28
+   ],
+   "x": 298,
+   "y": 284
+  },
+  {
+   "name": "thinking stream text",
+   "box": [
+    149,
+    320,
+    800,
+    350
+   ],
+   "x": 549,
+   "y": 495
+  },
+  {
+   "name": "timeline rail",
+   "box": [
+    114,
+    300,
+    3,
+    500
+   ],
+   "x": 116,
+   "y": 550
+  }
+ ],
+ "drags": false,
+ "at": "2026-10-23T13:23:47.321Z"
+}
