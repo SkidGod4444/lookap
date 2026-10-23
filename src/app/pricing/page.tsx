@@ -5,11 +5,11 @@ import { badge } from "@/components/button";
 import { BuyButton } from "@/components/BuyButton";
 
 const PLANS = [
-  { name: "Starter key", blurb: "Your agent builds from sight: it sees the designer's frames and knows exactly what done looks like.", monthly: 1, yearly: 0.83, yearlyTotal: 10, runs: "50 tool calls a day", cta: "Start 7 days free", trial: "7 days free", trialNote: "Charged when the trial ends. Cancel before and pay nothing.", primary: false,
+  { id: "starter", name: "Starter key", blurb: "Your agent builds from sight: it sees the designer's frames and knows exactly what done looks like.", monthly: 1, yearly: 0.83, yearlyTotal: 10, runs: "50 tool calls a day", cta: "Start 7 days free", trial: "7 days free", trialNote: "Charged when the trial ends. Cancel before and pay nothing.", primary: false,
     features: ["Search the registry and find similar work", "Every record and rebuild brief", "The checklist each rebuild is judged against", "The designer's frames, 60 a month", "All design notes", "One key, any MCP client"] },
-  { name: "Pro key", blurb: "Your agent measures the clip and proves its rebuild against it, round after round, until it matches.", monthly: 12, yearly: 10, yearlyTotal: 120, runs: "300 tool calls a day", cta: "Get a Pro key", primary: true, popular: true,
+  { id: "pro", name: "Pro key", blurb: "Your agent measures the clip and proves its rebuild against it, round after round, until it matches.", monthly: 12, yearly: 10, yearlyTotal: 120, runs: "300 tool calls a day", cta: "Get a Pro key", primary: true, popular: true,
     features: ["Everything in Starter", "What moves, how far and how fast, read from the clip", "Exact colours and zoomed crops beside your render", "A pixel and motion score at every moment", "The checklist judged on crop pairs by your own model", "React, Tailwind and Motion guide: measured moves as Motion transitions", "Measured recipes as data", "Frames 500 a month, 50 results per search"] },
-  { name: "Max key", blurb: "Where a finished rebuild exists, your agent starts from it, already judged against the clip; where it does not, your request moves it up the queue.", monthly: 39, yearly: 32, yearlyTotal: 384, runs: "1,000 tool calls a day", cta: "Get a Max key", primary: false,
+  { id: "team", name: "Max key", blurb: "Where a finished rebuild exists, your agent starts from it, already judged against the clip; where it does not, your request moves it up the queue.", monthly: 39, yearly: 32, yearlyTotal: 384, runs: "1,000 tool calls a day", cta: "Get a Max key", primary: false,
     features: ["Everything in Pro", "Every finished rebuild as HTML or as a React, Tailwind and Motion component, up to 100 a month", "Requests that move an entry ahead in the rebuild queue, 20 a month", "The highest allowance: 2,000 frames and reads", "100 results per search", "Invoiced billing"] },
 ];
 
@@ -77,7 +77,7 @@ function Pricing() {
                   </div>
                 ))}
               </div>
-              <BuyButton plan={p.name.split(" ")[0].toLowerCase()} interval={yearly ? "year" : "month"} label={p.cta} primary={p.primary} className="mt-auto h-9 w-full rounded-lg text-[13px]" />
+              <BuyButton plan={p.id} interval={yearly ? "year" : "month"} label={p.cta} primary={p.primary} className="mt-auto h-9 w-full rounded-lg text-[13px]" />
             </div>
           </div>
         ))}

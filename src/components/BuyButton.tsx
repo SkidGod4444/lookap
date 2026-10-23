@@ -5,6 +5,11 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useAuth } from "@clerk/nextjs";
 import { button } from "@/components/button";
 
+/* The signed-in account's plan, asked once per page load and shared by every button on it. */
+const RANK: Record<string, number> = { none: 0, starter: 1, pro: 2, team: 3 };
+let mine: Promise<string> | null = null;
+const myPlan = () => (mine ??= fetch("/api/me").then((r) => r.json()).then((d: { plan?: string }) => d.plan ?? "none").catch(() => "none"));
+
 /* A plan's buy button. Signed in: asks our checkout route for a session and opens Polar's checkout in an overlay on this page.
    Signed out: opens the sign-in dialog through the header's ?signin=1, with a return path that reopens this same checkout.
    The embed script loads on first use; nothing from Polar runs on the page until someone buys. */
@@ -16,6 +21,16 @@ export function BuyButton({ plan, interval, label, primary, className = "" }: { 
   const [busy, setBusy] = useState(false);
   const [note, setNote] = useState<string | null>(null);
   const opened = useRef(false);
+  /* signed in on a plan: its own tier says so and lower tiers are off, since they would be a downgrade */
+  const [current, setCurrent] = useState<string | null>(null);
+  useEffect(() => {
+    if (!isLoaded || !isSignedIn) return;
+    let live = true;
+    void myPlan().then((p) => { if (live) setCurrent(p); });
+    return () => { live = false; };
+  }, [isLoaded, isSignedIn]);
+  const rank = RANK[plan] ?? 0, have = current ? (RANK[current] ?? 0) : 0;
+  const lower = Boolean(isSignedIn && current && have > rank), same = Boolean(isSignedIn && current && have === rank && rank > 0);
 
   const open = useCallback(async () => {
     setBusy(true); setNote(null);
@@ -38,7 +53,7 @@ export function BuyButton({ plan, interval, label, primary, className = "" }: { 
   }, [plan, interval, router]);
 
   const click = () => {
-    if (!isLoaded) return;
+    if (!isLoaded || lower || same) return;
     if (!isSignedIn) {
       const next = `${path}?buy=${plan}&interval=${interval}`;
       router.push(`${path}?signin=1&next=${encodeURIComponent(next)}`);
@@ -60,7 +75,9 @@ export function BuyButton({ plan, interval, label, primary, className = "" }: { 
 
   return (
     <>
-      <button type="button" onClick={click} disabled={busy} className={button(primary ? "silver" : "outline", className)}>{busy ? "Opening…" : label}</button>
+      <button type="button" onClick={click} disabled={busy || lower || same} aria-disabled={lower || same} title={lower ? "Your plan already includes this. Change plans from your account page." : same ? "This is your plan" : undefined} className={button(primary && !lower && !same ? "silver" : "outline", `${className} disabled:cursor-not-allowed disabled:opacity-50`)}>
+        {busy ? "Opening…" : same ? "Your plan" : lower ? "Below your plan" : label}
+      </button>
       {note && <p className="text-[12px] text-silver">{note}</p>}
     </>
   );

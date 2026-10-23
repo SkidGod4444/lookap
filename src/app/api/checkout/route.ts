@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth, currentUser } from "@clerk/nextjs/server";
-import { isInterval, isPaidPlan, polar, polarReady, productFor } from "@/lib/polar";
+import { entitlementFor, isInterval, isPaidPlan, polar, polarReady, productFor } from "@/lib/polar";
 import { SITE_URL } from "@/lib/site";
 import { getUser } from "@/lib/db";
 
@@ -25,6 +25,15 @@ export async function GET(req: NextRequest) {
     return NextResponse.redirect(new URL(`/pricing?signin=1&next=${encodeURIComponent(next)}`, req.url));
   }
   if (!polarReady) return NextResponse.json({ error: "Billing is not configured." }, { status: 503 });
+  /* a second checkout on the same or a lower tier would open a second subscription beside the first: plan changes go
+     through the account page, where Polar moves the one subscription */
+  const RANK: Record<string, number> = { none: 0, starter: 1, pro: 2, team: 3 };
+  const have = (await entitlementFor(userId).catch(() => ({ plan: "none" as const }))).plan;
+  if ((RANK[have] ?? 0) >= RANK[plan]) {
+    const msg = have === plan ? "This is already your plan." : "Your plan already includes this. Change plans from your account page.";
+    if (embed) return NextResponse.json({ error: msg, account: "/account" }, { status: 409 });
+    return NextResponse.redirect(new URL("/account", req.url));
+  }
   /* The origin that will frame the embedded checkout: the page's own, as the browser reports it. */
   const origin = req.headers.get("origin") ?? (req.headers.get("x-forwarded-host") ? `https://${req.headers.get("x-forwarded-host")}` : req.nextUrl.origin);
   const product = productFor(plan, interval);
