@@ -770,9 +770,10 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       const ready = rb.criteria.filter((c) => have(c.at) !== undefined && (c.then == null || have(c.then) !== undefined));
       const missing = rb.criteria.filter((c) => !ready.includes(c));
       /* whole-frame criteria look at the design, not the canvas around it */
-      const first = await clipAt(ready[0]?.at ?? draft.keyframes[0].at);
-      const cb = await contentBox(first.frame, draft.background);
-      const frameBox = cb.map((n) => Math.round(n / k)) as [number, number, number, number];
+      /* the union of the content over every moment judged, so a thing that appears later is inside the tile */
+      const boxes = await Promise.all([...new Set(ready.flatMap((c) => [c.at, ...(c.then == null ? [] : [c.then])]))].slice(0, 12).map(async (t) => contentBox((await clipAt(t)).frame, draft.background)));
+      const ux0 = Math.min(...boxes.map((b) => b[0])), uy0 = Math.min(...boxes.map((b) => b[1])), ux1 = Math.max(...boxes.map((b) => b[0] + b[2])), uy1 = Math.max(...boxes.map((b) => b[1] + b[3]));
+      const frameBox = (boxes.length ? [ux0, uy0, ux1 - ux0, uy1 - uy0] : [0, 0, info.width, info.height]).map((n) => Math.round(n / k)) as [number, number, number, number];
       const tiles: { id: string; png: Buffer }[] = [];
       for (const c of ready.slice(0, 60)) tiles.push({ id: c.id, png: await judgeTile(c, W, H, clipAt, renderAt, 420, frameBox) });
       const sheets = await packSheets(tiles, 1600, 1600, 70);

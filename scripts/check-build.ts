@@ -210,7 +210,14 @@ if (JUDGE && rubric) {
   const refCache = new Map<string, Buffer>();
   const clipAt = async (t: number) => { const m = momentAt(t); let f = refCache.get(m.name); if (!f) { f = frame.crop ? await sharp(m.src).extract({ left: frame.crop[0], top: frame.crop[1], width: frame.crop[2], height: frame.crop[3] }).png().toBuffer() : readFileSync(m.src); refCache.set(m.name, f); } const meta = await sharp(f).metadata(); return { frame: f, k: (meta.width ?? W) / W }; };
   const renderAt = async (t: number) => readFileSync(path.join(out, `${momentAt(t).name}.png`));
-  const frameBox = (() => { const b = draft?.background ?? "#ffffff"; return contentBox((refCache.size, readFileSync(moments[0].src)), b); })();
+  /* the union of the content over every moment, so a thing that appears later is inside a whole-frame tile */
+  const frameBox = (async () => {
+    const bg = draft?.background ?? "#ffffff";
+    const bs = await Promise.all(moments.slice(0, 16).map((m) => contentBox(readFileSync(m.src), bg)));
+    const kx = (await sharp(moments[0].src).metadata()).width ?? W;
+    const x0 = Math.min(...bs.map((b) => b[0])), y0 = Math.min(...bs.map((b) => b[1])), x1 = Math.max(...bs.map((b) => b[0] + b[2])), y1 = Math.max(...bs.map((b) => b[1] + b[3]));
+    return [x0, y0, x1 - x0, y1 - y0].map((n) => Math.round((n * W) / kx)) as Box;
+  })();
   const listed: string[] = [];
   const lines: string[] = [];
   const snapped: string[] = []; /* criteria whose moment was not rendered: not judged, reported as unsure */
