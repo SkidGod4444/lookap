@@ -10,7 +10,7 @@
    "w": 720,
    "h": 720
   },
-  "score": 93,
+  "score": 95,
   "build": {
    "model": "Claude Opus 5.5",
    "modelId": "claude-opus-5-5",
@@ -18,8 +18,8 @@
    "run": {
     "model": "Claude Opus 5.5",
     "turns": 115,
-    "outputTokens": 0,
-    "totalTokens": 0,
+    "outputTokens": 57414,
+    "totalTokens": 5811727,
     "costUsd": 9.01,
     "minutes": 72.7,
     "score": 93
@@ -43,7 +43,7 @@
    "w": 1080,
    "h": 1080
   },
-  "score": 91,
+  "score": 94,
   "build": {
    "model": "Claude Opus 5.5",
    "modelId": "claude-opus-5-5",
@@ -51,8 +51,8 @@
    "run": {
     "model": "Claude Opus 5.5",
     "turns": 150,
-    "outputTokens": 0,
-    "totalTokens": 0,
+    "outputTokens": 72224,
+    "totalTokens": 5212563,
     "costUsd": 10.25,
     "minutes": 27.4,
     "score": 91
@@ -84,8 +84,8 @@
    "run": {
     "model": "Claude Opus 5.5",
     "turns": 103,
-    "outputTokens": 0,
-    "totalTokens": 0,
+    "outputTokens": 41261,
+    "totalTokens": 4237203,
     "costUsd": 7.6,
     "minutes": 37.8,
     "score": 80
@@ -109,7 +109,7 @@
    "w": 1434,
    "h": 1080
   },
-  "score": 51,
+  "score": 62,
   "build": {
    "model": "Claude Fable 5.1",
    "modelId": "claude-fable-5-1",
@@ -150,8 +150,8 @@
    "run": {
     "model": "Claude Opus 5.5",
     "turns": 73,
-    "outputTokens": 0,
-    "totalTokens": 0,
+    "outputTokens": 58430,
+    "totalTokens": 5188753,
     "costUsd": 10.03,
     "minutes": 426.5,
     "score": 94
@@ -208,7 +208,7 @@
    "w": 1482,
    "h": 1080
   },
-  "score": 84,
+  "score": 85,
   "build": {
    "model": "Claude Opus 5.5",
    "modelId": "claude-opus-5-5",
@@ -216,8 +216,8 @@
    "run": {
     "model": "Claude Opus 5.5",
     "turns": 164,
-    "outputTokens": 0,
-    "totalTokens": 0,
+    "outputTokens": 102229,
+    "totalTokens": 8049609,
     "costUsd": 11.37,
     "minutes": 36.2,
     "score": 84

@@ -159,7 +159,7 @@ Then run the checker, zoom what you changed, and update ${rel}/NOTES.md.`;
 }
 
 type Claude = { result?: string; total_cost_usd?: number; duration_ms?: number; num_turns?: number; is_error?: boolean; terminal_reason?: string; modelUsage?: Record<string, { inputTokens: number; outputTokens: number; cacheReadInputTokens: number; cacheCreationInputTokens: number }> };
-type RoundRow = { round: number; minutes: number; turns: number | null; costUsd: number; judgeUsd: number; ended: string; score: number | null; rank: number | null; allPass: boolean; rubric: { pass: number; fail: number; unsure: number; of: number } | null; motion: string | null; kept: boolean };
+type RoundRow = { round: number; minutes: number; turns: number | null; costUsd: number; tokens?: { written: number; read: number }; judgeUsd: number; ended: string; score: number | null; rank: number | null; allPass: boolean; rubric: { pass: number; fail: number; unsure: number; of: number } | null; motion: string | null; kept: boolean };
 
 const rows: string[] = [];
 for (const e of queue) {
@@ -215,7 +215,8 @@ for (const e of queue) {
     if (v) copyFileSync(path.join(dir, "verdict.json"), path.join(dir, "rounds", `round-${round}.verdict.json`));
     if (existsSync(path.join(dir, "side.png"))) copyFileSync(path.join(dir, "side.png"), path.join(dir, "rounds", `round-${round}.side.png`));
     const kept = Boolean(v) && (!best || v!.rank >= best.rank);
-    const row: RoundRow = { round, minutes: Number(((Date.now() - tr) / 60000).toFixed(1)), turns: out.num_turns ?? null, costUsd: out.total_cost_usd ?? 0, judgeUsd: v?.judge?.costUsd ?? 0, ended: sessionEnded, score: v?.pixel.score ?? null, rank: v?.rank ?? null, allPass: v?.allPass ?? false, rubric: v?.rubric ? { pass: v.rubric.pass, fail: v.rubric.fail, unsure: v.rubric.unsure, of: v.rubric.counted } : null, motion: v?.motion.read ?? null, kept };
+    const tok = Object.values(out.modelUsage ?? {}).reduce((s2, m) => ({ written: s2.written + m.outputTokens, read: s2.read + m.inputTokens + m.cacheReadInputTokens + m.cacheCreationInputTokens }), { written: 0, read: 0 });
+    const row: RoundRow = { round, minutes: Number(((Date.now() - tr) / 60000).toFixed(1)), turns: out.num_turns ?? null, costUsd: out.total_cost_usd ?? 0, tokens: tok, judgeUsd: v?.judge?.costUsd ?? 0, ended: sessionEnded, score: v?.pixel.score ?? null, rank: v?.rank ?? null, allPass: v?.allPass ?? false, rubric: v?.rubric ? { pass: v.rubric.pass, fail: v.rubric.fail, unsure: v.rubric.unsure, of: v.rubric.counted } : null, motion: v?.motion.read ?? null, kept };
     roundRows.push(row);
     console.log(`  round ${round}: ${v ? `rubric ${row.rubric?.pass}/${row.rubric?.of}${row.rubric?.fail ? ` (${row.rubric.fail} fail)` : ""}, pixel ${row.score}, rank ${row.rank}, ${v.motion.read}` : "no verdict"}; ${row.minutes} min, $${row.costUsd.toFixed(2)} + judge $${row.judgeUsd.toFixed(2)}, ${sessionEnded}${kept ? "" : ` (below round ${best!.round}, restored)`}`);
     if (kept && v) best = { round, rank: v.rank, verdict: v };
@@ -240,7 +241,7 @@ for (const e of queue) {
     rubric: v?.rubric ? { pass: v.rubric.pass, fail: v.rubric.fail, unsure: v.rubric.unsure, of: v.rubric.counted, failed: v.rubric.criteria.filter((c) => c.pass === "no" && !c.policy).map((c) => `${c.id} ${c.check}`) } : null,
     score: v?.pixel.score ?? null, motion: v?.motion.read ?? null,
     imagery: (rubric?.imagery ?? []).map((m) => ({ name: m.name, class: m.class, box: m.box, reproduced: m.class !== "photo" || licensed, how: m.class === "photo" ? (licensed ? "sampled under licence" : "placeholder: designer declined sampling") : m.class === "structured" ? "original SVG" : "drawn" })),
-    rounds: roundRows, minutes,
+    rounds: roundRows, minutes, tokens: roundRows.reduce((t, r) => ({ written: t.written + (r.tokens?.written ?? 0), read: t.read + (r.tokens?.read ?? 0) }), { written: 0, read: 0 }),
     cost: { codingUsd: Number(codingUsd.toFixed(2)), judgeUsd: Number(judgeUsd.toFixed(2)), rubricUsd, totalUsd: Number((codingUsd + judgeUsd + rubricUsd).toFixed(2)) },
     notes: existsSync(path.join(dir, "NOTES.md")), at: new Date().toISOString(),
   };

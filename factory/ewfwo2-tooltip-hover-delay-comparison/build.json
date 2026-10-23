@@ -5,8 +5,8 @@
  "run": {
   "model": "Claude Opus 5.5",
   "turns": 73,
-  "outputTokens": 0,
-  "totalTokens": 0,
+  "outputTokens": 58430,
+  "totalTokens": 5188753,
   "costUsd": 10.03,
   "minutes": 426.5,
   "score": 94
