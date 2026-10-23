@@ -9,8 +9,8 @@ const PLANS = [
     features: ["Search the registry and find similar work", "Every record and rebuild brief", "The checklist each rebuild is judged against", "The designer's frames, 60 a month", "All design notes", "One key, any MCP client"] },
   { name: "Pro key", blurb: "Your agent measures the clip and proves its rebuild against it, round after round, until it matches.", monthly: 12, yearly: 10, yearlyTotal: 120, runs: "300 tool calls a day", cta: "Get a Pro key", primary: true, popular: true,
     features: ["Everything in Starter", "What moves, how far and how fast, read from the clip", "Exact colours and zoomed crops beside your render", "A pixel and motion score at every moment", "The checklist judged on crop pairs by your own model", "Measured recipes as data", "Frames 500 a month, 50 results per search"] },
-  { name: "Max key", blurb: "Your agent starts from the finished rebuild, already judged against the clip, and asks for the ones still missing.", monthly: 39, yearly: 32, yearlyTotal: 384, runs: "1,000 tool calls a day", cta: "Get a Max key", primary: false,
-    features: ["Everything in Pro", "Finished rebuilds as source, 100 a month", "Ask for any entry to be rebuilt next, 20 a month", "The highest allowance: 2,000 frames and reads", "100 results per search", "Invoiced billing"] },
+  { name: "Max key", blurb: "Where a finished rebuild exists, your agent starts from it, already judged against the clip; where it does not, your request moves it up the queue.", monthly: 39, yearly: 32, yearlyTotal: 384, runs: "1,000 tool calls a day", cta: "Get a Max key", primary: false,
+    features: ["Everything in Pro", "Every finished rebuild as source, up to 100 a month", "Requests that move an entry ahead in the rebuild queue, 20 a month", "The highest allowance: 2,000 frames and reads", "100 results per search", "Invoiced billing"] },
 ];
 
 const FAQ = [

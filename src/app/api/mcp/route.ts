@@ -195,7 +195,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       const entry = e ?? ENTRIES.find((x) => recipe && recipeFor(x)?.slug === recipe.slug);
       const rb = entry ? rebuildFor(entry) : recipe ? { ...REBUILDS[recipe.slug], title: recipe.title, build: recipe.build } : null;
       if (!rb || !rb.html) {
-        if (entry) { await bump(entry.slug, "request"); const pos = await queuePosition(entry.slug); return text({ error: `No finished rebuild for ${slug} yet`, requested: true, queue: pos ? `asked for on your behalf: number ${pos} in the rebuild queue` : "asked for on your behalf", meanwhile: "get_brief carries the checklist; look_at, check_rebuild and judge_rebuild take you there", available: REBUILD_SLUGS() }); }
+        if (entry) { await bump(entry.slug, "request"); const pos = await queuePosition(entry.slug); return text({ error: `No finished rebuild for ${slug} yet`, requested: true, queue: pos ? `asked for on your behalf: number ${pos} in the rebuild queue` : "asked for on your behalf", when: "the queue is worked in order and no date is promised; get_rebuild returns the file once it ships", meanwhile: "get_brief carries the checklist; look_at, check_rebuild and judge_rebuild take you there", available: REBUILD_SLUGS() }); }
         return text({ error: `No finished rebuild for ${slug}`, available: REBUILD_SLUGS() });
       }
       if (entry) { const br = await touchEntry(keyRef, plan, entry.slug); if (br && !br.ok) return tooWide(br); }
@@ -220,7 +220,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     "request_rebuild",
     {
       title: "Ask for a finished rebuild",
-      description: "Puts an entry without a finished rebuild at the front of lookap's rebuild queue, ahead of everything asked for by saves and reads; you get its place in the queue. When it ships, get_rebuild returns it. Max.",
+      description: "Moves an entry without a finished rebuild ahead of everything asked for by saves and reads in lookap's rebuild queue; you get its place in the queue. The queue is worked in order and no date is promised; when it ships, get_rebuild returns it. Max.",
       inputSchema: { slug: z.string() },
       annotations: { readOnlyHint: false, idempotentHint: true, openWorldHint: false },
     },
@@ -233,7 +233,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       if (u && !u.ok) return spent("request_rebuild", u);
       await bump(e.slug, "request");
       const pos = await queuePosition(e.slug);
-      return text({ slug: e.slug, requested: true, queue: pos, read: pos ? `number ${pos} in the rebuild queue` : "in the rebuild queue", meanwhile: "get_brief carries the checklist; look_at, check_rebuild and judge_rebuild take you there", usage: u });
+      return text({ slug: e.slug, requested: true, queue: pos, read: pos ? `number ${pos} in the rebuild queue` : "in the rebuild queue", when: "the queue is worked in order and no date is promised; get_rebuild returns the file once it ships", meanwhile: "get_brief carries the checklist; look_at, check_rebuild and judge_rebuild take you there", usage: u });
     },
   );
 
