@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { ProjectPage } from "@/components/ProjectPage";
+import { ProjectSkeleton } from "@/components/ProjectSkeleton";
 import { entryMetadata } from "@/lib/seo";
 import { bySlug, ENTRIES } from "@/lib/data";
 
@@ -21,5 +22,5 @@ async function Inner({ params }: { params: Promise<{ slug: string }> }) {
 }
 
 export default function Page({ params }: PageProps<"/website/[slug]">) {
-  return <Suspense fallback={null}><Inner params={params} /></Suspense>;
+  return <Suspense fallback={<ProjectSkeleton />}><Inner params={params} /></Suspense>;
 }

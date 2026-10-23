@@ -9,7 +9,9 @@ export const hrefFor = (e: Entry) => (e.kind === "website" ? `/website/${e.slug}
 export function FeedCard({ entry, eager = false, live = false }: { entry: Entry; eager?: boolean; live?: boolean }) {
   return (
     <article className="group relative">
-      <Link href={hrefFor(entry)} aria-label={`View ${entry.title}`} className="relative block overflow-hidden rounded-md bg-card ring-1 ring-line transition-[transform,box-shadow] duration-200 hover:ring-line-strong active:scale-[0.98]">
+      {/* the whole entry is fetched while the card is on screen, so the click shows the page at once instead of a blank
+          wait; entry pages are prerendered, so these come from the cache */}
+      <Link href={hrefFor(entry)} prefetch={true} aria-label={`View ${entry.title}`} className="relative block overflow-hidden rounded-md bg-card ring-1 ring-line transition-[transform,box-shadow] duration-200 hover:ring-line-strong active:scale-[0.98]">
         <div className="relative w-full" style={{ aspectRatio: entry.ratio }}>
           <Media entry={entry} eager={eager} />
         </div>
