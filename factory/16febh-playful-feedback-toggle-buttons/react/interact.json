@@ -1,0 +1,345 @@
+{
+ "slug": "16febh-playful-feedback-toggle-buttons",
+ "ok": true,
+ "rest": 0,
+ "gestures": [
+  {
+   "step": "hover like button (left half)",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press like button (left half)",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release like button (left half)",
+   "html": 36.9,
+   "port": 39.8,
+   "mismatch": false
+  },
+  {
+   "step": "hover dislike button (right half)",
+   "html": 0,
+   "port": 0.2,
+   "mismatch": false
+  },
+  {
+   "step": "press dislike button (right half)",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release dislike button (right half)",
+   "html": 15.6,
+   "port": 14.9,
+   "mismatch": false
+  },
+  {
+   "step": "hover mouse cursor",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press mouse cursor",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release mouse cursor",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover thumbs-up glyph",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press thumbs-up glyph",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release thumbs-up glyph",
+   "html": 92.9,
+   "port": 91.5,
+   "mismatch": false
+  },
+  {
+   "step": "hover thumbs-down glyph",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press thumbs-down glyph",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release thumbs-down glyph",
+   "html": 42.2,
+   "port": 42.2,
+   "mismatch": false
+  },
+  {
+   "step": "hover green glow (like active)",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press green glow (like active)",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release green glow (like active)",
+   "html": 40,
+   "port": 40.2,
+   "mismatch": false
+  },
+  {
+   "step": "hover pink glow (dislike active)",
+   "html": 0,
+   "port": 0.2,
+   "mismatch": false
+  },
+  {
+   "step": "press pink glow (dislike active)",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release pink glow (dislike active)",
+   "html": 16.4,
+   "port": 15.9,
+   "mismatch": false
+  },
+  {
+   "step": "hover button drop shadow",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press button drop shadow",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release button drop shadow",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  }
+ ],
+ "frames": [
+  {
+   "step": "at rest",
+   "diff": 0
+  },
+  {
+   "step": "hover like button (left half)",
+   "diff": 0
+  },
+  {
+   "step": "press like button (left half)",
+   "diff": 0
+  },
+  {
+   "step": "release like button (left half)",
+   "diff": 2.1
+  },
+  {
+   "step": "hover dislike button (right half)",
+   "diff": 0.1
+  },
+  {
+   "step": "press dislike button (right half)",
+   "diff": 0.1
+  },
+  {
+   "step": "release dislike button (right half)",
+   "diff": 0.2
+  },
+  {
+   "step": "hover mouse cursor",
+   "diff": 0.2
+  },
+  {
+   "step": "press mouse cursor",
+   "diff": 0.2
+  },
+  {
+   "step": "release mouse cursor",
+   "diff": 0.2
+  },
+  {
+   "step": "hover thumbs-up glyph",
+   "diff": 0.2
+  },
+  {
+   "step": "press thumbs-up glyph",
+   "diff": 0.2
+  },
+  {
+   "step": "release thumbs-up glyph",
+   "diff": 0.5
+  },
+  {
+   "step": "hover thumbs-down glyph",
+   "diff": 0.3
+  },
+  {
+   "step": "press thumbs-down glyph",
+   "diff": 0.3
+  },
+  {
+   "step": "release thumbs-down glyph",
+   "diff": 0.2
+  },
+  {
+   "step": "hover green glow (like active)",
+   "diff": 0.2
+  },
+  {
+   "step": "press green glow (like active)",
+   "diff": 0.2
+  },
+  {
+   "step": "release green glow (like active)",
+   "diff": 0.6
+  },
+  {
+   "step": "hover pink glow (dislike active)",
+   "diff": 0.3
+  },
+  {
+   "step": "press pink glow (dislike active)",
+   "diff": 0.3
+  },
+  {
+   "step": "release pink glow (dislike active)",
+   "diff": 0.2
+  },
+  {
+   "step": "hover button drop shadow",
+   "diff": 0.2
+  },
+  {
+   "step": "press button drop shadow",
+   "diff": 0.2
+  },
+  {
+   "step": "release button drop shadow",
+   "diff": 0.2
+  }
+ ],
+ "targets": [
+  {
+   "name": "like button (left half)",
+   "box": [
+    174,
+    294,
+    180,
+    132
+   ],
+   "x": 264,
+   "y": 360
+  },
+  {
+   "name": "dislike button (right half)",
+   "box": [
+    366,
+    294,
+    180,
+    132
+   ],
+   "x": 456,
+   "y": 360
+  },
+  {
+   "name": "mouse cursor",
+   "box": [
+    378,
+    515,
+    38,
+    60
+   ],
+   "x": 397,
+   "y": 545
+  },
+  {
+   "name": "thumbs-up glyph",
+   "box": [
+    240,
+    323,
+    60,
+    61
+   ],
+   "x": 270,
+   "y": 354
+  },
+  {
+   "name": "thumbs-down glyph",
+   "box": [
+    420,
+    336,
+    60,
+    60
+   ],
+   "x": 450,
+   "y": 366
+  },
+  {
+   "name": "green glow (like active)",
+   "box": [
+    190,
+    300,
+    160,
+    120
+   ],
+   "x": 270,
+   "y": 360
+  },
+  {
+   "name": "pink glow (dislike active)",
+   "box": [
+    370,
+    300,
+    170,
+    120
+   ],
+   "x": 455,
+   "y": 360
+  },
+  {
+   "name": "button drop shadow",
+   "box": [
+    180,
+    410,
+    360,
+    30
+   ],
+   "x": 360,
+   "y": 425
+  }
+ ],
+ "drags": false,
+ "at": "2026-10-23T13:11:03.525Z"
+}

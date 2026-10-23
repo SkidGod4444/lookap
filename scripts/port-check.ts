@@ -74,3 +74,8 @@ console.log(line("score"));
 console.log(line("scale:"));
 console.log(`the HTML rebuild it ports scored ${orig ?? "?"} on its last full check; side by side: ${path.relative(ROOT, path.join(rdir, "side.png"))}`);
 if (check.status !== 0) console.error(check.stderr.slice(-600));
+/* the pointer: the same hovers, presses and drags on the HTML rebuild and on the port */
+const inter = spawnSync("bun", ["--conditions=react-server", "scripts/interact-check.ts", slug], { cwd: ROOT, encoding: "utf8", maxBuffer: 1 << 26 });
+const iout = inter.stdout.split("\n");
+for (const l of iout.filter((x) => x.includes("<- differs")).slice(0, 6)) console.log(l);
+console.log(iout.find((x) => x.startsWith("interactions:")) ?? "interactions: not tested");

@@ -5,7 +5,7 @@
  "html": 91,
  "scales": true,
  "moves": true,
- "ok": true,
+ "ok": false,
  "costUsd": 3.39,
  "minutes": 11.8,
  "turns": 20,
@@ -16,5 +16,6 @@
  "ended": "completed",
  "at": "2026-10-23T12:00:08.331Z",
  "rescored": "after the checker photographed real-time moments on the clock (file unchanged)",
- "typed": true
+ "typed": true,
+ "interacts": false
 }

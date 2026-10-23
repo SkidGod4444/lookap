@@ -1,0 +1,345 @@
+{
+ "slug": "i61wwn-painterly-finance-app-onboarding",
+ "ok": true,
+ "rest": 0.2,
+ "gestures": [
+  {
+   "step": "hover Get Started button",
+   "html": 5.4,
+   "port": 5.4,
+   "mismatch": false
+  },
+  {
+   "step": "press Get Started button",
+   "html": 10.7,
+   "port": 10.5,
+   "mismatch": false
+  },
+  {
+   "step": "release Get Started button",
+   "html": 11.2,
+   "port": 11,
+   "mismatch": false
+  },
+  {
+   "step": "hover phone panel",
+   "html": 4.6,
+   "port": 4.7,
+   "mismatch": false
+  },
+  {
+   "step": "press phone panel",
+   "html": 3.7,
+   "port": 4.2,
+   "mismatch": false
+  },
+  {
+   "step": "release phone panel",
+   "html": 4.2,
+   "port": 4.5,
+   "mismatch": false
+  },
+  {
+   "step": "hover painting backdrop",
+   "html": 4.5,
+   "port": 4.3,
+   "mismatch": false
+  },
+  {
+   "step": "press painting backdrop",
+   "html": 4,
+   "port": 4,
+   "mismatch": false
+  },
+  {
+   "step": "release painting backdrop",
+   "html": 3.7,
+   "port": 4,
+   "mismatch": false
+  },
+  {
+   "step": "hover ripple distortion",
+   "html": 4.4,
+   "port": 4.6,
+   "mismatch": false
+  },
+  {
+   "step": "press ripple distortion",
+   "html": 4.6,
+   "port": 4.6,
+   "mismatch": false
+  },
+  {
+   "step": "release ripple distortion",
+   "html": 3.8,
+   "port": 3.9,
+   "mismatch": false
+  },
+  {
+   "step": "hover spinner disc",
+   "html": 4.9,
+   "port": 4.8,
+   "mismatch": false
+  },
+  {
+   "step": "press spinner disc",
+   "html": 7.6,
+   "port": 7.1,
+   "mismatch": false
+  },
+  {
+   "step": "release spinner disc",
+   "html": 5.8,
+   "port": 5.5,
+   "mismatch": false
+  },
+  {
+   "step": "hover spinner icon",
+   "html": 4.6,
+   "port": 4.4,
+   "mismatch": false
+  },
+  {
+   "step": "press spinner icon",
+   "html": 7.4,
+   "port": 7,
+   "mismatch": false
+  },
+  {
+   "step": "release spinner icon",
+   "html": 6.8,
+   "port": 12.2,
+   "mismatch": false
+  },
+  {
+   "step": "hover copy card",
+   "html": 3.9,
+   "port": 4.6,
+   "mismatch": false
+  },
+  {
+   "step": "press copy card",
+   "html": 3.8,
+   "port": 3.7,
+   "mismatch": false
+  },
+  {
+   "step": "release copy card",
+   "html": 4.2,
+   "port": 4.1,
+   "mismatch": false
+  },
+  {
+   "step": "hover body copy",
+   "html": 2.3,
+   "port": 2.3,
+   "mismatch": false
+  },
+  {
+   "step": "press body copy",
+   "html": 2.3,
+   "port": 2.1,
+   "mismatch": false
+  },
+  {
+   "step": "release body copy",
+   "html": 3.2,
+   "port": 3.4,
+   "mismatch": false
+  }
+ ],
+ "frames": [
+  {
+   "step": "at rest",
+   "diff": 0.2
+  },
+  {
+   "step": "hover Get Started button",
+   "diff": 0.1
+  },
+  {
+   "step": "press Get Started button",
+   "diff": 0.2
+  },
+  {
+   "step": "release Get Started button",
+   "diff": 0.2
+  },
+  {
+   "step": "hover phone panel",
+   "diff": 0.2
+  },
+  {
+   "step": "press phone panel",
+   "diff": 0.4
+  },
+  {
+   "step": "release phone panel",
+   "diff": 0.4
+  },
+  {
+   "step": "hover painting backdrop",
+   "diff": 0.3
+  },
+  {
+   "step": "press painting backdrop",
+   "diff": 0.3
+  },
+  {
+   "step": "release painting backdrop",
+   "diff": 0.4
+  },
+  {
+   "step": "hover ripple distortion",
+   "diff": 0.4
+  },
+  {
+   "step": "press ripple distortion",
+   "diff": 0.3
+  },
+  {
+   "step": "release ripple distortion",
+   "diff": 0.3
+  },
+  {
+   "step": "hover spinner disc",
+   "diff": 0.3
+  },
+  {
+   "step": "press spinner disc",
+   "diff": 0.4
+  },
+  {
+   "step": "release spinner disc",
+   "diff": 0.3
+  },
+  {
+   "step": "hover spinner icon",
+   "diff": 0.3
+  },
+  {
+   "step": "press spinner icon",
+   "diff": 0.3
+  },
+  {
+   "step": "release spinner icon",
+   "diff": 0.5
+  },
+  {
+   "step": "hover copy card",
+   "diff": 0.3
+  },
+  {
+   "step": "press copy card",
+   "diff": 0.3
+  },
+  {
+   "step": "release copy card",
+   "diff": 0.4
+  },
+  {
+   "step": "hover body copy",
+   "diff": 0.3
+  },
+  {
+   "step": "press body copy",
+   "diff": 0.4
+  },
+  {
+   "step": "release body copy",
+   "diff": 0.4
+  }
+ ],
+ "targets": [
+  {
+   "name": "Get Started button",
+   "box": [
+    674,
+    824,
+    277,
+    44
+   ],
+   "x": 813,
+   "y": 846
+  },
+  {
+   "name": "phone panel",
+   "box": [
+    656,
+    200,
+    314,
+    684
+   ],
+   "x": 813,
+   "y": 542
+  },
+  {
+   "name": "painting backdrop",
+   "box": [
+    656,
+    200,
+    314,
+    684
+   ],
+   "x": 813,
+   "y": 542
+  },
+  {
+   "name": "ripple distortion",
+   "box": [
+    656,
+    200,
+    314,
+    684
+   ],
+   "x": 813,
+   "y": 542
+  },
+  {
+   "name": "spinner disc",
+   "box": [
+    778,
+    616,
+    68,
+    68
+   ],
+   "x": 812,
+   "y": 650
+  },
+  {
+   "name": "spinner icon",
+   "box": [
+    790,
+    628,
+    44,
+    44
+   ],
+   "x": 812,
+   "y": 650
+  },
+  {
+   "name": "copy card",
+   "box": [
+    674,
+    648,
+    277,
+    158
+   ],
+   "x": 813,
+   "y": 727
+  },
+  {
+   "name": "body copy",
+   "box": [
+    704,
+    700,
+    218,
+    54
+   ],
+   "x": 813,
+   "y": 727
+  }
+ ],
+ "drags": false,
+ "at": "2026-10-23T13:09:31.512Z"
+}

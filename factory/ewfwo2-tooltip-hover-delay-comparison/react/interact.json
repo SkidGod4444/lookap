@@ -1,0 +1,345 @@
+{
+ "slug": "ewfwo2-tooltip-hover-delay-comparison",
+ "ok": true,
+ "rest": 0,
+ "gestures": [
+  {
+   "step": "hover Body dropdown",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press Body dropdown",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release Body dropdown",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover colour dot",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press colour dot",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release colour dot",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover top title 'Delay on every hover'",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press top title 'Delay on every hover'",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release top title 'Delay on every hover'",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover bottom title 'Delay once, then instant'",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press bottom title 'Delay once, then instant'",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release bottom title 'Delay once, then instant'",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover top waiting counter",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press top waiting counter",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release top waiting counter",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover bottom waiting counter",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press bottom waiting counter",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release bottom waiting counter",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover top toolbar",
+   "html": 0.6,
+   "port": 0.6,
+   "mismatch": false
+  },
+  {
+   "step": "press top toolbar",
+   "html": 10.2,
+   "port": 10.2,
+   "mismatch": false
+  },
+  {
+   "step": "release top toolbar",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover bottom toolbar",
+   "html": 0.6,
+   "port": 0.6,
+   "mismatch": false
+  },
+  {
+   "step": "press bottom toolbar",
+   "html": 10.2,
+   "port": 10.2,
+   "mismatch": false
+  },
+  {
+   "step": "release bottom toolbar",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  }
+ ],
+ "frames": [
+  {
+   "step": "at rest",
+   "diff": 0
+  },
+  {
+   "step": "hover Body dropdown",
+   "diff": 0
+  },
+  {
+   "step": "press Body dropdown",
+   "diff": 0
+  },
+  {
+   "step": "release Body dropdown",
+   "diff": 0
+  },
+  {
+   "step": "hover colour dot",
+   "diff": 0
+  },
+  {
+   "step": "press colour dot",
+   "diff": 0
+  },
+  {
+   "step": "release colour dot",
+   "diff": 0
+  },
+  {
+   "step": "hover top title 'Delay on every hover'",
+   "diff": 0
+  },
+  {
+   "step": "press top title 'Delay on every hover'",
+   "diff": 0
+  },
+  {
+   "step": "release top title 'Delay on every hover'",
+   "diff": 0
+  },
+  {
+   "step": "hover bottom title 'Delay once, then instant'",
+   "diff": 0
+  },
+  {
+   "step": "press bottom title 'Delay once, then instant'",
+   "diff": 0
+  },
+  {
+   "step": "release bottom title 'Delay once, then instant'",
+   "diff": 0
+  },
+  {
+   "step": "hover top waiting counter",
+   "diff": 0
+  },
+  {
+   "step": "press top waiting counter",
+   "diff": 0
+  },
+  {
+   "step": "release top waiting counter",
+   "diff": 0
+  },
+  {
+   "step": "hover bottom waiting counter",
+   "diff": 0
+  },
+  {
+   "step": "press bottom waiting counter",
+   "diff": 0
+  },
+  {
+   "step": "release bottom waiting counter",
+   "diff": 0
+  },
+  {
+   "step": "hover top toolbar",
+   "diff": 0
+  },
+  {
+   "step": "press top toolbar",
+   "diff": 0
+  },
+  {
+   "step": "release top toolbar",
+   "diff": 0
+  },
+  {
+   "step": "hover bottom toolbar",
+   "diff": 0
+  },
+  {
+   "step": "press bottom toolbar",
+   "diff": 0
+  },
+  {
+   "step": "release bottom toolbar",
+   "diff": 0
+  }
+ ],
+ "targets": [
+  {
+   "name": "Body dropdown",
+   "box": [
+    395,
+    256,
+    76,
+    26
+   ],
+   "x": 433,
+   "y": 269
+  },
+  {
+   "name": "colour dot",
+   "box": [
+    1014,
+    256,
+    24,
+    24
+   ],
+   "x": 1026,
+   "y": 268
+  },
+  {
+   "name": "top title 'Delay on every hover'",
+   "box": [
+    88,
+    80,
+    295,
+    38
+   ],
+   "x": 236,
+   "y": 99
+  },
+  {
+   "name": "bottom title 'Delay once, then instant'",
+   "box": [
+    88,
+    584,
+    350,
+    38
+   ],
+   "x": 263,
+   "y": 603
+  },
+  {
+   "name": "top waiting counter",
+   "box": [
+    1226,
+    86,
+    126,
+    26
+   ],
+   "x": 1289,
+   "y": 99
+  },
+  {
+   "name": "bottom waiting counter",
+   "box": [
+    1226,
+    590,
+    126,
+    26
+   ],
+   "x": 1289,
+   "y": 603
+  },
+  {
+   "name": "top toolbar",
+   "box": [
+    374,
+    229,
+    691,
+    78
+   ],
+   "x": 720,
+   "y": 268
+  },
+  {
+   "name": "bottom toolbar",
+   "box": [
+    374,
+    733,
+    691,
+    78
+   ],
+   "x": 720,
+   "y": 772
+  }
+ ],
+ "drags": false,
+ "at": "2026-10-23T13:11:34.098Z"
+}

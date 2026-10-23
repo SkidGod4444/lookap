@@ -1,0 +1,345 @@
+{
+ "slug": "ti5i8b-vercel-agents-homepage-redesign",
+ "ok": true,
+ "rest": 0.1,
+ "gestures": [
+  {
+   "step": "hover Get a Demo button",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press Get a Demo button",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release Get a Demo button",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover Log In button",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press Log In button",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release Log In button",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover Sign Up button",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press Sign Up button",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release Sign Up button",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover Create an agent button",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press Create an agent button",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release Create an agent button",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover Talk to an expert button",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press Talk to an expert button",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release Talk to an expert button",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover Vercel logo triangle",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press Vercel logo triangle",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release Vercel logo triangle",
+   "html": 187.7,
+   "port": 187.7,
+   "mismatch": false
+  },
+  {
+   "step": "hover nav links",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press nav links",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release nav links",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover headline",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press headline",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release headline",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  }
+ ],
+ "frames": [
+  {
+   "step": "at rest",
+   "diff": 0.1
+  },
+  {
+   "step": "hover Get a Demo button",
+   "diff": 0.1
+  },
+  {
+   "step": "press Get a Demo button",
+   "diff": 0.1
+  },
+  {
+   "step": "release Get a Demo button",
+   "diff": 0.1
+  },
+  {
+   "step": "hover Log In button",
+   "diff": 0.1
+  },
+  {
+   "step": "press Log In button",
+   "diff": 0.1
+  },
+  {
+   "step": "release Log In button",
+   "diff": 0.1
+  },
+  {
+   "step": "hover Sign Up button",
+   "diff": 0.1
+  },
+  {
+   "step": "press Sign Up button",
+   "diff": 0.1
+  },
+  {
+   "step": "release Sign Up button",
+   "diff": 0.1
+  },
+  {
+   "step": "hover Create an agent button",
+   "diff": 0.1
+  },
+  {
+   "step": "press Create an agent button",
+   "diff": 0.1
+  },
+  {
+   "step": "release Create an agent button",
+   "diff": 0.1
+  },
+  {
+   "step": "hover Talk to an expert button",
+   "diff": 0.1
+  },
+  {
+   "step": "press Talk to an expert button",
+   "diff": 0.1
+  },
+  {
+   "step": "release Talk to an expert button",
+   "diff": 0.1
+  },
+  {
+   "step": "hover Vercel logo triangle",
+   "diff": 0.1
+  },
+  {
+   "step": "press Vercel logo triangle",
+   "diff": 0.1
+  },
+  {
+   "step": "release Vercel logo triangle",
+   "diff": 0.1
+  },
+  {
+   "step": "hover nav links",
+   "diff": 0.1
+  },
+  {
+   "step": "press nav links",
+   "diff": 0.1
+  },
+  {
+   "step": "release nav links",
+   "diff": 0.1
+  },
+  {
+   "step": "hover headline",
+   "diff": 0.1
+  },
+  {
+   "step": "press headline",
+   "diff": 0.1
+  },
+  {
+   "step": "release headline",
+   "diff": 0.1
+  }
+ ],
+ "targets": [
+  {
+   "name": "Get a Demo button",
+   "box": [
+    1107,
+    13,
+    87,
+    29
+   ],
+   "x": 1151,
+   "y": 28
+  },
+  {
+   "name": "Log In button",
+   "box": [
+    1204,
+    13,
+    56,
+    29
+   ],
+   "x": 1232,
+   "y": 28
+  },
+  {
+   "name": "Sign Up button",
+   "box": [
+    1270,
+    14,
+    64,
+    27
+   ],
+   "x": 1302,
+   "y": 28
+  },
+  {
+   "name": "Create an agent button",
+   "box": [
+    127,
+    500,
+    133,
+    34
+   ],
+   "x": 194,
+   "y": 517
+  },
+  {
+   "name": "Talk to an expert button",
+   "box": [
+    274,
+    500,
+    139,
+    34
+   ],
+   "x": 344,
+   "y": 517
+  },
+  {
+   "name": "Vercel logo triangle",
+   "box": [
+    127,
+    20,
+    18,
+    16
+   ],
+   "x": 136,
+   "y": 28
+  },
+  {
+   "name": "nav links",
+   "box": [
+    172,
+    19,
+    287,
+    17
+   ],
+   "x": 316,
+   "y": 28
+  },
+  {
+   "name": "headline",
+   "box": [
+    127,
+    298,
+    376,
+    106
+   ],
+   "x": 315,
+   "y": 351
+  }
+ ],
+ "drags": false,
+ "at": "2026-10-23T13:10:02.474Z"
+}
