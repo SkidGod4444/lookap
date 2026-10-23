@@ -7,18 +7,26 @@ import { rebuildFor } from "./rebuilds";
 /* Demand per entry: what people save, what agents pull, what gets opened. One hash per slug with the three counts and
    one sorted set with a weighted score, so the rebuild queue can be read in one call. A save is worth five opens; an
    agent read is worth three, since someone is building from it. Counting never blocks the request that caused it. */
-export type Kind = "save" | "agent" | "view";
-const WEIGHT: Record<Kind, number> = { save: 5, agent: 3, view: 1 };
+export type Kind = "save" | "agent" | "view" | "request";
+/* a Max key asking for a rebuild outranks everything else: someone paying for the finished file is waiting on it */
+const WEIGHT: Record<Kind, number> = { save: 5, agent: 3, view: 1, request: 40 };
 
-export function bump(slug: string, kind: Kind, by = 1) {
-  if (!dbReady || !slug) return;
+export function bump(slug: string, kind: Kind, by = 1): Promise<unknown> {
+  if (!dbReady || !slug) return Promise.resolve();
   const p = kv().pipeline();
   p.hincrby(`demand:${slug}`, kind, by);
   p.zincrby("demand:rank", WEIGHT[kind] * by, slug);
-  p.exec().catch(() => {});
+  return p.exec().catch(() => {});
 }
 
 export type DemandRow = { slug: string; title: string; author: string; score: number; saves: number; agent: number; views: number; measured: boolean; rebuilt: boolean };
+
+/* where an entry stands in the queue, 1 is next; null when it is not in it */
+export async function queuePosition(slug: string): Promise<number | null> {
+  if (!dbReady) return null;
+  const r = await kv().zrevrank("demand:rank", slug);
+  return r == null ? null : r + 1;
+}
 
 /* The queue: entries by demand, highest first, with their counts, whether a recipe exists yet and whether a rebuild already ships (those leave the queue). */
 export async function topDemand(n = 50): Promise<DemandRow[]> {

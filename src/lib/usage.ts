@@ -9,9 +9,9 @@ import type { Plan } from "./keys";
    with no entry for a plan is unmetered on that plan. */
 export const QUOTAS: Record<Plan, Partial<Record<string, number>>> = {
   none: {},
-  starter: {},
+  starter: { see_design: 60 },
   pro: { see_design: 500, look_at: 500, get_recipe: 200, check_rebuild: 300, check_media: 100 },
-  team: { see_design: 2000, look_at: 2000, get_recipe: 1000, check_rebuild: 1000, check_media: 300, get_rebuild: 50 },
+  team: { see_design: 2000, look_at: 2000, get_recipe: 1000, check_rebuild: 1000, check_media: 300, get_rebuild: 100, request_rebuild: 20 },
 };
 
 /* Tool calls per day per account, every tool except get_usage. The ceiling a plan is sold on: hit it, upgrade. */
@@ -23,7 +23,7 @@ export const BREADTH: Record<Plan, number> = { none: 0, starter: 20, pro: 40, te
 export type Usage = { used: number; limit: number; resets: string };
 
 /* What each metered tool is called on the account page, where tool names never appear. */
-export const METER_LABEL: Record<string, string> = { see_design: "Frames", look_at: "Looks", get_recipe: "Recipes", check_rebuild: "Rebuild checks", check_media: "Clip checks", get_rebuild: "Finished rebuilds" };
+export const METER_LABEL: Record<string, string> = { see_design: "Frames", look_at: "Looks", get_recipe: "Recipes", check_rebuild: "Rebuild checks", check_media: "Clip checks", get_rebuild: "Finished rebuilds", request_rebuild: "Rebuild requests" };
 
 /* Note that an account opened an entry today. The same entry again is free; a new one past the limit is refused and
    not recorded, so the day's set never grows past the limit. */

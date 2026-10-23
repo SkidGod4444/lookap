@@ -8,7 +8,7 @@ import { JUDGE_DELEGATION, JUDGE_INSTRUCTION, JUDGE_SCHEMA, judgeTile, packSheet
 import { kv, dbReady } from "@/lib/db";
 import { randomBytes } from "node:crypto";
 import { REBUILDS, FACTORY, rebuildFor, REBUILD_SLUGS, factoryNotes } from "@/lib/rebuilds";
-import { bump } from "@/lib/demand";
+import { bump, queuePosition } from "@/lib/demand";
 import { draftFor } from "@/lib/drafts";
 import { BREADTH, DAILY, QUOTAS, charge, chargeDaily, fingerprint, touchEntry, usageFor } from "@/lib/usage";
 import { readFile, writeFile } from "node:fs/promises";
@@ -40,8 +40,10 @@ const REASONS: Record<string, string> = {
 /* an entry by its slug, or by its recipe's slug: both appear in replies (list_notes names recipes), so both resolve */
 const entryFor = (slug: string) => bySlug(slug) ?? ENTRIES.find((x) => recipeFor(x)?.slug === slug);
 
-const gated = (what: string, plan: Plan, reason?: string, needs = "a Pro or Max key") =>
-  text({ error: plan === "none" ? `${what} ${REASONS[reason ?? "missing"] ?? REASONS.missing}` : `${what} needs ${needs}. Upgrade at /pricing.` });
+const gated = (what: string, plan: Plan, reason?: string, needs = "a Pro or Max key") => {
+  const flag = LOCK_OF[what];
+  return text({ error: plan === "none" ? `${what} ${REASONS[reason ?? "missing"] ?? REASONS.missing}` : `${what} needs ${needs}. Upgrade at /pricing.`, ...(plan !== "none" && flag && BETTER[flag] ? { whatItAdds: BETTER[flag] } : {}) });
+};
 
 /* The entry's frame as base64. Own demos live in public/; catalog frames come from the CDN. */
 async function loadFrame(poster: string): Promise<{ data: string; mimeType: string }> {
@@ -58,10 +60,18 @@ async function loadFrame(poster: string): Promise<{ data: string; mimeType: stri
 /* Which plan flag each paid tool needs. On a paid key the tools its plan lacks are hidden from tools/list, so an agent
    only sees what it can call; the instructions name what the next plan adds. A keyless request sees everything, each
    call answering with the pointer to pricing. */
-const LOCK: Record<string, keyof (typeof LIMITS)["pro"]> = { get_recipe: "recipes", see_design: "media", look_at: "media", measure: "media", check_rebuild: "media", judge_rebuild: "media", check_media: "media", get_rebuild: "source" };
+const LOCK: Record<string, keyof (typeof LIMITS)["pro"]> = { get_recipe: "recipes", see_design: "frames", look_at: "media", measure: "media", check_rebuild: "media", judge_rebuild: "media", check_media: "media", get_rebuild: "source", request_rebuild: "source" };
 /* the notes an agent can read: the hand-written ones, then what the factory learned rebuilding entries */
 const allNotes = () => [...NOTES, ...factoryNotes()];
-const NEEDS: Record<string, string> = { recipes: "Pro", media: "Pro", source: "Max" };
+const NEEDS: Record<string, string> = { recipes: "Pro", frames: "Starter", media: "Pro", source: "Max" };
+const LOCK_OF: Record<string, string> = LOCK;
+/* what the next plan does for the rebuild, said where an agent meets the limit */
+const BETTER: Record<string, string> = {
+  recipes: "Pro gives the measured recipe as data: every element's box, fill and timing, so the build is placed rather than guessed",
+  media: "Pro measures and proves the rebuild: what moves (look_at diff, track), exact colours and crops, a pixel and motion score per moment, and the checklist judged on crop pairs, so the agent fixes what is wrong instead of guessing",
+  source: "Max hands over the finished rebuild, already judged against the clip, to port instead of build, and lets the agent ask for one that does not exist yet",
+  frames: "Starter shows the frames themselves",
+};
 const spent = (what: string, u: { used: number; limit: number; resets: string }) => text({ error: `${what} has used its ${u.limit} calls for this month on this account. Resets ${u.resets}. A higher plan at /pricing raises it.`, usage: u });
 const NEXT: Record<Plan, string> = { none: "", starter: `Pro gets ${DAILY.pro} a day`, pro: `Max gets ${DAILY.team} a day`, team: "you are on the highest plan; the count resets tomorrow" };
 const tooWide = (u: { used: number; limit: number; resets: string }) => text({ error: `This account has opened its ${u.limit} entries for today. Keys are for building from entries, not for walking the registry. The count resets ${u.resets}.`, entries: u });
@@ -81,7 +91,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
         "Every other clip carries a draft measurement in get_brief: phases, moves and palette measured from the clip, boxes as a first pass; its keyframes work with see_design and check_rebuild too. " +
         "look_at is how a catalogue clip is measured rather than remembered: its contact sheet, the frame at any moment, what changed between two moments, a crop beside your own render, exact colours along a line, an edge tracked per frame. Where an entry carries a rubric (get_brief says so) the checklist is the goal: check_rebuild with several screenshots reads pixels and motion, and judge_rebuild composes the evidence for a judge you run on your own model; a rebuild is done when every criterion passes, not at a score. For a clip or still that is not in the catalogue (the user's own video, a URL), measure does the same from that file: a draft measurement first, then the same reads, and a check of your render against any moment. look_at, see_design and check_rebuild work on entries only. " +
         "To design something new rather than rebuild, the remix prompt takes two or three entries and a purpose and borrows their principles, proportions and timing, not their pixels; the notes are the transferable part. " +
-        "Every tool needs a key (Starter $1/mo at /pricing); see_design, look_at, get_recipe, check_rebuild and check_media need Pro; get_rebuild, the finished source, needs Max. " +
+        "Every tool needs a key. Starter ($1/mo) builds from sight: search, get_design, get_brief with the entry's checklist, the notes, and see_design for the frames. Pro measures and proves: look_at, measure, get_recipe, check_rebuild, judge_rebuild, check_media. Max starts from the finished rebuild with get_rebuild and asks for missing ones with request_rebuild. See /pricing. " +
         (plan === "none" ? "" : `This key is ${PLAN_NAME[plan]}. `) +
         (hidden.length ? `Not on this plan, so not listed: ${hidden.join(", ")}; see /pricing. ` : "") +
         (plan === "none" ? "" : `This account may make ${DAILY[plan]} tool calls a day and open ${BREADTH[plan]} distinct entries a day across all its keys; get_usage shows what is left. Recipes, drafts and source files carry a mark naming the account they were issued to. `) +
@@ -184,7 +194,10 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       const recipe = e ? recipeFor(e) : RECIPES.find((r) => r.slug === slug);
       const entry = e ?? ENTRIES.find((x) => recipe && recipeFor(x)?.slug === recipe.slug);
       const rb = entry ? rebuildFor(entry) : recipe ? { ...REBUILDS[recipe.slug], title: recipe.title, build: recipe.build } : null;
-      if (!rb || !rb.html) return text({ error: `No finished rebuild for ${slug}`, available: REBUILD_SLUGS() });
+      if (!rb || !rb.html) {
+        if (entry) { await bump(entry.slug, "request"); const pos = await queuePosition(entry.slug); return text({ error: `No finished rebuild for ${slug} yet`, requested: true, queue: pos ? `asked for on your behalf: number ${pos} in the rebuild queue` : "asked for on your behalf", meanwhile: "get_brief carries the checklist; look_at, check_rebuild and judge_rebuild take you there", available: REBUILD_SLUGS() }); }
+        return text({ error: `No finished rebuild for ${slug}`, available: REBUILD_SLUGS() });
+      }
       if (entry) { const br = await touchEntry(keyRef, plan, entry.slug); if (br && !br.ok) return tooWide(br); }
       const u = await charge(keyRef, plan, "get_rebuild");
       if (u && !u.ok) return spent("get_rebuild", u);
@@ -200,6 +213,27 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
           { type: "text" as const, text: header + body },
         ],
       };
+    },
+  );
+
+  reg(
+    "request_rebuild",
+    {
+      title: "Ask for a finished rebuild",
+      description: "Puts an entry without a finished rebuild at the front of lookap's rebuild queue, ahead of everything asked for by saves and reads; you get its place in the queue. When it ships, get_rebuild returns it. Max.",
+      inputSchema: { slug: z.string() },
+      annotations: { readOnlyHint: false, idempotentHint: true, openWorldHint: false },
+    },
+    async ({ slug }) => {
+      if (!lim.source) return gated("request_rebuild", plan, reason, "a Max key");
+      const e = entryFor(slug);
+      if (!e) return text({ error: `No entry ${slug}` });
+      if (rebuildFor(e)) return text({ slug: e.slug, finished: true, next: "get_rebuild returns it now" });
+      const u = await charge(keyRef, plan, "request_rebuild");
+      if (u && !u.ok) return spent("request_rebuild", u);
+      await bump(e.slug, "request");
+      const pos = await queuePosition(e.slug);
+      return text({ slug: e.slug, requested: true, queue: pos, read: pos ? `number ${pos} in the rebuild queue` : "in the rebuild queue", meanwhile: "get_brief carries the checklist; look_at, check_rebuild and judge_rebuild take you there", usage: u });
     },
   );
 
@@ -269,7 +303,13 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
             how: "every criterion must be true of your file; the judge looks at a crop of the clip beside the same crop of your render at the moment named (two for motion). Render at the moments listed, call check_rebuild with those screenshots for pixels and motion, then judge_rebuild for the checklist. Done means every criterion passes and your render moves where the clip moves." }
         : null;
       const policy = { imagery: IMAGERY_RULE, sampling: SAMPLING_RULE, rubric: rb ? "this entry has a rubric: see rubric" : "no rubric yet for this entry: judge by the crops (look_at what=zoom) and the brief's moments; the sampling and imagery rules still apply" };
-      return text(brief.draft ? { ...brief, rubric, policy, issued: { to: fingerprint(keyRef), on: new Date().toISOString().slice(0, 10) } } : { ...brief, rubric, policy });
+      const fr = rebuildFor(e);
+      const yourPlan = plan === "starter"
+        ? { plan: "Starter", build: "build from sight: see_design at each moment in rubric.moments, then check every criterion by eye against your render", next: BETTER.media }
+        : plan === "pro"
+          ? { plan: "Pro", build: "measure with look_at, render at the moments, check_rebuild with an upload token, then judge_rebuild until every criterion passes", next: fr ? `a finished rebuild of this entry exists: ${BETTER.source}` : BETTER.source }
+          : { plan: "Max", build: fr ? "get_rebuild hands you the finished file, judged against the clip: port it, keep the numbers, then check_rebuild your port" : "no finished rebuild yet: request_rebuild puts this entry at the front of the queue; meanwhile measure and judge as on Pro" };
+      return text(brief.draft ? { ...brief, rubric, policy, yourPlan, issued: { to: fingerprint(keyRef), on: new Date().toISOString().slice(0, 10) } } : { ...brief, rubric, policy, yourPlan });
     },
   );
 
@@ -282,7 +322,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       annotations: ro,
     },
     async ({ slug, at }) => {
-      if (!lim.media) return gated("see_design", plan, reason);
+      if (!lim.frames) return gated("see_design", plan, reason, "a key");
       const e = entryFor(slug);
       if (!e) return text({ error: `No entry ${slug}` });
       const br = await touchEntry(keyRef, plan, e.slug);
