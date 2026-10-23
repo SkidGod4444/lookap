@@ -1,0 +1,20 @@
+{
+ "slug": "1fut80-minimal-tooltip-thinking-mode",
+ "stack": "react-19 + tailwind-4 + motion",
+ "score": 91,
+ "html": 91,
+ "scales": true,
+ "moves": true,
+ "ok": true,
+ "costUsd": 3.39,
+ "minutes": 11.8,
+ "turns": 20,
+ "tokens": {
+  "written": 57643,
+  "read": 1252882
+ },
+ "ended": "completed",
+ "at": "2026-10-23T12:00:08.331Z",
+ "rescored": "after the checker photographed real-time moments on the clock (file unchanged)",
+ "typed": true
+}

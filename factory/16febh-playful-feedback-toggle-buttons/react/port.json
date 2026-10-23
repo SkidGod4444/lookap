@@ -1,0 +1,20 @@
+{
+ "slug": "16febh-playful-feedback-toggle-buttons",
+ "stack": "react-19 + tailwind-4 + motion",
+ "score": 92,
+ "html": 93,
+ "scales": true,
+ "moves": true,
+ "ok": true,
+ "costUsd": 2.8,
+ "minutes": 9.1,
+ "turns": 18,
+ "tokens": {
+  "written": 42613,
+  "read": 1045516
+ },
+ "ended": "completed",
+ "at": "2026-10-23T12:09:11.685Z",
+ "rescored": "after the checker photographed real-time moments on the clock (file unchanged)",
+ "typed": true
+}

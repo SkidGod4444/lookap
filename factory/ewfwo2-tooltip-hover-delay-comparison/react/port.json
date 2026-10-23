@@ -1,0 +1,20 @@
+{
+ "slug": "ewfwo2-tooltip-hover-delay-comparison",
+ "stack": "react-19 + tailwind-4 + motion",
+ "score": 94,
+ "html": 94,
+ "scales": true,
+ "moves": true,
+ "ok": true,
+ "costUsd": 3.08,
+ "minutes": 10,
+ "turns": 25,
+ "tokens": {
+  "written": 44455,
+  "read": 1908727
+ },
+ "ended": "completed",
+ "at": "2026-10-23T12:19:10.448Z",
+ "rescored": "after the checker photographed real-time moments on the clock (file unchanged)",
+ "typed": true
+}

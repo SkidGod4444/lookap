@@ -35,6 +35,8 @@ export type FactoryRebuild = {
   frame: { w: number; h: number }; score: number | null;
   build: { model: string; modelId: string; date: string; run?: { model: string; turns: number; outputTokens: number; totalTokens: number; costUsd: number; minutes: number; score: number }; hand?: string };
   hint: string; pattern: string; preview: string | null;
+  /* the verified React + Tailwind + Motion port (scripts/port.ts), when it matched the HTML file */
+  react?: { file: string; source: string; usage: string; score: number | null };
 };
 
 /* the embed's demo replay as a clip: seek every animation to each frame time, screenshot, encode */
@@ -79,7 +81,12 @@ for (const slug of existsSync("factory") ? readdirSync("factory").sort() : []) {
   const seconds = Math.max(4, ...(existsSync(join(dir, "check.json")) ? (JSON.parse(readFileSync(join(dir, "check.json"), "utf8")) as { keyframes: { at: number }[] }).keyframes.map((k) => k.at + 0.5) : [0]), Number(html.match(/(\d+(?:\.\d+)?)s\s*(?:linear|ease)/)?.[1] ?? 0));
   const clip = join("public", "live", `${slug}.mp4`);
   const preview = existsSync(clip) && !process.argv.includes("--video") ? `/live/${slug}.mp4` : await record(slug, embed, frame, seconds);
-  out[slug] = { slug, title, file: `${slug}.html`, html, embed, needs, frame, score: check?.score ?? null, build: rest, hint, pattern, preview };
+  const rp = join(dir, "react", "port.json");
+  const port = existsSync(rp) ? (JSON.parse(readFileSync(rp, "utf8")) as { ok: boolean; score: number | null }) : null;
+  const react = port?.ok && existsSync(join(dir, "react", "Rebuild.tsx"))
+    ? { file: "Rebuild.tsx", source: readFileSync(join(dir, "react", "Rebuild.tsx"), "utf8"), usage: existsSync(join(dir, "react", "PORT.md")) ? readFileSync(join(dir, "react", "PORT.md"), "utf8") : "npm i motion; Tailwind v4; set --u on a parent or pass unit; add the fonts the file exports", score: port.score }
+    : undefined;
+  out[slug] = { slug, title, file: `${slug}.html`, html, embed, needs, frame, score: check?.score ?? null, build: rest, hint, pattern, preview, ...(react ? { react } : {}) };
   console.log(`${slug}: ${Math.round(html.length / 1024)} KB, embed ${Math.round(embed.length / 1024)} KB, ${frame.w}x${frame.h}, score ${check?.score ?? "-"}, needs ${needs.join(", ") || "nothing"}, preview ${preview ?? "none"}${preview && existsSync(clip) ? ` (${Math.round(readFileSync(clip).length / 1024)} KB, ${seconds}s)` : ""}`);
 }
 writeFileSync("src/lib/rebuilds/factory.json", JSON.stringify(out, null, 1));

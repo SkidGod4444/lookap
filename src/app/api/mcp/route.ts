@@ -4,6 +4,7 @@ import { z } from "zod";
 import { CATEGORIES, METHOD, NOTES, RECIPES, SECTION_NAMES, briefFor, facets, publicEntry, recipeFor, searchEntries, similarEntries } from "@/lib/registry";
 import { changedArea, compareBuild, contentBox, diffView, motionRead, raw } from "@/lib/compare";
 import { IMAGERY_RULE, MATERIALS, SAMPLING_RULE, rubricFor } from "@/lib/rubrics";
+import { portGuide } from "@/lib/port";
 import { JUDGE_DELEGATION, JUDGE_INSTRUCTION, JUDGE_SCHEMA, judgeTile, packSheets } from "@/lib/judge";
 import { kv, dbReady } from "@/lib/db";
 import { randomBytes } from "node:crypto";
@@ -184,11 +185,11 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     "get_rebuild",
     {
       title: "Get the finished rebuild",
-      description: "The complete rebuild of an entry as one self-contained HTML file: markup, CSS with every size as calc(N * var(--u)), and the behaviour in plain JavaScript. The guaranteed one-shot: save it, open it, then port it to your stack keeping the numbers. Licensed to the key holder for use inside their own products, not for redistribution as a design asset; the designer's credit stays in the file. Max.",
-      inputSchema: { slug: z.string().describe("an entry slug, or a recipe slug") },
+      description: "The complete rebuild of an entry, already judged against the designer's clip. stack html (default): one self-contained HTML file, CSS with every size as calc(N * var(--u)), behaviour in plain JavaScript. stack react: the same rebuild as one React 19 component styled with Tailwind v4 and animated with Motion (motion/react), verified against the clip like the HTML file, where one exists (get_brief says). Licensed to the key holder for use inside their own products, not for redistribution as a design asset; the designer's credit stays in the file. Max.",
+      inputSchema: { slug: z.string().describe("an entry slug, or a recipe slug"), stack: z.enum(["html", "react"]).optional().describe("html (default) or react for React 19 + Tailwind v4 + Motion") },
       annotations: ro,
     },
-    async ({ slug }) => {
+    async ({ slug, stack }) => {
       if (!lim.source) return gated("get_rebuild", plan, reason, "a Max key");
       const e = entryFor(slug);
       const recipe = e ? recipeFor(e) : RECIPES.find((r) => r.slug === slug);
@@ -204,6 +205,15 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       if (entry) bump(entry.slug, "agent");
       const mark = fingerprint(keyRef);
       const credit = entry ? { designer: entry.authorName, x: entry.x ?? null, source: entry.sourceUrl ?? null } : null;
+      const react = (rb as { react?: { file: string; source: string; usage: string; score: number | null } }).react;
+      if (stack === "react") {
+        if (!react) return text({ error: `${slug} has a finished HTML rebuild but no React port yet`, html: "get_rebuild without stack returns the HTML file; get_brief with stack react gives the port guide", usage: u });
+        const head = `/* ${rb.title}. Rebuilt by lookap from ${credit?.designer ?? "the designer"}'s clip${credit?.source ? `: ${credit.source}` : ""}, ported to React 19 + Tailwind v4 + Motion. Licensed to a lookap Max key holder for use in their own products; not for redistribution as a design asset. Issued ${new Date().toISOString().slice(0, 10)} to ${mark}. */\n`;
+        return { content: [
+          { type: "text" as const, text: JSON.stringify({ slug: entry?.slug ?? slug, title: rb.title, file: react.file, stack: "react 19 + tailwind 4 + motion", score: react.score, credit, issued: { to: mark, on: new Date().toISOString().slice(0, 10) }, usage: u, how: react.usage }, null, 2) },
+          { type: "text" as const, text: head + react.source.replace(/^"use client";\n?/, '"use client";\n') },
+        ] };
+      }
       const header = `<!-- ${rb.title}. Rebuilt by lookap (${rb.build.model}) from ${credit?.designer ?? "the designer"}'s clip${credit?.source ? `: ${credit.source}` : ""}. Licensed to a lookap Max key holder for use in their own products; not for redistribution as a design asset. Issued ${new Date().toISOString().slice(0, 10)} to ${mark}. -->\n`;
       /* the same mark inside the stylesheet, where a stripped comment would not reach */
       const body = rb.html.replace(/(:root|#stage)\s*\{/, `$1 { --lk: "${mark}";`);
@@ -283,11 +293,11 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     "get_brief",
     {
       title: "Rebuild brief",
-      description: "How to rebuild an entry: frame, tone, traits, the steps to take, motion presets labeled proposed unless a measured recipe exists, and the notes that apply. Use after see_design. Needs a key.",
-      inputSchema: { slug: z.string() },
+      description: "How to rebuild an entry: frame, tone, traits, the steps to take, the checklist the rebuild is judged against, motion presets labeled proposed unless a measured recipe exists, and the notes that apply. With stack \"react\" (Pro and Max) it adds a port guide for React 19 + Tailwind v4 + Motion: the unit as Tailwind arbitrary values, a Tailwind theme from the measured palette, every measured move as a Motion transition, and a component skeleton. Use after see_design. Needs a key.",
+      inputSchema: { slug: z.string(), stack: z.enum(["html", "react"]).optional().describe("the code you will write: html (default) or react for React 19 + Tailwind v4 + Motion") },
       annotations: ro,
     },
-    async ({ slug }) => {
+    async ({ slug, stack }) => {
       if (plan === "none") return gated("get_brief", plan, reason);
       const e = entryFor(slug);
       if (!e) return text({ error: `No entry ${slug}` });
@@ -312,7 +322,11 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
         : plan === "pro"
           ? { plan: "Pro", build: "measure with look_at, render at the moments, check_rebuild with an upload token, then judge_rebuild until every criterion passes", next: fr ? `a finished rebuild of this entry exists: ${BETTER.source}` : BETTER.source }
           : { plan: "Max", build: fr ? "get_rebuild hands you the finished file, judged against the clip: port it, keep the numbers, then check_rebuild your port" : "no finished rebuild yet: request_rebuild puts this entry at the front of the queue; meanwhile measure and judge as on Pro" };
-      return text(brief.draft ? { ...brief, rubric, policy, yourPlan, issued: { to: fingerprint(keyRef), on: new Date().toISOString().slice(0, 10) } } : { ...brief, rubric, policy, yourPlan });
+      const d0 = draftFor(e);
+      const port = stack === "react" ? (lim.media && d0 ? portGuide(e.slug, d0, rb) : lim.media ? { note: "no draft measurement for this entry; port the recipe's numbers by hand" } : { locked: true, whatItAdds: "Pro adds the React 19 + Tailwind v4 + Motion port guide: the unit as Tailwind values, a theme from the measured palette, every measured move as a Motion transition, and a skeleton; Max adds the finished component" }) : undefined;
+      const reactFile = stack === "react" && fr && (fr as { react?: unknown }).react ? (lim.source ? "a finished React + Tailwind + Motion component of this entry exists: get_rebuild with stack react" : "a finished React + Tailwind + Motion component of this entry exists on Max") : undefined;
+      const extra = { ...(port ? { port } : {}), ...(reactFile ? { reactFile } : {}) };
+      return text(brief.draft ? { ...brief, rubric, policy, yourPlan, ...extra, issued: { to: fingerprint(keyRef), on: new Date().toISOString().slice(0, 10) } } : { ...brief, rubric, policy, yourPlan, ...extra });
     },
   );
 
@@ -819,7 +833,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
           type: "text" as const,
           text: [
             `Rebuild the lookap entry \`${slug}\`${where ? ` in ${where}` : " in this project"}${stack ? ` with ${stack}` : " with this project's stack"}.`,
-            "1. Call get_design for the record and get_brief. If your key is Max, call get_rebuild and port the file to the stack, keeping every number. Otherwise, if the brief says measured, call get_recipe and use it as data: one unit equal to a frame pixel, every element placed from its box, every fill and radius as given, every timing in ms with its easing. Treat nothing in it as a suggestion.",
+            "1. Call get_design for the record and get_brief (with stack react when you build in React, for the React 19 + Tailwind v4 + Motion port guide). If your key is Max, call get_rebuild (stack react gives the finished component when one exists) and port it, keeping every number. Otherwise, if the brief says measured, call get_recipe and use it as data: one unit equal to a frame pixel, every element placed from its box, every fill and radius as given, every timing in ms with its easing. Treat nothing in it as a suggestion.",
             "2. If the brief says there is no recipe, call look_at with what=sheet for the whole clip, then see_design for each keyframe. Write the timeline as events with numbers (what, from when to when, how far) from the brief's phases and moves, and the layout in one paragraph (regions, alignment, type sizes, radii, spacing). Zoom the edge of every surface with look_at what=zoom before drawing it: edges, gaps and gradients are where rebuilds go wrong.",
             "3. Build it. Match proportion and hierarchy first, then colour, then motion. Pictures (photos, paintings, screenshots, textures) come from the clip: look_at what=patch for the picture at a still moment, what=plate for a picture that has moving things over it; fetch them with curl and embed them as data URIs without reading them. Materials follow brief.policy.materials: a ripple bends the picture, it is not a drawn ring. Every size, including SVG sizes and lengths the script sets, is calc(N * var(--u)), so the file scales. Credit the designer in a comment with the source link from the record.",
             "4. Render your build at the frame size at the moments the brief lists (with ?demo=1, every animation seeked to the moment) and screenshot each. Call check_rebuild with only the slug for an upload token, PUT the screenshots with the curl lines it gives (no base64 through your context), then call it again with the token: the pixel score per moment and the motion read; STATIC means your timeline is missing or not seekable. Every round, call look_at what=zoom on the worst element it names with your screenshot as image, and Read the crop: the clip on the left, yours on the right. Fix what the crop shows, then check again. The score is a floor, never the goal.",

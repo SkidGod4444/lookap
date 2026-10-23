@@ -1,0 +1,20 @@
+{
+ "slug": "i61wwn-painterly-finance-app-onboarding",
+ "stack": "react-19 + tailwind-4 + motion",
+ "score": 94,
+ "html": 94,
+ "scales": true,
+ "moves": true,
+ "ok": true,
+ "costUsd": 1.75,
+ "minutes": 5.8,
+ "turns": 27,
+ "tokens": {
+  "written": 20869,
+  "read": 1064744
+ },
+ "ended": "completed",
+ "at": "2026-10-23T11:24:26.346Z",
+ "rescored": "after the checker photographed real-time moments on the clock (file unchanged)",
+ "typed": true
+}

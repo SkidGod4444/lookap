@@ -1,0 +1,20 @@
+{
+ "slug": "ti5i8b-vercel-agents-homepage-redesign",
+ "stack": "react-19 + tailwind-4 + motion",
+ "score": 84,
+ "html": 84,
+ "scales": true,
+ "moves": true,
+ "ok": true,
+ "costUsd": 3.47,
+ "minutes": 11.7,
+ "turns": 43,
+ "tokens": {
+  "written": 46294,
+  "read": 2664893
+ },
+ "ended": "completed",
+ "at": "2026-10-23T11:48:20.761Z",
+ "rescored": "after the checker photographed real-time moments on the clock (file unchanged)",
+ "typed": true
+}

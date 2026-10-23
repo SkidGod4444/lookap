@@ -45,6 +45,9 @@ const flag = (n: string) => { const i = args.indexOf(n); return i >= 0 ? args[i 
 const html = path.resolve(ROOT, flag("--html") ?? `factory/${slug}/index.html`);
 const out = path.dirname(html);
 const QUICK = args.includes("--quick"), JUDGE = args.includes("--judge");
+/* --realtime: for a page whose timeline cannot be seeked (a React port animating with Motion), start it once and take
+   each moment's screenshot as the clock passes it. The page must expose window.__go() to start the timeline. */
+const REALTIME = args.includes("--realtime");
 const JUDGE_MODEL = flag("--judge-model") ?? "sonnet", JUDGE_BUDGET = flag("--judge-budget") ?? "1.5";
 const VOTES = Math.max(1, Math.min(5, Number(flag("--judge-votes") ?? 1))); /* judge calls per criterion; a criterion fails on a majority of no, passes on a majority of yes */
 if (!existsSync(html)) { console.error(`no file at ${html}`); process.exit(2); }
@@ -93,8 +96,21 @@ const momentAt = (t: number) => moments.reduce((best, m) => (Math.abs(m.at - t) 
 
 /* headless Chrome, one page. ?demo=1 asks an interactive page to replay the clip's sequence on its timeline; a page
    without interaction ignores it */
-const page = await openPage(`file://${html}?demo=1`, W, H);
+const page = await openPage(`file://${html}?demo=1${REALTIME ? "&wait=1" : ""}`, W, H);
 const { ev } = page;
+let start = 0;
+/* real time: every moment is photographed first, on the clock, and scored afterwards, because scoring one moment
+   takes longer than the gap to the next */
+const timed = new Map<string, Buffer>();
+if (REALTIME) {
+  await sleep(400);
+  start = Number(await ev("(window.__go ? window.__go() : 0, performance.now())"));
+  for (const m of [...moments].sort((a, b) => a.at - b.at)) {
+    const wait = start + m.at * 1000 - Number(await ev("performance.now()"));
+    if (wait > 0) await sleep(wait);
+    timed.set(m.name, await page.shot());
+  }
+}
 const animations = Number(await ev("document.getAnimations().length"));
 
 type Row = { keyframe: string; at: number; still: boolean; score: number; overall: number; elements: unknown[]; regions: unknown[] };
@@ -114,9 +130,11 @@ let prev: { name: string; ref: Buffer; sub: Buffer } | null = null;
 const changedArea = (a: Buffer, b: Buffer) => changed(a, b, W, H);
 for (const kf of moments) {
   /* everything on the page jumps to this moment; the page itself is not reloaded, so fonts and layout are settled */
-  await ev(`document.getAnimations().forEach((a) => { try { a.pause(); a.currentTime = ${Math.round(kf.at * 1000)}; } catch {} }); true`);
-  await sleep(150);
-  const shot = await page.shot();
+  if (!REALTIME) {
+    await ev(`document.getAnimations().forEach((a) => { try { a.pause(); a.currentTime = ${Math.round(kf.at * 1000)}; } catch {} }); true`);
+    await sleep(150);
+  }
+  const shot = REALTIME ? timed.get(kf.name)! : await page.shot();
   const mine = path.join(out, `${kf.name}.png`);
   writeFileSync(mine, shot);
   const ref = kf.src;
@@ -159,9 +177,9 @@ const scale = await (async () => {
   const half = path.join(out, ".scale.html");
   writeFileSync(half, src.replace(/--u:\s*1px;/, "--u: 0.5px;"));
   const hw = Math.round(W / 2), hh = Math.round(H / 2);
-  const p2 = await openPage(`file://${half}?demo=1`, hw, hh);
-  await p2.ev(`document.getAnimations().forEach((a) => { try { a.pause(); a.currentTime = ${Math.round(moments[0].at * 1000)}; } catch {} }); true`);
-  await sleep(150);
+  const p2 = await openPage(`file://${half}?demo=1${REALTIME ? "&wait=1" : ""}`, hw, hh);
+  if (REALTIME) { await sleep(400); await p2.ev("(window.__go && window.__go(), 0)"); await sleep(moments[0].at * 1000); }
+  else { await p2.ev(`document.getAnimations().forEach((a) => { try { a.pause(); a.currentTime = ${Math.round(moments[0].at * 1000)}; } catch {} }); true`); await sleep(150); }
   const small = await p2.shot();
   p2.close();
   rmSync(half, { force: true });
@@ -292,7 +310,7 @@ if (judge) {
   for (const c of unsure) console.log(`  ?    ${c.id} [${c.axis}] ${c.element}: ${c.check}\n       seen: ${c.verdict!.seen}  |  ${zoom(c)}`);
   for (const c of policyRows) console.log(`  photo-class, by policy (this designer has not licensed sampling: a placeholder of the box and palette is the rule): ${c.id} ${c.verdict?.pass ?? "-"}: ${c.check}`);
 } else {
-  console.log(`score ${score} over ${rows.length} moments: ${stills.length} stills ${avg(stills)}${moving.length ? `, ${moving.length} mid-motion ${avg(moving)}` : " (no clip on disk, so no mid-motion moments)"} (run ${result.runs}); ${animations} animation${animations === 1 ? "" : "s"} on the page${animations ? "" : ": nothing to seek, every moment shows the load state"}; motion: ${motionRead}${rubric ? `; rubric: ${rubric.criteria.length} criteria in ${path.relative(ROOT, rubricPath)} (the orchestrator judges them with --judge; read them and check each by eye)` : ""}`);
+  console.log(`score ${score} over ${rows.length} moments: ${stills.length} stills ${avg(stills)}${moving.length ? `, ${moving.length} mid-motion ${avg(moving)}` : " (no clip on disk, so no mid-motion moments)"} (run ${result.runs}); ${REALTIME ? "photographed in real time" : `${animations} animation${animations === 1 ? "" : "s"} on the page${animations ? "" : ": nothing to seek, every moment shows the load state"}`}; motion: ${motionRead}${rubric ? `; rubric: ${rubric.criteria.length} criteria in ${path.relative(ROOT, rubricPath)} (the orchestrator judges them with --judge; read them and check each by eye)` : ""}`);
 }
 console.log(`scale: ${scale.read}`);
 console.log(`\nelements at rest (${rubric ? "rubric boxes" : "draft boxes"}), worst first:`);
