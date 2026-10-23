@@ -5,7 +5,7 @@ import { badge } from "@/components/button";
 import { BuyButton } from "@/components/BuyButton";
 
 const PLANS = [
-  { name: "Starter key", blurb: "Your agent builds from sight: it sees the designer's frames and knows exactly what done looks like.", monthly: 1, yearly: 0.83, yearlyTotal: 10, runs: "50 tool calls a day", cta: "Start 7 days free", trial: "7 days free, then billed. Cancel any time before.", primary: false,
+  { name: "Starter key", blurb: "Your agent builds from sight: it sees the designer's frames and knows exactly what done looks like.", monthly: 1, yearly: 0.83, yearlyTotal: 10, runs: "50 tool calls a day", cta: "Start 7 days free", trial: "7 days free", trialNote: "Charged when the trial ends. Cancel before and pay nothing.", primary: false,
     features: ["Search the registry and find similar work", "Every record and rebuild brief", "The checklist each rebuild is judged against", "The designer's frames, 60 a month", "All design notes", "One key, any MCP client"] },
   { name: "Pro key", blurb: "Your agent measures the clip and proves its rebuild against it, round after round, until it matches.", monthly: 12, yearly: 10, yearlyTotal: 120, runs: "300 tool calls a day", cta: "Get a Pro key", primary: true, popular: true,
     features: ["Everything in Starter", "What moves, how far and how fast, read from the clip", "Exact colours and zoomed crops beside your render", "A pixel and motion score at every moment", "The checklist judged on crop pairs by your own model", "React, Tailwind and Motion guide: measured moves as Motion transitions", "Measured recipes as data", "Frames 500 a month, 50 results per search"] },
@@ -61,7 +61,12 @@ function Pricing() {
                 <span className="text-sm text-subtle">/ month</span>
               </div>
               <span className="mt-1 block text-sm text-subtle">{p.runs}<span className="block">{yearly ? `Billed $${p.yearlyTotal} yearly` : "Billed monthly"}</span></span>
-              {"trial" in p && p.trial && <span className={badge("silver", "mt-3 self-start px-2.5 py-0.5 text-[12px]")}>{p.trial}</span>}
+              {"trial" in p && p.trial && (
+                <div className="mt-3 flex min-w-0 flex-col gap-1.5">
+                  <span className={badge("silver", "self-start px-2.5 py-0.5 text-[12px]")}>{p.trial}</span>
+                  {"trialNote" in p && <span className="text-[12px] leading-[1.45] text-pretty text-subtle">{p.trialNote}</span>}
+                </div>
+              )}
               <div className="mt-5 mb-4 border-t border-line pt-2">
                 {p.features.map((f) => (
                   <div key={f} className="my-4 flex items-start gap-2">
