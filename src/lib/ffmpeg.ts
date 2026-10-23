@@ -10,6 +10,25 @@ import { constants } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import ffmpegPath from "ffmpeg-static";
+import SCREENS_JSON from "./screens.json";
+
+/* filmed screens, straightened (scripts/screen.ts): the corners of the page in the source clip and the flat size. A
+   clip listed here is warped once per instance after download, so every read sees the page, not the room. */
+type Screen = { corners: { tl: [number, number]; tr: [number, number]; br: [number, number]; bl: [number, number] }; source: { w: number; h: number }; flat: { w: number; h: number } };
+const SCREENS = SCREENS_JSON as unknown as Record<string, Screen>;
+
+async function flatten(id: string, file: string): Promise<string> {
+  const sc = SCREENS[id];
+  if (!sc) return file;
+  const out = file.replace(/\.mp4$/, "-flat.mp4");
+  try { if ((await stat(out)).size > 0) return out; } catch { /* not yet */ }
+  const info = await clipInfo(file);
+  const k = info.width / sc.source.w;
+  const c = sc.corners;
+  const pts = [c.tl, c.tr, c.bl, c.br].flat().map((v) => (v * k).toFixed(1)).join(":");
+  await ffmpeg(["-v", "error", "-y", "-i", file, "-vf", `perspective=${pts}:interpolation=cubic:sense=source,scale=${sc.flat.w}:${sc.flat.h}:flags=lanczos`, "-c:v", "libx264", "-crf", "18", "-preset", "veryfast", "-pix_fmt", "yuv420p", "-an", out], 55_000);
+  return out;
+}
 
 const run = promisify(execFile);
 let bin: Promise<string> | null = null;
@@ -52,13 +71,13 @@ export async function cachedClip(id: string, url: string): Promise<string> {
   const dir = join(tmpdir(), "lookap-clips");
   await mkdir(dir, { recursive: true });
   const file = join(dir, `${id}.mp4`);
-  try { if ((await stat(file)).size > 0) return file; } catch { /* not yet */ }
+  try { if ((await stat(file)).size > 0) return flatten(id, file); } catch { /* not yet */ }
   const res = await fetch(url, { signal: AbortSignal.timeout(20_000), headers: { "user-agent": "lookap-registry/0.3" } });
   if (!res.ok) throw new Error(`clip fetch failed: ${res.status}`);
   const buf = Buffer.from(await res.arrayBuffer());
   if (buf.byteLength > 80 * 1024 * 1024) throw new Error("clip larger than 80 MB");
   await writeFile(file, buf);
-  return file;
+  return flatten(id, file);
 }
 
 /* the sharpest rendition the CDN has, for sampling: the catalogue links 720p, most clips also have 1080p */
@@ -66,14 +85,14 @@ export async function cachedClipBest(id: string, url: string): Promise<string> {
   const dir = join(tmpdir(), "lookap-clips");
   await mkdir(dir, { recursive: true });
   const file = join(dir, `${id}-best.mp4`);
-  try { if ((await stat(file)).size > 0) return file; } catch { /* not yet */ }
+  try { if ((await stat(file)).size > 0) return flatten(id, file); } catch { /* not yet */ }
   for (const u of [url.replace("/720p.mp4", "/1080p.mp4"), url]) {
     const res = await fetch(u, { signal: AbortSignal.timeout(25_000), headers: { "user-agent": "lookap-registry/0.3" } }).catch(() => null);
     if (!res?.ok) continue;
     const buf = Buffer.from(await res.arrayBuffer());
     if (buf.byteLength > 80 * 1024 * 1024 || buf.byteLength < 1000) continue;
     await writeFile(file, buf);
-    return file;
+    return flatten(id, file);
   }
   return cachedClip(id, url);
 }

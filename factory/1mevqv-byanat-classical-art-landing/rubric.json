@@ -1,0 +1,915 @@
+{
+ "slug": "1mevqv-byanat-classical-art-landing",
+ "frame": {
+  "w": 1306,
+  "h": 746
+ },
+ "at": "2026-10-23T09:45:34.268Z",
+ "model": "opus",
+ "costUsd": 0.7,
+ "summary": "A full-bleed hero for \"Byanat\", filmed off a monitor (the macOS dock shows at the bottom). The whole 1306x746 frame is an AI-generated video built on Michelangelo's Creation of Adam. Adam reclines on a rocky ledge at left, God and the cherubs sit in a red mantle at right, and the sky is cloudy blue. A soft black scrim darkens the lower ~40% to near-black (#040306) from about y 560 down, with no hard edge. Over the video sits a static overlay, all aligned to a left edge at x≈94. At the top is a thin nav: a \"Byanat\" logo at x 122, y 30, then small grey \"Products / Customers / Partners\" links around x 286–494, y 39, and a pale translucent pill button at the top right (x 1190, y 34). Lower left is a white rounded \"Backed by [Y] Combinator\" badge (92,412, 165x37, radius ~8). Under it is a large white serif headline in two lines, \"AI for infrastructure / that cannot fail.\" (~42px, y 472–558). Then comes a three-line white sans paragraph (~16px, y 580–650). Only the video moves; the overlay stays put through all 20s. The video runs as one continuous camera move. From 0–3s it pushes in on God, with his face filling the right half by 2.5s. Over 3–5.5s it passes his beard into blurred cherubs. Around 5.5–6s it dissolves into a photoreal rocky ledge where a hand reaches out. From 6–9.5s a photoreal Adam on the rocks reaches toward the camera. Over 10–13s the camera orbits behind his back as his arm stretches to the left over a landscape. From 13–16s it pulls back until the painted composition returns, with God re-entering at the right around 14–15s. From 16–20s it settles into the opening composition with only a slight drift, so 19s matches 0.15s and the clip loops seamlessly. A smeared band of stretched edge pixels runs down the left edge (x 0–90, y 170–590) as part of the video.",
+ "elements": [
+  {
+   "name": "background video (Creation of Adam, animated)",
+   "box": [
+    0,
+    0,
+    1306,
+    716
+   ],
+   "kind": "image",
+   "class": "photo",
+   "note": "full-bleed AI video of the painting; camera pushes in, morphs to photoreal Adam, returns; loops"
+  },
+  {
+   "name": "bottom dark scrim",
+   "box": [
+    0,
+    540,
+    1306,
+    206
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "vertical gradient transparent to near-black #040306, no edge"
+  },
+  {
+   "name": "left edge pixel smear",
+   "box": [
+    0,
+    170,
+    90,
+    420
+   ],
+   "kind": "decoration",
+   "class": "photo",
+   "note": "horizontally stretched edge pixels in the video, coloured bands"
+  },
+  {
+   "name": "logo mark + Byanat wordmark",
+   "box": [
+    122,
+    30,
+    84,
+    18
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "small rounded square glyph + sans wordmark, light grey/white"
+  },
+  {
+   "name": "nav links",
+   "box": [
+    284,
+    33,
+    212,
+    13
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "Products, Customers, Partners; ~11px light grey sans"
+  },
+  {
+   "name": "top-right pill button",
+   "box": [
+    1190,
+    34,
+    60,
+    22
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "pale translucent white pill, label unreadable"
+  },
+  {
+   "name": "YC badge card",
+   "box": [
+    92,
+    412,
+    165,
+    37
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "white rounded card radius ~8"
+  },
+  {
+   "name": "badge text Backed by",
+   "box": [
+    103,
+    424,
+    50,
+    12
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "grey ~10px sans"
+  },
+  {
+   "name": "YC logo square",
+   "box": [
+    162,
+    423,
+    16,
+    16
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "orange #f26522 square with white Y"
+  },
+  {
+   "name": "badge text Combinator",
+   "box": [
+    182,
+    423,
+    64,
+    13
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "orange ~12px sans"
+  },
+  {
+   "name": "headline",
+   "box": [
+    94,
+    472,
+    422,
+    86
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "white serif ~42px, two lines"
+  },
+  {
+   "name": "body paragraph",
+   "box": [
+    96,
+    580,
+    530,
+    70
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "white sans ~16px, three lines, line-height ~24"
+  },
+  {
+   "name": "macOS dock",
+   "box": [
+    355,
+    716,
+    790,
+    30
+   ],
+   "kind": "chrome",
+   "class": null,
+   "note": "screen recording chrome, not part of design"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "background video",
+   "axis": "present",
+   "check": "A picture fills the whole frame edge to edge behind all text, with no blank page colour visible above y 540",
+   "box": [
+    0,
+    0,
+    1306,
+    746
+   ],
+   "scope": "frame",
+   "at": 0.15,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "background video",
+   "axis": "imagery",
+   "check": "The background shows the Creation of Adam composition: a reclining nude male on rocks at left (x≈170–640) reaching toward a bearded figure in a red mantle at right (x≈740–1306), fingertips nearly touching near x≈600, y≈275; if unlicensed, a placeholder of the same full-frame box with blue-sky top, warm flesh tones left and deep red right",
+   "box": [
+    0,
+    0,
+    1306,
+    746
+   ],
+   "scope": "frame",
+   "at": 0.15,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "background video",
+   "axis": "imagery",
+   "check": "The sky across the top half is blue with soft cream/white cumulus clouds, not a flat colour",
+   "box": [
+    0,
+    0,
+    1306,
+    300
+   ],
+   "scope": "crop",
+   "at": 0.15,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "background video",
+   "axis": "imagery",
+   "check": "The God group at right sits in a dark red/crimson mantle shape filling roughly x 740–1306, y 100–470",
+   "box": [
+    740,
+    100,
+    566,
+    370
+   ],
+   "scope": "crop",
+   "at": 0.15,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "bottom dark scrim",
+   "axis": "style",
+   "check": "The lower part of the frame fades smoothly to near-black (about #040306) by y≈650, with no visible hard line or band where the darkening starts",
+   "box": [
+    0,
+    520,
+    1306,
+    200
+   ],
+   "scope": "crop",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "bottom dark scrim",
+   "axis": "style",
+   "check": "The scrim is a gradient, not a flat black block: the rocks/landscape remain faintly visible between y 540 and 600",
+   "box": [
+    0,
+    520,
+    1306,
+    100
+   ],
+   "scope": "crop",
+   "at": 0.15,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "logo",
+   "axis": "present",
+   "check": "A small logo glyph followed by the word \"Byanat\" sits at top-left around x 122, y 30",
+   "box": [
+    110,
+    22,
+    110,
+    30
+   ],
+   "scope": "crop",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "logo",
+   "axis": "text",
+   "check": "Wordmark reads exactly \"Byanat\" in light grey/white sans about 15px tall",
+   "box": [
+    110,
+    22,
+    110,
+    30
+   ],
+   "scope": "crop",
+   "at": 8.28,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "nav links",
+   "axis": "text",
+   "check": "Three nav links read \"Products\", \"Customers\", \"Partners\" left to right",
+   "box": [
+    275,
+    28,
+    230,
+    22
+   ],
+   "scope": "crop",
+   "at": 8.28,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "nav links",
+   "axis": "position",
+   "check": "Nav links start near x 286 and end near x 494, vertically centred at y≈39, level with the logo",
+   "box": [
+    275,
+    28,
+    230,
+    22
+   ],
+   "scope": "crop",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "nav links",
+   "axis": "style",
+   "check": "Nav link type is small (~11px) and light grey/white at reduced brightness compared to the headline",
+   "box": [
+    275,
+    28,
+    230,
+    22
+   ],
+   "scope": "crop",
+   "at": 8.28,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "top-right pill button",
+   "axis": "present",
+   "check": "A pale, rounded pill-shaped button sits at the top right around x 1190–1250, y 34–56",
+   "box": [
+    1175,
+    25,
+    90,
+    40
+   ],
+   "scope": "crop",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "top-right pill button",
+   "axis": "style",
+   "check": "The pill is fully rounded (radius = half its height) and a translucent light grey/white, not a saturated colour",
+   "box": [
+    1175,
+    25,
+    90,
+    40
+   ],
+   "scope": "crop",
+   "at": 8.28,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "YC badge card",
+   "axis": "position",
+   "check": "The badge card spans about x 92–257, y 412–449, left edge aligned with the headline",
+   "box": [
+    80,
+    400,
+    190,
+    60
+   ],
+   "scope": "crop",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "YC badge card",
+   "axis": "style",
+   "check": "Badge card is opaque near-white with corner radius about 8px and no visible dark border",
+   "box": [
+    80,
+    400,
+    190,
+    60
+   ],
+   "scope": "crop",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "YC badge card",
+   "axis": "text",
+   "check": "Badge reads \"Backed by\" in small grey type, then the YC mark, then \"Combinator\"",
+   "box": [
+    80,
+    400,
+    190,
+    60
+   ],
+   "scope": "crop",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "YC logo square",
+   "axis": "style",
+   "check": "The YC mark is a small orange (~#f26522) square about 16px with a white \"Y\"",
+   "box": [
+    155,
+    418,
+    30,
+    26
+   ],
+   "scope": "crop",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "badge text Combinator",
+   "axis": "style",
+   "check": "\"Combinator\" is set in orange, matching the YC square, not black or grey",
+   "box": [
+    178,
+    418,
+    75,
+    24
+   ],
+   "scope": "crop",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c19",
+   "element": "badge text Backed by",
+   "axis": "style",
+   "check": "\"Backed by\" is muted grey and smaller/lighter than \"Combinator\"",
+   "box": [
+    98,
+    418,
+    60,
+    22
+   ],
+   "scope": "crop",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "headline",
+   "axis": "text",
+   "check": "Headline reads exactly \"AI for infrastructure\" on line 1 and \"that cannot fail.\" on line 2",
+   "box": [
+    85,
+    465,
+    445,
+    100
+   ],
+   "scope": "crop",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "headline",
+   "axis": "style",
+   "check": "Headline is set in a serif typeface (bracketed serifs visible on \"f\", \"r\", \"t\")",
+   "box": [
+    85,
+    465,
+    445,
+    100
+   ],
+   "scope": "crop",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "headline",
+   "axis": "style",
+   "check": "Headline is bright white, the brightest type on the page",
+   "box": [
+    85,
+    465,
+    445,
+    100
+   ],
+   "scope": "crop",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "headline",
+   "axis": "position",
+   "check": "Line 1 spans x≈96–515 with cap top near y 474; line 2 spans x≈96–428 with baseline near y 552 (~42px type, ~46px line height)",
+   "box": [
+    85,
+    465,
+    445,
+    100
+   ],
+   "scope": "crop",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "body paragraph",
+   "axis": "text",
+   "check": "Paragraph reads \"Nobody hands you a system on trust. You test it, you find where it / breaks, you keep the controls in your own hands. Byanat is built to / be treated exactly that way.\" broken into those three lines",
+   "box": [
+    90,
+    575,
+    545,
+    80
+   ],
+   "scope": "crop",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c25",
+   "element": "body paragraph",
+   "axis": "style",
+   "check": "Paragraph is a sans-serif about 16px, white at slightly lower brightness than the headline",
+   "box": [
+    90,
+    575,
+    545,
+    80
+   ],
+   "scope": "crop",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c26",
+   "element": "body paragraph",
+   "axis": "position",
+   "check": "Paragraph left edge at x≈96 aligned with headline; lines centred near y 591, 614, 638; right edge near x 626",
+   "box": [
+    90,
+    575,
+    545,
+    80
+   ],
+   "scope": "crop",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c27",
+   "element": "overlay layout",
+   "axis": "position",
+   "check": "Badge, headline and paragraph share one left edge at x≈92–96 and stack top to bottom with ~24px gaps; nothing sits on the right half of the overlay",
+   "box": [
+    0,
+    400,
+    1306,
+    260
+   ],
+   "scope": "frame",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "overlay",
+   "axis": "motion",
+   "check": "Badge, headline, paragraph, logo and nav stay in the same place and at the same size between 0.15s and 19s (no fade, slide or reveal)",
+   "box": [
+    80,
+    20,
+    560,
+    640
+   ],
+   "scope": "frame",
+   "at": 0.15,
+   "then": 19
+  },
+  {
+   "id": "c29",
+   "element": "overlay",
+   "axis": "motion",
+   "check": "The text overlay is unchanged at 8.28s compared with 0.15s even though the picture behind it is completely different",
+   "box": [
+    80,
+    400,
+    560,
+    260
+   ],
+   "scope": "frame",
+   "at": 0.15,
+   "then": 8.28
+  },
+  {
+   "id": "c30",
+   "element": "background video",
+   "axis": "motion",
+   "check": "Between 0.15s and 2.5s the camera pushes in on God: at 2.5s his bearded face fills about x 780–1000, y 120–300 and his arm reaches across to x≈330",
+   "box": [
+    0,
+    0,
+    1306,
+    746
+   ],
+   "scope": "frame",
+   "at": 0.15,
+   "then": 2.5
+  },
+  {
+   "id": "c31",
+   "element": "background video",
+   "axis": "motion",
+   "check": "The background moves continuously (no still frames) between 0.5s and 1s: Adam and God shift and grow slightly",
+   "box": [
+    0,
+    0,
+    1306,
+    746
+   ],
+   "scope": "frame",
+   "at": 0.5,
+   "then": 1
+  },
+  {
+   "id": "c32",
+   "element": "background video",
+   "axis": "motion",
+   "check": "By 8.28s the painting has become a photoreal scene: a young man on mossy grey rocks reaching his hand toward the viewer in the centre (x≈420–760)",
+   "box": [
+    0,
+    0,
+    1306,
+    746
+   ],
+   "scope": "frame",
+   "at": 2.5,
+   "then": 8.28
+  },
+  {
+   "id": "c33",
+   "element": "background video",
+   "axis": "motion",
+   "check": "Around 11–12s the view is from behind the man's bare back with his arm outstretched to the left over a pale landscape",
+   "box": [
+    0,
+    0,
+    1306,
+    746
+   ],
+   "scope": "frame",
+   "at": 8.28,
+   "then": 11.5
+  },
+  {
+   "id": "c34",
+   "element": "background video",
+   "axis": "motion",
+   "check": "Between 16.5s and 19s the full composition (Adam left, God right) is back and drifts only slightly: Adam's hand moves from x≈660 to x≈585",
+   "box": [
+    0,
+    0,
+    1306,
+    746
+   ],
+   "scope": "frame",
+   "at": 16.5,
+   "then": 19
+  },
+  {
+   "id": "c35",
+   "element": "background video",
+   "axis": "motion",
+   "check": "The frame at 19s nearly matches the frame at 0.15s (same composition and scale), so the loop restarts without a visible jump",
+   "box": [
+    0,
+    0,
+    1306,
+    746
+   ],
+   "scope": "frame",
+   "at": 0.15,
+   "then": 19
+  },
+  {
+   "id": "c36",
+   "element": "background video",
+   "axis": "motion",
+   "check": "Between 19s and 19.5s only small parts change (faint edges on the figures); the picture is nearly still",
+   "box": [
+    0,
+    0,
+    1306,
+    746
+   ],
+   "scope": "frame",
+   "at": 19,
+   "then": 19.5
+  },
+  {
+   "id": "c37",
+   "element": "background video",
+   "axis": "style",
+   "check": "The transition from painting to photoreal (~5–6s) is a soft continuous morph/dissolve, not a hard cut to black or a slide",
+   "box": [
+    0,
+    0,
+    1306,
+    746
+   ],
+   "scope": "frame",
+   "at": 5,
+   "then": 6
+  },
+  {
+   "id": "c38",
+   "element": "background video",
+   "axis": "imagery",
+   "check": "The background is a moving picture (a video), not a static image with a CSS zoom: the figures change pose and viewpoint between 0.15s and 11.5s",
+   "box": [
+    0,
+    0,
+    1306,
+    746
+   ],
+   "scope": "frame",
+   "at": 0.15,
+   "then": 11.5
+  },
+  {
+   "id": "c39",
+   "element": "left edge pixel smear",
+   "axis": "imagery",
+   "check": "A strip down the left edge (x 0–90, y 170–590) shows horizontally stretched colour bands (blue, green, tan, brown) instead of picture detail",
+   "box": [
+    0,
+    160,
+    110,
+    440
+   ],
+   "scope": "crop",
+   "at": 0.15,
+   "then": null
+  },
+  {
+   "id": "c40",
+   "element": "page",
+   "axis": "style",
+   "check": "Overall tone is a light, colourful painting in the top two-thirds giving way to near-black at the bottom; type is white over it",
+   "box": [
+    0,
+    0,
+    1306,
+    746
+   ],
+   "scope": "frame",
+   "at": 0.15,
+   "then": null
+  }
+ ],
+ "imagery": [
+  {
+   "name": "Creation of Adam painting (opening composition)",
+   "box": [
+    0,
+    0,
+    1306,
+    716
+   ],
+   "class": "photo",
+   "what": "Michelangelo's Creation of Adam re-rendered: Adam reclining on rocks at left under a cloudy blue sky, God with cherubs in a red mantle at right, fingertips almost touching at centre; no licence.json, so the clip's frames may not be sampled and a placeholder of the same box and colours stands in",
+   "at": 0.15
+  },
+  {
+   "name": "God close-up",
+   "box": [
+    300,
+    0,
+    1006,
+    560
+   ],
+   "class": "photo",
+   "what": "push-in on God's grey-bearded face and outstretched arm, red mantle behind",
+   "at": 2.5
+  },
+  {
+   "name": "photoreal Adam on rocks",
+   "box": [
+    0,
+    0,
+    1306,
+    716
+   ],
+   "class": "photo",
+   "what": "photoreal young man on mossy rocks reaching his hand toward the camera, warm late light",
+   "at": 8.28
+  },
+  {
+   "name": "Adam from behind",
+   "box": [
+    0,
+    0,
+    1306,
+    716
+   ],
+   "class": "photo",
+   "what": "over-the-shoulder view of bare back, arm stretched left over hazy landscape",
+   "at": 11.5
+  },
+  {
+   "name": "left edge pixel smear",
+   "box": [
+    0,
+    170,
+    90,
+    420
+   ],
+   "class": "photo",
+   "what": "stretched edge pixels from the video, horizontal colour bands",
+   "at": 0.15
+  },
+  {
+   "name": "YC logo",
+   "box": [
+    162,
+    423,
+    16,
+    16
+   ],
+   "class": "structured",
+   "what": "orange square with white Y",
+   "at": 2.5
+  },
+  {
+   "name": "Byanat logo glyph",
+   "box": [
+    122,
+    30,
+    16,
+    16
+   ],
+   "class": "structured",
+   "what": "small rounded square outline mark",
+   "at": 2.5
+  }
+ ],
+ "moves": [
+  {
+   "element": "background video",
+   "what": "camera pushes in toward God and pans right; God's face fills right half",
+   "from": 0.35,
+   "to": 3,
+   "px": null
+  },
+  {
+   "element": "background video",
+   "what": "continues past God's beard into blurred cherubs",
+   "from": 3,
+   "to": 5.5,
+   "px": null
+  },
+  {
+   "element": "background video",
+   "what": "morphs into photoreal rocky ledge with a reaching hand",
+   "from": 5.5,
+   "to": 6.2,
+   "px": null
+  },
+  {
+   "element": "background video",
+   "what": "photoreal Adam on rocks reaches toward camera",
+   "from": 6.2,
+   "to": 9.5,
+   "px": null
+  },
+  {
+   "element": "background video",
+   "what": "camera orbits behind Adam; arm outstretched left over landscape",
+   "from": 10,
+   "to": 13,
+   "px": null
+  },
+  {
+   "element": "background video",
+   "what": "pulls back; painted composition returns, God re-enters at right",
+   "from": 13,
+   "to": 16.2,
+   "px": null
+  },
+  {
+   "element": "background video",
+   "what": "settles to opening composition with slight leftward drift and scale-down, matches 0.15s",
+   "from": 16.3,
+   "to": 18,
+   "px": 75
+  },
+  {
+   "element": "text overlay, badge, nav",
+   "what": "no movement for the whole clip",
+   "from": 0,
+   "to": 20,
+   "px": 0
+  }
+ ]
+}
