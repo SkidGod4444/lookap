@@ -5,7 +5,7 @@
 import { execFile } from "node:child_process";
 import { createHash } from "node:crypto";
 import { promisify } from "node:util";
-import { access, chmod, copyFile, mkdir, readFile, stat, writeFile } from "node:fs/promises";
+import { access, chmod, copyFile, mkdir, readFile, readdir, rm, stat, writeFile } from "node:fs/promises";
 import { constants } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -59,6 +59,41 @@ export async function cachedClip(id: string, url: string): Promise<string> {
   if (buf.byteLength > 80 * 1024 * 1024) throw new Error("clip larger than 80 MB");
   await writeFile(file, buf);
   return file;
+}
+
+/* the sharpest rendition the CDN has, for sampling: the catalogue links 720p, most clips also have 1080p */
+export async function cachedClipBest(id: string, url: string): Promise<string> {
+  const dir = join(tmpdir(), "lookap-clips");
+  await mkdir(dir, { recursive: true });
+  const file = join(dir, `${id}-best.mp4`);
+  try { if ((await stat(file)).size > 0) return file; } catch { /* not yet */ }
+  for (const u of [url.replace("/720p.mp4", "/1080p.mp4"), url]) {
+    const res = await fetch(u, { signal: AbortSignal.timeout(25_000), headers: { "user-agent": "lookap-registry/0.3" } }).catch(() => null);
+    if (!res?.ok) continue;
+    const buf = Buffer.from(await res.arrayBuffer());
+    if (buf.byteLength > 80 * 1024 * 1024 || buf.byteLength < 1000) continue;
+    await writeFile(file, buf);
+    return file;
+  }
+  return cachedClip(id, url);
+}
+
+/* the per-pixel median of a region over a span: what stays when moving things pass over a still picture (ripples,
+   glass, a cursor), so the picture comes out clean. `box` is in the clip file's own pixels. JPEG bytes. */
+export async function plateOf(clip: string, box: [number, number, number, number], from: number, to: number, fps = 4): Promise<Buffer> {
+  const n = Math.max(3, Math.round((to - from) * fps));
+  const r = Math.min(127, Math.floor((n - 1) / 2));
+  const dir = join(tmpdir(), `lookap-plate-${process.pid}-${Math.random().toString(36).slice(2)}`);
+  await mkdir(dir, { recursive: true });
+  const [x, y, w, h] = box.map((v) => Math.max(0, Math.round(v)));
+  /* ffmpeg builds differ in which frames tmedian emits (only full windows, or every frame); the middle of what comes
+     out is the full-window median either way */
+  await ffmpeg(["-v", "error", "-y", "-ss", String(from), "-t", String(to - from), "-i", clip, "-vf", `fps=${fps},crop=${w - (w % 2)}:${h - (h % 2)}:${x}:${y},tmedian=radius=${r}`, "-q:v", "3", join(dir, "%04d.jpg")], 55_000);
+  const files = (await readdir(dir)).filter((f) => f.endsWith(".jpg")).sort();
+  if (!files.length) throw new Error("the median produced no frame");
+  const out = await readFile(join(dir, files[Math.floor(files.length / 2)]));
+  await rm(dir, { recursive: true, force: true });
+  return out;
 }
 
 /* one frame at t seconds, full size, as PNG bytes */

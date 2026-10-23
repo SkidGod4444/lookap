@@ -3,7 +3,7 @@ import { WebStandardStreamableHTTPServerTransport } from "@modelcontextprotocol/
 import { z } from "zod";
 import { CATEGORIES, METHOD, NOTES, RECIPES, SECTION_NAMES, briefFor, facets, publicEntry, recipeFor, searchEntries, similarEntries } from "@/lib/registry";
 import { changedArea, compareBuild, contentBox, diffView, motionRead, raw } from "@/lib/compare";
-import { IMAGERY_RULE, SAMPLING_RULE, rubricFor } from "@/lib/rubrics";
+import { IMAGERY_RULE, MATERIALS, SAMPLING_RULE, rubricFor } from "@/lib/rubrics";
 import { JUDGE_DELEGATION, JUDGE_INSTRUCTION, JUDGE_SCHEMA, judgeTile, packSheets } from "@/lib/judge";
 import { kv, dbReady } from "@/lib/db";
 import { randomBytes } from "node:crypto";
@@ -18,7 +18,7 @@ import sharp from "sharp";
 import { ENTRIES, bySlug, type Entry } from "@/lib/data";
 import { LIMITS, PLAN_NAME, resolvePlan, type Plan } from "@/lib/keys";
 import { sampleVideo } from "@/lib/gate/frames";
-import { cachedClip, cachedUrl, clipInfo, frameAt, measureClip, sheetOf, trackEdge } from "@/lib/ffmpeg";
+import { cachedClip, cachedClipBest, cachedUrl, clipInfo, frameAt, measureClip, plateOf, sheetOf, trackEdge } from "@/lib/ffmpeg";
 import { clipId } from "@/lib/drafts";
 import { analyse } from "@/lib/gate/heuristics";
 
@@ -302,7 +302,10 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
             imagery: rb.imagery.map((m) => ({ ...m, rule: m.class === "photo" && rb.licensed ? IMAGERY_RULE.licensed : IMAGERY_RULE[m.class] })),
             how: "every criterion must be true of your file; the judge looks at a crop of the clip beside the same crop of your render at the moment named (two for motion). Render at the moments listed, call check_rebuild with those screenshots for pixels and motion, then judge_rebuild for the checklist. Done means every criterion passes and your render moves where the clip moves." }
         : null;
-      const policy = { imagery: IMAGERY_RULE, sampling: SAMPLING_RULE, rubric: rb ? "this entry has a rubric: see rubric" : "no rubric yet for this entry: judge by the crops (look_at what=zoom) and the brief's moments; the sampling and imagery rules still apply" };
+      /* the material techniques this entry's checklist talks about, so the agent builds the material, not an outline */
+      const said = rb ? `${rb.summary} ${rb.criteria.map((c) => c.check).join(" ")} ${rb.imagery.map((m) => m.what).join(" ")}`.toLowerCase() : "";
+      const materials = Object.fromEntries(Object.entries(MATERIALS).filter(([k]) => (k === "ripple" ? /ripple|wave|water|ring/ : k === "glass" ? /glass|lens|refract/ : k === "frosted" ? /frost|blur/ : k === "metal" ? /metal|chrome|brushed/ : k === "paper" ? /paper|receipt|card|grain/ : /glow|halo|light/).test(said)));
+      const policy = { imagery: IMAGERY_RULE, sampling: SAMPLING_RULE, ...(Object.keys(materials).length ? { materials } : {}), sample: "look_at what=patch takes the picture itself from the clip, what=plate takes it clean from under moving things; both arrive at an address you fetch with curl", rubric: rb ? "this entry has a rubric: see rubric" : "no rubric yet for this entry: judge by the crops (look_at what=zoom) and the brief's moments; the sampling and imagery rules still apply" };
       const fr = rebuildFor(e);
       const yourPlan = plan === "starter"
         ? { plan: "Starter", build: "build from sight: see_design at each moment in rubric.moments, then check every criterion by eye against your render", next: BETTER.media }
@@ -350,10 +353,10 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
     "look_at",
     {
       title: "Look at a clip the way it was measured",
-      description: "Frames and numbers from the clip itself, at full size, not impressions. what=sheet: a contact sheet, the whole clip at 2 fps, or with span [a, b] (seconds, up to 4 s) that stretch at 10 fps in 6 columns, read left to right then down, so you see what moves and in what order before you decide a timeline. what=frame with at (seconds): the clip's frame at that moment. what=diff with span [a, b]: the clip at a, at b, and what changed between them in white, cropped to the content, with the share of the frame that changed and where: which thing moves and which only has something pass over it, read before you decide a timeline. what=zoom with at and box [x, y, w, h] in frame pixels: that crop enlarged, the judge of edges, radii, gradients, shadows and gaps; add image (base64 PNG or JPEG of your own render at that moment, any size) to get your crop beside it. what=colors with at and col (an x) or row (a y) plus from and to: one hex per frame pixel along that line, the true colour of a border, a gradient or a gap. what=track with col or row, span [a, b] (up to 4 s) and cls (red, dark or light): per frame at the clip's own rate, the first and last pixel of that colour along the line, only where it changed, so a motion reads as start, end, distance and shape; track a heading too, since if it moves the page reflows. Clips only. Needs Pro; metered like see_design.",
+      description: "Frames and numbers from the clip itself, at full size, not impressions. what=sheet: a contact sheet, the whole clip at 2 fps, or with span [a, b] (seconds, up to 4 s) that stretch at 10 fps in 6 columns, read left to right then down, so you see what moves and in what order before you decide a timeline. what=frame with at (seconds): the clip's frame at that moment. what=diff with span [a, b]: the clip at a, at b, and what changed between them in white, cropped to the content, with the share of the frame that changed and where: which thing moves and which only has something pass over it, read before you decide a timeline. what=patch with at and box [x, y, w, h] in frame pixels: that region of the clip, from the sharpest rendition, as a JPEG at an address you fetch with curl (no base64 through your context): the picture itself for a photo-class region, since every entry is licensed for sampling unless the brief says the designer declined; a tile for a texture. what=plate with box and span [a, b] (up to 24 s): the per-pixel median of that region over the span, so a still picture that has moving things over it (ripples, glass, a cursor, a passing card) comes out clean; static UI on top survives and is yours to cover or draw. what=zoom with at and box [x, y, w, h] in frame pixels: that crop enlarged, the judge of edges, radii, gradients, shadows and gaps; add image (base64 PNG or JPEG of your own render at that moment, any size) to get your crop beside it. what=colors with at and col (an x) or row (a y) plus from and to: one hex per frame pixel along that line, the true colour of a border, a gradient or a gap. what=track with col or row, span [a, b] (up to 4 s) and cls (red, dark or light): per frame at the clip's own rate, the first and last pixel of that colour along the line, only where it changed, so a motion reads as start, end, distance and shape; track a heading too, since if it moves the page reflows. Clips only. Needs Pro; metered like see_design.",
       inputSchema: {
         slug: z.string(),
-        what: z.enum(["sheet", "frame", "diff", "zoom", "colors", "track"]),
+        what: z.enum(["sheet", "frame", "diff", "patch", "plate", "zoom", "colors", "track"]),
         at: z.union([z.number(), z.string()]).optional().describe("seconds into the clip, or a keyframe name from the brief such as kf2"),
         box: z.array(z.number()).length(4).optional().describe("[x, y, w, h] in frame pixels, for zoom"),
         col: z.number().optional().describe("x of the column to read, for colors"),
@@ -362,10 +365,11 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
         image: z.string().optional().describe("base64 of your render at that moment, for zoom: shown beside the clip's crop"),
         span: z.array(z.number()).length(2).optional().describe("[from, to] in seconds, for sheet (10 fps) and track, at most 4 s; for diff, the two moments to compare"),
         cls: z.enum(["red", "dark", "light"]).optional().describe("the colour class to track; default dark"),
+        max: z.number().int().min(64).max(2400).optional().describe("for patch and plate: the longest side of the JPEG in pixels, default the region's own size up to 1600"),
       },
       annotations: ro,
     },
-    async ({ slug, what, at: atArg, box, col, row, from, to, image, span, cls }) => {
+    async ({ slug, what, at: atArg, box, col, row, from, to, image, span, cls, max }, extra) => {
       let at: number | string | undefined = atArg;
       if (!lim.media) return gated("look_at", plan, reason);
       const e = entryFor(slug);
@@ -422,6 +426,42 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
         const k = W / v.size.w;
         const inFrame = (b: number[] | null) => b && b.map((n) => Math.round(n * k));
         return { content: [{ type: "image" as const, data: v.image.toString("base64"), mimeType: "image/jpeg" }, { type: "text" as const, text: JSON.stringify({ slug, diff: { span, panels: `the clip at ${span[0]}s, at ${span[1]}s, and what changed (white = changed), cropped to frame box ${JSON.stringify(inFrame(v.crop))} at ${v.scale.toFixed(2)}x`, changed: `${v.changed}% of the frame`, changedBox: inFrame(v.changedBox), read: "the white shapes are the things that move; a region white only along an edge had something pass over it; a thing that stays black does not move even if the draft's motion rows say it does" }, usage: u }, null, 2) }] };
+      }
+      if (what === "patch" || what === "plate") {
+        if (!box) return text({ error: `${what} needs box [x, y, w, h] in frame pixels` });
+        const [bx, by, bw, bh] = box.map((n) => Math.max(0, Math.round(n)));
+        if (bw < 8 || bh < 8 || bx + bw > W || by + bh > H) return text({ error: `box must sit inside the ${W}x${H} frame` });
+        if (what === "patch" && at === undefined) return text({ error: "patch needs at (seconds): a moment when nothing moving covers the region" });
+        if (what === "plate" && (!span || span[1] <= span[0] || span[1] - span[0] > 24 || span[0] < 0 || span[1] > draft.duration + 0.5)) return text({ error: `plate needs span [a, b] within the ${draft.duration}s clip, at most 24 s; take a span where the moving things cross the whole region` });
+        if (!dbReady) return text({ error: "the asset store is not configured on this server" });
+        const best = e.video ? await cachedClipBest(id, e.video.src).catch(() => null) : null;
+        if (!best) return text({ error: "the clip could not be read right now; try again" });
+        const u = await charge(keyRef, plan, "look_at");
+        if (u && !u.ok) return spent("look_at", u);
+        bump(e.slug, "agent");
+        const info = await clipInfo(best);
+        const k = info.width / W;
+        const src: [number, number, number, number] = [bx * k, by * k, bw * k, bh * k];
+        let jpg: Buffer;
+        try {
+          if (what === "patch") {
+            const f = await frameAt(best, Math.max(0, Math.min(draft.duration, Number(at))));
+            jpg = await sharp(f).extract({ left: Math.round(src[0]), top: Math.round(src[1]), width: Math.max(1, Math.min(info.width - Math.round(src[0]), Math.round(src[2]))), height: Math.max(1, Math.min(info.height - Math.round(src[1]), Math.round(src[3]))) }).jpeg({ quality: 88, mozjpeg: true }).toBuffer();
+          } else jpg = await plateOf(best, src, span![0], span![1]);
+        } catch (err) { return text({ error: `could not ${what} that region: ${err instanceof Error ? err.message.slice(0, 200) : "ffmpeg failed"}` }); }
+        const longest = Math.min(max ?? 1600, 2400);
+        const meta = await sharp(jpg).metadata();
+        if (Math.max(meta.width ?? 0, meta.height ?? 0) > longest) jpg = await sharp(jpg).resize({ width: (meta.width ?? 0) >= (meta.height ?? 0) ? longest : undefined, height: (meta.height ?? 0) > (meta.width ?? 0) ? longest : undefined }).jpeg({ quality: 86, mozjpeg: true }).toBuffer();
+        const m2 = await sharp(jpg).metadata();
+        const aid = randomBytes(12).toString("hex");
+        await kv().set(`asset:${aid}`, jpg.toString("base64"), { ex: 3600 });
+        const url = `${originOf(extra)}/api/asset/${aid}.jpg`;
+        return text({
+          slug, [what]: { box: [bx, by, bw, bh], ...(what === "patch" ? { at } : { span }), size: `${m2.width}x${m2.height}`, kb: Math.round(jpg.length / 1024), from: `the clip at ${info.width}x${info.height}, read in ${W}x${H} frame pixels` },
+          url, expires: "1 hour",
+          use: [`curl -sL ${url} -o ${what}-${bx}-${by}.jpg`, `embed it without reading it yourself: python3 -c "import base64,sys;print('data:image/jpeg;base64,'+base64.b64encode(open(sys.argv[1],'rb').read()).decode())" ${what}-${bx}-${by}.jpg > ${what}.uri, then write that string into a CSS custom property in a <style> block with a script or sed, and use background: var(--${what}) on the element that stands at the box, sized calc(${bw} * var(--u)) by calc(${bh} * var(--u))`, what === "plate" ? "UI that never moves (text, buttons, a spinner) survives the median: draw it on top, and where it must go, cover it with the plate's neighbouring rows" : "crop again if UI sits on the region: the patch carries whatever the clip shows there; text, controls and glass on top are drawn, never pasted", "say in the file's header what was sampled and from which moment"],
+          usage: u,
+        });
       }
       if (at === undefined) return text({ error: `${what} needs at (seconds)`, stored: stored.map((f) => f.at) });
       const u = await charge(keyRef, plan, "look_at");
@@ -670,11 +710,12 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       inputSchema: {
         slug: z.string(),
         token: z.string().optional().describe("the token from the first call, once the screenshots are uploaded"),
+        votes: z.array(z.array(z.object({ id: z.string(), pass: z.enum(["yes", "no", "unsure"]), seen: z.string() }))).min(1).max(5).optional().describe("with the token, after your judge has run: the verdicts of each judge run (two or three runs of the same sheets). lookap merges them by majority, a criterion fails only when most runs say no, and tells you whether the rebuild is done and what to fix first"),
         inline: z.boolean().optional().describe("with the token: also return the sheets as images in this result, for a client that cannot fetch a link; this spends your own context on them, so leave it off when you can run curl"),
       },
       annotations: { readOnlyHint: false, idempotentHint: false, openWorldHint: false },
     },
-    async ({ slug, token, inline }, extra) => {
+    async ({ slug, token, inline, votes }, extra) => {
       if (!lim.media) return gated("judge_rebuild", plan, reason);
       const e = entryFor(slug);
       if (!e) return text({ error: `No entry ${slug}` });
@@ -690,6 +731,29 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       const up = await uploadsOf(token, e.slug);
       if ("error" in up) return text({ error: up.error });
       const { ats } = up;
+      if (votes && votes.length) {
+        /* merge the agent's judge runs: majority per criterion; photo-class criteria of a declining designer do not count */
+        const photo2 = new Set(rb.imagery.filter((m) => m.class === "photo").map((m) => m.name.toLowerCase()));
+        const excused = (c: (typeof rb.criteria)[number]) => !rb.licensed && photo2.has(c.element.toLowerCase()) && !["imagery", "position", "motion"].includes(c.axis);
+        const motionRead = (await kv().get<string>(`judge:${token}:motion`)) ?? "unknown: compose the sheets with this token first";
+        const merged = rb.criteria.map((c) => {
+          const vs = votes.map((run) => run.find((v) => v.id === c.id)).filter((v): v is { id: string; pass: "yes" | "no" | "unsure"; seen: string } => Boolean(v));
+          const n = (p: string) => vs.filter((v) => v.pass === p).length;
+          const pass = !vs.length ? "not judged" : n("yes") > vs.length / 2 ? "yes" : n("no") > vs.length / 2 ? "no" : "split";
+          return { id: c.id, axis: c.axis, element: c.element, check: c.check, pass, votes: vs.map((v) => v.pass).join("/"), seen: (vs.find((v) => v.pass === "no") ?? vs[0])?.seen ?? null, counts: !excused(c) };
+        });
+        const counted = merged.filter((m) => m.counts);
+        const fails = counted.filter((m) => m.pass === "no"), split = counted.filter((m) => m.pass === "split" || m.pass === "not judged");
+        const still = /STATIC/.test(motionRead);
+        const order = ["present", "position", "motion", "style", "imagery", "text"];
+        return text({
+          slug, runs: votes.length, pass: counted.filter((m) => m.pass === "yes").length, of: counted.length, motion: motionRead,
+          done: fails.length === 0 && split.length === 0 && !still,
+          fixFirst: [...fails].sort((a, b) => order.indexOf(a.axis) - order.indexOf(b.axis)).map((m) => ({ id: m.id, axis: m.axis, element: m.element, check: m.check, judgeSaw: m.seen, votes: m.votes })),
+          split: split.map((m) => ({ id: m.id, check: m.check, votes: m.votes, next: "the runs disagree: look_at what=zoom on this criterion with your screenshot and decide yourself" })),
+          next: fails.length || still ? "fix fixFirst in order (structure, then motion, then materials and type), re-render, upload under a fresh token, judge again" : split.length ? "settle the split criteria by zooming, then judge once more" : "done: every counted criterion passes and the render moves where the clip moves",
+        });
+      }
       if (!ats.length) return text({ error: "no screenshots uploaded yet", upload: `${origin}/api/judge/${token}/<moment>`, moments: need });
       const id = clipId(e);
       const clip = id && e.video ? await cachedClip(id, e.video.src).catch(() => null) : null;
@@ -724,13 +788,14 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
         prev = { at: a, ref: rr, sub: rs };
       }
       const clipMoves = changes.some((c) => c.clip > 0.3), renderMoves = changes.some((c) => c.render > 0.3);
+      await kv().set(`judge:${token}:motion`, !changes.length ? "upload two or more moments for a motion read" : !clipMoves ? "the clip does not move between the uploaded moments" : !renderMoves ? "STATIC: the clip moves between the uploaded moments and your render does not" : "your render changes where the clip changes", { ex: 900 });
       const body = {
         slug, token, uploaded: ats,
         sheets: sheets.map((sh, i) => ({ url: `${origin}/api/judge/${token}/sheet-${i + 1}.jpg`, size: `${sh.width}x${sh.height}`, kb: Math.round(sh.jpeg.length / 1024), criteria: sh.ids })),
         criteria: ready.map((c) => ({ id: c.id, sheet: sheets.findIndex((sh) => sh.ids.includes(c.id)) + 1, axis: c.axis, element: c.element, check: c.check, panels: c.then == null ? `clip ${c.at}s | yours ${c.at}s` : `rows: ${c.at}s then ${c.then}s; clip left, yours right`, policy: policy(c) ? "photo-class region, designer declined sampling: judged as written but not required to pass; a placeholder of the box and palette is the rule" : undefined })),
         notJudged: missing.map((c) => ({ id: c.id, needs: [c.at, ...(c.then == null ? [] : [c.then])].filter((t) => have(t) === undefined), check: c.check })),
         motion: changes.length ? { read: !clipMoves ? "the clip does not move between the uploaded moments" : !renderMoves ? "STATIC: the clip moves between the uploaded moments and your render does not" : "your render changes where the clip changes", changes } : "upload two or more moments for a motion read",
-        judge: { instruction: JUDGE_INSTRUCTION, schema: JUDGE_SCHEMA, delegate: JUDGE_DELEGATION, done: "every criterion not marked policy answers yes, and motion is not STATIC" },
+        judge: { instruction: JUDGE_INSTRUCTION, schema: JUDGE_SCHEMA, delegate: JUDGE_DELEGATION, merge: "then call judge_rebuild with slug, this token and votes: the verdict arrays of each run; lookap merges them by majority and returns done, fixFirst and the split criteria", done: "every counted criterion passes by majority, and motion is not STATIC" },
         expires: "the sheets and uploads live 15 minutes",
         usage: u,
       };
@@ -755,9 +820,9 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
             `Rebuild the lookap entry \`${slug}\`${where ? ` in ${where}` : " in this project"}${stack ? ` with ${stack}` : " with this project's stack"}.`,
             "1. Call get_design for the record and get_brief. If your key is Max, call get_rebuild and port the file to the stack, keeping every number. Otherwise, if the brief says measured, call get_recipe and use it as data: one unit equal to a frame pixel, every element placed from its box, every fill and radius as given, every timing in ms with its easing. Treat nothing in it as a suggestion.",
             "2. If the brief says there is no recipe, call look_at with what=sheet for the whole clip, then see_design for each keyframe. Write the timeline as events with numbers (what, from when to when, how far) from the brief's phases and moves, and the layout in one paragraph (regions, alignment, type sizes, radii, spacing). Zoom the edge of every surface with look_at what=zoom before drawing it: edges, gaps and gradients are where rebuilds go wrong.",
-            "3. Build it. Match proportion and hierarchy first, then colour, then motion. Credit the designer in a comment with the source link from the record.",
+            "3. Build it. Match proportion and hierarchy first, then colour, then motion. Pictures (photos, paintings, screenshots, textures) come from the clip: look_at what=patch for the picture at a still moment, what=plate for a picture that has moving things over it; fetch them with curl and embed them as data URIs without reading them. Materials follow brief.policy.materials: a ripple bends the picture, it is not a drawn ring. Every size, including SVG sizes and lengths the script sets, is calc(N * var(--u)), so the file scales. Credit the designer in a comment with the source link from the record.",
             "4. Render your build at the frame size at the moments the brief lists (with ?demo=1, every animation seeked to the moment) and screenshot each. Call check_rebuild with only the slug for an upload token, PUT the screenshots with the curl lines it gives (no base64 through your context), then call it again with the token: the pixel score per moment and the motion read; STATIC means your timeline is missing or not seekable. Every round, call look_at what=zoom on the worst element it names with your screenshot as image, and Read the crop: the clip on the left, yours on the right. Fix what the crop shows, then check again. The score is a floor, never the goal.",
-            "5. When the brief carries a rubric: call judge_rebuild with the same token (the uploads serve both), and run the judge as it says: a subagent on your strongest vision model, given only the sheet links, the criteria and the instruction. Fix every criterion it answers no, re-render, upload and judge again. Done means every criterion passes and the render moves where the clip moves; after three judged rounds stop and report what still fails, with the judge's words. Photo-class imagery is sampled from the clip under the entry's licence, the default, and stood in only where the brief says the designer declined.",
+            "5. When the brief carries a rubric: call judge_rebuild with the same token (the uploads serve both) and run the judge as it says: two or three subagents on your strongest vision model, each given only the sheet links, the criteria and the instruction. Pass their verdict arrays back to judge_rebuild as votes: it merges them by majority and returns done, fixFirst and the split criteria. Fix fixFirst in order, re-render, upload, judge again; after three judged rounds stop and report what still fails, with the judge's words.",
             "6. For each keyframe in the recipe, call see_design with `at` and compare your build in that state against the checks for it. Report what still differs, in one list, with numbers.",
           ].join("\n"),
         },
