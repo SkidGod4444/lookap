@@ -1,0 +1,16 @@
+{
+ "model": "Claude Opus 5.5",
+ "modelId": "claude-opus-5-5",
+ "date": "2026-10-23",
+ "run": {
+  "model": "Claude Opus 5.5",
+  "turns": 185,
+  "outputTokens": 121736,
+  "totalTokens": 9171362,
+  "costUsd": 12.79,
+  "minutes": 42.2,
+  "score": 78
+ },
+ "hand": "none: the factory alone, 3 judged rounds, best round 3 kept; rubric 53 of 54 under a three-vote judge, reviewed by eye",
+ "hint": "Watch the five cards play through: the plugin card, the settings toggles, the Core Web Vitals gauges, the arch and the support rings."
+}

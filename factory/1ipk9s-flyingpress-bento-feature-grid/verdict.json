@@ -1,0 +1,1915 @@
+{
+ "slug": "1ipk9s-flyingpress-bento-feature-grid",
+ "at": "2026-10-23T09:20:13.505Z",
+ "runs": 14,
+ "html": "factory/1ipk9s-flyingpress-bento-feature-grid/index.html",
+ "pixel": {
+  "score": 78,
+  "stills": 79,
+  "motion": 78,
+  "moments": 13
+ },
+ "animations": 88,
+ "rank": 94,
+ "allPass": false,
+ "elements": [
+  {
+   "name": "headline",
+   "box": [
+    279,
+    112,
+    641,
+    48
+   ],
+   "deltaE": 3.6,
+   "delta": 33,
+   "shift": [
+    2,
+    2
+   ],
+   "afterShift": 30,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "mouse cursor",
+   "box": [
+    347,
+    415,
+    16,
+    22
+   ],
+   "deltaE": 0.9,
+   "delta": 33,
+   "shift": [
+    -2,
+    6
+   ],
+   "afterShift": 26,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "card titles",
+   "box": [
+    67,
+    524,
+    300,
+    24
+   ],
+   "deltaE": 0.4,
+   "delta": 28,
+   "shift": [
+    8,
+    -2
+   ],
+   "afterShift": 21,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "metric pill middle (focused)",
+   "box": [
+    810,
+    362,
+    296,
+    66
+   ],
+   "deltaE": 1.2,
+   "delta": 23,
+   "shift": [
+    -8,
+    -2
+   ],
+   "afterShift": 14,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "subtitle",
+   "box": [
+    215,
+    174,
+    770,
+    20
+   ],
+   "deltaE": 0.6,
+   "delta": 20,
+   "shift": [
+    -8,
+    0
+   ],
+   "afterShift": 20,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "card Core Web Vitals",
+   "box": [
+    795,
+    234,
+    360,
+    382
+   ],
+   "deltaE": 0.5,
+   "delta": 20,
+   "shift": null,
+   "afterShift": 20,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "status badge Active/Inactive",
+   "box": [
+    292,
+    302,
+    65,
+    22
+   ],
+   "deltaE": 3.9,
+   "delta": 19,
+   "shift": [
+    4,
+    -2
+   ],
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "chips Caching/Images/CSS & JS",
+   "box": [
+    92,
+    424,
+    264,
+    26
+   ],
+   "deltaE": 0.4,
+   "delta": 19,
+   "shift": [
+    2,
+    2
+   ],
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "metric pill top",
+   "box": [
+    839,
+    272,
+    296,
+    66
+   ],
+   "deltaE": 0.9,
+   "delta": 19,
+   "shift": [
+    -4,
+    -2
+   ],
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "eyebrow pill 'Why FlyingPress'",
+   "box": [
+    526,
+    67,
+    147,
+    30
+   ],
+   "deltaE": 0.3,
+   "delta": 18,
+   "shift": [
+    0,
+    2
+   ],
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "FlyingPress app icon (All in One)",
+   "box": [
+    178,
+    805,
+    75,
+    75
+   ],
+   "deltaE": 4.7,
+   "delta": 16,
+   "shift": [
+    0,
+    2
+   ],
+   "afterShift": 14,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "card Fewer Settings",
+   "box": [
+    420,
+    234,
+    360,
+    382
+   ],
+   "deltaE": 0.3,
+   "delta": 15,
+   "shift": null,
+   "afterShift": 15,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "compat centre icon",
+   "box": [
+    938,
+    740,
+    75,
+    75
+   ],
+   "deltaE": 4.4,
+   "delta": 15,
+   "shift": [
+    -2,
+    2
+   ],
+   "afterShift": 15,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "card body text",
+   "box": [
+    67,
+    557,
+    310,
+    36
+   ],
+   "deltaE": 0.6,
+   "delta": 15,
+   "shift": [
+    2,
+    0
+   ],
+   "afterShift": 14,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1200,
+    1080
+   ],
+   "deltaE": 0.5,
+   "delta": 13,
+   "shift": null,
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "plugin widget card",
+   "box": [
+    77,
+    282,
+    296,
+    120
+   ],
+   "deltaE": 1.3,
+   "delta": 13,
+   "shift": null,
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "card Great Support",
+   "box": [
+    420,
+    631,
+    360,
+    382
+   ],
+   "deltaE": 2.8,
+   "delta": 13,
+   "shift": null,
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "card Easy to Use",
+   "box": [
+    45,
+    234,
+    360,
+    382
+   ],
+   "deltaE": 0.7,
+   "delta": 12,
+   "shift": null,
+   "afterShift": 12,
+   "read": "matches"
+  },
+  {
+   "name": "orange button",
+   "box": [
+    92,
+    345,
+    267,
+    41
+   ],
+   "deltaE": 5.5,
+   "delta": 12,
+   "shift": null,
+   "afterShift": 12,
+   "read": "matches"
+  },
+  {
+   "name": "metric pill bottom (faded)",
+   "box": [
+    839,
+    452,
+    296,
+    66
+   ],
+   "deltaE": 1.2,
+   "delta": 12,
+   "shift": null,
+   "afterShift": 12,
+   "read": "matches"
+  },
+  {
+   "name": "card All in One",
+   "box": [
+    45,
+    631,
+    360,
+    382
+   ],
+   "deltaE": 1.6,
+   "delta": 12,
+   "shift": null,
+   "afterShift": 12,
+   "read": "matches"
+  },
+  {
+   "name": "support avatar",
+   "box": [
+    563,
+    741,
+    74,
+    74
+   ],
+   "deltaE": 3.8,
+   "delta": 11,
+   "shift": null,
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "toggle pill Image Optimization",
+   "box": [
+    435,
+    354,
+    300,
+    52
+   ],
+   "deltaE": 0.5,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "card Compatibility",
+   "box": [
+    795,
+    631,
+    360,
+    382
+   ],
+   "deltaE": 0.4,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "toggle pill Page Caching",
+   "box": [
+    464,
+    283,
+    300,
+    52
+   ],
+   "deltaE": 0.6,
+   "delta": 9,
+   "shift": null,
+   "afterShift": 9,
+   "read": "matches"
+  },
+  {
+   "name": "toggle pill Critical CSS",
+   "box": [
+    464,
+    425,
+    300,
+    52
+   ],
+   "deltaE": 0.5,
+   "delta": 9,
+   "shift": null,
+   "afterShift": 9,
+   "read": "matches"
+  },
+  {
+   "name": "faded app-icon tiles",
+   "box": [
+    60,
+    665,
+    320,
+    130
+   ],
+   "deltaE": 3.7,
+   "delta": 9,
+   "shift": [
+    -2,
+    -8
+   ],
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "orbit bubbles",
+   "box": [
+    470,
+    640,
+    265,
+    255
+   ],
+   "deltaE": 1.1,
+   "delta": 9,
+   "shift": null,
+   "afterShift": 9,
+   "read": "matches"
+  },
+  {
+   "name": "compat logo tiles",
+   "box": [
+    795,
+    650,
+    360,
+    245
+   ],
+   "deltaE": 0.5,
+   "delta": 7,
+   "shift": null,
+   "afterShift": 7,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "the render changes where the clip changes",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "0.4s",
+    "clip": 1.6,
+    "render": 1.3,
+    "read": "both move"
+   },
+   {
+    "from": "0.4s",
+    "to": "kf1",
+    "clip": 1.9,
+    "render": 1.4,
+    "read": "both move"
+   },
+   {
+    "from": "kf1",
+    "to": "1.9s",
+    "clip": 0.5,
+    "render": 0.5,
+    "read": "both move"
+   },
+   {
+    "from": "1.9s",
+    "to": "2.45s",
+    "clip": 1.7,
+    "render": 2.4,
+    "read": "both move"
+   },
+   {
+    "from": "2.45s",
+    "to": "kf2",
+    "clip": 3.8,
+    "render": 1.3,
+    "read": "both move"
+   },
+   {
+    "from": "kf2",
+    "to": "3.95s",
+    "clip": 0.3,
+    "render": 0.6,
+    "read": "both still"
+   },
+   {
+    "from": "3.95s",
+    "to": "4.4s",
+    "clip": 1.8,
+    "render": 1.6,
+    "read": "both move"
+   },
+   {
+    "from": "4.4s",
+    "to": "kf3",
+    "clip": 4,
+    "render": 3,
+    "read": "both move"
+   },
+   {
+    "from": "kf3",
+    "to": "6.4s",
+    "clip": 1.9,
+    "render": 1.4,
+    "read": "both move"
+   },
+   {
+    "from": "6.4s",
+    "to": "kf4",
+    "clip": 2,
+    "render": 1.4,
+    "read": "both move"
+   },
+   {
+    "from": "kf4",
+    "to": "8.45s",
+    "clip": 2.1,
+    "render": 2.5,
+    "read": "both move"
+   },
+   {
+    "from": "8.45s",
+    "to": "10.4s",
+    "clip": 3.5,
+    "render": 1.7,
+    "read": "both move"
+   }
+  ],
+  "trajectories": [
+   {
+    "element": "#f9d5b8",
+    "box": [
+     420,
+     234,
+     316,
+     150
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 0.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 1.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 1.9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 2.45,
+      "dx": 2,
+      "dy": -2,
+      "delta": 22
+     },
+     {
+      "at": 3.45,
+      "dx": 0,
+      "dy": -2,
+      "delta": 11
+     },
+     {
+      "at": 3.95,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 4.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 5.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 6.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 7.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 8.45,
+      "dx": 2,
+      "dy": -2,
+      "delta": 22
+     },
+     {
+      "at": 10.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     }
+    ],
+    "read": "in step"
+   },
+   {
+    "element": "#f6b17a",
+    "box": [
+     498,
+     234,
+     188,
+     48
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 0.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 1.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 1.9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 2.45,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 3.45,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 3.95,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 4.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 5.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 6.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 7.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 8.45,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 10.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     }
+    ],
+    "read": "in step"
+   },
+   {
+    "element": "#f87a23",
+    "box": [
+     94,
+     352,
+     264,
+     30
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 0.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 1.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 1.9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 15
+     },
+     {
+      "at": 2.45,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 3.45,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 3.95,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 4.4,
+      "dx": 0,
+      "dy": 2,
+      "delta": 21
+     },
+     {
+      "at": 5.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 6.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 7.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 8.45,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 10.4,
+      "dx": 0,
+      "dy": 2,
+      "delta": 20
+     }
+    ],
+    "read": "in step"
+   },
+   {
+    "element": "#ead3c1",
+    "box": [
+     440,
+     397,
+     292,
+     28
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 14
+     },
+     {
+      "at": 0.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 14
+     },
+     {
+      "at": 1.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 14
+     },
+     {
+      "at": 1.9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 14
+     },
+     {
+      "at": 2.45,
+      "dx": -2,
+      "dy": -2,
+      "delta": 10
+     },
+     {
+      "at": 3.45,
+      "dx": 0,
+      "dy": 0,
+      "delta": 5
+     },
+     {
+      "at": 3.95,
+      "dx": 0,
+      "dy": 0,
+      "delta": 6
+     },
+     {
+      "at": 4.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 6
+     },
+     {
+      "at": 5.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 14
+     },
+     {
+      "at": 6.4,
+      "dx": -2,
+      "dy": -2,
+      "delta": 14
+     },
+     {
+      "at": 7.4,
+      "dx": -2,
+      "dy": -2,
+      "delta": 14
+     },
+     {
+      "at": 8.45,
+      "dx": -4,
+      "dy": -2,
+      "delta": 10
+     },
+     {
+      "at": 10.4,
+      "dx": -2,
+      "dy": -2,
+      "delta": 5
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   }
+  ]
+ },
+ "scale": {
+  "ok": true,
+  "changed": 5.6,
+  "read": "scales: the half-size render matches the full one (difference 5.6)"
+ },
+ "rubric": {
+  "file": "factory/1ipk9s-flyingpress-bento-feature-grid/rubric.json",
+  "total": 54,
+  "counted": 54,
+  "pass": 53,
+  "fail": 1,
+  "unsure": 0,
+  "unjudged": 0,
+  "passRate": 98,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "style",
+    "element": "page background",
+    "check": "Page background is a flat very light grey (≈#f2f2f4), slightly darker than the white cards",
+    "box": [
+     0,
+     0,
+     1200,
+     1080
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both pages are the same flat light grey (~#f2f2f4) behind white cards. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "text",
+    "element": "eyebrow pill",
+    "check": "A white pill centred at x≈600, y≈82 reads 'Why FlyingPress' with a small sun-like icon to its left",
+    "box": [
+     526,
+     67,
+     147,
+     30
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White pill with 'Why FlyingPress' and a small sun icon, same position as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "text",
+    "element": "headline",
+    "check": "Headline reads exactly 'Real-time WordPress optimization'",
+    "box": [
+     279,
+     112,
+     641,
+     48
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Headline reads 'Real-time WordPress optimization' in both. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "style",
+    "element": "headline",
+    "check": "Headline is ≈48px tall type, near-black, semibold, tightly tracked, centred on x=600",
+    "box": [
+     279,
+     112,
+     641,
+     48
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Headline spans about 630px against the clip's 638px, near-black, semibold and tight. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "text",
+    "element": "subtitle",
+    "check": "Subtitle reads 'FlyingPress optimizes your site with real-visitor Core Web Vitals, the same data Google uses to rank it.' in mid-grey on one line at y≈184",
+    "box": [
+     215,
+     174,
+     770,
+     20
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same subtitle text, mid-grey, on one line at the same size. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "position",
+    "element": "grid",
+    "check": "Six cards in a 3×2 grid: columns start at x≈45, 420, 795, rows at y≈234 and 631; each card ≈360×382 with ≈15px gaps",
+    "box": [
+     45,
+     234,
+     1110,
+     779
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same 3x2 grid with matching card origins and gaps. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "style",
+    "element": "cards",
+    "check": "Cards are white with ≈20px corner radius and no visible border",
+    "box": [
+     45,
+     234,
+     360,
+     382
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White cards with about 20px radius and no border in both. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "text",
+    "element": "card titles",
+    "check": "Card titles read, left-to-right then down: 'Easy to Use', 'Fewer Settings to Configure', 'Optimize for Core Web Vitals', 'All in One Solution', 'Great Support', 'Compatibility'",
+    "box": [
+     45,
+     520,
+     1110,
+     425
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "All six card titles match in order and text. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "text",
+    "element": "card body text",
+    "check": "Easy to Use body reads 'Click once and FlyingPress applies caching, image and code optimizations for you.' in grey on two lines",
+    "box": [
+     67,
+     557,
+     320,
+     36
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same two-line grey body text. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "text",
+    "element": "card body text",
+    "check": "Core Web Vitals body reads 'Every setting targets LCP, INP and CLS, the three metrics Google uses to judge page experience.'",
+    "box": [
+     817,
+     557,
+     320,
+     36
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same body text and wrap. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "text",
+    "element": "card body text",
+    "check": "Compatibility body reads 'Compatible with all major WordPress hosting providers, themes & plugins.'",
+    "box": [
+     817,
+     955,
+     320,
+     36
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same body text and wrap. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "style",
+    "element": "card Easy to Use",
+    "check": "Top of the Easy to Use card has a soft peach-to-orange gradient wash fading to white by y≈480",
+    "box": [
+     45,
+     234,
+     360,
+     250
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Peach-to-orange wash fading to white, with dots, as in the clip, though slightly paler. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "present",
+    "element": "plugin widget card",
+    "check": "A white shadowed panel shows an orange app icon, 'FlyingPress' bold and 'Speed optimization' grey beneath",
+    "box": [
+     77,
+     282,
+     296,
+     120
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White panel with orange icon, bold FlyingPress and grey Speed optimization; shadow a bit softer than clip. [votes: no/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "text",
+    "element": "status badge",
+    "check": "Badge at top right of the widget reads 'Active' in green with a green dot on pale green",
+    "box": [
+     292,
+     302,
+     65,
+     22
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Green 'Active' with a green dot on pale green, similar size. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "text",
+    "element": "orange button",
+    "check": "Full-width orange gradient button reads '✓ Optimized' in white",
+    "box": [
+     92,
+     345,
+     267,
+     41
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Full-width orange gradient button with white '✓ Optimized' in both. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "style",
+    "element": "chips",
+    "check": "Three chips 'Caching', 'Images', 'CSS & JS' each show a filled green check circle",
+    "box": [
+     92,
+     424,
+     264,
+     26
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Three chips with filled green check circles, though the rebuild's green is more saturated than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "motion",
+    "element": "status badge",
+    "check": "Between 1.4s and 2.45s the widget switches to 'Inactive' (grey dot), button text 'Optimize my site', chips show empty grey circles",
+    "box": [
+     77,
+     282,
+     296,
+     170
+    ],
+    "at": 1.4,
+    "then": 2.45,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 2.45s the rebuild shows Inactive with a grey dot, 'Optimize my site' and empty grey circles, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "motion",
+    "element": "mouse cursor",
+    "check": "Black arrow cursor moves from ≈(349,425) at 3.45s onto the button ≈(303,388) by 3.95s",
+    "box": [
+     280,
+     370,
+     90,
+     70
+    ],
+    "at": 3.45,
+    "then": 3.95,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Cursor goes from beside the CSS & JS chip to the button, matching the clip's relative positions. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "motion",
+    "element": "orange button",
+    "check": "At ≈4.4s the button is pressed (slightly inset, label blurred) and by 5.4s it reads '✓ Optimized' with badge 'Active' again",
+    "box": [
+     77,
+     282,
+     296,
+     120
+    ],
+    "at": 4.4,
+    "then": 5.4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Pressed dimmed button with faded label at 4.4s, then '✓ Optimized' and Active at 5.4s; label blur is a bit milder than clip. [votes: no/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "style",
+    "element": "card Fewer Settings",
+    "check": "Fewer Settings card top has an orange gradient strongest at top-centre with a fine dotted dither texture",
+    "box": [
+     420,
+     234,
+     360,
+     260
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Orange gradient strongest at top-centre with fine dots, though the rebuild's dots are denser and spread wider than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "position",
+    "element": "toggle pills",
+    "check": "Three white toggle pills stacked at y≈309, 380, 451; the middle one is shifted left by ≈29px relative to the others",
+    "box": [
+     435,
+     283,
+     330,
+     195
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Three white pills stacked with the middle one shifted left, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "text",
+    "element": "toggle pills",
+    "check": "Pill labels read 'Page Caching', 'Image Optimization', 'Critical CSS', each with a small grey icon before it",
+    "box": [
+     435,
+     283,
+     330,
+     195
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Labels read Page Caching, Image Optimization, Critical CSS, each with a small grey icon, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "style",
+    "element": "toggle pills",
+    "check": "Page Caching toggle is orange (on) while Image Optimization and Critical CSS toggles are light grey (off)",
+    "box": [
+     680,
+     295,
+     85,
+     170
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Page Caching toggle orange, the other two light grey; the clip's middle one is slightly beige but still off. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "motion",
+    "element": "toggle pills",
+    "check": "Between 1.4s and 1.9s the Page Caching toggle turns from orange to grey; all three are off at 1.9s",
+    "box": [
+     680,
+     295,
+     85,
+     170
+    ],
+    "at": 1.4,
+    "then": 1.9,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Page Caching goes orange to grey between 1.4s and 1.9s and all three are grey at 1.9s, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "motion",
+    "element": "toggle pills",
+    "check": "At 3.45s the three pills have collapsed into one pill at y≈380 reading 'All optimizations' with two stacked pill edges peeking below it",
+    "box": [
+     435,
+     354,
+     300,
+     75
+    ],
+    "at": 1.9,
+    "then": 3.45,
+    "policy": null,
+    "pass": "no",
+    "seen": "At 3.45s the rebuild shows one faint edge below 'All optimizations', but the clip shows two clearly stacked edges. [votes: yes/no/no]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "motion",
+    "element": "toggle pills",
+    "check": "The 'All optimizations' toggle goes from grey at 3.45s to orange at 3.95s",
+    "box": [
+     680,
+     365,
+     45,
+     30
+    ],
+    "at": 3.45,
+    "then": 3.95,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The All optimizations toggle goes grey to orange between 3.45s and 3.95s, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "motion",
+    "element": "toggle pills",
+    "check": "By 5.4s the stack has fanned back out into three pills with all three toggles orange",
+    "box": [
+     435,
+     283,
+     330,
+     195
+    ],
+    "at": 4.4,
+    "then": 5.4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Collapsed pill at 4.4s fans out to three pills with all toggles orange at 5.4s, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "style",
+    "element": "card Core Web Vitals",
+    "check": "CWV card has an orange wash along its left edge with dotted texture, white elsewhere",
+    "box": [
+     795,
+     234,
+     360,
+     300
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Orange dotted wash along the card's left edge, white elsewhere, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "present",
+    "element": "metric pills",
+    "check": "Exactly three metric pills are visible, stacked at y≈305, 395, 485, the middle one shifted ≈29px left",
+    "box": [
+     810,
+     272,
+     325,
+     250
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Three metric pills stacked with the middle one shifted left, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "text",
+    "element": "metric pill top",
+    "check": "Top pill reads '0.02', 'CLS', 'Cumulative Layout Shift', badge 'Good' (green)",
+    "box": [
+     839,
+     272,
+     296,
+     66
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Top pill reads 0.02, CLS, Cumulative Layout Shift with a green Good badge, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "text",
+    "element": "metric pill middle",
+    "check": "Middle pill reads '1.5s', 'LCP', 'Largest Contentful Paint', badge 'Poor' in red on pale pink",
+    "box": [
+     810,
+     362,
+     296,
+     66
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Middle pill reads 1.5s, LCP, Largest Contentful Paint with a red Poor badge on pink, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "text",
+    "element": "metric pill bottom",
+    "check": "Bottom pill reads '380ms', 'INP', 'Interaction to Next Paint', badge 'Needs work' in amber, all at reduced opacity",
+    "box": [
+     839,
+     452,
+     296,
+     66
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Bottom pill reads 380ms, INP, Interaction to Next Paint, with an amber Needs work badge at reduced opacity. [votes: no/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "style",
+    "element": "metric gauges",
+    "check": "Each metric number sits inside a circular ring gauge ≈52px whose arc is green (good), red (poor) or amber (needs work)",
+    "box": [
+     810,
+     272,
+     100,
+     250
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Ring gauges of about 52px with green and red arcs and an amber ring for INP, matching the clip; the faded amber ring is a little paler. [votes: yes/no/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "motion",
+    "element": "metric pill middle",
+    "check": "LCP ring value changes from '1.5s' with 'Poor' at 1.4s to '1.2s' with green 'Good' at 1.9s",
+    "box": [
+     810,
+     362,
+     296,
+     66
+    ],
+    "at": 1.4,
+    "then": 1.9,
+    "policy": null,
+    "pass": "yes",
+    "seen": "LCP changes from 1.5s Poor to 1.2s green Good between 1.4s and 1.9s, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "motion",
+    "element": "metric pills",
+    "check": "The pill list scrolls up one slot between 1.9s and 3.45s: LCP is now top, INP middle, CLS bottom",
+    "box": [
+     810,
+     272,
+     325,
+     250
+    ],
+    "at": 1.9,
+    "then": 3.45,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 3.45s the order is LCP top, INP middle, CLS bottom, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "motion",
+    "element": "metric pills",
+    "check": "Mid-transition at 2.45s only two pills are visible near y≈326 and 416, the outgoing one fading above",
+    "box": [
+     810,
+     240,
+     325,
+     230
+    ],
+    "at": 2.45,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 2.45s two main pills at about y 168 and 327 with the outgoing CLS fading above, matching the clip; the rebuild's outgoing pill is a bit more visible. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "motion",
+    "element": "metric pills",
+    "check": "Next scroll by 5.4s: INP top ('48ms' Good), CLS middle ('0.05' Poor), LCP bottom ('4.2s' Poor)",
+    "box": [
+     810,
+     272,
+     325,
+     250
+    ],
+    "at": 3.45,
+    "then": 5.4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 5.4s the order is INP 48ms Good, CLS 0.05 Poor, LCP 4.2s Poor, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "style",
+    "element": "card All in One",
+    "check": "All in One card shows a large white arch shape rising from the bottom corners, leaving an orange-washed funnel in the centre",
+    "box": [
+     45,
+     631,
+     360,
+     280
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A large white arch rises from the bottom corners with an orange-washed funnel in the centre, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "present",
+    "element": "faded app-icon tiles",
+    "check": "Behind the arch sit faint rounded app-icon tiles with grey glyphs (e.g. 'A', gear, document, code brackets) at low contrast",
+    "box": [
+     60,
+     665,
+     320,
+     130
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Faint rounded tiles with grey glyphs sit behind the arch, though the glyphs differ and a few are slightly darker than the clip's. [votes: no/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c39.png"
+   },
+   {
+    "id": "c40",
+    "axis": "imagery",
+    "element": "FlyingPress app icon",
+    "check": "A glossy orange rounded-square icon ≈75px with a white stylised 'F' made of swooshes and a soft orange glow beneath, at ≈(215,842)",
+    "box": [
+     178,
+     805,
+     75,
+     75
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Glossy orange rounded-square icon of about 75px with a white swoosh F and an orange glow beneath, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c40.png"
+   },
+   {
+    "id": "c41",
+    "axis": "motion",
+    "element": "faded app-icon tiles",
+    "check": "Some background tiles fade in or out between 1.4s and 1.9s while the arch and orange icon stay still",
+    "box": [
+     60,
+     665,
+     320,
+     180
+    ],
+    "at": 1.4,
+    "then": 1.9,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Background tiles fade in/out (hourglass appears) between moments while the orange icon stays fixed, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c41.png"
+   },
+   {
+    "id": "c42",
+    "axis": "style",
+    "element": "card Great Support",
+    "check": "Great Support card shows concentric soft peach circles centred at ≈(600,778)",
+    "box": [
+     420,
+     631,
+     360,
+     280
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows three concentric soft peach circles around the avatar, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c42.png"
+   },
+   {
+    "id": "c43",
+    "axis": "imagery",
+    "element": "support avatar",
+    "check": "Centre is a ≈74px glossy orange circle with a white person glyph and an orange drop shadow",
+    "box": [
+     563,
+     741,
+     74,
+     74
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Glossy orange circle with white person glyph and orange glow shadow, matching the clip's size and look. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c43.png"
+   },
+   {
+    "id": "c44",
+    "axis": "present",
+    "element": "orbit bubbles",
+    "check": "Exactly three small white circular bubbles surround the avatar: an orange '?' icon, an orange headset, an orange cursor arrow",
+    "box": [
+     470,
+     640,
+     265,
+     255
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Three white bubbles with orange ?, headset and cursor arrow, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c44.png"
+   },
+   {
+    "id": "c45",
+    "axis": "motion",
+    "element": "orbit bubbles",
+    "check": "The three bubbles rotate clockwise around the avatar: '?' moves from top ≈(637,666) at 1.4s to lower-right ≈(702,833) at 1.9s",
+    "box": [
+     470,
+     640,
+     265,
+     255
+    ],
+    "at": 1.4,
+    "then": 1.9,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Bubbles rotate clockwise; ? goes from top to lower right, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c45.png"
+   },
+   {
+    "id": "c46",
+    "axis": "motion",
+    "element": "support avatar",
+    "check": "The centre avatar does not move while the bubbles orbit",
+    "box": [
+     563,
+     741,
+     74,
+     74
+    ],
+    "at": 1.4,
+    "then": 1.9,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Avatar stays in place between 1.4s and 1.9s in both. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c46.png"
+   },
+   {
+    "id": "c47",
+    "axis": "imagery",
+    "element": "compat centre icon",
+    "check": "Middle row centre is a glossy orange FlyingPress icon ≈75px at ≈(975,777), flanked by a cloud tile left and a '+' tile right",
+    "box": [
+     845,
+     740,
+     260,
+     75
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Glossy orange icon flanked by a cloud tile and a + tile, same layout as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c47.png"
+   },
+   {
+    "id": "c48",
+    "axis": "style",
+    "element": "compat logo tiles",
+    "check": "Surrounding tiles are pale, near-transparent rounded squares with grey logos (W circle, 'Kinsta' wordmark, Elementor E)",
+    "box": [
+     795,
+     650,
+     360,
+     245
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Pale near-transparent rounded tiles with grey W, Elementor E and cloud logos, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c48.png"
+   },
+   {
+    "id": "c49",
+    "axis": "motion",
+    "element": "compat top row",
+    "check": "The top row of tiles slides left continuously: the W tile moves from x≈997 at 1.4s to ≈975 at 1.9s",
+    "box": [
+     795,
+     650,
+     360,
+     75
+    ],
+    "at": 1.4,
+    "then": 1.9,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Top row slides left by about 36 px in the crop (clip about 33), matching. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c49.png"
+   },
+   {
+    "id": "c50",
+    "axis": "motion",
+    "element": "compat bottom row",
+    "check": "The bottom row of tiles slides right continuously: the Elementor tile moves from x≈913 at 1.4s to ≈975 at 1.9s",
+    "box": [
+     795,
+     830,
+     360,
+     70
+    ],
+    "at": 1.4,
+    "then": 1.9,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Elementor tile moves right by about 92 px in the crop, the same as the clip's 92. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c50.png"
+   },
+   {
+    "id": "c51",
+    "axis": "motion",
+    "element": "compat middle row",
+    "check": "The middle row (cloud, orange icon, +) does not move between 1.4s and 1.9s",
+    "box": [
+     845,
+     740,
+     260,
+     75
+    ],
+    "at": 1.4,
+    "then": 1.9,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Cloud, orange icon and + tile are static between the two moments, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c51.png"
+   },
+   {
+    "id": "c52",
+    "axis": "motion",
+    "element": "header",
+    "check": "Header (pill, headline, subtitle) and all six card outlines stay perfectly still between 1.4s and 3.45s",
+    "box": [
+     0,
+     60,
+     1200,
+     960
+    ],
+    "at": 1.4,
+    "then": 3.45,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Header and card outlines are unchanged between 1.4s and 3.45s in the rebuild, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c52.png"
+   },
+   {
+    "id": "c53",
+    "axis": "motion",
+    "element": "loop",
+    "check": "The top-row card states at 7.4s match 1.4s (Active, Page Caching only on, CLS/LCP/INP order): the cycle repeats every ≈6s",
+    "box": [
+     45,
+     234,
+     1110,
+     382
+    ],
+    "at": 1.4,
+    "then": 7.4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 7.4s the top-row cards match 1.4s (Active, Page Caching on, CLS/LCP/INP order), as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c53.png"
+   },
+   {
+    "id": "c54",
+    "axis": "style",
+    "element": "card body text",
+    "check": "Card body text is ≈14–15px mid-grey, clearly lighter than the near-black titles",
+    "box": [
+     67,
+     524,
+     320,
+     70
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Body text is mid-grey, about 15px, clearly lighter than the black title, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/1ipk9s-flyingpress-bento-feature-grid/judge/c54.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 1.16,
+  "calls": 9,
+  "images": "factory/1ipk9s-flyingpress-bento-feature-grid/judge",
+  "votes": 3,
+  "spread": [
+   50,
+   52,
+   53
+  ]
+ }
+}

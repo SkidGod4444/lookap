@@ -1,0 +1,1366 @@
+{
+ "slug": "1ipk9s-flyingpress-bento-feature-grid",
+ "frame": {
+  "w": 1200,
+  "h": 1080
+ },
+ "at": "2026-10-22T20:07:05.457Z",
+ "model": "opus",
+ "costUsd": 1.106,
+ "summary": "A light, centred feature section on a near-white #f2f2f4 page. At top centre is a small white pill eyebrow, \"Why FlyingPress\" (y≈67–97). Below it is a large near-black headline, \"Real-time WordPress optimization\" (≈48px, tight tracking, y≈112–160), and a one-line grey subtitle (y≈184). Under these sits a 3×2 bento grid of white cards, each 360×382 with ≈20px radius and 15px gutters (columns x=45/420/795, rows y=234/631). The upper part of each card is an illustration on a soft peach-to-orange wash, some with a faint dotted texture. Each card ends with a 20px dark title and two lines of 14px grey body text at the bottom left. The whole thing runs on a 6 s loop with 2 s beats:\n(1) \"Easy to Use\": a FlyingPress plugin card. It shows \"Active\" with an orange \"✓ Optimized\" button and three green-checked chips until ≈2.3s. It then flips to \"Inactive\" / \"Optimize my site\" with empty-circle chips. A cursor glides onto the button at ≈3.9s and clicks it at ≈4.4s; the label blurs, and by ≈5s it is back to Active.\n(2) \"Fewer Settings\": three toggle pills (Page Caching, Image Optimization, Critical CSS). They switch off and on, collapse into a single stacked \"All optimizations\" pill at ≈2.5–4.3s, then fan back out with all three on.\n(3) \"Core Web Vitals\": three metric pills (CLS, LCP, INP) with ring gauges and Good/Poor/Needs-work badges. The middle pill is enlarged. Every ≈2s (at 0.4, 2.45, 4.4, 6.4) the list scrolls up one pill, and the ring values count and recolour.\n(4) \"All in One\": a large white arch cut into the orange wash. Faint app-icon tiles sit behind it and fade in and out, with a glossy orange FlyingPress app icon at the bottom of the funnel.\n(5) \"Great Support\": an orange user avatar centred in concentric peach rings, with three small white icon bubbles (?, headset, cursor) orbiting it clockwise.\n(6) \"Compatibility\": a glossy FlyingPress icon in the middle row between a cloud tile and a \"+\" tile. The top row of logo tiles (W, Kinsta, grid logo) slides left and the bottom row (Elementor, cloud, +) slides right as a continuous marquee.\nThe header and the card frames never move.",
+ "elements": [
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1200,
+    1080
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "flat very light grey #f2f2f4"
+  },
+  {
+   "name": "eyebrow pill 'Why FlyingPress'",
+   "box": [
+    526,
+    67,
+    147,
+    30
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "white rounded-full pill, small sun/sparkle icon left, 14px dark grey text"
+  },
+  {
+   "name": "headline",
+   "box": [
+    279,
+    112,
+    641,
+    48
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Real-time WordPress optimization', ~48px semibold near-black, tight letter-spacing, centred"
+  },
+  {
+   "name": "subtitle",
+   "box": [
+    215,
+    174,
+    770,
+    20
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "~17px mid-grey, centred one line"
+  },
+  {
+   "name": "card Easy to Use",
+   "box": [
+    45,
+    234,
+    360,
+    382
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "white card r≈20, peach-orange gradient wash in top area"
+  },
+  {
+   "name": "plugin widget card",
+   "box": [
+    77,
+    282,
+    296,
+    120
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "white rounded panel with shadow: app icon, 'FlyingPress' / 'Speed optimization', status badge, full-width orange gradient button"
+  },
+  {
+   "name": "status badge Active/Inactive",
+   "box": [
+    292,
+    302,
+    65,
+    22
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "green tint 'Active' with green dot, or grey 'Inactive' with grey dot"
+  },
+  {
+   "name": "orange button",
+   "box": [
+    92,
+    345,
+    267,
+    41
+   ],
+   "kind": "control",
+   "class": "css",
+   "note": "orange gradient #f87a23→#f26f05, r≈10, white text '✓ Optimized' or 'Optimize my site'"
+  },
+  {
+   "name": "chips Caching/Images/CSS & JS",
+   "box": [
+    92,
+    424,
+    264,
+    26
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "three white pill chips, green check circles when active, empty grey circles when inactive"
+  },
+  {
+   "name": "mouse cursor",
+   "box": [
+    347,
+    415,
+    16,
+    22
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "black arrow cursor, rests at ≈(349,425), moves to the button ≈(303,388)"
+  },
+  {
+   "name": "card Fewer Settings",
+   "box": [
+    420,
+    234,
+    360,
+    382
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "white card with orange gradient top-centre plus fine dotted texture"
+  },
+  {
+   "name": "toggle pill Page Caching",
+   "box": [
+    464,
+    283,
+    300,
+    52
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "white pill, doc icon, label, orange/grey toggle at right"
+  },
+  {
+   "name": "toggle pill Image Optimization",
+   "box": [
+    435,
+    354,
+    300,
+    52
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "offset left 29px, image icon"
+  },
+  {
+   "name": "toggle pill Critical CSS",
+   "box": [
+    464,
+    425,
+    300,
+    52
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "same as row 1"
+  },
+  {
+   "name": "card Core Web Vitals",
+   "box": [
+    795,
+    234,
+    360,
+    382
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "white card with orange wash on left edge and dotted texture"
+  },
+  {
+   "name": "metric pill top",
+   "box": [
+    839,
+    272,
+    296,
+    66
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "ring gauge + metric name + full name + badge"
+  },
+  {
+   "name": "metric pill middle (focused)",
+   "box": [
+    810,
+    362,
+    296,
+    66
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "stronger shadow, fully opaque"
+  },
+  {
+   "name": "metric pill bottom (faded)",
+   "box": [
+    839,
+    452,
+    296,
+    66
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "lower contrast/faded"
+  },
+  {
+   "name": "card All in One",
+   "box": [
+    45,
+    631,
+    360,
+    382
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "orange wash with white arch/funnel cut-out shape"
+  },
+  {
+   "name": "faded app-icon tiles",
+   "box": [
+    60,
+    665,
+    320,
+    130
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "rounded square tiles with grey glyphs (A, gear, file, code, link, hourglass, check) at low contrast"
+  },
+  {
+   "name": "FlyingPress app icon (All in One)",
+   "box": [
+    178,
+    805,
+    75,
+    75
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "glossy orange rounded-square with white stylised F wings, orange glow below"
+  },
+  {
+   "name": "card Great Support",
+   "box": [
+    420,
+    631,
+    360,
+    382
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "concentric soft peach rings centred ≈(600,778)"
+  },
+  {
+   "name": "support avatar",
+   "box": [
+    563,
+    741,
+    74,
+    74
+   ],
+   "kind": "icon",
+   "class": "css",
+   "note": "orange glossy circle with white user glyph"
+  },
+  {
+   "name": "orbit bubbles",
+   "box": [
+    470,
+    640,
+    265,
+    255
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "three white circles ~38px: orange ? , orange headset, orange cursor"
+  },
+  {
+   "name": "card Compatibility",
+   "box": [
+    795,
+    631,
+    360,
+    382
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "three rows of pale rounded tiles over orange glow"
+  },
+  {
+   "name": "compat centre icon",
+   "box": [
+    938,
+    740,
+    75,
+    75
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "glossy orange FlyingPress icon"
+  },
+  {
+   "name": "compat logo tiles",
+   "box": [
+    795,
+    650,
+    360,
+    245
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "faint tiles: W (WP Engine-like), 'Kinsta' wordmark, grid logo, cloud, Elementor E, +"
+  },
+  {
+   "name": "card titles",
+   "box": [
+    67,
+    524,
+    300,
+    24
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "20px medium near-black, left-aligned at card x+22"
+  },
+  {
+   "name": "card body text",
+   "box": [
+    67,
+    557,
+    310,
+    36
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "14–15px grey #555, two lines"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "page background",
+   "axis": "style",
+   "check": "Page background is a flat very light grey (≈#f2f2f4), slightly darker than the white cards",
+   "box": [
+    0,
+    0,
+    1200,
+    1080
+   ],
+   "scope": "frame",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "eyebrow pill",
+   "axis": "text",
+   "check": "A white pill centred at x≈600, y≈82 reads 'Why FlyingPress' with a small sun-like icon to its left",
+   "box": [
+    526,
+    67,
+    147,
+    30
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "headline",
+   "axis": "text",
+   "check": "Headline reads exactly 'Real-time WordPress optimization'",
+   "box": [
+    279,
+    112,
+    641,
+    48
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "headline",
+   "axis": "style",
+   "check": "Headline is ≈48px tall type, near-black, semibold, tightly tracked, centred on x=600",
+   "box": [
+    279,
+    112,
+    641,
+    48
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "subtitle",
+   "axis": "text",
+   "check": "Subtitle reads 'FlyingPress optimizes your site with real-visitor Core Web Vitals, the same data Google uses to rank it.' in mid-grey on one line at y≈184",
+   "box": [
+    215,
+    174,
+    770,
+    20
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "grid",
+   "axis": "position",
+   "check": "Six cards in a 3×2 grid: columns start at x≈45, 420, 795, rows at y≈234 and 631; each card ≈360×382 with ≈15px gaps",
+   "box": [
+    45,
+    234,
+    1110,
+    779
+   ],
+   "scope": "frame",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "cards",
+   "axis": "style",
+   "check": "Cards are white with ≈20px corner radius and no visible border",
+   "box": [
+    45,
+    234,
+    360,
+    382
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "card titles",
+   "axis": "text",
+   "check": "Card titles read, left-to-right then down: 'Easy to Use', 'Fewer Settings to Configure', 'Optimize for Core Web Vitals', 'All in One Solution', 'Great Support', 'Compatibility'",
+   "box": [
+    45,
+    520,
+    1110,
+    425
+   ],
+   "scope": "frame",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "card body text",
+   "axis": "text",
+   "check": "Easy to Use body reads 'Click once and FlyingPress applies caching, image and code optimizations for you.' in grey on two lines",
+   "box": [
+    67,
+    557,
+    320,
+    36
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "card body text",
+   "axis": "text",
+   "check": "Core Web Vitals body reads 'Every setting targets LCP, INP and CLS, the three metrics Google uses to judge page experience.'",
+   "box": [
+    817,
+    557,
+    320,
+    36
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "card body text",
+   "axis": "text",
+   "check": "Compatibility body reads 'Compatible with all major WordPress hosting providers, themes & plugins.'",
+   "box": [
+    817,
+    955,
+    320,
+    36
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "card Easy to Use",
+   "axis": "style",
+   "check": "Top of the Easy to Use card has a soft peach-to-orange gradient wash fading to white by y≈480",
+   "box": [
+    45,
+    234,
+    360,
+    250
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "plugin widget card",
+   "axis": "present",
+   "check": "A white shadowed panel shows an orange app icon, 'FlyingPress' bold and 'Speed optimization' grey beneath",
+   "box": [
+    77,
+    282,
+    296,
+    120
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "status badge",
+   "axis": "text",
+   "check": "Badge at top right of the widget reads 'Active' in green with a green dot on pale green",
+   "box": [
+    292,
+    302,
+    65,
+    22
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "orange button",
+   "axis": "text",
+   "check": "Full-width orange gradient button reads '✓ Optimized' in white",
+   "box": [
+    92,
+    345,
+    267,
+    41
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "chips",
+   "axis": "style",
+   "check": "Three chips 'Caching', 'Images', 'CSS & JS' each show a filled green check circle",
+   "box": [
+    92,
+    424,
+    264,
+    26
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "status badge",
+   "axis": "motion",
+   "check": "Between 1.4s and 2.45s the widget switches to 'Inactive' (grey dot), button text 'Optimize my site', chips show empty grey circles",
+   "box": [
+    77,
+    282,
+    296,
+    170
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": 2.45
+  },
+  {
+   "id": "c18",
+   "element": "mouse cursor",
+   "axis": "motion",
+   "check": "Black arrow cursor moves from ≈(349,425) at 3.45s onto the button ≈(303,388) by 3.95s",
+   "box": [
+    280,
+    370,
+    90,
+    70
+   ],
+   "scope": "crop",
+   "at": 3.45,
+   "then": 3.95
+  },
+  {
+   "id": "c19",
+   "element": "orange button",
+   "axis": "motion",
+   "check": "At ≈4.4s the button is pressed (slightly inset, label blurred) and by 5.4s it reads '✓ Optimized' with badge 'Active' again",
+   "box": [
+    77,
+    282,
+    296,
+    120
+   ],
+   "scope": "crop",
+   "at": 4.4,
+   "then": 5.4
+  },
+  {
+   "id": "c20",
+   "element": "card Fewer Settings",
+   "axis": "style",
+   "check": "Fewer Settings card top has an orange gradient strongest at top-centre with a fine dotted dither texture",
+   "box": [
+    420,
+    234,
+    360,
+    260
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "toggle pills",
+   "axis": "position",
+   "check": "Three white toggle pills stacked at y≈309, 380, 451; the middle one is shifted left by ≈29px relative to the others",
+   "box": [
+    435,
+    283,
+    330,
+    195
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "toggle pills",
+   "axis": "text",
+   "check": "Pill labels read 'Page Caching', 'Image Optimization', 'Critical CSS', each with a small grey icon before it",
+   "box": [
+    435,
+    283,
+    330,
+    195
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "toggle pills",
+   "axis": "style",
+   "check": "Page Caching toggle is orange (on) while Image Optimization and Critical CSS toggles are light grey (off)",
+   "box": [
+    680,
+    295,
+    85,
+    170
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "toggle pills",
+   "axis": "motion",
+   "check": "Between 1.4s and 1.9s the Page Caching toggle turns from orange to grey; all three are off at 1.9s",
+   "box": [
+    680,
+    295,
+    85,
+    170
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": 1.9
+  },
+  {
+   "id": "c25",
+   "element": "toggle pills",
+   "axis": "motion",
+   "check": "At 3.45s the three pills have collapsed into one pill at y≈380 reading 'All optimizations' with two stacked pill edges peeking below it",
+   "box": [
+    435,
+    354,
+    300,
+    75
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": 3.45
+  },
+  {
+   "id": "c26",
+   "element": "toggle pills",
+   "axis": "motion",
+   "check": "The 'All optimizations' toggle goes from grey at 3.45s to orange at 3.95s",
+   "box": [
+    680,
+    365,
+    45,
+    30
+   ],
+   "scope": "crop",
+   "at": 3.45,
+   "then": 3.95
+  },
+  {
+   "id": "c27",
+   "element": "toggle pills",
+   "axis": "motion",
+   "check": "By 5.4s the stack has fanned back out into three pills with all three toggles orange",
+   "box": [
+    435,
+    283,
+    330,
+    195
+   ],
+   "scope": "crop",
+   "at": 4.4,
+   "then": 5.4
+  },
+  {
+   "id": "c28",
+   "element": "card Core Web Vitals",
+   "axis": "style",
+   "check": "CWV card has an orange wash along its left edge with dotted texture, white elsewhere",
+   "box": [
+    795,
+    234,
+    360,
+    300
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c29",
+   "element": "metric pills",
+   "axis": "present",
+   "check": "Exactly three metric pills are visible, stacked at y≈305, 395, 485, the middle one shifted ≈29px left",
+   "box": [
+    810,
+    272,
+    325,
+    250
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c30",
+   "element": "metric pill top",
+   "axis": "text",
+   "check": "Top pill reads '0.02', 'CLS', 'Cumulative Layout Shift', badge 'Good' (green)",
+   "box": [
+    839,
+    272,
+    296,
+    66
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c31",
+   "element": "metric pill middle",
+   "axis": "text",
+   "check": "Middle pill reads '1.5s', 'LCP', 'Largest Contentful Paint', badge 'Poor' in red on pale pink",
+   "box": [
+    810,
+    362,
+    296,
+    66
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c32",
+   "element": "metric pill bottom",
+   "axis": "text",
+   "check": "Bottom pill reads '380ms', 'INP', 'Interaction to Next Paint', badge 'Needs work' in amber, all at reduced opacity",
+   "box": [
+    839,
+    452,
+    296,
+    66
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c33",
+   "element": "metric gauges",
+   "axis": "style",
+   "check": "Each metric number sits inside a circular ring gauge ≈52px whose arc is green (good), red (poor) or amber (needs work)",
+   "box": [
+    810,
+    272,
+    100,
+    250
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c34",
+   "element": "metric pill middle",
+   "axis": "motion",
+   "check": "LCP ring value changes from '1.5s' with 'Poor' at 1.4s to '1.2s' with green 'Good' at 1.9s",
+   "box": [
+    810,
+    362,
+    296,
+    66
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": 1.9
+  },
+  {
+   "id": "c35",
+   "element": "metric pills",
+   "axis": "motion",
+   "check": "The pill list scrolls up one slot between 1.9s and 3.45s: LCP is now top, INP middle, CLS bottom",
+   "box": [
+    810,
+    272,
+    325,
+    250
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": 3.45
+  },
+  {
+   "id": "c36",
+   "element": "metric pills",
+   "axis": "motion",
+   "check": "Mid-transition at 2.45s only two pills are visible near y≈326 and 416, the outgoing one fading above",
+   "box": [
+    810,
+    240,
+    325,
+    230
+   ],
+   "scope": "crop",
+   "at": 2.45,
+   "then": null
+  },
+  {
+   "id": "c37",
+   "element": "metric pills",
+   "axis": "motion",
+   "check": "Next scroll by 5.4s: INP top ('48ms' Good), CLS middle ('0.05' Poor), LCP bottom ('4.2s' Poor)",
+   "box": [
+    810,
+    272,
+    325,
+    250
+   ],
+   "scope": "crop",
+   "at": 3.45,
+   "then": 5.4
+  },
+  {
+   "id": "c38",
+   "element": "card All in One",
+   "axis": "style",
+   "check": "All in One card shows a large white arch shape rising from the bottom corners, leaving an orange-washed funnel in the centre",
+   "box": [
+    45,
+    631,
+    360,
+    280
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c39",
+   "element": "faded app-icon tiles",
+   "axis": "present",
+   "check": "Behind the arch sit faint rounded app-icon tiles with grey glyphs (e.g. 'A', gear, document, code brackets) at low contrast",
+   "box": [
+    60,
+    665,
+    320,
+    130
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c40",
+   "element": "FlyingPress app icon",
+   "axis": "imagery",
+   "check": "A glossy orange rounded-square icon ≈75px with a white stylised 'F' made of swooshes and a soft orange glow beneath, at ≈(215,842)",
+   "box": [
+    178,
+    805,
+    75,
+    75
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c41",
+   "element": "faded app-icon tiles",
+   "axis": "motion",
+   "check": "Some background tiles fade in or out between 1.4s and 1.9s while the arch and orange icon stay still",
+   "box": [
+    60,
+    665,
+    320,
+    180
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": 1.9
+  },
+  {
+   "id": "c42",
+   "element": "card Great Support",
+   "axis": "style",
+   "check": "Great Support card shows concentric soft peach circles centred at ≈(600,778)",
+   "box": [
+    420,
+    631,
+    360,
+    280
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c43",
+   "element": "support avatar",
+   "axis": "imagery",
+   "check": "Centre is a ≈74px glossy orange circle with a white person glyph and an orange drop shadow",
+   "box": [
+    563,
+    741,
+    74,
+    74
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c44",
+   "element": "orbit bubbles",
+   "axis": "present",
+   "check": "Exactly three small white circular bubbles surround the avatar: an orange '?' icon, an orange headset, an orange cursor arrow",
+   "box": [
+    470,
+    640,
+    265,
+    255
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c45",
+   "element": "orbit bubbles",
+   "axis": "motion",
+   "check": "The three bubbles rotate clockwise around the avatar: '?' moves from top ≈(637,666) at 1.4s to lower-right ≈(702,833) at 1.9s",
+   "box": [
+    470,
+    640,
+    265,
+    255
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": 1.9
+  },
+  {
+   "id": "c46",
+   "element": "support avatar",
+   "axis": "motion",
+   "check": "The centre avatar does not move while the bubbles orbit",
+   "box": [
+    563,
+    741,
+    74,
+    74
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": 1.9
+  },
+  {
+   "id": "c47",
+   "element": "compat centre icon",
+   "axis": "imagery",
+   "check": "Middle row centre is a glossy orange FlyingPress icon ≈75px at ≈(975,777), flanked by a cloud tile left and a '+' tile right",
+   "box": [
+    845,
+    740,
+    260,
+    75
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c48",
+   "element": "compat logo tiles",
+   "axis": "style",
+   "check": "Surrounding tiles are pale, near-transparent rounded squares with grey logos (W circle, 'Kinsta' wordmark, Elementor E)",
+   "box": [
+    795,
+    650,
+    360,
+    245
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c49",
+   "element": "compat top row",
+   "axis": "motion",
+   "check": "The top row of tiles slides left continuously: the W tile moves from x≈997 at 1.4s to ≈975 at 1.9s",
+   "box": [
+    795,
+    650,
+    360,
+    75
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": 1.9
+  },
+  {
+   "id": "c50",
+   "element": "compat bottom row",
+   "axis": "motion",
+   "check": "The bottom row of tiles slides right continuously: the Elementor tile moves from x≈913 at 1.4s to ≈975 at 1.9s",
+   "box": [
+    795,
+    830,
+    360,
+    70
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": 1.9
+  },
+  {
+   "id": "c51",
+   "element": "compat middle row",
+   "axis": "motion",
+   "check": "The middle row (cloud, orange icon, +) does not move between 1.4s and 1.9s",
+   "box": [
+    845,
+    740,
+    260,
+    75
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": 1.9
+  },
+  {
+   "id": "c52",
+   "element": "header",
+   "axis": "motion",
+   "check": "Header (pill, headline, subtitle) and all six card outlines stay perfectly still between 1.4s and 3.45s",
+   "box": [
+    0,
+    60,
+    1200,
+    960
+   ],
+   "scope": "frame",
+   "at": 1.4,
+   "then": 3.45
+  },
+  {
+   "id": "c53",
+   "element": "loop",
+   "axis": "motion",
+   "check": "The top-row card states at 7.4s match 1.4s (Active, Page Caching only on, CLS/LCP/INP order): the cycle repeats every ≈6s",
+   "box": [
+    45,
+    234,
+    1110,
+    382
+   ],
+   "scope": "frame",
+   "at": 1.4,
+   "then": 7.4
+  },
+  {
+   "id": "c54",
+   "element": "card body text",
+   "axis": "style",
+   "check": "Card body text is ≈14–15px mid-grey, clearly lighter than the near-black titles",
+   "box": [
+    67,
+    524,
+    320,
+    70
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  }
+ ],
+ "imagery": [
+  {
+   "name": "FlyingPress app icon (widget, All in One, Compatibility)",
+   "box": [
+    178,
+    805,
+    75,
+    75
+   ],
+   "class": "structured",
+   "what": "glossy orange rounded-square app icon with a white stylised F made of two swooshes; a small version at (92,297,34,34) and another at (938,740,75,75)",
+   "at": 1.4
+  },
+  {
+   "name": "support avatar",
+   "box": [
+    563,
+    741,
+    74,
+    74
+   ],
+   "class": "css",
+   "what": "orange gradient sphere with white person glyph and orange glow, inside concentric peach rings",
+   "at": 1.4
+  },
+  {
+   "name": "orbit icon bubbles",
+   "box": [
+    470,
+    640,
+    265,
+    255
+   ],
+   "class": "structured",
+   "what": "white circles with orange ?, headset and cursor glyphs",
+   "at": 1.4
+  },
+  {
+   "name": "faded app-icon tiles",
+   "box": [
+    60,
+    665,
+    320,
+    130
+   ],
+   "class": "structured",
+   "what": "pale rounded tiles with grey glyphs (A, gear, document, code, link, hourglass, check)",
+   "at": 1.4
+  },
+  {
+   "name": "compatibility logo tiles",
+   "box": [
+    795,
+    650,
+    360,
+    245
+   ],
+   "class": "structured",
+   "what": "pale tiles with host/builder logos: W circle, Kinsta wordmark, grid logo, cloud with speed lines, Elementor E, plus",
+   "at": 1.4
+  },
+  {
+   "name": "card gradient washes with dotted texture",
+   "box": [
+    420,
+    234,
+    360,
+    260
+   ],
+   "class": "css",
+   "what": "peach-to-orange radial/linear gradients with a fine dot dither pattern at the top of the cards",
+   "at": 1.4
+  },
+  {
+   "name": "CWV ring gauges",
+   "box": [
+    810,
+    272,
+    100,
+    250
+   ],
+   "class": "css",
+   "what": "circular progress rings in green, red or amber around metric numbers",
+   "at": 1.4
+  }
+ ],
+ "moves": [
+  {
+   "element": "Easy to Use widget",
+   "what": "Active/Optimized → Inactive/'Optimize my site', chips lose their checks",
+   "from": 2.2,
+   "to": 2.5,
+   "px": null
+  },
+  {
+   "element": "mouse cursor",
+   "what": "glides from rest onto the orange button",
+   "from": 3.5,
+   "to": 3.95,
+   "px": 56
+  },
+  {
+   "element": "orange button",
+   "what": "click press, label blurs, returns to '✓ Optimized' + Active",
+   "from": 4.3,
+   "to": 5,
+   "px": null
+  },
+  {
+   "element": "Page Caching toggle",
+   "what": "turns off (orange → grey)",
+   "from": 1.4,
+   "to": 1.9,
+   "px": null
+  },
+  {
+   "element": "toggle pills",
+   "what": "collapse into one stacked 'All optimizations' pill",
+   "from": 2.3,
+   "to": 2.6,
+   "px": 71
+  },
+  {
+   "element": "All optimizations toggle",
+   "what": "turns on (grey → orange)",
+   "from": 3.45,
+   "to": 3.95,
+   "px": null
+  },
+  {
+   "element": "toggle pills",
+   "what": "fan back out to three pills, all on",
+   "from": 4.3,
+   "to": 4.6,
+   "px": 71
+  },
+  {
+   "element": "CWV metric pills",
+   "what": "list scrolls up one slot (≈90px), outgoing top pill fades; repeats every 2s",
+   "from": 0.3,
+   "to": 0.5,
+   "px": 90
+  },
+  {
+   "element": "CWV metric pills",
+   "what": "scroll up one slot",
+   "from": 2.3,
+   "to": 2.6,
+   "px": 90
+  },
+  {
+   "element": "CWV metric pills",
+   "what": "scroll up one slot",
+   "from": 4.3,
+   "to": 4.5,
+   "px": 90
+  },
+  {
+   "element": "CWV middle ring",
+   "what": "value counts and ring recolours (e.g. LCP 4.0s red → 1.5s → 1.2s green)",
+   "from": 1,
+   "to": 1.9,
+   "px": null
+  },
+  {
+   "element": "support orbit bubbles",
+   "what": "three bubbles rotate clockwise around the avatar",
+   "from": 0,
+   "to": 11.98,
+   "px": null
+  },
+  {
+   "element": "compat top row",
+   "what": "continuous marquee to the left (≈45px/s)",
+   "from": 0,
+   "to": 11.98,
+   "px": 22
+  },
+  {
+   "element": "compat bottom row",
+   "what": "continuous marquee to the right",
+   "from": 0,
+   "to": 11.98,
+   "px": 62
+  },
+  {
+   "element": "All in One background tiles",
+   "what": "faint icon tiles fade in and out behind the arch",
+   "from": 0,
+   "to": 11.98,
+   "px": null
+  }
+ ]
+}

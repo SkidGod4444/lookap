@@ -1,0 +1,193 @@
+{
+ "slug": "1ipk9s-flyingpress-bento-feature-grid",
+ "title": "FlyingPress Bento Feature Grid",
+ "author": "Ashik",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "review",
+ "ended": "round limit",
+ "bestRound": 3,
+ "rank": 94,
+ "allPass": false,
+ "rubric": {
+  "pass": 53,
+  "fail": 1,
+  "unsure": 0,
+  "of": 54,
+  "failed": [
+   "c25 At 3.45s the three pills have collapsed into one pill at y≈380 reading 'All optimizations' with two stacked pill edges peeking below it"
+  ]
+ },
+ "score": 78,
+ "motion": "the render changes where the clip changes",
+ "imagery": [
+  {
+   "name": "FlyingPress app icon (widget, All in One, Compatibility)",
+   "class": "structured",
+   "box": [
+    178,
+    805,
+    75,
+    75
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "support avatar",
+   "class": "css",
+   "box": [
+    563,
+    741,
+    74,
+    74
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "orbit icon bubbles",
+   "class": "structured",
+   "box": [
+    470,
+    640,
+    265,
+    255
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "faded app-icon tiles",
+   "class": "structured",
+   "box": [
+    60,
+    665,
+    320,
+    130
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "compatibility logo tiles",
+   "class": "structured",
+   "box": [
+    795,
+    650,
+    360,
+    245
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "card gradient washes with dotted texture",
+   "class": "css",
+   "box": [
+    420,
+    234,
+    360,
+    260
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "CWV ring gauges",
+   "class": "css",
+   "box": [
+    810,
+    272,
+    100,
+    250
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 19.6,
+   "turns": 66,
+   "costUsd": 4.5779006,
+   "tokens": {
+    "written": 68691,
+    "read": 4017795
+   },
+   "judgeUsd": 1.281,
+   "ended": "budget_exhausted",
+   "score": 76,
+   "rank": 76,
+   "allPass": false,
+   "rubric": {
+    "pass": 39,
+    "fail": 15,
+    "unsure": 0,
+    "of": 54
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 13.9,
+   "turns": 79,
+   "costUsd": 2.3132886000000004,
+   "tokens": {
+    "written": 36494,
+    "read": 3270616
+   },
+   "judgeUsd": 1.004,
+   "ended": "completed",
+   "score": 78,
+   "rank": 89,
+   "allPass": false,
+   "rubric": {
+    "pass": 49,
+    "fail": 5,
+    "unsure": 0,
+    "of": 54
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 8.8,
+   "turns": 40,
+   "costUsd": 1.3434583999999998,
+   "tokens": {
+    "written": 16551,
+    "read": 1761215
+   },
+   "judgeUsd": 1.16,
+   "ended": "completed",
+   "score": 78,
+   "rank": 94,
+   "allPass": false,
+   "rubric": {
+    "pass": 53,
+    "fail": 1,
+    "unsure": 0,
+    "of": 54
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  }
+ ],
+ "minutes": 42.2,
+ "tokens": {
+  "written": 121736,
+  "read": 9049626
+ },
+ "cost": {
+  "codingUsd": 8.23,
+  "judgeUsd": 3.45,
+  "rubricUsd": 1.106,
+  "totalUsd": 12.79
+ },
+ "notes": true,
+ "at": "2026-10-23T09:20:13.540Z"
+}
