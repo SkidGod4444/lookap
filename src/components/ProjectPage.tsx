@@ -45,11 +45,16 @@ export function ProjectPage({ slug }: { slug: string }) {
   const entry = bySlug(slug);
   if (!entry) notFound();
   const similar = ENTRIES.filter((e) => e.slug !== entry.slug && (e.category === entry.category || e.kind === entry.kind)).slice(0, 6);
-  const wide = entry.ratio >= 1;
   const live = liveFor(entry);
   const recipe = recipeFor(entry);
+  /* the stage takes the rebuild's shape when it differs from the clip's: a filmed screen straightened into a flat page
+     (scripts/screen.ts) is wide where the phone video of it was tall; the clip then sits inside the frame, uncropped */
+  const fr = FACTORY[entry.slug];
+  const rebuiltRatio = fr ? fr.frame.w / fr.frame.h : null;
+  const ratio = rebuiltRatio && Math.abs(rebuiltRatio - entry.ratio) / entry.ratio > 0.02 ? rebuiltRatio : entry.ratio;
+  const reshaped = ratio !== entry.ratio;
   /* the frame fits the stage height too, so the switch and caption under it stay on screen */
-  const frame = { maxWidth: `min(${wide ? 900 : 420}px, calc((100dvh - 220px) * ${entry.ratio.toFixed(4)}))`, aspectRatio: entry.ratio };
+  const frame = { maxWidth: `min(${ratio >= 1 ? 900 : 420}px, calc((100dvh - 220px) * ${ratio.toFixed(4)}))`, aspectRatio: ratio };
   const site = entry.site && entry.site !== "example.com" ? `https://${entry.site}` : null;
   /* the credit's picture starts loading from the document head, before any script runs */
   if (entry.x) preload(avatarUrl(entry.x), { as: "image" });
@@ -61,7 +66,7 @@ export function ProjectPage({ slug }: { slug: string }) {
       <DemandPing slug={entry.slug} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(entry, Boolean(live))) }} />
       <Stage>
-        <Compare clip={<Media entry={entry} sizes={STAGE_SIZES} eager />} live={live ? <live.Component /> : null} hint={live?.hint} align={live?.align} style={frame} />
+        <Compare clip={<Media entry={entry} sizes={STAGE_SIZES} eager contain={reshaped} />} live={live ? <live.Component /> : null} hint={live?.hint} align={live?.align} style={frame} />
       </Stage>
 
       <aside className="w-full shrink-0 border-t border-line bg-canvas px-5 pt-6 pb-10 lg:h-full lg:w-[280px] lg:overflow-y-auto lg:border-t-0 lg:border-l">

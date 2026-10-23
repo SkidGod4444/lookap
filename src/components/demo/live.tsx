@@ -29,7 +29,7 @@ async function RebuildFrame({ slug }: { slug: string }) {
     /* a visitor watches the rebuild run through the clip's own sequence; a member gets the real thing to touch */
     return (
       <div className="relative h-full w-full bg-[#e7e4db]">
-        {rb.preview && <video src={rb.preview} autoPlay muted loop playsInline className="h-full w-full object-cover" aria-label={`${rb.title}, lookap's rebuild, replaying the clip`} />}
+        {rb.preview && <video src={rb.preview} autoPlay muted loop playsInline className="h-full w-full object-contain" aria-label={`${rb.title}, lookap's rebuild, replaying the clip`} />}
         <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 bg-gradient-to-t from-black/70 to-black/0 px-4 pt-10 pb-3">
           <p className="text-[13px] leading-[1.4] text-white/90">{rb.preview ? "The rebuild, replaying the clip. Sign in to click, play and drag it." : "Sign in to click, play and drag the rebuild."}</p>
           <a href={`/feed/${slug}?signin=1&next=${encodeURIComponent(`/feed/${slug}`)}`} className={button("silver", "h-8 shrink-0 rounded-lg px-3 text-[13px]")}>Sign in</a>

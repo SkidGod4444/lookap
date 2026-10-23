@@ -10,9 +10,9 @@ export const TILE_SIZES = "160px";
 
 /* An entry's media, filling its box: clips play muted on loop over an instant poster, stills show as they are.
    `eager` is for the first row: the poster is preloaded and the clip starts fetching from the HTML, before hydration. */
-export function Media({ entry, sizes = CARD_SIZES, eager = false, compact = false }: { entry: Entry; sizes?: string; eager?: boolean; compact?: boolean }) {
+export function Media({ entry, sizes = CARD_SIZES, eager = false, compact = false, contain = false }: { entry: Entry; sizes?: string; eager?: boolean; compact?: boolean; contain?: boolean }) {
   if (entry.video) {
-    return <Clip src={entry.video.src} poster={entry.poster} w={entry.video.w} h={entry.video.h} title={entry.title} sizes={sizes} eager={eager} still={compact} />;
+    return <Clip src={entry.video.src} poster={entry.poster} w={entry.video.w} h={entry.video.h} title={entry.title} sizes={sizes} eager={eager} still={compact} contain={contain} />;
   }
   if (entry.image) {
     return <Image src={entry.image.src} alt={entry.title} fill sizes={sizes} priority={eager} className="object-cover" />;
