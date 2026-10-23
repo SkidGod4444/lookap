@@ -1,0 +1,217 @@
+<!doctype html>
+<!--
+  Playful Feedback Toggle Buttons, rebuilt from the clip.
+  Design by Nitish Khagwal. Source: https://x.com/nitishkmrk/status/2112156660265546145
+  Nothing sampled: glyphs, cursor, glows and shadows are drawn (SVG + CSS).
+  ?demo=1 replays the clip's 4.83 s sequence; otherwise the buttons answer the pointer.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Playful Feedback Toggle Buttons</title>
+<style id="patches"></style>
+<style>
+  html, body { margin: 0; overflow: hidden; background: #f1f1f1; }
+  #stage {
+    --u: 1px;
+    position: relative; width: calc(720 * var(--u)); height: calc(720 * var(--u));
+    background: #f1f1f1; overflow: hidden;
+  }
+  .btn {
+    position: absolute; top: calc(294 * var(--u));
+    width: calc(180 * var(--u)); height: calc(132 * var(--u));
+    box-sizing: border-box; padding: 0; margin: 0; cursor: pointer;
+    border: calc(1 * var(--u)) solid #c6c6c6; border-top-color: #dadada; border-bottom-color: #cfcfcf;
+    background: linear-gradient(#fcfcfc 0, #f5f5f5 calc(3 * var(--u)), #f0f0f0 calc(12 * var(--u)),
+      #f4f4f4 calc(26 * var(--u)), #f6f6f6 calc(40 * var(--u)));
+    box-shadow: inset 0 0 0 calc(1.5 * var(--u)) rgba(255,255,255,.9), inset 0 calc(-2 * var(--u)) 0 #fbfbfb,
+      0 calc(14 * var(--u)) calc(28 * var(--u)) rgba(0,0,0,.075),
+      0 calc(5 * var(--u)) calc(8 * var(--u)) rgba(0,0,0,.06),
+      0 calc(1 * var(--u)) calc(2 * var(--u)) rgba(0,0,0,.05);
+    -webkit-tap-highlight-color: transparent; outline: none;
+  }
+  .btn:focus-visible { outline: calc(2 * var(--u)) solid #9ab; outline-offset: calc(3 * var(--u)); }
+  #like { left: calc(174 * var(--u)); border-radius: calc(66 * var(--u)) calc(8 * var(--u)) calc(8 * var(--u)) calc(66 * var(--u)); }
+  #dislike { left: calc(366 * var(--u)); border-radius: calc(8 * var(--u)) calc(66 * var(--u)) calc(66 * var(--u)) calc(8 * var(--u)); }
+  .glow {
+    position: absolute; inset: 0; border-radius: inherit; opacity: 0; pointer-events: none;
+    box-shadow: inset 0 0 0 calc(1.5 * var(--u)) rgba(255,255,255,.75);
+  }
+  #like .glow {
+    background: radial-gradient(ellipse calc(92 * var(--u)) calc(62 * var(--u)) at calc(96 * var(--u)) calc(68 * var(--u)),
+      #c0ffc6 0%, #c3ffc7 42%, #cafdce 58%, #d6fbd9 73%, #e2f8e4 87%, #eaf5ea 100%);
+    box-shadow: inset 0 0 calc(8 * var(--u)) calc(2 * var(--u)) rgba(255,255,255,.55), inset 0 0 0 calc(1.5 * var(--u)) rgba(255,255,255,.75);
+  }
+  #dislike .glow {
+    background: radial-gradient(ellipse calc(110 * var(--u)) calc(82 * var(--u)) at calc(86 * var(--u)) calc(56 * var(--u)),
+      #fbc9cf 0%, #fccdd2 28%, #fcd7db 52%, #fce1e5 76%, #fae7ea 100%);
+  }
+  .glyph {
+    position: absolute; width: calc(58 * var(--u)); height: calc(62 * var(--u));
+    color: #000; pointer-events: none; will-change: transform;
+  }
+  .glyph svg { display: block; width: 100%; height: 100%; overflow: visible; }
+  .glyph path { stroke: #fff; stroke-opacity: .85; stroke-width: 1.2; paint-order: stroke; }
+  /* glyph boxes relative to the button: up at (242,323), down at (420,335) in the frame */
+  #like .glyph { left: calc(67 * var(--u)); top: calc(28 * var(--u)); }
+  #dislike .glyph { left: calc(53 * var(--u)); top: calc(40 * var(--u)); }
+  #cursor {
+    position: absolute; left: 0; top: 0; width: calc(48 * var(--u)); height: calc(70 * var(--u));
+    pointer-events: none; display: none;
+    filter: drop-shadow(calc(1 * var(--u)) calc(3 * var(--u)) calc(3 * var(--u)) rgba(0,0,0,.32));
+  }
+  .demo #cursor { display: block; }
+  .demo .btn { cursor: default; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <button class="btn" id="like" aria-label="Like" aria-pressed="false">
+    <span class="glow"></span>
+    <span class="glyph" id="up"><svg viewBox="0 0 58 62" aria-hidden="true">
+      <path fill="currentColor" d="M12 24C5 26.5 0 34 0 42.5C0 51.5 5.5 58.5 14.5 58.8C11.2 55.4 9.6 50.4 9.6 44.2C9.6 36.8 10.6 30 12.4 24Z"/>
+      <path fill="currentColor" d="M22 59C16 59 12 53 12 45C12 37 15 31 20 26L30 14C32 11 34 7 35 4C36 1 37 0 39 0C42 0 44 2 44 6C44 11 42 15 40 19L52 19C55.5 19 58 21 58 24.5C58 27 57 28.5 55.5 29.2C57.4 30.4 58 32 58 34C58 36.4 57 38 55.4 39C57 40 57.6 41.6 57.6 43.6C57.6 46 56.4 47.6 54.6 48.4C55.6 49.4 56 50.6 56 52C56 56 53.6 59 50 59Z"/>
+    </svg></span>
+  </button>
+  <button class="btn" id="dislike" aria-label="Dislike" aria-pressed="false">
+    <span class="glow"></span>
+    <span class="glyph" id="down"><svg viewBox="0 0 58 62" aria-hidden="true">
+      <g transform="rotate(180 29 31)">
+        <path fill="currentColor" d="M12 24C5 26.5 0 34 0 42.5C0 51.5 5.5 58.5 14.5 58.8C11.2 55.4 9.6 50.4 9.6 44.2C9.6 36.8 10.6 30 12.4 24Z"/>
+        <path fill="currentColor" d="M22 59C16 59 12 53 12 45C12 37 15 31 20 26L30 14C32 11 34 7 35 4C36 1 37 0 39 0C42 0 44 2 44 6C44 11 42 15 40 19L52 19C55.5 19 58 21 58 24.5C58 27 57 28.5 55.5 29.2C57.4 30.4 58 32 58 34C58 36.4 57 38 55.4 39C57 40 57.6 41.6 57.6 43.6C57.6 46 56.4 47.6 54.6 48.4C55.6 49.4 56 50.6 56 52C56 56 53.6 59 50 59Z"/>
+      </g>
+    </svg></span>
+  </button>
+  <svg id="cursor" viewBox="0 0 48 70" aria-hidden="true">
+    <path d="M4 4L4 57L17 45L26 66L35.5 62L27 41.7L44 41.7Z"
+      fill="#000" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
+  </svg>
+</div>
+<script>
+(() => {
+  const stage = document.getElementById('stage');
+  const like = document.getElementById('like'), dislike = document.getElementById('dislike');
+  const up = document.getElementById('up'), down = document.getElementById('down');
+  const upSvg = up.querySelector('svg'), downSvg = down.querySelector('svg');
+  const glowL = like.querySelector('.glow'), glowD = dislike.querySelector('.glow');
+  const demo = new URLSearchParams(location.search).get('demo') === '1';
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const u = 1;
+  const px = (n) => n * u + 'px';
+  const GREEN = '#0dbc39', RED = '#e5173f';
+
+  // one animation per element per action; t0/dur in seconds. In demo every action is
+  // laid out on the clip's timeline; live, t0 is relative to the click.
+  let base = 0;
+  function anim(el, frames, t0, dur, easing = 'ease-in-out') {
+    if (!demo) el.getAnimations().forEach((a) => a.cancel());
+    const k = reduce ? 0.001 : 1;
+    // easing is per segment so the offsets stay on the clip's clock
+    return el.animate(frames.map((f) => ({ easing, ...f })), {
+      delay: (base + t0) * 1000 * k, duration: Math.max(dur * 1000 * k, 1),
+      fill: demo ? 'forwards' : 'both', easing: 'linear',
+    });
+  }
+  function press(btn, t0, deep = 0.86, dur = 0.5) {
+    anim(btn, [
+      { transform: 'scale(1)', offset: 0 },
+      { transform: `scale(${deep})`, offset: 0.36, easing: 'cubic-bezier(.3,0,.2,1)' },
+      { transform: `scale(${deep})`, offset: 0.42 },
+      { transform: 'scale(1.025)', offset: 0.78 },
+      { transform: 'scale(1)', offset: 1 },
+    ], t0, dur, 'linear');
+  }
+  function colour(el, stops, t0, dur) {
+    anim(el, stops.map(([o, c]) => ({ color: c, offset: o })), t0, dur, 'linear');
+  }
+  function fade(el, from, to, t0, dur) {
+    anim(el, [{ opacity: from }, { opacity: to }], t0, dur, 'ease-out');
+  }
+
+  // like on: press 0.42, leap 0.65-1.30 (peak 0.88-1.03 at 2.4x, 130 px up), glow 0.68-0.95
+  function likeOn(t) {
+    press(like, t);
+    const T0 = t + 0.23, D = 0.65;
+    const f = (s) => (s - 0.65) / 0.65;
+    anim(up, [
+      { transform: 'translate(0,0) scale(1) rotate(0)', offset: 0, easing: 'ease-in' },
+      { transform: `translate(${px(-8)},${px(-30)}) scale(1.4) rotate(-3deg)`, offset: f(0.7), easing: 'linear' },
+      { transform: `translate(${px(-14)},${px(-73)}) scale(1.95) rotate(-6deg)`, offset: f(0.75) },
+      { transform: `translate(${px(-28)},${px(-124)}) scale(2.38) rotate(-6deg)`, offset: f(0.84) },
+      { transform: `translate(${px(-30)},${px(-130)}) scale(2.46) rotate(-5deg)`, offset: f(0.9) },
+      { transform: `translate(${px(-30)},${px(-128)}) scale(2.42) rotate(-5deg)`, offset: f(1.03), easing: 'cubic-bezier(.5,0,.9,.6)' },
+      { transform: `translate(${px(-14)},${px(-58)}) scale(1.7) rotate(-3deg)`, offset: f(1.1), easing: 'linear' },
+      { transform: `translate(${px(-2)},${px(-4)}) scale(1.02) rotate(0)`, offset: f(1.16) },
+      { transform: `translate(0,${px(5)}) scale(.86) rotate(0)`, offset: f(1.21) },
+      { transform: 'translate(0,0) scale(1) rotate(0)', offset: 1 },
+    ], T0, D, 'ease-out');
+    colour(upSvg, [[0, '#000'], [0.2, '#0d5c1f'], [0.6, '#0c8a2a'], [1, GREEN]], t + 0.24, 0.25);
+    fade(glowL, 0, 1, t + 0.26, 0.27);
+    like.setAttribute('aria-pressed', 'true');
+  }
+  // like off: press 1.85, glyph green -> dark green -> black 1.95-2.30, glow out 2.00-2.30
+  function likeOff(t) {
+    press(like, t, 0.88);
+    anim(up, [{ transform: 'scale(1)' }, { transform: 'scale(.94)' }, { transform: 'scale(1)' }], t, 0.35);
+    colour(upSvg, [[0, GREEN], [0.3, '#0b7a2a'], [0.45, '#0d4f1c'], [0.72, '#0a2a10'], [1, '#000']], t + 0.1, 0.35);
+    fade(glowL, 1, 0, t + 0.15, 0.3);
+    like.setAttribute('aria-pressed', 'false');
+  }
+  // dislike on: press 2.92, glyph wobbles left 3.05-3.40, black -> crimson -> red 3.05-3.30
+  function dislikeOn(t) {
+    // deepest at ~3.0 s, measured at the bottom edge (421 -> 409 px -> 422 px by 3.25 s)
+    press(dislike, Math.max(t - 0.06, 0), 0.86, 0.4);
+    const f = (s) => (s - 3.05) / 0.35;
+    anim(down, [
+      { transform: 'translate(0,0) rotate(0)', offset: 0 },
+      { transform: `translate(${px(-19)},${px(4)}) rotate(-3deg)`, offset: f(3.19) },
+      { transform: `translate(${px(4)},${px(-1)}) rotate(2deg)`, offset: f(3.31) },
+      { transform: 'translate(0,0) rotate(0)', offset: 1 },
+    ], t + 0.13, 0.35);
+    colour(downSvg, [[0, '#000'], [0.2, '#3a0a12'], [0.6, '#8a1028'], [1, RED]], t + 0.13, 0.25);
+    fade(glowD, 0, 1, t + 0.13, 0.25);
+    dislike.setAttribute('aria-pressed', 'true');
+  }
+  // dislike off: press 4.15, red -> dark red -> black 4.30-4.60, glow out 4.30-4.60
+  function dislikeOff(t) {
+    press(dislike, t, 0.88);
+    colour(downSvg, [[0, RED], [0.33, '#7a1020'], [0.66, '#2a0508'], [1, '#000']], t + 0.15, 0.3);
+    fade(glowD, 1, 0, t + 0.15, 0.3);
+    dislike.setAttribute('aria-pressed', 'false');
+  }
+
+  if (demo) {
+    stage.classList.add('demo');
+    // cursor tip positions read from the clip at 10 fps (seconds, x, y)
+    const path = [
+      [0, 543, 497], [0.1, 438, 532], [0.17, 378, 516], [0.22, 352, 470], [0.3, 313, 378], [0.55, 313, 378],
+      [0.6, 340, 416], [0.7, 438, 487], [0.8, 467, 478], [1.3, 465, 478], [1.4, 443, 492], [1.5, 389, 483],
+      [1.6, 331, 411], [1.7, 313, 385], [1.95, 313, 385], [2.0, 358, 470], [2.1, 501, 523], [2.2, 537, 501],
+      [2.4, 532, 492], [2.5, 510, 505], [2.6, 452, 487], [2.7, 411, 420], [2.8, 402, 392], [3.05, 402, 392],
+      [3.1, 438, 452], [3.2, 546, 488], [3.3, 581, 454], [3.6, 581, 454], [3.7, 546, 487], [3.8, 492, 496],
+      [3.9, 443, 456], [4.0, 416, 385], [4.25, 407, 382], [4.3, 416, 411], [4.4, 492, 474], [4.5, 559, 474],
+      [4.6, 563, 452], [4.83, 563, 452],
+    ];
+    const cur = document.getElementById('cursor');
+    cur.animate(path.map(([t, x, y]) => ({
+      transform: `translate(${px(x - 4)},${px(y - 4)})`, offset: t / 4.83,
+    })), { duration: 4830 * (reduce ? 0.001 : 1), fill: 'forwards', easing: 'linear' });
+    likeOn(0.42); likeOff(1.85); dislikeOn(2.92); dislikeOff(4.15);
+    return;
+  }
+
+  // live: the pair is a single choice; clicking the active one clears it
+  let state = null;
+  function set(next) {
+    if (state === 'like') likeOff(0);
+    if (state === 'dislike') dislikeOff(0);
+    if (next === 'like') likeOn(0);
+    if (next === 'dislike') dislikeOn(0);
+    state = next;
+  }
+  like.addEventListener('click', () => set(state === 'like' ? null : 'like'));
+  dislike.addEventListener('click', () => set(state === 'dislike' ? null : 'dislike'));
+})();
+</script>
+</body>
+</html>

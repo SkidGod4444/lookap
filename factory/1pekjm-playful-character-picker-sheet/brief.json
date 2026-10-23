@@ -1,0 +1,571 @@
+{
+ "slug": "1pekjm-playful-character-picker-sheet",
+ "title": "Playful Character Picker Sheet",
+ "measured": false,
+ "recipe": null,
+ "what": "A whimsical character selection UI styled like a torn paper receipt, with illustrated avatars, bold blue outlines, and a checkmark for the chosen user.",
+ "frame": {
+  "ratio": 1.818,
+  "shape": "landscape",
+  "media": "clip"
+ },
+ "tone": "light surface, dark type",
+ "traits": [
+  "Picker",
+  "Receipt",
+  "Illustration"
+ ],
+ "section": "Interface",
+ "steps": [
+  "Call see_design for the frame and read the layout from it: regions, alignment, type scale, corner radii, spacing rhythm.",
+  "The media is a clip: name each state you can see (rest, hover, press, open) and the order they occur in.",
+  "Build with the project's own stack and tokens; match proportion and hierarchy before matching pixels.",
+  "A draft measurement is attached: its phases, moves and palette are measured from the clip; its boxes are a first pass to check against the keyframes."
+ ],
+ "draft": {
+  "frame": {
+   "w": 1964,
+   "h": 1080
+  },
+  "duration": 12.7,
+  "phases": [
+   [
+    0.15,
+    0.85
+   ],
+   [
+    3.5,
+    4.45
+   ],
+   [
+    4.65,
+    4.65
+   ],
+   [
+    4.75,
+    4.75
+   ],
+   [
+    4.85,
+    4.85
+   ],
+   [
+    5.35,
+    5.65
+   ],
+   [
+    5.8,
+    6.95
+   ],
+   [
+    7.05,
+    7.05
+   ],
+   [
+    8.1,
+    9.55
+   ],
+   [
+    9.65,
+    9.65
+   ],
+   [
+    10.7,
+    11.65
+   ],
+   [
+    11.85,
+    11.85
+   ],
+   [
+    11.95,
+    11.95
+   ],
+   [
+    12.05,
+    12.05
+   ]
+  ],
+  "keyframes": [
+   {
+    "name": "kf1",
+    "at": 2.2,
+    "hold": [
+     0.9,
+     3.45
+    ]
+   },
+   {
+    "name": "kf2",
+    "at": 5.1,
+    "hold": [
+     4.9,
+     5.3
+    ]
+   },
+   {
+    "name": "kf3",
+    "at": 7.6,
+    "hold": [
+     7.1,
+     8.05
+    ]
+   },
+   {
+    "name": "kf4",
+    "at": 10.2,
+    "hold": [
+     9.7,
+     10.65
+    ]
+   }
+  ],
+  "moments": [
+   {
+    "at": 0.5,
+    "name": "mid-phase"
+   },
+   {
+    "at": 2.2,
+    "name": "kf1"
+   },
+   {
+    "at": 3.98,
+    "name": "mid-phase"
+   },
+   {
+    "at": 5.1,
+    "name": "kf2"
+   },
+   {
+    "at": 5.5,
+    "name": "mid-phase"
+   },
+   {
+    "at": 6.38,
+    "name": "mid-phase"
+   },
+   {
+    "at": 7.6,
+    "name": "kf3"
+   },
+   {
+    "at": 8.82,
+    "name": "mid-phase"
+   },
+   {
+    "at": 10.2,
+    "name": "kf4"
+   },
+   {
+    "at": 11.18,
+    "name": "mid-phase"
+   }
+  ],
+  "anchors": [
+   {
+    "phase": [
+     0.15,
+     0.85
+    ],
+    "read": "top and left and right fixed, bottom +132",
+    "moved": {
+     "top": 0,
+     "bottom": 132,
+     "left": 0,
+     "right": 0
+    },
+    "reliable": true
+   },
+   {
+    "phase": [
+     3.5,
+     4.45
+    ],
+    "read": "all edges moved (top -188, bottom +144, left +104, right -80): the whole shifts or the page reflows",
+    "moved": {
+     "top": -188,
+     "bottom": 144,
+     "left": 104,
+     "right": -80
+    },
+    "reliable": true
+   },
+   {
+    "phase": [
+     5.35,
+     5.65
+    ],
+    "read": "top and left and right fixed, bottom +68",
+    "moved": {
+     "top": 0,
+     "bottom": 68,
+     "left": 0,
+     "right": 0
+    },
+    "reliable": true
+   },
+   {
+    "phase": [
+     5.8,
+     6.95
+    ],
+    "read": "none of the content's edges moved: the change is inside the box",
+    "moved": {
+     "top": 0,
+     "bottom": 0,
+     "left": 0,
+     "right": 0
+    },
+    "reliable": true
+   },
+   {
+    "phase": [
+     8.1,
+     9.55
+    ],
+    "read": "all edges moved (top +196, bottom -272, left -100, right +100): the whole shifts or the page reflows",
+    "moved": {
+     "top": 196,
+     "bottom": -272,
+     "left": -100,
+     "right": 100
+    },
+    "reliable": true
+   },
+   {
+    "phase": [
+     10.7,
+     11.65
+    ],
+    "read": "all edges moved (top -188, bottom +144, left +104, right -104): the whole shifts or the page reflows",
+    "moved": {
+     "top": -188,
+     "bottom": 144,
+     "left": 104,
+     "right": -104
+    },
+    "reliable": true
+   }
+  ],
+  "background": "#f6f6f9",
+  "palette": [
+   {
+    "hex": "#f7f7f9",
+    "share": 96.2
+   },
+   {
+    "hex": "#2826c8",
+    "share": 0.9
+   },
+   {
+    "hex": "#e6e6e9",
+    "share": 0.4
+   },
+   {
+    "hex": "#a18bf9",
+    "share": 0.3
+   },
+   {
+    "hex": "#c4fe43",
+    "share": 0.3
+   },
+   {
+    "hex": "#2a26d3",
+    "share": 0.2
+   },
+   {
+    "hex": "#2a25b9",
+    "share": 0.1
+   },
+   {
+    "hex": "#e8e9f8",
+    "share": 0.1
+   }
+  ],
+  "elements": [
+   {
+    "box": [
+     672,
+     317,
+     616,
+     475
+    ],
+    "fill": "#2826c8"
+   },
+   {
+    "box": [
+     810,
+     620,
+     111,
+     108
+    ],
+    "fill": "#a18bf9"
+   },
+   {
+    "box": [
+     810,
+     390,
+     110,
+     94
+    ],
+    "fill": "#c4fe43"
+   },
+   {
+    "box": [
+     804,
+     613,
+     124,
+     123
+    ],
+    "fill": "#2d28c6"
+   },
+   {
+    "box": [
+     802,
+     384,
+     126,
+     116
+    ],
+    "fill": "#2a27c5"
+   },
+   {
+    "box": [
+     820,
+     466,
+     92,
+     26
+    ],
+    "fill": "#ed394d"
+   },
+   {
+    "box": [
+     686,
+     445,
+     40,
+     93
+    ],
+    "fill": "#2826c7"
+   },
+   {
+    "box": [
+     847,
+     663,
+     48,
+     50
+    ],
+    "fill": "#eea898"
+   }
+  ],
+  "motion": [
+   {
+    "element": "#fcfcfc",
+    "box": [
+     767,
+     322,
+     489,
+     462
+    ],
+    "moves": [
+     {
+      "from": 0.3,
+      "to": 0.35,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 3.55,
+      "to": 3.8,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 250
+     },
+     {
+      "from": 8.8,
+      "to": 8.85,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     }
+    ]
+   },
+   {
+    "element": "#2826c8",
+    "box": [
+     672,
+     317,
+     616,
+     475
+    ],
+    "moves": [
+     {
+      "from": 0.05,
+      "to": 1.35,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 1300
+     },
+     {
+      "from": 1.4,
+      "to": 1.45,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 1.5,
+      "to": 1.6,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 1.7,
+      "to": 2.85,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 1150
+     }
+    ]
+   },
+   {
+    "element": "#a18bf9",
+    "box": [
+     810,
+     620,
+     111,
+     108
+    ],
+    "moves": [
+     {
+      "from": 0.25,
+      "to": 1.45,
+      "dTop": 68,
+      "dLeft": 0,
+      "ms": 1200
+     },
+     {
+      "from": 1.6,
+      "to": 1.75,
+      "dTop": -6,
+      "dLeft": 0,
+      "ms": 150
+     },
+     {
+      "from": 1.8,
+      "to": 2.15,
+      "dTop": -12,
+      "dLeft": 0,
+      "ms": 350
+     },
+     {
+      "from": 2.25,
+      "to": 2.4,
+      "dTop": 6,
+      "dLeft": 0,
+      "ms": 150
+     }
+    ]
+   },
+   {
+    "element": "#c4fe43",
+    "box": [
+     810,
+     390,
+     110,
+     94
+    ],
+    "moves": [
+     {
+      "from": 0.25,
+      "to": 0.45,
+      "dTop": 117,
+      "dLeft": 0,
+      "ms": 200
+     },
+     {
+      "from": 0.55,
+      "to": 0.85,
+      "dTop": -55,
+      "dLeft": 0,
+      "ms": 300
+     },
+     {
+      "from": 0.9,
+      "to": 0.95,
+      "dTop": -6,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 1.2,
+      "to": 1.3,
+      "dTop": 6,
+      "dLeft": 0,
+      "ms": 100
+     }
+    ]
+   }
+  ],
+  "coverage": "flat regions found; boxes and fills are usable as given",
+  "confidence": {
+   "phases": "measured: sampled every 50 ms",
+   "motion": "measured: moves of the first keyframe's big parts, edges read at full resolution; dTop and dLeft are the distance in source px",
+   "palette": "measured for areas; small things do not reach it",
+   "anchors": "measured where the content stands clear of its background (reliable true): the box of everything that is not background at a phase's start and end, and which edges moved; where the content fills the frame the field says so and look_at what=track is the way to read an edge",
+   "elements": "draft: flat regions at the first keyframe; nested parts split or merge, text and thin parts are missing; check each box against the keyframe (see_design with at) before trusting it"
+  }
+ },
+ "motion": {
+  "status": "draft measured: draft.phases say when things move, draft.anchors which edges, draft.motion how far; the presets below are only for states the clip never shows",
+  "enter": "fade up 12 px, 320 ms, cubic-bezier(0.2, 0.8, 0.2, 1)",
+  "hover": "colour or ring only, 150 ms",
+  "press": "scale 0.98, 120 ms",
+  "reducedMotion": "respect prefers-reduced-motion: no entrance, instant hover"
+ },
+ "text": null,
+ "notes": [
+  {
+   "slug": "motion-from-stills",
+   "title": "Giving motion to a still, honestly"
+  }
+ ],
+ "credit": {
+  "author": "Harshit",
+  "x": "oiharshit",
+  "source": "https://x.com/oiharshit/status/2110350649506590846"
+ },
+ "method": [
+  "Fetch the clip; read size, fps and duration from the container.",
+  "Dump frames at 2 fps plus a contact sheet; pick the idle and active moments and dump those at full resolution.",
+  "Convert the chosen frames to raw RGB and measure: bounding boxes of every element, exact hex at flat regions, luminance profiles across edges for the lighting, a per-frame luma trace of the moving region for timing.",
+  "Build with one unit, --u, equal to one source pixel at the design size, and write every size as calc(N * var(--u)).",
+  "Light rounded objects with inset box-shadows on one overlay (rim, near glow, wide falloff); stacked linear gradients show a seam at the corner.",
+  "Render the build headless at --u: 1px, crop to the frame, put it beside the source frame, and look. Fix the three largest differences. Repeat."
+ ],
+ "build": null,
+ "oneShot": "No measured recipe, but a draft: build from draft.elements and draft.motion, look at each keyframe with see_design (at), then call check_rebuild with a screenshot; its regions are reliable, its element rows are as good as the draft boxes.",
+ "keyframeFiles": [
+  {
+   "name": "kf1",
+   "at": 2.2,
+   "file": "public/drafts/0xix829/kf1.jpg"
+  },
+  {
+   "name": "kf2",
+   "at": 5.1,
+   "file": "public/drafts/0xix829/kf2.jpg"
+  },
+  {
+   "name": "kf3",
+   "at": 7.6,
+   "file": "public/drafts/0xix829/kf3.jpg"
+  },
+  {
+   "name": "kf4",
+   "at": 10.2,
+   "file": "public/drafts/0xix829/kf4.jpg"
+  }
+ ]
+}

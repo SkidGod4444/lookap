@@ -1,0 +1,230 @@
+<!doctype html>
+<!--
+  Playful Character Picker Sheet — rebuild of the lookap entry by Harshit.
+  Source: https://x.com/oiharshit/status/2110350649506590846
+  Everything is drawn (inline SVG + CSS). Nothing sampled from the clip; the eleven
+  character avatars are original flat SVG drawings standing in for the designer's art.
+  ?demo=1 replays the clip's 12.7 s sequence as element.animate() calls created at load.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Playful Character Picker Sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap" rel="stylesheet">
+<style id="patches"></style>
+<style>
+  html, body { margin: 0; padding: 0; overflow: hidden; background: #f6f6f9; }
+  #stage { --u: 1px; --blue: #2826c8; position: relative; width: calc(1964 * var(--u)); height: calc(1080 * var(--u));
+    background: #f6f6f9; overflow: hidden; font-family: Inter, system-ui, sans-serif; }
+  .pill { position: absolute; left: calc(954 * var(--u)); top: calc(1060 * var(--u)); width: calc(52 * var(--u));
+    height: calc(10 * var(--u)); border-radius: calc(5 * var(--u)); background: #8e8e93; z-index: 9; }
+  .roll { position: absolute; left: 0; top: 0; width: calc(504 * var(--u)); transform-origin: 0 0;
+    transform: translate(calc(758 * var(--u)), calc(316 * var(--u))) scale(1); cursor: pointer;
+    transition: transform .95s cubic-bezier(.6,0,.25,1); }
+  .cap { position: absolute; left: 0; top: 0; overflow: visible; z-index: 3; pointer-events: none; }
+  .back { position: absolute; left: 0; top: 0; overflow: visible; z-index: 0; pointer-events: none; }
+  .sheet { position: absolute; left: calc(4 * var(--u)); top: 0; width: calc(496 * var(--u)); height: calc(469 * var(--u));
+    z-index: 1; transition: height .95s cubic-bezier(.6,0,.25,1); }
+  .clip { position: absolute; inset: 0; overflow: hidden; background: #fcfcfc;
+    border-left: calc(6 * var(--u)) solid var(--blue); border-right: calc(6 * var(--u)) solid var(--blue); }
+  .torn { position: absolute; left: calc(-2 * var(--u)); bottom: calc(-12 * var(--u)); overflow: visible; }
+  .piece .torn { top: calc(-14 * var(--u)); bottom: auto; }
+  .list { position: absolute; left: 0; right: 0; top: 0; transform: translateY(calc(-1642 * var(--u)));
+    transition: transform .95s cubic-bezier(.6,0,.25,1); }
+  .row { position: relative; height: calc(238 * var(--u)); box-sizing: border-box;
+    background-image: linear-gradient(90deg, #b4acdc 0 calc(14 * var(--u)), transparent 0);
+    background-size: calc(24 * var(--u)) calc(3 * var(--u)); background-repeat: repeat-x; background-position: 0 calc(226 * var(--u)); }
+  .band { position: absolute; left: 0; right: 0; top: calc(-10 * var(--u)); bottom: calc(12 * var(--u)); background: #e8e9f8; opacity: 0; }
+  .exp .row:hover .band { opacity: 1; }
+  .av { position: absolute; left: calc(33 * var(--u)); top: calc(42 * var(--u)); width: calc(126 * var(--u)); height: calc(126 * var(--u)); }
+  .name { position: absolute; left: calc(187 * var(--u)); top: calc(72 * var(--u)); font-size: calc(41 * var(--u));
+    line-height: calc(50 * var(--u)); font-weight: 600; color: var(--blue); letter-spacing: calc(-.3 * var(--u)); }
+  .chk { position: absolute; left: calc(404 * var(--u)); top: calc(71 * var(--u)); width: calc(52 * var(--u)); height: calc(52 * var(--u)); opacity: 0; }
+  .row.sel .chk { opacity: 1; }
+  .row.gone { visibility: hidden; }
+  .piece { position: absolute; left: 0; top: 0; width: calc(504 * var(--u)); transform-origin: 0 0; opacity: 0; pointer-events: none;
+    transform: translate(calc(835 * var(--u)), calc(118 * var(--u))) scale(.64); }
+  .piece .sheet { top: calc(622 * var(--u)); height: calc(1200 * var(--u)); }
+  #plist .row:nth-child(7) { background-image: none; }
+  .cursor { position: absolute; left: 0; top: 0; width: calc(40 * var(--u)); height: calc(40 * var(--u)); z-index: 10; display: none; pointer-events: none; }
+  .demo .cursor { display: block; }
+  .cursor svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  @media (prefers-reduced-motion: reduce) { .roll, .sheet, .list { transition: none; } }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="roll" id="roll">
+    <svg class="back" width="504" height="340" viewBox="0 0 504 340">
+      <g fill="#fcfcfc" stroke="#2826c8" stroke-width="7" stroke-linejoin="round">
+        <path d="M9 4 V318 Q10 333 26 333 H478 Q494 333 495 318 V4 Z"/>
+        <path d="M-82 112 L-51 99 L-12 100 L-23 112 Z"/>
+        <path d="M-23 112 L-12 100 L-12 228 L-23 236 Z"/>
+        <rect x="-82.5" y="112.5" width="59" height="123" rx="2"/>
+        <rect x="-69" y="133" width="32" height="84" rx="3" stroke-width="8"/>
+        <path d="M-12 144 H4 M-12 197 H4" fill="none" stroke-width="6"/>
+        <path d="M504 172 H510 M510 134 H528 V210 H510 Z" stroke-width="6"/>
+      </g>
+    </svg>
+    <div class="sheet" id="sheet">
+      <div class="clip"><div class="list" id="list"></div></div>
+      <svg class="torn" width="500" height="22" viewBox="0 0 484 22" preserveAspectRatio="none"><path class="zz" fill="#fcfcfc"/><path class="zl" fill="none" stroke="#2826c8" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/></svg>
+    </div>
+    <svg class="cap" width="504" height="340" viewBox="0 0 504 340">
+      <g fill="none" stroke="#2826c8" stroke-linecap="round">
+        <path d="M4 18 Q4 3 19 3 H485 Q500 3 500 18" stroke-width="8"/>
+        <path d="M0 14 C-17 120 -17 230 3 324 L11 324 C3 230 3 120 13 14 Z" fill="#2826c8" stroke="none"/>
+        <path d="M504 14 C521 120 521 230 501 324 L493 324 C501 230 501 120 491 14 Z" fill="#2826c8" stroke="none"/>
+      </g>
+    </svg>
+  </div>
+  <div class="piece" id="piece">
+    <div class="sheet">
+      <div class="clip"><div class="list" id="plist" style="transform:translateY(calc(-1644 * var(--u)))"></div></div>
+      <svg class="torn" width="500" height="22" viewBox="0 0 484 22" preserveAspectRatio="none"><path class="zz" fill="#fcfcfc"/><path class="zl" fill="none" stroke="#2826c8" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/></svg>
+    </div>
+  </div>
+  <div class="cursor" id="cursor">
+    <svg id="arrow" viewBox="0 0 40 40"><path d="M8 4 L8 32 L15 25 L20 36 L25 34 L20 23 L30 23 Z" fill="#111" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/></svg>
+    <svg id="hand" viewBox="0 0 40 40" style="opacity:0"><path d="M14 20 V6.5 a2.6 2.6 0 0 1 5.2 0 V17 V14.5 a2.6 2.6 0 0 1 5.2 0 V18 V16 a2.6 2.6 0 0 1 5.2 0 V19 V18 a2.6 2.6 0 0 1 5.2 0 V27 c0 6 -4 10 -10 10 h-3 c-4 0 -6.5 -2 -9 -5.5 L6.2 24.5 a2.7 2.7 0 0 1 4 -3.4 Z" fill="#fff" stroke="#111" stroke-width="2.2" stroke-linejoin="round"/><path d="M19.2 25 V31 M24.4 25 V31 M29.6 25 V31" stroke="#111" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </div>
+  <div class="pill"></div>
+</div>
+<script>
+(() => {
+  const B = '#2826c8', INK = '#1d1b3a';
+  // name, background, skin, hair colour, hair style, shirt colour, extras
+  const PEOPLE = [
+    ['Ethan',  '#8a6cf2', '#c88b5c', '#2a1d1a', 'short', '#f2f2f2', ''],
+    ['Oliver', '#3fd2ea', '#f1c7a3', '#6b3f22', 'short', '#43b05a', 'glasses'],
+    ['James',  '#4b47dc', '#f4cd3c', '#2a1d1a', 'side',  '#26263a', 'tie'],
+    ['Mia',    '#f2646d', '#f3c6a5', '#231a1f', 'long',  '#ffffff', ''],
+    ['Marcus', '#f2646d', '#9a5a37', '#1d1414', 'quiff', '#3f6df0', 'hood'],
+    ['Leo',    '#5b6cf2', '#f6cdb0', '#c33b2c', 'cap',   '#ffffff', 'smile'],
+    ['Emma',   '#f2646d', '#f6d0b2', '#f6cb4c', 'long',  '#fde58a', 'smile'],
+    ['Daniel', '#c4fe43', '#ee9f98', '#2a1d1a', 'short', '#ef4537', 'smile'],
+    ['Alex',   '#a18bf9', '#f0c4a0', '#1b1720', 'side',  '#8a5634', 'glasses tie'],
+    ['Lucas',  '#64b25c', '#d79a6e', '#5a3420', 'short', '#e5443a', ''],
+    ['Noah',   '#c77ad9', '#f1c7a3', '#2e8f3e', 'cap',   '#f4d24a', 'smile'],
+  ];
+  const hairPath = {
+    short: 'M33 44 C32 26 44 22 52 23 C62 23 69 30 67 44 C64 36 58 33 50 34 C42 34 36 37 33 44 Z',
+    side:  'M32 46 C30 26 46 20 56 24 C66 27 70 36 67 46 C62 38 52 33 40 36 C36 38 34 41 32 46 Z',
+    quiff: 'M33 44 C31 30 38 18 54 16 C62 15 70 20 66 26 C70 32 68 40 67 44 C62 35 52 31 33 44 Z',
+    long:  'M30 84 C24 60 28 26 50 24 C72 26 76 60 70 84 L64 84 C66 64 64 44 58 38 C50 44 42 42 38 40 C34 50 34 66 36 84 Z',
+    cap:   'M30 42 C30 24 44 20 52 20 C62 20 70 26 70 40 L82 42 L82 46 L30 46 Z',
+  };
+  function avatar(p) {
+    const [, bg, skin, hair, style, shirt, ex] = p;
+    let s = `<svg viewBox="0 0 100 100"><defs><clipPath id="c${p[0]}"><rect x="2" y="2" width="96" height="96" rx="16"/></clipPath></defs>`;
+    s += `<rect x="2" y="2" width="96" height="96" rx="16" fill="${bg}"/><g clip-path="url(#c${p[0]})" stroke="${INK}" stroke-width="1.6" stroke-linejoin="round">`;
+    if (style === 'long') s += `<path d="${hairPath.long}" fill="${hair}"/>`;
+    s += `<path d="M12 104 C14 80 30 74 50 74 C70 74 86 80 88 104 Z" fill="${shirt}"/>`;
+    if (ex.includes('hood')) s += `<path d="M28 80 C34 70 66 70 72 80 C64 86 36 86 28 80 Z" fill="#2c4fd0"/>`;
+    s += `<path d="M43 62 V77 C46 81 54 81 57 77 V62 Z" fill="${skin}"/>`;
+    if (ex.includes('tie')) s += `<path d="M42 74 L50 84 L58 74 L56 72 L50 78 L44 72 Z" fill="#fff"/><path d="M48 79 L52 79 L54 98 L50 102 L46 98 Z" fill="#1b1b2b"/>`;
+    else s += `<path d="M42 75 C46 82 54 82 58 75" fill="none"/>`;
+    s += `<ellipse cx="50" cy="48" rx="16.5" ry="19" fill="${skin}"/><ellipse cx="33.5" cy="50" rx="3" ry="4.2" fill="${skin}"/><ellipse cx="66.5" cy="50" rx="3" ry="4.2" fill="${skin}"/>`;
+    if (style !== 'long') s += `<path d="${hairPath[style]}" fill="${hair}"/>`;
+    else s += `<path d="M34 44 C36 30 46 27 52 28 C60 28 66 33 66 44 C60 38 50 36 42 38 C38 40 36 42 34 44 Z" fill="${hair}"/>`;
+    s += `<g stroke="none" fill="${INK}"><circle cx="44" cy="49" r="1.8"/><circle cx="56" cy="49" r="1.8"/></g>`;
+    if (ex.includes('glasses')) s += `<g fill="none" stroke="${INK}" stroke-width="2"><circle cx="43.5" cy="49" r="5"/><circle cx="56.5" cy="49" r="5"/><path d="M48.5 49 H51.5"/></g>`;
+    s += ex.includes('smile') ? `<path d="M44 57 C47 62 53 62 56 57 Z" fill="#fff"/>` : `<path d="M45 58 C48 60 52 60 55 58" fill="none"/>`;
+    s += `</g><rect x="2.5" y="2.5" width="95" height="95" rx="16" fill="none" stroke="${B}" stroke-width="4"/></svg>`;
+    return s;
+  }
+  const CHECK = `<svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="22" fill="none" stroke="${B}" stroke-width="6.5"/><path d="M15.5 27 L23 34 L36 19.5" fill="none" stroke="${B}" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  function fill(list, from) {
+    PEOPLE.forEach((p, i) => {
+      const r = document.createElement('div');
+      r.className = 'row' + (i < from ? ' gone' : ''); r.dataset.i = i;
+      r.innerHTML = `<div class="band"></div><div class="av">${avatar(p)}</div><div class="name">${p[0]}</div><div class="chk">${CHECK}</div>`;
+      list.appendChild(r);
+    });
+  }
+  const list = document.getElementById('list'), plist = document.getElementById('plist');
+  fill(list, 0); fill(plist, 7);
+  // torn edge: deterministic jagged line, white below its stroke so it reads as paper
+  let pts = [], seed = 7;
+  const rnd = () => ((seed = (seed * 9301 + 49297) % 233280) / 233280);
+  // big irregular teeth like the clip's: 30-60 px apart, alternating ~13 px up and down
+  for (let x = 3, k = 0; x <= 455; x += 30 + rnd() * 30, k++) pts.push(`${x.toFixed(1)} ${((k % 2 ? 14 : 3) + rnd() * 4).toFixed(1)}`);
+  pts.push('481 8');
+  document.querySelectorAll('.zz').forEach((z, k) => z.setAttribute('d', k ? `M0 22 L${pts.join(' L')} L484 22 Z` : `M0 0 L${pts.join(' L')} L484 0 Z`));
+  document.querySelectorAll('.zl').forEach((z, k) => z.setAttribute('d', `M3 ${k ? 22 : 0} L${pts.join(' L')} L481 ${k ? 22 : 0}`));
+
+  const roll = document.getElementById('roll'), sheet = document.getElementById('sheet');
+  const rows = [...list.children];
+  const C = 'translate(758px,316px) scale(1)', E = 'translate(835px,118px) scale(.64)';
+  const demo = new URLSearchParams(location.search).has('demo');
+
+  if (!demo) {
+    // live: click the roll to unroll it, scroll the list, click a name to pick it and tear the receipt there
+    let sel = 8, last = 8, exp = false, y = 0;
+    const set = () => {
+      roll.style.transform = exp ? E : C;
+      sheet.style.height = (exp ? y + (last + 1) * 238 : 469) + 'px';
+      list.style.transform = `translateY(${y}px)`;
+      document.getElementById('stage').classList.toggle('exp', exp);
+      rows.forEach((r, i) => { r.classList.toggle('sel', i === sel); r.classList.toggle('gone', i > last); });
+    };
+    y = 24 - (sel - 1) * 238;
+    roll.addEventListener('click', e => {
+      const r = e.target.closest('.row');
+      if (!exp) { exp = true; y = Math.min(-41, 1355 - (last + 1) * 238); set(); return; }
+      if (!r) return;
+      sel = last = +r.dataset.i; exp = false; y = 24 - (sel - 1) * 238; set();
+    });
+    roll.addEventListener('wheel', e => {
+      if (!exp) return; e.preventDefault();
+      y = Math.max(1355 - (last + 1) * 238, Math.min(-41, y - e.deltaY)); list.style.transition = 'none'; set();
+      requestAnimationFrame(() => list.style.transition = '');
+    }, { passive: false });
+    set();
+    // entrance: the paper prints down out of the roll
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      sheet.animate([{ height: '250px' }, { height: '250px', offset: .2 }, { height: '544px', offset: .6 }, { height: '469px' }], { duration: 850, easing: 'ease-out' });
+      list.animate([{ transform: 'translateY(-1861px)' }, { transform: 'translateY(-1861px)', offset: .2 }, { transform: 'translateY(-1582px)', offset: .6 }, { transform: 'translateY(-1642px)' }], { duration: 850, easing: 'ease-out' });
+    }
+    return;
+  }
+
+  // ---- demo: the clip's own timeline, seconds on a 12.7 s clock ----
+  document.getElementById('stage').classList.add('demo');
+  const D = 12.7, IO = 'cubic-bezier(.6,0,.25,1)', OUT = 'cubic-bezier(.2,.7,.3,1)', IN = 'cubic-bezier(.5,0,.9,.5)';
+  function A(el, prop, frames) {
+    const kf = frames.map(([t, v, ease]) => ({ offset: t / D, [prop]: v, easing: ease || 'linear' }));
+    if (kf[0].offset > 0) kf.unshift({ ...kf[0], offset: 0 });
+    if (kf[kf.length - 1].offset < 1) kf.push({ ...kf[kf.length - 1], offset: 1 });
+    el.animate(kf, { duration: D * 1000, fill: 'both' });
+  }
+  const ty = v => `translateY(${v}px)`, px = v => v + 'px';
+  roll.style.transition = sheet.style.transition = list.style.transition = 'none';
+  const FAST = 'cubic-bezier(.1,.9,.2,1)', SOFT = 'cubic-bezier(.42,.35,.4,1)';
+  A(roll, 'transform', [[0, C], [3.5, C, SOFT], [4.45, E], [8.6, E, 'cubic-bezier(.3,.6,.3,1)'], [9.55, C], [10.7, C, SOFT], [11.65, E]]);
+  A(sheet, 'opacity', [[0.04, 0, 'steps(1,end)'], [0.05, 1]]);
+  A(sheet, 'height', [[0.05, px(0), 'ease-in'], [0.15, px(250), OUT], [0.5, px(548), 'ease-in-out'], [1.0, px(451), 'ease-in-out'], [1.5, px(474), 'ease-in-out'], [2.2, px(469)], [2.7, px(471)], [3.3, px(468)], [3.5, px(468), FAST], [3.95, px(1700), 'ease-in-out'], [4.6, px(1355)],
+    [5.35, px(1355), IO], [5.65, px(1800)], [8.04, px(1800), 'steps(1,end)'], [8.06, px(644), IO], [8.6, px(469)], [10.2, px(469), 'ease-in'], [10.7, px(474), FAST], [11.3, px(1400)]]);
+  A(list, 'transform', [[0.15, ty(-1861), OUT], [0.5, ty(-1567), 'ease-in-out'], [1.0, ty(-1648), 'ease-in-out'], [1.5, ty(-1642)], [2.2, ty(-1642)], [2.7, ty(-1644)], [3.5, ty(-1644), FAST], [3.95, ty(-712), 'ease-out'], [4.45, ty(-755)],
+    [5.35, ty(-755)], [5.5, ty(-540), OUT], [6.3, ty(-90)], [6.5, ty(-90), IO], [7.1, ty(-1022)], [8.1, ty(-1022), IO], [8.6, ty(-1166)], [10.2, ty(-1166), 'ease-in'], [10.7, ty(-1162), FAST], [11.2, ty(-236), 'ease-out'], [11.65, ty(-279)]]);
+  const piece = document.getElementById('piece');
+  A(piece, 'opacity', [[8.04, 0, 'steps(1,end)'], [8.06, 1]]);
+  A(piece, 'transform', [[8.06, E, IN], [8.82, 'translate(835px,650px) scale(.64)', 'linear'], [9.1, 'translate(835px,900px) scale(.64)']]);
+  const chk = i => rows[i].querySelector('.chk');
+  A(chk(8), 'opacity', [[8.0, 1, 'steps(1,end)'], [8.02, 0]]);
+  A(chk(6), 'opacity', [[8.0, 0, 'steps(1,end)'], [8.02, 1]]);
+  A(rows[6].querySelector('.band'), 'opacity', [[3.8, 0], [3.9, 1, 'steps(1,end)'], [8.05, 1], [8.1, 0]]);
+  // these rows are torn off: they leave the main sheet when the piece falls
+  [7, 8, 9, 10].forEach(i => A(rows[i], 'opacity', [[8.04, 1, 'steps(1,end)'], [8.06, 0]]));
+  const cur = document.getElementById('cursor'), at = (x, y) => `translate(${x - 12}px,${y - 4}px)`;
+  A(cur, 'transform', [[0, at(560, 1010)], [1.0, at(600, 900), 'ease-in-out'], [2.2, at(680, 810), 'ease-in-out'], [2.7, at(1000, 680)], [3.3, at(1004, 676), 'ease-in-out'],
+    [3.98, at(1080, 710), 'ease-in-out'], [5.1, at(1078, 620)], [6.95, at(1060, 560), 'ease-in-out'], [7.6, at(1023, 492), 'ease-in-out'], [8.0, at(1008, 450)], [8.05, at(1008, 450), 'ease-in-out'],
+    [9.7, at(908, 660)], [10.2, at(906, 663), 'ease-in-out'], [10.7, at(900, 650), 'ease-in-out'], [11.65, at(880, 820)], [12.5, at(870, 880)]]);
+  A(document.getElementById('arrow'), 'opacity', [[2.55, 1, 'steps(1,end)'], [2.6, 0]]);
+  A(document.getElementById('hand'), 'opacity', [[2.55, 0, 'steps(1,end)'], [2.6, 1]]);
+})();
+</script>
+</body>
+</html>

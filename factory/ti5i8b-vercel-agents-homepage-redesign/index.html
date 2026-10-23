@@ -1,0 +1,204 @@
+<!doctype html>
+<!--
+  Vercel Agents Homepage Redesign — design by Christopher Kindl
+  Source: https://x.com/kindlaar/status/2112285144774234287
+  Rebuilt by hand as HTML/CSS/inline SVG. Nothing sampled from the clip: no patches, no placeholders.
+  The cube, logo, cube mark, robot avatar and snowflake glyph are original SVG drawings.
+  ?demo=1 replays the clip's 7.13 s timeline with WAAPI animations created at load.
+  Otherwise: hover a cube face (or the cube's left point) for its note; click the logo to switch theme.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Build and run agents on Vercel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&display=swap" rel="stylesheet">
+<style id="patches"></style>
+<style>
+@property --d { syntax: '<number>'; inherits: true; initial-value: 0; }
+@property --x { syntax: '<number>'; inherits: true; initial-value: 0; }
+html, body { margin: 0; overflow: hidden; background: #f7f7f7; }
+#stage {
+  --u: 1px; --d: 0; --x: 0; transition: --x .18s ease-out;
+  /* light colour first, dark colour second; --d flips 0 -> 1 */
+  --bg: color-mix(in srgb, #000 calc(var(--d) * 100%), #f7f7f7);
+  --ink: color-mix(in srgb, #fff calc(var(--d) * 100%), #111);
+  --mut: color-mix(in srgb, #8f8f8f calc(var(--d) * 100%), #444);
+  --note: color-mix(in srgb, #8f8f8f calc(var(--d) * 100%), #5a5a5a);
+  --nav: color-mix(in srgb, #a1a1a1 calc(var(--d) * 100%), #555);
+  --card: color-mix(in srgb, #0a0a0a calc(var(--d) * 100%), #fff);
+  --line: color-mix(in srgb, #2e2e2e calc(var(--d) * 100%), #e4e4e4);
+  --hair: color-mix(in srgb, #333 calc(var(--d) * 100%), #d9d9d9);
+  --fill: color-mix(in srgb, #ededed calc(var(--d) * 100%), #111);
+  --onfill: color-mix(in srgb, #000 calc(var(--d) * 100%), #fff);
+  position: relative; width: calc(1482 * var(--u)); height: calc(1080 * var(--u));
+  overflow: hidden; background: var(--bg); color: var(--ink);
+  font-family: 'Geist', system-ui, sans-serif; -webkit-font-smoothing: antialiased;
+}
+#stage.dark { --d: 1; }
+.abs { position: absolute; }
+/* nav */
+.logo { left: calc(127 * var(--u)); top: calc(20 * var(--u)); width: calc(18 * var(--u)); height: calc(16 * var(--u)); cursor: pointer; }
+.links { left: calc(172 * var(--u)); top: calc(19 * var(--u)); display: flex; gap: calc(18 * var(--u)); font-size: calc(13 * var(--u)); color: var(--nav); line-height: calc(18 * var(--u)); }
+.links span { display: flex; align-items: center; gap: calc(4 * var(--u)); }
+.links svg { width: calc(8 * var(--u)); height: calc(8 * var(--u)); }
+.nb { top: calc(14 * var(--u)); height: calc(27 * var(--u)); box-sizing: border-box; border-radius: calc(6 * var(--u));
+  border: 1px solid var(--line); background: var(--card); color: var(--ink); font-size: calc(12.5 * var(--u)); font-weight: 500;
+  display: flex; align-items: center; justify-content: center; }
+.nb.fill { background: var(--fill); color: var(--onfill); border-color: var(--fill); }
+/* hero copy */
+h1 { margin: 0; left: calc(125 * var(--u)); top: calc(291 * var(--u)); font-size: calc(52.5 * var(--u)); line-height: calc(55 * var(--u));
+  font-weight: 450; letter-spacing: -0.045em; color: var(--ink); }
+.sub { left: calc(127 * var(--u)); top: calc(425 * var(--u)); font-size: calc(15.3 * var(--u)); line-height: calc(24 * var(--u)); color: var(--mut); }
+.cta { top: calc(500 * var(--u)); height: calc(34 * var(--u)); box-sizing: border-box; border-radius: 999px; font-size: calc(14 * var(--u)); font-weight: 500;
+  display: flex; align-items: center; justify-content: center; }
+.cta.a { left: calc(127 * var(--u)); width: calc(133 * var(--u)); background: var(--fill); color: var(--onfill); }
+.cta.b { left: calc(274 * var(--u)); width: calc(138 * var(--u)); background: var(--card); color: var(--ink); border: 1px solid var(--line); }
+/* chat */
+.bub { box-sizing: border-box; background: var(--card); border: 1px solid var(--line); border-radius: calc(12 * var(--u));
+  font-size: calc(12.5 * var(--u)); line-height: calc(18 * var(--u)); padding: calc(10 * var(--u)) calc(12 * var(--u)); color: var(--ink); }
+.bub b { font-weight: 600; }
+.bub.u { white-space: nowrap; left: calc(1016 * var(--u)); top: calc(159 * var(--u)); width: calc(199 * var(--u)); height: calc(62 * var(--u)); padding-top: calc(11 * var(--u)); border-bottom-right-radius: 0; }
+.tail { left: calc(1196 * var(--u)); top: calc(196 * var(--u)); width: calc(28 * var(--u)); height: calc(26 * var(--u)); overflow: visible; }
+.bub.g { white-space: nowrap; left: calc(797 * var(--u)); top: calc(237 * var(--u)); width: calc(242 * var(--u)); height: calc(61 * var(--u)); padding-left: calc(14 * var(--u)); padding-top: calc(11 * var(--u)); }
+.av { left: calc(758 * var(--u)); top: calc(270 * var(--u)); width: calc(28 * var(--u)); height: calc(28 * var(--u)); box-sizing: border-box;
+  border-radius: 50%; border: 1px solid color-mix(in srgb, #3a3a3a calc(var(--d) * 100%), #d4d4d4); background: var(--card);
+  box-shadow: 0 1px 3px rgba(0,0,0,calc(.08 - var(--d) * .08)); display: flex; align-items: center; justify-content: center; }
+.av svg { width: calc(17 * var(--u)); height: calc(17 * var(--u)); }
+.vl { width: 1px; background: var(--hair); }
+/* cube */
+#cube { left: calc(770 * var(--u)); top: calc(320 * var(--u)); width: calc(420 * var(--u)); height: calc(400 * var(--u)); overflow: visible; }
+#cube .hl { opacity: 0; transition: opacity .2s ease; }
+#cube .hit { fill: transparent; cursor: default; }
+#fLL:hover .hl, #fR:hover .hl, #fT:hover .hl { opacity: 1; }
+#stage:has(#faces:hover, #hL:hover, #frame:hover, #core:hover) { --x: 1; }
+.shadow { opacity: calc(1 - var(--d)); }
+/* annotations */
+.note { opacity: 0; transition: opacity .2s ease; pointer-events: none; white-space: nowrap; font-size: calc(12 * var(--u)); line-height: calc(16 * var(--u)); color: var(--note); }
+.note b { display: block; color: var(--ink); font-weight: 600; margin-bottom: calc(5 * var(--u)); }
+.note i { position: absolute; height: 1px; font-style: normal; background: linear-gradient(90deg, var(--hair), color-mix(in srgb, var(--ink) 55%, transparent)); }
+.note i.r { background: linear-gradient(90deg, color-mix(in srgb, var(--ink) 55%, transparent), var(--hair)); }
+.note svg { width: calc(12 * var(--u)); height: calc(12 * var(--u)); vertical-align: calc(-2 * var(--u)); margin: 0 calc(2 * var(--u)); }
+#stage:has(#fLL:hover) #nC, #stage:has(#fR:hover) #nS, #stage:has(#fT:hover) #nE, #stage:has(#hL:hover) #nD { opacity: 1; }
+/* stats */
+.st { top: calc(847 * var(--u)); }
+.st .n { font-size: calc(56 * var(--u)); line-height: calc(70 * var(--u)); font-weight: 360; letter-spacing: -0.03em; color: var(--ink); }
+.st .c { margin-top: calc(4 * var(--u)); font-size: calc(14 * var(--u)); line-height: calc(20 * var(--u)); color: var(--mut); }
+#cur { left: 0; top: 0; width: calc(14 * var(--u)); height: calc(20 * var(--u)); display: none; pointer-events: none; }
+.demo #cur { display: block; }
+@media (prefers-reduced-motion: reduce) { #cube .hl, .note, #stage { transition: none; } }
+</style>
+</head>
+<body>
+<div id="stage">
+  <svg class="abs logo" id="logo" viewBox="0 0 18 16"><path d="M9 0 18 16H0z" fill="var(--ink)"/></svg>
+  <div class="abs links">
+    <span>Products <svg viewBox="0 0 8 8"><path d="M1.5 3 4 5.5 6.5 3" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></span>
+    <span>Resources <svg viewBox="0 0 8 8"><path d="M1.5 3 4 5.5 6.5 3" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></span>
+    <span>Enterprise</span><span>Pricing</span>
+  </div>
+  <div class="abs nb" style="left:calc(1105*var(--u));width:calc(91*var(--u))">Get a Demo</div>
+  <div class="abs nb" style="left:calc(1204*var(--u));width:calc(57*var(--u))">Log In</div>
+  <div class="abs nb fill" style="left:calc(1271*var(--u));width:calc(63*var(--u))">Sign Up</div>
+
+  <h1 class="abs">Build and run<br>agents on Vercel</h1>
+  <div class="abs sub">Build agents, run them on agentic infrastructure,<br>and put them to work across your business.</div>
+  <div class="abs cta a">Create an agent</div>
+  <div class="abs cta b">Talk to an expert</div>
+
+  <div class="abs vl" style="left:calc(888*var(--u));top:calc(298*var(--u));height:calc(52*var(--u))"></div>
+  <div class="abs vl" style="left:calc(1085*var(--u));top:calc(221*var(--u));height:calc(129*var(--u))"></div>
+  <div class="abs bub u"><b>@data-agent</b> How did revenue<br>trend last quarter by region?</div>
+  <div class="abs bub g">EMEA up 18%, North America down 4%.<br>I posted the chart in channel #revenue.</div>
+  <svg class="abs tail" viewBox="1196 196 28 26"><path d="M1214.5 198V213Q1215 219 1221.8 220.6Q1213 221.9 1207 218.4L1199 220.6V205Z" fill="var(--card)"/><path d="M1214.5 198V213Q1215 219 1221.8 220.6Q1213 221.9 1207 218.4Q1204 220.5 1197 220.5" fill="none" stroke="color-mix(in srgb, #2e2e2e calc(var(--d) * 100%), #dadada)"/></svg>
+  <div class="abs av"><svg viewBox="0 0 16 16"><path d="M8 3.2v2.8" stroke="var(--ink)" stroke-width="1.3"/><circle cx="8" cy="2.4" r="1.3" fill="var(--ink)"/><rect x="3.3" y="6.3" width="9.4" height="6.9" rx="2.3" fill="var(--card)" stroke="var(--ink)" stroke-width="1.5"/><rect x="1.2" y="8.3" width="1.5" height="3" rx=".6" fill="var(--ink)"/><rect x="13.3" y="8.3" width="1.5" height="3" rx=".6" fill="var(--ink)"/><circle cx="6.2" cy="9.7" r="1.15" fill="var(--ink)"/><circle cx="9.8" cy="9.7" r="1.15" fill="var(--ink)"/></svg></div>
+
+  <svg class="abs" id="cube" viewBox="770 320 420 400">
+    <defs>
+      <linearGradient id="gT" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:color-mix(in srgb,#000 calc(var(--d)*100%),#2b2b2b)"/><stop offset=".55" style="stop-color:color-mix(in srgb,#000 calc(var(--d)*100%),#1b1b1b)"/><stop offset="1" style="stop-color:color-mix(in srgb,#000 calc(var(--d)*100%),#171717)"/></linearGradient>
+      <linearGradient id="gL" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:color-mix(in srgb,#000 calc(var(--d)*100%),#1e1e1e)"/><stop offset=".22" style="stop-color:color-mix(in srgb,#000 calc(var(--d)*100%),#121212)"/><stop offset=".45" style="stop-color:color-mix(in srgb,#000 calc(var(--d)*100%),#000)"/><stop offset="1" style="stop-color:#000"/></linearGradient>
+      <linearGradient id="gR" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:color-mix(in srgb,#000 calc(var(--d)*100%),#181818)"/><stop offset=".5" style="stop-color:color-mix(in srgb,#000 calc(var(--d)*100%),#0e0e0e)"/><stop offset="1" style="stop-color:color-mix(in srgb,#000 calc(var(--d)*100%),#0a0a0a)"/></linearGradient>
+      <linearGradient id="gH" x1="0" y1="0" x2=".3" y2="1"><stop offset="0" style="stop-color:color-mix(in srgb,#171717 calc(var(--d)*100%),#3a3a3a)"/><stop offset="1" style="stop-color:color-mix(in srgb,#080808 calc(var(--d)*100%),#1f1f1f)"/></linearGradient>
+      <filter id="blur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="22"/></filter>
+    </defs>
+    <polygon class="shadow" filter="url(#blur)" fill="rgba(0,0,0,.17)" points="840,545 905,420 1065,420 1135,545 1070,685 905,685"/>
+    <polygon fill="none" stroke-width="2" style="stroke:color-mix(in srgb,#1e1e1e calc(var(--d)*100%),#ececec)" points="799,507 886,342 1074,342 1160,507 1074,672 886,672"/>
+    <!-- drawn compact (the rest state); --x 0 -> 1 spreads every piece outward (hover) -->
+    <g id="frame"></g>
+    <polygon id="core" stroke-width="8" stroke-linejoin="round" style="fill:#000;stroke:#000;transform-box:fill-box;transform-origin:center;transform:scale(calc(1 + var(--x) * .03))" points="827,507 907,368 1065,368 1146,507 1065,645 907,645"/>
+    <g id="faces"></g>
+    <polygon id="hL" class="hit" points="798,478 832,478 832,536 798,536"/>
+  </svg>
+
+  <div class="abs note" id="nE" style="left:calc(719*var(--u));top:calc(337*var(--u));width:calc(124*var(--u))"><i style="left:calc(124*var(--u));top:calc(7*var(--u));width:calc(50*var(--u))"></i><b>eve</b>Defines data-agent<br>with a run_sql tool and<br>a revenue skill</div>
+  <div class="abs note" id="nC" style="left:calc(719*var(--u));top:calc(661*var(--u));width:calc(124*var(--u))"><i style="left:calc(124*var(--u));top:calc(7*var(--u));width:calc(50*var(--u))"></i><b>Connect</b>Queried<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"><path d="M6 .8v10.4M1.5 3.4l9 5.2M1.5 8.6l9-5.2M4.6 1.6 6 2.8l1.4-1.2M4.6 10.4 6 9.2l1.4 1.2"/></svg>Snowflake<br>through a scoped,<br>read-only connection</div>
+  <div class="abs note" id="nS" style="left:calc(1202*var(--u));top:calc(500*var(--u));width:calc(130*var(--u))"><i class="r" style="left:calc(-34*var(--u));top:calc(7*var(--u));width:calc(28*var(--u))"></i><b>Sandbox</b>Ran the regional<br>breakdown in an<br>isolated microVM</div>
+  <div class="abs note" id="nD" style="left:calc(645*var(--u));top:calc(500*var(--u));width:calc(120*var(--u))"><i style="left:calc(117*var(--u));top:calc(7*var(--u));width:calc(43*var(--u))"></i><b>Drives</b>Saved the Q3 export<br>and chart for the next<br>question</div>
+
+  <div class="abs st" style="left:calc(124*var(--u))"><div class="n">4T+</div><div class="c">tokens per day running<br>on Vercel</div></div>
+  <div class="abs st" style="left:calc(432*var(--u))"><div class="n">3×</div><div class="c">faster shipping at Rillet with a software<br>factory built on eve</div></div>
+  <div class="abs st" style="left:calc(739*var(--u))"><div class="n">1M+</div><div class="c">weekly npm downloads<br>of eve</div></div>
+  <div class="abs st" style="left:calc(1046*var(--u))"><div class="n">&lt; 5 min</div><div class="c">to deploy your first agent<br>from the dashboard</div></div>
+
+  <svg class="abs" id="cur" viewBox="0 0 14 20"><path d="M1 1v15.5l4-3.8 2.6 6 2.4-1-2.6-5.9h5.6z" fill="var(--onfill)" stroke="var(--ink)" stroke-width="1.1" stroke-linejoin="round"/></svg>
+</div>
+<script>
+const NS = 'http://www.w3.org/2000/svg', stage = document.getElementById('stage');
+const mk = (tag, at, parent) => { const e = document.createElementNS(NS, tag); for (const k in at) e.setAttribute(k, at[k]); parent.appendChild(e); return e; };
+// six bars, 13 px thick, measured spread out at 2.05s (top y 347-360 x 924-1077, right x to 1154 ending at y 480 / 531,
+// left tip x 803 from y 374 to 640); ends cut along the lattice: slanted bars flat, top/bottom bars at 60deg.
+// Three groups slide in by --x (L -21,0; T+UR 11,-17; B+LR 11,17) to sit on the compact silhouette at rest
+const frame = document.getElementById('frame');
+const slide = (dx, dy) => `transform:translate(calc(var(--x) * ${dx}px), calc(var(--x) * ${dy}px))`;
+const flip = q => q.map(([x, y]) => [x, 1011 - y]);
+const T = [[924, 347], [1077, 347], [1069.5, 360], [931.5, 360]], UR = [[1077, 347], [1154, 480.4], [1139, 480.4], [1069.5, 360]];
+const UL = [[879.8, 374], [894.8, 374], [818, 507], [803, 507]];
+[[[T, UR], 11, -17], [[flip(T), flip(UR)], 11, 17], [[UL, flip(UL).map(([x, y]) => [x, y + 3])], -21, 0]].forEach(([bars, dx, dy]) => {
+  const g = mk('g', { style: slide(dx, dy) }, frame);
+  bars.forEach(q => mk('polygon', { points: q.map(([x, y]) => [x - dx, y - dy].join(',')).join(' '), 'stroke-width': 1.2, 'stroke-linejoin': 'round',
+    style: 'fill:#000;stroke:color-mix(in srgb,#3c3c3c calc(var(--d)*100%),#000)' }, g));
+});
+// three rounded faces, compact; polygon + stroke of the same paint rounds the corners; 1 px rim from the wider stroke under it
+const faces = document.getElementById('faces');
+[['fT', 'gT', '912,374 1058,374 983,498 838,498', -4, -7],
+ ['fR', 'gR', '1067,385 1136,507 1067,628 998,507', 8, 0],
+ ['fLL', 'gL', '839,514 981,514 1056,641 914,641', -4, 8]].forEach(([id, g, pts, dx, dy]) => {
+  const grp = mk('g', { id, style: slide(dx, dy) }, faces);
+  mk('polygon', { points: pts, 'stroke-width': 12, 'stroke-linejoin': 'round', style: 'fill:#000;stroke:color-mix(in srgb,#6e6e6e calc(var(--d)*100%),' + (id === 'fT' ? '#4a4a4a' : '#303030') + ')' }, grp);
+  mk('polygon', { points: pts, 'stroke-width': 10, 'stroke-linejoin': 'round', fill: `url(#${g})`, stroke: `url(#${g})` }, grp);
+  mk('polygon', { class: 'hl', points: pts, 'stroke-width': 10, 'stroke-linejoin': 'round', fill: 'url(#gH)', stroke: 'url(#gH)' }, grp);
+  if (id === 'fT') mk('path', { d: 'M855 488 873.5 488 873 472.5z', fill: '#fff', stroke: '#fff', 'stroke-width': 1.2, 'stroke-linejoin': 'round', 'pointer-events': 'none' }, grp);
+});
+document.getElementById('logo').addEventListener('click', () => stage.classList.toggle('dark'));
+
+// demo: the clip's own timeline, seekable
+if (new URLSearchParams(location.search).get('demo') === '1') {
+  stage.classList.add('demo');
+  const D = 7.133, E = 'ease-in-out';
+  const tl = (el, prop, keys) => {
+    const k = keys.map(([t, v]) => ({ offset: Math.min(1, t / D), [prop]: v, easing: E }));
+    if (k[0].offset > 0) k.unshift({ ...k[0], offset: 0 });
+    if (k[k.length - 1].offset < 1) k.push({ ...k[k.length - 1], offset: 1 });
+    el.animate(k, { duration: D * 1000, fill: 'both' });
+  };
+  const $ = s => document.querySelector(s);
+  const fade = (sel, spans) => tl(sel instanceof Element ? sel : $(sel), 'opacity',
+    [[0, 0], ...spans.flatMap(([a, b]) => [[a, 0], [a + .2, 1], [b - .1, 1], [b + .05, 0]])]);
+  tl(stage, '--d', [[0, 0], [4.09, 0], [4.11, 1]]);
+  tl(stage, '--x', [[0, 0], [.3, 0], [.42, 1], [3.35, 1], [3.45, 0], [4.98, 0], [5.1, 1], [6.12, 1], [6.24, 0]]);
+  fade('#nC', [[.2, 1.1], [5.1, 6.0]]);
+  fade('#nS', [[1.0, 1.75]]);
+  fade('#nE', [[1.8, 2.45]]);
+  fade('#nD', [[2.5, 3.25]]);
+  fade($('#fLL .hl'), [[.2, 1], [5.1, 6.0]]);
+  fade($('#fR .hl'), [[1.0, 1.75]]);
+  fade($('#fT .hl'), [[1.8, 2.45]]);
+  const p = (x, y) => `translate(${x}px, ${y}px)`;
+  tl($('#cur'), 'transform', [[0, p(812, 744)], [.3, p(950, 588)], [.95, p(952, 594)], [1.1, p(1065, 548)],
+    [1.75, p(1066, 550)], [1.9, p(920, 472)], [2.45, p(918, 474)], [2.6, p(812, 518)], [3.2, p(814, 520)],
+    [3.4, p(824, 690)], [5.0, p(826, 692)], [5.25, p(933, 585)], [5.95, p(936, 588)], [6.15, p(906, 700)]]);
+}
+</script>
+</body>
+</html>

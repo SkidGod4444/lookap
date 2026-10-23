@@ -1,0 +1,238 @@
+<!doctype html>
+<!--
+  Minimal Tooltip Thinking Mode — rebuild of the lookap entry by rico (@_heyrico)
+  Source: https://x.com/_heyrico/status/2112212712306749537
+  Nothing sampled from the clip: every icon (Shopify bag, favicons, gem, doc glyph, cursor) is an original inline SVG,
+  the file preview is drawn in CSS. Timeline measured from the clip's contact sheets and diffs (see NOTES.md).
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Minimal Tooltip Thinking Mode</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;overflow:hidden;background:#fdfdfd}
+#stage{--u:1px;position:relative;width:calc(1080*var(--u));height:calc(1080*var(--u));overflow:hidden;background:#fdfdfd;
+  font-family:Inter,system-ui,sans-serif;font-size:calc(26*var(--u));color:#7a7a7a;-webkit-font-smoothing:antialiased}
+#stage *{box-sizing:border-box}
+.pill{position:absolute;left:calc(607*var(--u));top:calc(108*var(--u));width:calc(383*var(--u));height:calc(85*var(--u));
+  border-radius:calc(42.5*var(--u));background:#101010;color:#fff;font-size:calc(31*var(--u));display:flex;align-items:center;justify-content:center;letter-spacing:calc(.1*var(--u))}
+.fx{opacity:0}
+.row{position:absolute;left:calc(104*var(--u));height:calc(63*var(--u));top:calc((var(--y) - 33)*var(--u));display:flex;align-items:center;white-space:nowrap}
+.ic{position:relative;width:calc(22*var(--u));height:calc(22*var(--u));margin-right:calc(23*var(--u));flex:none}
+.ic>*{position:absolute;inset:0;margin:auto}
+.ic::before{content:'';position:absolute;inset:calc(-4*var(--u));border-radius:50%;background:#fdfdfd}
+.spin{width:calc(22*var(--u));height:calc(22*var(--u));border-radius:50%;background:conic-gradient(#dcdcdc 0 20deg,#8a8a8a 50deg,#383838 80deg,#383838 360deg);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 3.3*var(--u)),#000 calc(100% - 3.3*var(--u) + .6px));mask:radial-gradient(farthest-side,transparent calc(100% - 3.3*var(--u)),#000 calc(100% - 3.3*var(--u) + .6px));animation:spin .9s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.dot{width:calc(13*var(--u));height:calc(13*var(--u));border-radius:50%;background:#d9d9d9;box-shadow:0 0 0 calc(5*var(--u)) #fdfdfd}
+.chk{width:calc(22*var(--u));height:calc(22*var(--u));border-radius:50%;background:#141414;display:grid;place-items:center}
+.chk svg{width:calc(12*var(--u));height:calc(12*var(--u))}
+.chk.blue{background:#2f7cf6;box-shadow:0 0 0 calc(5*var(--u)) #fdfdfd}
+.obj{color:#525252;font-weight:500}
+.gap{margin-left:calc(20*var(--u))}
+.ico{width:calc(22*var(--u));height:calc(24*var(--u));margin:0 calc(11*var(--u)) 0 calc(20*var(--u));flex:none}
+.shim{background:linear-gradient(90deg,#666 0 44%,#161616 50%,#666 56% 100%);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shim 2s linear -.35s infinite}
+@keyframes shim{from{background-position:100% 0}to{background-position:0 0}}
+.rail{position:absolute;left:calc(114.25*var(--u));top:calc(298*var(--u));width:calc(1.5*var(--u));height:0;background:#e3e3e3}
+#ctr{position:absolute;top:calc(250*var(--u));left:calc(367*var(--u));height:calc(63*var(--u));width:calc(60*var(--u));color:#858585}
+#ctr span{position:absolute;left:0;top:0;line-height:calc(63*var(--u))}
+.lblbox{position:relative;height:calc(63*var(--u));width:calc(240*var(--u))}
+.lblbox span{position:absolute;left:0;top:0;line-height:calc(63*var(--u))}
+#think{position:absolute;left:calc(149*var(--u));top:calc(319*var(--u));width:calc(860*var(--u));height:calc(381*var(--u));overflow:hidden;
+  -webkit-mask-image:linear-gradient(rgba(0,0,0,.4),#000 calc(70*var(--u)));mask-image:linear-gradient(rgba(0,0,0,.4),#000 calc(70*var(--u)))}
+#tIn{line-height:calc(44*var(--u));color:#6c6c6c;white-space:nowrap}
+#tIn p{margin:0}
+#tIn p+p{margin-top:calc(42*var(--u))}
+#tIn ol{list-style:none;margin:calc(10*var(--u)) 0;padding:0;line-height:calc(45*var(--u))}
+#tIn ol+p{margin-top:0}
+#tIn b{font:500 calc(20*var(--u)) 'JetBrains Mono',monospace;color:#888;display:inline-block;width:calc(34*var(--u));margin-left:calc(6*var(--u))}
+#tIn i{font-style:normal;display:inline-block;opacity:0;white-space:pre}
+.card{position:absolute;left:calc(138*var(--u));width:calc(852*var(--u));background:#fff;border:calc(1*var(--u)) solid #ececec;border-radius:calc(22*var(--u))}
+.card .sub{position:absolute;left:calc(33*var(--u));height:calc(81*var(--u));display:flex;align-items:center;white-space:nowrap}
+.card .sub.done{color:#262626}
+.card hr{position:absolute;left:0;right:0;top:calc(80*var(--u));margin:0;border:0;border-top:calc(1*var(--u)) solid #efefef}
+.card .ic{margin-right:calc(23*var(--u))}
+.chips{position:absolute;left:calc(149*var(--u));top:calc(509*var(--u));width:calc(800*var(--u))}
+.chip{position:absolute;height:calc(48*var(--u));border-radius:calc(10*var(--u));background:#ececec;color:#262626;font-size:calc(25*var(--u));display:flex;align-items:center;padding-left:calc(14*var(--u));white-space:nowrap}
+.chip svg{width:calc(27*var(--u));height:calc(27*var(--u));margin-right:calc(11*var(--u));flex:none}
+.file{position:absolute;left:calc(138*var(--u));top:calc(767*var(--u));width:calc(364*var(--u));height:calc(271*var(--u));border-radius:calc(22*var(--u));background:#f6f6f6;border:calc(1*var(--u)) solid #efefef}
+.page{position:absolute;left:calc(57*var(--u));top:calc(27*var(--u));width:calc(250*var(--u));height:calc(180*var(--u));background:#fff;border:calc(1*var(--u)) solid #ececec;border-radius:calc(12*var(--u)) calc(12*var(--u)) 0 0;overflow:hidden;-webkit-mask:linear-gradient(#000 82%,transparent);mask:linear-gradient(#000 82%,transparent)}
+.sk{position:absolute;left:calc(23*var(--u));height:calc(8*var(--u));border-radius:calc(4*var(--u));background:#ebebeb;transform-origin:left}
+.fname{position:absolute;left:calc(23*var(--u));top:calc(216*var(--u));color:#6a6a6a;font-size:calc(25*var(--u))}
+.tag{position:absolute;right:calc(23*var(--u));top:calc(217*var(--u));height:calc(33*var(--u));padding:0 calc(9*var(--u));border:calc(1.2*var(--u)) solid #dedede;border-radius:calc(16.5*var(--u));font-size:calc(21*var(--u));line-height:calc(30*var(--u));color:#a8a8a8;background:#fff}
+#cur{position:absolute;width:calc(24*var(--u));height:calc(24*var(--u));left:0;top:0}
+.ico.shop{width:calc(25*var(--u));height:calc(28*var(--u));margin-right:calc(9*var(--u))}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="pill fx" id="pill">Get us live in Sweden.</div>
+  <div class="rail" id="rail"></div>
+
+  <!-- header -->
+  <div class="row" style="--y:283">
+    <span class="ic"><i class="spin fx" id="hSpin"></i>
+      <svg class="fx" id="hChev" viewBox="0 0 22 22" width="22" height="22" style="width:calc(22*var(--u));height:calc(22*var(--u))"><path d="M2.5 7.5l8.5 8.5 8.5-8.5" fill="none" stroke="#666" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <span class="lblbox"><span class="shim fx" id="hThink">Start thinking...</span><span class="fx" id="hWork" style="color:#6f6f6f">Working</span></span>
+  </div>
+  <div id="ctr"></div>
+
+  <div id="think" class="fx"><div id="tIn">
+    <p>The goal is to get the store live in Sweden. Start with what<br>Shopify already knows: who orders from Sweden today, what<br>they buy, and how often they come back.</p>
+    <p>Then look outward. Check how local brands price and position<br>themselves, what Swedish shoppers expect on delivery and<br>returns, and how Sweden compares with Norway.</p>
+    <ol><li><b>1.</b>Read Swedish order history</li><li><b>2.</b>Search local market sources</li><li><b>3.</b>Brief the Brand Researcher</li><li><b>4.</b>Compare Sweden against Norway</li><li><b>5.</b>Write the launch report</li></ol>
+    <p>Orders first. They set the baseline for everything else.</p>
+  </div></div>
+
+  <!-- steps -->
+  <div class="row fx" id="done" style="--y:346"><span class="ic"><i class="dot"></i></span>Done thinking</div>
+
+  <div class="row fx" id="readA" style="--y:409"><span class="ic"><i class="spin"></i></span><span class="shim">Reading</span><svg class="ico shop" viewBox="0 0 22 24"><use href="#shop"/></svg><span class="obj">Shopify Swedish orders</span></div>
+  <div class="row fx" id="readB" style="--y:409"><span class="ic"><i class="dot"></i></span>Read<svg class="ico shop" viewBox="0 0 22 24"><use href="#shop"/></svg><span class="obj">Shopify Swedish orders</span></div>
+  <div class="card fx" id="card1" style="top:calc(447*var(--u));height:calc(163*var(--u))">
+    <div class="sub fx" id="c1aA" style="top:0"><span class="ic"><i class="spin"></i></span><span class="shim">Pulling Swedish order history</span></div>
+    <div class="sub done fx" id="c1aB" style="top:0"><span class="ic"><i class="chk"><svg viewBox="0 0 12 12"><use href="#tick"/></svg></i></span>Pulled Swedish order history</div>
+    <hr>
+    <div class="sub fx" id="c1bA" style="top:calc(81*var(--u))"><span class="ic"><i class="spin"></i></span><span class="shim">Spotting top sellers in Sweden</span></div>
+    <div class="sub done fx" id="c1bB" style="top:calc(81*var(--u))"><span class="ic"><i class="chk"><svg viewBox="0 0 12 12"><use href="#tick"/></svg></i></span>Spotted top sellers in Sweden</div>
+  </div>
+
+  <div class="row fx" id="srchA" style="--y:472"><span class="ic"><i class="spin"></i></span><span class="shim">Start searching</span><span class="gap lblbox" id="cnt" style="width:calc(200*var(--u))"></span></div>
+  <div class="row fx" id="srchB" style="--y:472"><span class="ic"><i class="dot"></i></span>Searched<span class="gap">46 sources</span></div>
+  <div class="chips">
+    <div class="chip fx" id="ch1" style="left:0;top:0;width:calc(234*var(--u))"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#c9f227"/><circle cx="12" cy="12" r="6.5" fill="none" stroke="#111" stroke-width="1.6"/><path d="M12 5.5a6.5 6.5 0 0 0 0 13z" fill="#111"/></svg>acedesign.io</div>
+    <div class="chip fx" id="ch2" style="left:calc(249*var(--u));top:0;width:calc(406*var(--u))"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="3" fill="#0a66c2"/><rect x="5.6" y="9.6" width="2.8" height="8.6" fill="#fff"/><circle cx="7" cy="6.6" r="1.7" fill="#fff"/><path d="M10.6 9.6h2.7v1.3c.5-.9 1.6-1.5 2.9-1.5 2.3 0 3 1.4 3 3.6v5.2h-2.8v-4.6c0-1.1-.3-1.9-1.4-1.9s-1.6.8-1.6 1.9v4.6h-2.8z" fill="#fff"/></svg>LinkedIn - Ace Design Io...</div>
+    <div class="chip fx" id="ch3" style="left:0;top:calc(64*var(--u));width:calc(374*var(--u))"><svg viewBox="0 0 24 24"><path d="M3.5 3.5h5.2l4.4 6 5-6h2.3l-6.3 7.4 6.9 9.6h-5.2l-4.7-6.4-5.5 6.4H3.3l6.8-7.9z" fill="#111"/><path d="M6.6 4.9h1.5l9.6 14.2h-1.5z" fill="#ececec"/></svg>X - Ace Design Io News</div>
+    <div class="chip fx" id="ch4" style="left:calc(386*var(--u));top:calc(64*var(--u));width:calc(195*var(--u))"><svg viewBox="0 0 24 24"><path d="M21 12.2c0-.7-.1-1.3-.2-1.9H12v3.6h5.1a4.4 4.4 0 0 1-1.9 2.9v2.4h3.1c1.7-1.6 2.7-4 2.7-7z" fill="#4285f4"/><path d="M12 21.5c2.6 0 4.7-.9 6.3-2.3l-3.1-2.4c-.9.6-2 .9-3.2.9-2.5 0-4.6-1.7-5.3-3.9H3.5v2.5A9.5 9.5 0 0 0 12 21.5z" fill="#34a853"/><path d="M6.7 13.8a5.7 5.7 0 0 1 0-3.6V7.7H3.5a9.5 9.5 0 0 0 0 8.6z" fill="#fbbc05"/><path d="M12 6.3c1.4 0 2.6.5 3.6 1.4l2.7-2.7A9.5 9.5 0 0 0 3.5 7.7l3.2 2.5C7.4 8 9.5 6.3 12 6.3z" fill="#ea4335"/></svg>AI Search</div>
+    <div class="fx" id="ch5" style="position:absolute;left:calc(615*var(--u));top:calc(64*var(--u));line-height:calc(48*var(--u));color:#3a3a3a;font-size:calc(25*var(--u))">20+ more</div>
+  </div>
+
+  <div class="row fx" id="delA" style="--y:667"><span class="ic"><i class="spin"></i></span><span class="shim">Delegating to</span><svg class="ico" viewBox="0 0 24 24" style="height:calc(26*var(--u));width:calc(26*var(--u))"><use href="#gem"/></svg><span class="obj">Brand Researcher</span></div>
+  <div class="row fx" id="delB" style="--y:667"><span class="ic"><i class="dot"></i></span>Delegating to<svg class="ico" viewBox="0 0 24 24" style="height:calc(26*var(--u));width:calc(26*var(--u))"><use href="#gem"/></svg><span class="obj">Brand Researcher</span></div>
+  <div class="card fx" id="card2" style="top:calc(706*var(--u));height:calc(164*var(--u))">
+    <div class="sub fx" id="c2aA" style="top:0"><span class="ic"><i class="spin"></i></span><span class="shim">Scanning Swedish competitor brands</span></div>
+    <div class="sub done fx" id="c2aB" style="top:0"><span class="ic"><i class="chk"><svg viewBox="0 0 12 12"><use href="#tick"/></svg></i></span>Scanned Swedish competitor brands</div>
+    <hr>
+    <div class="sub fx" id="c2bA" style="top:calc(81*var(--u))"><span class="ic"><i class="spin"></i></span><span class="shim">Mapping local pricing trends</span></div>
+    <div class="sub done fx" id="c2bB" style="top:calc(81*var(--u))"><span class="ic"><i class="chk"><svg viewBox="0 0 12 12"><use href="#tick"/></svg></i></span>Mapped local pricing trends</div>
+  </div>
+
+  <div class="row fx" id="prepA" style="--y:730"><span class="ic"><i class="spin"></i></span><span class="shim">Preparing the report</span></div>
+  <div class="row fx" id="prepB" style="--y:730"><span class="ic"><i class="dot"></i></span>Report is ready<svg class="ico" viewBox="0 0 22 24" style="margin-left:calc(18*var(--u))"><path d="M4 1.5h9.5L19 7v14a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 3 21V3a1.5 1.5 0 0 1 1-1.5z" fill="#2f7cf6"/><path d="M13.5 1.5V7H19z" fill="#9cc1fb"/><path d="M7 12h8M7 15.5h8M7 19h5" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg><span class="obj">Sweden Insight</span></div>
+  <div class="file fx" id="file">
+    <div class="page">
+      <i class="sk fx" id="sk1" style="top:calc(25*var(--u));width:calc(201*var(--u))"></i>
+      <i class="sk fx" id="sk2" style="top:calc(64*var(--u));width:calc(174*var(--u))"></i>
+      <i class="sk fx" id="sk3" style="top:calc(103*var(--u));width:calc(124*var(--u))"></i>
+      <i class="sk fx" id="sk4" style="top:calc(141*var(--u));width:calc(51*var(--u))"></i>
+    </div>
+    <svg id="cur" viewBox="0 0 20 20"><path d="M1.5 1.5l17 6.4-7.3 2.6-2.8 8z" fill="#1e8ff0" stroke="#1e8ff0" stroke-width="1" stroke-linejoin="round"/></svg>
+    <span class="fname">sweden-insight</span><span class="tag">PDF</span>
+  </div>
+
+  <div class="row" style="--y:794"><span class="ic fx" id="finI"><i class="chk blue"><svg viewBox="0 0 12 12"><use href="#tick"/></svg></i></span><span class="fx" id="finT">Finished working</span></div>
+
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <path id="tick" d="M2.6 6.3l2.3 2.3 4.6-4.9" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <g id="shop"><path d="M7 6.5C7 3 8.5 1.5 10 1.5s2.6 1.2 3 3.5" fill="none" stroke="#5e8e3e" stroke-width="1.4"/><path d="M3 6.3l11-1.3 1.6 17.5L1.6 21z" fill="#95bf47"/><path d="M14 5l3.6.8 2 16.6-4 .1z" fill="#5e8e3e"/><path transform="translate(-5.3 -7.5) scale(1.55)" d="M10.6 10.6c-.5-.3-1-.4-1.6-.4-1.3 0-2 .8-2 1.6 0 1.6 2.9 1.6 2.9 3 0 .5-.4.9-1.1.9-.7 0-1.4-.4-1.8-.7l-.4 1.3c.4.4 1.2.7 2.1.7 1.5 0 2.5-.9 2.5-2.2 0-1.9-2.8-1.9-2.8-2.9 0-.3.3-.6 1-.6.5 0 .9.1 1.2.3z" fill="#fff"/></g>
+      <g id="gem"><path d="M12 1.2l8.6 4.4 2.2 8.2-5 7.6H6.2l-5-7.6 2.2-8.2z" fill="#3fb45c"/><path d="M12 1.2l8.6 4.4-3.4 5.2H6.8L3.4 5.6z" fill="#8fe09b"/><path d="M6.8 10.8h10.4L12 21.4z" fill="#56c56f"/><path d="M3.4 5.6l3.4 5.2-5.6 3z" fill="#6fd283"/><path d="M20.6 5.6l2.2 8.2-5.6-3z" fill="#2f9a4c"/><path d="M1.2 13.8l5.6-3 5.2 10.6H6.2z" fill="#38a956"/><path d="M22.8 13.8l-5.6-3L12 21.4h5.8z" fill="#1f8040"/></g>
+    </defs>
+  </svg>
+</div>
+<script>
+(() => {
+  const D = 30, $ = id => document.getElementById(id), U = v => `calc(${v} * var(--u))`;
+  const anims = [];
+  // one 30 s animation per element, keyframes placed at absolute seconds: seekable by the checker
+  function tl(el, frames) {
+    const kf = frames.map(([t, p]) => ({ ...p, offset: Math.min(1, Math.max(0, t / D)) }));
+    if (kf[0].offset > 0) kf.unshift({ ...kf[0], offset: 0 });
+    if (kf[kf.length - 1].offset < 1) kf.push({ ...kf[kf.length - 1], offset: 1, easing: undefined });
+    kf.forEach(k => { if (!k.easing) delete k.easing; });
+    anims.push(el.animate(kf, { duration: D * 1000, fill: 'both' }));
+  }
+  const OFF = (y = 0, b = 8) => ({ opacity: 0, filter: `blur(${U(b)})`, transform: `translateY(${U(y)})` });
+  const ON = { opacity: 1, filter: `blur(${U(0)})`, transform: `translateY(${U(0)})` };
+  // blur-fade in at tin, out at tout
+  function show(el, tin, tout, o = {}) {
+    const d = o.d || .3, f = [[tin, { ...OFF(o.y || 0, o.b || 8), easing: o.e || 'cubic-bezier(.2,.7,.2,1)' }], [tin + d, ON]];
+    if (tout != null) f.push([tout, { ...ON, easing: 'ease-in' }], [tout + (o.dOut || d), OFF(o.yOut || 0, o.bOut || o.b || 8)]);
+    tl(typeof el === 'string' ? $(el) : el, f);
+  }
+
+  show('pill', .3, null, { d: .4, y: 3, b: 10 });
+  // header: spinner + shimmering "Start thinking..." rolls to chevron + "Working"
+  show('hSpin', 1.4, 6.4, { dOut: .3 });
+  show('hThink', 1.4, 6.36, { yOut: -22, dOut: .24, bOut: 10 });
+  show('hChev', 6.55, null, { d: .25 });
+  show('hWork', 6.4, null, { y: 22, d: .5, b: 10, e: 'cubic-bezier(.3,.4,.3,1)' });
+  // seconds counter
+  const ticks = [[1, 1.6], [2, 3.0], [3, 4.3], [4, 5.5]];
+  for (let n = 5; n <= 27; n++) ticks.push([n, n === 5 ? 6.2 : n + 1.1]);
+  ticks.forEach(([n, t], i) => {
+    const s = document.createElement('span'); s.textContent = n + 's'; s.className = 'fx'; $('ctr').appendChild(s);
+    const nx = ticks[i + 1];
+    show(s, t, nx ? nx[1] : null, { d: .18, y: 14, b: 4, yOut: -14, dOut: .18 });
+  });
+  tl($('ctr'), [[6.36, { left: U(367), easing: 'cubic-bezier(.4,0,.2,1)' }], [6.8, { left: U(274) }]]);
+
+  // thinking stream: word-by-word blur fade, ~21.5 words/s from 1.65 s
+  const words = [];
+  $('tIn').querySelectorAll('p,li').forEach(blk => {
+    const walk = n => [...n.childNodes].forEach(c => {
+      if (c.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        c.textContent.split(/(\s+)/).forEach(w => { if (!w) return; if (/^\s+$/.test(w)) frag.append(w); else { const i = document.createElement('i'); i.textContent = w; frag.append(i); words.push(i); } });
+        c.replaceWith(frag);
+      } else if (c.tagName === 'B') { c.classList.add('fx'); words.push(c); }
+    });
+    walk(blk);
+  });
+  words.forEach((w, i) => show(w, 1.6 + i / 22.5, null, { d: .45, b: 6 }));
+  show('think', 1.4, 6.1, { d: .1, dOut: .75, bOut: 14 });
+  tl($('tIn'), [[4.05, { transform: `translateY(${U(0)})` }], [4.9, { transform: `translateY(${U(-124)})` }], [5.65, { transform: `translateY(${U(-250)})`, easing: 'ease-out' }]]);
+
+  // timeline rail grows with each step
+  const rail = [[6.85, 0], [7.15, 48], [7.9, 48], [8.15, 111], [8.4, 111], [8.7, 312], [12.0, 312], [12.3, 111], [13.1, 111], [13.35, 174], [13.7, 174], [13.9, 259], [14.0, 259], [14.2, 323], [17.7, 323], [17.95, 369], [18.3, 369], [18.6, 572], [21.6, 572], [21.9, 369], [22.7, 369], [22.95, 432], [23.15, 432], [23.45, 740], [27.3, 740], [27.6, 432], [28.3, 432], [28.55, 496]];
+  tl($('rail'), rail.map(([t, h]) => [t, { height: U(h), easing: 'cubic-bezier(.3,0,.2,1)' }]));
+
+  show('done', 7.0, null);
+  show('readA', 7.9, 12.0); show('readB', 12.05, null);
+  show('card1', 8.4, 12.0, { b: 4, bOut: 14, dOut: .3 });
+  show('c1aA', 8.6, 10.0, { d: .25, dOut: .12 }); show('c1aB', 10.05, null, { d: .2 });
+  show('c1bA', 8.7, 11.0, { d: .25, dOut: .12 }); show('c1bB', 11.05, null, { d: .2 });
+
+  show('srchA', 13.1, 16.3); show('srchB', 16.35, null);
+  const counts = [[3, 13.7], [6, 13.9], [8, 14.0], [9, 14.1], [16, 14.3], [24, 14.6], [29, 14.85], [31, 15.0], [34, 15.15], [37, 15.3], [38, 15.4], [40, 15.5], [46, 15.6]];
+  counts.forEach(([n, t], i) => {
+    const s = document.createElement('span'); s.textContent = n + ' sources'; s.className = 'fx'; s.style.color = '#9a9a9a'; $('cnt').appendChild(s);
+    const nx = counts[i + 1];
+    show(s, t, nx ? nx[1] : null, { d: .1, b: 3, y: 8, yOut: -8, dOut: .1 });
+  });
+  [['ch1', 13.7], ['ch2', 13.8], ['ch3', 14.0], ['ch4', 14.2], ['ch5', 14.45]].forEach(([id, t]) => show(id, t, null, { d: .28, b: 6 }));
+
+  show('delA', 17.7, 21.6); show('delB', 21.65, null);
+  show('card2', 18.3, 21.6, { b: 4, bOut: 14, dOut: .3 });
+  show('c2aA', 18.45, 19.65, { d: .25, dOut: .12 }); show('c2aB', 19.7, null, { d: .2 });
+  show('c2bA', 18.55, 20.65, { d: .25, dOut: .12 }); show('c2bB', 20.7, null, { d: .2 });
+
+  show('prepA', 22.7, 27.35); show('prepB', 27.4, null);
+  show('file', 23.15, 27.3, { b: 4, bOut: 14 });
+  [['sk1', 23.3], ['sk2', 24.5], ['sk3', 25.3], ['sk4', 26.0]].forEach(([id, t]) =>
+    tl($(id), [[t, { opacity: 0, transform: 'scaleX(0)', easing: 'ease-out' }], [t + .9, { opacity: 1, transform: 'scaleX(1)' }]]));
+  const cur = [[23.2, 85, 70], [23.9, 232, 62], [24.2, 236, 78], [24.6, 92, 92], [25.1, 210, 100], [25.5, 90, 124], [26.0, 165, 128], [26.4, 76, 160], [27.3, 82, 160]];
+  tl($('cur'), cur.map(([t, x, y]) => [t, { transform: `translate(${U(x)}, ${U(y)})`, easing: 'ease-in-out' }]));
+
+  // the disc sharpens before the label (clip at 28.5 s: check legible, label still soft)
+  show('finI', 28.05, null, { d: .6, b: 6, e: 'linear' });
+  show('finT', 28.05, null, { d: 1, b: 7, e: 'linear' });
+
+  const demo = new URLSearchParams(location.search).has('demo');
+  if (!demo && matchMedia('(prefers-reduced-motion: reduce)').matches) anims.forEach(a => { a.currentTime = D * 1000; a.pause(); });
+})();
+</script>
+</body>
+</html>

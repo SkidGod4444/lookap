@@ -1,0 +1,1092 @@
+{
+ "slug": "ti5i8b-vercel-agents-homepage-redesign",
+ "frame": {
+  "w": 1482,
+  "h": 1080
+ },
+ "at": "2026-10-22T19:46:27.059Z",
+ "model": "opus",
+ "costUsd": 0.614,
+ "summary": "A Vercel-style hero on a 1482x1080 canvas. A slim nav bar runs along the top (black Vercel triangle at x 127, links Products ▾ / Resources ▾ / Enterprise / Pricing, then three pill buttons on the right: Get a Demo, Log In and a filled Sign Up ending at x 1334). The left column, aligned at x≈127, holds a two-line tight-tracked headline, \"Build and run / agents on Vercel\" (~56px, y 298–402), a two-line grey subhead and two pill CTAs: a filled \"Create an agent\" and an outlined \"Talk to an expert\". The right half shows an isometric 3D cube drawn as a hexagon (box ≈803,347,352,320). It has three rounded rhombus faces, top, lower-left and right, separated by gaps. Six thick black chevron frame segments sit around them, and a faint hexagonal halo and a soft drop shadow sit underneath. A small white Vercel triangle sits on the top face. Above the cube are two chat bubbles joined to it by hairline connectors: a user bubble \"@data-agent How did revenue trend last quarter by region?\" at the top right, and an agent reply bubble with a small robot avatar circle to its left. Along the bottom, a four-column stat row (4T+, 3×, 1M+, < 5 min; ~56px light-weight numerals at y≈858, two-line grey captions at y≈930) starts at x 126/434/741/1048. Motion: a cursor moves over the cube. The face under the cursor lightens to a soft grey gradient, and an annotation fades in (~200 ms) with a short hairline leader, a bold title and a 3-line grey caption: Connect (bottom-left, ~0.2–1.0s), Sandbox (right, ~1.0–1.7s), eve (top-left, ~1.8–2.4s), Drives (left, ~2.5–3.2s). From ~3.3s nothing is annotated. At ~4.1s the page hard-cuts from light (#f7f7f7 bg, near-black type) to dark (#000 bg, white type, buttons inverted). The cube becomes outline-only: black faces with thin grey stroked edges and outlined frame segments. In dark mode, hovering the lower-left face lights it and brings back Connect (~5.1–5.9s), which then fades as the cursor leaves. The layout never moves; only the hover highlights, annotations, cursor and theme change.",
+ "elements": [
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1482,
+    1080
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "#f7f7f7 in light (0–4.1s), #000 in dark (4.1–7.13s)"
+  },
+  {
+   "name": "Vercel logo triangle",
+   "box": [
+    127,
+    20,
+    18,
+    16
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "solid black triangle in light, white in dark"
+  },
+  {
+   "name": "nav links",
+   "box": [
+    172,
+    19,
+    287,
+    17
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "Products ▾, Resources ▾, Enterprise, Pricing; ~13px dark grey"
+  },
+  {
+   "name": "Get a Demo button",
+   "box": [
+    1107,
+    13,
+    87,
+    29
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "white pill, 1px light border, 6px radius"
+  },
+  {
+   "name": "Log In button",
+   "box": [
+    1204,
+    13,
+    56,
+    29
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "white with light border"
+  },
+  {
+   "name": "Sign Up button",
+   "box": [
+    1270,
+    14,
+    64,
+    27
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "black filled with white text in light; white filled with black text in dark"
+  },
+  {
+   "name": "headline",
+   "box": [
+    127,
+    298,
+    376,
+    106
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Build and run / agents on Vercel', ~56px, tight negative tracking, near-black / white"
+  },
+  {
+   "name": "subhead",
+   "box": [
+    127,
+    426,
+    342,
+    44
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "2 lines ~16px grey"
+  },
+  {
+   "name": "Create an agent button",
+   "box": [
+    127,
+    500,
+    133,
+    34
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "fully rounded pill, black fill + white text (light), light-grey fill + black text (dark)"
+  },
+  {
+   "name": "Talk to an expert button",
+   "box": [
+    274,
+    500,
+    139,
+    34
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "pill, white fill with faint border (light); black with grey border (dark)"
+  },
+  {
+   "name": "user chat bubble",
+   "box": [
+    1016,
+    159,
+    199,
+    62
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "white rounded 12px bubble with border and tail at bottom-right; '@data-agent' bold"
+  },
+  {
+   "name": "agent chat bubble",
+   "box": [
+    796,
+    235,
+    244,
+    62
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "white rounded bubble, 2-line reply"
+  },
+  {
+   "name": "robot avatar",
+   "box": [
+    758,
+    270,
+    28,
+    28
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "small circle with outlined robot head icon"
+  },
+  {
+   "name": "connector hairlines",
+   "box": [
+    886,
+    222,
+    200,
+    110
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "thin grey vertical lines at x≈888 and x≈1085 leading from the bubbles down to the cube"
+  },
+  {
+   "name": "hex cube",
+   "box": [
+    803,
+    347,
+    352,
+    320
+   ],
+   "kind": "image",
+   "class": "css",
+   "note": "isometric cube: 3 rounded rhombus faces + 6 chevron frame segments, glossy black gradients in light, outline strokes in dark; drop shadow below in light"
+  },
+  {
+   "name": "cube Vercel mark",
+   "box": [
+    851,
+    466,
+    19,
+    15
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "small white triangle on the top face, lower-left corner"
+  },
+  {
+   "name": "cube halo",
+   "box": [
+    780,
+    330,
+    400,
+    360
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "faint hexagonal outline/halo around the cube"
+  },
+  {
+   "name": "Connect annotation",
+   "box": [
+    719,
+    662,
+    115,
+    66
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "leader line x 843–893 y 668; 'Connect' bold + 'Queried ❄ Snowflake through a scoped, read-only connection'"
+  },
+  {
+   "name": "Sandbox annotation",
+   "box": [
+    1165,
+    497,
+    95,
+    62
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "leader line on the left, 'Sandbox' + 'Ran the regional breakdown in an isolated microVM'"
+  },
+  {
+   "name": "eve annotation",
+   "box": [
+    719,
+    338,
+    175,
+    62
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "leader line x 843–893 y 344; 'eve' + 'Defines data-agent with a run_sql tool and a revenue skill'"
+  },
+  {
+   "name": "Drives annotation",
+   "box": [
+    638,
+    500,
+    152,
+    62
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "leader line x 762–790 y 507; 'Drives' + 'Saved the Q3 export and chart for the next question'"
+  },
+  {
+   "name": "stat 4T+",
+   "box": [
+    124,
+    858,
+    280,
+    102
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'4T+' ~56px light + 'tokens per day running on Vercel'"
+  },
+  {
+   "name": "stat 3×",
+   "box": [
+    432,
+    858,
+    250,
+    102
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'3×' + 'faster shipping at Rillet with a software factory built on eve'"
+  },
+  {
+   "name": "stat 1M+",
+   "box": [
+    738,
+    858,
+    155,
+    102
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'1M+' + 'weekly npm downloads of eve'"
+  },
+  {
+   "name": "stat < 5 min",
+   "box": [
+    1045,
+    858,
+    180,
+    102
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'< 5 min' + 'to deploy your first agent from the dashboard'"
+  },
+  {
+   "name": "cursor",
+   "box": [
+    915,
+    462,
+    14,
+    18
+   ],
+   "kind": "chrome",
+   "class": null,
+   "note": "macOS arrow pointer wandering over the cube"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "page background",
+   "axis": "style",
+   "check": "Page background is a near-white light grey (~#f7f7f7)",
+   "box": [
+    0,
+    0,
+    1482,
+    1080
+   ],
+   "scope": "frame",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "page background",
+   "axis": "motion",
+   "check": "Between 2.05s and 5.65s the whole page switches from light (#f7f7f7 bg, dark type) to dark (black bg, white type); layout positions stay identical",
+   "box": [
+    0,
+    0,
+    1482,
+    1080
+   ],
+   "scope": "frame",
+   "at": 2.05,
+   "then": 5.65
+  },
+  {
+   "id": "c03",
+   "element": "page background",
+   "axis": "motion",
+   "check": "The theme change is an instant cut at about 4.1s (light at 4.0s, fully dark at 4.15s), not a slow fade",
+   "box": [
+    0,
+    0,
+    1482,
+    1080
+   ],
+   "scope": "frame",
+   "at": 4,
+   "then": 4.2
+  },
+  {
+   "id": "c04",
+   "element": "Vercel logo triangle",
+   "axis": "present",
+   "check": "A solid black equilateral triangle logo sits at top-left around x 127, y 20",
+   "box": [
+    120,
+    12,
+    35,
+    30
+   ],
+   "scope": "crop",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "nav links",
+   "axis": "text",
+   "check": "Nav reads 'Products', 'Resources' (each with a small down chevron), 'Enterprise', 'Pricing' left-to-right from x≈172",
+   "box": [
+    165,
+    15,
+    300,
+    25
+   ],
+   "scope": "crop",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "Sign Up button",
+   "axis": "style",
+   "check": "'Sign Up' is a black filled rounded button with white text at right end (x≈1270–1334) while 'Get a Demo' and 'Log In' are white with thin borders",
+   "box": [
+    1100,
+    10,
+    240,
+    35
+   ],
+   "scope": "crop",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "Sign Up button",
+   "axis": "style",
+   "check": "In dark mode 'Sign Up' is a white/light filled button with black text",
+   "box": [
+    1265,
+    10,
+    75,
+    35
+   ],
+   "scope": "crop",
+   "at": 5.65,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "headline",
+   "axis": "text",
+   "check": "Headline reads exactly 'Build and run' / 'agents on Vercel' on two lines",
+   "box": [
+    120,
+    290,
+    390,
+    120
+   ],
+   "scope": "crop",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "headline",
+   "axis": "position",
+   "check": "Headline left edge at x≈127, cap tops y≈298 and baseline of line 2 near y≈398, roughly 56px type with tight negative tracking",
+   "box": [
+    120,
+    290,
+    390,
+    120
+   ],
+   "scope": "frame",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "subhead",
+   "axis": "text",
+   "check": "Subhead reads 'Build agents, run them on agentic infrastructure, / and put them to work across your business.' in mid-grey ~16px",
+   "box": [
+    120,
+    425,
+    355,
+    48
+   ],
+   "scope": "crop",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "Create an agent button",
+   "axis": "style",
+   "check": "'Create an agent' is a fully rounded black pill (~133x34 at x 127, y 500) with white text",
+   "box": [
+    120,
+    495,
+    145,
+    45
+   ],
+   "scope": "crop",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "Talk to an expert button",
+   "axis": "style",
+   "check": "'Talk to an expert' is a white pill with a faint grey border, dark text, starting x≈274",
+   "box": [
+    268,
+    495,
+    150,
+    45
+   ],
+   "scope": "crop",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "Create an agent button",
+   "axis": "style",
+   "check": "In dark mode 'Create an agent' becomes a light grey pill with black text and 'Talk to an expert' a black pill with grey border and white text",
+   "box": [
+    120,
+    495,
+    300,
+    45
+   ],
+   "scope": "crop",
+   "at": 5.65,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "user chat bubble",
+   "axis": "text",
+   "check": "Top-right bubble reads '@data-agent How did revenue trend last quarter by region?' with '@data-agent' in bold",
+   "box": [
+    1010,
+    155,
+    210,
+    70
+   ],
+   "scope": "crop",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "user chat bubble",
+   "axis": "style",
+   "check": "User bubble is white with a thin light border, ~12px radius and a small tail at its bottom-right corner",
+   "box": [
+    1010,
+    155,
+    215,
+    72
+   ],
+   "scope": "crop",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "agent chat bubble",
+   "axis": "text",
+   "check": "Second bubble reads 'EMEA up 18%, North America down 4%.' / 'I posted the chart in channel #revenue.'",
+   "box": [
+    790,
+    230,
+    255,
+    72
+   ],
+   "scope": "crop",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "robot avatar",
+   "axis": "present",
+   "check": "A small circular avatar (~28px) with a robot-head icon sits left of the agent bubble at about x 758, y 270",
+   "box": [
+    752,
+    264,
+    40,
+    40
+   ],
+   "scope": "crop",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "connector hairlines",
+   "axis": "present",
+   "check": "Thin grey vertical hairlines drop from the bubbles toward the cube at x≈888 and x≈1085",
+   "box": [
+    870,
+    215,
+    230,
+    120
+   ],
+   "scope": "crop",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c19",
+   "element": "hex cube",
+   "axis": "position",
+   "check": "The cube silhouette is a pointy-sided hexagon spanning about x 803–1155, y 347–667, centred right of the page middle",
+   "box": [
+    795,
+    340,
+    370,
+    335
+   ],
+   "scope": "frame",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "hex cube",
+   "axis": "style",
+   "check": "Cube is built from 3 separate rounded rhombus faces (top, lower-left, right) with visible gaps between them",
+   "box": [
+    795,
+    340,
+    370,
+    335
+   ],
+   "scope": "crop",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "hex cube",
+   "axis": "style",
+   "check": "In light mode six thick solid-black chevron frame segments wrap around the faces (top bar, bottom bar, two left and two right angled bars)",
+   "box": [
+    795,
+    340,
+    370,
+    335
+   ],
+   "scope": "crop",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "hex cube",
+   "axis": "style",
+   "check": "Light-mode faces are glossy black with subtle dark-grey gradients (not flat), and a soft grey drop shadow spreads below the cube",
+   "box": [
+    780,
+    340,
+    420,
+    420
+   ],
+   "scope": "crop",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "hex cube",
+   "axis": "style",
+   "check": "In dark mode the cube is outline-only: black faces with thin grey stroked edges, and frame segments drawn as grey outlines rather than solid fills",
+   "box": [
+    795,
+    340,
+    380,
+    335
+   ],
+   "scope": "crop",
+   "at": 5.65,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "cube Vercel mark",
+   "axis": "present",
+   "check": "A small white triangle (~19px) sits near the lower-left corner of the top face at x≈851, y≈466",
+   "box": [
+    840,
+    455,
+    40,
+    35
+   ],
+   "scope": "crop",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c25",
+   "element": "cube halo",
+   "axis": "present",
+   "check": "A faint hexagonal halo outline surrounds the cube a few px outside its silhouette",
+   "box": [
+    775,
+    325,
+    410,
+    370
+   ],
+   "scope": "crop",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c26",
+   "element": "hex cube",
+   "axis": "motion",
+   "check": "The face under the cursor lightens: at 2.05s the top face (cursor on it) is visibly lighter grey than the other two faces",
+   "box": [
+    820,
+    355,
+    240,
+    145
+   ],
+   "scope": "crop",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c27",
+   "element": "hex cube",
+   "axis": "motion",
+   "check": "In dark mode the lower-left face with the cursor shows a soft lighter grey gradient while the top and right faces stay black",
+   "box": [
+    820,
+    510,
+    240,
+    150
+   ],
+   "scope": "crop",
+   "at": 5.65,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "Connect annotation",
+   "axis": "text",
+   "check": "Bottom-left annotation reads 'Connect' (bold) over 'Queried ❄ Snowflake / through a scoped, / read-only connection' with a snowflake glyph",
+   "box": [
+    712,
+    655,
+    130,
+    78
+   ],
+   "scope": "crop",
+   "at": 1,
+   "then": null
+  },
+  {
+   "id": "c29",
+   "element": "Connect annotation",
+   "axis": "position",
+   "check": "Connect annotation's text starts at x≈719, y≈663, with a short horizontal hairline leader from x≈843 to ≈893 at y≈668 touching the cube's lower-left corner",
+   "box": [
+    712,
+    655,
+    190,
+    78
+   ],
+   "scope": "crop",
+   "at": 1,
+   "then": null
+  },
+  {
+   "id": "c30",
+   "element": "Sandbox annotation",
+   "axis": "text",
+   "check": "To the right of the cube an annotation reads 'Sandbox' / 'Ran the regional breakdown in an isolated microVM' with a hairline leader on its left at y≈507",
+   "box": [
+    1160,
+    490,
+    110,
+    75
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c31",
+   "element": "eve annotation",
+   "axis": "text",
+   "check": "Top-left annotation reads 'eve' / 'Defines data-agent with a run_sql tool and a revenue skill', leader hairline at y≈344 from x≈843 to ≈893",
+   "box": [
+    712,
+    332,
+    190,
+    72
+   ],
+   "scope": "crop",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c32",
+   "element": "Drives annotation",
+   "axis": "text",
+   "check": "Left-side annotation reads 'Drives' / 'Saved the Q3 export and chart for the next question' with leader at y≈507 ending at the cube's left point",
+   "box": [
+    632,
+    495,
+    165,
+    70
+   ],
+   "scope": "crop",
+   "at": 2.8,
+   "then": null
+  },
+  {
+   "id": "c33",
+   "element": "eve annotation",
+   "axis": "motion",
+   "check": "Between 2.05s and 2.55s the eve annotation disappears and the Drives annotation fades in (still pale grey at 2.55s) as the cursor moves to the cube's left point",
+   "box": [
+    630,
+    330,
+    280,
+    240
+   ],
+   "scope": "crop",
+   "at": 2.05,
+   "then": 2.55
+  },
+  {
+   "id": "c34",
+   "element": "Connect annotation",
+   "axis": "motion",
+   "check": "Connect annotation is visible at 1.0s and gone by 2.05s while the Sandbox note shows in between (~1.5s), one annotation at a time",
+   "box": [
+    700,
+    330,
+    600,
+    410
+   ],
+   "scope": "frame",
+   "at": 1,
+   "then": 2.05
+  },
+  {
+   "id": "c35",
+   "element": "Connect annotation",
+   "axis": "motion",
+   "check": "In dark mode Connect is visible in white/grey at 5.65s and fades out by 6.15s as the cursor leaves the cube's bottom edge",
+   "box": [
+    712,
+    655,
+    190,
+    78
+   ],
+   "scope": "crop",
+   "at": 5.65,
+   "then": 6.15
+  },
+  {
+   "id": "c36",
+   "element": "annotations",
+   "axis": "motion",
+   "check": "Annotations fade in/out over roughly 0.2s (intermediate pale grey states visible) rather than popping",
+   "box": [
+    630,
+    495,
+    170,
+    70
+   ],
+   "scope": "crop",
+   "at": 2.55,
+   "then": 2.8
+  },
+  {
+   "id": "c37",
+   "element": "stat 4T+",
+   "axis": "text",
+   "check": "Stat row reads '4T+', '3×', '1M+', '< 5 min' as large light-weight numerals on one line at y≈858–905",
+   "box": [
+    115,
+    850,
+    1120,
+    60
+   ],
+   "scope": "frame",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c38",
+   "element": "stat row",
+   "axis": "position",
+   "check": "Four stat columns start at x≈126, 434, 741 and 1048 (even ~307px pitch)",
+   "box": [
+    115,
+    850,
+    1120,
+    115
+   ],
+   "scope": "frame",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c39",
+   "element": "stat 3×",
+   "axis": "text",
+   "check": "Caption under 3× reads 'faster shipping at Rillet with a software / factory built on eve' in grey ~14px",
+   "box": [
+    428,
+    920,
+    260,
+    45
+   ],
+   "scope": "crop",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c40",
+   "element": "stat 4T+",
+   "axis": "text",
+   "check": "Captions read 'tokens per day running on Vercel', 'weekly npm downloads of eve', 'to deploy your first agent from the dashboard'",
+   "box": [
+    120,
+    920,
+    1100,
+    45
+   ],
+   "scope": "frame",
+   "at": 2.05,
+   "then": null
+  },
+  {
+   "id": "c41",
+   "element": "headline",
+   "axis": "style",
+   "check": "In dark mode the headline and stat numerals are white on black, captions mid-grey",
+   "box": [
+    115,
+    290,
+    1120,
+    680
+   ],
+   "scope": "frame",
+   "at": 5.65,
+   "then": null
+  },
+  {
+   "id": "c42",
+   "element": "agent chat bubble",
+   "axis": "style",
+   "check": "In dark mode both chat bubbles are near-black with a thin dark-grey border and white text",
+   "box": [
+    790,
+    155,
+    430,
+    145
+   ],
+   "scope": "crop",
+   "at": 5.65,
+   "then": null
+  },
+  {
+   "id": "c43",
+   "element": "layout",
+   "axis": "motion",
+   "check": "Headline, buttons, bubbles, cube and stats do not shift position at any time; only colours, hover highlights and annotations change",
+   "box": [
+    0,
+    0,
+    1482,
+    1080
+   ],
+   "scope": "frame",
+   "at": 0.5,
+   "then": 6.15
+  }
+ ],
+ "imagery": [
+  {
+   "name": "hex cube",
+   "box": [
+    803,
+    347,
+    352,
+    320
+   ],
+   "class": "css",
+   "what": "Isometric cube as a hexagon of 3 rounded rhombus faces and 6 chevron frame bars; glossy black gradients with drop shadow (light) / grey hairline outlines (dark)",
+   "at": 2.05
+  },
+  {
+   "name": "Vercel logo triangle",
+   "box": [
+    127,
+    20,
+    18,
+    16
+   ],
+   "class": "structured",
+   "what": "Vercel's solid triangle mark",
+   "at": 2.05
+  },
+  {
+   "name": "cube Vercel mark",
+   "box": [
+    851,
+    466,
+    19,
+    15
+   ],
+   "class": "structured",
+   "what": "Small white triangle on the cube's top face",
+   "at": 2.05
+  },
+  {
+   "name": "robot avatar",
+   "box": [
+    758,
+    270,
+    28,
+    28
+   ],
+   "class": "structured",
+   "what": "Circle with outlined robot head icon",
+   "at": 2.05
+  },
+  {
+   "name": "Snowflake glyph",
+   "box": [
+    762,
+    683,
+    12,
+    12
+   ],
+   "class": "structured",
+   "what": "Tiny snowflake logo inline in the Connect caption",
+   "at": 1
+  }
+ ],
+ "moves": [
+  {
+   "element": "Connect annotation",
+   "what": "fades in as cursor hovers lower-left face; face lightens",
+   "from": 0.2,
+   "to": 0.4,
+   "px": null
+  },
+  {
+   "element": "Sandbox annotation",
+   "what": "Connect fades out, Sandbox fades in at right as cursor goes to right face",
+   "from": 1,
+   "to": 1.2,
+   "px": null
+  },
+  {
+   "element": "eve annotation",
+   "what": "Sandbox out, eve in at top-left; top face lightens",
+   "from": 1.7,
+   "to": 1.9,
+   "px": null
+  },
+  {
+   "element": "Drives annotation",
+   "what": "eve out, Drives fades in at left as cursor reaches left point",
+   "from": 2.4,
+   "to": 2.7,
+   "px": null
+  },
+  {
+   "element": "Drives annotation",
+   "what": "fades out, cursor drifts below cube, no annotation",
+   "from": 3.2,
+   "to": 3.4,
+   "px": null
+  },
+  {
+   "element": "page",
+   "what": "hard cut light theme to dark theme; cube becomes outline style",
+   "from": 4.05,
+   "to": 4.15,
+   "px": null
+  },
+  {
+   "element": "Connect annotation",
+   "what": "fades in on dark as cursor hovers lower-left face, face gets grey gradient",
+   "from": 5,
+   "to": 5.2,
+   "px": null
+  },
+  {
+   "element": "Connect annotation",
+   "what": "fades out as cursor leaves below cube",
+   "from": 5.8,
+   "to": 6.1,
+   "px": null
+  }
+ ]
+}

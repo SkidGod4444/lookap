@@ -1,0 +1,1565 @@
+{
+ "slug": "ewfwo2-tooltip-hover-delay-comparison",
+ "at": "2026-10-23T06:36:13.174Z",
+ "runs": 10,
+ "html": "factory/ewfwo2-tooltip-hover-delay-comparison/index.html",
+ "pixel": {
+  "score": 94,
+  "stills": 94,
+  "motion": 94,
+  "moments": 20
+ },
+ "animations": 70,
+ "rank": 94,
+ "allPass": false,
+ "elements": [
+  {
+   "name": "top waiting counter",
+   "box": [
+    1226,
+    86,
+    126,
+    26
+   ],
+   "deltaE": 10.8,
+   "delta": 59,
+   "shift": [
+    -8,
+    8
+   ],
+   "afterShift": 56,
+   "read": "wrong colour (deltaE 10.8)"
+  },
+  {
+   "name": "top title 'Delay on every hover'",
+   "box": [
+    88,
+    80,
+    295,
+    38
+   ],
+   "deltaE": 1,
+   "delta": 26,
+   "shift": [
+    8,
+    0
+   ],
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "bottom waiting counter",
+   "box": [
+    1226,
+    590,
+    126,
+    26
+   ],
+   "deltaE": 3.2,
+   "delta": 18,
+   "shift": [
+    -8,
+    8
+   ],
+   "afterShift": 17,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Body dropdown",
+   "box": [
+    395,
+    256,
+    76,
+    26
+   ],
+   "deltaE": 0.6,
+   "delta": 16,
+   "shift": [
+    2,
+    0
+   ],
+   "afterShift": 15,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "link / code / quote icons",
+   "box": [
+    798,
+    254,
+    166,
+    30
+   ],
+   "deltaE": 0.3,
+   "delta": 16,
+   "shift": null,
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "format icons B I U S",
+   "box": [
+    520,
+    254,
+    230,
+    30
+   ],
+   "deltaE": 0.7,
+   "delta": 11,
+   "shift": null,
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "toolbar dividers",
+   "box": [
+    493,
+    248,
+    496,
+    40
+   ],
+   "deltaE": 0.2,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "colour dot",
+   "box": [
+    1014,
+    256,
+    24,
+    24
+   ],
+   "deltaE": 2.1,
+   "delta": 8,
+   "shift": null,
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "bottom title 'Delay once, then instant'",
+   "box": [
+    88,
+    584,
+    350,
+    38
+   ],
+   "deltaE": 0.6,
+   "delta": 7,
+   "shift": [
+    6,
+    0
+   ],
+   "afterShift": 6,
+   "read": "matches"
+  },
+  {
+   "name": "top toolbar",
+   "box": [
+    374,
+    229,
+    691,
+    78
+   ],
+   "deltaE": 0.1,
+   "delta": 7,
+   "shift": null,
+   "afterShift": 7,
+   "read": "matches"
+  },
+  {
+   "name": "bottom toolbar",
+   "box": [
+    374,
+    733,
+    691,
+    78
+   ],
+   "deltaE": 0.2,
+   "delta": 5,
+   "shift": null,
+   "afterShift": 5,
+   "read": "matches"
+  },
+  {
+   "name": "top card",
+   "box": [
+    48,
+    48,
+    1344,
+    480
+   ],
+   "deltaE": 0.1,
+   "delta": 4,
+   "shift": null,
+   "afterShift": 4,
+   "read": "matches"
+  },
+  {
+   "name": "button hover square",
+   "box": [
+    568,
+    237,
+    64,
+    62
+   ],
+   "deltaE": 0.1,
+   "delta": 4,
+   "shift": null,
+   "afterShift": 4,
+   "read": "matches"
+  },
+  {
+   "name": "top timeline track",
+   "box": [
+    88,
+    478,
+    1264,
+    10
+   ],
+   "deltaE": 1.2,
+   "delta": 4,
+   "shift": null,
+   "afterShift": 4,
+   "read": "matches"
+  },
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1440,
+    1080
+   ],
+   "deltaE": 0.3,
+   "delta": 3,
+   "shift": null,
+   "afterShift": 3,
+   "read": "matches"
+  },
+  {
+   "name": "timeline time label",
+   "box": [
+    1254,
+    474,
+    40,
+    20
+   ],
+   "deltaE": 0.6,
+   "delta": 2,
+   "shift": null,
+   "afterShift": 2,
+   "read": "matches"
+  },
+  {
+   "name": "bottom card",
+   "box": [
+    48,
+    552,
+    1344,
+    480
+   ],
+   "deltaE": 0,
+   "delta": 1,
+   "shift": null,
+   "afterShift": 1,
+   "read": "matches"
+  },
+  {
+   "name": "delay ms pill",
+   "box": [
+    660,
+    337,
+    80,
+    30
+   ],
+   "deltaE": 0.3,
+   "delta": 1,
+   "shift": null,
+   "afterShift": 1,
+   "read": "matches"
+  },
+  {
+   "name": "cursor",
+   "box": [
+    590,
+    280,
+    34,
+    46
+   ],
+   "deltaE": 0.1,
+   "delta": 1,
+   "shift": null,
+   "afterShift": 1,
+   "read": "matches"
+  },
+  {
+   "name": "bottom timeline track + segment",
+   "box": [
+    88,
+    982,
+    1264,
+    10
+   ],
+   "deltaE": 0.1,
+   "delta": 1,
+   "shift": null,
+   "afterShift": 1,
+   "read": "matches"
+  },
+  {
+   "name": "tooltip",
+   "box": [
+    476,
+    172,
+    112,
+    44
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "the render changes where the clip changes",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "0.5s",
+    "clip": 0.2,
+    "render": 0.1,
+    "read": "both still"
+   },
+   {
+    "from": "0.5s",
+    "to": "1.4s",
+    "clip": 0.5,
+    "render": 0.5,
+    "read": "both move"
+   },
+   {
+    "from": "1.4s",
+    "to": "kf1",
+    "clip": 0.4,
+    "render": 0.5,
+    "read": "both move"
+   },
+   {
+    "from": "kf1",
+    "to": "2.4s",
+    "clip": 0.7,
+    "render": 0.6,
+    "read": "both move"
+   },
+   {
+    "from": "2.4s",
+    "to": "kf2",
+    "clip": 1,
+    "render": 1,
+    "read": "both move"
+   },
+   {
+    "from": "kf2",
+    "to": "4.8s",
+    "clip": 0.8,
+    "render": 0.8,
+    "read": "both move"
+   },
+   {
+    "from": "4.8s",
+    "to": "kf3",
+    "clip": 1.1,
+    "render": 1.1,
+    "read": "both move"
+   },
+   {
+    "from": "kf3",
+    "to": "6.8s",
+    "clip": 0.5,
+    "render": 0.5,
+    "read": "both move"
+   },
+   {
+    "from": "6.8s",
+    "to": "7.6s",
+    "clip": 0.5,
+    "render": 0.5,
+    "read": "both move"
+   },
+   {
+    "from": "7.6s",
+    "to": "kf4",
+    "clip": 1.6,
+    "render": 1.7,
+    "read": "both move"
+   },
+   {
+    "from": "kf4",
+    "to": "9.6s",
+    "clip": 0.2,
+    "render": 0.2,
+    "read": "both still"
+   },
+   {
+    "from": "9.6s",
+    "to": "11s",
+    "clip": 0.7,
+    "render": 0.6,
+    "read": "both move"
+   },
+   {
+    "from": "11s",
+    "to": "11.4s",
+    "clip": 0.6,
+    "render": 0.6,
+    "read": "both move"
+   },
+   {
+    "from": "11.4s",
+    "to": "12.6s",
+    "clip": 1.2,
+    "render": 1.1,
+    "read": "both move"
+   },
+   {
+    "from": "12.6s",
+    "to": "13.4s",
+    "clip": 0.6,
+    "render": 0.5,
+    "read": "both move"
+   },
+   {
+    "from": "13.4s",
+    "to": "14.2s",
+    "clip": 0.7,
+    "render": 1.2,
+    "read": "both move"
+   },
+   {
+    "from": "14.2s",
+    "to": "14.5s",
+    "clip": 0,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "14.5s",
+    "to": "15.5s",
+    "clip": 0,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "15.5s",
+    "to": "15.9s",
+    "clip": 0.8,
+    "render": 0.9,
+    "read": "both move"
+   }
+  ],
+  "trajectories": [
+   {
+    "element": "#7c7c7e",
+    "box": [
+     476,
+     172,
+     112,
+     44
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 1.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 17
+     },
+     {
+      "at": 1.9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 2.4,
+      "dx": 2,
+      "dy": -2,
+      "delta": 3
+     },
+     {
+      "at": 4.3,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 4.8,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 6.3,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 6.8,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 7.6,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 9.1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 9.6,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 11,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 11.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 12.6,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 13.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 14.2,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 14.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 15.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 15.9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     }
+    ],
+    "read": "in step"
+   },
+   {
+    "element": "#e5e5e5",
+    "box": [
+     620,
+     307,
+     427,
+     11
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": -12,
+      "dy": 2,
+      "delta": 2
+     },
+     {
+      "at": 0.5,
+      "dx": -12,
+      "dy": 2,
+      "delta": 2
+     },
+     {
+      "at": 1.4,
+      "dx": -12,
+      "dy": 2,
+      "delta": 2
+     },
+     {
+      "at": 1.9,
+      "dx": -2,
+      "dy": 2,
+      "delta": 3
+     },
+     {
+      "at": 2.4,
+      "dx": -10,
+      "dy": 0,
+      "delta": 4
+     },
+     {
+      "at": 4.3,
+      "dx": -12,
+      "dy": 2,
+      "delta": 5
+     },
+     {
+      "at": 4.8,
+      "dx": -10,
+      "dy": 2,
+      "delta": 6
+     },
+     {
+      "at": 6.3,
+      "dx": -12,
+      "dy": 2,
+      "delta": 6
+     },
+     {
+      "at": 6.8,
+      "dx": -12,
+      "dy": 2,
+      "delta": 6
+     },
+     {
+      "at": 7.6,
+      "dx": -12,
+      "dy": 2,
+      "delta": 5
+     },
+     {
+      "at": 9.1,
+      "dx": -12,
+      "dy": -2,
+      "delta": 1
+     },
+     {
+      "at": 9.6,
+      "dx": -12,
+      "dy": -2,
+      "delta": 1
+     },
+     {
+      "at": 11,
+      "dx": -12,
+      "dy": -2,
+      "delta": 1
+     },
+     {
+      "at": 11.4,
+      "dx": -12,
+      "dy": -2,
+      "delta": 1
+     },
+     {
+      "at": 12.6,
+      "dx": 0,
+      "dy": 0,
+      "delta": 1
+     },
+     {
+      "at": 13.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 1
+     },
+     {
+      "at": 14.2,
+      "dx": -12,
+      "dy": 2,
+      "delta": 2
+     },
+     {
+      "at": 14.5,
+      "dx": -12,
+      "dy": 2,
+      "delta": 2
+     },
+     {
+      "at": 15.5,
+      "dx": -12,
+      "dy": 2,
+      "delta": 2
+     },
+     {
+      "at": 15.9,
+      "dx": -12,
+      "dy": 2,
+      "delta": 2
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   }
+  ]
+ },
+ "rubric": {
+  "file": "factory/ewfwo2-tooltip-hover-delay-comparison/rubric.json",
+  "total": 45,
+  "counted": 45,
+  "pass": 42,
+  "fail": 1,
+  "unsure": 2,
+  "unjudged": 0,
+  "passRate": 93,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "style",
+    "element": "page background",
+    "check": "The area around the cards is flat light grey (~#f4f4f4), slightly darker than the white cards",
+    "box": [
+     0,
+     0,
+     1440,
+     1080
+    ],
+    "at": 15.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both show the same light grey gap between white cards. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "present",
+    "element": "cards",
+    "check": "There are exactly two white cards stacked one above the other, each about 1344x480 px",
+    "box": [
+     48,
+     48,
+     1344,
+     984
+    ],
+    "at": 15.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Two stacked white cards in both. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "position",
+    "element": "top card",
+    "check": "The top card spans about x 48–1392, y 48–528, and the bottom card about y 552–1032, with a ~24px gap between them",
+    "box": [
+     48,
+     48,
+     1344,
+     984
+    ],
+    "at": 15.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Card edges and the gap between cards line up with the clip. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "style",
+    "element": "top card",
+    "check": "The card corners are large and rounded, radius about 40px",
+    "box": [
+     48,
+     48,
+     120,
+     120
+    ],
+    "at": 15.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Large rounded corner in both, radius looks about the same. [votes: yes/yes/no]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "text",
+    "element": "top title",
+    "check": "The top card's title reads exactly 'Delay on every hover' in a handwritten script font",
+    "box": [
+     88,
+     80,
+     295,
+     38
+    ],
+    "at": 15.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same text in a similar handwritten script; the width matches within about 2% in the full view. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "style",
+    "element": "top title",
+    "check": "The top title is magenta/pink (~#d02f9e)",
+    "box": [
+     88,
+     80,
+     295,
+     38
+    ],
+    "at": 15.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Magenta title matches the clip. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "text",
+    "element": "bottom title",
+    "check": "The bottom card's title reads exactly 'Delay once, then instant' in the same handwritten script",
+    "box": [
+     88,
+     584,
+     350,
+     38
+    ],
+    "at": 15.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'Delay once, then instant' in the same script. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "style",
+    "element": "bottom title",
+    "check": "The bottom title is mint green (~#4fd6a6)",
+    "box": [
+     88,
+     584,
+     350,
+     38
+    ],
+    "at": 15.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Mint green matches. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "text",
+    "element": "top waiting counter",
+    "check": "The top-right text reads '3.5s waiting', right-aligned to x≈1352, in mid grey regular sans ~22px",
+    "box": [
+     1200,
+     84,
+     160,
+     30
+    ],
+    "at": 15.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'3.5s waiting' in grey, right-aligned at the same x; about 7% narrower than the clip. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "text",
+    "element": "bottom waiting counter",
+    "check": "The bottom card's top-right text reads '0.5s waiting'",
+    "box": [
+     1200,
+     588,
+     160,
+     30
+    ],
+    "at": 15.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'0.5s waiting' matches the clip. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "position",
+    "element": "top toolbar",
+    "check": "The toolbar is centred horizontally in the card at about x 374–1065, y 229–307 (bottom card's at y 733–811)",
+    "box": [
+     374,
+     229,
+     691,
+     78
+    ],
+    "at": 15.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Toolbars sit at the same x and y in both cards. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "style",
+    "element": "top toolbar",
+    "check": "The toolbar is white with ~18px rounded corners and a soft, wide grey drop shadow below it (not a hard border)",
+    "box": [
+     360,
+     220,
+     720,
+     110
+    ],
+    "at": 15.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White rounded toolbar with a soft shadow, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "present",
+    "element": "toolbar contents",
+    "check": "Left to right the toolbar holds: 'Body' with a down chevron, B, I, U, S, a chain link, '< >', a quote/list icon, and a filled colour dot",
+    "box": [
+     374,
+     229,
+     691,
+     78
+    ],
+    "at": 15.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same items in the same order: Body, B, I, U, S, link, <>, list, dot. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "present",
+    "element": "toolbar dividers",
+    "check": "Three thin light-grey vertical dividers split the toolbar: after Body, after S, and before the colour dot",
+    "box": [
+     480,
+     240,
+     520,
+     56
+    ],
+    "at": 15.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Light dividers after Body and after S at the same positions; the third is visible in c13. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "style",
+    "element": "colour dot",
+    "check": "The top toolbar's dot is solid magenta and the bottom toolbar's dot is solid mint green, each ~24px",
+    "box": [
+     1010,
+     250,
+     30,
+     540
+    ],
+    "at": 15.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Magenta and mint dots, same size. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "position",
+    "element": "top timeline",
+    "check": "A thin (~10px) rounded light-grey track runs across the card at y≈483, from x 88 to 1352",
+    "box": [
+     88,
+     474,
+     1264,
+     20
+    ],
+    "at": 15.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Thin rounded grey track at the same y and span. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "present",
+    "element": "top timeline segments",
+    "check": "The top timeline shows exactly 7 separate sky-blue segments, each ~83px long, with grey gaps between",
+    "box": [
+     88,
+     474,
+     1264,
+     20
+    ],
+    "at": 15.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "7 blue segments at the same positions and lengths as the clip, about 66px in this view. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "text",
+    "element": "top timeline label",
+    "check": "The top timeline ends with the black label '6.9s' near x 1255–1292",
+    "box": [
+     1230,
+     470,
+     90,
+     26
+    ],
+    "at": 15.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'6.9s' black label at the same x. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "present",
+    "element": "bottom timeline segments",
+    "check": "The bottom timeline shows exactly 1 sky-blue segment at its left end (x≈88–171)",
+    "box": [
+     88,
+     978,
+     1264,
+     20
+    ],
+    "at": 15.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "One blue segment at the left end, same length. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "text",
+    "element": "bottom timeline label",
+    "check": "The bottom timeline's label reads '3.7s' at about x 725–765",
+    "box": [
+     700,
+     975,
+     90,
+     26
+    ],
+    "at": 15.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'3.7s' at the same position. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "style",
+    "element": "bottom card",
+    "check": "While the top card runs, the bottom card's title, counter, toolbar icons and dot are faded to about 30% (pale mint title, light grey icons)",
+    "box": [
+     48,
+     552,
+     1344,
+     480
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Bottom card title, icons and dot are equally pale mint/grey in both panels. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "style",
+    "element": "tooltip",
+    "check": "A settled tooltip is a near-black (~#151515) rounded rectangle (~10px radius, ~44px tall) with white text",
+    "box": [
+     476,
+     166,
+     120,
+     56
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rounded rectangle with white text, same grey fading state as the clip at 1.4s, similar height and radius. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "text",
+    "element": "tooltip",
+    "check": "The tooltip over B reads 'Bold ⌘B'",
+    "box": [
+     476,
+     166,
+     120,
+     56
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild reads 'Bold ⌘B' like the clip. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "position",
+    "element": "tooltip",
+    "check": "The tooltip is horizontally centred over the hovered button with its bottom ~12px above the toolbar's top edge",
+    "box": [
+     460,
+     160,
+     160,
+     150
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Tooltip is centred over B with a similar gap above the toolbar (about 12px) in both. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "style",
+    "element": "button hover square",
+    "check": "The hovered button sits on a light-grey rounded square (~64x62, ~12px radius)",
+    "box": [
+     490,
+     230,
+     90,
+     76
+    ],
+    "at": 1.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Light-grey rounded square behind B, about 61px tall against the clip's 64px. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "style",
+    "element": "cursor",
+    "check": "Over a button the cursor is a white pointing-hand with black outline; while travelling it is a black arrow",
+    "box": [
+     560,
+     270,
+     80,
+     70
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White pointing hand with black outline in both, same size and place. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "style",
+    "element": "delay ms pill",
+    "check": "Below-right of the cursor sits a thin sky-blue spinner ring followed by a light-blue rounded pill with teal-blue text",
+    "box": [
+     615,
+     330,
+     135,
+     40
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Thin sky-blue ring plus light-blue pill with teal text below-right of the cursor, matching the clip. [votes: no/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "text",
+    "element": "delay ms pill",
+    "check": "The pill reads '458ms' and the ring shows a partial arc (counting down)",
+    "box": [
+     615,
+     330,
+     135,
+     40
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Pill reads 460ms against the clip's 458ms, and the ring shows a short partial arc in both. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "text",
+    "element": "delay ms pill",
+    "check": "Once the delay is over the pill reads '0ms' next to a solid sky-blue ring",
+    "box": [
+     625,
+     330,
+     110,
+     40
+    ],
+    "at": 2.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both show '0ms' next to a solid sky-blue ring. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "motion",
+    "element": "tooltip",
+    "check": "After the cursor moves from B to I, the old 'Bold ⌘B' tooltip stays visible in grey (fading) and is replaced by a grey, fading-in 'Italic ⌘I' tooltip above I",
+    "box": [
+     460,
+     160,
+     220,
+     70
+    ],
+    "at": 1.9,
+    "then": 2.4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Grey 'Bold ⌘B' at 1.9s, then a paler grey 'Italic ⌘I' above I at 2.4s, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "text",
+    "element": "top tooltip sequence",
+    "check": "The strikethrough tooltip reads 'Strikethrough ⌘⇧X'",
+    "box": [
+     620,
+     166,
+     232,
+     56
+    ],
+    "at": 4.8,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Reads 'Strikethrough ⌘⇧X', though the rebuild's grey is slightly darker than the clip's mid-fade. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "text",
+    "element": "top tooltip sequence",
+    "check": "The quote tooltip reads 'Quote ⌘⇧9' and is solid black",
+    "box": [
+     880,
+     160,
+     170,
+     70
+    ],
+    "at": 7.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Solid near-black 'Quote ⌘⇧9' tooltip in both. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "motion",
+    "element": "cursor",
+    "check": "The hand cursor steps left to right across the buttons one per ~0.9s: on I at 2.4s, on the link at 4.8s, on the quote icon at 6.8s",
+    "box": [
+     374,
+     229,
+     691,
+     120
+    ],
+    "at": 2.4,
+    "then": 6.8,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Cursor is on I at 2.4s and on the quote icon at 6.8s in both; the rebuild also shows a faint leftover tooltip that the clip lacks. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "motion",
+    "element": "top waiting counter",
+    "check": "The top counter climbs in 0.5s steps as each delay completes: '0.5s waiting' at 1.9s, '1.0s' at 2.4s, '2.1s' at 4.8s, '3.2s' at 6.8s",
+    "box": [
+     1200,
+     84,
+     160,
+     30
+    ],
+    "at": 1.9,
+    "then": 6.8,
+    "policy": null,
+    "pass": "unsure",
+    "seen": "The crop shows no counter text in either panel, so the waiting counter can't be read. [votes: unsure/unsure/unsure]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "motion",
+    "element": "top timeline segments",
+    "check": "The top timeline grows from 2 blue blocks plus a label '1.6s' to 4 full blocks plus a stub and label '4.0s' as the sweep proceeds",
+    "box": [
+     88,
+     474,
+     1264,
+     20
+    ],
+    "at": 2.4,
+    "then": 4.8,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Two blocks with '1.6s' at 2.4s, four blocks plus a stub with '4.0s' at 4.8s, same positions as the clip. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "motion",
+    "element": "timeline time label",
+    "check": "The black time label rides just after the painted end of the timeline, moving right as time passes (e.g. ~x 285 at 1.9s, ~x 1100 at 6.8s)",
+    "box": [
+     88,
+     470,
+     1264,
+     26
+    ],
+    "at": 1.9,
+    "then": 6.8,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Label '1.1s' sits at about x 217 in the rebuild against about 220 in the clip, just after the painted end. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "motion",
+    "element": "cards",
+    "check": "Around 7.8s the active panel switches: the top card fades to ~30% and the bottom card's title, counter, toolbar and dot turn full strength",
+    "box": [
+     48,
+     48,
+     1344,
+     984
+    ],
+    "at": 7.6,
+    "then": 9.1,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Top card fades to about 30% and the bottom card turns full strength at 9.1s, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "motion",
+    "element": "bottom card",
+    "check": "In the bottom card the first hover (B) shows a counting spinner '194ms' and the counter rises to '0.3s waiting' with a short blue timeline stub '0.3s'",
+    "box": [
+     48,
+     552,
+     1344,
+     480
+    ],
+    "at": 9.6,
+    "then": null,
+    "policy": null,
+    "pass": "unsure",
+    "seen": "The crop cuts off the spinner pill, counter and stub, so only the B hover on the bottom card is visible. [votes: unsure/unsure/unsure]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "motion",
+    "element": "bottom tooltips",
+    "check": "In the bottom card, later hovers (U onwards) show a solid black tooltip immediately with the pill at '0ms', with no counting delay and no grey fade-in",
+    "box": [
+     374,
+     680,
+     800,
+     200
+    ],
+    "at": 11.4,
+    "then": 12.6,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Solid black 'Strikethrough' and 'Quote' tooltips appear immediately in both. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c39.png"
+   },
+   {
+    "id": "c40",
+    "axis": "motion",
+    "element": "bottom waiting counter",
+    "check": "The bottom counter stays at '0.5s waiting' from the second hover to the end while its timeline adds no new blue segments",
+    "box": [
+     48,
+     552,
+     1344,
+     480
+    ],
+    "at": 11,
+    "then": 15.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Top timeline stays at six blocks from 11s to 15.5s and no new segments appear, same as the clip. [votes: unsure/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c40.png"
+   },
+   {
+    "id": "c41",
+    "axis": "motion",
+    "element": "top card",
+    "check": "Between ~13.4s and ~14.2s the dimmed top card fades back to full strength, so at the end both cards show at full colour",
+    "box": [
+     48,
+     48,
+     1344,
+     480
+    ],
+    "at": 13.4,
+    "then": 14.2,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Top card is dimmed at 13.4s and at full colour by 14.2s in both clip and rebuild, though the rebuild still shows a stray 'Quote' tooltip on the bottom card at 13.4s. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c41.png"
+   },
+   {
+    "id": "c42",
+    "axis": "motion",
+    "element": "overall",
+    "check": "The final state (both cards, no cursor, no tooltip) holds still from ~14.2s to the end",
+    "box": [
+     0,
+     0,
+     1440,
+     1080
+    ],
+    "at": 14.5,
+    "then": 15.9,
+    "policy": null,
+    "pass": "no",
+    "seen": "Both panels are full at 14.5s, but at 15.9s the rebuild's bottom card has faded almost to white while the clip's is only partly faded, so the end state does not match. [votes: no/no/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c42.png"
+   },
+   {
+    "id": "c43",
+    "axis": "motion",
+    "element": "cursor",
+    "check": "At the start an arrow cursor rests in empty space at ~(903,380) with a pale '500ms' pill below it, before moving onto B",
+    "box": [
+     880,
+     370,
+     180,
+     100
+    ],
+    "at": 0.5,
+    "then": 1.4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows the same arrow cursor, ring and pale '500ms' pill at 0.5s, and both have them gone by 1.4s. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c43.png"
+   },
+   {
+    "id": "c44",
+    "axis": "style",
+    "element": "format icons",
+    "check": "B is bold, I is a slanted bar, U is underlined, S has a strike line, all dark ~#1a1a1a at ~22px in the active toolbar",
+    "box": [
+     515,
+     250,
+     240,
+     36
+    ],
+    "at": 15.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "B, slanted I, underlined U and struck S are dark and about the same size and weight as the clip's. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c44.png"
+   },
+   {
+    "id": "c45",
+    "axis": "imagery",
+    "element": "link / code / quote icons",
+    "check": "The link, code and quote icons are thin-stroke line icons with the same silhouettes (chain loops, '< >', staggered lines)",
+    "box": [
+     795,
+     250,
+     175,
+     36
+    ],
+    "at": 15.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Link, '< >' and staggered-lines icons are thin-stroke with the same silhouettes and weight as the clip's. [votes: yes/yes/yes]",
+    "image": "factory/ewfwo2-tooltip-hover-delay-comparison/judge/c45.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 1.505,
+  "calls": 9,
+  "images": "factory/ewfwo2-tooltip-hover-delay-comparison/judge",
+  "votes": 3,
+  "spread": [
+   40,
+   42,
+   42
+  ]
+ }
+}

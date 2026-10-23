@@ -1,0 +1,153 @@
+{
+ "slug": "16febh-playful-feedback-toggle-buttons",
+ "title": "Playful Feedback Toggle Buttons",
+ "author": "Nitish Khagwal",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "review",
+ "ended": "round limit",
+ "bestRound": 3,
+ "rank": 95,
+ "allPass": false,
+ "rubric": {
+  "pass": 34,
+  "fail": 1,
+  "unsure": 1,
+  "of": 36,
+  "failed": [
+   "c32 The dislike button fills with a soft pink radial glow centred on the glyph"
+  ]
+ },
+ "score": 93,
+ "motion": "the render changes where the clip changes",
+ "imagery": [
+  {
+   "name": "thumbs-up glyph",
+   "class": "structured",
+   "box": [
+    240,
+    323,
+    60,
+    61
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "thumbs-down glyph",
+   "class": "structured",
+   "box": [
+    420,
+    336,
+    60,
+    60
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "green glow",
+   "class": "css",
+   "box": [
+    190,
+    300,
+    160,
+    120
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "pink glow",
+   "class": "css",
+   "box": [
+    370,
+    300,
+    170,
+    120
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "mouse cursor",
+   "class": "structured",
+   "box": [
+    378,
+    515,
+    38,
+    60
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 12.8,
+   "turns": 62,
+   "costUsd": 3.948888400000001,
+   "judgeUsd": 0.942,
+   "ended": "completed",
+   "score": 93,
+   "rank": 93,
+   "allPass": false,
+   "rubric": {
+    "pass": 33,
+    "fail": 3,
+    "unsure": 0,
+    "of": 36
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 15.4,
+   "turns": 26,
+   "costUsd": 0.8801712,
+   "judgeUsd": 1.034,
+   "ended": "completed",
+   "score": 93,
+   "rank": 95,
+   "allPass": false,
+   "rubric": {
+    "pass": 34,
+    "fail": 1,
+    "unsure": 1,
+    "of": 36
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 44.5,
+   "turns": 27,
+   "costUsd": 0.9142348000000001,
+   "judgeUsd": 0.69,
+   "ended": "completed",
+   "score": 93,
+   "rank": 95,
+   "allPass": false,
+   "rubric": {
+    "pass": 34,
+    "fail": 1,
+    "unsure": 1,
+    "of": 36
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  }
+ ],
+ "minutes": 72.7,
+ "cost": {
+  "codingUsd": 5.74,
+  "judgeUsd": 2.67,
+  "rubricUsd": 0.603,
+  "totalUsd": 9.01
+ },
+ "notes": true,
+ "at": "2026-10-22T23:29:40.552Z"
+}

@@ -1,0 +1,1096 @@
+{
+ "slug": "1pekjm-playful-character-picker-sheet",
+ "frame": {
+  "w": 1964,
+  "h": 1080
+ },
+ "at": "2026-10-22T20:15:35.808Z",
+ "model": "opus",
+ "costUsd": 0.843,
+ "summary": "A single illustrated object centred on a flat near-white (#f6f6f9) canvas with a small grey home-indicator pill at bottom centre (954-1006, 1060-1070): a paper-towel/receipt roll drawn in thick royal-blue (#2826c8) outline, with a 3D box bracket on its left (672-748, 412-556) and a small tab on its right (1272-1288, 450-526). The roll's top is a cylinder (thick curved side strokes down to ~y 640) and below it straight paper hangs to a zig-zag torn bottom edge. On the paper sit list rows separated by lavender dashed lines: a 126 px rounded-square avatar with a 5 px blue border and flat-colour character illustration, a bold blue sans name (Daniel, Alex...), and on the chosen row a blue outlined check circle at the right. Collapsed state (rest 0.9-3.45 s): roll 758-1262 x 316-790, two rows, Daniel then Alex with a check. Motion: 0.15-0.85 s the paper prints down from the roll, overshooting its bottom edge to ~860 at 0.5 s and settling back to ~785, while rows ride down with it. A cursor comes in from bottom-left and clicks Alex. 3.5-4.45 s the whole roll shrinks to a narrow tall receipt (832-1160 x, top 118) that unrolls off the bottom of the frame, now listing Mia, Marcus, Leo, Emma, Daniel, Alex at a ~152 px row pitch with 80 px avatars. The hovered row (Emma) gets a pale lavender (#e8e9f8) band. 5.35-7.0 s the list scrolls inside the paper to show Ethan, Oliver, James at the top, then scrolls back so Lucas and Noah show below Alex. At ~8.05 s clicking Emma moves the check to Emma and tears the receipt along a zig-zag line just under Emma's row. 8.1-9.55 s the lower piece (Daniel, Alex, Lucas, Noah) drops out of the bottom of the frame while the upper part retracts back into the wide collapsed roll, which then rests (9.7-10.65 s) showing Leo then Emma with the check. 10.7-11.65 s it expands again into the narrow receipt, which now ends at Emma (check) with a torn edge, listing Oliver, James, Mia, Marcus, Leo, Emma.",
+ "elements": [
+  {
+   "name": "canvas background",
+   "box": [
+    0,
+    0,
+    1964,
+    1080
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "flat #f6f6f9, no gradient"
+  },
+  {
+   "name": "home indicator pill",
+   "box": [
+    954,
+    1060,
+    52,
+    10
+   ],
+   "kind": "chrome",
+   "class": null,
+   "note": "grey rounded pill at bottom centre, static all clip"
+  },
+  {
+   "name": "roll body outline (collapsed)",
+   "box": [
+    758,
+    316,
+    504,
+    476
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "thick #2826c8 stroke; cylinder top with bulged sides to ~y640, straight paper below, white fill #fcfcfc"
+  },
+  {
+   "name": "torn bottom edge (collapsed)",
+   "box": [
+    760,
+    770,
+    500,
+    22
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "irregular zig-zag blue stroke"
+  },
+  {
+   "name": "left box bracket",
+   "box": [
+    672,
+    412,
+    76,
+    144
+   ],
+   "kind": "decoration",
+   "class": "structured",
+   "note": "3D box drawn in blue outline with inner rectangle"
+  },
+  {
+   "name": "right tab",
+   "box": [
+    1272,
+    450,
+    16,
+    76
+   ],
+   "kind": "decoration",
+   "class": "structured",
+   "note": "small outlined rectangle on right side of roll"
+  },
+  {
+   "name": "dashed divider",
+   "box": [
+    778,
+    347,
+    462,
+    4
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "lavender dashes ~#b9b3ee, repeated between every row"
+  },
+  {
+   "name": "Daniel avatar",
+   "box": [
+    802,
+    383,
+    126,
+    117
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "lime #c4fe43 bg, man in red shirt; blue 5px border, ~22px radius"
+  },
+  {
+   "name": "Daniel label",
+   "box": [
+    955,
+    418,
+    122,
+    40
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "bold blue sans ~38px"
+  },
+  {
+   "name": "Alex avatar",
+   "box": [
+    803,
+    612,
+    126,
+    124
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "violet #a18bf9 bg, man with glasses and tie"
+  },
+  {
+   "name": "Alex label",
+   "box": [
+    955,
+    655,
+    86,
+    40
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "bold blue"
+  },
+  {
+   "name": "check circle",
+   "box": [
+    1172,
+    648,
+    52,
+    52
+   ],
+   "kind": "icon",
+   "class": "css",
+   "note": "blue ring with blue tick inside, no fill"
+  },
+  {
+   "name": "cursor",
+   "box": [
+    900,
+    600,
+    40,
+    40
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "black arrow at first, then white hand pointer with black outline"
+  },
+  {
+   "name": "expanded receipt (narrow)",
+   "box": [
+    832,
+    118,
+    328,
+    962
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "same drawing narrowed; runs off frame bottom; holder at 780-830 x 187-276"
+  },
+  {
+   "name": "hover row band",
+   "box": [
+    845,
+    540,
+    305,
+    150
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "pale lavender #e8e9f8 full-row fill under Emma at 5.1s"
+  },
+  {
+   "name": "other avatars (Mia, Marcus, Leo, Emma, Ethan, Oliver, James, Lucas, Noah)",
+   "box": [
+    863,
+    135,
+    80,
+    820
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "80px rounded squares at ~152px pitch; coral, blue, green, purple, cyan backgrounds"
+  },
+  {
+   "name": "tear line",
+   "box": [
+    838,
+    505,
+    318,
+    20
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "zig-zag blue line under Emma row at 8.1s"
+  },
+  {
+   "name": "falling torn piece",
+   "box": [
+    788,
+    1028,
+    384,
+    52
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "lower receipt part dropping off the bottom at 8.82s"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "canvas background",
+   "axis": "style",
+   "check": "Background is a flat very light grey-lilac (~#f6f6f9) with no gradient, texture, or shadow",
+   "box": [
+    0,
+    0,
+    1964,
+    1080
+   ],
+   "scope": "frame",
+   "at": 2.2,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "home indicator pill",
+   "axis": "present",
+   "check": "A small grey rounded pill ~52x10 px sits centred at the bottom edge (x≈954-1006, y≈1060)",
+   "box": [
+    930,
+    1050,
+    100,
+    30
+   ],
+   "scope": "crop",
+   "at": 2.2,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "roll body outline (collapsed)",
+   "axis": "position",
+   "check": "Collapsed roll spans roughly x 758-1262 and y 316-790, horizontally centred near x 1010",
+   "box": [
+    660,
+    300,
+    640,
+    510
+   ],
+   "scope": "frame",
+   "at": 2.2,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "roll body outline (collapsed)",
+   "axis": "style",
+   "check": "Roll is drawn with a thick (~8-12px) saturated royal-blue (#2826c8) outline, paper fill near-white",
+   "box": [
+    740,
+    300,
+    540,
+    500
+   ],
+   "scope": "crop",
+   "at": 2.2,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "roll body outline (collapsed)",
+   "axis": "style",
+   "check": "Upper part of the sides bulge outward like a cylinder (thicker curved strokes) down to ~y 640, then straight paper continues below",
+   "box": [
+    740,
+    300,
+    540,
+    360
+   ],
+   "scope": "crop",
+   "at": 2.2,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "torn bottom edge (collapsed)",
+   "axis": "style",
+   "check": "Bottom edge of the paper is an irregular zig-zag torn line, not straight or rounded",
+   "box": [
+    750,
+    760,
+    520,
+    40
+   ],
+   "scope": "crop",
+   "at": 2.2,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "left box bracket",
+   "axis": "present",
+   "check": "A 3D box-shaped bracket drawn in blue outline (front face with an inner tall rectangle, visible top and side faces) attaches to the roll's left side at x≈672-748, y≈412-556",
+   "box": [
+    660,
+    400,
+    100,
+    170
+   ],
+   "scope": "crop",
+   "at": 2.2,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "right tab",
+   "axis": "present",
+   "check": "A small narrow outlined tab (~16x76 px) sticks out of the roll's right side at x≈1272-1288, y≈450-526",
+   "box": [
+    1260,
+    440,
+    40,
+    100
+   ],
+   "scope": "crop",
+   "at": 2.2,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "Daniel label",
+   "axis": "text",
+   "check": "Upper row reads exactly \"Daniel\" in bold blue sans, ~38px cap-to-baseline, left edge at x≈955",
+   "box": [
+    940,
+    400,
+    160,
+    70
+   ],
+   "scope": "crop",
+   "at": 2.2,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "Alex label",
+   "axis": "text",
+   "check": "Lower row reads exactly \"Alex\" in the same bold blue, left edge at x≈955, y centre ≈674",
+   "box": [
+    940,
+    640,
+    120,
+    70
+   ],
+   "scope": "crop",
+   "at": 2.2,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "Daniel avatar",
+   "axis": "style",
+   "check": "Avatar is a rounded square (~126px, ~22px radius) with a ~5px blue border",
+   "box": [
+    795,
+    375,
+    140,
+    135
+   ],
+   "scope": "crop",
+   "at": 2.2,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "Daniel avatar",
+   "axis": "imagery",
+   "check": "Daniel avatar is an original flat drawing of a man in a red shirt on a lime-green (#c4fe43) background, not copied pixels",
+   "box": [
+    795,
+    375,
+    140,
+    135
+   ],
+   "scope": "crop",
+   "at": 2.2,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "Alex avatar",
+   "axis": "imagery",
+   "check": "Alex avatar is an original flat drawing of a dark-haired man with glasses, white collar and dark tie on a violet (#a18bf9) background",
+   "box": [
+    795,
+    605,
+    140,
+    140
+   ],
+   "scope": "crop",
+   "at": 2.2,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "check circle",
+   "axis": "style",
+   "check": "Alex row has a blue outlined circle (~52px) with a blue tick inside, unfilled, right-aligned at x≈1172-1224",
+   "box": [
+    1160,
+    635,
+    80,
+    80
+   ],
+   "scope": "crop",
+   "at": 2.2,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "check circle",
+   "axis": "present",
+   "check": "Only one row (Alex) shows a check; Daniel row has none",
+   "box": [
+    760,
+    320,
+    500,
+    470
+   ],
+   "scope": "crop",
+   "at": 2.2,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "dashed divider",
+   "axis": "style",
+   "check": "Rows are separated by horizontal lavender dashed lines (~2px, ~12px dashes) spanning the paper width, at y≈349 and y≈561",
+   "box": [
+    770,
+    330,
+    480,
+    250
+   ],
+   "scope": "crop",
+   "at": 2.2,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "roll body outline (collapsed)",
+   "axis": "present",
+   "check": "A sliver of a third row's avatar (coral, Emma) is cut off at the top edge of the roll, implying content continues upward into the roll",
+   "box": [
+    790,
+    310,
+    160,
+    30
+   ],
+   "scope": "crop",
+   "at": 0.5,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "torn bottom edge (collapsed)",
+   "axis": "motion",
+   "check": "During the intro the paper extends downward: bottom edge is at y≈860 at 0.5s and settles back up to y≈785 by 1.0s (overshoot ~75px then return)",
+   "box": [
+    740,
+    740,
+    540,
+    140
+   ],
+   "scope": "frame",
+   "at": 0.5,
+   "then": 1
+  },
+  {
+   "id": "c19",
+   "element": "Daniel avatar",
+   "axis": "motion",
+   "check": "Rows ride down with the paper during the intro: Daniel avatar top is at y≈440 at 0.5s and y≈380 at 1.0s",
+   "box": [
+    790,
+    370,
+    150,
+    200
+   ],
+   "scope": "frame",
+   "at": 0.5,
+   "then": 1
+  },
+  {
+   "id": "c20",
+   "element": "roll body outline (collapsed)",
+   "axis": "motion",
+   "check": "Nothing moves between 1.0s and 2.2s except the cursor; roll, rows and check stay put",
+   "box": [
+    660,
+    300,
+    640,
+    510
+   ],
+   "scope": "frame",
+   "at": 1,
+   "then": 2.2
+  },
+  {
+   "id": "c21",
+   "element": "cursor",
+   "axis": "motion",
+   "check": "Cursor moves from bottom-left of the roll (≈680,810 at 2.2s) up onto the Alex label by 2.7s and turns into a hand pointer",
+   "box": [
+    640,
+    600,
+    500,
+    240
+   ],
+   "scope": "frame",
+   "at": 2.2,
+   "then": 2.7
+  },
+  {
+   "id": "c22",
+   "element": "cursor",
+   "axis": "style",
+   "check": "Over a row the cursor is a white pointing-hand with black outline, ~40px",
+   "box": [
+    1040,
+    580,
+    70,
+    70
+   ],
+   "scope": "crop",
+   "at": 5.1,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "expanded receipt (narrow)",
+   "axis": "motion",
+   "check": "Between 3.5s and 4.45s the roll narrows from ~504px to ~320px wide and its top rises from y≈316 to y≈120 while the paper lengthens down past the frame bottom",
+   "box": [
+    640,
+    100,
+    700,
+    980
+   ],
+   "scope": "frame",
+   "at": 2.2,
+   "then": 5.5
+  },
+  {
+   "id": "c24",
+   "element": "expanded receipt (narrow)",
+   "axis": "position",
+   "check": "Expanded receipt spans x≈835-1158 with top at y≈118; the bracket sits at x≈780-830, y≈187-276",
+   "box": [
+    770,
+    100,
+    420,
+    200
+   ],
+   "scope": "frame",
+   "at": 5.1,
+   "then": null
+  },
+  {
+   "id": "c25",
+   "element": "expanded receipt (narrow)",
+   "axis": "text",
+   "check": "Expanded list at 5.1s reads top to bottom: \"Mia\", \"Marcus\", \"Leo\", \"Emma\", \"Daniel\", \"Alex\"",
+   "box": [
+    835,
+    118,
+    325,
+    870
+   ],
+   "scope": "crop",
+   "at": 5.1,
+   "then": null
+  },
+  {
+   "id": "c26",
+   "element": "expanded receipt (narrow)",
+   "axis": "position",
+   "check": "Rows in the expanded state are spaced at ~152px pitch (name centres ≈159, 306, 459, 611, 763, 914)",
+   "box": [
+    835,
+    118,
+    325,
+    870
+   ],
+   "scope": "frame",
+   "at": 5.1,
+   "then": null
+  },
+  {
+   "id": "c27",
+   "element": "other avatars",
+   "axis": "style",
+   "check": "In the expanded state avatars shrink to ~80px rounded squares with the same blue border, left edge at x≈863",
+   "box": [
+    855,
+    410,
+    100,
+    100
+   ],
+   "scope": "crop",
+   "at": 5.1,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "expanded receipt (narrow)",
+   "axis": "position",
+   "check": "At 5.1s the receipt's torn bottom edge is visible at y≈985 with Alex (check) as the last row",
+   "box": [
+    830,
+    880,
+    340,
+    120
+   ],
+   "scope": "crop",
+   "at": 5.1,
+   "then": null
+  },
+  {
+   "id": "c29",
+   "element": "hover row band",
+   "axis": "style",
+   "check": "The hovered Emma row is filled with a pale lavender (#e8e9f8) band spanning the full paper width between its two dividers",
+   "box": [
+    840,
+    535,
+    315,
+    160
+   ],
+   "scope": "crop",
+   "at": 5.1,
+   "then": null
+  },
+  {
+   "id": "c30",
+   "element": "hover row band",
+   "axis": "present",
+   "check": "Rows not under the cursor have no lavender fill",
+   "box": [
+    840,
+    690,
+    315,
+    300
+   ],
+   "scope": "crop",
+   "at": 5.1,
+   "then": null
+  },
+  {
+   "id": "c31",
+   "element": "other avatars",
+   "axis": "imagery",
+   "check": "Each name has its own distinct original flat character avatar: Mia (coral bg, dark hair), Marcus (coral bg, blue hoodie), Leo (blue bg, red cap), Emma (coral bg, blonde girl)",
+   "box": [
+    855,
+    130,
+    100,
+    540
+   ],
+   "scope": "crop",
+   "at": 5.1,
+   "then": null
+  },
+  {
+   "id": "c32",
+   "element": "expanded receipt (narrow)",
+   "axis": "motion",
+   "check": "Between 5.5s and 6.38s the list scrolls inside the receipt: content moves down so new rows \"Ethan\", \"Oliver\", \"James\" appear at the top while the receipt outline stays fixed",
+   "box": [
+    835,
+    118,
+    325,
+    962
+   ],
+   "scope": "frame",
+   "at": 5.5,
+   "then": 6.38
+  },
+  {
+   "id": "c33",
+   "element": "expanded receipt (narrow)",
+   "axis": "text",
+   "check": "At 6.38s list reads top to bottom: \"Ethan\", \"Oliver\", \"James\", \"Mia\", \"Marcus\", \"Leo\", \"Emma\"",
+   "box": [
+    835,
+    118,
+    325,
+    962
+   ],
+   "scope": "crop",
+   "at": 6.38,
+   "then": null
+  },
+  {
+   "id": "c34",
+   "element": "expanded receipt (narrow)",
+   "axis": "text",
+   "check": "At 7.6s list reads: \"Marcus\", \"Leo\", \"Emma\", \"Daniel\", \"Alex\", \"Lucas\", \"Noah\" (Lucas and Noah follow Alex)",
+   "box": [
+    835,
+    118,
+    325,
+    962
+   ],
+   "scope": "crop",
+   "at": 7.6,
+   "then": null
+  },
+  {
+   "id": "c35",
+   "element": "other avatars",
+   "axis": "imagery",
+   "check": "Lucas avatar is a man in red on a green background; Noah avatar is a boy with green cap on a purple/pink background; both original flat drawings",
+   "box": [
+    860,
+    845,
+    95,
+    230
+   ],
+   "scope": "crop",
+   "at": 7.6,
+   "then": null
+  },
+  {
+   "id": "c36",
+   "element": "check circle",
+   "axis": "motion",
+   "check": "Clicking Emma (~8.0s) puts the check circle on the Emma row at x≈1100-1132 and Alex no longer has it",
+   "box": [
+    835,
+    370,
+    325,
+    450
+   ],
+   "scope": "frame",
+   "at": 7.6,
+   "then": 8.1
+  },
+  {
+   "id": "c37",
+   "element": "tear line",
+   "axis": "present",
+   "check": "At 8.1s a blue zig-zag tear line cuts across the receipt directly under the Emma row (y≈505-520)",
+   "box": [
+    835,
+    495,
+    325,
+    35
+   ],
+   "scope": "crop",
+   "at": 8.1,
+   "then": null
+  },
+  {
+   "id": "c38",
+   "element": "falling torn piece",
+   "axis": "motion",
+   "check": "After the tear the lower piece (Daniel, Alex, Lucas, Noah) slides down out of frame; by 8.82s only its torn top edge shows at y≈1030-1080",
+   "box": [
+    780,
+    500,
+    400,
+    580
+   ],
+   "scope": "frame",
+   "at": 8.1,
+   "then": 8.82
+  },
+  {
+   "id": "c39",
+   "element": "roll body outline (collapsed)",
+   "axis": "motion",
+   "check": "Between 8.1s and 9.7s the upper part retracts into the wide collapsed roll and returns to centre (x≈758-1262, y≈316-790)",
+   "box": [
+    640,
+    100,
+    700,
+    800
+   ],
+   "scope": "frame",
+   "at": 8.82,
+   "then": 10.2
+  },
+  {
+   "id": "c40",
+   "element": "roll body outline (collapsed)",
+   "axis": "text",
+   "check": "At rest at 10.2s the collapsed roll shows \"Leo\" on top and \"Emma\" below with the check circle on Emma",
+   "box": [
+    740,
+    300,
+    560,
+    500
+   ],
+   "scope": "crop",
+   "at": 10.2,
+   "then": null
+  },
+  {
+   "id": "c41",
+   "element": "roll body outline (collapsed)",
+   "axis": "motion",
+   "check": "Between 10.2s and 10.7s the collapsed roll does not change size or position (only the cursor moves)",
+   "box": [
+    640,
+    300,
+    700,
+    520
+   ],
+   "scope": "frame",
+   "at": 10.2,
+   "then": 10.7
+  },
+  {
+   "id": "c42",
+   "element": "expanded receipt (narrow)",
+   "axis": "motion",
+   "check": "Between 10.7s and 11.65s the roll expands again into the narrow tall receipt with top near y≈120",
+   "box": [
+    640,
+    100,
+    700,
+    980
+   ],
+   "scope": "frame",
+   "at": 10.2,
+   "then": 12.5
+  },
+  {
+   "id": "c43",
+   "element": "expanded receipt (narrow)",
+   "axis": "text",
+   "check": "Final expanded list reads \"Oliver\", \"James\", \"Mia\", \"Marcus\", \"Leo\", \"Emma\" and ends at Emma (check) with a torn bottom edge; Daniel/Alex/Lucas/Noah are gone",
+   "box": [
+    835,
+    100,
+    325,
+    960
+   ],
+   "scope": "crop",
+   "at": 12.5,
+   "then": null
+  },
+  {
+   "id": "c44",
+   "element": "left box bracket",
+   "axis": "motion",
+   "check": "The left bracket and right tab travel with the roll top: they move from y≈412-556 (collapsed) to y≈187-276 (expanded) and scale down with it",
+   "box": [
+    660,
+    150,
+    660,
+    420
+   ],
+   "scope": "frame",
+   "at": 2.2,
+   "then": 5.1
+  },
+  {
+   "id": "c45",
+   "element": "canvas background",
+   "axis": "style",
+   "check": "No drop shadows anywhere: roll, avatars and band are flat outline-and-fill drawing",
+   "box": [
+    640,
+    100,
+    700,
+    980
+   ],
+   "scope": "crop",
+   "at": 5.1,
+   "then": null
+  },
+  {
+   "id": "c46",
+   "element": "Daniel label",
+   "axis": "style",
+   "check": "Name text colour is the same royal blue as the outlines (~#2826c8), not black",
+   "box": [
+    940,
+    400,
+    160,
+    70
+   ],
+   "scope": "crop",
+   "at": 2.2,
+   "then": null
+  }
+ ],
+ "imagery": [
+  {
+   "name": "Daniel avatar",
+   "box": [
+    802,
+    383,
+    126,
+    117
+   ],
+   "class": "structured",
+   "what": "flat cartoon man, short dark hair, red shirt, lime-green background",
+   "at": 2.2
+  },
+  {
+   "name": "Alex avatar",
+   "box": [
+    803,
+    612,
+    126,
+    124
+   ],
+   "class": "structured",
+   "what": "flat cartoon man in profile with glasses, white collar, dark tie, brown jacket, violet background",
+   "at": 2.2
+  },
+  {
+   "name": "Mia avatar",
+   "box": [
+    863,
+    135,
+    80,
+    60
+   ],
+   "class": "structured",
+   "what": "woman with long dark hair, white top, coral background",
+   "at": 5.1
+  },
+  {
+   "name": "Marcus avatar",
+   "box": [
+    863,
+    266,
+    80,
+    80
+   ],
+   "class": "structured",
+   "what": "man with dark quiff in blue hoodie, coral background",
+   "at": 5.1
+  },
+  {
+   "name": "Leo avatar",
+   "box": [
+    863,
+    419,
+    80,
+    80
+   ],
+   "class": "structured",
+   "what": "smiling boy with red cap, blue background",
+   "at": 5.1
+  },
+  {
+   "name": "Emma avatar",
+   "box": [
+    863,
+    571,
+    80,
+    80
+   ],
+   "class": "structured",
+   "what": "smiling blonde girl, coral background",
+   "at": 5.1
+  },
+  {
+   "name": "Ethan/Oliver/James avatars",
+   "box": [
+    865,
+    125,
+    80,
+    355
+   ],
+   "class": "structured",
+   "what": "Ethan: man on purple; Oliver: man with glasses and green shirt on cyan; James: yellow-skinned man in suit on indigo",
+   "at": 6.38
+  },
+  {
+   "name": "Lucas/Noah avatars",
+   "box": [
+    865,
+    850,
+    80,
+    220
+   ],
+   "class": "structured",
+   "what": "Lucas: man in red on green; Noah: boy with green cap on pink-purple",
+   "at": 7.6
+  },
+  {
+   "name": "roll and holder drawing",
+   "box": [
+    672,
+    316,
+    616,
+    476
+   ],
+   "class": "css",
+   "what": "blue-outlined paper roll with cylinder top, zig-zag torn bottom, 3D box bracket and side tab",
+   "at": 2.2
+  }
+ ],
+ "moves": [
+  {
+   "element": "receipt paper (intro print)",
+   "what": "paper extends downward with overshoot then settles; rows ride down with it",
+   "from": 0.15,
+   "to": 0.85,
+   "px": 132
+  },
+  {
+   "element": "cursor",
+   "what": "arrow enters from bottom-left, becomes hand over Alex and clicks",
+   "from": 2.2,
+   "to": 3.45,
+   "px": null
+  },
+  {
+   "element": "roll",
+   "what": "collapses from wide roll to narrow tall receipt; top rises ~196px, width 504→~320, paper unrolls past frame bottom",
+   "from": 3.5,
+   "to": 4.45,
+   "px": 196
+  },
+  {
+   "element": "receipt bottom",
+   "what": "torn bottom edge drops further, off-screen",
+   "from": 5.35,
+   "to": 5.65,
+   "px": 68
+  },
+  {
+   "element": "list content",
+   "what": "scrolls inside receipt to reveal Ethan/Oliver/James then back to show Lucas/Noah; hover band follows cursor row",
+   "from": 5.8,
+   "to": 7.05,
+   "px": null
+  },
+  {
+   "element": "check + tear",
+   "what": "click Emma: check moves to Emma, zig-zag tear appears under Emma row",
+   "from": 8,
+   "to": 8.1,
+   "px": null
+  },
+  {
+   "element": "torn lower piece",
+   "what": "falls down and out of frame",
+   "from": 8.1,
+   "to": 9.55,
+   "px": 500
+  },
+  {
+   "element": "roll",
+   "what": "upper part retracts back to wide collapsed roll at centre showing Leo / Emma ✓",
+   "from": 8.1,
+   "to": 9.55,
+   "px": 196
+  },
+  {
+   "element": "roll",
+   "what": "expands again to narrow receipt ending at Emma ✓",
+   "from": 10.7,
+   "to": 11.65,
+   "px": 188
+  }
+ ]
+}

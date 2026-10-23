@@ -70,8 +70,9 @@ for (const slug of existsSync("factory") ? readdirSync("factory").sort() : []) {
   const pattern = notes.split(/^## Pattern\s*$/m)[1]?.trim() ?? "";
   const title = html.match(/<title>([^<]*)<\/title>/)?.[1] ?? slug;
   const needs = [...html.matchAll(/fonts\.googleapis\.com\/css2\?family=([^"&]+)/g)].map((m) => decodeURIComponent(m[1]).split(":")[0].replace(/\+/g, " ") + " (Google Fonts)");
-  if (!html.includes("--u: 1px;")) { console.error(`${slug}: no "--u: 1px;" to scale for the embed, skipped`); continue; }
-  const embed = await minifyHtml(html.replace("--u: 1px;", `--u: min(calc(100vw / ${frame.w}), calc(100vh / ${frame.h}));`)
+  const U = /--u:\s*1px;/;
+  if (!U.test(html)) { console.error(`${slug}: no "--u: 1px;" to scale for the embed, skipped`); continue; }
+  const embed = await minifyHtml(html.replace(U, `--u: min(calc(100vw / ${frame.w}), calc(100vh / ${frame.h}));`)
     .replace(/(html, body \{[^}]*\})/, "$1\nbody { display: flex; align-items: center; justify-content: center; height: 100vh; }"));
   const { hint, ...rest } = build;
   /* the recording: the demo's length comes from the checker's last moment, or the file's own timeline comment */

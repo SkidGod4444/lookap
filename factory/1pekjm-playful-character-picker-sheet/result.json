@@ -1,0 +1,202 @@
+{
+ "slug": "1pekjm-playful-character-picker-sheet",
+ "title": "Playful Character Picker Sheet",
+ "author": "Harshit",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "review",
+ "ended": "round limit",
+ "bestRound": 2,
+ "rank": 90,
+ "allPass": false,
+ "rubric": {
+  "pass": 42,
+  "fail": 2,
+  "unsure": 2,
+  "of": 46,
+  "failed": [
+   "c08 A small narrow outlined tab (~16x76 px) sticks out of the roll's right side at x≈1272-1288, y≈450-526",
+   "c22 Over a row the cursor is a white pointing-hand with black outline, ~40px"
+  ]
+ },
+ "score": 80,
+ "motion": "the render changes where the clip changes",
+ "imagery": [
+  {
+   "name": "Daniel avatar",
+   "class": "structured",
+   "box": [
+    802,
+    383,
+    126,
+    117
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "Alex avatar",
+   "class": "structured",
+   "box": [
+    803,
+    612,
+    126,
+    124
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "Mia avatar",
+   "class": "structured",
+   "box": [
+    863,
+    135,
+    80,
+    60
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "Marcus avatar",
+   "class": "structured",
+   "box": [
+    863,
+    266,
+    80,
+    80
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "Leo avatar",
+   "class": "structured",
+   "box": [
+    863,
+    419,
+    80,
+    80
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "Emma avatar",
+   "class": "structured",
+   "box": [
+    863,
+    571,
+    80,
+    80
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "Ethan/Oliver/James avatars",
+   "class": "structured",
+   "box": [
+    865,
+    125,
+    80,
+    355
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "Lucas/Noah avatars",
+   "class": "structured",
+   "box": [
+    865,
+    850,
+    80,
+    220
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "roll and holder drawing",
+   "class": "css",
+   "box": [
+    672,
+    316,
+    616,
+    476
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 12,
+   "turns": 31,
+   "costUsd": 1.1064558,
+   "judgeUsd": 0.995,
+   "ended": "completed",
+   "score": 79,
+   "rank": 72,
+   "allPass": false,
+   "rubric": {
+    "pass": 37,
+    "fail": 7,
+    "unsure": 2,
+    "of": 46
+   },
+   "motion": "the render stays still in 1 of 15 spans where the clip moves",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 14.3,
+   "turns": 39,
+   "costUsd": 1.2613397999999998,
+   "judgeUsd": 1.075,
+   "ended": "completed",
+   "score": 80,
+   "rank": 90,
+   "allPass": false,
+   "rubric": {
+    "pass": 42,
+    "fail": 2,
+    "unsure": 2,
+    "of": 46
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 11.5,
+   "turns": 33,
+   "costUsd": 1.0702664,
+   "judgeUsd": 1.248,
+   "ended": "completed",
+   "score": 80,
+   "rank": 88,
+   "allPass": false,
+   "rubric": {
+    "pass": 41,
+    "fail": 3,
+    "unsure": 2,
+    "of": 46
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": false
+  }
+ ],
+ "minutes": 37.8,
+ "cost": {
+  "codingUsd": 3.44,
+  "judgeUsd": 3.32,
+  "rubricUsd": 0.843,
+  "totalUsd": 7.6
+ },
+ "notes": true,
+ "at": "2026-10-22T22:16:58.160Z"
+}

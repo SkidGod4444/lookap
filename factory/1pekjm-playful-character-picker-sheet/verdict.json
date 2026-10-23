@@ -1,0 +1,1690 @@
+{
+ "slug": "1pekjm-playful-character-picker-sheet",
+ "at": "2026-10-22T22:05:27.692Z",
+ "runs": 24,
+ "html": "factory/1pekjm-playful-character-picker-sheet/index.html",
+ "pixel": {
+  "score": 80,
+  "stills": 84,
+  "motion": 79,
+  "moments": 16
+ },
+ "animations": 16,
+ "rank": 90,
+ "allPass": false,
+ "elements": [
+  {
+   "name": "check circle",
+   "box": [
+    1172,
+    648,
+    52,
+    52
+   ],
+   "deltaE": 7.8,
+   "delta": 64,
+   "shift": [
+    -8,
+    -4
+   ],
+   "afterShift": 27,
+   "read": "misplaced by 8 x 4 px"
+  },
+  {
+   "name": "Alex label",
+   "box": [
+    955,
+    655,
+    86,
+    40
+   ],
+   "deltaE": 7.7,
+   "delta": 48,
+   "shift": [
+    -8,
+    -4
+   ],
+   "afterShift": 8,
+   "read": "misplaced by 8 x 4 px"
+  },
+  {
+   "name": "right tab",
+   "box": [
+    1272,
+    450,
+    16,
+    76
+   ],
+   "deltaE": 24.7,
+   "delta": 45,
+   "shift": [
+    2,
+    -4
+   ],
+   "afterShift": 21,
+   "read": "misplaced by 2 x 4 px"
+  },
+  {
+   "name": "Alex avatar",
+   "box": [
+    803,
+    612,
+    126,
+    124
+   ],
+   "deltaE": 1.4,
+   "delta": 44,
+   "shift": [
+    -8,
+    -4
+   ],
+   "afterShift": 15,
+   "read": "misplaced by 8 x 4 px"
+  },
+  {
+   "name": "hover row band",
+   "box": [
+    845,
+    540,
+    305,
+    150
+   ],
+   "deltaE": 1.2,
+   "delta": 40,
+   "shift": [
+    -8,
+    -4
+   ],
+   "afterShift": 13,
+   "read": "misplaced by 8 x 4 px"
+  },
+  {
+   "name": "roll body outline (collapsed)",
+   "box": [
+    758,
+    316,
+    504,
+    476
+   ],
+   "deltaE": 1.3,
+   "delta": 27,
+   "shift": [
+    0,
+    -2
+   ],
+   "afterShift": 19,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "home indicator pill",
+   "box": [
+    954,
+    1060,
+    52,
+    10
+   ],
+   "deltaE": 3.3,
+   "delta": 23,
+   "shift": null,
+   "afterShift": 23,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "left box bracket",
+   "box": [
+    672,
+    412,
+    76,
+    144
+   ],
+   "deltaE": 1.5,
+   "delta": 22,
+   "shift": null,
+   "afterShift": 22,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "expanded receipt (narrow)",
+   "box": [
+    832,
+    118,
+    328,
+    962
+   ],
+   "deltaE": 0.4,
+   "delta": 12,
+   "shift": [
+    -8,
+    -2
+   ],
+   "afterShift": 7,
+   "read": "matches"
+  },
+  {
+   "name": "other avatars (Mia, Marcus, Leo, Emma, Ethan, Oliver, James, Lucas, Noah)",
+   "box": [
+    863,
+    135,
+    80,
+    820
+   ],
+   "deltaE": 0.3,
+   "delta": 10,
+   "shift": [
+    -8,
+    -2
+   ],
+   "afterShift": 5,
+   "read": "matches"
+  },
+  {
+   "name": "canvas background",
+   "box": [
+    0,
+    0,
+    1964,
+    1080
+   ],
+   "deltaE": 0.3,
+   "delta": 6,
+   "shift": null,
+   "afterShift": 6,
+   "read": "matches"
+  },
+  {
+   "name": "falling torn piece",
+   "box": [
+    788,
+    1028,
+    384,
+    52
+   ],
+   "deltaE": 0.1,
+   "delta": 4,
+   "shift": null,
+   "afterShift": 4,
+   "read": "matches"
+  },
+  {
+   "name": "torn bottom edge (collapsed)",
+   "box": [
+    760,
+    770,
+    500,
+    22
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "dashed divider",
+   "box": [
+    778,
+    347,
+    462,
+    4
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "Daniel avatar",
+   "box": [
+    802,
+    383,
+    126,
+    117
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "Daniel label",
+   "box": [
+    955,
+    418,
+    122,
+    40
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "cursor",
+   "box": [
+    900,
+    600,
+    40,
+    40
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "tear line",
+   "box": [
+    838,
+    505,
+    318,
+    20
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "the render changes where the clip changes",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "0.5s",
+    "clip": 2.9,
+    "render": 2.5,
+    "read": "both move"
+   },
+   {
+    "from": "0.5s",
+    "to": "1s",
+    "clip": 3.7,
+    "render": 3.4,
+    "read": "both move"
+   },
+   {
+    "from": "1s",
+    "to": "kf1",
+    "clip": 2.2,
+    "render": 1.5,
+    "read": "both move"
+   },
+   {
+    "from": "kf1",
+    "to": "2.7s",
+    "clip": 1.1,
+    "render": 0.6,
+    "read": "both move"
+   },
+   {
+    "from": "2.7s",
+    "to": "3.98s",
+    "clip": 5.8,
+    "render": 5.7,
+    "read": "both move"
+   },
+   {
+    "from": "3.98s",
+    "to": "kf2",
+    "clip": 5.3,
+    "render": 4.9,
+    "read": "both move"
+   },
+   {
+    "from": "kf2",
+    "to": "5.5s",
+    "clip": 3.9,
+    "render": 2.8,
+    "read": "both move"
+   },
+   {
+    "from": "5.5s",
+    "to": "6.38s",
+    "clip": 4,
+    "render": 2.8,
+    "read": "both move"
+   },
+   {
+    "from": "6.38s",
+    "to": "kf3",
+    "clip": 2.6,
+    "render": 2.8,
+    "read": "both move"
+   },
+   {
+    "from": "kf3",
+    "to": "8.1s",
+    "clip": 2.3,
+    "render": 0.6,
+    "read": "both move"
+   },
+   {
+    "from": "8.1s",
+    "to": "8.82s",
+    "clip": 4.9,
+    "render": 4.9,
+    "read": "both move"
+   },
+   {
+    "from": "8.82s",
+    "to": "kf4",
+    "clip": 4.6,
+    "render": 5,
+    "read": "both move"
+   },
+   {
+    "from": "kf4",
+    "to": "10.7s",
+    "clip": 1.8,
+    "render": 1.1,
+    "read": "both move"
+   },
+   {
+    "from": "10.7s",
+    "to": "11.18s",
+    "clip": 5.7,
+    "render": 5.5,
+    "read": "both move"
+   },
+   {
+    "from": "11.18s",
+    "to": "12.5s",
+    "clip": 5.2,
+    "render": 4.9,
+    "read": "both move"
+   }
+  ],
+  "trajectories": [
+   {
+    "element": "#fcfcfc",
+    "box": [
+     767,
+     322,
+     489,
+     462
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 4,
+      "dy": -4,
+      "delta": 16
+     },
+     {
+      "at": 0.5,
+      "dx": 2,
+      "dy": 12,
+      "delta": 30
+     },
+     {
+      "at": 1,
+      "dx": 2,
+      "dy": 4,
+      "delta": 32
+     },
+     {
+      "at": 2.2,
+      "dx": -2,
+      "dy": 2,
+      "delta": 27
+     },
+     {
+      "at": 2.7,
+      "dx": 0,
+      "dy": 2,
+      "delta": 28
+     },
+     {
+      "at": 3.98,
+      "dx": -4,
+      "dy": 8,
+      "delta": 40
+     },
+     {
+      "at": 5.1,
+      "dx": -2,
+      "dy": 2,
+      "delta": 22
+     },
+     {
+      "at": 5.5,
+      "dx": 0,
+      "dy": -12,
+      "delta": 41
+     },
+     {
+      "at": 6.38,
+      "dx": -2,
+      "dy": -6,
+      "delta": 24
+     },
+     {
+      "at": 7.6,
+      "dx": -2,
+      "dy": 2,
+      "delta": 23
+     },
+     {
+      "at": 8.1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 20
+     },
+     {
+      "at": 8.82,
+      "dx": -12,
+      "dy": 4,
+      "delta": 42
+     },
+     {
+      "at": 10.2,
+      "dx": 2,
+      "dy": 2,
+      "delta": 30
+     },
+     {
+      "at": 10.7,
+      "dx": 2,
+      "dy": 2,
+      "delta": 29
+     },
+     {
+      "at": 11.18,
+      "dx": -4,
+      "dy": 12,
+      "delta": 42
+     },
+     {
+      "at": 12.5,
+      "dx": -2,
+      "dy": 6,
+      "delta": 19
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   },
+   {
+    "element": "#2826c8",
+    "box": [
+     672,
+     317,
+     616,
+     475
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 2,
+      "dy": -2,
+      "delta": 16
+     },
+     {
+      "at": 0.5,
+      "dx": 2,
+      "dy": 0,
+      "delta": 37
+     },
+     {
+      "at": 1,
+      "dx": 2,
+      "dy": 0,
+      "delta": 29
+     },
+     {
+      "at": 2.2,
+      "dx": 0,
+      "dy": 0,
+      "delta": 28
+     },
+     {
+      "at": 2.7,
+      "dx": 0,
+      "dy": 0,
+      "delta": 28
+     },
+     {
+      "at": 3.98,
+      "dx": -4,
+      "dy": 12,
+      "delta": 35
+     },
+     {
+      "at": 5.1,
+      "dx": 0,
+      "dy": 4,
+      "delta": 18
+     },
+     {
+      "at": 5.5,
+      "dx": -2,
+      "dy": -12,
+      "delta": 37
+     },
+     {
+      "at": 6.38,
+      "dx": -2,
+      "dy": -6,
+      "delta": 20
+     },
+     {
+      "at": 7.6,
+      "dx": -2,
+      "dy": 2,
+      "delta": 19
+     },
+     {
+      "at": 8.1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 18
+     },
+     {
+      "at": 8.82,
+      "dx": -12,
+      "dy": 4,
+      "delta": 39
+     },
+     {
+      "at": 10.2,
+      "dx": 2,
+      "dy": 0,
+      "delta": 28
+     },
+     {
+      "at": 10.7,
+      "dx": 2,
+      "dy": 0,
+      "delta": 28
+     },
+     {
+      "at": 11.18,
+      "dx": -6,
+      "dy": 12,
+      "delta": 38
+     },
+     {
+      "at": 12.5,
+      "dx": -2,
+      "dy": 6,
+      "delta": 16
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   },
+   {
+    "element": "#a18bf9",
+    "box": [
+     810,
+     620,
+     111,
+     108
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": -12,
+      "dy": -4,
+      "delta": 16
+     },
+     {
+      "at": 0.5,
+      "dx": 2,
+      "dy": 12,
+      "delta": 27
+     },
+     {
+      "at": 1,
+      "dx": -4,
+      "dy": 4,
+      "delta": 55
+     },
+     {
+      "at": 2.2,
+      "dx": -6,
+      "dy": 4,
+      "delta": 45
+     },
+     {
+      "at": 2.7,
+      "dx": 0,
+      "dy": 4,
+      "delta": 45
+     },
+     {
+      "at": 3.98,
+      "dx": -4,
+      "dy": 12,
+      "delta": 44
+     },
+     {
+      "at": 5.1,
+      "dx": 0,
+      "dy": 6,
+      "delta": 20
+     },
+     {
+      "at": 5.5,
+      "dx": -4,
+      "dy": -12,
+      "delta": 43
+     },
+     {
+      "at": 6.38,
+      "dx": -2,
+      "dy": -2,
+      "delta": 16
+     },
+     {
+      "at": 7.6,
+      "dx": -2,
+      "dy": 6,
+      "delta": 13
+     },
+     {
+      "at": 8.1,
+      "dx": 0,
+      "dy": 2,
+      "delta": 15
+     },
+     {
+      "at": 8.82,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 10.2,
+      "dx": 4,
+      "dy": 4,
+      "delta": 47
+     },
+     {
+      "at": 10.7,
+      "dx": 4,
+      "dy": 6,
+      "delta": 47
+     },
+     {
+      "at": 11.18,
+      "dx": -4,
+      "dy": 12,
+      "delta": 50
+     },
+     {
+      "at": 12.5,
+      "dx": -4,
+      "dy": 10,
+      "delta": 24
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   },
+   {
+    "element": "#c4fe43",
+    "box": [
+     810,
+     390,
+     110,
+     94
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 0.5,
+      "dx": 2,
+      "dy": 12,
+      "delta": 38
+     },
+     {
+      "at": 1,
+      "dx": 4,
+      "dy": 10,
+      "delta": 38
+     },
+     {
+      "at": 2.2,
+      "dx": -4,
+      "dy": 0,
+      "delta": 39
+     },
+     {
+      "at": 2.7,
+      "dx": 4,
+      "dy": 8,
+      "delta": 38
+     },
+     {
+      "at": 3.98,
+      "dx": -8,
+      "dy": 12,
+      "delta": 38
+     },
+     {
+      "at": 5.1,
+      "dx": 0,
+      "dy": 2,
+      "delta": 27
+     },
+     {
+      "at": 5.5,
+      "dx": -2,
+      "dy": -12,
+      "delta": 45
+     },
+     {
+      "at": 6.38,
+      "dx": -2,
+      "dy": -6,
+      "delta": 31
+     },
+     {
+      "at": 7.6,
+      "dx": -2,
+      "dy": 0,
+      "delta": 27
+     },
+     {
+      "at": 8.1,
+      "dx": -2,
+      "dy": 2,
+      "delta": 27
+     },
+     {
+      "at": 8.82,
+      "dx": -12,
+      "dy": -4,
+      "delta": 17
+     },
+     {
+      "at": 10.2,
+      "dx": 6,
+      "dy": -2,
+      "delta": 49
+     },
+     {
+      "at": 10.7,
+      "dx": 6,
+      "dy": 0,
+      "delta": 47
+     },
+     {
+      "at": 11.18,
+      "dx": -8,
+      "dy": 12,
+      "delta": 44
+     },
+     {
+      "at": 12.5,
+      "dx": -2,
+      "dy": 6,
+      "delta": 24
+     }
+    ],
+    "read": "drifts: the gap grows over time (wrong speed or start)"
+   }
+  ]
+ },
+ "rubric": {
+  "file": "factory/1pekjm-playful-character-picker-sheet/rubric.json",
+  "total": 46,
+  "counted": 46,
+  "pass": 42,
+  "fail": 2,
+  "unsure": 2,
+  "unjudged": 0,
+  "passRate": 91,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "style",
+    "element": "canvas background",
+    "check": "Background is a flat very light grey-lilac (~#f6f6f9) with no gradient, texture, or shadow",
+    "box": [
+     0,
+     0,
+     1964,
+     1080
+    ],
+    "at": 2.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both flat very light grey-lilac, no gradient or shadow. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "present",
+    "element": "home indicator pill",
+    "check": "A small grey rounded pill ~52x10 px sits centred at the bottom edge (x≈954-1006, y≈1060)",
+    "box": [
+     930,
+     1050,
+     100,
+     30
+    ],
+    "at": 2.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Grey rounded pill at the same size and position, rebuild slightly lighter grey. [votes: no/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "position",
+    "element": "roll body outline (collapsed)",
+    "check": "Collapsed roll spans roughly x 758-1262 and y 316-790, horizontally centred near x 1010",
+    "box": [
+     660,
+     300,
+     640,
+     510
+    ],
+    "at": 2.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Roll spans the same width and is centred the same in both. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "style",
+    "element": "roll body outline (collapsed)",
+    "check": "Roll is drawn with a thick (~8-12px) saturated royal-blue (#2826c8) outline, paper fill near-white",
+    "box": [
+     740,
+     300,
+     540,
+     500
+    ],
+    "at": 2.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both have a thick royal-blue outline with near-white paper fill. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "style",
+    "element": "roll body outline (collapsed)",
+    "check": "Upper part of the sides bulge outward like a cylinder (thicker curved strokes) down to ~y 640, then straight paper continues below",
+    "box": [
+     740,
+     300,
+     540,
+     360
+    ],
+    "at": 2.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Upper sides bulge as thick curved strokes, then straight below, as in the clip. [votes: no/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "style",
+    "element": "torn bottom edge (collapsed)",
+    "check": "Bottom edge of the paper is an irregular zig-zag torn line, not straight or rounded",
+    "box": [
+     750,
+     760,
+     520,
+     40
+    ],
+    "at": 2.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both bottoms are a zig-zag torn blue line of similar stroke weight. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "present",
+    "element": "left box bracket",
+    "check": "A 3D box-shaped bracket drawn in blue outline (front face with an inner tall rectangle, visible top and side faces) attaches to the roll's left side at x≈672-748, y≈412-556",
+    "box": [
+     660,
+     400,
+     100,
+     170
+    ],
+    "at": 2.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both show a 3D box bracket in blue outline with an inner tall rectangle and visible top and side faces. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "present",
+    "element": "right tab",
+    "check": "A small narrow outlined tab (~16x76 px) sticks out of the roll's right side at x≈1272-1288, y≈450-526",
+    "box": [
+     1260,
+     440,
+     40,
+     100
+    ],
+    "at": 2.2,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "Clip's tab is mostly solid blue with a narrow white slit; the rebuild's is a thin-stroked outline around a wide white interior. [votes: no/yes/no]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "text",
+    "element": "Daniel label",
+    "check": "Upper row reads exactly \"Daniel\" in bold blue sans, ~38px cap-to-baseline, left edge at x≈955",
+    "box": [
+     940,
+     400,
+     160,
+     70
+    ],
+    "at": 2.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both read 'Daniel' in bold blue sans of about the same size and weight. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "text",
+    "element": "Alex label",
+    "check": "Lower row reads exactly \"Alex\" in the same bold blue, left edge at x≈955, y centre ≈674",
+    "box": [
+     940,
+     640,
+     120,
+     70
+    ],
+    "at": 2.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both read 'Alex' in the same bold blue at the same size. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "style",
+    "element": "Daniel avatar",
+    "check": "Avatar is a rounded square (~126px, ~22px radius) with a ~5px blue border",
+    "box": [
+     795,
+     375,
+     140,
+     135
+    ],
+    "at": 2.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rounded-square avatar with a ~5px blue border and lime fill matches in both. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "imagery",
+    "element": "Daniel avatar",
+    "check": "Daniel avatar is an original flat drawing of a man in a red shirt on a lime-green (#c4fe43) background, not copied pixels",
+    "box": [
+     795,
+     375,
+     140,
+     135
+    ],
+    "at": 2.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild is an original flat man in a red shirt on lime, not copied pixels. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "imagery",
+    "element": "Alex avatar",
+    "check": "Alex avatar is an original flat drawing of a dark-haired man with glasses, white collar and dark tie on a violet (#a18bf9) background",
+    "box": [
+     795,
+     605,
+     140,
+     140
+    ],
+    "at": 2.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild is an original flat drawing of a dark-haired man with glasses, collar and tie on violet. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "style",
+    "element": "check circle",
+    "check": "Alex row has a blue outlined circle (~52px) with a blue tick inside, unfilled, right-aligned at x≈1172-1224",
+    "box": [
+     1160,
+     635,
+     80,
+     80
+    ],
+    "at": 2.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both have an unfilled blue ring with a blue tick, similar size and position. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "present",
+    "element": "check circle",
+    "check": "Only one row (Alex) shows a check; Daniel row has none",
+    "box": [
+     760,
+     320,
+     500,
+     470
+    ],
+    "at": 2.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Only the Alex row has a check in both; Daniel has none. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "style",
+    "element": "dashed divider",
+    "check": "Rows are separated by horizontal lavender dashed lines (~2px, ~12px dashes) spanning the paper width, at y≈349 and y≈561",
+    "box": [
+     770,
+     330,
+     480,
+     250
+    ],
+    "at": 2.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both have lavender dashed dividers spanning the paper at the two row boundaries. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "present",
+    "element": "roll body outline (collapsed)",
+    "check": "A sliver of a third row's avatar (coral, Emma) is cut off at the top edge of the roll, implying content continues upward into the roll",
+    "box": [
+     790,
+     310,
+     160,
+     30
+    ],
+    "at": 0.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild also shows a coral/yellow avatar sliver cut off at the roll's top edge. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "motion",
+    "element": "torn bottom edge (collapsed)",
+    "check": "During the intro the paper extends downward: bottom edge is at y≈860 at 0.5s and settles back up to y≈785 by 1.0s (overshoot ~75px then return)",
+    "box": [
+     740,
+     740,
+     540,
+     140
+    ],
+    "at": 0.5,
+    "then": 1,
+    "policy": null,
+    "pass": "unsure",
+    "seen": "The bottom torn edge is outside the tile, so the 860 to 785 settle can't be read; rows do move up between 0.5s and 1s in both. [votes: unsure/unsure/unsure]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "motion",
+    "element": "Daniel avatar",
+    "check": "Rows ride down with the paper during the intro: Daniel avatar top is at y≈440 at 0.5s and y≈380 at 1.0s",
+    "box": [
+     790,
+     370,
+     150,
+     200
+    ],
+    "at": 0.5,
+    "then": 1,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Daniel avatar moves up about 74px in the tile (rebuild) against 66px (clip), within tolerance. [votes: no/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "motion",
+    "element": "roll body outline (collapsed)",
+    "check": "Nothing moves between 1.0s and 2.2s except the cursor; roll, rows and check stay put",
+    "box": [
+     660,
+     300,
+     640,
+     510
+    ],
+    "at": 1,
+    "then": 2.2,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Between 1s and 2.2s both shift only a few px (about 8 to 13px), roll and check stay put. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "motion",
+    "element": "cursor",
+    "check": "Cursor moves from bottom-left of the roll (≈680,810 at 2.2s) up onto the Alex label by 2.7s and turns into a hand pointer",
+    "box": [
+     640,
+     600,
+     500,
+     240
+    ],
+    "at": 2.2,
+    "then": 2.7,
+    "policy": null,
+    "pass": "unsure",
+    "seen": "No cursor is visible in either panel of the tile, so the move and the hand change can't be checked. [votes: unsure/unsure/unsure]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "style",
+    "element": "cursor",
+    "check": "Over a row the cursor is a white pointing-hand with black outline, ~40px",
+    "box": [
+     1040,
+     580,
+     70,
+     70
+    ],
+    "at": 5.1,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "Rebuild hand is white with a black outline but smaller (about 32px against the clip's roughly 37px) and sits lower, with a crisp edge where the clip's is soft. [votes: no/yes/no]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "motion",
+    "element": "expanded receipt (narrow)",
+    "check": "Between 3.5s and 4.45s the roll narrows from ~504px to ~320px wide and its top rises from y≈316 to y≈120 while the paper lengthens down past the frame bottom",
+    "box": [
+     640,
+     100,
+     700,
+     980
+    ],
+    "at": 2.2,
+    "then": 5.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild goes from the wide roll to a narrow receipt about 235px wide in the tile, like the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "position",
+    "element": "expanded receipt (narrow)",
+    "check": "Expanded receipt spans x≈835-1158 with top at y≈118; the bracket sits at x≈780-830, y≈187-276",
+    "box": [
+     770,
+     100,
+     420,
+     200
+    ],
+    "at": 5.1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Receipt edges at about x 653-889 in the tile against the clip's 142-382, which is the same width, with similar row layout. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "text",
+    "element": "expanded receipt (narrow)",
+    "check": "Expanded list at 5.1s reads top to bottom: \"Mia\", \"Marcus\", \"Leo\", \"Emma\", \"Daniel\", \"Alex\"",
+    "box": [
+     835,
+     118,
+     325,
+     870
+    ],
+    "at": 5.1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild reads Mia, Marcus, Leo, Emma, Daniel, Alex top to bottom, as the clip does. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "position",
+    "element": "expanded receipt (narrow)",
+    "check": "Rows in the expanded state are spaced at ~152px pitch (name centres ≈159, 306, 459, 611, 763, 914)",
+    "box": [
+     835,
+     118,
+     325,
+     870
+    ],
+    "at": 5.1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Leo and Emma name centres sit at 143 and 257 in the tile in both panels, so the row pitch matches. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "style",
+    "element": "other avatars",
+    "check": "In the expanded state avatars shrink to ~80px rounded squares with the same blue border, left edge at x≈863",
+    "box": [
+     855,
+     410,
+     100,
+     100
+    ],
+    "at": 5.1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Avatar is about 80px with the same blue border and rounded square, and sits at the same left edge. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "position",
+    "element": "expanded receipt (narrow)",
+    "check": "At 5.1s the receipt's torn bottom edge is visible at y≈985 with Alex (check) as the last row",
+    "box": [
+     830,
+     880,
+     340,
+     120
+    ],
+    "at": 5.1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild has a torn zig-zag bottom edge below Alex with the check, at the same place, though its stroke is heavier than the clip's. [votes: no/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "style",
+    "element": "hover row band",
+    "check": "The hovered Emma row is filled with a pale lavender (#e8e9f8) band spanning the full paper width between its two dividers",
+    "box": [
+     840,
+     535,
+     315,
+     160
+    ],
+    "at": 5.1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Emma row has a pale lavender band between the two dividers in both, with a very slightly greyer tone in the rebuild. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "present",
+    "element": "hover row band",
+    "check": "Rows not under the cursor have no lavender fill",
+    "box": [
+     840,
+     690,
+     315,
+     300
+    ],
+    "at": 5.1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Daniel and Alex rows are white with no lavender fill in both panels. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "imagery",
+    "element": "other avatars",
+    "check": "Each name has its own distinct original flat character avatar: Mia (coral bg, dark hair), Marcus (coral bg, blue hoodie), Leo (blue bg, red cap), Emma (coral bg, blonde girl)",
+    "box": [
+     855,
+     130,
+     100,
+     540
+    ],
+    "at": 5.1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild has four distinct flat avatars: Mia dark hair on coral, Marcus blue hoodie on coral, Leo red cap on blue, Emma blonde on coral. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "motion",
+    "element": "expanded receipt (narrow)",
+    "check": "Between 5.5s and 6.38s the list scrolls inside the receipt: content moves down so new rows \"Ethan\", \"Oliver\", \"James\" appear at the top while the receipt outline stays fixed",
+    "box": [
+     835,
+     118,
+     325,
+     962
+    ],
+    "at": 5.5,
+    "then": 6.38,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild list moves down between 5.5s and 6.38s, bringing James and Mia into view while the outline stays fixed, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "text",
+    "element": "expanded receipt (narrow)",
+    "check": "At 6.38s list reads top to bottom: \"Ethan\", \"Oliver\", \"James\", \"Mia\", \"Marcus\", \"Leo\", \"Emma\"",
+    "box": [
+     835,
+     118,
+     325,
+     962
+    ],
+    "at": 6.38,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild reads Ethan, Oliver, James, Mia, Marcus, Leo, Emma, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "text",
+    "element": "expanded receipt (narrow)",
+    "check": "At 7.6s list reads: \"Marcus\", \"Leo\", \"Emma\", \"Daniel\", \"Alex\", \"Lucas\", \"Noah\" (Lucas and Noah follow Alex)",
+    "box": [
+     835,
+     118,
+     325,
+     962
+    ],
+    "at": 7.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild reads Marcus, Leo, Emma, Daniel, Alex, Lucas, Noah, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "imagery",
+    "element": "other avatars",
+    "check": "Lucas avatar is a man in red on a green background; Noah avatar is a boy with green cap on a purple/pink background; both original flat drawings",
+    "box": [
+     860,
+     845,
+     95,
+     230
+    ],
+    "at": 7.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Lucas is a figure in red on green and Noah a boy in a green cap on purple, both flat original drawings like the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "motion",
+    "element": "check circle",
+    "check": "Clicking Emma (~8.0s) puts the check circle on the Emma row at x≈1100-1132 and Alex no longer has it",
+    "box": [
+     835,
+     370,
+     325,
+     450
+    ],
+    "at": 7.6,
+    "then": 8.1,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 8.1s the check circle is on the Emma row at the right and has gone from Alex, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "present",
+    "element": "tear line",
+    "check": "At 8.1s a blue zig-zag tear line cuts across the receipt directly under the Emma row (y≈505-520)",
+    "box": [
+     835,
+     495,
+     325,
+     35
+    ],
+    "at": 8.1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A blue zig-zag tear sits directly under the Emma row in the rebuild, with a somewhat heavier stroke than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "motion",
+    "element": "falling torn piece",
+    "check": "After the tear the lower piece (Daniel, Alex, Lucas, Noah) slides down out of frame; by 8.82s only its torn top edge shows at y≈1030-1080",
+    "box": [
+     780,
+     500,
+     400,
+     580
+    ],
+    "at": 8.1,
+    "then": 8.82,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild's lower piece is gone by 8.82s and the upper piece shows its torn bottom edge, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "motion",
+    "element": "roll body outline (collapsed)",
+    "check": "Between 8.1s and 9.7s the upper part retracts into the wide collapsed roll and returns to centre (x≈758-1262, y≈316-790)",
+    "box": [
+     640,
+     100,
+     700,
+     800
+    ],
+    "at": 8.82,
+    "then": 10.2,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild's upper part retracts into the wide roll showing Leo and Emma, as the clip's does. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c39.png"
+   },
+   {
+    "id": "c40",
+    "axis": "text",
+    "element": "roll body outline (collapsed)",
+    "check": "At rest at 10.2s the collapsed roll shows \"Leo\" on top and \"Emma\" below with the check circle on Emma",
+    "box": [
+     740,
+     300,
+     560,
+     500
+    ],
+    "at": 10.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild's collapsed roll shows Leo on top and Emma below with the check circle on Emma, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c40.png"
+   },
+   {
+    "id": "c41",
+    "axis": "motion",
+    "element": "roll body outline (collapsed)",
+    "check": "Between 10.2s and 10.7s the collapsed roll does not change size or position (only the cursor moves)",
+    "box": [
+     640,
+     300,
+     700,
+     520
+    ],
+    "at": 10.2,
+    "then": 10.7,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Collapsed roll, Leo/Emma rows and bracket are in the same place at 10.2s and 10.7s in the rebuild, as in the clip; only the cursor moves. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c41.png"
+   },
+   {
+    "id": "c42",
+    "axis": "motion",
+    "element": "expanded receipt (narrow)",
+    "check": "Between 10.7s and 11.65s the roll expands again into the narrow tall receipt with top near y≈120",
+    "box": [
+     640,
+     100,
+     700,
+     980
+    ],
+    "at": 10.2,
+    "then": 12.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild goes from the wide collapsed roll to the narrow tall receipt (James/Mia/Marcus rows, edges near x 655-885), matching the clip's narrow receipt at 12.5s. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c42.png"
+   },
+   {
+    "id": "c43",
+    "axis": "text",
+    "element": "expanded receipt (narrow)",
+    "check": "Final expanded list reads \"Oliver\", \"James\", \"Mia\", \"Marcus\", \"Leo\", \"Emma\" and ends at Emma (check) with a torn bottom edge; Daniel/Alex/Lucas/Noah are gone",
+    "box": [
+     835,
+     100,
+     325,
+     960
+    ],
+    "at": 12.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild lists Oliver, James, Mia, Marcus, Leo, Emma with a check on Emma and a torn bottom edge; Daniel, Alex, Lucas and Noah are gone. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c43.png"
+   },
+   {
+    "id": "c44",
+    "axis": "motion",
+    "element": "left box bracket",
+    "check": "The left bracket and right tab travel with the roll top: they move from y≈412-556 (collapsed) to y≈187-276 (expanded) and scale down with it",
+    "box": [
+     660,
+     150,
+     660,
+     420
+    ],
+    "at": 2.2,
+    "then": 5.1,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Bracket and right tab sit at the roll top in both panels (about y 62-100 in the c45 crop, same scale) and the bracket is still visible at the collapsed position; the c44 bottom row doesn't show it, so this rests on the c45 crop. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c44.png"
+   },
+   {
+    "id": "c45",
+    "axis": "style",
+    "element": "canvas background",
+    "check": "No drop shadows anywhere: roll, avatars and band are flat outline-and-fill drawing",
+    "box": [
+     640,
+     100,
+     700,
+     980
+    ],
+    "at": 5.1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild is flat outline-and-fill with no visible drop shadows under the roll, avatars or band, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c45.png"
+   },
+   {
+    "id": "c46",
+    "axis": "style",
+    "element": "Daniel label",
+    "check": "Name text colour is the same royal blue as the outlines (~#2826c8), not black",
+    "box": [
+     940,
+     400,
+     160,
+     70
+    ],
+    "at": 2.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Daniel is royal blue (about #2826c8) in the rebuild, not black, with about the same width (350 px against 355 px in the clip). [votes: yes/yes/yes]",
+    "image": "factory/1pekjm-playful-character-picker-sheet/judge/c46.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 1.075,
+  "calls": 9,
+  "images": "factory/1pekjm-playful-character-picker-sheet/judge",
+  "votes": 3,
+  "spread": [
+   38,
+   44,
+   42
+  ]
+ }
+}

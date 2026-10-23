@@ -1,0 +1,141 @@
+{
+ "slug": "ewfwo2-tooltip-hover-delay-comparison",
+ "title": "Tooltip Hover Delay Comparison",
+ "author": "Juliette",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "review",
+ "ended": "round limit",
+ "bestRound": 3,
+ "rank": 94,
+ "allPass": false,
+ "rubric": {
+  "pass": 42,
+  "fail": 1,
+  "unsure": 2,
+  "of": 45,
+  "failed": [
+   "c42 The final state (both cards, no cursor, no tooltip) holds still from ~14.2s to the end"
+  ]
+ },
+ "score": 94,
+ "motion": "the render changes where the clip changes",
+ "imagery": [
+  {
+   "name": "toolbar icons (B I U S link code quote, chevron)",
+   "class": "structured",
+   "box": [
+    395,
+    250,
+    570,
+    36
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "cursor arrow / pointing hand",
+   "class": "structured",
+   "box": [
+    590,
+    280,
+    34,
+    46
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "toolbar shadow",
+   "class": "css",
+   "box": [
+    360,
+    220,
+    720,
+    110
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "delay spinner ring",
+   "class": "css",
+   "box": [
+    625,
+    339,
+    24,
+    24
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 185.9,
+   "turns": 42,
+   "costUsd": 2.9616753999999994,
+   "judgeUsd": 1.226,
+   "ended": "completed",
+   "score": 92,
+   "rank": 71,
+   "allPass": false,
+   "rubric": {
+    "pass": 34,
+    "fail": 8,
+    "unsure": 3,
+    "of": 45
+   },
+   "motion": "the render stays still in 1 of 19 spans where the clip moves",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 220.4,
+   "turns": 5,
+   "costUsd": 1.443707,
+   "judgeUsd": 1.367,
+   "ended": "completed",
+   "score": 94,
+   "rank": 93,
+   "allPass": false,
+   "rubric": {
+    "pass": 41,
+    "fail": 1,
+    "unsure": 3,
+    "of": 45
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 20.3,
+   "turns": 26,
+   "costUsd": 0.7554686000000002,
+   "judgeUsd": 1.505,
+   "ended": "completed",
+   "score": 94,
+   "rank": 94,
+   "allPass": false,
+   "rubric": {
+    "pass": 42,
+    "fail": 1,
+    "unsure": 2,
+    "of": 45
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  }
+ ],
+ "minutes": 426.5,
+ "cost": {
+  "codingUsd": 5.16,
+  "judgeUsd": 4.1,
+  "rubricUsd": 0.768,
+  "totalUsd": 10.03
+ },
+ "notes": true,
+ "at": "2026-10-23T06:36:13.215Z"
+}

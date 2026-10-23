@@ -1,0 +1,166 @@
+{
+ "slug": "1fut80-minimal-tooltip-thinking-mode",
+ "title": "Minimal Tooltip Thinking Mode",
+ "author": "rico",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "review",
+ "ended": "round limit",
+ "bestRound": 3,
+ "rank": 95,
+ "allPass": false,
+ "rubric": {
+  "pass": 44,
+  "fail": 2,
+  "unsure": 0,
+  "of": 46,
+  "failed": [
+   "c08 During thinking the header icon is a thin dark ring spinner (~22px) with a gap, left at x≈104, centred y≈283",
+   "c38 File card is a light grey rounded (~22px) box ≈361x271 at x≈139, y≈764 holding a white page preview with a grey skeleton line"
+  ]
+ },
+ "score": 91,
+ "motion": "the render changes where the clip changes",
+ "imagery": [
+  {
+   "name": "Shopify bag icon",
+   "class": "structured",
+   "box": [
+    272,
+    397,
+    22,
+    24
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "source favicons",
+   "class": "structured",
+   "box": [
+    163,
+    519,
+    400,
+    90
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "Brand Researcher gem avatar",
+   "class": "structured",
+   "box": [
+    340,
+    652,
+    28,
+    28
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "Sweden Insight doc icon",
+   "class": "structured",
+   "box": [
+    365,
+    716,
+    22,
+    26
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "spinners and status dots",
+   "class": "css",
+   "box": [
+    104,
+    272,
+    22,
+    22
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "report file preview",
+   "class": "css",
+   "box": [
+    139,
+    764,
+    361,
+    271
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 13.5,
+   "turns": 65,
+   "costUsd": 4.0281234,
+   "judgeUsd": 1.351,
+   "ended": "budget_exhausted",
+   "score": 90,
+   "rank": 84,
+   "allPass": false,
+   "rubric": {
+    "pass": 37,
+    "fail": 9,
+    "unsure": 0,
+    "of": 46
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 8,
+   "turns": 64,
+   "costUsd": 1.3416237999999998,
+   "judgeUsd": 1.074,
+   "ended": "completed",
+   "score": 90,
+   "rank": 95,
+   "allPass": false,
+   "rubric": {
+    "pass": 44,
+    "fail": 2,
+    "unsure": 0,
+    "of": 46
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 5.9,
+   "turns": 21,
+   "costUsd": 0.6690256000000001,
+   "judgeUsd": 0.703,
+   "ended": "completed",
+   "score": 91,
+   "rank": 95,
+   "allPass": false,
+   "rubric": {
+    "pass": 44,
+    "fail": 2,
+    "unsure": 0,
+    "of": 46
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  }
+ ],
+ "minutes": 27.4,
+ "cost": {
+  "codingUsd": 6.04,
+  "judgeUsd": 3.13,
+  "rubricUsd": 1.087,
+  "totalUsd": 10.25
+ },
+ "notes": true,
+ "at": "2026-10-23T07:03:39.600Z"
+}

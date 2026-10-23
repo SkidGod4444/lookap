@@ -1,0 +1,811 @@
+{
+ "slug": "16febh-playful-feedback-toggle-buttons",
+ "frame": {
+  "w": 720,
+  "h": 720
+ },
+ "at": "2026-10-22T19:37:22.103Z",
+ "model": "opus",
+ "costUsd": 0.603,
+ "summary": "A light-gray canvas (#f1f1f1) holds one centred pair of feedback buttons. Together they look like a pill split in two by a 12 px gap: the left half (thumbs-up) runs x 174–354 and the right half (thumbs-down) runs x 366–546, both y 294–426. Each half is 180×132. Its outer end is a full semicircle (radius ~66) and its inner corners are only slightly rounded (~8 px). The fill is an off-white #f7f7f7 with a hairline gray border and a soft drop shadow underneath. Each half holds a solid black glyph about 60 px across. The thumbs-up points up and right; the thumbs-down is its mirror. A black macOS-style arrow cursor with a white outline acts out four clicks:\n1. **Like on, ~0.45s.** The left half shrinks to about 0.9 scale. From 0.65s to 0.95s the glyph turns dark green, grows to about 2× and leaps up out of the button, its top reaching y≈203. Meanwhile a mint radial glow fills the button.\n2. **Glyph lands, 1.0–1.25s.** The glyph drops back, turns bright green (#0dbc39) and settles on the glow.\n3. **Like off, ~1.85s.** The button shrinks again. The glyph darkens to deep green, then black, and the glow fades. The button is neutral by 2.35s.\n4. **Dislike on, ~2.95s.** The cursor moves to the right half and clicks. The button shrinks, and from 3.05s to 3.35s the glyph goes dark red, then bright red (#e5173f). It wobbles in place (it does not fly), and a pink radial glow fills the button.\n5. **Dislike off, ~4.15s.** A second click darkens the red glyph back to black and clears the glow. Everything is neutral by 4.6s.\n\nThe only moving parts are the cursor, the press scale, the glyph colour, scale and position, and the glow.",
+ "elements": [
+  {
+   "name": "canvas background",
+   "box": [
+    0,
+    0,
+    720,
+    720
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "flat light gray #f1f1f1"
+  },
+  {
+   "name": "like button (left half)",
+   "box": [
+    174,
+    294,
+    180,
+    132
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "off-white #f7f7f7, left end semicircular r≈66, right corners r≈8, hairline gray border, soft shadow below"
+  },
+  {
+   "name": "dislike button (right half)",
+   "box": [
+    366,
+    294,
+    180,
+    132
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "mirror of left: right end semicircular, left corners r≈8; 12px gap from like button"
+  },
+  {
+   "name": "thumbs-up glyph",
+   "box": [
+    240,
+    323,
+    60,
+    61
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "solid black filled thumbs-up with separated cuff on left; green when active"
+  },
+  {
+   "name": "thumbs-down glyph",
+   "box": [
+    420,
+    336,
+    60,
+    60
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "solid black thumbs-down, cuff on right; red when active"
+  },
+  {
+   "name": "green glow (like active)",
+   "box": [
+    190,
+    300,
+    160,
+    120
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "mint radial glow centred on glyph, #c5fec9 core fading to button white, visible 0.7–2.2s"
+  },
+  {
+   "name": "pink glow (dislike active)",
+   "box": [
+    370,
+    300,
+    170,
+    120
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "pink radial glow centred on glyph, visible 3.05–4.4s"
+  },
+  {
+   "name": "button drop shadow",
+   "box": [
+    180,
+    410,
+    360,
+    30
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "soft diffuse gray shadow under both halves"
+  },
+  {
+   "name": "mouse cursor",
+   "box": [
+    378,
+    515,
+    38,
+    60
+   ],
+   "kind": "control",
+   "class": "structured",
+   "note": "black arrow pointer with white outline, ~38x60, moves around the clip"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "canvas background",
+   "axis": "style",
+   "check": "The background is a flat light gray (~#f1f1f1) with no gradient or texture",
+   "box": [
+    0,
+    0,
+    720,
+    720
+   ],
+   "scope": "frame",
+   "at": 0.17,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "like button (left half)",
+   "axis": "present",
+   "check": "Exactly two separate button halves sit side by side, centred in the frame",
+   "box": [
+    160,
+    280,
+    400,
+    160
+   ],
+   "scope": "frame",
+   "at": 0.17,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "like button (left half)",
+   "axis": "position",
+   "check": "The left button spans about x 174–354, y 294–426 (≈180×132)",
+   "box": [
+    160,
+    280,
+    210,
+    160
+   ],
+   "scope": "crop",
+   "at": 0.17,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "dislike button (right half)",
+   "axis": "position",
+   "check": "The right button spans about x 366–546, y 294–426 (≈180×132)",
+   "box": [
+    355,
+    280,
+    210,
+    160
+   ],
+   "scope": "crop",
+   "at": 0.17,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "like button (left half)",
+   "axis": "position",
+   "check": "A gap of about 12 px separates the two buttons at x≈354–366",
+   "box": [
+    340,
+    290,
+    40,
+    140
+   ],
+   "scope": "crop",
+   "at": 0.17,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "like button (left half)",
+   "axis": "style",
+   "check": "The left button's left end is a full semicircle (radius ≈66) and its right corners are only slightly rounded (≈8 px)",
+   "box": [
+    170,
+    290,
+    190,
+    140
+   ],
+   "scope": "crop",
+   "at": 0.17,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "dislike button (right half)",
+   "axis": "style",
+   "check": "The right button mirrors this: its right end is a full semicircle and its left corners are only slightly rounded",
+   "box": [
+    360,
+    290,
+    190,
+    140
+   ],
+   "scope": "crop",
+   "at": 0.17,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "like button (left half)",
+   "axis": "style",
+   "check": "At rest, the button fill is off-white (#f7f7f7), slightly lighter than the background, with a thin light-gray outline",
+   "box": [
+    170,
+    290,
+    190,
+    140
+   ],
+   "scope": "crop",
+   "at": 0.17,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "button drop shadow",
+   "axis": "style",
+   "check": "A soft, diffuse gray shadow falls just below the bottom edge of both buttons",
+   "box": [
+    170,
+    410,
+    380,
+    40
+   ],
+   "scope": "crop",
+   "at": 0.17,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "thumbs-up glyph",
+   "axis": "present",
+   "check": "A solid black thumbs-up glyph about 60 px wide is centred in the left button near (270,353)",
+   "box": [
+    230,
+    315,
+    80,
+    80
+   ],
+   "scope": "crop",
+   "at": 0.17,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "thumbs-up glyph",
+   "axis": "imagery",
+   "check": "The thumbs-up is a filled silhouette (not an outline) with a separate rounded cuff on its left, divided from the hand by a light gap",
+   "box": [
+    230,
+    315,
+    80,
+    80
+   ],
+   "scope": "crop",
+   "at": 0.17,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "thumbs-down glyph",
+   "axis": "present",
+   "check": "A solid black thumbs-down glyph is centred in the right button near (450,366), with its thumb pointing down-left and its cuff on the right",
+   "box": [
+    410,
+    325,
+    80,
+    80
+   ],
+   "scope": "crop",
+   "at": 0.17,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "mouse cursor",
+   "axis": "present",
+   "check": "A black arrow cursor with a white outline is visible below the buttons near (395,545)",
+   "box": [
+    360,
+    500,
+    80,
+    90
+   ],
+   "scope": "crop",
+   "at": 0.17,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "mouse cursor",
+   "axis": "motion",
+   "check": "The cursor travels from below the buttons (≈395,545) up onto the lower-right of the like button (≈325,400)",
+   "box": [
+    160,
+    280,
+    300,
+    320
+   ],
+   "scope": "frame",
+   "at": 0.17,
+   "then": 0.5
+  },
+  {
+   "id": "c15",
+   "element": "like button (left half)",
+   "axis": "motion",
+   "check": "When clicked, the like button shrinks to about 0.9 scale (≈x 185–344, y 302–418) while the dislike button stays full size",
+   "box": [
+    160,
+    280,
+    400,
+    160
+   ],
+   "scope": "crop",
+   "at": 0.17,
+   "then": 0.5
+  },
+  {
+   "id": "c16",
+   "element": "thumbs-up glyph",
+   "axis": "motion",
+   "check": "Between 0.65s and 0.95s the thumbs-up leaps upward out of the button, its top rising from y≈325 to y≈203",
+   "box": [
+    180,
+    180,
+    180,
+    250
+   ],
+   "scope": "frame",
+   "at": 0.5,
+   "then": 0.95
+  },
+  {
+   "id": "c17",
+   "element": "thumbs-up glyph",
+   "axis": "motion",
+   "check": "While airborne, the thumbs-up grows to about twice its size (≈90–115 px tall vs ≈60 at rest)",
+   "box": [
+    180,
+    200,
+    160,
+    150
+   ],
+   "scope": "crop",
+   "at": 0.5,
+   "then": 0.75
+  },
+  {
+   "id": "c18",
+   "element": "thumbs-up glyph",
+   "axis": "style",
+   "check": "At the top of its leap, the thumbs-up is dark forest green (~#0d5c1f), not black",
+   "box": [
+    190,
+    215,
+    140,
+    130
+   ],
+   "scope": "crop",
+   "at": 0.75,
+   "then": null
+  },
+  {
+   "id": "c19",
+   "element": "thumbs-up glyph",
+   "axis": "position",
+   "check": "At its peak, the enlarged thumbs-up overflows above the button's top edge (y 294) and is not clipped by it",
+   "box": [
+    180,
+    200,
+    160,
+    150
+   ],
+   "scope": "crop",
+   "at": 0.75,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "green glow (like active)",
+   "axis": "style",
+   "check": "The like button fills with a soft mint radial glow, strongest near the glyph and fading toward the button edges",
+   "box": [
+    170,
+    290,
+    190,
+    140
+   ],
+   "scope": "crop",
+   "at": 1.52,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "thumbs-up glyph",
+   "axis": "motion",
+   "check": "Between 1.0s and 1.25s the thumbs-up drops back down and settles at its rest spot (top ≈325)",
+   "box": [
+    180,
+    190,
+    180,
+    240
+   ],
+   "scope": "frame",
+   "at": 0.95,
+   "then": 1.3
+  },
+  {
+   "id": "c22",
+   "element": "thumbs-up glyph",
+   "axis": "style",
+   "check": "After landing, the thumbs-up is bright green (~#0dbc39) at rest size",
+   "box": [
+    230,
+    315,
+    80,
+    80
+   ],
+   "scope": "crop",
+   "at": 1.52,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "dislike button (right half)",
+   "axis": "style",
+   "check": "While like is active, the dislike button stays off-white with a black glyph",
+   "box": [
+    360,
+    290,
+    190,
+    140
+   ],
+   "scope": "crop",
+   "at": 1.52,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "like button (left half)",
+   "axis": "motion",
+   "check": "A second click on the like button (≈1.85s) shrinks it again, and the glyph becomes dark green",
+   "box": [
+    170,
+    290,
+    190,
+    140
+   ],
+   "scope": "crop",
+   "at": 1.8,
+   "then": 2.08
+  },
+  {
+   "id": "c25",
+   "element": "green glow (like active)",
+   "axis": "motion",
+   "check": "After the second click the green glow fades out and the thumbs-up goes back to black at rest size",
+   "box": [
+    170,
+    290,
+    190,
+    140
+   ],
+   "scope": "crop",
+   "at": 2.08,
+   "then": 2.35
+  },
+  {
+   "id": "c26",
+   "element": "thumbs-up glyph",
+   "axis": "motion",
+   "check": "Turning like off does NOT launch the glyph upward; it stays inside the button",
+   "box": [
+    170,
+    200,
+    190,
+    230
+   ],
+   "scope": "crop",
+   "at": 1.8,
+   "then": 2.35
+  },
+  {
+   "id": "c27",
+   "element": "mouse cursor",
+   "axis": "motion",
+   "check": "The cursor moves from the lower right (≈550,515) to the lower-left of the dislike button (≈410,410)",
+   "box": [
+    360,
+    380,
+    240,
+    190
+   ],
+   "scope": "frame",
+   "at": 2.35,
+   "then": 2.9
+  },
+  {
+   "id": "c28",
+   "element": "dislike button (right half)",
+   "axis": "motion",
+   "check": "When clicked (≈2.95s), the dislike button briefly shrinks to about 0.9 scale",
+   "box": [
+    360,
+    290,
+    190,
+    140
+   ],
+   "scope": "crop",
+   "at": 2.63,
+   "then": 2.95
+  },
+  {
+   "id": "c29",
+   "element": "thumbs-down glyph",
+   "axis": "style",
+   "check": "Mid-transition, the thumbs-down is dark crimson (~#8a1028)",
+   "box": [
+    395,
+    330,
+    80,
+    80
+   ],
+   "scope": "crop",
+   "at": 3.2,
+   "then": null
+  },
+  {
+   "id": "c30",
+   "element": "thumbs-down glyph",
+   "axis": "motion",
+   "check": "During activation the thumbs-down wobbles in place (shifts ≈18 px left and slightly down, then back) but never leaves the button",
+   "box": [
+    380,
+    300,
+    170,
+    130
+   ],
+   "scope": "crop",
+   "at": 2.9,
+   "then": 3.2
+  },
+  {
+   "id": "c31",
+   "element": "thumbs-down glyph",
+   "axis": "style",
+   "check": "Once active, the thumbs-down is bright red (~#e5173f) at rest size and position",
+   "box": [
+    410,
+    325,
+    80,
+    80
+   ],
+   "scope": "crop",
+   "at": 3.55,
+   "then": null
+  },
+  {
+   "id": "c32",
+   "element": "pink glow (dislike active)",
+   "axis": "style",
+   "check": "The dislike button fills with a soft pink radial glow centred on the glyph",
+   "box": [
+    360,
+    290,
+    190,
+    140
+   ],
+   "scope": "crop",
+   "at": 3.55,
+   "then": null
+  },
+  {
+   "id": "c33",
+   "element": "thumbs-up glyph",
+   "axis": "style",
+   "check": "While dislike is active, the thumbs-up is plain black and its button has no green glow",
+   "box": [
+    170,
+    290,
+    190,
+    140
+   ],
+   "scope": "crop",
+   "at": 3.55,
+   "then": null
+  },
+  {
+   "id": "c34",
+   "element": "mouse cursor",
+   "axis": "position",
+   "check": "The cursor rests off to the lower right, near (598,485)",
+   "box": [
+    560,
+    440,
+    80,
+    90
+   ],
+   "scope": "crop",
+   "at": 3.55,
+   "then": null
+  },
+  {
+   "id": "c35",
+   "element": "pink glow (dislike active)",
+   "axis": "motion",
+   "check": "A second click on dislike (≈4.15s) darkens the glyph to near-black red and the pink glow fades; by 4.6s the button is neutral again",
+   "box": [
+    360,
+    290,
+    190,
+    140
+   ],
+   "scope": "crop",
+   "at": 3.55,
+   "then": 4.6
+  },
+  {
+   "id": "c36",
+   "element": "like button (left half)",
+   "axis": "motion",
+   "check": "The buttons themselves never change position across the clip; only the press scale changes",
+   "box": [
+    160,
+    280,
+    400,
+    160
+   ],
+   "scope": "frame",
+   "at": 0.17,
+   "then": 3.55
+  }
+ ],
+ "imagery": [
+  {
+   "name": "thumbs-up glyph",
+   "box": [
+    240,
+    323,
+    60,
+    61
+   ],
+   "class": "structured",
+   "what": "Solid filled thumbs-up hand with a separate cuff on the left (SF-Symbols style), black at rest",
+   "at": 0.17
+  },
+  {
+   "name": "thumbs-down glyph",
+   "box": [
+    420,
+    336,
+    60,
+    60
+   ],
+   "class": "structured",
+   "what": "Solid filled thumbs-down hand with a separate cuff on the right, black at rest",
+   "at": 0.17
+  },
+  {
+   "name": "green glow",
+   "box": [
+    190,
+    300,
+    160,
+    120
+   ],
+   "class": "css",
+   "what": "Mint radial gradient glow inside the like button when active",
+   "at": 1.52
+  },
+  {
+   "name": "pink glow",
+   "box": [
+    370,
+    300,
+    170,
+    120
+   ],
+   "class": "css",
+   "what": "Pink radial gradient glow inside the dislike button when active",
+   "at": 3.55
+  },
+  {
+   "name": "mouse cursor",
+   "box": [
+    378,
+    515,
+    38,
+    60
+   ],
+   "class": "structured",
+   "what": "Black arrow pointer with white outline and slight shadow",
+   "at": 0.17
+  }
+ ],
+ "moves": [
+  {
+   "element": "mouse cursor",
+   "what": "moves from below the pair up to the like button",
+   "from": 0,
+   "to": 0.45,
+   "px": 160
+  },
+  {
+   "element": "like button (left half)",
+   "what": "press: shrinks to ~0.9 scale, then springs back",
+   "from": 0.4,
+   "to": 0.65,
+   "px": 11
+  },
+  {
+   "element": "thumbs-up glyph",
+   "what": "turns dark green, scales ~2x and leaps up out of the button (top y 325→203)",
+   "from": 0.65,
+   "to": 0.95,
+   "px": 122
+  },
+  {
+   "element": "green glow (like active)",
+   "what": "mint radial glow fades in inside the like button",
+   "from": 0.65,
+   "to": 1,
+   "px": null
+  },
+  {
+   "element": "thumbs-up glyph",
+   "what": "falls back to rest size and spot, turning bright green",
+   "from": 1,
+   "to": 1.25,
+   "px": 122
+  },
+  {
+   "element": "mouse cursor",
+   "what": "drifts down, then back to the like button",
+   "from": 1.25,
+   "to": 1.8,
+   "px": 90
+  },
+  {
+   "element": "like button (left half)",
+   "what": "second press: shrinks; glyph goes dark green, then black; glow fades",
+   "from": 1.85,
+   "to": 2.3,
+   "px": null
+  },
+  {
+   "element": "mouse cursor",
+   "what": "moves to the lower-left of the dislike button",
+   "from": 2.35,
+   "to": 2.9,
+   "px": 160
+  },
+  {
+   "element": "dislike button (right half)",
+   "what": "press: shrinks ~0.9, then springs back",
+   "from": 2.9,
+   "to": 3.1,
+   "px": 11
+  },
+  {
+   "element": "thumbs-down glyph",
+   "what": "goes dark red, then bright red, wobbling ~18 px left and back; pink glow fades in",
+   "from": 3.05,
+   "to": 3.4,
+   "px": 18
+  },
+  {
+   "element": "mouse cursor",
+   "what": "moves out to the lower right, then back onto dislike",
+   "from": 3,
+   "to": 4.1,
+   "px": 190
+  },
+  {
+   "element": "dislike button (right half)",
+   "what": "second press: glyph darkens to black, pink glow fades",
+   "from": 4.1,
+   "to": 4.6,
+   "px": null
+  }
+ ]
+}

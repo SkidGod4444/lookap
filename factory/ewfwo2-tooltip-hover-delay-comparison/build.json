@@ -1,0 +1,16 @@
+{
+ "model": "Claude Opus 5.5",
+ "modelId": "claude-opus-5-5",
+ "date": "2026-10-23",
+ "run": {
+  "model": "Claude Opus 5.5",
+  "turns": 73,
+  "outputTokens": 0,
+  "totalTokens": 0,
+  "costUsd": 10.03,
+  "minutes": 426.5,
+  "score": 94
+ },
+ "hand": "none: the factory alone, 3 judged rounds, best round 3 kept; rubric 42 of 45 under a three-vote judge, reviewed by eye",
+ "hint": "Hover the toolbar icons on each card and compare how fast each tooltip arrives."
+}

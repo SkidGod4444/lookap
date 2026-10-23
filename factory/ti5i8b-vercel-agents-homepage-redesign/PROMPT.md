@@ -1,0 +1,100 @@
+Rebuild the lookap entry "Vercel Agents Homepage Redesign" by Christopher Kindl as one self-contained HTML file at factory/ti5i8b-vercel-agents-homepage-redesign/index.html.
+
+What you have
+- factory/ti5i8b-vercel-agents-homepage-redesign/brief.json: the record, the draft measurement (frame, phases, keyframes with their times, background, palette, element boxes, moves), the credit, and the measuring method behind every recipe.
+- factory/ti5i8b-vercel-agents-homepage-redesign/rubric.json: the checklist this rebuild is judged against, written from the clip. Its summary: A Vercel-style hero on a 1482x1080 canvas. A slim nav bar runs along the top (black Vercel triangle at x 127, links Products ▾ / Resources ▾ / Enterprise / Pricing, then three pill buttons on the right: Get a Demo, Log In and a filled Sign Up ending at x 1334). The left column, aligned at x≈127, holds a two-line tight-tracked headline, "Build and run / agents on Vercel" (~56px, y 298–402), a two-line grey subhead and two pill CTAs: a filled "Create an agent" and an outlined "Talk to an expert". The right half shows an isometric 3D cube drawn as a hexagon (box ≈803,347,352,320). It has three rounded rhombus faces, top, lower-left and right, separated by gaps. Six thick black chevron frame segments sit around them, and a faint hexagonal halo and a soft drop shadow sit underneath. A small white Vercel triangle sits on the top face. Above the cube are two chat bubbles joined to it by hairline connectors: a user bubble "@data-agent How did revenue trend last quarter by region?" at the top right, and an agent reply bubble with a small robot avatar circle to its left. Along the bottom, a four-column stat row (4T+, 3×, 1M+, < 5 min; ~56px light-weight numerals at y≈858, two-line grey captions at y≈930) starts at x 126/434/741/1048. Motion: a cursor moves over the cube. The face under the cursor lightens to a soft grey gradient, and an annotation fades in (~200 ms) with a short hairline leader, a bold title and a 3-line grey caption: Connect (bottom-left, ~0.2–1.0s), Sandbox (right, ~1.0–1.7s), eve (top-left, ~1.8–2.4s), Drives (left, ~2.5–3.2s). From ~3.3s nothing is annotated. At ~4.1s the page hard-cuts from light (#f7f7f7 bg, near-black type) to dark (#000 bg, white type, buttons inverted). The cube becomes outline-only: black faces with thin grey stroked edges and outlined frame segments. In dark mode, hovering the lower-left face lights it and brings back Connect (~5.1–5.9s), which then fades as the cursor leaves. The layout never moves; only the hover highlights, annotations, cursor and theme change.
+- The designer's clip at its keyframes (frame 1482 x 1080, 7.13s):
+  - kf1 at 2.05s: public/drafts/f7ny216/kf1.jpg
+  - kf2 at 5.65s: public/drafts/f7ny216/kf2.jpg
+  Read every one of them before writing anything, then describe the layout to yourself in one paragraph: regions, alignment, type scale, radii, spacing rhythm, what moves between the keyframes.
+- The clip itself, through `bun scripts/probe.ts ti5i8b-vercel-agents-homepage-redesign`:
+    --sheet a,b                 a contact sheet of that span at 10 fps (36 frames), written to factory/ti5i8b-vercel-agents-homepage-redesign/sheets/; cover the whole clip in 3.6 s spans and Read every sheet
+    --diff a,b                  the clip at a, at b, and what changed between them in white: which thing moves, which only has something pass over it; written to factory/ti5i8b-vercel-agents-homepage-redesign/diff/
+    --col x --t t1,t2           light/mid/dark runs down column x at those times: row heights, gaps, borders, where things sit
+    --col x --t t --hex a,b     exact colours, one per pixel, from y a to b: the true gradient of a surface, a border's real colour, a gap's shade
+    --row y --t t [--hex a,b]   the same along a row
+    --track x --from a --to b   the top and bottom edge of the red/dark/light stuff in column x per frame at 60 fps: a motion's start, end, distance and shape
+    --zoom x,y,w,h --t t        that crop of the clip at up to 4x beside the same crop of your render at that moment (run the checker with --at t first), written to factory/ti5i8b-vercel-agents-homepage-redesign/zoom/
+    --patch x,y,w,h --t t --as name
+                                a texture tile from the clip as a small JPEG, written to factory/ti5i8b-vercel-agents-homepage-redesign/patches/ and set into your index.html as --patch-name in <style id="patches">, for background-image: var(--patch-name). The only way to sample; never retype base64 yourself. Refused above a tile's size.
+    --placeholder x,y,w,h --t t --as name
+                                a coarse colour grid of that region, set as --placeholder-name: the stand-in for a photograph, painting or screenshot the rebuild may not copy.
+    --drive "press x,y; move x,y; shot name; release; wait ms; click x,y; hover x,y"
+                                real pointer gestures on your page, screenshots to factory/ti5i8b-vercel-agents-homepage-redesign/drive/
+  Keyframes are moments when nothing moves. Everything between them (how a thing enters, stretches, snaps, settles, in what order) is only in the frames, so look there before you decide the timeline.
+- The checker: `bun --conditions=react-server scripts/check-build.ts ti5i8b-vercel-agents-homepage-redesign`. It renders your file at the frame size, seeks every animation on the page to each moment, screenshots, and compares with the clip at the keyframes, the middle of every measured phase and the rubric's moments. It prints: a pixel score per moment (a floor, not a goal: it cannot tell a drawn ring from a glass lens or a nine-spoke spinner from a disc), the elements whose colour (deltaE) or place (shift) differ, whether your render moves where the clip moves, and how each measured moving part keeps step. It writes factory/ti5i8b-vercel-agents-homepage-redesign/side.png (designer left, yours right, one row per moment) and factory/ti5i8b-vercel-agents-homepage-redesign/verdict.json. --at t1,t2 adds moments; --quick scores only the keyframes and your --at moments. The rubric itself is judged by a separate vision model after your session ends, criterion by criterion on crop pairs; you cannot run it, so check each criterion by eye with --zoom before you stop.
+
+The checklist (every line must be true of your file; the judge looks at a crop of the clip beside the same crop of your render):
+  c01 [style, page background] Page background is a near-white light grey (~#f7f7f7) (look at 2.05s)
+  c02 [motion, page background] Between 2.05s and 5.65s the whole page switches from light (#f7f7f7 bg, dark type) to dark (black bg, white type); layout positions stay identical (compare 2.05s with 5.65s)
+  c03 [motion, page background] The theme change is an instant cut at about 4.1s (light at 4.0s, fully dark at 4.15s), not a slow fade (compare 4s with 4.2s)
+  c04 [present, Vercel logo triangle] A solid black equilateral triangle logo sits at top-left around x 127, y 20 (look at 2.05s)
+  c05 [text, nav links] Nav reads 'Products', 'Resources' (each with a small down chevron), 'Enterprise', 'Pricing' left-to-right from x≈172 (look at 2.05s)
+  c06 [style, Sign Up button] 'Sign Up' is a black filled rounded button with white text at right end (x≈1270–1334) while 'Get a Demo' and 'Log In' are white with thin borders (look at 2.05s)
+  c07 [style, Sign Up button] In dark mode 'Sign Up' is a white/light filled button with black text (look at 5.65s)
+  c08 [text, headline] Headline reads exactly 'Build and run' / 'agents on Vercel' on two lines (look at 2.05s)
+  c09 [position, headline] Headline left edge at x≈127, cap tops y≈298 and baseline of line 2 near y≈398, roughly 56px type with tight negative tracking (look at 2.05s)
+  c10 [text, subhead] Subhead reads 'Build agents, run them on agentic infrastructure, / and put them to work across your business.' in mid-grey ~16px (look at 2.05s)
+  c11 [style, Create an agent button] 'Create an agent' is a fully rounded black pill (~133x34 at x 127, y 500) with white text (look at 2.05s)
+  c12 [style, Talk to an expert button] 'Talk to an expert' is a white pill with a faint grey border, dark text, starting x≈274 (look at 2.05s)
+  c13 [style, Create an agent button] In dark mode 'Create an agent' becomes a light grey pill with black text and 'Talk to an expert' a black pill with grey border and white text (look at 5.65s)
+  c14 [text, user chat bubble] Top-right bubble reads '@data-agent How did revenue trend last quarter by region?' with '@data-agent' in bold (look at 2.05s)
+  c15 [style, user chat bubble] User bubble is white with a thin light border, ~12px radius and a small tail at its bottom-right corner (look at 2.05s)
+  c16 [text, agent chat bubble] Second bubble reads 'EMEA up 18%, North America down 4%.' / 'I posted the chart in channel #revenue.' (look at 2.05s)
+  c17 [present, robot avatar] A small circular avatar (~28px) with a robot-head icon sits left of the agent bubble at about x 758, y 270 (look at 2.05s)
+  c18 [present, connector hairlines] Thin grey vertical hairlines drop from the bubbles toward the cube at x≈888 and x≈1085 (look at 2.05s)
+  c19 [position, hex cube] The cube silhouette is a pointy-sided hexagon spanning about x 803–1155, y 347–667, centred right of the page middle (look at 2.05s)
+  c20 [style, hex cube] Cube is built from 3 separate rounded rhombus faces (top, lower-left, right) with visible gaps between them (look at 2.05s)
+  c21 [style, hex cube] In light mode six thick solid-black chevron frame segments wrap around the faces (top bar, bottom bar, two left and two right angled bars) (look at 2.05s)
+  c22 [style, hex cube] Light-mode faces are glossy black with subtle dark-grey gradients (not flat), and a soft grey drop shadow spreads below the cube (look at 2.05s)
+  c23 [style, hex cube] In dark mode the cube is outline-only: black faces with thin grey stroked edges, and frame segments drawn as grey outlines rather than solid fills (look at 5.65s)
+  c24 [present, cube Vercel mark] A small white triangle (~19px) sits near the lower-left corner of the top face at x≈851, y≈466 (look at 2.05s)
+  c25 [present, cube halo] A faint hexagonal halo outline surrounds the cube a few px outside its silhouette (look at 2.05s)
+  c26 [motion, hex cube] The face under the cursor lightens: at 2.05s the top face (cursor on it) is visibly lighter grey than the other two faces (look at 2.05s)
+  c27 [motion, hex cube] In dark mode the lower-left face with the cursor shows a soft lighter grey gradient while the top and right faces stay black (look at 5.65s)
+  c28 [text, Connect annotation] Bottom-left annotation reads 'Connect' (bold) over 'Queried ❄ Snowflake / through a scoped, / read-only connection' with a snowflake glyph (look at 1s)
+  c29 [position, Connect annotation] Connect annotation's text starts at x≈719, y≈663, with a short horizontal hairline leader from x≈843 to ≈893 at y≈668 touching the cube's lower-left corner (look at 1s)
+  c30 [text, Sandbox annotation] To the right of the cube an annotation reads 'Sandbox' / 'Ran the regional breakdown in an isolated microVM' with a hairline leader on its left at y≈507 (look at 1.5s)
+  c31 [text, eve annotation] Top-left annotation reads 'eve' / 'Defines data-agent with a run_sql tool and a revenue skill', leader hairline at y≈344 from x≈843 to ≈893 (look at 2.05s)
+  c32 [text, Drives annotation] Left-side annotation reads 'Drives' / 'Saved the Q3 export and chart for the next question' with leader at y≈507 ending at the cube's left point (look at 2.8s)
+  c33 [motion, eve annotation] Between 2.05s and 2.55s the eve annotation disappears and the Drives annotation fades in (still pale grey at 2.55s) as the cursor moves to the cube's left point (compare 2.05s with 2.55s)
+  c34 [motion, Connect annotation] Connect annotation is visible at 1.0s and gone by 2.05s while the Sandbox note shows in between (~1.5s), one annotation at a time (compare 1s with 2.05s)
+  c35 [motion, Connect annotation] In dark mode Connect is visible in white/grey at 5.65s and fades out by 6.15s as the cursor leaves the cube's bottom edge (compare 5.65s with 6.15s)
+  c36 [motion, annotations] Annotations fade in/out over roughly 0.2s (intermediate pale grey states visible) rather than popping (compare 2.55s with 2.8s)
+  c37 [text, stat 4T+] Stat row reads '4T+', '3×', '1M+', '< 5 min' as large light-weight numerals on one line at y≈858–905 (look at 2.05s)
+  c38 [position, stat row] Four stat columns start at x≈126, 434, 741 and 1048 (even ~307px pitch) (look at 2.05s)
+  c39 [text, stat 3×] Caption under 3× reads 'faster shipping at Rillet with a software / factory built on eve' in grey ~14px (look at 2.05s)
+  c40 [text, stat 4T+] Captions read 'tokens per day running on Vercel', 'weekly npm downloads of eve', 'to deploy your first agent from the dashboard' (look at 2.05s)
+  c41 [style, headline] In dark mode the headline and stat numerals are white on black, captions mid-grey (look at 5.65s)
+  c42 [style, agent chat bubble] In dark mode both chat bubbles are near-black with a thin dark-grey border and white text (look at 5.65s)
+  c43 [motion, layout] Headline, buttons, bubbles, cube and stats do not shift position at any time; only colours, hover highlights and annotations change (compare 0.5s with 6.15s)
+
+Imagery (what the clip shows that is not plain UI, and the rule for each):
+  - hex cube [803,347,352,320] is css: Isometric cube as a hexagon of 3 rounded rhombus faces and 6 chevron frame bars; glossy black gradients with drop shadow (light) / grey hairline outlines (dark). Rule: draw it: CSS or inline SVG, exact to the crops (gradients, rings, glass, lenses, spinners, shadows, text art are all drawable)
+  - Vercel logo triangle [127,20,18,16] is structured: Vercel's solid triangle mark. Rule: draw an original SVG with the same silhouette, weight and colours; it is judged on silhouette and colour, not pixels
+  - cube Vercel mark [851,466,19,15] is structured: Small white triangle on the cube's top face. Rule: draw an original SVG with the same silhouette, weight and colours; it is judged on silhouette and colour, not pixels
+  - robot avatar [758,270,28,28] is structured: Circle with outlined robot head icon. Rule: draw an original SVG with the same silhouette, weight and colours; it is judged on silhouette and colour, not pixels
+  - Snowflake glyph [762,683,12,12] is structured: Tiny snowflake logo inline in the Connect caption. Rule: draw an original SVG with the same silhouette, weight and colours; it is judged on silhouette and colour, not pixels
+
+How to look (this is where rebuilds go wrong)
+- Find what moves with --diff before you decide the timeline: two frames half a second apart, in two or three parts of the clip. The draft's motion rows can be fooled by a thing passing over a region. Then --track the moving edge for its start, end, distance and speed.
+- Track something that should not move. Run --track through the heading with --class dark over the whole clip. If the heading moves when a panel opens or the thing enters, the page is a centred column that reflows, and you copy that layout rule rather than absolute coordinates. If it does not move during a drag, that gesture is a transform, not layout.
+- Zoom before you draw. For every surface, --zoom a 150 x 130 crop of its edge at the rest moment and read it: how thick is the edge, what colour, is there a gap behind it, which side is lit. Then --hex a column through it for the real numbers.
+- Materials are part of the design: a glass ring refracts what is behind it at its rim (the background shifts and a highlight runs along the edge), it is not an outline; a frosted panel shows the picture through it; rims, bevels, inner highlights, the lip under a key, the shade inside a fold. Draw what the crop shows, not what a component library would do.
+- Known ways rebuilds fail, in order of how often: a water ripple or lens drawn as hard concentric rings or a stroked outline, where the clip shows the picture beneath bending softly with a faint crest (build it as displacement or magnification of the background with soft falloff, never as a drawn ring); type dimmer, lighter or a different weight than the clip's; a texture as a flat gradient where the clip has grain; a seam where a patch tiles; a page that does not move while the clip does (the checker says STATIC); a wrong count (spokes, dots, rows, rings); the wrong thing moving (the background drifting when it is the rings that grow); timing read from the stills instead of tracked.
+- Interaction is the design. Whatever the clip's cursor does (hover, click, press, drag) the page must do for a real pointer, with the same response and timing. Test with --drive and Read the screenshots.
+
+Rules for the file
+- The page is exactly the frame: html and body margin 0, overflow hidden, a #stage of 1482 x 1080 px, background #f7f7f7. Set --u: 1px on #stage and write every size as calc(N * var(--u)). Nothing outside the stage.
+- Place elements from the keyframes and crops you looked at. The draft boxes are a first pass and the rubric boxes a second: trust your eyes over both. Fills from --hex, exact. Match proportion and hierarchy first, then colour, then motion.
+- Demo mode for the checker: when the URL has ?demo=1 the page replays the clip's sequence on the clip's own timeline (animation-delay for when each move starts, duration and distance from draft.phases, draft.motion and your own probing) as CSS animations or element.animate calls created at load, so the state at t seconds matches the clip at t and the checker can seek it. Without ?demo the page only answers the pointer (a load-time entrance is fine if the clip has one). No JS timers for the timeline. Respect prefers-reduced-motion.
+- Sampling: a texture that is not UI and cannot be drawn (marble, wood, fabric, grain) is taken from the clip with --patch as a tile, cropped where nothing sits on it, at a moment when it is at rest, and tiled, stretched or layered by you; keep each under 60 KB. A photograph, painting or screenshot is a photo-class region and follows its rule above (this entry is licensed: the picture itself may be sampled). Never paste a block with its chrome, text or controls: those you draw. Say in the header comment and in NOTES.md exactly what was sampled or stood in, and from which frame.
+- Fonts only from Google Fonts through a <link>; no other network. Credit the designer in a comment at the top with the source link from brief.json. Keep the file under 500 lines.
+
+Loop
+1. Read the sheets and two or three --diff pairs for the whole clip. Track the moving edge and the heading. Write the timeline as a list of events with numbers (what, from when to when, how far, which easing), and the layout from --col, --hex and the keyframes. Then build.
+2. Run the checker, read side.png, then --zoom the worst region of the worst moment, the edge of each surface, and every rubric criterion you are not sure of. Fix what the crops show: layout first, then materials, then motion. Run the checker again. Stop when the crops match the clip for every criterion, or after four runs of the checker: more runs past that have not bought anything in earlier entries, and the judge runs when you stop.
+3. --drive the interactions the clip shows and Read the screenshots. Fix what does not answer the pointer.
+4. Write factory/ti5i8b-vercel-agents-homepage-redesign/NOTES.md with three parts: "Timeline" (the event list from step 1, as measured), "Differences" (what still differs, with numbers, and every photo-class region stood in rather than reproduced) and "Pattern" (one thing you learned that applies beyond this entry, written as a design note of 3 to 6 factual sentences under a short name).
+
+Do not create or change any file outside factory/ti5i8b-vercel-agents-homepage-redesign/. Do not run anything other than the probe and the checker.

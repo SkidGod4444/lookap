@@ -1,0 +1,1261 @@
+{
+ "slug": "1fut80-minimal-tooltip-thinking-mode",
+ "at": "2026-10-23T07:03:39.574Z",
+ "runs": 12,
+ "html": "factory/1fut80-minimal-tooltip-thinking-mode/index.html",
+ "pixel": {
+  "score": 91,
+  "stills": 93,
+  "motion": 91,
+  "moments": 16
+ },
+ "animations": 188,
+ "rank": 95,
+ "allPass": false,
+ "elements": [
+  {
+   "name": "canvas",
+   "box": [
+    0,
+    0,
+    1080,
+    1080
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "user message pill",
+   "box": [
+    607,
+    108,
+    383,
+    85
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "pill text",
+   "box": [
+    635,
+    133,
+    327,
+    36
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "header status icon",
+   "box": [
+    104,
+    272,
+    22,
+    22
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "header label",
+   "box": [
+    149,
+    268,
+    200,
+    32
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "header timer",
+   "box": [
+    273,
+    270,
+    50,
+    28
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "thinking stream text",
+   "box": [
+    149,
+    320,
+    800,
+    350
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "timeline rail",
+   "box": [
+    114,
+    300,
+    3,
+    500
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "step: Done thinking",
+   "box": [
+    104,
+    334,
+    230,
+    26
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "step: Read Shopify Swedish orders",
+   "box": [
+    104,
+    396,
+    470,
+    28
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "Shopify icon",
+   "box": [
+    272,
+    397,
+    22,
+    24
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "orders subtask card",
+   "box": [
+    138,
+    447,
+    851,
+    163
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "step: Searched 46 sources",
+   "box": [
+    104,
+    460,
+    330,
+    26
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "source chips",
+   "box": [
+    149,
+    509,
+    735,
+    112
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "chip favicons",
+   "box": [
+    163,
+    519,
+    400,
+    90
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "step: Delegating to Brand Researcher",
+   "box": [
+    104,
+    652,
+    505,
+    28
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "researcher subtask card",
+   "box": [
+    138,
+    703,
+    851,
+    165
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "step: Preparing the report / Report is ready",
+   "box": [
+    104,
+    716,
+    500,
+    28
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "report file card",
+   "box": [
+    139,
+    764,
+    361,
+    271
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "step: Finished working",
+   "box": [
+    104,
+    781,
+    265,
+    28
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "the render changes where the clip changes",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "kf1",
+    "clip": 0,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "kf1",
+    "to": "0.7s",
+    "clip": 2.6,
+    "render": 2.6,
+    "read": "both move"
+   },
+   {
+    "from": "0.7s",
+    "to": "kf2",
+    "clip": 0.9,
+    "render": 0.7,
+    "read": "both move"
+   },
+   {
+    "from": "kf2",
+    "to": "2.9s",
+    "clip": 0.6,
+    "render": 0.7,
+    "read": "both move"
+   },
+   {
+    "from": "2.9s",
+    "to": "4.9s",
+    "clip": 3,
+    "render": 2.9,
+    "read": "both move"
+   },
+   {
+    "from": "4.9s",
+    "to": "kf3",
+    "clip": 4,
+    "render": 3.8,
+    "read": "both move"
+   },
+   {
+    "from": "kf3",
+    "to": "6.55s",
+    "clip": 2.2,
+    "render": 2.5,
+    "read": "both move"
+   },
+   {
+    "from": "6.55s",
+    "to": "kf4",
+    "clip": 1.3,
+    "render": 2.7,
+    "read": "both move"
+   },
+   {
+    "from": "kf4",
+    "to": "11.5s",
+    "clip": 0.9,
+    "render": 0.7,
+    "read": "both move"
+   },
+   {
+    "from": "11.5s",
+    "to": "13s",
+    "clip": 1.1,
+    "render": 1,
+    "read": "both move"
+   },
+   {
+    "from": "13s",
+    "to": "13.5s",
+    "clip": 0.2,
+    "render": 0.2,
+    "read": "both still"
+   },
+   {
+    "from": "13.5s",
+    "to": "17s",
+    "clip": 1.3,
+    "render": 1,
+    "read": "both move"
+   },
+   {
+    "from": "17s",
+    "to": "20.5s",
+    "clip": 1.1,
+    "render": 0.9,
+    "read": "both move"
+   },
+   {
+    "from": "20.5s",
+    "to": "24s",
+    "clip": 1.1,
+    "render": 1,
+    "read": "both move"
+   },
+   {
+    "from": "24s",
+    "to": "28.5s",
+    "clip": 0.9,
+    "render": 0.7,
+    "read": "both move"
+   }
+  ],
+  "trajectories": []
+ },
+ "rubric": {
+  "file": "factory/1fut80-minimal-tooltip-thinking-mode/rubric.json",
+  "total": 46,
+  "counted": 46,
+  "pass": 44,
+  "fail": 2,
+  "unsure": 0,
+  "unjudged": 0,
+  "passRate": 96,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "style",
+    "element": "canvas",
+    "check": "Background is a flat near-white (#fdfdfd) with no gradient or texture",
+    "box": [
+     0,
+     0,
+     1080,
+     1080
+    ],
+    "at": 2.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both flat near-white, no gradient or texture. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "present",
+    "element": "canvas",
+    "check": "At 0.2s the frame is empty: no bubble or text is visible",
+    "box": [
+     0,
+     0,
+     1080,
+     1080
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both frames are empty at 0.2s. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "position",
+    "element": "user message pill",
+    "check": "Pill spans x≈607–990, y≈108–193 (right edge 90px from the frame edge)",
+    "box": [
+     600,
+     100,
+     400,
+     100
+    ],
+    "at": 2.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Pill has the same size and position in both crops. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "style",
+    "element": "user message pill",
+    "check": "Pill fill is near-black (#101010) with fully rounded ends (radius ≈ half the height)",
+    "box": [
+     600,
+     100,
+     400,
+     100
+    ],
+    "at": 2.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same near-black fill and fully rounded ends. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "text",
+    "element": "pill text",
+    "check": "Pill reads exactly 'Get us live in Sweden.' in white regular sans, ~28px",
+    "box": [
+     620,
+     125,
+     360,
+     50
+    ],
+    "at": 2.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same white regular text, same size and wording. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "motion",
+    "element": "user message pill",
+    "check": "Pill fades/blurs in: absent at 0.2s, sharp and fully dark by 0.7s, with ≤3px vertical settle and no horizontal slide",
+    "box": [
+     600,
+     100,
+     400,
+     100
+    ],
+    "at": 0.2,
+    "then": 0.7,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both absent at 0.2s and sharp, dark and in the same place at 0.7s. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "motion",
+    "element": "user message pill",
+    "check": "Pill does not move or change after 0.7s (same box at 9.3s and 28.5s)",
+    "box": [
+     600,
+     100,
+     400,
+     100
+    ],
+    "at": 9.3,
+    "then": 28.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Pill is identical and static at 9.3s and 28.5s. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "style",
+    "element": "header status icon",
+    "check": "During thinking the header icon is a thin dark ring spinner (~22px) with a gap, left at x≈104, centred y≈283",
+    "box": [
+     98,
+     268,
+     34,
+     34
+    ],
+    "at": 2.4,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "Rebuild ring has a visibly thinner, lighter stroke than the clip's bolder ring. [votes: no/yes/no]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "text",
+    "element": "header label",
+    "check": "Header reads 'Start thinking...' followed by a lighter seconds counter ('1s')",
+    "box": [
+     140,
+     265,
+     280,
+     40
+    ],
+    "at": 2.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both read 'Start thinking...' with a lighter '1s' at the same x (about 455–460). [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "position",
+    "element": "header label",
+    "check": "Header text starts at x≈149, baseline row centred at y≈283, about 90px below the pill bottom",
+    "box": [
+     90,
+     190,
+     400,
+     120
+    ],
+    "at": 2.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Text starts at x≈74 in both panels, with the row at y≈159 versus 158. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "style",
+    "element": "header label",
+    "check": "'Start thinking...' has a moving shimmer: part of the word is darker than the rest (e.g. 'inking' darker at 2.9s)",
+    "box": [
+     140,
+     265,
+     220,
+     40
+    ],
+    "at": 2.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild has a darker 'k/ing' band, so a shimmer is present, though it sits slightly differently from the clip's 'nking'. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "text",
+    "element": "thinking stream text",
+    "check": "First reasoning line reads 'The goal is to get the store live in Sweden. Start with what' in light grey, ~26px, starting x≈149",
+    "box": [
+     140,
+     320,
+     800,
+     45
+    ],
+    "at": 2.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same line, same light grey, same size and x. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "motion",
+    "element": "thinking stream text",
+    "check": "Text streams in word by word: newest words at the end of the line are blurred and faint, and between 2.4s and 2.9s 'from Sweden today, what they buy, and how often they' is added",
+    "box": [
+     140,
+     320,
+     820,
+     130
+    ],
+    "at": 2.4,
+    "then": 2.9,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both stream words with blurred faint newest words; the 2.9s text matches. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "text",
+    "element": "thinking stream text",
+    "check": "Numbered list shows 5 items: 'Read Swedish order history', 'Search local market sources', 'Brief the Brand Researcher', 'Compare Sweden against Norway', 'Write the launch report' with small monospace-like numerals '1.'–'5.'",
+    "box": [
+     140,
+     390,
+     520,
+     220
+    ],
+    "at": 6.05,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same 5 items with small mono numerals; the rebuild's numerals are slightly lighter. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "text",
+    "element": "thinking stream text",
+    "check": "Closing line reads 'Orders first. They set the baseline for everything else.'",
+    "box": [
+     140,
+     620,
+     720,
+     45
+    ],
+    "at": 6.05,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same closing line text and position. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "motion",
+    "element": "thinking stream text",
+    "check": "The text block scrolls upward as it grows: at 4.9s earlier lines fade out under the header (top mask) and 'Then look outward…' sits at y≈391",
+    "box": [
+     140,
+     300,
+     820,
+     380
+    ],
+    "at": 2.9,
+    "then": 4.9,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 4.9s 'Then look outward' sits at the same y (≈761) with the top fading. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "motion",
+    "element": "thinking stream text",
+    "check": "Between 6.05s and 6.55s the whole thinking text blurs out heavily in place (no slide)",
+    "box": [
+     140,
+     330,
+     720,
+     330
+    ],
+    "at": 6.05,
+    "then": 6.55,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both blur out heavily in place at 6.55s with no slide. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "motion",
+    "element": "header label",
+    "check": "Header label changes from 'Start thinking...' to 'Working' with a vertical blurred roll, the counter moving left to sit after 'Working'",
+    "box": [
+     100,
+     262,
+     320,
+     44
+    ],
+    "at": 6.05,
+    "then": 6.55,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both roll to a blurred 'Working' with the counter moved left; the counter is about 11px different in position. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "style",
+    "element": "header status icon",
+    "check": "After the switch the header icon is a thin grey down-chevron at x≈104–126",
+    "box": [
+     98,
+     270,
+     34,
+     28
+    ],
+    "at": 9.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both show a grey down-chevron in the same place and size. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "motion",
+    "element": "header timer",
+    "check": "Header counter ticks up once per second: about '8s' at 9.3s and '27s' at 28.5s",
+    "box": [
+     260,
+     268,
+     80,
+     32
+    ],
+    "at": 9.3,
+    "then": 28.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Counter shows 8s at 9.3s and 27s at 28.5s in both. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "style",
+    "element": "timeline rail",
+    "check": "A thin light-grey vertical line at x≈115 joins the header chevron to each step's dot",
+    "box": [
+     105,
+     295,
+     25,
+     320
+    ],
+    "at": 9.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Thin light-grey vertical rail with dots at the same x in both panels. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "text",
+    "element": "step: Done thinking",
+    "check": "Row reads 'Done thinking' in grey with a small light-grey dot at x≈115, y≈346",
+    "box": [
+     100,
+     330,
+     240,
+     32
+    ],
+    "at": 9.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'Done thinking' in grey with a small light-grey dot at the left, same size and tone as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "position",
+    "element": "step rows",
+    "check": "Step rows are evenly spaced about 63px apart: Working y≈283, Done thinking y≈346, Read y≈409, Searched y≈472",
+    "box": [
+     100,
+     265,
+     500,
+     225
+    ],
+    "at": 20.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rows at y≈159/190/222/253 vs the clip's 159/191/222/254, within 1px. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "text",
+    "element": "step: Read Shopify Swedish orders",
+    "check": "Row reads 'Reading' (grey) then a green Shopify bag icon and 'Shopify Swedish orders' in darker, semi-bold text",
+    "box": [
+     100,
+     395,
+     520,
+     30
+    ],
+    "at": 9.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Grey 'Reading', green bag icon, then semi-bold 'Shopify Swedish orders'; the rebuild's name is a bit darker than the clip's. [votes: yes/no/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "imagery",
+    "element": "Shopify icon",
+    "check": "Shopify icon is a small green shopping bag with a white 'S', drawn as an original ~20px icon",
+    "box": [
+     268,
+     395,
+     30,
+     30
+    ],
+    "at": 9.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Green shopping bag with a white 'S', same shape and size as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "style",
+    "element": "orders subtask card",
+    "check": "Subtask card is white with a 1px very light grey border, corner radius ≈22px, spanning x≈138–989, and split into 2 rows by a hairline at y≈527",
+    "box": [
+     130,
+     440,
+     865,
+     178
+    ],
+    "at": 9.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White card with a faint border, rounded corners and a hairline between two rows at about the same y as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "text",
+    "element": "orders subtask card",
+    "check": "Card rows read 'Pulling Swedish order history' and 'Spotting top sellers in Sweden', each led by a ring spinner at x≈182",
+    "box": [
+     160,
+     465,
+     460,
+     125
+    ],
+    "at": 9.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both rows read 'Pulling Swedish order history' and 'Spotting top sellers in Sweden' with ring spinners at the same x; the rebuild's ring is slightly thinner. [votes: yes/no/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "motion",
+    "element": "orders subtask card",
+    "check": "Row 1 changes to a black check disc with 'Pulled Swedish order history' (~10s), then row 2 to 'Spotted top sellers in Sweden' (~11s)",
+    "box": [
+     160,
+     465,
+     460,
+     125
+    ],
+    "at": 9.3,
+    "then": 11.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both rows go from spinners to black check discs with 'Pulled' and 'Spotted' text, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "motion",
+    "element": "orders subtask card",
+    "check": "After both checks the card blurs out and the row text changes from 'Reading' to 'Read' with a grey dot (~12s)",
+    "box": [
+     100,
+     395,
+     900,
+     220
+    ],
+    "at": 11.5,
+    "then": 13,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Card gone and the row reads 'Read' with a grey dot at 13s, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "motion",
+    "element": "step: Searched 46 sources",
+    "check": "Search row's count climbs ('Start searching 3 sources' → '46 sources') while chips pop in one by one, then the label becomes 'Searched  46 sources'",
+    "box": [
+     100,
+     455,
+     800,
+     170
+    ],
+    "at": 13.5,
+    "then": 17,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'Start searching' at 13.5s becomes 'Searched 46 sources' with the 4 chips and '20+ more' at 17s, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "present",
+    "element": "source chips",
+    "check": "Exactly 4 grey chips in 2 rows (2 + 2) followed by plain text '20+ more'",
+    "box": [
+     145,
+     505,
+     745,
+     120
+    ],
+    "at": 20.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "4 grey chips in 2 rows plus plain '20+ more', same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "text",
+    "element": "source chips",
+    "check": "Chips read 'acedesign.io', 'LinkedIn - Ace Design Io...', 'X - Ace Design Io News', 'AI Search'",
+    "box": [
+     145,
+     505,
+     745,
+     120
+    ],
+    "at": 20.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Chip labels are acedesign.io, LinkedIn - Ace Design Io..., X - Ace Design Io News and AI Search, as in the clip (checked on the c31 crop, same box). [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "style",
+    "element": "source chips",
+    "check": "Chips are light grey (#ececec) with ~10px radius, ~48px tall and dark text; '20+ more' has no chip background",
+    "box": [
+     145,
+     505,
+     745,
+     120
+    ],
+    "at": 20.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Light grey chips about 46px tall (clip 48) with dark text, and '20+ more' has no background. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "imagery",
+    "element": "chip favicons",
+    "check": "Each chip has an original favicon: a lime square with a black half-circle mark, a blue LinkedIn 'in', a black X, and a multicolour Google 'G'",
+    "box": [
+     155,
+     515,
+     420,
+     95
+    ],
+    "at": 20.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Lime square with half-circle, blue 'in', black X and a multicolour G are all present; the rebuild's half-circle mark is slightly smaller. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "text",
+    "element": "step: Delegating to Brand Researcher",
+    "check": "Row at y≈665 reads 'Delegating to' (grey), a green faceted gem avatar, then 'Brand Researcher' in darker semi-bold",
+    "box": [
+     100,
+     650,
+     520,
+     32
+    ],
+    "at": 20.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Grey 'Delegating to', a green faceted gem, then darker semi-bold 'Brand Researcher', as in the clip. [votes: yes/no/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "text",
+    "element": "researcher subtask card",
+    "check": "Second card rows read 'Scanned Swedish competitor brands' (black check, dark text) and 'Mapping local pricing trends' (spinner, grey text)",
+    "box": [
+     138,
+     703,
+     851,
+     165
+    ],
+    "at": 20.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'Scanned Swedish competitor brands' with a black check in dark text and 'Mapping local pricing trends' with a spinner in grey text, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "motion",
+    "element": "researcher subtask card",
+    "check": "Second card's spinners become checks in order ('Scanned' first, then 'Mapped'), and the card then disappears so 'Preparing the report' sits directly below the Delegating row",
+    "box": [
+     100,
+     650,
+     900,
+     230
+    ],
+    "at": 20.5,
+    "then": 24,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 24s the card is gone and 'Preparing the report' sits just below the Delegating row, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "style",
+    "element": "report file card",
+    "check": "File card is a light grey rounded (~22px) box ≈361x271 at x≈139, y≈764 holding a white page preview with a grey skeleton line",
+    "box": [
+     135,
+     760,
+     370,
+     280
+    ],
+    "at": 24,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "The rebuild's card fill is visibly greyer (about #f4f4f4) and has no visible border, where the clip's is nearly white with a border; its skeleton line is also longer. [votes: no/yes/no]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "text",
+    "element": "report file card",
+    "check": "Card footer reads 'sweden-insight', with a small outlined 'PDF' pill tag on the right",
+    "box": [
+     150,
+     975,
+     340,
+     50
+    ],
+    "at": 24,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'sweden-insight' with an outlined 'PDF' pill on the right; the rebuild's text is about 8% narrower and the pill slightly smaller. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c39.png"
+   },
+   {
+    "id": "c40",
+    "axis": "present",
+    "element": "report file card",
+    "check": "A small blue arrow cursor is drawn on the page preview",
+    "box": [
+     350,
+     825,
+     40,
+     40
+    ],
+    "at": 24,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A small blue arrow cursor on the page preview, same shape and colour as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c40.png"
+   },
+   {
+    "id": "c41",
+    "axis": "text",
+    "element": "step: Report is ready",
+    "check": "Report row reads 'Report is ready' then a blue document icon and 'Sweden Insight' in darker semi-bold, with a grey dot",
+    "box": [
+     100,
+     715,
+     520,
+     30
+    ],
+    "at": 28.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild reads 'Report is ready', blue doc icon, darker semi-bold 'Sweden Insight' and grey dot, same as clip (icon marginally smaller). [votes: no/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c41.png"
+   },
+   {
+    "id": "c42",
+    "axis": "present",
+    "element": "report file card",
+    "check": "By 28.5s the file card is gone and no card remains below 'Report is ready'",
+    "box": [
+     100,
+     740,
+     500,
+     300
+    ],
+    "at": 28.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "No file card below 'Report is ready' in either panel; 'Finished working' is the last row. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c42.png"
+   },
+   {
+    "id": "c43",
+    "axis": "style",
+    "element": "step: Finished working",
+    "check": "Last row 'Finished working' has a blue filled check disc at x≈115 and fades in with a blur at y≈794",
+    "box": [
+     100,
+     778,
+     280,
+     34
+    ],
+    "at": 28.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Blue filled check disc at the left of a blurred, fading 'Finished working' in both panels, at about the same size. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c43.png"
+   },
+   {
+    "id": "c44",
+    "axis": "motion",
+    "element": "step spinners",
+    "check": "The active step shows a rotating ring spinner that turns into a small grey dot once the step is complete (e.g. the Delegating row at 20.5s vs 24s)",
+    "box": [
+     100,
+     650,
+     30,
+     30
+    ],
+    "at": 20.5,
+    "then": 24,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows a ring spinner at 20.5s and a small grey dot at 24s on the Delegating row, like the clip. [votes: no/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c44.png"
+   },
+   {
+    "id": "c45",
+    "axis": "position",
+    "element": "log column",
+    "check": "All log text is left-aligned at x≈149, and subtask cards' right edge lines up with the pill's right edge (x≈990)",
+    "box": [
+     100,
+     100,
+     900,
+     800
+    ],
+    "at": 20.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Log text starts at the same x in both panels, and the subtask card's right edge lines up with the pill's right edge at about x=990 in the rebuild. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c45.png"
+   },
+   {
+    "id": "c46",
+    "axis": "style",
+    "element": "label colours",
+    "check": "Verb labels ('Done thinking', 'Read', 'Searched') are mid grey (~#7a7a7a), while object names ('Shopify Swedish orders', 'Brand Researcher') are darker and heavier",
+    "box": [
+     140,
+     330,
+     500,
+     350
+    ],
+    "at": 20.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Verbs are mid grey and the object names are darker and heavier in both panels, with a similar contrast. [votes: yes/yes/yes]",
+    "image": "factory/1fut80-minimal-tooltip-thinking-mode/judge/c46.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 0.703,
+  "calls": 9,
+  "images": "factory/1fut80-minimal-tooltip-thinking-mode/judge",
+  "votes": 3,
+  "spread": [
+   42,
+   43,
+   44
+  ]
+ }
+}

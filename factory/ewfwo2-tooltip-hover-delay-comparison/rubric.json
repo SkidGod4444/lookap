@@ -1,0 +1,1074 @@
+{
+ "slug": "ewfwo2-tooltip-hover-delay-comparison",
+ "frame": {
+  "w": 1440,
+  "h": 1080
+ },
+ "at": "2026-10-22T19:39:46.007Z",
+ "model": "opus",
+ "costUsd": 0.768,
+ "summary": "A light, quiet comparison demo on a #f4f4f4 page: two identical white cards stacked (top [48,48,1344,480], bottom [48,552,1344,480], ~40px corner radius). Each card has a handwritten-script title at top-left (\"Delay on every hover\" in magenta, \"Delay once, then instant\" in mint green), a grey \"N.Ns waiting\" counter at top-right, a centred floating white formatting toolbar (691x78, ~18px radius, soft drop shadow) holding Body▾ | B I U S | link code quote | a coloured dot (magenta on top, mint on bottom), and a full-width 10px grey timeline track near the card bottom. Only one card is active at a time; the other sits at ~30% opacity. 0–7.8s the top card runs: an arrow cursor enters, turns into a pointing hand, and hovers B, I, U, S, link, code, quote left to right (~0.9s per button). Each hover shows a light-grey hover square, a small blue spinner ring plus a light-blue pill counting down \"500ms\"→\"0ms\" beside the cursor, then a near-black tooltip (\"Bold ⌘B\", \"Italic ⌘I\", …) fades in above the button; the previous tooltip lingers grey as it fades out. The waiting counter climbs 0.5s per button to 3.5s and the timeline paints one ~83px blue segment per wait, leaving seven segments and a \"6.9s\" label that rides the timeline's end. At ~7.8s the top card dims and the bottom card wakes: the same sweep happens, but only the first hover (B) waits 500ms; every later tooltip appears instantly in solid black with \"0ms\". Its counter stops at 0.5s and its timeline holds one blue segment with the label ending at \"3.7s\". Around 13.4–14.2s the top card fades back to full, so the clip ends holding both cards side by side: 3.5s/6.9s vs 0.5s/3.7s.",
+ "elements": [
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1440,
+    1080
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "flat light grey #f4f4f4"
+  },
+  {
+   "name": "top card",
+   "box": [
+    48,
+    48,
+    1344,
+    480
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "white, ~40px radius, no visible border"
+  },
+  {
+   "name": "bottom card",
+   "box": [
+    48,
+    552,
+    1344,
+    480
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "white, ~40px radius; ~30% opacity content while inactive (0–7.8s)"
+  },
+  {
+   "name": "top title 'Delay on every hover'",
+   "box": [
+    88,
+    80,
+    295,
+    38
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "handwritten script font, magenta ~#d02f9e, ~30px"
+  },
+  {
+   "name": "bottom title 'Delay once, then instant'",
+   "box": [
+    88,
+    584,
+    350,
+    38
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "handwritten script font, mint green ~#4fd6a6; pale while inactive"
+  },
+  {
+   "name": "top waiting counter",
+   "box": [
+    1226,
+    86,
+    126,
+    26
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'0.0s waiting' → '3.5s waiting', right-aligned at x 1352, mid grey ~#6e6e6e, ~22px"
+  },
+  {
+   "name": "bottom waiting counter",
+   "box": [
+    1226,
+    590,
+    126,
+    26
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'0.0s waiting' → '0.5s waiting'"
+  },
+  {
+   "name": "top toolbar",
+   "box": [
+    374,
+    229,
+    691,
+    78
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "white pill-ish bar, ~18px radius, thin light edge, soft wide drop shadow below"
+  },
+  {
+   "name": "bottom toolbar",
+   "box": [
+    374,
+    733,
+    691,
+    78
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "same as top toolbar"
+  },
+  {
+   "name": "Body dropdown",
+   "box": [
+    395,
+    256,
+    76,
+    26
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "'Body' + small chevron, dark #1a1a1a ~22px"
+  },
+  {
+   "name": "toolbar dividers",
+   "box": [
+    493,
+    248,
+    496,
+    40
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "3 thin light-grey vertical lines at x≈494, 774, 988"
+  },
+  {
+   "name": "format icons B I U S",
+   "box": [
+    520,
+    254,
+    230,
+    30
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "bold B, italic I, underlined U, struck S at x≈532, 600, 668, 736"
+  },
+  {
+   "name": "link / code / quote icons",
+   "box": [
+    798,
+    254,
+    166,
+    30
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "chain link, '< >' code brackets, quote/list lines at x≈813, 881, 949"
+  },
+  {
+   "name": "colour dot",
+   "box": [
+    1014,
+    256,
+    24,
+    24
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "circle ~24px; magenta #d6309e on top, mint #5adcae on bottom"
+  },
+  {
+   "name": "button hover square",
+   "box": [
+    568,
+    237,
+    64,
+    62
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "light grey #f0f0f0 rounded ~12px square behind the hovered icon"
+  },
+  {
+   "name": "tooltip",
+   "box": [
+    476,
+    172,
+    112,
+    44
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "near-black #151515 at full, ~10px radius, white ~18px text with shortcut glyphs; grey when fading; centred over the hovered button, bottom ~12px above toolbar"
+  },
+  {
+   "name": "delay spinner ring",
+   "box": [
+    625,
+    339,
+    24,
+    24
+   ],
+   "kind": "motion",
+   "class": "css",
+   "note": "thin sky-blue ring ~22px; arc spins while counting, full pale ring at 500ms, solid blue ring at 0ms"
+  },
+  {
+   "name": "delay ms pill",
+   "box": [
+    660,
+    337,
+    80,
+    30
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "light blue #e6f6fb rounded pill, teal-blue ~#2b97c0 text e.g. '458ms'; sits beside the ring, below-right of the cursor"
+  },
+  {
+   "name": "cursor",
+   "box": [
+    590,
+    280,
+    34,
+    46
+   ],
+   "kind": "chrome",
+   "class": "structured",
+   "note": "black arrow while travelling, white-filled pointing hand over buttons"
+  },
+  {
+   "name": "top timeline track",
+   "box": [
+    88,
+    478,
+    1264,
+    10
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "light grey #ebebeb rounded bar"
+  },
+  {
+   "name": "top timeline blue segments",
+   "box": [
+    88,
+    478,
+    1058,
+    10
+   ],
+   "kind": "motion",
+   "class": null,
+   "note": "sky blue #4bc0f0, each ~83px (500ms); final starts x≈88,264,423,583,744,903,1062"
+  },
+  {
+   "name": "timeline time label",
+   "box": [
+    1254,
+    474,
+    40,
+    20
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "black ~18px running label riding the painted end, e.g. '1.1s', ending '6.9s' (top) and '3.7s' at x≈725 (bottom)"
+  },
+  {
+   "name": "bottom timeline track + segment",
+   "box": [
+    88,
+    982,
+    1264,
+    10
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "grey track with one blue segment x 88–171"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "page background",
+   "axis": "style",
+   "check": "The area around the cards is flat light grey (~#f4f4f4), slightly darker than the white cards",
+   "box": [
+    0,
+    0,
+    1440,
+    1080
+   ],
+   "scope": "frame",
+   "at": 15.5,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "cards",
+   "axis": "present",
+   "check": "There are exactly two white cards stacked one above the other, each about 1344x480 px",
+   "box": [
+    48,
+    48,
+    1344,
+    984
+   ],
+   "scope": "frame",
+   "at": 15.5,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "top card",
+   "axis": "position",
+   "check": "The top card spans about x 48–1392, y 48–528, and the bottom card about y 552–1032, with a ~24px gap between them",
+   "box": [
+    48,
+    48,
+    1344,
+    984
+   ],
+   "scope": "frame",
+   "at": 15.5,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "top card",
+   "axis": "style",
+   "check": "The card corners are large and rounded, radius about 40px",
+   "box": [
+    48,
+    48,
+    120,
+    120
+   ],
+   "scope": "crop",
+   "at": 15.5,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "top title",
+   "axis": "text",
+   "check": "The top card's title reads exactly 'Delay on every hover' in a handwritten script font",
+   "box": [
+    88,
+    80,
+    295,
+    38
+   ],
+   "scope": "crop",
+   "at": 15.5,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "top title",
+   "axis": "style",
+   "check": "The top title is magenta/pink (~#d02f9e)",
+   "box": [
+    88,
+    80,
+    295,
+    38
+   ],
+   "scope": "crop",
+   "at": 15.5,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "bottom title",
+   "axis": "text",
+   "check": "The bottom card's title reads exactly 'Delay once, then instant' in the same handwritten script",
+   "box": [
+    88,
+    584,
+    350,
+    38
+   ],
+   "scope": "crop",
+   "at": 15.5,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "bottom title",
+   "axis": "style",
+   "check": "The bottom title is mint green (~#4fd6a6)",
+   "box": [
+    88,
+    584,
+    350,
+    38
+   ],
+   "scope": "crop",
+   "at": 15.5,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "top waiting counter",
+   "axis": "text",
+   "check": "The top-right text reads '3.5s waiting', right-aligned to x≈1352, in mid grey regular sans ~22px",
+   "box": [
+    1200,
+    84,
+    160,
+    30
+   ],
+   "scope": "crop",
+   "at": 15.5,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "bottom waiting counter",
+   "axis": "text",
+   "check": "The bottom card's top-right text reads '0.5s waiting'",
+   "box": [
+    1200,
+    588,
+    160,
+    30
+   ],
+   "scope": "crop",
+   "at": 15.5,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "top toolbar",
+   "axis": "position",
+   "check": "The toolbar is centred horizontally in the card at about x 374–1065, y 229–307 (bottom card's at y 733–811)",
+   "box": [
+    374,
+    229,
+    691,
+    78
+   ],
+   "scope": "frame",
+   "at": 15.5,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "top toolbar",
+   "axis": "style",
+   "check": "The toolbar is white with ~18px rounded corners and a soft, wide grey drop shadow below it (not a hard border)",
+   "box": [
+    360,
+    220,
+    720,
+    110
+   ],
+   "scope": "crop",
+   "at": 15.5,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "toolbar contents",
+   "axis": "present",
+   "check": "Left to right the toolbar holds: 'Body' with a down chevron, B, I, U, S, a chain link, '< >', a quote/list icon, and a filled colour dot",
+   "box": [
+    374,
+    229,
+    691,
+    78
+   ],
+   "scope": "crop",
+   "at": 15.5,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "toolbar dividers",
+   "axis": "present",
+   "check": "Three thin light-grey vertical dividers split the toolbar: after Body, after S, and before the colour dot",
+   "box": [
+    480,
+    240,
+    520,
+    56
+   ],
+   "scope": "crop",
+   "at": 15.5,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "colour dot",
+   "axis": "style",
+   "check": "The top toolbar's dot is solid magenta and the bottom toolbar's dot is solid mint green, each ~24px",
+   "box": [
+    1010,
+    250,
+    30,
+    540
+   ],
+   "scope": "frame",
+   "at": 15.5,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "top timeline",
+   "axis": "position",
+   "check": "A thin (~10px) rounded light-grey track runs across the card at y≈483, from x 88 to 1352",
+   "box": [
+    88,
+    474,
+    1264,
+    20
+   ],
+   "scope": "crop",
+   "at": 15.5,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "top timeline segments",
+   "axis": "present",
+   "check": "The top timeline shows exactly 7 separate sky-blue segments, each ~83px long, with grey gaps between",
+   "box": [
+    88,
+    474,
+    1264,
+    20
+   ],
+   "scope": "crop",
+   "at": 15.5,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "top timeline label",
+   "axis": "text",
+   "check": "The top timeline ends with the black label '6.9s' near x 1255–1292",
+   "box": [
+    1230,
+    470,
+    90,
+    26
+   ],
+   "scope": "crop",
+   "at": 15.5,
+   "then": null
+  },
+  {
+   "id": "c19",
+   "element": "bottom timeline segments",
+   "axis": "present",
+   "check": "The bottom timeline shows exactly 1 sky-blue segment at its left end (x≈88–171)",
+   "box": [
+    88,
+    978,
+    1264,
+    20
+   ],
+   "scope": "crop",
+   "at": 15.5,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "bottom timeline label",
+   "axis": "text",
+   "check": "The bottom timeline's label reads '3.7s' at about x 725–765",
+   "box": [
+    700,
+    975,
+    90,
+    26
+   ],
+   "scope": "crop",
+   "at": 15.5,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "bottom card",
+   "axis": "style",
+   "check": "While the top card runs, the bottom card's title, counter, toolbar icons and dot are faded to about 30% (pale mint title, light grey icons)",
+   "box": [
+    48,
+    552,
+    1344,
+    480
+   ],
+   "scope": "frame",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "tooltip",
+   "axis": "style",
+   "check": "A settled tooltip is a near-black (~#151515) rounded rectangle (~10px radius, ~44px tall) with white text",
+   "box": [
+    476,
+    166,
+    120,
+    56
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "tooltip",
+   "axis": "text",
+   "check": "The tooltip over B reads 'Bold ⌘B'",
+   "box": [
+    476,
+    166,
+    120,
+    56
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "tooltip",
+   "axis": "position",
+   "check": "The tooltip is horizontally centred over the hovered button with its bottom ~12px above the toolbar's top edge",
+   "box": [
+    460,
+    160,
+    160,
+    150
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c25",
+   "element": "button hover square",
+   "axis": "style",
+   "check": "The hovered button sits on a light-grey rounded square (~64x62, ~12px radius)",
+   "box": [
+    490,
+    230,
+    90,
+    76
+   ],
+   "scope": "crop",
+   "at": 1.4,
+   "then": null
+  },
+  {
+   "id": "c26",
+   "element": "cursor",
+   "axis": "style",
+   "check": "Over a button the cursor is a white pointing-hand with black outline; while travelling it is a black arrow",
+   "box": [
+    560,
+    270,
+    80,
+    70
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c27",
+   "element": "delay ms pill",
+   "axis": "style",
+   "check": "Below-right of the cursor sits a thin sky-blue spinner ring followed by a light-blue rounded pill with teal-blue text",
+   "box": [
+    615,
+    330,
+    135,
+    40
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "delay ms pill",
+   "axis": "text",
+   "check": "The pill reads '458ms' and the ring shows a partial arc (counting down)",
+   "box": [
+    615,
+    330,
+    135,
+    40
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c29",
+   "element": "delay ms pill",
+   "axis": "text",
+   "check": "Once the delay is over the pill reads '0ms' next to a solid sky-blue ring",
+   "box": [
+    625,
+    330,
+    110,
+    40
+   ],
+   "scope": "crop",
+   "at": 2.4,
+   "then": null
+  },
+  {
+   "id": "c30",
+   "element": "tooltip",
+   "axis": "motion",
+   "check": "After the cursor moves from B to I, the old 'Bold ⌘B' tooltip stays visible in grey (fading) and is replaced by a grey, fading-in 'Italic ⌘I' tooltip above I",
+   "box": [
+    460,
+    160,
+    220,
+    70
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": 2.4
+  },
+  {
+   "id": "c31",
+   "element": "top tooltip sequence",
+   "axis": "text",
+   "check": "The strikethrough tooltip reads 'Strikethrough ⌘⇧X'",
+   "box": [
+    620,
+    166,
+    232,
+    56
+   ],
+   "scope": "crop",
+   "at": 4.8,
+   "then": null
+  },
+  {
+   "id": "c32",
+   "element": "top tooltip sequence",
+   "axis": "text",
+   "check": "The quote tooltip reads 'Quote ⌘⇧9' and is solid black",
+   "box": [
+    880,
+    160,
+    170,
+    70
+   ],
+   "scope": "crop",
+   "at": 7.6,
+   "then": null
+  },
+  {
+   "id": "c33",
+   "element": "cursor",
+   "axis": "motion",
+   "check": "The hand cursor steps left to right across the buttons one per ~0.9s: on I at 2.4s, on the link at 4.8s, on the quote icon at 6.8s",
+   "box": [
+    374,
+    229,
+    691,
+    120
+   ],
+   "scope": "frame",
+   "at": 2.4,
+   "then": 6.8
+  },
+  {
+   "id": "c34",
+   "element": "top waiting counter",
+   "axis": "motion",
+   "check": "The top counter climbs in 0.5s steps as each delay completes: '0.5s waiting' at 1.9s, '1.0s' at 2.4s, '2.1s' at 4.8s, '3.2s' at 6.8s",
+   "box": [
+    1200,
+    84,
+    160,
+    30
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": 6.8
+  },
+  {
+   "id": "c35",
+   "element": "top timeline segments",
+   "axis": "motion",
+   "check": "The top timeline grows from 2 blue blocks plus a label '1.6s' to 4 full blocks plus a stub and label '4.0s' as the sweep proceeds",
+   "box": [
+    88,
+    474,
+    1264,
+    20
+   ],
+   "scope": "crop",
+   "at": 2.4,
+   "then": 4.8
+  },
+  {
+   "id": "c36",
+   "element": "timeline time label",
+   "axis": "motion",
+   "check": "The black time label rides just after the painted end of the timeline, moving right as time passes (e.g. ~x 285 at 1.9s, ~x 1100 at 6.8s)",
+   "box": [
+    88,
+    470,
+    1264,
+    26
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": 6.8
+  },
+  {
+   "id": "c37",
+   "element": "cards",
+   "axis": "motion",
+   "check": "Around 7.8s the active panel switches: the top card fades to ~30% and the bottom card's title, counter, toolbar and dot turn full strength",
+   "box": [
+    48,
+    48,
+    1344,
+    984
+   ],
+   "scope": "frame",
+   "at": 7.6,
+   "then": 9.1
+  },
+  {
+   "id": "c38",
+   "element": "bottom card",
+   "axis": "motion",
+   "check": "In the bottom card the first hover (B) shows a counting spinner '194ms' and the counter rises to '0.3s waiting' with a short blue timeline stub '0.3s'",
+   "box": [
+    48,
+    552,
+    1344,
+    480
+   ],
+   "scope": "frame",
+   "at": 9.6,
+   "then": null
+  },
+  {
+   "id": "c39",
+   "element": "bottom tooltips",
+   "axis": "motion",
+   "check": "In the bottom card, later hovers (U onwards) show a solid black tooltip immediately with the pill at '0ms', with no counting delay and no grey fade-in",
+   "box": [
+    374,
+    680,
+    800,
+    200
+   ],
+   "scope": "frame",
+   "at": 11.4,
+   "then": 12.6
+  },
+  {
+   "id": "c40",
+   "element": "bottom waiting counter",
+   "axis": "motion",
+   "check": "The bottom counter stays at '0.5s waiting' from the second hover to the end while its timeline adds no new blue segments",
+   "box": [
+    48,
+    552,
+    1344,
+    480
+   ],
+   "scope": "frame",
+   "at": 11,
+   "then": 15.5
+  },
+  {
+   "id": "c41",
+   "element": "top card",
+   "axis": "motion",
+   "check": "Between ~13.4s and ~14.2s the dimmed top card fades back to full strength, so at the end both cards show at full colour",
+   "box": [
+    48,
+    48,
+    1344,
+    480
+   ],
+   "scope": "frame",
+   "at": 13.4,
+   "then": 14.2
+  },
+  {
+   "id": "c42",
+   "element": "overall",
+   "axis": "motion",
+   "check": "The final state (both cards, no cursor, no tooltip) holds still from ~14.2s to the end",
+   "box": [
+    0,
+    0,
+    1440,
+    1080
+   ],
+   "scope": "frame",
+   "at": 14.5,
+   "then": 15.9
+  },
+  {
+   "id": "c43",
+   "element": "cursor",
+   "axis": "motion",
+   "check": "At the start an arrow cursor rests in empty space at ~(903,380) with a pale '500ms' pill below it, before moving onto B",
+   "box": [
+    880,
+    370,
+    180,
+    100
+   ],
+   "scope": "crop",
+   "at": 0.5,
+   "then": 1.4
+  },
+  {
+   "id": "c44",
+   "element": "format icons",
+   "axis": "style",
+   "check": "B is bold, I is a slanted bar, U is underlined, S has a strike line, all dark ~#1a1a1a at ~22px in the active toolbar",
+   "box": [
+    515,
+    250,
+    240,
+    36
+   ],
+   "scope": "crop",
+   "at": 15.5,
+   "then": null
+  },
+  {
+   "id": "c45",
+   "element": "link / code / quote icons",
+   "axis": "imagery",
+   "check": "The link, code and quote icons are thin-stroke line icons with the same silhouettes (chain loops, '< >', staggered lines)",
+   "box": [
+    795,
+    250,
+    175,
+    36
+   ],
+   "scope": "crop",
+   "at": 15.5,
+   "then": null
+  }
+ ],
+ "imagery": [
+  {
+   "name": "toolbar icons (B I U S link code quote, chevron)",
+   "box": [
+    395,
+    250,
+    570,
+    36
+   ],
+   "class": "structured",
+   "what": "thin-stroke formatting glyph icons in dark grey",
+   "at": 15.5
+  },
+  {
+   "name": "cursor arrow / pointing hand",
+   "box": [
+    590,
+    280,
+    34,
+    46
+   ],
+   "class": "structured",
+   "what": "macOS-style black arrow and white pointing hand cursor",
+   "at": 1.9
+  },
+  {
+   "name": "toolbar shadow",
+   "box": [
+    360,
+    220,
+    720,
+    110
+   ],
+   "class": "css",
+   "what": "soft wide drop shadow under the white rounded toolbar",
+   "at": 15.5
+  },
+  {
+   "name": "delay spinner ring",
+   "box": [
+    625,
+    339,
+    24,
+    24
+   ],
+   "class": "css",
+   "what": "thin sky-blue ring with a rotating arc while counting",
+   "at": 1.9
+  }
+ ],
+ "moves": [
+  {
+   "element": "cursor (top)",
+   "what": "arrow enters at ~(903,380), turns into a hand on B, then steps right one button per ~0.9s through I, U, S, link, code, quote",
+   "from": 0.5,
+   "to": 7.6,
+   "px": 420
+  },
+  {
+   "element": "delay pill + ring (top)",
+   "what": "counts 500ms→0ms beside the cursor on each hover, then reads 0ms",
+   "from": 1,
+   "to": 7.6,
+   "px": null
+  },
+  {
+   "element": "tooltips (top)",
+   "what": "after each 500ms wait a tooltip fades in grey→black above the button; the previous one fades out grey",
+   "from": 1.4,
+   "to": 7.6,
+   "px": null
+  },
+  {
+   "element": "top counter + timeline",
+   "what": "counter 0.0→3.5s waiting; seven ~83px blue segments paint in left to right; label rides to 6.9s",
+   "from": 1,
+   "to": 7.8,
+   "px": 1058
+  },
+  {
+   "element": "cards opacity",
+   "what": "top card dims to ~30%, bottom card comes to full strength",
+   "from": 7.6,
+   "to": 8,
+   "px": null
+  },
+  {
+   "element": "cursor (bottom)",
+   "what": "same sweep B→quote; only B waits 500ms, later tooltips show instantly with 0ms",
+   "from": 8,
+   "to": 13.1,
+   "px": 420
+  },
+  {
+   "element": "bottom counter + timeline",
+   "what": "counter 0.0→0.5s; one blue segment; label rides to 3.7s at x≈725",
+   "from": 9.2,
+   "to": 13.1,
+   "px": 83
+  },
+  {
+   "element": "top card opacity",
+   "what": "top card fades back to full; final both-panels state holds to end",
+   "from": 13.4,
+   "to": 14.2,
+   "px": null
+  }
+ ]
+}

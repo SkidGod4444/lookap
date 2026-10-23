@@ -1,0 +1,1105 @@
+{
+ "slug": "1fut80-minimal-tooltip-thinking-mode",
+ "frame": {
+  "w": 1080,
+  "h": 1080
+ },
+ "at": "2026-10-22T19:42:45.954Z",
+ "model": "opus",
+ "costUsd": 1.087,
+ "summary": "A plain light canvas (#fdfdfd) built like an AI chat transcript. A near-black pill message bubble (#101010, fully rounded, about 383x85 px) sits top-right at x 607–990, y 108–193 and reads \"Get us live in Sweden.\" in white sans (~28 px). It blurs and fades in between 0.3 s and 0.7 s. Under it, a left-aligned agent log starts at x 104 (icons) and x 149 (text), top row at y 283. From about 1.5 s a spinner and a shimmering grey \"Start thinking…\" header with a running seconds counter appear. Below them, grey reasoning text (~26 px, 44 px line height) streams in word by word with a blur fade. The text scrolls upward behind a top fade mask: two paragraphs, then the numbered list \"1. Read Swedish order history … 5. Write the launch report\", then \"Orders first. They set the baseline for everything else.\" At about 6 s the whole thinking block blurs away and the header rolls from \"Start thinking…\" to \"Working\", led by a chevron. A thin grey vertical timeline at x 115 then grows down the left as steps arrive in 63 px rows, each with a spinner that turns into a grey dot when it finishes. The steps are: \"Done thinking\"; \"Reading → Read 🛍 Shopify Swedish orders\" with a bordered, rounded two-row subtask card (spinners become black check discs); \"Start searching N sources → Searched 46 sources\" with grey chips (acedesign.io, LinkedIn – Ace Design Io…, X – Ace Design Io News, AI Search, 20+ more); \"Delegating to Brand Researcher\" with a second subtask card; \"Preparing the report\" with a file-preview card labelled \"sweden-insight PDF\" and a blue cursor. That card collapses to \"Report is ready 📄 Sweden Insight\", and \"Finished working\" with a blue check disc blurs in at about 28.5 s. The bubble never moves. All motion is appearance in place: blur and fade, spinner rotation, counter ticks, and rows pushing content down.",
+ "elements": [
+  {
+   "name": "canvas",
+   "box": [
+    0,
+    0,
+    1080,
+    1080
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "flat #fdfdfd, no texture"
+  },
+  {
+   "name": "user message pill",
+   "box": [
+    607,
+    108,
+    383,
+    85
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "#101010 fully rounded (radius ~42), static from 0.7s"
+  },
+  {
+   "name": "pill text",
+   "box": [
+    635,
+    133,
+    327,
+    36
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Get us live in Sweden.' white, ~28px regular sans"
+  },
+  {
+   "name": "header status icon",
+   "box": [
+    104,
+    272,
+    22,
+    22
+   ],
+   "kind": "icon",
+   "class": "css",
+   "note": "thin ring spinner during thinking (to ~6s), then down chevron"
+  },
+  {
+   "name": "header label",
+   "box": [
+    149,
+    268,
+    200,
+    32
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Start thinking...' with shimmer, then 'Working'; grey ~26px medium"
+  },
+  {
+   "name": "header timer",
+   "box": [
+    273,
+    270,
+    50,
+    28
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "seconds counter '1s'…'27s', lighter grey; sits right of the label"
+  },
+  {
+   "name": "thinking stream text",
+   "box": [
+    149,
+    320,
+    800,
+    350
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "grey paragraphs plus a 5-item numbered list, ~26px; words blur in, top fades out as it scrolls; gone by ~6.5s"
+  },
+  {
+   "name": "timeline rail",
+   "box": [
+    114,
+    300,
+    3,
+    500
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "1–2px light grey vertical line linking step dots, grows as steps are added"
+  },
+  {
+   "name": "step: Done thinking",
+   "box": [
+    104,
+    334,
+    230,
+    26
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "grey dot at x115, label x149, y346"
+  },
+  {
+   "name": "step: Read Shopify Swedish orders",
+   "box": [
+    104,
+    396,
+    470,
+    28
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Reading'/'Read' grey + green Shopify bag icon + darker 'Shopify Swedish orders', y409"
+  },
+  {
+   "name": "Shopify icon",
+   "box": [
+    272,
+    397,
+    22,
+    24
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "green shopping bag with white S"
+  },
+  {
+   "name": "orders subtask card",
+   "box": [
+    138,
+    447,
+    851,
+    163
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "white card, ~1px #e8e8e8 border, radius ~22, two rows split at y527; 'Pulling Swedish order history' / 'Spotting top sellers in Sweden' with spinners → checks; present ~8.5–11.5s"
+  },
+  {
+   "name": "step: Searched 46 sources",
+   "box": [
+    104,
+    460,
+    330,
+    26
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Start searching N sources' → 'Searched  46 sources', y472"
+  },
+  {
+   "name": "source chips",
+   "box": [
+    149,
+    509,
+    735,
+    112
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "light grey #ececec rounded (~10px) chips in 2 rows: acedesign.io, LinkedIn - Ace Design Io..., X - Ace Design Io News, AI Search, plus plain text '20+ more'"
+  },
+  {
+   "name": "chip favicons",
+   "box": [
+    163,
+    519,
+    400,
+    90
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "lime acedesign mark, blue LinkedIn 'in', black X, multicolour Google G"
+  },
+  {
+   "name": "step: Delegating to Brand Researcher",
+   "box": [
+    104,
+    652,
+    505,
+    28
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "green faceted gem avatar + 'Brand Researcher', y665"
+  },
+  {
+   "name": "researcher subtask card",
+   "box": [
+    138,
+    703,
+    851,
+    165
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "same card style; 'Scanning/Scanned Swedish competitor brands', 'Mapping/Mapped local pricing trends'; ~18–21s"
+  },
+  {
+   "name": "step: Preparing the report / Report is ready",
+   "box": [
+    104,
+    716,
+    500,
+    28
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "y728; later 'Report is ready' + blue doc icon + 'Sweden Insight'"
+  },
+  {
+   "name": "report file card",
+   "box": [
+    139,
+    764,
+    361,
+    271
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "light grey rounded card holding a white page preview with a skeleton line, a blue arrow cursor, the caption 'sweden-insight' and a 'PDF' pill tag; ~22–27s"
+  },
+  {
+   "name": "step: Finished working",
+   "box": [
+    104,
+    781,
+    265,
+    28
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "blue check disc + 'Finished working', y794, blurs in ~28.5s"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "canvas",
+   "axis": "style",
+   "check": "Background is a flat near-white (#fdfdfd) with no gradient or texture",
+   "box": [
+    0,
+    0,
+    1080,
+    1080
+   ],
+   "scope": "frame",
+   "at": 2.4,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "canvas",
+   "axis": "present",
+   "check": "At 0.2s the frame is empty: no bubble or text is visible",
+   "box": [
+    0,
+    0,
+    1080,
+    1080
+   ],
+   "scope": "frame",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "user message pill",
+   "axis": "position",
+   "check": "Pill spans x≈607–990, y≈108–193 (right edge 90px from the frame edge)",
+   "box": [
+    600,
+    100,
+    400,
+    100
+   ],
+   "scope": "crop",
+   "at": 2.4,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "user message pill",
+   "axis": "style",
+   "check": "Pill fill is near-black (#101010) with fully rounded ends (radius ≈ half the height)",
+   "box": [
+    600,
+    100,
+    400,
+    100
+   ],
+   "scope": "crop",
+   "at": 2.4,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "pill text",
+   "axis": "text",
+   "check": "Pill reads exactly 'Get us live in Sweden.' in white regular sans, ~28px",
+   "box": [
+    620,
+    125,
+    360,
+    50
+   ],
+   "scope": "crop",
+   "at": 2.4,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "user message pill",
+   "axis": "motion",
+   "check": "Pill fades/blurs in: absent at 0.2s, sharp and fully dark by 0.7s, with ≤3px vertical settle and no horizontal slide",
+   "box": [
+    600,
+    100,
+    400,
+    100
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": 0.7
+  },
+  {
+   "id": "c07",
+   "element": "user message pill",
+   "axis": "motion",
+   "check": "Pill does not move or change after 0.7s (same box at 9.3s and 28.5s)",
+   "box": [
+    600,
+    100,
+    400,
+    100
+   ],
+   "scope": "crop",
+   "at": 9.3,
+   "then": 28.5
+  },
+  {
+   "id": "c08",
+   "element": "header status icon",
+   "axis": "style",
+   "check": "During thinking the header icon is a thin dark ring spinner (~22px) with a gap, left at x≈104, centred y≈283",
+   "box": [
+    98,
+    268,
+    34,
+    34
+   ],
+   "scope": "crop",
+   "at": 2.4,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "header label",
+   "axis": "text",
+   "check": "Header reads 'Start thinking...' followed by a lighter seconds counter ('1s')",
+   "box": [
+    140,
+    265,
+    280,
+    40
+   ],
+   "scope": "crop",
+   "at": 2.4,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "header label",
+   "axis": "position",
+   "check": "Header text starts at x≈149, baseline row centred at y≈283, about 90px below the pill bottom",
+   "box": [
+    90,
+    190,
+    400,
+    120
+   ],
+   "scope": "frame",
+   "at": 2.4,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "header label",
+   "axis": "style",
+   "check": "'Start thinking...' has a moving shimmer: part of the word is darker than the rest (e.g. 'inking' darker at 2.9s)",
+   "box": [
+    140,
+    265,
+    220,
+    40
+   ],
+   "scope": "crop",
+   "at": 2.9,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "thinking stream text",
+   "axis": "text",
+   "check": "First reasoning line reads 'The goal is to get the store live in Sweden. Start with what' in light grey, ~26px, starting x≈149",
+   "box": [
+    140,
+    320,
+    800,
+    45
+   ],
+   "scope": "crop",
+   "at": 2.4,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "thinking stream text",
+   "axis": "motion",
+   "check": "Text streams in word by word: newest words at the end of the line are blurred and faint, and between 2.4s and 2.9s 'from Sweden today, what they buy, and how often they' is added",
+   "box": [
+    140,
+    320,
+    820,
+    130
+   ],
+   "scope": "crop",
+   "at": 2.4,
+   "then": 2.9
+  },
+  {
+   "id": "c14",
+   "element": "thinking stream text",
+   "axis": "text",
+   "check": "Numbered list shows 5 items: 'Read Swedish order history', 'Search local market sources', 'Brief the Brand Researcher', 'Compare Sweden against Norway', 'Write the launch report' with small monospace-like numerals '1.'–'5.'",
+   "box": [
+    140,
+    390,
+    520,
+    220
+   ],
+   "scope": "crop",
+   "at": 6.05,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "thinking stream text",
+   "axis": "text",
+   "check": "Closing line reads 'Orders first. They set the baseline for everything else.'",
+   "box": [
+    140,
+    620,
+    720,
+    45
+   ],
+   "scope": "crop",
+   "at": 6.05,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "thinking stream text",
+   "axis": "motion",
+   "check": "The text block scrolls upward as it grows: at 4.9s earlier lines fade out under the header (top mask) and 'Then look outward…' sits at y≈391",
+   "box": [
+    140,
+    300,
+    820,
+    380
+   ],
+   "scope": "frame",
+   "at": 2.9,
+   "then": 4.9
+  },
+  {
+   "id": "c17",
+   "element": "thinking stream text",
+   "axis": "motion",
+   "check": "Between 6.05s and 6.55s the whole thinking text blurs out heavily in place (no slide)",
+   "box": [
+    140,
+    330,
+    720,
+    330
+   ],
+   "scope": "crop",
+   "at": 6.05,
+   "then": 6.55
+  },
+  {
+   "id": "c18",
+   "element": "header label",
+   "axis": "motion",
+   "check": "Header label changes from 'Start thinking...' to 'Working' with a vertical blurred roll, the counter moving left to sit after 'Working'",
+   "box": [
+    100,
+    262,
+    320,
+    44
+   ],
+   "scope": "crop",
+   "at": 6.05,
+   "then": 6.55
+  },
+  {
+   "id": "c19",
+   "element": "header status icon",
+   "axis": "style",
+   "check": "After the switch the header icon is a thin grey down-chevron at x≈104–126",
+   "box": [
+    98,
+    270,
+    34,
+    28
+   ],
+   "scope": "crop",
+   "at": 9.3,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "header timer",
+   "axis": "motion",
+   "check": "Header counter ticks up once per second: about '8s' at 9.3s and '27s' at 28.5s",
+   "box": [
+    260,
+    268,
+    80,
+    32
+   ],
+   "scope": "crop",
+   "at": 9.3,
+   "then": 28.5
+  },
+  {
+   "id": "c21",
+   "element": "timeline rail",
+   "axis": "style",
+   "check": "A thin light-grey vertical line at x≈115 joins the header chevron to each step's dot",
+   "box": [
+    105,
+    295,
+    25,
+    320
+   ],
+   "scope": "crop",
+   "at": 9.3,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "step: Done thinking",
+   "axis": "text",
+   "check": "Row reads 'Done thinking' in grey with a small light-grey dot at x≈115, y≈346",
+   "box": [
+    100,
+    330,
+    240,
+    32
+   ],
+   "scope": "crop",
+   "at": 9.3,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "step rows",
+   "axis": "position",
+   "check": "Step rows are evenly spaced about 63px apart: Working y≈283, Done thinking y≈346, Read y≈409, Searched y≈472",
+   "box": [
+    100,
+    265,
+    500,
+    225
+   ],
+   "scope": "frame",
+   "at": 20.5,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "step: Read Shopify Swedish orders",
+   "axis": "text",
+   "check": "Row reads 'Reading' (grey) then a green Shopify bag icon and 'Shopify Swedish orders' in darker, semi-bold text",
+   "box": [
+    100,
+    395,
+    520,
+    30
+   ],
+   "scope": "crop",
+   "at": 9.3,
+   "then": null
+  },
+  {
+   "id": "c25",
+   "element": "Shopify icon",
+   "axis": "imagery",
+   "check": "Shopify icon is a small green shopping bag with a white 'S', drawn as an original ~20px icon",
+   "box": [
+    268,
+    395,
+    30,
+    30
+   ],
+   "scope": "crop",
+   "at": 9.3,
+   "then": null
+  },
+  {
+   "id": "c26",
+   "element": "orders subtask card",
+   "axis": "style",
+   "check": "Subtask card is white with a 1px very light grey border, corner radius ≈22px, spanning x≈138–989, and split into 2 rows by a hairline at y≈527",
+   "box": [
+    130,
+    440,
+    865,
+    178
+   ],
+   "scope": "crop",
+   "at": 9.3,
+   "then": null
+  },
+  {
+   "id": "c27",
+   "element": "orders subtask card",
+   "axis": "text",
+   "check": "Card rows read 'Pulling Swedish order history' and 'Spotting top sellers in Sweden', each led by a ring spinner at x≈182",
+   "box": [
+    160,
+    465,
+    460,
+    125
+   ],
+   "scope": "crop",
+   "at": 9.3,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "orders subtask card",
+   "axis": "motion",
+   "check": "Row 1 changes to a black check disc with 'Pulled Swedish order history' (~10s), then row 2 to 'Spotted top sellers in Sweden' (~11s)",
+   "box": [
+    160,
+    465,
+    460,
+    125
+   ],
+   "scope": "crop",
+   "at": 9.3,
+   "then": 11.5
+  },
+  {
+   "id": "c29",
+   "element": "orders subtask card",
+   "axis": "motion",
+   "check": "After both checks the card blurs out and the row text changes from 'Reading' to 'Read' with a grey dot (~12s)",
+   "box": [
+    100,
+    395,
+    900,
+    220
+   ],
+   "scope": "frame",
+   "at": 11.5,
+   "then": 13
+  },
+  {
+   "id": "c30",
+   "element": "step: Searched 46 sources",
+   "axis": "motion",
+   "check": "Search row's count climbs ('Start searching 3 sources' → '46 sources') while chips pop in one by one, then the label becomes 'Searched  46 sources'",
+   "box": [
+    100,
+    455,
+    800,
+    170
+   ],
+   "scope": "frame",
+   "at": 13.5,
+   "then": 17
+  },
+  {
+   "id": "c31",
+   "element": "source chips",
+   "axis": "present",
+   "check": "Exactly 4 grey chips in 2 rows (2 + 2) followed by plain text '20+ more'",
+   "box": [
+    145,
+    505,
+    745,
+    120
+   ],
+   "scope": "crop",
+   "at": 20.5,
+   "then": null
+  },
+  {
+   "id": "c32",
+   "element": "source chips",
+   "axis": "text",
+   "check": "Chips read 'acedesign.io', 'LinkedIn - Ace Design Io...', 'X - Ace Design Io News', 'AI Search'",
+   "box": [
+    145,
+    505,
+    745,
+    120
+   ],
+   "scope": "crop",
+   "at": 20.5,
+   "then": null
+  },
+  {
+   "id": "c33",
+   "element": "source chips",
+   "axis": "style",
+   "check": "Chips are light grey (#ececec) with ~10px radius, ~48px tall and dark text; '20+ more' has no chip background",
+   "box": [
+    145,
+    505,
+    745,
+    120
+   ],
+   "scope": "crop",
+   "at": 20.5,
+   "then": null
+  },
+  {
+   "id": "c34",
+   "element": "chip favicons",
+   "axis": "imagery",
+   "check": "Each chip has an original favicon: a lime square with a black half-circle mark, a blue LinkedIn 'in', a black X, and a multicolour Google 'G'",
+   "box": [
+    155,
+    515,
+    420,
+    95
+   ],
+   "scope": "crop",
+   "at": 20.5,
+   "then": null
+  },
+  {
+   "id": "c35",
+   "element": "step: Delegating to Brand Researcher",
+   "axis": "text",
+   "check": "Row at y≈665 reads 'Delegating to' (grey), a green faceted gem avatar, then 'Brand Researcher' in darker semi-bold",
+   "box": [
+    100,
+    650,
+    520,
+    32
+   ],
+   "scope": "crop",
+   "at": 20.5,
+   "then": null
+  },
+  {
+   "id": "c36",
+   "element": "researcher subtask card",
+   "axis": "text",
+   "check": "Second card rows read 'Scanned Swedish competitor brands' (black check, dark text) and 'Mapping local pricing trends' (spinner, grey text)",
+   "box": [
+    138,
+    703,
+    851,
+    165
+   ],
+   "scope": "crop",
+   "at": 20.5,
+   "then": null
+  },
+  {
+   "id": "c37",
+   "element": "researcher subtask card",
+   "axis": "motion",
+   "check": "Second card's spinners become checks in order ('Scanned' first, then 'Mapped'), and the card then disappears so 'Preparing the report' sits directly below the Delegating row",
+   "box": [
+    100,
+    650,
+    900,
+    230
+   ],
+   "scope": "frame",
+   "at": 20.5,
+   "then": 24
+  },
+  {
+   "id": "c38",
+   "element": "report file card",
+   "axis": "style",
+   "check": "File card is a light grey rounded (~22px) box ≈361x271 at x≈139, y≈764 holding a white page preview with a grey skeleton line",
+   "box": [
+    135,
+    760,
+    370,
+    280
+   ],
+   "scope": "crop",
+   "at": 24,
+   "then": null
+  },
+  {
+   "id": "c39",
+   "element": "report file card",
+   "axis": "text",
+   "check": "Card footer reads 'sweden-insight', with a small outlined 'PDF' pill tag on the right",
+   "box": [
+    150,
+    975,
+    340,
+    50
+   ],
+   "scope": "crop",
+   "at": 24,
+   "then": null
+  },
+  {
+   "id": "c40",
+   "element": "report file card",
+   "axis": "present",
+   "check": "A small blue arrow cursor is drawn on the page preview",
+   "box": [
+    350,
+    825,
+    40,
+    40
+   ],
+   "scope": "crop",
+   "at": 24,
+   "then": null
+  },
+  {
+   "id": "c41",
+   "element": "step: Report is ready",
+   "axis": "text",
+   "check": "Report row reads 'Report is ready' then a blue document icon and 'Sweden Insight' in darker semi-bold, with a grey dot",
+   "box": [
+    100,
+    715,
+    520,
+    30
+   ],
+   "scope": "crop",
+   "at": 28.5,
+   "then": null
+  },
+  {
+   "id": "c42",
+   "element": "report file card",
+   "axis": "present",
+   "check": "By 28.5s the file card is gone and no card remains below 'Report is ready'",
+   "box": [
+    100,
+    740,
+    500,
+    300
+   ],
+   "scope": "frame",
+   "at": 28.5,
+   "then": null
+  },
+  {
+   "id": "c43",
+   "element": "step: Finished working",
+   "axis": "style",
+   "check": "Last row 'Finished working' has a blue filled check disc at x≈115 and fades in with a blur at y≈794",
+   "box": [
+    100,
+    778,
+    280,
+    34
+   ],
+   "scope": "crop",
+   "at": 28.5,
+   "then": null
+  },
+  {
+   "id": "c44",
+   "element": "step spinners",
+   "axis": "motion",
+   "check": "The active step shows a rotating ring spinner that turns into a small grey dot once the step is complete (e.g. the Delegating row at 20.5s vs 24s)",
+   "box": [
+    100,
+    650,
+    30,
+    30
+   ],
+   "scope": "crop",
+   "at": 20.5,
+   "then": 24
+  },
+  {
+   "id": "c45",
+   "element": "log column",
+   "axis": "position",
+   "check": "All log text is left-aligned at x≈149, and subtask cards' right edge lines up with the pill's right edge (x≈990)",
+   "box": [
+    100,
+    100,
+    900,
+    800
+   ],
+   "scope": "frame",
+   "at": 20.5,
+   "then": null
+  },
+  {
+   "id": "c46",
+   "element": "label colours",
+   "axis": "style",
+   "check": "Verb labels ('Done thinking', 'Read', 'Searched') are mid grey (~#7a7a7a), while object names ('Shopify Swedish orders', 'Brand Researcher') are darker and heavier",
+   "box": [
+    140,
+    330,
+    500,
+    350
+   ],
+   "scope": "crop",
+   "at": 20.5,
+   "then": null
+  }
+ ],
+ "imagery": [
+  {
+   "name": "Shopify bag icon",
+   "box": [
+    272,
+    397,
+    22,
+    24
+   ],
+   "class": "structured",
+   "what": "green shopping bag logo with white S",
+   "at": 20.5
+  },
+  {
+   "name": "source favicons",
+   "box": [
+    163,
+    519,
+    400,
+    90
+   ],
+   "class": "structured",
+   "what": "acedesign lime mark, LinkedIn 'in', X logo, Google G",
+   "at": 20.5
+  },
+  {
+   "name": "Brand Researcher gem avatar",
+   "box": [
+    340,
+    652,
+    28,
+    28
+   ],
+   "class": "structured",
+   "what": "green faceted polyhedron/gem",
+   "at": 20.5
+  },
+  {
+   "name": "Sweden Insight doc icon",
+   "box": [
+    365,
+    716,
+    22,
+    26
+   ],
+   "class": "structured",
+   "what": "blue document glyph with lines",
+   "at": 28.5
+  },
+  {
+   "name": "spinners and status dots",
+   "box": [
+    104,
+    272,
+    22,
+    22
+   ],
+   "class": "css",
+   "what": "thin ring spinner, grey dots, black and blue check discs",
+   "at": 9.3
+  },
+  {
+   "name": "report file preview",
+   "box": [
+    139,
+    764,
+    361,
+    271
+   ],
+   "class": "css",
+   "what": "white page card with a skeleton line, blue arrow cursor and PDF tag",
+   "at": 24
+  }
+ ],
+ "moves": [
+  {
+   "element": "user message pill",
+   "what": "blurs and fades in from grey to #101010, settling about 2px",
+   "from": 0.3,
+   "to": 0.7,
+   "px": 2
+  },
+  {
+   "element": "thinking header + spinner",
+   "what": "blurs in with the 'Start thinking...' shimmer and counter",
+   "from": 1.4,
+   "to": 1.7,
+   "px": null
+  },
+  {
+   "element": "thinking stream text",
+   "what": "words stream in with blur; the block scrolls up behind a top fade mask",
+   "from": 1.7,
+   "to": 5.6,
+   "px": null
+  },
+  {
+   "element": "thinking block",
+   "what": "blurs out; header rolls to 'Working' with a chevron",
+   "from": 6,
+   "to": 6.6,
+   "px": null
+  },
+  {
+   "element": "Done thinking row",
+   "what": "appears as the first timeline step",
+   "from": 6.8,
+   "to": 7.2,
+   "px": null
+  },
+  {
+   "element": "Reading row + orders card",
+   "what": "row appears, card expands below it, rows go spinner → check, card collapses, 'Reading' → 'Read'",
+   "from": 7.8,
+   "to": 12.2,
+   "px": null
+  },
+  {
+   "element": "Search row + chips",
+   "what": "count climbs to 46 while chips pop in, then becomes 'Searched'",
+   "from": 12.8,
+   "to": 16.8,
+   "px": null
+  },
+  {
+   "element": "Delegating row + researcher card",
+   "what": "row appears, card expands, two checks, card collapses",
+   "from": 17.3,
+   "to": 21.6,
+   "px": null
+  },
+  {
+   "element": "Preparing the report + file card",
+   "what": "row appears, file preview card grows in with a blue cursor",
+   "from": 22,
+   "to": 23.5,
+   "px": null
+  },
+  {
+   "element": "Report is ready",
+   "what": "file card collapses; row becomes 'Report is ready Sweden Insight'",
+   "from": 26.5,
+   "to": 27.5,
+   "px": null
+  },
+  {
+   "element": "Finished working",
+   "what": "blue check row blurs in at the bottom",
+   "from": 28,
+   "to": 28.8,
+   "px": null
+  },
+  {
+   "element": "header timer",
+   "what": "counter ticks 0s → 27s, about clip time minus 1.5s",
+   "from": 1.5,
+   "to": 30,
+   "px": null
+  }
+ ]
+}

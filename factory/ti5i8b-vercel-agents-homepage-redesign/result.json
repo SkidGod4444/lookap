@@ -1,0 +1,154 @@
+{
+ "slug": "ti5i8b-vercel-agents-homepage-redesign",
+ "title": "Vercel Agents Homepage Redesign",
+ "author": "Christopher Kindl",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "review",
+ "ended": "round limit",
+ "bestRound": 3,
+ "rank": 94,
+ "allPass": false,
+ "rubric": {
+  "pass": 41,
+  "fail": 2,
+  "unsure": 0,
+  "of": 43,
+  "failed": [
+   "c27 In dark mode the lower-left face with the cursor shows a soft lighter grey gradient while the top and right faces stay black",
+   "c28 Bottom-left annotation reads 'Connect' (bold) over 'Queried ❄ Snowflake / through a scoped, / read-only connection' with a snowflake glyph"
+  ]
+ },
+ "score": 84,
+ "motion": "the render changes where the clip changes",
+ "imagery": [
+  {
+   "name": "hex cube",
+   "class": "css",
+   "box": [
+    803,
+    347,
+    352,
+    320
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "Vercel logo triangle",
+   "class": "structured",
+   "box": [
+    127,
+    20,
+    18,
+    16
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "cube Vercel mark",
+   "class": "structured",
+   "box": [
+    851,
+    466,
+    19,
+    15
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "robot avatar",
+   "class": "structured",
+   "box": [
+    758,
+    270,
+    28,
+    28
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "Snowflake glyph",
+   "class": "structured",
+   "box": [
+    762,
+    683,
+    12,
+    12
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 14.9,
+   "turns": 59,
+   "costUsd": 3.5445536,
+   "judgeUsd": 1.326,
+   "ended": "completed",
+   "score": 81,
+   "rank": 76,
+   "allPass": false,
+   "rubric": {
+    "pass": 37,
+    "fail": 6,
+    "unsure": 0,
+    "of": 43
+   },
+   "motion": "the render stays still in 1 of 10 spans where the clip moves",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 12.6,
+   "turns": 71,
+   "costUsd": 2.5204112000000003,
+   "judgeUsd": 0.946,
+   "ended": "completed",
+   "score": 85,
+   "rank": 94,
+   "allPass": false,
+   "rubric": {
+    "pass": 41,
+    "fail": 2,
+    "unsure": 0,
+    "of": 43
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 8.6,
+   "turns": 34,
+   "costUsd": 1.4498422,
+   "judgeUsd": 0.973,
+   "ended": "completed",
+   "score": 84,
+   "rank": 94,
+   "allPass": false,
+   "rubric": {
+    "pass": 41,
+    "fail": 2,
+    "unsure": 0,
+    "of": 43
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  }
+ ],
+ "minutes": 36.2,
+ "cost": {
+  "codingUsd": 7.51,
+  "judgeUsd": 3.25,
+  "rubricUsd": 0.614,
+  "totalUsd": 11.37
+ },
+ "notes": true,
+ "at": "2026-10-23T07:39:50.302Z"
+}
