@@ -31,7 +31,7 @@ import sharp from "sharp";
 import { bySlug } from "../src/lib/data";
 import { recipeFor } from "../src/lib/registry";
 import { clipId, draftFor } from "../src/lib/drafts";
-import { bestShift, changedArea as changed, compareBuild, contentBox, deltaE76, mean, motionRead as readMotion, raw } from "../src/lib/compare";
+import { bestShift, changedArea as changed, compareBuild, contentBox, deltaE76, diff, mean, motionRead as readMotion, raw } from "../src/lib/compare";
 import { JUDGE_INSTRUCTION, JUDGE_SCHEMA, judgeBox, judgeScale, judgeTile } from "../src/lib/judge";
 import { isLicensed } from "../src/lib/licence";
 import { openPage, sleep } from "./chrome";
@@ -150,6 +150,30 @@ for (const kf of moments) {
 page.close();
 prev = null;
 
+/* reading 5: does the page scale. The site shows the file at whatever size fits, by setting --u; anything sized in
+   raw px (an SVG's width attribute, a px value in the script) stays full size and breaks the frame. Render at half
+   size with --u: 0.5px at the first moment and compare with the full render shrunk to half. */
+const scale = await (async () => {
+  const src = readFileSync(html, "utf8");
+  if (!/--u:\s*1px;/.test(src)) return { ok: false, changed: 100, read: "no --u: 1px; on #stage, so the page cannot be scaled at all" };
+  const half = path.join(out, ".scale.html");
+  writeFileSync(half, src.replace(/--u:\s*1px;/, "--u: 0.5px;"));
+  const hw = Math.round(W / 2), hh = Math.round(H / 2);
+  const p2 = await openPage(`file://${half}?demo=1`, hw, hh);
+  await p2.ev(`document.getAnimations().forEach((a) => { try { a.pause(); a.currentTime = ${Math.round(moments[0].at * 1000)}; } catch {} }); true`);
+  await sleep(150);
+  const small = await p2.shot();
+  p2.close();
+  rmSync(half, { force: true });
+  const [a, b] = await Promise.all([raw(path.join(out, `${moments[0].name}.png`), hw, hh), raw(small, hw, hh)]);
+  /* the detail-weighted difference with two pixels of tolerance: rounding at half size costs a few points on a
+     detailed page (an accordion's keys and grilles read about 11), a part left at full size costs far more (a sheet
+     whose SVGs and script kept px read 27; fixed, 2) */
+  const d = Math.round(diff(a, b, hw, [0, 0, hw, hh]) * 10) / 10;
+  const ok = d < 18;
+  return { ok, changed: d, read: d < 8 ? `scales: the half-size render matches the full one (difference ${d})` : ok ? `scales, with small offsets at half size (difference ${d}): rounding on fine detail; zoom a half-size render if the live view looks off` : `does not scale (difference ${d} at half size): something is sized in raw px instead of calc(N * var(--u)): an SVG's width or height attribute, a px value set from the script, a fixed font size` };
+})();
+
 /* side.png: rows of designer | yours, red gutter between and below so the rows read apart */
 const side = sharp({ create: { width: pw * 2 + 8, height: (ph + 8) * panels.length - 8, channels: 3, background: "#ff3b30" } })
   .composite(panels.map((p, i) => ({ input: p, left: 0, top: i * (ph + 8) })));
@@ -239,14 +263,14 @@ const counted = judged.filter((c) => !c.policy);
 const passed = counted.filter((c) => c.verdict?.pass === "yes"), failed = counted.filter((c) => c.verdict?.pass === "no"), unsure = counted.filter((c) => c.verdict && c.verdict.pass === "unsure"), unjudged = counted.filter((c) => !c.verdict);
 const policyRows = judged.filter((c) => c.policy);
 const passRate = counted.length && judge ? passed.length / counted.length : null;
-const allPass = Boolean(judge) && failed.length === 0 && unjudged.length === 0 && staticFlags.length === 0 && (clipMoves ? renderMoves : true);
+const allPass = Boolean(judge) && failed.length === 0 && unjudged.length === 0 && staticFlags.length === 0 && (clipMoves ? renderMoves : true) && scale.ok;
 /* rank: for picking the best round, never for stopping */
-const rank = Math.round((passRate ?? 0) * 70 + (score / 100) * 20 + (staticFlags.length === 0 && (!clipMoves || renderMoves) ? 10 : 0));
+const rank = Math.round((passRate ?? 0) * 70 + (score / 100) * 20 + (staticFlags.length === 0 && (!clipMoves || renderMoves) ? 10 : 0)) - (scale.ok ? 0 : 10);
 const result = { slug, measured: recipe ? "recipe" : "draft", frame: { w: W, h: H }, animations, score, stills: avg(stills), motion: avg(moving), keyframes: rows, runs: prevRuns + 1, at: new Date().toISOString(), rank, allPass, rubric: judge ? { pass: passed.length, fail: failed.length, unsure: unsure.length, of: counted.length } : null };
 writeFileSync(path.join(out, "check.json"), JSON.stringify(result, null, 1));
 const verdict = {
   slug, at: result.at, runs: result.runs, html: path.relative(ROOT, html), pixel: { score, stills: avg(stills), motion: avg(moving), moments: rows.length }, animations, rank, allPass,
-  elements: elementRows, motion: { read: motionRead, changes, trajectories },
+  elements: elementRows, motion: { read: motionRead, changes, trajectories }, scale,
   rubric: rubric ? { file: path.relative(ROOT, rubricPath), total: rubric.criteria.length, counted: counted.length, pass: passed.length, fail: failed.length, unsure: unsure.length, unjudged: unjudged.length, passRate: passRate == null ? null : Math.round(passRate * 100), licensed, criteria: judged.map((c) => ({ id: c.id, axis: c.axis, element: c.element, check: c.check, box: c.box, at: c.at, then: c.then, policy: c.policy, pass: c.verdict?.pass ?? null, seen: c.verdict?.seen ?? null, image: judge ? path.relative(ROOT, path.join(out, "judge", `${c.id}.png`)) : null })) } : null,
   judge,
 };
@@ -262,6 +286,7 @@ if (judge) {
 } else {
   console.log(`score ${score} over ${rows.length} moments: ${stills.length} stills ${avg(stills)}${moving.length ? `, ${moving.length} mid-motion ${avg(moving)}` : " (no clip on disk, so no mid-motion moments)"} (run ${result.runs}); ${animations} animation${animations === 1 ? "" : "s"} on the page${animations ? "" : ": nothing to seek, every moment shows the load state"}; motion: ${motionRead}${rubric ? `; rubric: ${rubric.criteria.length} criteria in ${path.relative(ROOT, rubricPath)} (the orchestrator judges them with --judge; read them and check each by eye)` : ""}`);
 }
+console.log(`scale: ${scale.read}`);
 console.log(`\nelements at rest (${rubric ? "rubric boxes" : "draft boxes"}), worst first:`);
 for (const el of elementRows.slice(0, 8)) console.log(`  ${el.name} [${el.box.join(",")}]: ${el.read}${el.read === "matches" ? "" : `; deltaE ${el.deltaE}, difference ${el.delta}${el.shift ? `, ${el.afterShift} once moved ${el.shift[0]},${el.shift[1]}` : ""}`}`);
 if (trajectories.length) { console.log(`\nmeasured moving parts across the moments:`); for (const t of trajectories) console.log(`  ${t.element} [${t.box.join(",")}]: ${t.read} (${t.shifts.map((s) => `${s.at}s ${s.dx},${s.dy}`).join("; ")})`); }

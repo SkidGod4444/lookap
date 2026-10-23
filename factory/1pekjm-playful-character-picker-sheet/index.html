@@ -23,13 +23,13 @@
   .roll { position: absolute; left: 0; top: 0; width: calc(504 * var(--u)); transform-origin: 0 0;
     transform: translate(calc(758 * var(--u)), calc(316 * var(--u))) scale(1); cursor: pointer;
     transition: transform .95s cubic-bezier(.6,0,.25,1); }
-  .cap { position: absolute; left: 0; top: 0; overflow: visible; z-index: 3; pointer-events: none; }
-  .back { position: absolute; left: 0; top: 0; overflow: visible; z-index: 0; pointer-events: none; }
+  .cap { position: absolute; left: 0; top: 0; overflow: visible; z-index: 3; pointer-events: none; width: calc(504 * var(--u)); height: calc(340 * var(--u)); }
+  .back { position: absolute; left: 0; top: 0; overflow: visible; z-index: 0; pointer-events: none; width: calc(504 * var(--u)); height: calc(340 * var(--u)); }
   .sheet { position: absolute; left: calc(4 * var(--u)); top: 0; width: calc(496 * var(--u)); height: calc(469 * var(--u));
     z-index: 1; transition: height .95s cubic-bezier(.6,0,.25,1); }
   .clip { position: absolute; inset: 0; overflow: hidden; background: #fcfcfc;
     border-left: calc(6 * var(--u)) solid var(--blue); border-right: calc(6 * var(--u)) solid var(--blue); }
-  .torn { position: absolute; left: calc(-2 * var(--u)); bottom: calc(-12 * var(--u)); overflow: visible; }
+  .torn { position: absolute; left: calc(-2 * var(--u)); bottom: calc(-12 * var(--u)); overflow: visible; width: calc(500 * var(--u)); height: calc(22 * var(--u)); }
   .piece .torn { top: calc(-14 * var(--u)); bottom: auto; }
   .list { position: absolute; left: 0; right: 0; top: 0; transform: translateY(calc(-1642 * var(--u)));
     transition: transform .95s cubic-bezier(.6,0,.25,1); }
@@ -157,7 +157,7 @@
 
   const roll = document.getElementById('roll'), sheet = document.getElementById('sheet');
   const rows = [...list.children];
-  const C = 'translate(758px,316px) scale(1)', E = 'translate(835px,118px) scale(.64)';
+  const C = 'translate(calc(758 * var(--u)),calc(316 * var(--u))) scale(1)', E = 'translate(calc(835 * var(--u)),calc(118 * var(--u))) scale(.64)';
   const demo = new URLSearchParams(location.search).has('demo');
 
   if (!demo) {
@@ -165,8 +165,8 @@
     let sel = 8, last = 8, exp = false, y = 0;
     const set = () => {
       roll.style.transform = exp ? E : C;
-      sheet.style.height = (exp ? y + (last + 1) * 238 : 469) + 'px';
-      list.style.transform = `translateY(${y}px)`;
+      sheet.style.height = `calc(${exp ? y + (last + 1) * 238 : 469} * var(--u))`;
+      list.style.transform = `translateY(calc(${y} * var(--u)))`;
       document.getElementById('stage').classList.toggle('exp', exp);
       rows.forEach((r, i) => { r.classList.toggle('sel', i === sel); r.classList.toggle('gone', i > last); });
     };
@@ -179,14 +179,14 @@
     });
     roll.addEventListener('wheel', e => {
       if (!exp) return; e.preventDefault();
-      y = Math.max(1355 - (last + 1) * 238, Math.min(-41, y - e.deltaY)); list.style.transition = 'none'; set();
+      y = Math.max(1355 - (last + 1) * 238, Math.min(-41, y - e.deltaY / (document.getElementById('stage').getBoundingClientRect().width / 1964))); list.style.transition = 'none'; set();
       requestAnimationFrame(() => list.style.transition = '');
     }, { passive: false });
     set();
     // entrance: the paper prints down out of the roll
     if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      sheet.animate([{ height: '250px' }, { height: '250px', offset: .2 }, { height: '544px', offset: .6 }, { height: '469px' }], { duration: 850, easing: 'ease-out' });
-      list.animate([{ transform: 'translateY(-1861px)' }, { transform: 'translateY(-1861px)', offset: .2 }, { transform: 'translateY(-1582px)', offset: .6 }, { transform: 'translateY(-1642px)' }], { duration: 850, easing: 'ease-out' });
+      sheet.animate([{ height: 'calc(250 * var(--u))' }, { height: 'calc(250 * var(--u))', offset: .2 }, { height: 'calc(544 * var(--u))', offset: .6 }, { height: 'calc(469 * var(--u))' }], { duration: 850, easing: 'ease-out' });
+      list.animate([{ transform: 'translateY(calc(-1861 * var(--u)))' }, { transform: 'translateY(calc(-1861 * var(--u)))', offset: .2 }, { transform: 'translateY(calc(-1582 * var(--u)))', offset: .6 }, { transform: 'translateY(calc(-1642 * var(--u)))' }], { duration: 850, easing: 'ease-out' });
     }
     return;
   }
@@ -200,7 +200,7 @@
     if (kf[kf.length - 1].offset < 1) kf.push({ ...kf[kf.length - 1], offset: 1 });
     el.animate(kf, { duration: D * 1000, fill: 'both' });
   }
-  const ty = v => `translateY(${v}px)`, px = v => v + 'px';
+  const ty = v => `translateY(calc(${v} * var(--u)))`, px = v => `calc(${v} * var(--u))`;
   roll.style.transition = sheet.style.transition = list.style.transition = 'none';
   const FAST = 'cubic-bezier(.1,.9,.2,1)', SOFT = 'cubic-bezier(.42,.35,.4,1)';
   A(roll, 'transform', [[0, C], [3.5, C, SOFT], [4.45, E], [8.6, E, 'cubic-bezier(.3,.6,.3,1)'], [9.55, C], [10.7, C, SOFT], [11.65, E]]);
@@ -211,7 +211,7 @@
     [5.35, ty(-755)], [5.5, ty(-540), OUT], [6.3, ty(-90)], [6.5, ty(-90), IO], [7.1, ty(-1022)], [8.1, ty(-1022), IO], [8.6, ty(-1166)], [10.2, ty(-1166), 'ease-in'], [10.7, ty(-1162), FAST], [11.2, ty(-236), 'ease-out'], [11.65, ty(-279)]]);
   const piece = document.getElementById('piece');
   A(piece, 'opacity', [[8.04, 0, 'steps(1,end)'], [8.06, 1]]);
-  A(piece, 'transform', [[8.06, E, IN], [8.82, 'translate(835px,650px) scale(.64)', 'linear'], [9.1, 'translate(835px,900px) scale(.64)']]);
+  A(piece, 'transform', [[8.06, E, IN], [8.82, 'translate(calc(835 * var(--u)),calc(650 * var(--u))) scale(.64)', 'linear'], [9.1, 'translate(calc(835 * var(--u)),calc(900 * var(--u))) scale(.64)']]);
   const chk = i => rows[i].querySelector('.chk');
   A(chk(8), 'opacity', [[8.0, 1, 'steps(1,end)'], [8.02, 0]]);
   A(chk(6), 'opacity', [[8.0, 0, 'steps(1,end)'], [8.02, 1]]);

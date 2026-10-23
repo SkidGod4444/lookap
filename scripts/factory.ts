@@ -70,6 +70,7 @@ type VerdictFile = {
   pixel: { score: number };
   elements: { name: string; box: number[]; read: string; deltaE: number; shift: [number, number] | null }[];
   motion: { read: string; trajectories: { element: string; read: string }[]; changes: { from: string; to: string; clip: number; render: number; read: string }[] };
+  scale?: { ok: boolean; changed: number; read: string };
   rubric: { pass: number; fail: number; unsure: number; counted: number; criteria: { id: string; axis: string; element: string; check: string; box: number[]; at: number; then: number | null; policy: string | null; pass: string | null; seen: string | null; image: string | null }[] } | null;
   judge: { model: string; costUsd: number; calls: number } | null;
 };
@@ -129,7 +130,7 @@ How to look (this is where rebuilds go wrong)
 - Interaction is the design. Whatever the clip's cursor does (hover, click, press, drag) the page must do for a real pointer, with the same response and timing. Test with --drive and Read the screenshots.
 
 Rules for the file
-- The page is exactly the frame: html and body margin 0, overflow hidden, a #stage of ${draft.frame.w} x ${draft.frame.h} px, background ${draft.background}. Set --u: 1px on #stage and write every size as calc(N * var(--u)). Nothing outside the stage.
+- The page is exactly the frame: html and body margin 0, overflow hidden, a #stage of ${draft.frame.w} x ${draft.frame.h} px, background ${draft.background}. Set --u: 1px on #stage and write every size as calc(N * var(--u)), including an inline SVG's size (give it a CSS width and height in var(--u), not only width and height attributes) and every length the script sets or animates (calc(${"${n}"} * var(--u)), never ${"${n}"}px). The site shows the file at any size by changing --u; the checker renders it at half size and fails it if anything stays full size. Nothing outside the stage.
 - Place elements from the keyframes and crops you looked at. The draft boxes are a first pass and the rubric boxes a second: trust your eyes over both. Fills from --hex, exact. Match proportion and hierarchy first, then colour, then motion.
 - Demo mode for the checker: when the URL has ?demo=1 the page replays the clip's sequence on the clip's own timeline (animation-delay for when each move starts, duration and distance from draft.phases, draft.motion and your own probing) as CSS animations or element.animate calls created at load, so the state at t seconds matches the clip at t and the checker can seek it. Without ?demo the page only answers the pointer (a load-time entrance is fine if the clip has one). No JS timers for the timeline. Respect prefers-reduced-motion.
 - Sampling: a texture that is not UI and cannot be drawn (marble, wood, fabric, grain) is taken from the clip with --patch as a tile, cropped where nothing sits on it, at a moment when it is at rest, and tiled, stretched or layered by you; keep each under 60 KB. A photograph, painting or screenshot is a photo-class region and follows its rule above${licensed ? " (this entry is licensed: the picture itself may be sampled)" : ""}. Never paste a block with its chrome, text or controls: those you draw. Say in the header comment and in NOTES.md exactly what was sampled or stood in, and from which frame.
@@ -152,7 +153,7 @@ function handoff(round: number, v: VerdictFile, rel: string) {
   return `\n\nRound ${round}. ${rel}/index.html already exists: it is the best file so far (rubric ${v.rubric?.pass ?? 0} of ${v.rubric?.counted ?? 0} pass, pixel ${v.pixel.score}). Do not start over; open it, fix exactly what follows, and keep everything that passes. Read each listed image first: the clip is on the left (or the top row), yours on the right (or the bottom row).
 ${failed.length ? `Failed criteria:\n${failed.map((c) => `  ${c.id} [${c.axis}, ${c.element}] ${c.check}\n      judge saw: ${c.seen}\n      ${c.image}  |  bun scripts/probe.ts ${path.basename(rel)} --zoom ${c.box.join(",")} --t ${c.at}`).join("\n")}` : "No criterion failed outright."}
 ${unsure.length ? `Unsure (the judge could not see; make it unmistakable):\n${unsure.map((c) => `  ${c.id} ${c.check} (judge: ${c.seen})`).join("\n")}` : ""}
-Motion: ${v.motion.read}.${v.motion.trajectories.filter((t) => t.read !== "in step").map((t) => ` ${t.element}: ${t.read}.`).join("")}
+${v.scale && !v.scale.ok ? `Scale: ${v.scale.read}. Fix this first.\n` : ""}Motion: ${v.motion.read}.${v.motion.trajectories.filter((t) => t.read !== "in step").map((t) => ` ${t.element}: ${t.read}.`).join("")}
 ${els.length ? `Elements at rest that differ: ${els.map((el) => `${el.name} ${el.read}`).join("; ")}.` : ""}
 Then run the checker, zoom what you changed, and update ${rel}/NOTES.md.`;
 }
