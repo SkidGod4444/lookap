@@ -23,10 +23,10 @@ const courierPrime = Courier_Prime({ variable: "--font-courier-prime", subsets: 
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: `${SITE_NAME}: a design registry for coding agents, over MCP`, template: `%s · ${SITE_NAME}` },
+  title: { default: `${SITE_NAME}: UI design references your coding agent can rebuild, over MCP`, template: `%s · ${SITE_NAME}` },
   description: DESCRIPTION,
   applicationName: SITE_NAME,
-  keywords: ["design registry", "MCP", "Claude Code", "Codex", "Cursor", "UI inspiration", "design tokens", "motion recipes", "measured interfaces", "coding agents"],
+  keywords: ["UI design references", "design registry", "MCP server", "Claude Code", "Codex", "Cursor", "coding agents", "UI inspiration", "rebuild UI from video", "React components", "Tailwind CSS", "Motion animations", "motion.dev", "design to code", "measured interfaces"],
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
   category: "technology",

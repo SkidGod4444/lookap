@@ -13,6 +13,11 @@ lookap serves its design registry to coding agents over MCP, with a paid key:
 
     claude mcp add --transport http lookap https://lookap.saidev.codes/api/mcp --header "Authorization: Bearer <key>"
 
+What an agent gets: real interfaces measured from each designer's clip, a checklist per entry that its rebuild is
+judged against, reads of the clip itself (what moves, how fast, exact colours, crops), a pixel and motion check of its
+render, a judge it runs on its own model, and finished rebuilds as HTML or as React 19 + Tailwind v4 + Motion
+components. Tools: https://lookap.saidev.codes/mcp
+
 Keys start at $1 a month: https://lookap.saidev.codes/pricing
 
 Everything else on this domain is for people.

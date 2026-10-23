@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { ProjectPage } from "@/components/ProjectPage";
+import { entryMetadata } from "@/lib/seo";
 import { bySlug, ENTRIES } from "@/lib/data";
 
 export function generateStaticParams() {
@@ -11,14 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const e = bySlug(slug);
   if (!e) return { title: "Not found" };
-  const title = e.title;
-  const description = `${e.description} ${e.category}, ${e.types.join(", ")}. In the lookap registry, measured for your agent.`;
-  return {
-    title,
-    description,
-    alternates: { canonical: `/feed/${slug}` },
-    openGraph: { url: `/feed/${slug}`, type: e.video ? "video.other" : "article", siteName: "lookap", locale: "en_US" },
-  };
+  return entryMetadata(e, `/feed/${slug}`);
 }
 
 async function Inner({ params }: { params: Promise<{ slug: string }> }) {

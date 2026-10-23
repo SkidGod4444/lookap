@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Pricing",
-  description: "Starter keys from a dollar a month. Pro adds measured recipes and checks. Max adds the finished rebuilds and the highest allowance. Browsing stays free.",
+  description: "From $1 a month. Starter builds from the designer's frames and a checklist; Pro measures the clip and proves the rebuild, with a React, Tailwind and Motion guide; Max gets finished rebuilds.",
   alternates: { canonical: "/pricing" },
 };
 

@@ -30,7 +30,7 @@ function jsonLd(entry: Entry, live: boolean) {
   return {
     "@context": "https://schema.org",
     "@graph": [
-      { ...media, creator: { "@type": entry.x || entry.authorName ? "Person" : "Organization", name: entry.authorName, ...(entry.x ? { url: `https://x.com/${entry.x}` } : {}) }, isPartOf: { "@id": `${SITE_URL}/#website` }, keywords: [entry.category, ...entry.types].join(", "), ...(live ? { hasPart: { "@type": "SoftwareSourceCode", name: `${entry.title}, rebuilt by lookap`, programmingLanguage: "HTML" } } : {}) },
+      { ...media, creator: { "@type": entry.x || entry.authorName ? "Person" : "Organization", name: entry.authorName, ...(entry.x ? { url: `https://x.com/${entry.x}` } : {}) }, isPartOf: { "@id": `${SITE_URL}/#website` }, keywords: [entry.category, ...entry.types].join(", "), ...(live ? { hasPart: { "@type": "SoftwareSourceCode", name: `${entry.title}, rebuilt by lookap`, programmingLanguage: (FACTORY[entry.slug] as { react?: unknown } | undefined)?.react ? ["HTML", "CSS", "JavaScript", "TypeScript", "React"] : ["HTML", "CSS", "JavaScript"], ...((FACTORY[entry.slug] as { react?: unknown } | undefined)?.react ? { runtimePlatform: "React 19, Tailwind CSS v4, Motion" } : {}) } } : {}) },
       { "@type": "BreadcrumbList", itemListElement: [
         { "@type": "ListItem", position: 1, name: "lookap", item: SITE_URL },
         { "@type": "ListItem", position: 2, name: listing.name, item: `${SITE_URL}${listing.path}` },
