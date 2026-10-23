@@ -1,0 +1,16 @@
+{
+ "model": "Claude Opus 5.5",
+ "modelId": "claude-opus-5-5",
+ "date": "2026-10-24",
+ "run": {
+  "model": "Claude Opus 5.5",
+  "turns": 119,
+  "outputTokens": 57051,
+  "totalTokens": 5065711,
+  "costUsd": 6.76,
+  "minutes": 23.5,
+  "score": 88
+ },
+ "hand": "none: the factory alone, 3 judged rounds, best round 3 kept; rubric 37 of 37 under a three-vote judge, checked against the screenshot by eye; the 3D icon halo is sampled from the screenshot",
+ "hint": "A still page: the price card inside its halo of 3D app icons."
+}

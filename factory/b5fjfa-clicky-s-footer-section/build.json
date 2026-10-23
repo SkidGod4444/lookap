@@ -1,0 +1,16 @@
+{
+ "model": "Claude Opus 5.5",
+ "modelId": "claude-opus-5-5",
+ "date": "2026-10-24",
+ "run": {
+  "model": "Claude Opus 5.5",
+  "turns": 149,
+  "outputTokens": 74728,
+  "totalTokens": 6226207,
+  "costUsd": 8.02,
+  "minutes": 32.9,
+  "score": 87
+ },
+ "hand": "none: the factory alone, 2 judged rounds, best round 2 kept; rubric 48 of 48 under a three-vote judge, reviewed by eye; the speaker photo is sampled from the clip",
+ "hint": "Move the pointer over the folder letters, then click the big folder: the demo video opens."
+}

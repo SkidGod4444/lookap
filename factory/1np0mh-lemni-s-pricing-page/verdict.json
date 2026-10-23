@@ -1,0 +1,1135 @@
+{
+ "slug": "1np0mh-lemni-s-pricing-page",
+ "at": "2026-10-23T18:30:02.966Z",
+ "runs": 15,
+ "html": "factory/1np0mh-lemni-s-pricing-page/index.html",
+ "pixel": {
+  "score": 88,
+  "stills": 88,
+  "motion": 88,
+  "moments": 5
+ },
+ "animations": 0,
+ "rank": 98,
+ "allPass": true,
+ "elements": [
+  {
+   "name": "Lemni wordmark",
+   "box": [
+    128,
+    14,
+    48,
+    20
+   ],
+   "deltaE": 1.7,
+   "delta": 27,
+   "shift": null,
+   "afterShift": 27,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "headline",
+   "box": [
+    428,
+    152,
+    390,
+    142
+   ],
+   "deltaE": 1.6,
+   "delta": 26,
+   "shift": [
+    -2,
+    0
+   ],
+   "afterShift": 20,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "nav Continue + arrow",
+   "box": [
+    1069,
+    14,
+    94,
+    22
+   ],
+   "deltaE": 0.9,
+   "delta": 24,
+   "shift": [
+    -4,
+    0
+   ],
+   "afterShift": 21,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "nav Pricing",
+   "box": [
+    918,
+    16,
+    48,
+    18
+   ],
+   "deltaE": 0.8,
+   "delta": 21,
+   "shift": [
+    -2,
+    0
+   ],
+   "afterShift": 19,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "/Month",
+   "box": [
+    647,
+    613,
+    52,
+    18
+   ],
+   "deltaE": 0.3,
+   "delta": 20,
+   "shift": [
+    -4,
+    0
+   ],
+   "afterShift": 19,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "sub paragraph",
+   "box": [
+    411,
+    330,
+    422,
+    76
+   ],
+   "deltaE": 0.6,
+   "delta": 19,
+   "shift": null,
+   "afterShift": 19,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "price $98",
+   "box": [
+    560,
+    588,
+    78,
+    42
+   ],
+   "deltaE": 6.1,
+   "delta": 18,
+   "shift": null,
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Try For Free button",
+   "box": [
+    453,
+    817,
+    339,
+    40
+   ],
+   "deltaE": 1,
+   "delta": 18,
+   "shift": null,
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "nav divider hairline",
+   "box": [
+    0,
+    48,
+    1244,
+    1
+   ],
+   "deltaE": 6,
+   "delta": 17,
+   "shift": [
+    0,
+    -8
+   ],
+   "afterShift": 0,
+   "read": "misplaced by 0 x 8 px"
+  },
+  {
+   "name": "feature 1 label",
+   "box": [
+    495,
+    683,
+    150,
+    18
+   ],
+   "deltaE": 0.5,
+   "delta": 16,
+   "shift": null,
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "feature 2 label",
+   "box": [
+    495,
+    727,
+    169,
+    18
+   ],
+   "deltaE": 0.2,
+   "delta": 15,
+   "shift": null,
+   "afterShift": 15,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Lemni logo mark",
+   "box": [
+    82,
+    14,
+    32,
+    22
+   ],
+   "deltaE": 2.8,
+   "delta": 14,
+   "shift": [
+    -2,
+    2
+   ],
+   "afterShift": 12,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "feature 3 label",
+   "box": [
+    495,
+    771,
+    177,
+    18
+   ],
+   "deltaE": 0.2,
+   "delta": 14,
+   "shift": [
+    2,
+    0
+   ],
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "footnote",
+   "box": [
+    455,
+    887,
+    334,
+    36
+   ],
+   "deltaE": 1.2,
+   "delta": 12,
+   "shift": null,
+   "afterShift": 12,
+   "read": "matches"
+  },
+  {
+   "name": "nav link Blog",
+   "box": [
+    418,
+    16,
+    32,
+    18
+   ],
+   "deltaE": 1.5,
+   "delta": 11,
+   "shift": null,
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "nav link Community ↗",
+   "box": [
+    723,
+    16,
+    93,
+    18
+   ],
+   "deltaE": 1.6,
+   "delta": 10,
+   "shift": [
+    -4,
+    0
+   ],
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "nav link Company",
+   "box": [
+    553,
+    16,
+    67,
+    18
+   ],
+   "deltaE": 1.2,
+   "delta": 9,
+   "shift": null,
+   "afterShift": 9,
+   "read": "matches"
+  },
+  {
+   "name": "nav link Docs",
+   "box": [
+    279,
+    16,
+    36,
+    18
+   ],
+   "deltaE": 1.3,
+   "delta": 8,
+   "shift": null,
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "pricing card",
+   "box": [
+    413,
+    548,
+    418,
+    415
+   ],
+   "deltaE": 0.1,
+   "delta": 8,
+   "shift": null,
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1244,
+    996
+   ],
+   "deltaE": 0.1,
+   "delta": 7,
+   "shift": null,
+   "afterShift": 7,
+   "read": "matches"
+  },
+  {
+   "name": "3D icon halo",
+   "box": [
+    272,
+    443,
+    682,
+    553
+   ],
+   "deltaE": 0.1,
+   "delta": 7,
+   "shift": null,
+   "afterShift": 7,
+   "read": "matches"
+  },
+  {
+   "name": "old price $196",
+   "box": [
+    453,
+    590,
+    96,
+    40
+   ],
+   "deltaE": 0.2,
+   "delta": 4,
+   "shift": null,
+   "afterShift": 4,
+   "read": "matches"
+  },
+  {
+   "name": "toggle 1",
+   "box": [
+    452,
+    683,
+    28,
+    18
+   ],
+   "deltaE": 0.1,
+   "delta": 3,
+   "shift": null,
+   "afterShift": 3,
+   "read": "matches"
+  },
+  {
+   "name": "toggle 2",
+   "box": [
+    452,
+    727,
+    28,
+    18
+   ],
+   "deltaE": 0.2,
+   "delta": 3,
+   "shift": null,
+   "afterShift": 3,
+   "read": "matches"
+  },
+  {
+   "name": "toggle 3",
+   "box": [
+    452,
+    771,
+    28,
+    18
+   ],
+   "deltaE": 0.1,
+   "delta": 3,
+   "shift": null,
+   "afterShift": 3,
+   "read": "matches"
+  },
+  {
+   "name": "card divider",
+   "box": [
+    453,
+    654,
+    339,
+    1
+   ],
+   "deltaE": 0.6,
+   "delta": 1,
+   "shift": null,
+   "afterShift": 1,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "the clip does not move between the scored moments",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "0.5s",
+    "clip": 0,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "0.5s",
+    "to": "kf1",
+    "clip": 0,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "kf1",
+    "to": "2s",
+    "clip": 0,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "2s",
+    "to": "2.5s",
+    "clip": 0,
+    "render": 0,
+    "read": "both still"
+   }
+  ],
+  "trajectories": []
+ },
+ "scale": {
+  "ok": true,
+  "changed": 6.4,
+  "read": "scales: the half-size render matches the full one (difference 6.4)"
+ },
+ "rubric": {
+  "file": "factory/1np0mh-lemni-s-pricing-page/rubric.json",
+  "total": 37,
+  "counted": 37,
+  "pass": 37,
+  "fail": 0,
+  "unsure": 0,
+  "unjudged": 0,
+  "passRate": 100,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "motion",
+    "element": "page",
+    "check": "Nothing moves: the whole frame at 0.5s is identical to the frame at 2.5s (no entrance, no float, no hover).",
+    "box": [
+     0,
+     0,
+     1244,
+     996
+    ],
+    "at": 0.5,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild frames at 0.5s and 2.5s look identical, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "motion",
+    "element": "icon halo",
+    "check": "The 3D icons around the card do not float or drift: their positions at 1.5s match those at 2s exactly.",
+    "box": [
+     272,
+     443,
+     682,
+     553
+    ],
+    "at": 1.5,
+    "then": 2,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Icons sit in the same places at 1.5s and 2s in the rebuild, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "style",
+    "element": "page background",
+    "check": "Page background is a flat very light cool grey (~#f4f4f6), not pure white and not a gradient.",
+    "box": [
+     0,
+     60,
+     1244,
+     80
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Flat light cool grey in both, no gradient. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "present",
+    "element": "nav divider",
+    "check": "A 1px light grey hairline spans the full width just under the nav at y≈49.",
+    "box": [
+     0,
+     40,
+     1244,
+     16
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A faint 1px full-width hairline sits under the nav in both. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "present",
+    "element": "Lemni logo",
+    "check": "A small logo mark of overlapping rounded diamond shapes shading grey to black sits left of the word 'Lemni' at x≈82–114, y≈14–36.",
+    "box": [
+     76,
+     8,
+     110,
+     34
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Overlapping grey-to-black rounded diamonds sit left of 'Lemni' in both; the rebuild's left diamond is slightly lighter. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "text",
+    "element": "Lemni wordmark",
+    "check": "Wordmark reads exactly 'Lemni' in black, medium weight, ~17px.",
+    "box": [
+     124,
+     10,
+     60,
+     28
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'Lemni' is black, medium weight and about the same size as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "text",
+    "element": "nav links",
+    "check": "Middle nav items read, left to right, 'Docs', 'Blog', 'Company', 'Community ↗' (small north-east arrow after Community).",
+    "box": [
+     270,
+     8,
+     560,
+     34
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Docs, Blog, Company and Community ↗ appear in the same order with the arrow. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "style",
+    "element": "nav links",
+    "check": "Docs, Blog, Company and Community are mid grey, clearly lighter than the black 'Pricing'.",
+    "box": [
+     270,
+     8,
+     710,
+     34
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The four links are mid grey and clearly lighter than the black Pricing, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "position",
+    "element": "nav Pricing",
+    "check": "'Pricing' in black sits at x≈918–966, vertically centred at y≈24.",
+    "box": [
+     905,
+     8,
+     75,
+     34
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Black 'Pricing' sits at the same place and size as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "style",
+    "element": "nav Continue",
+    "check": "'Continue' is black text followed by a ~18px solid black circle containing a white right-pointing arrow, ending at x≈1162.",
+    "box": [
+     1060,
+     8,
+     110,
+     34
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Black 'Continue' with a solid black circle and white arrow, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "text",
+    "element": "headline",
+    "check": "Headline reads exactly 'Expect more' on line 1 and 'and pay less' on line 2.",
+    "box": [
+     420,
+     145,
+     405,
+     155
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'Expect more' / 'and pay less' on two lines, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "style",
+    "element": "headline",
+    "check": "Headline is black regular-weight (not bold) sans with tight negative tracking, cap height ~55px, lines ~70px apart.",
+    "box": [
+     420,
+     145,
+     405,
+     155
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Regular-weight black headline with tight tracking and about the same size and line spacing as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "position",
+    "element": "headline",
+    "check": "Headline is horizontally centred on the frame (x≈428–818) with its top at y≈152.",
+    "box": [
+     0,
+     140,
+     1244,
+     160
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Headline is centred at the same position and top as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "text",
+    "element": "sub paragraph",
+    "check": "Paragraph reads 'We don’t charge per seat. Delivering a premium / customer experience shouldn’t come with a premium / price tag. Receive 50% off on your first year.' in three centred lines.",
+    "box": [
+     405,
+     325,
+     435,
+     85
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same three centred lines of text and the same line breaks. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "style",
+    "element": "sub paragraph",
+    "check": "Only 'Receive 50% off on your first year.' is semibold black; the rest is regular dark grey ~18px.",
+    "box": [
+     405,
+     380,
+     435,
+     30
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Only 'Receive 50% off…' is semibold black, with about the same width as the clip (352 vs 345 px at crop scale). [votes: yes/yes/no]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "position",
+    "element": "pricing card",
+    "check": "Card is centred horizontally, spanning x≈413–831 and y≈548–963 (≈418×415).",
+    "box": [
+     400,
+     535,
+     445,
+     440
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Card sits in the same place and has the same size as the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "style",
+    "element": "pricing card",
+    "check": "Card corners are rounded ~16px.",
+    "box": [
+     405,
+     540,
+     60,
+     60
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Corner radius looks the same as the clip's, about 16px. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "style",
+    "element": "pricing card",
+    "check": "Card edge is a soft diffuse shadow over the icons, with no hard stroke/outline line.",
+    "box": [
+     800,
+     560,
+     60,
+     200
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Soft shadow edge with no hard stroke in both. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "style",
+    "element": "pricing card",
+    "check": "Card fill is an opaque off-white (near #f6f6f7), not translucent or frosted: icons behind it are fully hidden, not blurred through.",
+    "box": [
+     430,
+     560,
+     380,
+     40
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Card fill is opaque off-white with no icons showing through, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "text",
+    "element": "old price",
+    "check": "'$196' appears in light grey with a horizontal strike line through its middle.",
+    "box": [
+     448,
+     585,
+     106,
+     50
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'$196' is light grey with a strike line through the middle in both. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "text",
+    "element": "price",
+    "check": "'$98' is black, same ~44px size as '$196', immediately to its right at x≈560.",
+    "box": [
+     555,
+     583,
+     90,
+     52
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "$98 is black, same size and position as the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "text",
+    "element": "/Month",
+    "check": "'/Month' in small (~16px) black text sits right of '$98', bottom-aligned with the price baseline.",
+    "box": [
+     642,
+     605,
+     62,
+     30
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "/Month is small black text beside $98, same size and alignment as the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "present",
+    "element": "card divider",
+    "check": "A thin light grey hairline spans x≈453–792 at y≈654 between price and feature list.",
+    "box": [
+     445,
+     645,
+     355,
+     20
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A thin light grey hairline spans the card width, matching the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "present",
+    "element": "feature list",
+    "check": "Exactly 3 feature rows, each a toggle followed by a label, spaced ~44px apart (y≈692, 736, 780).",
+    "box": [
+     445,
+     675,
+     260,
+     120
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "3 toggle and label rows, spaced like the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "text",
+    "element": "feature labels",
+    "check": "Labels read 'Unlimited knowledge', 'Unlimited phone agents', '10+ Workplace members' top to bottom, in mid grey ~16px.",
+    "box": [
+     490,
+     675,
+     200,
+     120
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The three labels read the same, in mid grey at the same size (text width about 410 px in both crops). [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "style",
+    "element": "toggles",
+    "check": "Each toggle is a small ~28×18 pill in OFF state: very light grey track with a white knob on the left, no colour accent.",
+    "box": [
+     448,
+     680,
+     36,
+     110
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Pale OFF pills with a white knob on the left and no colour accent, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "position",
+    "element": "Try For Free button",
+    "check": "Button spans x≈453–792, y≈817–857, the same width as the divider.",
+    "box": [
+     445,
+     810,
+     355,
+     55
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The button spans the same width as the divider, at the same position as the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "style",
+    "element": "Try For Free button",
+    "check": "Button is solid black with fully rounded (pill) ends.",
+    "box": [
+     445,
+     810,
+     355,
+     55
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Solid black pill; the clip has a faint edge sheen the rebuild lacks, but the shape and fill agree. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "text",
+    "element": "Try For Free button",
+    "check": "Button label reads 'Try For Free' in white medium ~16px, centred.",
+    "box": [
+     560,
+     825,
+     125,
+     25
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White medium 'Try For Free', centred, same size as the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "text",
+    "element": "footnote",
+    "check": "Footnote reads '*Interaction refers to each time your agent is asked to take / action. For example, it receives an email, call, or webhook.' in two centred lines.",
+    "box": [
+     450,
+     882,
+     345,
+     45
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same two centred lines with the same wrap after 'take'. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "style",
+    "element": "footnote",
+    "check": "Footnote is small (~13px) mid grey, lighter than the feature labels' darkness is not exceeded (no black).",
+    "box": [
+     450,
+     882,
+     345,
+     45
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Small mid-grey text, not black, with the same tone as the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "present",
+    "element": "icon halo",
+    "check": "A dense cluster of colourful 3D icons surrounds the card on top, left and right, peeking ~100px above the card top (from y≈443) and running off the bottom frame edge.",
+    "box": [
+     272,
+     443,
+     682,
+     553
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The icon cluster surrounds the card on top, left and right, peeks above the card and runs off the bottom edge, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "imagery",
+    "element": "icon halo",
+    "check": "Icons are glossy rendered 3D objects with soft highlights and shading (as the clip's own artwork), not flat vector logos.",
+    "box": [
+     272,
+     443,
+     682,
+     553
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Glossy shaded 3D icons like the clip's, though slightly softer. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "imagery",
+    "element": "icon halo top row",
+    "check": "Above the card, left to right: green phone handset, black OpenAI knot, blue Salesforce-style cloud, green Shopify bag, orange HubSpot sprocket.",
+    "box": [
+     415,
+     443,
+     500,
+     110
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Phone, OpenAI knot, blue cloud, Shopify bag and HubSpot sprocket in the same order; slightly softer than the clip. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "imagery",
+    "element": "icon halo left",
+    "check": "Left of the card: pink Twilio-style ring with 4 dots, pink-purple sphere with a white play triangle, light blue folder, orange 'Application Manual' booklets, purple beads.",
+    "box": [
+     272,
+     500,
+     145,
+     496
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Pink ring with dots, play sphere, blue folder, orange manuals and purple beads all match the clip. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "imagery",
+    "element": "icon halo right",
+    "check": "Right of the card: Gmail-style red/yellow/green/blue shape, stacked lime-green layers, a black-and-white Notion 'N' cube, pink looping cable below.",
+    "box": [
+     828,
+     660,
+     126,
+     300
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Gmail shape, lime layers, Notion N cube and pink cable match the clip. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "position",
+    "element": "icon halo",
+    "check": "The icons sit behind the card: the card overlaps and hides their inner parts (e.g. OpenAI knot and cloud are cut by the card's top edge at y≈548).",
+    "box": [
+     470,
+     460,
+     340,
+     100
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Knot and cloud are cut by the card's top edge as in the clip, though the rebuild's edges are softer. [votes: yes/yes/yes]",
+    "image": "factory/1np0mh-lemni-s-pricing-page/judge/c37.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 0.431,
+  "calls": 6,
+  "images": "factory/1np0mh-lemni-s-pricing-page/judge",
+  "votes": 3,
+  "spread": [
+   37,
+   37,
+   36
+  ]
+ }
+}

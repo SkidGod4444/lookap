@@ -1,0 +1,1153 @@
+{
+ "slug": "b5fjfa-clicky-s-footer-section",
+ "frame": {
+  "w": 2158,
+  "h": 1080
+ },
+ "at": "2026-10-23T17:32:20.322Z",
+ "model": "opus",
+ "costUsd": 0.668,
+ "summary": "A light footer on a flat #f3f3f3 page. Four text columns start at y≈394: \"product\", \"resources\", \"connect\" and \"disclaimer\", with left edges at x≈291, 696, 1101 and 1505 (a 405 px pitch). Headings are near-black and links are mid-grey, in a ~22 px sans with a 52 px row pitch. Under the columns, the lowercase pixel wordmark \"heyclicky\" spans x 289–1867, y 664–969. Every pixel of it is a small light-blue macOS folder icon, about 56×46 px, each with a darker tab at its top left. A macOS trash can sits at the far left (x≈81) and one larger blue folder at the far right (x≈1910); both are vertically level with the wordmark's top row. \"© Humansongs, Inc. 2026\" is small grey type centred at the bottom (y≈1042). A soft grey blurred shadow hangs off the top edge at the centre. Motion has two parts. (1) Hover, from 0 to 4.5 s and again from 6.4 to 8.5 s: as the cursor passes over the wordmark, the folders under and near it open. Each front panel tilts forward and a white paper sheet shows above it. They close again within about 0.2 s once the cursor leaves. At 2.3 s the whole first \"l\" stack is open; at 7.5 s the folders of \"e\" and the top of \"y\" are open. (2) Clicking the big right-hand folder at about 4.6 s opens a macOS QuickTime-style window titled \"yc-demoday.mov\". The window grows from a smaller box on the right (≈926,219,764,461 at 4.67 s) to its full size, centred at 582,62,994,600, by 5.08 s. Its video area fades from translucent white through dark grey to black. Meanwhile the page behind dims to mid-grey and blurs. Around 6.2–6.35 s the window fades out and the backdrop clears back to #f3f3f3, with no blur.",
+ "elements": [
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    2158,
+    1080
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "flat #f3f3f3"
+  },
+  {
+   "name": "top-centre blurred shadow",
+   "box": [
+    939,
+    0,
+    291,
+    49
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "soft grey blur off the top edge, like the shadow of an element above the frame"
+  },
+  {
+   "name": "heading product",
+   "box": [
+    291,
+    382,
+    82,
+    26
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "near-black, ~22px"
+  },
+  {
+   "name": "heading resources",
+   "box": [
+    696,
+    382,
+    104,
+    26
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "near-black"
+  },
+  {
+   "name": "heading connect",
+   "box": [
+    1101,
+    382,
+    86,
+    26
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "near-black"
+  },
+  {
+   "name": "heading disclaimer",
+   "box": [
+    1505,
+    382,
+    105,
+    26
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "near-black"
+  },
+  {
+   "name": "product links",
+   "box": [
+    291,
+    432,
+    111,
+    184
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "features / pricing / changelog / try it, mid-grey, 52px pitch"
+  },
+  {
+   "name": "resources links",
+   "box": [
+    696,
+    432,
+    88,
+    184
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "trust / privacy / referrals / support"
+  },
+  {
+   "name": "connect links",
+   "box": [
+    1101,
+    432,
+    103,
+    184
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "instagram / x (twitter) / linkedin / youtube"
+  },
+  {
+   "name": "disclaimer body",
+   "box": [
+    1505,
+    432,
+    340,
+    100
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "3 lines, mid-grey"
+  },
+  {
+   "name": "heyclicky folder wordmark",
+   "box": [
+    289,
+    664,
+    1578,
+    305
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "9 lowercase pixel letters built from ~56x46 light-blue folder icons; y and y have descenders down to y≈969"
+  },
+  {
+   "name": "single folder tile",
+   "box": [
+    1208,
+    666,
+    56,
+    46
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "dot of the i; #6dcff6 body, darker blue tab at top-left, soft bottom shadow"
+  },
+  {
+   "name": "trash can",
+   "box": [
+    81,
+    682,
+    81,
+    97
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "macOS silver mesh trash with colourful papers at top"
+  },
+  {
+   "name": "large folder",
+   "box": [
+    1910,
+    658,
+    99,
+    81
+   ],
+   "kind": "control",
+   "class": "structured",
+   "note": "bigger blue macOS folder; clicking it opens the video window"
+  },
+  {
+   "name": "copyright",
+   "box": [
+    975,
+    1033,
+    207,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "© Humansongs, Inc. 2026, small grey, centred"
+  },
+  {
+   "name": "cursor",
+   "box": [
+    1210,
+    780,
+    20,
+    28
+   ],
+   "kind": "chrome",
+   "class": null,
+   "note": "macOS arrow; it becomes a pointing hand over the large folder"
+  },
+  {
+   "name": "dim backdrop",
+   "box": [
+    0,
+    0,
+    2158,
+    1080
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "mid-grey overlay plus blur over the page while the window is open (5.0–6.2s)"
+  },
+  {
+   "name": "video window",
+   "box": [
+    582,
+    62,
+    994,
+    600
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "macOS window: light-grey title bar ~42px tall, rounded corners, shadow"
+  },
+  {
+   "name": "traffic lights",
+   "box": [
+    594,
+    74,
+    62,
+    16
+   ],
+   "kind": "icon",
+   "class": "css",
+   "note": "red, yellow and green dots at x≈602, 625, 647"
+  },
+  {
+   "name": "window title",
+   "box": [
+    1010,
+    74,
+    138,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "yc-demoday.mov, grey, centred"
+  },
+  {
+   "name": "video area",
+   "box": [
+    588,
+    104,
+    982,
+    551
+   ],
+   "kind": "image",
+   "class": "photo",
+   "note": "black slide with HeyClicky title and a speaker inset"
+  },
+  {
+   "name": "video title text",
+   "box": [
+    838,
+    345,
+    198,
+    46
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "HeyClicky in white, with 'Farza Majeed' below (Majeed in orange-red)"
+  },
+  {
+   "name": "speaker inset",
+   "box": [
+    1284,
+    274,
+    279,
+    209
+   ],
+   "kind": "image",
+   "class": "photo",
+   "note": "a man in a dark sweater at a podium, pale blue backdrop"
+  },
+  {
+   "name": "speaker icon",
+   "box": [
+    1527,
+    615,
+    24,
+    22
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "white volume glyph at the bottom right"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "page background",
+   "axis": "style",
+   "check": "Page background is flat light grey ≈#f3f3f3 with no gradient",
+   "box": [
+    0,
+    0,
+    2158,
+    1080
+   ],
+   "scope": "frame",
+   "at": 2.3,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "columns",
+   "axis": "present",
+   "check": "Exactly 4 text columns sit above the wordmark",
+   "box": [
+    280,
+    370,
+    1600,
+    250
+   ],
+   "scope": "frame",
+   "at": 2.3,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "columns",
+   "axis": "position",
+   "check": "Column left edges at x≈291, 696, 1101 and 1505 (±10px), all headings on one baseline at y≈394",
+   "box": [
+    280,
+    370,
+    1600,
+    50
+   ],
+   "scope": "frame",
+   "at": 2.3,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "heading product",
+   "axis": "text",
+   "check": "Headings read exactly 'product', 'resources', 'connect', 'disclaimer', all lowercase",
+   "box": [
+    280,
+    375,
+    1350,
+    40
+   ],
+   "scope": "crop",
+   "at": 2.3,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "heading product",
+   "axis": "style",
+   "check": "Headings are near-black, clearly darker than the grey links beneath them",
+   "box": [
+    280,
+    375,
+    500,
+    250
+   ],
+   "scope": "crop",
+   "at": 2.3,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "product links",
+   "axis": "text",
+   "check": "Product column lists 'features', 'pricing', 'changelog', 'try it' in that order",
+   "box": [
+    285,
+    425,
+    130,
+    195
+   ],
+   "scope": "crop",
+   "at": 2.3,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "resources links",
+   "axis": "text",
+   "check": "Resources column lists 'trust', 'privacy', 'referrals', 'support'",
+   "box": [
+    690,
+    425,
+    110,
+    195
+   ],
+   "scope": "crop",
+   "at": 2.3,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "connect links",
+   "axis": "text",
+   "check": "Connect column lists 'instagram', 'x (twitter)', 'linkedin', 'youtube'",
+   "box": [
+    1095,
+    425,
+    125,
+    195
+   ],
+   "scope": "crop",
+   "at": 2.3,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "product links",
+   "axis": "position",
+   "check": "Link rows are ≈52px apart, centred at y≈446, 497, 549, 601",
+   "box": [
+    285,
+    425,
+    130,
+    195
+   ],
+   "scope": "crop",
+   "at": 2.3,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "disclaimer body",
+   "axis": "text",
+   "check": "Disclaimer reads '*heyclicky only sees your screen / when you press the hotkey - / screenshots are never stored*' on 3 lines",
+   "box": [
+    1500,
+    425,
+    360,
+    110
+   ],
+   "scope": "crop",
+   "at": 2.3,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "product links",
+   "axis": "style",
+   "check": "Link and disclaimer text is mid-grey (≈#555–#666), regular weight, ~22px sans",
+   "box": [
+    285,
+    425,
+    130,
+    195
+   ],
+   "scope": "crop",
+   "at": 2.3,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "heyclicky folder wordmark",
+   "axis": "present",
+   "check": "A lowercase wordmark 'heyclicky' (9 letters) spans under the columns",
+   "box": [
+    289,
+    664,
+    1578,
+    305
+   ],
+   "scope": "frame",
+   "at": 2.3,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "heyclicky folder wordmark",
+   "axis": "position",
+   "check": "Wordmark runs from x≈289 to x≈1867, top y≈664, baseline y≈905, descenders of both y's down to y≈969",
+   "box": [
+    289,
+    664,
+    1578,
+    305
+   ],
+   "scope": "frame",
+   "at": 7.5,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "heyclicky folder wordmark",
+   "axis": "imagery",
+   "check": "Each letter pixel is a small macOS-style folder icon, not a flat square or a brick",
+   "box": [
+    1030,
+    660,
+    300,
+    260
+   ],
+   "scope": "crop",
+   "at": 7.5,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "single folder tile",
+   "axis": "style",
+   "check": "Folder body is light sky blue ≈#6dcff6, with a darker blue tab at the top-left and a lighter top edge",
+   "box": [
+    1208,
+    666,
+    56,
+    46
+   ],
+   "scope": "crop",
+   "at": 2.3,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "single folder tile",
+   "axis": "position",
+   "check": "Folder tiles are ≈56×46px; the i-dot is one tile at ≈(1208,666) with a visible gap above the i stem",
+   "box": [
+    1190,
+    650,
+    100,
+    120
+   ],
+   "scope": "crop",
+   "at": 7.5,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "single folder tile",
+   "axis": "style",
+   "check": "Folders overlap slightly and carry a soft bottom shadow, with no dark outline strokes",
+   "box": [
+    1030,
+    660,
+    300,
+    260
+   ],
+   "scope": "crop",
+   "at": 7.5,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "heyclicky folder wordmark",
+   "axis": "style",
+   "check": "Letter strokes are one folder wide; the 'l' and 'k' are tall columns about 5 folders high above the baseline",
+   "box": [
+    1040,
+    660,
+    620,
+    250
+   ],
+   "scope": "crop",
+   "at": 7.5,
+   "then": null
+  },
+  {
+   "id": "c19",
+   "element": "trash can",
+   "axis": "present",
+   "check": "A macOS-style silver trash can with colourful papers poking out sits at the far left, ≈(81,682,81,97)",
+   "box": [
+    70,
+    670,
+    100,
+    120
+   ],
+   "scope": "crop",
+   "at": 2.3,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "trash can",
+   "axis": "imagery",
+   "check": "The trash reads as metallic grey with a vertical sheen, not a flat grey shape",
+   "box": [
+    70,
+    670,
+    100,
+    120
+   ],
+   "scope": "crop",
+   "at": 2.3,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "large folder",
+   "axis": "present",
+   "check": "A larger blue folder ≈99×81px sits at the far right, ≈(1910,658), level with the wordmark top",
+   "box": [
+    1900,
+    650,
+    120,
+    100
+   ],
+   "scope": "crop",
+   "at": 2.3,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "copyright",
+   "axis": "text",
+   "check": "Bottom line reads '© Humansongs, Inc. 2026' in small grey type, centred at x≈1079, y≈1042",
+   "box": [
+    960,
+    1025,
+    240,
+    35
+   ],
+   "scope": "crop",
+   "at": 2.3,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "top-centre blurred shadow",
+   "axis": "present",
+   "check": "A soft blurred grey shadow hangs from the top edge around x 940–1230",
+   "box": [
+    900,
+    0,
+    370,
+    60
+   ],
+   "scope": "crop",
+   "at": 2.3,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "single folder tile",
+   "axis": "motion",
+   "check": "Folders under the cursor open: the front panel tilts forward (wider at top) and a white paper sheet shows above it",
+   "box": [
+    1030,
+    660,
+    300,
+    260
+   ],
+   "scope": "crop",
+   "at": 2.3,
+   "then": null
+  },
+  {
+   "id": "c25",
+   "element": "single folder tile",
+   "axis": "style",
+   "check": "The revealed papers are white to pale grey, sitting behind the tilted front, not a blue outline",
+   "box": [
+    1040,
+    670,
+    120,
+    240
+   ],
+   "scope": "crop",
+   "at": 2.3,
+   "then": null
+  },
+  {
+   "id": "c26",
+   "element": "heyclicky folder wordmark",
+   "axis": "motion",
+   "check": "At 2.3s the whole first 'l' stack is open; by 2.8s it has closed and folders further along the word are open instead",
+   "box": [
+    880,
+    660,
+    700,
+    260
+   ],
+   "scope": "crop",
+   "at": 2.3,
+   "then": 2.8
+  },
+  {
+   "id": "c27",
+   "element": "heyclicky folder wordmark",
+   "axis": "motion",
+   "check": "At 7.5s folders in the 'e' and the top of the first 'y' (x≈520–790) are open, while the 'l' stack is closed",
+   "box": [
+    470,
+    700,
+    860,
+    220
+   ],
+   "scope": "crop",
+   "at": 7.5,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "heyclicky folder wordmark",
+   "axis": "motion",
+   "check": "Folder positions do not shift between rest frames: opening a folder tilts it in place, and the wordmark outline stays fixed",
+   "box": [
+    289,
+    664,
+    1578,
+    305
+   ],
+   "scope": "frame",
+   "at": 0.5,
+   "then": 8
+  },
+  {
+   "id": "c29",
+   "element": "columns",
+   "axis": "motion",
+   "check": "Text columns and copyright stay still across the hover period",
+   "box": [
+    280,
+    370,
+    1600,
+    250
+   ],
+   "scope": "frame",
+   "at": 0.5,
+   "then": 4
+  },
+  {
+   "id": "c30",
+   "element": "dim backdrop",
+   "axis": "motion",
+   "check": "After the big folder is clicked (~4.6s) the whole page dims to mid-grey",
+   "box": [
+    0,
+    0,
+    2158,
+    1080
+   ],
+   "scope": "frame",
+   "at": 2.3,
+   "then": 5.08
+  },
+  {
+   "id": "c31",
+   "element": "dim backdrop",
+   "axis": "style",
+   "check": "With the window open, the page behind is blurred (link text unreadable), not just darkened",
+   "box": [
+    280,
+    370,
+    400,
+    250
+   ],
+   "scope": "crop",
+   "at": 5.7,
+   "then": null
+  },
+  {
+   "id": "c32",
+   "element": "video window",
+   "axis": "present",
+   "check": "A macOS window titled 'yc-demoday.mov' is open at the centre-top",
+   "box": [
+    582,
+    62,
+    994,
+    600
+   ],
+   "scope": "frame",
+   "at": 5.7,
+   "then": null
+  },
+  {
+   "id": "c33",
+   "element": "video window",
+   "axis": "position",
+   "check": "Window spans ≈x 582–1576, y 62–662, centred horizontally on the frame",
+   "box": [
+    560,
+    50,
+    1040,
+    630
+   ],
+   "scope": "frame",
+   "at": 5.7,
+   "then": null
+  },
+  {
+   "id": "c34",
+   "element": "video window",
+   "axis": "style",
+   "check": "The light-grey title bar is ≈42px tall, with rounded top corners and a soft drop shadow round the window",
+   "box": [
+    582,
+    62,
+    994,
+    50
+   ],
+   "scope": "crop",
+   "at": 5.7,
+   "then": null
+  },
+  {
+   "id": "c35",
+   "element": "traffic lights",
+   "axis": "style",
+   "check": "Three dots at the top-left of the title bar, red, yellow and green from left to right",
+   "box": [
+    590,
+    70,
+    70,
+    24
+   ],
+   "scope": "crop",
+   "at": 5.7,
+   "then": null
+  },
+  {
+   "id": "c36",
+   "element": "window title",
+   "axis": "text",
+   "check": "Title text reads 'yc-demoday.mov' in grey, centred in the title bar",
+   "box": [
+    990,
+    70,
+    180,
+    26
+   ],
+   "scope": "crop",
+   "at": 5.7,
+   "then": null
+  },
+  {
+   "id": "c37",
+   "element": "video area",
+   "axis": "style",
+   "check": "Video area is solid black, filling the window below the title bar with a thin light border",
+   "box": [
+    588,
+    104,
+    982,
+    551
+   ],
+   "scope": "crop",
+   "at": 5.7,
+   "then": null
+  },
+  {
+   "id": "c38",
+   "element": "video title text",
+   "axis": "text",
+   "check": "Video shows 'HeyClicky' in large white type with 'Farza Majeed' beneath it, 'Majeed' in orange-red",
+   "box": [
+    820,
+    335,
+    240,
+    90
+   ],
+   "scope": "crop",
+   "at": 5.7,
+   "then": null
+  },
+  {
+   "id": "c39",
+   "element": "speaker inset",
+   "axis": "imagery",
+   "check": "Right-side inset ≈279×209px at (1284,274) shows a speaker photo on a pale blue background (the clip's footage or a same-size placeholder in those colours)",
+   "box": [
+    1284,
+    274,
+    279,
+    209
+   ],
+   "scope": "crop",
+   "at": 5.7,
+   "then": null
+  },
+  {
+   "id": "c40",
+   "element": "speaker icon",
+   "axis": "present",
+   "check": "A white speaker/volume icon sits at the video's bottom-right, ≈(1527,615)",
+   "box": [
+    1510,
+    600,
+    55,
+    45
+   ],
+   "scope": "crop",
+   "at": 5.7,
+   "then": null
+  },
+  {
+   "id": "c41",
+   "element": "video window",
+   "axis": "motion",
+   "check": "The window grows out from the right: at 4.67s it is a smaller translucent white box ≈(926,219,764,461) and reaches full size at (582,62) by 5.08s",
+   "box": [
+    560,
+    50,
+    1150,
+    650
+   ],
+   "scope": "frame",
+   "at": 4.67,
+   "then": 5.08
+  },
+  {
+   "id": "c42",
+   "element": "video window",
+   "axis": "style",
+   "check": "While opening, the window is semi-transparent: the page text shows faintly through it",
+   "box": [
+    926,
+    219,
+    764,
+    461
+   ],
+   "scope": "crop",
+   "at": 4.67,
+   "then": null
+  },
+  {
+   "id": "c43",
+   "element": "video area",
+   "axis": "motion",
+   "check": "Video area darkens from dark grey at 5.08s to solid black by 5.7s",
+   "box": [
+    588,
+    104,
+    982,
+    551
+   ],
+   "scope": "crop",
+   "at": 5.08,
+   "then": 5.7
+  },
+  {
+   "id": "c44",
+   "element": "video window",
+   "axis": "motion",
+   "check": "The window fades out between ~6.2s and 6.35s; at 6.28s it is only a faint ghost and the page is readable again",
+   "box": [
+    582,
+    62,
+    994,
+    600
+   ],
+   "scope": "frame",
+   "at": 5.7,
+   "then": 6.28
+  },
+  {
+   "id": "c45",
+   "element": "dim backdrop",
+   "axis": "motion",
+   "check": "By 7.5s the backdrop is fully gone: the page is back to #f3f3f3 with no blur and no window",
+   "box": [
+    0,
+    0,
+    2158,
+    1080
+   ],
+   "scope": "frame",
+   "at": 6.28,
+   "then": 7.5
+  },
+  {
+   "id": "c46",
+   "element": "cursor",
+   "axis": "style",
+   "check": "Cursor becomes a pointing hand while over the big right folder",
+   "box": [
+    1900,
+    650,
+    120,
+    100
+   ],
+   "scope": "crop",
+   "at": 4.67,
+   "then": null
+  },
+  {
+   "id": "c47",
+   "element": "dim backdrop",
+   "axis": "style",
+   "check": "The dim is an even grey wash over the whole frame, with no vignette and no coloured tint",
+   "box": [
+    0,
+    0,
+    2158,
+    1080
+   ],
+   "scope": "frame",
+   "at": 5.7,
+   "then": null
+  },
+  {
+   "id": "c48",
+   "element": "heyclicky folder wordmark",
+   "axis": "style",
+   "check": "Under the dim, the wordmark folders read as muted steel-blue, darker than at rest",
+   "box": [
+    289,
+    664,
+    1578,
+    305
+   ],
+   "scope": "frame",
+   "at": 5.7,
+   "then": null
+  }
+ ],
+ "imagery": [
+  {
+   "name": "folder tile",
+   "box": [
+    1208,
+    666,
+    56,
+    46
+   ],
+   "class": "structured",
+   "what": "macOS Finder-style light-blue folder: darker tab at the top-left, lighter front panel, soft shadow; it opens to show a white sheet on hover",
+   "at": 7.5
+  },
+  {
+   "name": "heyclicky wordmark",
+   "box": [
+    289,
+    664,
+    1578,
+    305
+   ],
+   "class": "structured",
+   "what": "lowercase 'heyclicky' laid out on a pixel grid of folder tiles",
+   "at": 7.5
+  },
+  {
+   "name": "trash can",
+   "box": [
+    81,
+    682,
+    81,
+    97
+   ],
+   "class": "structured",
+   "what": "macOS silver mesh trash can with colourful crumpled papers",
+   "at": 2.3
+  },
+  {
+   "name": "large folder",
+   "box": [
+    1910,
+    658,
+    99,
+    81
+   ],
+   "class": "structured",
+   "what": "larger macOS blue folder icon",
+   "at": 2.3
+  },
+  {
+   "name": "top shadow",
+   "box": [
+    939,
+    0,
+    291,
+    49
+   ],
+   "class": "css",
+   "what": "blurred grey shadow at the top edge",
+   "at": 2.3
+  },
+  {
+   "name": "video frame",
+   "box": [
+    588,
+    104,
+    982,
+    551
+   ],
+   "class": "photo",
+   "what": "YC demo day slide: black background, white 'HeyClicky', 'Farza Majeed' subtitle",
+   "at": 5.7
+  },
+  {
+   "name": "speaker inset",
+   "box": [
+    1284,
+    274,
+    279,
+    209
+   ],
+   "class": "photo",
+   "what": "a man in a dark sweater at a podium with a laptop, orange objects, pale blue backdrop",
+   "at": 5.7
+  }
+ ],
+ "moves": [
+  {
+   "element": "folder tiles near cursor",
+   "what": "Open as the cursor passes (front panel tilts, white paper appears) and close once it leaves; this follows the cursor across the wordmark",
+   "from": 0.5,
+   "to": 4.5,
+   "px": null
+  },
+  {
+   "element": "video window",
+   "what": "Grows from a translucent box at the right (926,219,764,461) to full size at (582,62,994,600)",
+   "from": 4.6,
+   "to": 5.1,
+   "px": 344
+  },
+  {
+   "element": "dim backdrop",
+   "what": "Page dims to mid-grey and blurs",
+   "from": 4.6,
+   "to": 5.15,
+   "px": null
+  },
+  {
+   "element": "video area",
+   "what": "Fades from grey to solid black as the video appears",
+   "from": 5,
+   "to": 5.2,
+   "px": null
+  },
+  {
+   "element": "video window + backdrop",
+   "what": "Window fades out and the page clears back to #f3f3f3",
+   "from": 6.2,
+   "to": 6.35,
+   "px": null
+  },
+  {
+   "element": "folder tiles near cursor",
+   "what": "Hover opening resumes: the last y's top folders at 6.28s, then the e/y folders at 7.5s",
+   "from": 6.4,
+   "to": 8.55,
+   "px": null
+  }
+ ]
+}

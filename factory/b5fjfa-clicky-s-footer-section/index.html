@@ -1,0 +1,208 @@
+<!doctype html>
+<!--
+  Clicky's Footer Section — rebuild of the lookap entry by Clicky (heyclicky.com footer).
+  Credit: designed by Clicky — https://www.heyclicky.com/
+  Sampled: speaker inset photo [1284,274,279,209] from the clip at 5.7 s (--patch speaker).
+  Everything else (folders, trash, window chrome, video title text) is drawn.
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>Clicky's Footer Section</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Figtree:wght@300;400&display=swap" rel="stylesheet">
+<style>
+@property --o { syntax: '<number>'; inherits: true; initial-value: 0; }
+html, body { margin: 0; overflow: hidden; background: #f3f3f3; }
+#stage { --u: 1px; position: relative; width: calc(2158 * var(--u)); height: calc(1080 * var(--u)); background: #f3f3f3; overflow: hidden; font-family: Inter, system-ui, sans-serif; }
+.topshadow { position: absolute; left: calc(965 * var(--u)); top: calc(-34 * var(--u)); width: calc(220 * var(--u)); height: calc(46 * var(--u)); border-radius: calc(20 * var(--u)); background: #b4b4b4; filter: blur(calc(22 * var(--u))); }
+.col { position: absolute; top: calc(368 * var(--u)); font-size: calc(22 * var(--u)); line-height: calc(52 * var(--u)); color: #5f5f5f; letter-spacing: calc(-0.2 * var(--u)); white-space: nowrap; }
+.col b { display: block; font-weight: 400; color: #0d0d0d; }
+.col span { display: block; }
+.col.disc p { margin: calc(9 * var(--u)) 0 0; line-height: calc(34 * var(--u)); }
+.copy { position: absolute; left: 0; right: 0; top: calc(1032 * var(--u)); text-align: center; font-size: calc(16.6 * var(--u)); line-height: calc(20 * var(--u)); color: #8f8f8f; }
+#word { position: absolute; left: 0; top: 0; }
+.t { --q: var(--u); position: absolute; width: calc(56 * var(--q)); height: calc(46 * var(--q)); transition: --o .14s ease-out; }
+.t i { position: absolute; display: block; }
+.t .tab, .t .back { opacity: calc(1 - var(--o)); }
+.t .tab { left: 0; top: calc(2 * var(--q)); width: calc(24 * var(--q)); height: calc(10 * var(--q)); border-radius: calc(3 * var(--q)) calc(5 * var(--q)) 0 0; background: linear-gradient(#55b4e5, #3d9bcd); clip-path: polygon(0 0, 72% 0, 100% 45%, 100% 100%, 0 100%); }
+.t .back { left: 0; top: calc(5 * var(--q)); width: calc(56 * var(--q)); height: calc(34 * var(--q)); border-radius: calc(3 * var(--q)); background: #45a8dc; }
+.t .paper { left: calc(2 * var(--q)); top: calc(4 * var(--q)); width: calc(52 * var(--q)); height: calc(28 * var(--q)); border-radius: calc(2 * var(--q)); background: linear-gradient(#f2f2f2, #dcdcdc 40%, #e9e9e9); box-shadow: 0 calc(-1 * var(--q)) calc(3 * var(--q)) rgba(0, 0, 0, .12); opacity: calc(var(--o) * 1.4 - .2); transform: translateY(calc((4 + var(--o) * 2) * var(--q))); }
+.t .front { left: 0; top: calc(8 * var(--q)); width: calc(56 * var(--q)); height: calc(39 * var(--q)); border-radius: calc(3 * var(--q)); background: linear-gradient(#c3f4ff 0, #a0e4fb calc(1.5 * var(--q)), #71d5fe calc(3 * var(--q)), #6dd0f7 60%, #66c8f2); box-shadow: 0 calc(3 * var(--q)) calc(5 * var(--q)) rgba(0, 0, 0, .3); transform-origin: 50% 100%; transform: perspective(calc(160 * var(--q))) rotateX(calc(var(--o) * -55deg)); }
+#big { position: absolute; left: calc(1909 * var(--u)); top: calc(658 * var(--u)); width: calc(100 * var(--u)); height: calc(80 * var(--u)); cursor: pointer; }
+#big i { position: absolute; display: block; }
+#big .tab { left: 0; top: 0; width: calc(48 * var(--u)); height: calc(14 * var(--u)); border-radius: calc(6 * var(--u)) calc(6 * var(--u)) 0 0; background: linear-gradient(#5bc8ff, #47b4ef); clip-path: polygon(0 0, 72% 0, 100% 50%, 100% 100%, 0 100%); }
+#big .back { left: 0; top: calc(6 * var(--u)); width: calc(100 * var(--u)); height: calc(40 * var(--u)); border-radius: calc(8 * var(--u)); background: #47b4ef; }
+#big .paper { left: calc(5 * var(--u)); top: calc(10 * var(--u)); width: calc(90 * var(--u)); height: calc(8 * var(--u)); border-radius: calc(3 * var(--u)); background: #fafafa; }
+#big .front { left: 0; top: calc(14 * var(--u)); width: calc(100 * var(--u)); height: calc(66 * var(--u)); border-radius: calc(4 * var(--u)) calc(4 * var(--u)) calc(9 * var(--u)) calc(9 * var(--u)); background: linear-gradient(#a8e6ff 0, #7dd8ff calc(2 * var(--u)), #6dcbff 45%, #5ac0fd 75%, #52bbfa); }
+#cur { position: absolute; left: calc(1910 * var(--u)); top: calc(688 * var(--u)); width: calc(26 * var(--u)); height: calc(30 * var(--u)); opacity: 0; pointer-events: none; display: none; }
+#trash { position: absolute; left: calc(78 * var(--u)); top: calc(680 * var(--u)); width: calc(88 * var(--u)); height: calc(100 * var(--u)); }
+#dim { position: absolute; inset: 0; background: rgba(0, 0, 0, .453); backdrop-filter: blur(calc(5 * var(--u))); -webkit-backdrop-filter: blur(calc(5 * var(--u))); opacity: 0; pointer-events: none; }
+#dim.on { pointer-events: auto; }
+#win { position: absolute; left: calc(582 * var(--u)); top: calc(62 * var(--u)); width: calc(994 * var(--u)); height: calc(600 * var(--u)); border-radius: calc(11 * var(--u)) calc(11 * var(--u)) calc(9 * var(--u)) calc(9 * var(--u)); background: #ebebeb; box-shadow: 0 0 0 calc(1 * var(--u)) rgba(30, 30, 30, .75), 0 calc(14 * var(--u)) calc(40 * var(--u)) rgba(0, 0, 0, .35); opacity: 0; pointer-events: none; overflow: hidden; }
+#win .bar { position: absolute; left: 0; top: 0; right: 0; height: calc(42 * var(--u)); background: linear-gradient(#f6f6f6, #ebebeb calc(4 * var(--u))); text-align: center; font: 400 calc(16.4 * var(--u)) / calc(42 * var(--u)) Inter, sans-serif; color: #7c7c7c; }
+.dot { position: absolute; top: calc(13 * var(--u)); width: calc(14 * var(--u)); height: calc(14 * var(--u)); border-radius: 50%; }
+.dot.r { left: calc(13 * var(--u)); background: radial-gradient(circle at 50% 30%, #ff9c96, #ec5a55 60%, #c9403c); }
+.dot.y { left: calc(36 * var(--u)); background: radial-gradient(circle at 50% 30%, #ffe08a, #f4b62c 60%, #d39a1f); }
+.dot.g { left: calc(58 * var(--u)); background: radial-gradient(circle at 50% 30%, #8ef08e, #2bc43a 60%, #1f9e2c); }
+#vid { position: absolute; left: calc(6 * var(--u)); top: calc(42 * var(--u)); width: calc(982 * var(--u)); height: calc(551 * var(--u)); border-radius: calc(7 * var(--u)); background: #e7e7e9; overflow: hidden; box-shadow: inset 0 0 0 calc(1 * var(--u)) #dcdcdc; }
+#vblack { position: absolute; inset: 0; opacity: 0; }
+#vblack .h1 { position: absolute; left: calc(252 * var(--u)); top: calc(222 * var(--u)); font: 300 calc(45 * var(--u)) / 1 Figtree, sans-serif; color: #fff; letter-spacing: calc(0.3 * var(--u)); }
+#vblack .h2 { position: absolute; left: calc(304 * var(--u)); top: calc(287 * var(--u)); font: 400 calc(14.5 * var(--u)) / 1 Figtree, sans-serif; color: #e6e6e6; }
+#vblack .h2 em { font-style: normal; color: #e0553f; }
+#vblack .inset { position: absolute; left: calc(696 * var(--u)); top: calc(170 * var(--u)); width: calc(279 * var(--u)); height: calc(209 * var(--u)); background: var(--patch-speaker, #bcd3e6) center / 100% 100%; }
+#vblack svg { position: absolute; left: calc(939 * var(--u)); top: calc(511 * var(--u)); width: calc(26 * var(--u)); height: calc(21 * var(--u)); }
+</style>
+<style id="patches">
+:root {
+  --patch-speaker: url("data:image/jpeg;base64,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"); /* 279x209 of the clip at 5.7s from 1284,274, 4.5 KB */
+}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="topshadow"></div>
+  <div class="col" style="left:calc(291 * var(--u))"><b>product</b><span>features</span><span>pricing</span><span>changelog</span><span>try it</span></div>
+  <div class="col" style="left:calc(696 * var(--u))"><b>resources</b><span>trust</span><span>privacy</span><span>referrals</span><span>support</span></div>
+  <div class="col" style="left:calc(1101 * var(--u))"><b>connect</b><span>instagram</span><span>x (twitter)</span><span>linkedin</span><span>youtube</span></div>
+  <div class="col disc" style="left:calc(1505 * var(--u))"><b>disclaimer</b><p>*heyclicky only sees your screen<br>when you press the hotkey -<br>screenshots are never stored*</p></div>
+  <svg id="trash" viewBox="0 0 88 100" aria-label="trash">
+    <defs>
+      <linearGradient id="tb" x1="0" x2="1"><stop offset="0" stop-color="#8a8a8a"/><stop offset=".1" stop-color="#c4c4c4"/><stop offset=".35" stop-color="#a6a6a6"/><stop offset=".6" stop-color="#b9b9b9"/><stop offset=".86" stop-color="#d6d6d6"/><stop offset="1" stop-color="#959595"/></linearGradient>
+      <linearGradient id="tv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity=".08"/><stop offset=".75" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity=".6"/></linearGradient>
+      <linearGradient id="rb" x1="0" x2="1"><stop offset="0" stop-color="#ff4d6d"/><stop offset=".35" stop-color="#ffcc33"/><stop offset=".65" stop-color="#36c3ff"/><stop offset="1" stop-color="#8a5cff"/></linearGradient>
+    </defs>
+    <path d="M9 8 L22 4 L26 16 L12 17Z" fill="#c8c8c8" stroke="#8d8d8d" stroke-width=".8"/>
+    <path d="M28 10 L40 8 L42 18 L30 18Z" fill="#e8d22e"/>
+    <path d="M40 9 Q50 1 60 6 L64 17 L42 18Z" fill="url(#rb)"/>
+    <path d="M62 16 Q66 4 74 3 Q77 10 76 17Z" fill="#2f9fe8"/>
+    <rect x="3" y="14" width="82" height="9" rx="4.5" fill="#dadada" stroke="#a3a3a3" stroke-width=".8"/>
+    <path d="M4 19 H84 L80 90 Q79 97 72 97 H16 Q9 97 8 90Z" fill="url(#tb)"/>
+    <path d="M4 19 H84 L80 90 Q79 97 72 97 H16 Q9 97 8 90Z" fill="url(#tv)"/>
+    <path d="M6 20 H82" stroke="#f5f5f5" stroke-width="1.2" opacity=".8"/>
+  </svg>
+  <div id="word"></div>
+  <div id="big"><i class="tab"></i><i class="back"></i><i class="paper"></i><i class="front"></i></div>
+  <div class="copy">© Humansongs, Inc. 2026</div>
+  <div id="dim"></div>
+  <div id="win">
+    <div class="bar"><i class="dot r"></i><i class="dot y"></i><i class="dot g"></i>yc-demoday.mov</div>
+    <div id="vid"><div id="vblack">
+      <div class="h1">HeyClicky</div>
+      <div class="h2">Farza <em>Majeed</em></div>
+      <div class="inset"></div>
+      <svg viewBox="0 0 26 21"><path d="M1 7 H5 L11 2 V19 L5 14 H1Z" fill="#fff" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><path d="M15 6.5 Q17.5 10.5 15 14.5 M19 3.5 Q23.5 10.5 19 17.5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
+    </div></div>
+  </div>
+  <svg id="cur" viewBox="0 0 26 30"><path d="M8 2.5 Q10.5 1 12 3 V12 L13 11.5 Q15 10.5 16 12 L17 11.6 Q19 11 20 13 L21 12.8 Q23.5 12.5 24 15 V21 Q24 27 18.5 28.5 H12 Q8.5 28 6 24 L1.8 16.5 Q1.2 14 3.6 13.8 Q5.2 14 6 15.6 L8 18.5Z" fill="#fff" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 17 V22 M16 17 V22 M20 17 V22" stroke="#111" stroke-width="1.1"/></svg>
+</div>
+<script>
+// CREDIT: Clicky — see brief.json source link.
+const U = n => `calc(${n} * var(--u))`;
+const ROW = r => 664 + 32.7 * r;
+const L = (x, ...rows) => rows.map(r => [x, r]);
+const TILES = [
+  // h
+  ...L(290, 0, 1, 2, 3, 4, 5, 6), [322, 3], [354, 2], [388, 2], ...L(418, 3, 4, 5, 6),
+  // e
+  ...L(483, 3, 4, 5), [516, 2], [548, 2], [580, 2], ...L(613, 3, 4), [516, 4], [548, 4], [580, 4], [516, 6], [548, 6], [580, 6],
+  // y
+  ...L(672, 2, 3, 4), [702, 5], [735, 5], [766, 4], ...L(798, 2, 3, 4, 5, 6, 7), [672, 7], [702, 8], [735, 8], [770, 8],
+  // c
+  ...L(862, 3, 4, 5), [892, 2], [924, 2], [956, 2], [988, 3], [892, 6], [924, 6], [956, 6], [988, 5],
+  // l
+  [1051, 0], ...L(1082, 0, 1, 2, 3, 4, 5, 6), [1051, 6], [1118, 6],
+  // i
+  [1209, 0], [1177, 2], ...L(1209, 2, 3, 4, 5, 6), [1177, 6], [1245, 6],
+  // c
+  ...L(1305, 3, 4, 5), [1338, 2], [1370, 2], [1400, 2], [1432, 3], [1338, 6], [1370, 6], [1400, 6], [1432, 5],
+  // k
+  ...L(1495, 0, 1, 2, 3, 4, 5, 6), [1588, 3], [1620, 2], [1556, 4], [1588, 5], [1620, 6],
+  // y
+  ...L(1682, 2, 3, 4), [1712, 5], [1745, 5], [1778, 4], ...L(1810, 2, 3, 4, 5, 6, 7, 8), [1682, 7], [1715, 8], [1748, 8], [1780, 8],
+].sort((a, b) => a[1] - b[1] || a[0] - b[0]);
+
+const word = document.getElementById('word');
+const tiles = TILES.map(([x, r]) => {
+  const el = document.createElement('div');
+  el.className = 't';
+  el.style.left = U(x); el.style.top = U(ROW(r));
+  el.innerHTML = '<i class="tab"></i><i class="back"></i><i class="paper"></i><i class="front"></i>';
+  word.appendChild(el);
+  return { el, cx: x + 28, cy: ROW(r) + 24 };
+});
+
+const R = 122;
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const stage = document.getElementById('stage');
+const dim = document.getElementById('dim'), win = document.getElementById('win'), vblack = document.getElementById('vblack'), vid = document.getElementById('vid');
+const demo = new URLSearchParams(location.search).has('demo');
+
+// window open/close, relative to the click (delay in s)
+function openWin(d = 0) {
+  const o = { delay: d * 1000, fill: 'both' };
+  dim.animate([{ opacity: 0 }, { opacity: .72, offset: .36 }, { opacity: 1 }], { ...o, duration: 330, easing: 'ease-in-out' });
+  // the clip's backdrop is still sharp at 4.67 s; the blur arrives after the dim
+  const B = n => `blur(${U(n)})`;
+  dim.animate([{ backdropFilter: B(0) }, { backdropFilter: B(0), offset: .4 }, { backdropFilter: B(5) }], { ...o, duration: 450 });
+  win.animate([
+    { opacity: 0, transform: `translate(${U(420)}, ${U(200)}) scale(.55)` },
+    { opacity: .58, transform: `translate(${U(229)}, ${U(87)}) scale(.769)`, offset: .23, easing: 'ease-out' },
+    { opacity: 1, transform: 'none' }
+  ], { ...o, duration: reduce ? 1 : 530 });
+  // video area: light grey until 4.95 s, #505050 at 5.08 s, black by 5.3 s (clip --hex at 700,150)
+  const V = (c, f) => ({ backgroundColor: c, offset: f });
+  vid.animate([V('#e7e7e9', 0), V('#e7e7e9', .47), V('#bebec1', .53), V('#767676', .576), V('#505050', .624), V('#272727', .682), V('#0b0b0b', .765), V('#000', .88), V('#000', 1)], { ...o, duration: reduce ? 1 : 850 });
+  vblack.animate([{ opacity: 0 }, { opacity: 0, offset: .5 }, { opacity: 1, offset: .6 }, { opacity: 1 }], { ...o, duration: reduce ? 1 : 850 });
+  dim.classList.add('on');
+}
+function closeWin(d = 0) {
+  const o = { delay: d * 1000, fill: 'forwards', easing: 'ease-out' };
+  dim.animate([{ opacity: 1 }, { opacity: .4, offset: .33 }, { opacity: .12, offset: .6 }, { opacity: 0 }], { ...o, duration: 300 });
+  win.animate([{ opacity: 1 }, { opacity: .5, offset: .33 }, { opacity: .15, offset: .6 }, { opacity: 0, offset: .83 }, { opacity: 0 }], { ...o, duration: 300 });
+  dim.classList.remove('on');
+}
+
+if (demo) {
+  // the clip's pointer over the wordmark (x, y at t s); off-word stretches park outside the radius
+  const P = [[0, 1205, 1050], [.5, 1205, 1050], [.6, 959, 894], [.7, 900, 849], [.8, 885, 829], [1.1, 885, 829], [1.2, 765, 823],
+    [1.3, 551, 810], [1.4, 473, 778], [1.6, 430, 797], [1.7, 454, 823], [1.8, 596, 810], [1.9, 797, 790], [2.0, 907, 778],
+    [2.1, 1040, 765], [2.2, 1100, 765], [2.3, 1108, 770], [2.4, 1250, 797], [2.5, 1277, 797], [2.7, 1300, 797], [2.8, 1374, 797],
+    [2.9, 1555, 797], [3.0, 1704, 797], [3.1, 1782, 810], [3.3, 1769, 862], [3.4, 1672, 920], [3.5, 1322, 875], [3.6, 635, 855],
+    [3.7, 907, 862], [3.8, 1056, 765], [3.9, 1393, 765], [4.0, 1730, 700], [4.1, 1853, 680], [4.2, 1879, 680], [4.4, 1960, 700],
+    [7.0, 1960, 700], [7.1, 1100, 740], [7.2, 991, 745], [7.3, 875, 765], [7.4, 680, 785], [7.5, 630, 780], [7.6, 596, 778],
+    [7.7, 1866, 65], [8.6, 1866, 65]];
+  const at = t => {
+    let i = 0; while (i < P.length - 2 && P[i + 1][0] <= t) i++;
+    const [t0, x0, y0] = P[i], [t1, x1, y1] = P[i + 1], k = Math.min(1, Math.max(0, (t - t0) / (t1 - t0)));
+    return [x0 + (x1 - x0) * k, y0 + (y1 - y0) * k];
+  };
+  const D = 8.58, dt = .1;
+  if (!reduce) for (const tl of tiles) {
+    const kf = [{ '--o': 0, offset: 0 }]; let s = 0;
+    for (let t = 0; t <= D; t += dt) {
+      const [x, y] = at(t), n = Math.hypot(x - tl.cx, y - tl.cy) < R ? 1 : 0;
+      if (n !== s) { kf.push({ '--o': s, offset: t / D }, { '--o': n, offset: Math.min(1, (t + .09) / D) }); s = n; }
+    }
+    kf.push({ '--o': s, offset: 1 });
+    tl.el.style.transition = 'none';
+    if (kf.length > 2) tl.el.animate(kf, { duration: D * 1000, fill: 'both' });
+  }
+  // the clip's pointer turns into a hand over the big folder for the click (4.3–4.85 s)
+  const cur = document.getElementById('cur'); cur.style.display = 'block';
+  cur.animate([{ opacity: 0 }, { opacity: 0, offset: 4.3 / D }, { opacity: 1, offset: 4.31 / D }, { opacity: 1, offset: 4.85 / D }, { opacity: 0, offset: 4.86 / D }, { opacity: 0 }], { duration: D * 1000, fill: 'both' });
+  openWin(4.55);
+  closeWin(6.1);
+} else {
+  stage.addEventListener('pointermove', e => {
+    const b = stage.getBoundingClientRect(), s = b.width / 2158;
+    const x = (e.clientX - b.left) / s, y = (e.clientY - b.top) / s;
+    for (const tl of tiles) tl.el.style.setProperty('--o', Math.hypot(x - tl.cx, y - tl.cy) < R ? 1 : 0);
+  });
+  stage.addEventListener('pointerleave', () => tiles.forEach(tl => tl.el.style.setProperty('--o', 0)));
+  document.getElementById('big').addEventListener('click', () => openWin(0));
+  dim.addEventListener('click', () => closeWin(0));
+}
+</script>
+</body>
+</html>

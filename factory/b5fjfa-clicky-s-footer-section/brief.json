@@ -1,0 +1,444 @@
+{
+ "slug": "b5fjfa-clicky-s-footer-section",
+ "title": "Clicky's Footer Section",
+ "measured": false,
+ "recipe": null,
+ "what": "A minimalist white footer featuring clean text columns above a large, light blue 3D-brick wordmark that triggers an interactive video preview when clicked.",
+ "frame": {
+  "ratio": 1.997,
+  "shape": "landscape",
+  "media": "clip"
+ },
+ "tone": "light surface, dark type",
+ "traits": [
+  "Footer",
+  "Hover effects",
+  "Animation"
+ ],
+ "section": "Footer",
+ "steps": [
+  "Call see_design for the frame and read the layout from it: regions, alignment, type scale, corner radii, spacing rhythm.",
+  "The media is a clip: name each state you can see (rest, hover, press, open) and the order they occur in.",
+  "Build with the project's own stack and tokens; match proportion and hierarchy before matching pixels.",
+  "A draft measurement is attached: its phases, moves and palette are measured from the clip; its boxes are a first pass to check against the keyframes."
+ ],
+ "draft": {
+  "frame": {
+   "w": 2158,
+   "h": 1080
+  },
+  "duration": 8.58,
+  "phases": [
+   [
+    4.6,
+    4.75
+   ],
+   [
+    5,
+    5.15
+   ],
+   [
+    6.2,
+    6.35
+   ]
+  ],
+  "keyframes": [
+   {
+    "name": "kf1",
+    "at": 2.3,
+    "hold": [
+     0,
+     4.55
+    ]
+   },
+   {
+    "name": "kf2",
+    "at": 5.7,
+    "hold": [
+     5.2,
+     6.15
+    ]
+   },
+   {
+    "name": "kf3",
+    "at": 7.5,
+    "hold": [
+     6.4,
+     8.55
+    ]
+   }
+  ],
+  "moments": [
+   {
+    "at": 2.3,
+    "name": "kf1"
+   },
+   {
+    "at": 4.67,
+    "name": "mid-phase"
+   },
+   {
+    "at": 5.08,
+    "name": "mid-phase"
+   },
+   {
+    "at": 5.7,
+    "name": "kf2"
+   },
+   {
+    "at": 6.28,
+    "name": "mid-phase"
+   },
+   {
+    "at": 7.5,
+    "name": "kf3"
+   }
+  ],
+  "anchors": [
+   {
+    "phase": [
+     4.6,
+     4.75
+    ],
+    "read": "the content fills the frame (a gradient, photo or window behind it), so its edges cannot be read against the background: use look_at what=track on a column through the moving part",
+    "reliable": false
+   },
+   {
+    "phase": [
+     5,
+     5.15
+    ],
+    "read": "the content fills the frame (a gradient, photo or window behind it), so its edges cannot be read against the background: use look_at what=track on a column through the moving part",
+    "reliable": false
+   },
+   {
+    "phase": [
+     6.2,
+     6.35
+    ],
+    "read": "the content fills the frame (a gradient, photo or window behind it), so its edges cannot be read against the background: use look_at what=track on a column through the moving part",
+    "reliable": false
+   }
+  ],
+  "background": "#f3f3f3",
+  "palette": [
+   {
+    "hex": "#f3f3f3",
+    "share": 86.9
+   },
+   {
+    "hex": "#6dd2f9",
+    "share": 3.1
+   },
+   {
+    "hex": "#6bccf4",
+    "share": 2.5
+   },
+   {
+    "hex": "#eaeaea",
+    "share": 1.4
+   },
+   {
+    "hex": "#73d4fb",
+    "share": 1.1
+   },
+   {
+    "hex": "#d8d8d8",
+    "share": 0.4
+   },
+   {
+    "hex": "#68c7ec",
+    "share": 0.3
+   },
+   {
+    "hex": "#c9c8c8",
+    "share": 0.2
+   }
+  ],
+  "elements": [
+   {
+    "box": [
+     482,
+     805,
+     182,
+     103
+    ],
+    "fill": "#6dcff5"
+   },
+   {
+    "box": [
+     1494,
+     742,
+     182,
+     166
+    ],
+    "fill": "#6dcff6"
+   },
+   {
+    "box": [
+     1682,
+     895,
+     184,
+     71
+    ],
+    "fill": "#6dcef5"
+   },
+   {
+    "box": [
+     1304,
+     741,
+     182,
+     71
+    ],
+    "fill": "#6dcff6"
+   },
+   {
+    "box": [
+     290,
+     742,
+     96,
+     91
+    ],
+    "fill": "#6ecff6"
+   },
+   {
+    "box": [
+     1178,
+     867,
+     122,
+     39
+    ],
+    "fill": "#6dcff6"
+   },
+   {
+    "box": [
+     1684,
+     804,
+     181,
+     70
+    ],
+    "fill": "#6bccf3"
+   },
+   {
+    "box": [
+     1046,
+     871,
+     128,
+     35
+    ],
+    "fill": "#6ecef5"
+   },
+   {
+    "box": [
+     892,
+     866,
+     122,
+     40
+    ],
+    "fill": "#6ccef6"
+   },
+   {
+    "box": [
+     1910,
+     695,
+     98,
+     39
+    ],
+    "fill": "#63c5fe"
+   },
+   {
+    "box": [
+     892,
+     742,
+     122,
+     36
+    ],
+    "fill": "#6fd0f7"
+   }
+  ],
+  "motion": [
+   {
+    "element": "#6dcff5",
+    "box": [
+     482,
+     805,
+     182,
+     103
+    ],
+    "moves": [
+     {
+      "from": 1.2,
+      "to": 1.6,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 400
+     },
+     {
+      "from": 1.9,
+      "to": 2.15,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 250
+     },
+     {
+      "from": 7.4,
+      "to": 7.55,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 150
+     },
+     {
+      "from": 7.7,
+      "to": 7.75,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     }
+    ]
+   },
+   {
+    "element": "#6dcff6",
+    "box": [
+     1494,
+     742,
+     182,
+     166
+    ],
+    "moves": [
+     {
+      "from": 2.7,
+      "to": 3.05,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 350
+     },
+     {
+      "from": 3.35,
+      "to": 3.5,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 150
+     }
+    ]
+   },
+   {
+    "element": "#6dcef5",
+    "box": [
+     1682,
+     895,
+     184,
+     71
+    ],
+    "moves": [
+     {
+      "from": 3,
+      "to": 3.05,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 3.25,
+      "to": 3.45,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 200
+     }
+    ]
+   },
+   {
+    "element": "#6dcff6",
+    "box": [
+     1304,
+     741,
+     182,
+     71
+    ],
+    "moves": [
+     {
+      "from": 2.25,
+      "to": 2.4,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 150
+     },
+     {
+      "from": 2.7,
+      "to": 3,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 300
+     },
+     {
+      "from": 3.85,
+      "to": 4.05,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 200
+     },
+     {
+      "from": 4.1,
+      "to": 4.15,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     }
+    ]
+   }
+  ],
+  "coverage": "flat regions found; boxes and fills are usable as given",
+  "confidence": {
+   "phases": "measured: sampled every 50 ms",
+   "motion": "measured: moves of the first keyframe's big parts, edges read at full resolution; dTop and dLeft are the distance in source px",
+   "palette": "measured for areas; small things do not reach it",
+   "anchors": "measured where the content stands clear of its background (reliable true): the box of everything that is not background at a phase's start and end, and which edges moved; where the content fills the frame the field says so and look_at what=track is the way to read an edge",
+   "elements": "draft: flat regions at the first keyframe; nested parts split or merge, text and thin parts are missing; check each box against the keyframe (see_design with at) before trusting it"
+  }
+ },
+ "motion": {
+  "status": "draft measured: draft.phases say when things move, draft.anchors which edges, draft.motion how far; the presets below are only for states the clip never shows",
+  "enter": "fade up 12 px, 320 ms, cubic-bezier(0.2, 0.8, 0.2, 1)",
+  "hover": "colour or ring only, 150 ms",
+  "press": "scale 0.98, 120 ms",
+  "reducedMotion": "respect prefers-reduced-motion: no entrance, instant hover"
+ },
+ "text": null,
+ "notes": [
+  {
+   "slug": "motion-from-stills",
+   "title": "Giving motion to a still, honestly"
+  }
+ ],
+ "credit": {
+  "author": "Clicky",
+  "x": null,
+  "source": "https://www.heyclicky.com/"
+ },
+ "method": [
+  "Fetch the clip; read size, fps and duration from the container.",
+  "Dump frames at 2 fps plus a contact sheet; pick the idle and active moments and dump those at full resolution.",
+  "Convert the chosen frames to raw RGB and measure: bounding boxes of every element, exact hex at flat regions, luminance profiles across edges for the lighting, a per-frame luma trace of the moving region for timing.",
+  "Build with one unit, --u, equal to one source pixel at the design size, and write every size as calc(N * var(--u)).",
+  "Light rounded objects with inset box-shadows on one overlay (rim, near glow, wide falloff); stacked linear gradients show a seam at the corner.",
+  "Render the build headless at --u: 1px, crop to the frame, put it beside the source frame, and look. Fix the three largest differences. Repeat."
+ ],
+ "build": null,
+ "oneShot": "No measured recipe, but a draft: build from draft.elements and draft.motion, look at each keyframe with see_design (at), then call check_rebuild with a screenshot; its regions are reliable, its element rows are as good as the draft boxes.",
+ "keyframeFiles": [
+  {
+   "name": "kf1",
+   "at": 2.3,
+   "file": "public/drafts/0pilkhe/kf1.jpg"
+  },
+  {
+   "name": "kf2",
+   "at": 5.7,
+   "file": "public/drafts/0pilkhe/kf2.jpg"
+  },
+  {
+   "name": "kf3",
+   "at": 7.5,
+   "file": "public/drafts/0pilkhe/kf3.jpg"
+  }
+ ]
+}

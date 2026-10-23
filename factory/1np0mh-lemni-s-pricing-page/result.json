@@ -1,0 +1,143 @@
+{
+ "slug": "1np0mh-lemni-s-pricing-page",
+ "title": "Lemni's Pricing Page",
+ "author": "Lemni",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "pass",
+ "ended": "all criteria pass",
+ "bestRound": 3,
+ "rank": 98,
+ "allPass": true,
+ "rubric": {
+  "pass": 37,
+  "fail": 0,
+  "unsure": 0,
+  "of": 37,
+  "failed": []
+ },
+ "score": 88,
+ "motion": "the clip does not move between the scored moments",
+ "imagery": [
+  {
+   "name": "3D integration icon halo",
+   "class": "photo",
+   "box": [
+    272,
+    443,
+    682,
+    553
+   ],
+   "reproduced": true,
+   "how": "sampled under licence"
+  },
+  {
+   "name": "Lemni logo mark",
+   "class": "structured",
+   "box": [
+    82,
+    14,
+    32,
+    22
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "Continue arrow icon",
+   "class": "structured",
+   "box": [
+    1144,
+    15,
+    19,
+    19
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 10.9,
+   "turns": 63,
+   "costUsd": 3.0135549999999998,
+   "tokens": {
+    "written": 34188,
+    "read": 2683314
+   },
+   "judgeUsd": 0.649,
+   "ended": "completed",
+   "score": 88,
+   "rank": 94,
+   "allPass": false,
+   "rubric": {
+    "pass": 35,
+    "fail": 2,
+    "unsure": 0,
+    "of": 37
+   },
+   "motion": "the clip does not move between the scored moments",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 6.7,
+   "turns": 30,
+   "costUsd": 1.0505836,
+   "tokens": {
+    "written": 14067,
+    "read": 1367010
+   },
+   "judgeUsd": 0.388,
+   "ended": "completed",
+   "score": 88,
+   "rank": 94,
+   "allPass": false,
+   "rubric": {
+    "pass": 35,
+    "fail": 2,
+    "unsure": 0,
+    "of": 37
+   },
+   "motion": "the clip does not move between the scored moments",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 5.9,
+   "turns": 26,
+   "costUsd": 0.7732305999999997,
+   "tokens": {
+    "written": 8796,
+    "read": 958336
+   },
+   "judgeUsd": 0.431,
+   "ended": "completed",
+   "score": 88,
+   "rank": 98,
+   "allPass": true,
+   "rubric": {
+    "pass": 37,
+    "fail": 0,
+    "unsure": 0,
+    "of": 37
+   },
+   "motion": "the clip does not move between the scored moments",
+   "kept": true
+  }
+ ],
+ "minutes": 23.5,
+ "tokens": {
+  "written": 57051,
+  "read": 5008660
+ },
+ "cost": {
+  "codingUsd": 4.84,
+  "judgeUsd": 1.47,
+  "rubricUsd": 0.455,
+  "totalUsd": 6.76
+ },
+ "notes": true,
+ "at": "2026-10-23T18:30:03.009Z"
+}

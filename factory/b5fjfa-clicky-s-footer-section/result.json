@@ -1,0 +1,168 @@
+{
+ "slug": "b5fjfa-clicky-s-footer-section",
+ "title": "Clicky's Footer Section",
+ "author": "Clicky",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "pass",
+ "ended": "all criteria pass",
+ "bestRound": 2,
+ "rank": 97,
+ "allPass": true,
+ "rubric": {
+  "pass": 48,
+  "fail": 0,
+  "unsure": 0,
+  "of": 48,
+  "failed": []
+ },
+ "score": 87,
+ "motion": "the render changes where the clip changes",
+ "imagery": [
+  {
+   "name": "folder tile",
+   "class": "structured",
+   "box": [
+    1208,
+    666,
+    56,
+    46
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "heyclicky wordmark",
+   "class": "structured",
+   "box": [
+    289,
+    664,
+    1578,
+    305
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "trash can",
+   "class": "structured",
+   "box": [
+    81,
+    682,
+    81,
+    97
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "large folder",
+   "class": "structured",
+   "box": [
+    1910,
+    658,
+    99,
+    81
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "top shadow",
+   "class": "css",
+   "box": [
+    939,
+    0,
+    291,
+    49
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "video frame",
+   "class": "photo",
+   "box": [
+    588,
+    104,
+    982,
+    551
+   ],
+   "reproduced": true,
+   "how": "sampled under licence"
+  },
+  {
+   "name": "speaker inset",
+   "class": "photo",
+   "box": [
+    1284,
+    274,
+    279,
+    209
+   ],
+   "reproduced": true,
+   "how": "sampled under licence"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 17.1,
+   "turns": 74,
+   "costUsd": 2.415252599999999,
+   "tokens": {
+    "written": 42023,
+    "read": 3197275
+   },
+   "judgeUsd": 1.07,
+   "ended": "completed",
+   "score": 84,
+   "rank": 84,
+   "allPass": false,
+   "rubric": {
+    "pass": 39,
+    "fail": 9,
+    "unsure": 0,
+    "of": 48
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 15.8,
+   "turns": 75,
+   "costUsd": 2.2388656000000005,
+   "tokens": {
+    "written": 32705,
+    "read": 2954204
+   },
+   "judgeUsd": 1.624,
+   "ended": "completed",
+   "score": 87,
+   "rank": 97,
+   "allPass": true,
+   "rubric": {
+    "pass": 48,
+    "fail": 0,
+    "unsure": 0,
+    "of": 48
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  }
+ ],
+ "minutes": 32.9,
+ "tokens": {
+  "written": 74728,
+  "read": 6151479
+ },
+ "cost": {
+  "codingUsd": 4.65,
+  "judgeUsd": 2.69,
+  "rubricUsd": 0.668,
+  "totalUsd": 8.02
+ },
+ "notes": true,
+ "at": "2026-10-23T18:05:12.482Z"
+}

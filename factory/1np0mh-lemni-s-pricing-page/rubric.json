@@ -1,0 +1,921 @@
+{
+ "slug": "1np0mh-lemni-s-pricing-page",
+ "frame": {
+  "w": 1244,
+  "h": 996
+ },
+ "at": "2026-10-23T18:06:33.083Z",
+ "model": "opus",
+ "costUsd": 0.455,
+ "summary": "A static, light pricing page (#f4f4f6 ground, near-black type) at 1244x996 that does not move at all across the 3s: frame diffs at 0.2→1.2s, 0.5→2.5s and 1.5→2s show no change. A thin top nav (y≈0–49, hairline divider below) carries the Lemni mark and wordmark at left (x≈82), grey links Docs / Blog / Company / Community ↗ spaced across the middle, a black \"Pricing\" (current page) and a black \"Continue\" with a black circled right arrow at right. Centred below: a two-line tight-tracked grotesk headline \"Expect more / and pay less\" (~76px cap-to-cap lines, x≈428–818, y≈152–292), then a three-line centred 18px paragraph whose last sentence \"Receive 50% off on your first year.\" is semibold. The lower half is a centred pricing card (x≈413–831, y≈548–963, ~16px radius, off-white fill slightly lighter than the page, soft diffuse shadow, no hard border) laid over a dense halo of glossy 3D brand icons (phone, OpenAI knot, Salesforce cloud, Shopify bag, HubSpot sprocket, Twilio, play button, folder, Gmail, green stacked layers, Notion, manuals, purple beads, star) that peek out above and to both sides and are cropped by the frame bottom. The card holds a grey struck-through \"$196\", a large black \"$98\", a small \"/Month\", a hairline divider, three rows of grey off-state toggles with grey labels, a full-width black pill \"Try For Free\" button, and two lines of small grey footnote.",
+ "elements": [
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1244,
+    996
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "flat #f4f4f6"
+  },
+  {
+   "name": "nav divider hairline",
+   "box": [
+    0,
+    48,
+    1244,
+    1
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "1px light grey line under nav"
+  },
+  {
+   "name": "Lemni logo mark",
+   "box": [
+    82,
+    14,
+    32,
+    22
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "two overlapping rounded diamonds, grey-to-black gradient"
+  },
+  {
+   "name": "Lemni wordmark",
+   "box": [
+    128,
+    14,
+    48,
+    20
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "black medium ~17px"
+  },
+  {
+   "name": "nav link Docs",
+   "box": [
+    279,
+    16,
+    36,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "mid grey ~15px"
+  },
+  {
+   "name": "nav link Blog",
+   "box": [
+    418,
+    16,
+    32,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "mid grey"
+  },
+  {
+   "name": "nav link Company",
+   "box": [
+    553,
+    16,
+    67,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "mid grey"
+  },
+  {
+   "name": "nav link Community ↗",
+   "box": [
+    723,
+    16,
+    93,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "mid grey with small NE arrow"
+  },
+  {
+   "name": "nav Pricing",
+   "box": [
+    918,
+    16,
+    48,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "black, active"
+  },
+  {
+   "name": "nav Continue + arrow",
+   "box": [
+    1069,
+    14,
+    94,
+    22
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "black text + black filled circle with white right arrow ~18px"
+  },
+  {
+   "name": "headline",
+   "box": [
+    428,
+    152,
+    390,
+    142
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Expect more' / 'and pay less', black regular grotesk ~76px, tight tracking, centred"
+  },
+  {
+   "name": "sub paragraph",
+   "box": [
+    411,
+    330,
+    422,
+    76
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "3 centred lines ~18px dark grey; last sentence semibold black"
+  },
+  {
+   "name": "3D icon halo",
+   "box": [
+    272,
+    443,
+    682,
+    553
+   ],
+   "kind": "image",
+   "class": "photo",
+   "note": "glossy rendered brand icons around and behind card, cropped by frame bottom"
+  },
+  {
+   "name": "pricing card",
+   "box": [
+    413,
+    548,
+    418,
+    415
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "off-white, ~16px radius, soft wide shadow, no border"
+  },
+  {
+   "name": "old price $196",
+   "box": [
+    453,
+    590,
+    96,
+    40
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "light grey ~44px with grey strike line through middle"
+  },
+  {
+   "name": "price $98",
+   "box": [
+    560,
+    588,
+    78,
+    42
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "black ~44px"
+  },
+  {
+   "name": "/Month",
+   "box": [
+    647,
+    613,
+    52,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "black ~16px, baseline aligned"
+  },
+  {
+   "name": "card divider",
+   "box": [
+    453,
+    654,
+    339,
+    1
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "hairline light grey"
+  },
+  {
+   "name": "toggle 1",
+   "box": [
+    452,
+    683,
+    28,
+    18
+   ],
+   "kind": "control",
+   "class": "css",
+   "note": "off-state pill, light grey track, white knob left"
+  },
+  {
+   "name": "feature 1 label",
+   "box": [
+    495,
+    683,
+    150,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Unlimited knowledge' grey ~16px"
+  },
+  {
+   "name": "toggle 2",
+   "box": [
+    452,
+    727,
+    28,
+    18
+   ],
+   "kind": "control",
+   "class": "css",
+   "note": "off-state"
+  },
+  {
+   "name": "feature 2 label",
+   "box": [
+    495,
+    727,
+    169,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Unlimited phone agents'"
+  },
+  {
+   "name": "toggle 3",
+   "box": [
+    452,
+    771,
+    28,
+    18
+   ],
+   "kind": "control",
+   "class": "css",
+   "note": "off-state"
+  },
+  {
+   "name": "feature 3 label",
+   "box": [
+    495,
+    771,
+    177,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'10+ Workplace members'"
+  },
+  {
+   "name": "Try For Free button",
+   "box": [
+    453,
+    817,
+    339,
+    40
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "black pill, white medium ~16px label centred"
+  },
+  {
+   "name": "footnote",
+   "box": [
+    455,
+    887,
+    334,
+    36
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "two centred lines ~13px grey"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "page",
+   "axis": "motion",
+   "check": "Nothing moves: the whole frame at 0.5s is identical to the frame at 2.5s (no entrance, no float, no hover).",
+   "box": [
+    0,
+    0,
+    1244,
+    996
+   ],
+   "scope": "frame",
+   "at": 0.5,
+   "then": 2.5
+  },
+  {
+   "id": "c02",
+   "element": "icon halo",
+   "axis": "motion",
+   "check": "The 3D icons around the card do not float or drift: their positions at 1.5s match those at 2s exactly.",
+   "box": [
+    272,
+    443,
+    682,
+    553
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": 2
+  },
+  {
+   "id": "c03",
+   "element": "page background",
+   "axis": "style",
+   "check": "Page background is a flat very light cool grey (~#f4f4f6), not pure white and not a gradient.",
+   "box": [
+    0,
+    60,
+    1244,
+    80
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "nav divider",
+   "axis": "present",
+   "check": "A 1px light grey hairline spans the full width just under the nav at y≈49.",
+   "box": [
+    0,
+    40,
+    1244,
+    16
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "Lemni logo",
+   "axis": "present",
+   "check": "A small logo mark of overlapping rounded diamond shapes shading grey to black sits left of the word 'Lemni' at x≈82–114, y≈14–36.",
+   "box": [
+    76,
+    8,
+    110,
+    34
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "Lemni wordmark",
+   "axis": "text",
+   "check": "Wordmark reads exactly 'Lemni' in black, medium weight, ~17px.",
+   "box": [
+    124,
+    10,
+    60,
+    28
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "nav links",
+   "axis": "text",
+   "check": "Middle nav items read, left to right, 'Docs', 'Blog', 'Company', 'Community ↗' (small north-east arrow after Community).",
+   "box": [
+    270,
+    8,
+    560,
+    34
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "nav links",
+   "axis": "style",
+   "check": "Docs, Blog, Company and Community are mid grey, clearly lighter than the black 'Pricing'.",
+   "box": [
+    270,
+    8,
+    710,
+    34
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "nav Pricing",
+   "axis": "position",
+   "check": "'Pricing' in black sits at x≈918–966, vertically centred at y≈24.",
+   "box": [
+    905,
+    8,
+    75,
+    34
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "nav Continue",
+   "axis": "style",
+   "check": "'Continue' is black text followed by a ~18px solid black circle containing a white right-pointing arrow, ending at x≈1162.",
+   "box": [
+    1060,
+    8,
+    110,
+    34
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "headline",
+   "axis": "text",
+   "check": "Headline reads exactly 'Expect more' on line 1 and 'and pay less' on line 2.",
+   "box": [
+    420,
+    145,
+    405,
+    155
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "headline",
+   "axis": "style",
+   "check": "Headline is black regular-weight (not bold) sans with tight negative tracking, cap height ~55px, lines ~70px apart.",
+   "box": [
+    420,
+    145,
+    405,
+    155
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "headline",
+   "axis": "position",
+   "check": "Headline is horizontally centred on the frame (x≈428–818) with its top at y≈152.",
+   "box": [
+    0,
+    140,
+    1244,
+    160
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "sub paragraph",
+   "axis": "text",
+   "check": "Paragraph reads 'We don’t charge per seat. Delivering a premium / customer experience shouldn’t come with a premium / price tag. Receive 50% off on your first year.' in three centred lines.",
+   "box": [
+    405,
+    325,
+    435,
+    85
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "sub paragraph",
+   "axis": "style",
+   "check": "Only 'Receive 50% off on your first year.' is semibold black; the rest is regular dark grey ~18px.",
+   "box": [
+    405,
+    380,
+    435,
+    30
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "pricing card",
+   "axis": "position",
+   "check": "Card is centred horizontally, spanning x≈413–831 and y≈548–963 (≈418×415).",
+   "box": [
+    400,
+    535,
+    445,
+    440
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "pricing card",
+   "axis": "style",
+   "check": "Card corners are rounded ~16px.",
+   "box": [
+    405,
+    540,
+    60,
+    60
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "pricing card",
+   "axis": "style",
+   "check": "Card edge is a soft diffuse shadow over the icons, with no hard stroke/outline line.",
+   "box": [
+    800,
+    560,
+    60,
+    200
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c19",
+   "element": "pricing card",
+   "axis": "style",
+   "check": "Card fill is an opaque off-white (near #f6f6f7), not translucent or frosted: icons behind it are fully hidden, not blurred through.",
+   "box": [
+    430,
+    560,
+    380,
+    40
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "old price",
+   "axis": "text",
+   "check": "'$196' appears in light grey with a horizontal strike line through its middle.",
+   "box": [
+    448,
+    585,
+    106,
+    50
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "price",
+   "axis": "text",
+   "check": "'$98' is black, same ~44px size as '$196', immediately to its right at x≈560.",
+   "box": [
+    555,
+    583,
+    90,
+    52
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "/Month",
+   "axis": "text",
+   "check": "'/Month' in small (~16px) black text sits right of '$98', bottom-aligned with the price baseline.",
+   "box": [
+    642,
+    605,
+    62,
+    30
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "card divider",
+   "axis": "present",
+   "check": "A thin light grey hairline spans x≈453–792 at y≈654 between price and feature list.",
+   "box": [
+    445,
+    645,
+    355,
+    20
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "feature list",
+   "axis": "present",
+   "check": "Exactly 3 feature rows, each a toggle followed by a label, spaced ~44px apart (y≈692, 736, 780).",
+   "box": [
+    445,
+    675,
+    260,
+    120
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c25",
+   "element": "feature labels",
+   "axis": "text",
+   "check": "Labels read 'Unlimited knowledge', 'Unlimited phone agents', '10+ Workplace members' top to bottom, in mid grey ~16px.",
+   "box": [
+    490,
+    675,
+    200,
+    120
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c26",
+   "element": "toggles",
+   "axis": "style",
+   "check": "Each toggle is a small ~28×18 pill in OFF state: very light grey track with a white knob on the left, no colour accent.",
+   "box": [
+    448,
+    680,
+    36,
+    110
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c27",
+   "element": "Try For Free button",
+   "axis": "position",
+   "check": "Button spans x≈453–792, y≈817–857, the same width as the divider.",
+   "box": [
+    445,
+    810,
+    355,
+    55
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "Try For Free button",
+   "axis": "style",
+   "check": "Button is solid black with fully rounded (pill) ends.",
+   "box": [
+    445,
+    810,
+    355,
+    55
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c29",
+   "element": "Try For Free button",
+   "axis": "text",
+   "check": "Button label reads 'Try For Free' in white medium ~16px, centred.",
+   "box": [
+    560,
+    825,
+    125,
+    25
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c30",
+   "element": "footnote",
+   "axis": "text",
+   "check": "Footnote reads '*Interaction refers to each time your agent is asked to take / action. For example, it receives an email, call, or webhook.' in two centred lines.",
+   "box": [
+    450,
+    882,
+    345,
+    45
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c31",
+   "element": "footnote",
+   "axis": "style",
+   "check": "Footnote is small (~13px) mid grey, lighter than the feature labels' darkness is not exceeded (no black).",
+   "box": [
+    450,
+    882,
+    345,
+    45
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c32",
+   "element": "icon halo",
+   "axis": "present",
+   "check": "A dense cluster of colourful 3D icons surrounds the card on top, left and right, peeking ~100px above the card top (from y≈443) and running off the bottom frame edge.",
+   "box": [
+    272,
+    443,
+    682,
+    553
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c33",
+   "element": "icon halo",
+   "axis": "imagery",
+   "check": "Icons are glossy rendered 3D objects with soft highlights and shading (as the clip's own artwork), not flat vector logos.",
+   "box": [
+    272,
+    443,
+    682,
+    553
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c34",
+   "element": "icon halo top row",
+   "axis": "imagery",
+   "check": "Above the card, left to right: green phone handset, black OpenAI knot, blue Salesforce-style cloud, green Shopify bag, orange HubSpot sprocket.",
+   "box": [
+    415,
+    443,
+    500,
+    110
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c35",
+   "element": "icon halo left",
+   "axis": "imagery",
+   "check": "Left of the card: pink Twilio-style ring with 4 dots, pink-purple sphere with a white play triangle, light blue folder, orange 'Application Manual' booklets, purple beads.",
+   "box": [
+    272,
+    500,
+    145,
+    496
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c36",
+   "element": "icon halo right",
+   "axis": "imagery",
+   "check": "Right of the card: Gmail-style red/yellow/green/blue shape, stacked lime-green layers, a black-and-white Notion 'N' cube, pink looping cable below.",
+   "box": [
+    828,
+    660,
+    126,
+    300
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c37",
+   "element": "icon halo",
+   "axis": "position",
+   "check": "The icons sit behind the card: the card overlaps and hides their inner parts (e.g. OpenAI knot and cloud are cut by the card's top edge at y≈548).",
+   "box": [
+    470,
+    460,
+    340,
+    100
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  }
+ ],
+ "imagery": [
+  {
+   "name": "3D integration icon halo",
+   "box": [
+    272,
+    443,
+    682,
+    553
+   ],
+   "class": "photo",
+   "what": "Glossy rendered 3D brand/app icons (phone, OpenAI, Salesforce cloud, Shopify, HubSpot, Twilio, play button, folder, Gmail, green layers, Notion, manuals, purple beads, star, pink cable) clustered behind the pricing card",
+   "at": 1.5
+  },
+  {
+   "name": "Lemni logo mark",
+   "box": [
+    82,
+    14,
+    32,
+    22
+   ],
+   "class": "structured",
+   "what": "Two overlapping rounded diamonds shading grey to black",
+   "at": 1.5
+  },
+  {
+   "name": "Continue arrow icon",
+   "box": [
+    1144,
+    15,
+    19,
+    19
+   ],
+   "class": "structured",
+   "what": "Black filled circle with white right arrow",
+   "at": 1.5
+  }
+ ],
+ "moves": []
+}

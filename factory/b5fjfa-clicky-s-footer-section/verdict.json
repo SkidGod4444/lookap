@@ -1,0 +1,1642 @@
+{
+ "slug": "b5fjfa-clicky-s-footer-section",
+ "at": "2026-10-23T18:05:12.369Z",
+ "runs": 10,
+ "html": "factory/b5fjfa-clicky-s-footer-section/index.html",
+ "pixel": {
+  "score": 87,
+  "stills": 90,
+  "motion": 86,
+  "moments": 11
+ },
+ "animations": 115,
+ "rank": 97,
+ "allPass": true,
+ "elements": [
+  {
+   "name": "trash can",
+   "box": [
+    81,
+    682,
+    81,
+    97
+   ],
+   "deltaE": 5.8,
+   "delta": 28,
+   "shift": null,
+   "afterShift": 28,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "heading product",
+   "box": [
+    291,
+    382,
+    82,
+    26
+   ],
+   "deltaE": 0.1,
+   "delta": 22,
+   "shift": [
+    0,
+    2
+   ],
+   "afterShift": 21,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "heading disclaimer",
+   "box": [
+    1505,
+    382,
+    105,
+    26
+   ],
+   "deltaE": 0.2,
+   "delta": 19,
+   "shift": null,
+   "afterShift": 19,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "heading connect",
+   "box": [
+    1101,
+    382,
+    86,
+    26
+   ],
+   "deltaE": 0.1,
+   "delta": 18,
+   "shift": null,
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "heading resources",
+   "box": [
+    696,
+    382,
+    104,
+    26
+   ],
+   "deltaE": 0.1,
+   "delta": 17,
+   "shift": null,
+   "afterShift": 17,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "disclaimer body",
+   "box": [
+    1505,
+    432,
+    340,
+    100
+   ],
+   "deltaE": 0.6,
+   "delta": 13,
+   "shift": null,
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "product links",
+   "box": [
+    291,
+    432,
+    111,
+    184
+   ],
+   "deltaE": 0.4,
+   "delta": 11,
+   "shift": null,
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "resources links",
+   "box": [
+    696,
+    432,
+    88,
+    184
+   ],
+   "deltaE": 0.5,
+   "delta": 11,
+   "shift": null,
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "connect links",
+   "box": [
+    1101,
+    432,
+    103,
+    184
+   ],
+   "deltaE": 0.4,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "heyclicky folder wordmark",
+   "box": [
+    289,
+    664,
+    1578,
+    305
+   ],
+   "deltaE": 0.3,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "large folder",
+   "box": [
+    1910,
+    658,
+    99,
+    81
+   ],
+   "deltaE": 1.7,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "copyright",
+   "box": [
+    975,
+    1033,
+    207,
+    18
+   ],
+   "deltaE": 1.1,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "single folder tile",
+   "box": [
+    1208,
+    666,
+    56,
+    46
+   ],
+   "deltaE": 0.9,
+   "delta": 9,
+   "shift": [
+    2,
+    2
+   ],
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    2158,
+    1080
+   ],
+   "deltaE": 0.1,
+   "delta": 6,
+   "shift": null,
+   "afterShift": 6,
+   "read": "matches"
+  },
+  {
+   "name": "cursor",
+   "box": [
+    1210,
+    780,
+    20,
+    28
+   ],
+   "deltaE": 1,
+   "delta": 6,
+   "shift": null,
+   "afterShift": 6,
+   "read": "matches"
+  },
+  {
+   "name": "dim backdrop",
+   "box": [
+    0,
+    0,
+    2158,
+    1080
+   ],
+   "deltaE": 0.1,
+   "delta": 6,
+   "shift": null,
+   "afterShift": 6,
+   "read": "matches"
+  },
+  {
+   "name": "speaker inset",
+   "box": [
+    1284,
+    274,
+    279,
+    209
+   ],
+   "deltaE": 0.1,
+   "delta": 5,
+   "shift": null,
+   "afterShift": 5,
+   "read": "matches"
+  },
+  {
+   "name": "video window",
+   "box": [
+    582,
+    62,
+    994,
+    600
+   ],
+   "deltaE": 0,
+   "delta": 3,
+   "shift": null,
+   "afterShift": 3,
+   "read": "matches"
+  },
+  {
+   "name": "video area",
+   "box": [
+    588,
+    104,
+    982,
+    551
+   ],
+   "deltaE": 0,
+   "delta": 3,
+   "shift": null,
+   "afterShift": 3,
+   "read": "matches"
+  },
+  {
+   "name": "top-centre blurred shadow",
+   "box": [
+    939,
+    0,
+    291,
+    49
+   ],
+   "deltaE": 0.5,
+   "delta": 2,
+   "shift": null,
+   "afterShift": 2,
+   "read": "matches"
+  },
+  {
+   "name": "traffic lights",
+   "box": [
+    594,
+    74,
+    62,
+    16
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "window title",
+   "box": [
+    1010,
+    74,
+    138,
+    18
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "video title text",
+   "box": [
+    838,
+    345,
+    198,
+    46
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "speaker icon",
+   "box": [
+    1527,
+    615,
+    24,
+    22
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "the render changes where the clip changes",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "0.5s",
+    "clip": 0,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "0.5s",
+    "to": "kf1",
+    "clip": 0.5,
+    "render": 0.6,
+    "read": "both move"
+   },
+   {
+    "from": "kf1",
+    "to": "2.8s",
+    "clip": 0.8,
+    "render": 1,
+    "read": "both move"
+   },
+   {
+    "from": "2.8s",
+    "to": "4s",
+    "clip": 0.3,
+    "render": 0.5,
+    "read": "both still"
+   },
+   {
+    "from": "4s",
+    "to": "4.67s",
+    "clip": 99.8,
+    "render": 99.9,
+    "read": "both move"
+   },
+   {
+    "from": "4.67s",
+    "to": "5.08s",
+    "clip": 95.7,
+    "render": 98.2,
+    "read": "both move"
+   },
+   {
+    "from": "5.08s",
+    "to": "kf2",
+    "clip": 22.3,
+    "render": 20.4,
+    "read": "both move"
+   },
+   {
+    "from": "kf2",
+    "to": "6.28s",
+    "clip": 96.4,
+    "render": 96.1,
+    "read": "both move"
+   },
+   {
+    "from": "6.28s",
+    "to": "kf3",
+    "clip": 1,
+    "render": 0.5,
+    "read": "both move"
+   },
+   {
+    "from": "kf3",
+    "to": "8s",
+    "clip": 0.4,
+    "render": 0.5,
+    "read": "both move"
+   }
+  ],
+  "trajectories": [
+   {
+    "element": "#6dcff5",
+    "box": [
+     482,
+     805,
+     182,
+     103
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 2,
+      "dy": 0,
+      "delta": 8
+     },
+     {
+      "at": 0.5,
+      "dx": 2,
+      "dy": 0,
+      "delta": 8
+     },
+     {
+      "at": 2.3,
+      "dx": 2,
+      "dy": 0,
+      "delta": 8
+     },
+     {
+      "at": 2.8,
+      "dx": 2,
+      "dy": 0,
+      "delta": 8
+     },
+     {
+      "at": 4,
+      "dx": 2,
+      "dy": 0,
+      "delta": 8
+     },
+     {
+      "at": 4.67,
+      "dx": 2,
+      "dy": 0,
+      "delta": 17
+     },
+     {
+      "at": 5.08,
+      "dx": 0,
+      "dy": 0,
+      "delta": 2
+     },
+     {
+      "at": 5.7,
+      "dx": 0,
+      "dy": 0,
+      "delta": 2
+     },
+     {
+      "at": 6.28,
+      "dx": 2,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 7.5,
+      "dx": 2,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 8,
+      "dx": 2,
+      "dy": 0,
+      "delta": 8
+     }
+    ],
+    "read": "in step"
+   },
+   {
+    "element": "#6dcff6",
+    "box": [
+     1494,
+     742,
+     182,
+     166
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 2.3,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 2.8,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 4.67,
+      "dx": 0,
+      "dy": 0,
+      "delta": 20
+     },
+     {
+      "at": 5.08,
+      "dx": 0,
+      "dy": 0,
+      "delta": 2
+     },
+     {
+      "at": 5.7,
+      "dx": 0,
+      "dy": 0,
+      "delta": 2
+     },
+     {
+      "at": 6.28,
+      "dx": 0,
+      "dy": 0,
+      "delta": 13
+     },
+     {
+      "at": 7.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 8,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     }
+    ],
+    "read": "in step"
+   },
+   {
+    "element": "#6dcef5",
+    "box": [
+     1682,
+     895,
+     184,
+     71
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 6,
+      "delta": 11
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": 6,
+      "delta": 11
+     },
+     {
+      "at": 2.3,
+      "dx": 0,
+      "dy": 6,
+      "delta": 11
+     },
+     {
+      "at": 2.8,
+      "dx": 0,
+      "dy": 6,
+      "delta": 11
+     },
+     {
+      "at": 4,
+      "dx": 0,
+      "dy": 6,
+      "delta": 11
+     },
+     {
+      "at": 4.67,
+      "dx": 2,
+      "dy": 6,
+      "delta": 19
+     },
+     {
+      "at": 5.08,
+      "dx": 0,
+      "dy": 4,
+      "delta": 2
+     },
+     {
+      "at": 5.7,
+      "dx": 0,
+      "dy": 4,
+      "delta": 2
+     },
+     {
+      "at": 6.28,
+      "dx": 0,
+      "dy": 6,
+      "delta": 13
+     },
+     {
+      "at": 7.5,
+      "dx": 0,
+      "dy": 6,
+      "delta": 11
+     },
+     {
+      "at": 8,
+      "dx": 0,
+      "dy": 6,
+      "delta": 11
+     }
+    ],
+    "read": "offset by about 6 px throughout"
+   },
+   {
+    "element": "#6dcff6",
+    "box": [
+     1304,
+     741,
+     182,
+     71
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": -2,
+      "delta": 8
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": -2,
+      "delta": 8
+     },
+     {
+      "at": 2.3,
+      "dx": 0,
+      "dy": -2,
+      "delta": 8
+     },
+     {
+      "at": 2.8,
+      "dx": 0,
+      "dy": -2,
+      "delta": 19
+     },
+     {
+      "at": 4,
+      "dx": 0,
+      "dy": -2,
+      "delta": 10
+     },
+     {
+      "at": 4.67,
+      "dx": 2,
+      "dy": -2,
+      "delta": 18
+     },
+     {
+      "at": 5.08,
+      "dx": 0,
+      "dy": -4,
+      "delta": 2
+     },
+     {
+      "at": 5.7,
+      "dx": 0,
+      "dy": -4,
+      "delta": 2
+     },
+     {
+      "at": 6.28,
+      "dx": 0,
+      "dy": -2,
+      "delta": 10
+     },
+     {
+      "at": 7.5,
+      "dx": 0,
+      "dy": -2,
+      "delta": 8
+     },
+     {
+      "at": 8,
+      "dx": 0,
+      "dy": -2,
+      "delta": 8
+     }
+    ],
+    "read": "offset by about 2 px throughout"
+   }
+  ]
+ },
+ "scale": {
+  "ok": true,
+  "changed": 3.1,
+  "read": "scales: the half-size render matches the full one (difference 3.1)"
+ },
+ "rubric": {
+  "file": "factory/b5fjfa-clicky-s-footer-section/rubric.json",
+  "total": 48,
+  "counted": 48,
+  "pass": 48,
+  "fail": 0,
+  "unsure": 0,
+  "unjudged": 0,
+  "passRate": 100,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "style",
+    "element": "page background",
+    "check": "Page background is flat light grey ≈#f3f3f3 with no gradient",
+    "box": [
+     0,
+     0,
+     2158,
+     1080
+    ],
+    "at": 2.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild background is the same flat light grey as the clip, with no gradient. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "present",
+    "element": "columns",
+    "check": "Exactly 4 text columns sit above the wordmark",
+    "box": [
+     280,
+     370,
+     1600,
+     250
+    ],
+    "at": 2.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows 4 text columns above the wordmark, as the clip does. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "position",
+    "element": "columns",
+    "check": "Column left edges at x≈291, 696, 1101 and 1505 (±10px), all headings on one baseline at y≈394",
+    "box": [
+     280,
+     370,
+     1600,
+     50
+    ],
+    "at": 2.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Column left edges and the shared heading baseline line up with the clip within a few px. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "text",
+    "element": "heading product",
+    "check": "Headings read exactly 'product', 'resources', 'connect', 'disclaimer', all lowercase",
+    "box": [
+     280,
+     375,
+     1350,
+     40
+    ],
+    "at": 2.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Headings read product, resources, connect, disclaimer in lowercase, at the same x positions as the clip. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "style",
+    "element": "heading product",
+    "check": "Headings are near-black, clearly darker than the grey links beneath them",
+    "box": [
+     280,
+     375,
+     500,
+     250
+    ],
+    "at": 2.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Headings are near-black and clearly darker than the grey links, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "text",
+    "element": "product links",
+    "check": "Product column lists 'features', 'pricing', 'changelog', 'try it' in that order",
+    "box": [
+     285,
+     425,
+     130,
+     195
+    ],
+    "at": 2.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild lists features, pricing, changelog, try it in order. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "text",
+    "element": "resources links",
+    "check": "Resources column lists 'trust', 'privacy', 'referrals', 'support'",
+    "box": [
+     690,
+     425,
+     110,
+     195
+    ],
+    "at": 2.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild lists trust, privacy, referrals, support in order. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "text",
+    "element": "connect links",
+    "check": "Connect column lists 'instagram', 'x (twitter)', 'linkedin', 'youtube'",
+    "box": [
+     1095,
+     425,
+     125,
+     195
+    ],
+    "at": 2.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild lists instagram, x (twitter), linkedin, youtube in order. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "position",
+    "element": "product links",
+    "check": "Link rows are ≈52px apart, centred at y≈446, 497, 549, 601",
+    "box": [
+     285,
+     425,
+     130,
+     195
+    ],
+    "at": 2.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Link rows sit at the same vertical positions as the clip's, with matching spacing. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "text",
+    "element": "disclaimer body",
+    "check": "Disclaimer reads '*heyclicky only sees your screen / when you press the hotkey - / screenshots are never stored*' on 3 lines",
+    "box": [
+     1500,
+     425,
+     360,
+     110
+    ],
+    "at": 2.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Disclaimer reads the same text on 3 lines, matching the clip's size and weight. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "style",
+    "element": "product links",
+    "check": "Link and disclaimer text is mid-grey (≈#555–#666), regular weight, ~22px sans",
+    "box": [
+     285,
+     425,
+     130,
+     195
+    ],
+    "at": 2.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Link text is the same mid-grey, regular weight and size as the clip's. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "present",
+    "element": "heyclicky folder wordmark",
+    "check": "A lowercase wordmark 'heyclicky' (9 letters) spans under the columns",
+    "box": [
+     289,
+     664,
+     1578,
+     305
+    ],
+    "at": 2.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild has a 'heyclicky' folder-pixel wordmark under the columns, as the clip does. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "position",
+    "element": "heyclicky folder wordmark",
+    "check": "Wordmark runs from x≈289 to x≈1867, top y≈664, baseline y≈905, descenders of both y's down to y≈969",
+    "box": [
+     289,
+     664,
+     1578,
+     305
+    ],
+    "at": 7.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Wordmark spans the same x range and heights as the clip, with descenders at the same depth. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "imagery",
+    "element": "heyclicky folder wordmark",
+    "check": "Each letter pixel is a small macOS-style folder icon, not a flat square or a brick",
+    "box": [
+     1030,
+     660,
+     300,
+     260
+    ],
+    "at": 7.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Each letter pixel is a macOS-style folder with a tab, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "style",
+    "element": "single folder tile",
+    "check": "Folder body is light sky blue ≈#6dcff6, with a darker blue tab at the top-left and a lighter top edge",
+    "box": [
+     1208,
+     666,
+     56,
+     46
+    ],
+    "at": 2.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Folder body is the same sky blue, with a darker tab at the top-left and a lighter top edge. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "position",
+    "element": "single folder tile",
+    "check": "Folder tiles are ≈56×46px; the i-dot is one tile at ≈(1208,666) with a visible gap above the i stem",
+    "box": [
+     1190,
+     650,
+     100,
+     120
+    ],
+    "at": 7.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Tile size and the i-dot position match the clip, with a visible gap above the stem. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "style",
+    "element": "single folder tile",
+    "check": "Folders overlap slightly and carry a soft bottom shadow, with no dark outline strokes",
+    "box": [
+     1030,
+     660,
+     300,
+     260
+    ],
+    "at": 7.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Folders overlap slightly with a soft bottom shadow and no dark outlines, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "style",
+    "element": "heyclicky folder wordmark",
+    "check": "Letter strokes are one folder wide; the 'l' and 'k' are tall columns about 5 folders high above the baseline",
+    "box": [
+     1040,
+     660,
+     620,
+     250
+    ],
+    "at": 7.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Strokes are one folder wide, and the l and k are about 5 folders tall, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "present",
+    "element": "trash can",
+    "check": "A macOS-style silver trash can with colourful papers poking out sits at the far left, ≈(81,682,81,97)",
+    "box": [
+     70,
+     670,
+     100,
+     120
+    ],
+    "at": 2.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows a silver trash can with coloured papers at the far left, simpler than the clip's crumpled papers but the same read. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "imagery",
+    "element": "trash can",
+    "check": "The trash reads as metallic grey with a vertical sheen, not a flat grey shape",
+    "box": [
+     70,
+     670,
+     100,
+     120
+    ],
+    "at": 2.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild trash is metallic grey with a vertical light sheen, not flat. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "present",
+    "element": "large folder",
+    "check": "A larger blue folder ≈99×81px sits at the far right, ≈(1910,658), level with the wordmark top",
+    "box": [
+     1900,
+     650,
+     120,
+     100
+    ],
+    "at": 2.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Blue folder with white paper strip at the same size and spot; the rebuild's edges are crisper than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "text",
+    "element": "copyright",
+    "check": "Bottom line reads '© Humansongs, Inc. 2026' in small grey type, centred at x≈1079, y≈1042",
+    "box": [
+     960,
+     1025,
+     240,
+     35
+    ],
+    "at": 2.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same '© Humansongs, Inc. 2026' in small grey type at the same size and weight. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "present",
+    "element": "top-centre blurred shadow",
+    "check": "A soft blurred grey shadow hangs from the top edge around x 940–1230",
+    "box": [
+     900,
+     0,
+     370,
+     60
+    ],
+    "at": 2.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Soft blurred grey shadow at the top edge in both, same width and softness. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "motion",
+    "element": "single folder tile",
+    "check": "Folders under the cursor open: the front panel tilts forward (wider at top) and a white paper sheet shows above it",
+    "box": [
+     1030,
+     660,
+     300,
+     260
+    ],
+    "at": 2.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild's open folders have fronts wider at the top, tilted forward, with a pale paper above, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "style",
+    "element": "single folder tile",
+    "check": "The revealed papers are white to pale grey, sitting behind the tilted front, not a blue outline",
+    "box": [
+     1040,
+     670,
+     120,
+     240
+    ],
+    "at": 2.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Papers are white to pale grey and sit behind the tilted blue fronts in both, not outlined. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "motion",
+    "element": "heyclicky folder wordmark",
+    "check": "At 2.3s the whole first 'l' stack is open; by 2.8s it has closed and folders further along the word are open instead",
+    "box": [
+     880,
+     660,
+     700,
+     260
+    ],
+    "at": 2.3,
+    "then": 2.8,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild's first 'l' stack is open at 2.3s and has closed by 2.8s, with folders further along the word open, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "motion",
+    "element": "heyclicky folder wordmark",
+    "check": "At 7.5s folders in the 'e' and the top of the first 'y' (x≈520–790) are open, while the 'l' stack is closed",
+    "box": [
+     470,
+     700,
+     860,
+     220
+    ],
+    "at": 7.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 7.5s the rebuild has folders open in the 'e' and 'y' area and the tall 'l' stack closed, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "motion",
+    "element": "heyclicky folder wordmark",
+    "check": "Folder positions do not shift between rest frames: opening a folder tilts it in place, and the wordmark outline stays fixed",
+    "box": [
+     289,
+     664,
+     1578,
+     305
+    ],
+    "at": 0.5,
+    "then": 8,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Wordmark outline and folder positions are the same at 0.5s and 8s in the rebuild. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "motion",
+    "element": "columns",
+    "check": "Text columns and copyright stay still across the hover period",
+    "box": [
+     280,
+     370,
+     1600,
+     250
+    ],
+    "at": 0.5,
+    "then": 4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Text columns and copyright are unchanged between 0.5s and 4s in the rebuild. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "motion",
+    "element": "dim backdrop",
+    "check": "After the big folder is clicked (~4.6s) the whole page dims to mid-grey",
+    "box": [
+     0,
+     0,
+     2158,
+     1080
+    ],
+    "at": 2.3,
+    "then": 5.08,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 5.08s the rebuild's page is dimmed to mid-grey and blurred, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "style",
+    "element": "dim backdrop",
+    "check": "With the window open, the page behind is blurred (link text unreadable), not just darkened",
+    "box": [
+     280,
+     370,
+     400,
+     250
+    ],
+    "at": 5.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Link text is blurred and unreadable in both; the rebuild has a slightly darker edge shadow. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "present",
+    "element": "video window",
+    "check": "A macOS window titled 'yc-demoday.mov' is open at the centre-top",
+    "box": [
+     582,
+     62,
+     994,
+     600
+    ],
+    "at": 5.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows a 'yc-demoday.mov' window at centre-top, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "position",
+    "element": "video window",
+    "check": "Window spans ≈x 582–1576, y 62–662, centred horizontally on the frame",
+    "box": [
+     560,
+     50,
+     1040,
+     630
+    ],
+    "at": 5.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Window position and size match the clip, centred horizontally at about x 694–942 in the half-scale view. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "style",
+    "element": "video window",
+    "check": "The light-grey title bar is ≈42px tall, with rounded top corners and a soft drop shadow round the window",
+    "box": [
+     582,
+     62,
+     994,
+     50
+    ],
+    "at": 5.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Light-grey title bar of similar height with rounded top corners and a drop shadow, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "style",
+    "element": "traffic lights",
+    "check": "Three dots at the top-left of the title bar, red, yellow and green from left to right",
+    "box": [
+     590,
+     70,
+     70,
+     24
+    ],
+    "at": 5.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Red, yellow, green dots in the same order and spot; the rebuild's are flat where the clip's have a faint rim. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "text",
+    "element": "window title",
+    "check": "Title text reads 'yc-demoday.mov' in grey, centred in the title bar",
+    "box": [
+     990,
+     70,
+     180,
+     26
+    ],
+    "at": 5.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'yc-demoday.mov' in grey, centred, same size and weight as the clip. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "style",
+    "element": "video area",
+    "check": "Video area is solid black, filling the window below the title bar with a thin light border",
+    "box": [
+     588,
+     104,
+     982,
+     551
+    ],
+    "at": 5.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Black video area with a thin light border fills the window below the title bar, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "text",
+    "element": "video title text",
+    "check": "Video shows 'HeyClicky' in large white type with 'Farza Majeed' beneath it, 'Majeed' in orange-red",
+    "box": [
+     820,
+     335,
+     240,
+     90
+    ],
+    "at": 5.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White 'HeyClicky' with 'Farza' white and 'Majeed' orange-red at the same size as the clip, sitting about 19px higher. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "imagery",
+    "element": "speaker inset",
+    "check": "Right-side inset ≈279×209px at (1284,274) shows a speaker photo on a pale blue background (the clip's footage or a same-size placeholder in those colours)",
+    "box": [
+     1284,
+     274,
+     279,
+     209
+    ],
+    "at": 5.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same speaker photo on a pale blue background at the same size and position. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c39.png"
+   },
+   {
+    "id": "c40",
+    "axis": "present",
+    "element": "speaker icon",
+    "check": "A white speaker/volume icon sits at the video's bottom-right, ≈(1527,615)",
+    "box": [
+     1510,
+     600,
+     55,
+     45
+    ],
+    "at": 5.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White speaker icon at the bottom-right, same size and spot; the rebuild's is crisper than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c40.png"
+   },
+   {
+    "id": "c41",
+    "axis": "motion",
+    "element": "video window",
+    "check": "The window grows out from the right: at 4.67s it is a smaller translucent white box ≈(926,219,764,461) and reaches full size at (582,62) by 5.08s",
+    "box": [
+     560,
+     50,
+     1150,
+     650
+    ],
+    "at": 4.67,
+    "then": 5.08,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild's window sits at the same spot and size as the clip's, as a pale translucent box at 4.67s and a full window with the video by 5.08s. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c41.png"
+   },
+   {
+    "id": "c42",
+    "axis": "style",
+    "element": "video window",
+    "check": "While opening, the window is semi-transparent: the page text shows faintly through it",
+    "box": [
+     926,
+     219,
+     764,
+     461
+    ],
+    "at": 4.67,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Page text (connect, instagram, disclaimer) shows faintly through the rebuild's window at 4.67s, about as faint as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c42.png"
+   },
+   {
+    "id": "c43",
+    "axis": "motion",
+    "element": "video area",
+    "check": "Video area darkens from dark grey at 5.08s to solid black by 5.7s",
+    "box": [
+     588,
+     104,
+     982,
+     551
+    ],
+    "at": 5.08,
+    "then": 5.7,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild goes from the same dark grey at 5.08s to solid black at 5.7s, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c43.png"
+   },
+   {
+    "id": "c44",
+    "axis": "motion",
+    "element": "video window",
+    "check": "The window fades out between ~6.2s and 6.35s; at 6.28s it is only a faint ghost and the page is readable again",
+    "box": [
+     582,
+     62,
+     994,
+     600
+    ],
+    "at": 5.7,
+    "then": 6.28,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 6.28s the rebuild's window is only a faint ghost and the page text is readable, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c44.png"
+   },
+   {
+    "id": "c45",
+    "axis": "motion",
+    "element": "dim backdrop",
+    "check": "By 7.5s the backdrop is fully gone: the page is back to #f3f3f3 with no blur and no window",
+    "box": [
+     0,
+     0,
+     2158,
+     1080
+    ],
+    "at": 6.28,
+    "then": 7.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 7.5s the rebuild's page is back to light grey with no blur and no window, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c45.png"
+   },
+   {
+    "id": "c46",
+    "axis": "style",
+    "element": "cursor",
+    "check": "Cursor becomes a pointing hand while over the big right folder",
+    "box": [
+     1900,
+     650,
+     120,
+     100
+    ],
+    "at": 4.67,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows a white pointing-hand cursor over the right folder, like the clip, though its finger lines are slightly different. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c46.png"
+   },
+   {
+    "id": "c47",
+    "axis": "style",
+    "element": "dim backdrop",
+    "check": "The dim is an even grey wash over the whole frame, with no vignette and no coloured tint",
+    "box": [
+     0,
+     0,
+     2158,
+     1080
+    ],
+    "at": 5.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild's dim is an even grey wash with no vignette or tint at 5.7s, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c47.png"
+   },
+   {
+    "id": "c48",
+    "axis": "style",
+    "element": "heyclicky folder wordmark",
+    "check": "Under the dim, the wordmark folders read as muted steel-blue, darker than at rest",
+    "box": [
+     289,
+     664,
+     1578,
+     305
+    ],
+    "at": 5.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild's wordmark folders read as muted steel-blue under the dim at 5.7s, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/b5fjfa-clicky-s-footer-section/judge/c48.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 1.624,
+  "calls": 9,
+  "images": "factory/b5fjfa-clicky-s-footer-section/judge",
+  "votes": 3,
+  "spread": [
+   48,
+   48,
+   48
+  ]
+ }
+}
