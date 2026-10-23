@@ -45,8 +45,8 @@ export type Entitlement = { plan: Plan; interval?: Interval; renewsAt?: string; 
 
 /* Ask Polar for the customer's state and reduce it to one plan: the highest active subscription wins.
    An unknown customer is a 404: they have never checked out. */
-export async function entitlementFromPolar(userId: string): Promise<Entitlement> {
-  if (!polarReady) return { plan: "none" };
+export async function entitlementFromPolar(userId: string, opts: { strict?: boolean } = {}): Promise<Entitlement> {
+  if (!polarReady) { if (opts.strict) throw new Error("Polar is not configured"); return { plan: "none" }; }
   try {
     const state = await polar().customers.getStateExternal(userId);
     const rank: Record<PaidPlan, number> = { starter: 1, pro: 2, team: 3 };
@@ -63,6 +63,8 @@ export async function entitlementFromPolar(userId: string): Promise<Entitlement>
     /* No customer with this external id yet: they have never checked out. Quiet. */
     const msg = e instanceof Error ? `${e.name} ${e.message}` : String(e);
     if (/ResourceNotFound|\b404\b/.test(msg)) return { plan: "none" };
+    /* strict callers act on the answer (the daily check switches keys off), so a failed lookup must not read as "no plan" */
+    if (opts.strict) throw e;
     console.error("[polar] entitlement lookup failed", e);
     return { plan: "none" };
   }

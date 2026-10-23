@@ -78,6 +78,24 @@ export async function listKeys(userId: string): Promise<KeyRow[]> {
   return page.result.data.map(row).sort((a, b) => b.createdAt - a.createdAt);
 }
 
+/* Every key in the keyspace with its owner, page by page: what the daily check walks. */
+export async function allKeys(): Promise<(KeyRow & { userId?: string })[]> {
+  const out: (KeyRow & { userId?: string })[] = [];
+  let cursor: string | undefined;
+  for (let i = 0; i < 200; i++) {
+    const page = await unkey().apis.listKeys({ apiId: API_ID!, limit: 100, revalidateKeysCache: true, ...(cursor ? { cursor } : {}) });
+    for (const k of page.result.data) out.push({ ...row(k), userId: k.identity?.externalId });
+    if (!page.result.pagination?.hasMore || !page.result.pagination.cursor) break;
+    cursor = page.result.pagination.cursor;
+  }
+  return out;
+}
+
+/* One key on or off, and onto a plan: the daily check's fix. */
+export async function setKey(keyId: string, patch: { enabled?: boolean; plan?: Exclude<Plan, "none"> }) {
+  await unkey().keys.updateKey({ keyId, ...(patch.enabled === undefined ? {} : { enabled: patch.enabled }), ...(patch.plan ? { meta: { plan: patch.plan }, ratelimits: BRAKE } : {}) });
+}
+
 /* Mint a key for a user on a plan. The plaintext comes back once; the caller shows it once. */
 export async function createKey(userId: string, plan: Exclude<Plan, "none">, name: string) {
   const { data } = await unkey().keys.createKey({
