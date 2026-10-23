@@ -15,7 +15,7 @@ export function FeedCard({ entry, eager = false, live = false }: { entry: Entry;
         </div>
         {entry.sponsored && <span className={badge("dark", "absolute right-2 bottom-2 px-2 py-0.5 text-[11px]")}>Sponsored</span>}
         {/* the entries with a working rebuild wear it: open one and flip the switch */}
-        {live && !entry.sponsored && <span className={badge("dark", "absolute right-2 bottom-2 gap-1.5 px-2 py-0.5 text-[11px]")}><span aria-hidden="true" className="size-1.5 rounded-full bg-[#6ee7a0] shadow-[0_0_6px_#6ee7a0]" />Live</span>}
+        {live && !entry.sponsored && <span className={badge("dark", "absolute right-2 bottom-2 gap-1.5 px-2 py-0.5 text-[11px]")}><span aria-hidden="true" className="size-1.5 rounded-full bg-[#6ee7a0] shadow-[0_0_6px_#6ee7a0]" />Rebuilt</span>}
       </Link>
       {/* the bookmark sits beside the link, not inside it: it is its own control. Hidden until hover on fine pointers, always there on touch and once saved. */}
       <SaveButton slug={entry.slug} className="absolute top-2 right-2 z-[2] opacity-0 transition-opacity duration-150 group-hover:opacity-100 focus-within:opacity-100 has-[[aria-pressed=true]]:opacity-100 [@media(pointer:coarse)]:opacity-100" />
