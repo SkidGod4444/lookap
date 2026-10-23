@@ -6,14 +6,16 @@ import { kv, dbReady } from "./db";
 /* The daily check. The Polar webhook switches keys on and off as subscriptions change; if every delivery of one event
    failed, a cancelled user would keep working keys (or a paying one stay locked out). Once a day this walks every key,
    asks Polar for its owner's plan right now, and fixes any key that disagrees: off when there is no plan, on and on
-   the paid plan when there is one. A Polar lookup that fails leaves that owner's keys untouched, never switched off. */
+   the paid plan when there is one. A Polar lookup that fails leaves that owner's keys untouched, never switched off.
+   A key given away by hand carries meta { comp: true } in Unkey and is skipped. */
 export type Fix = { keyId: string; userId: string; was: { enabled: boolean; plan: string }; now: { enabled: boolean; plan?: string } };
 
 export async function reconcile(opts: { dryRun?: boolean } = {}) {
   const keys = await allKeys();
   const byUser = new Map<string, typeof keys>();
-  let orphans = 0;
+  let orphans = 0, comped = 0;
   for (const k of keys) {
+    if (k.comp) { comped++; continue; }
     if (!k.userId) { orphans++; continue; }
     byUser.set(k.userId, [...(byUser.get(k.userId) ?? []), k]);
   }
@@ -33,7 +35,7 @@ export async function reconcile(opts: { dryRun?: boolean } = {}) {
       await rememberEntitlement(userId, { plan: ent.plan, interval: ent.interval, status: ent.status, subscriptionId: ent.subscriptionId, renewsAt: ent.renewsAt, cancelAtPeriodEnd: ent.cancelAtPeriodEnd, polarCustomerId: ent.polarCustomerId }).catch(() => {});
     }
   }
-  const report = { at: new Date().toISOString(), dryRun: Boolean(opts.dryRun), keys: keys.length, owners: byUser.size, orphans, fixes, failed };
+  const report = { at: new Date().toISOString(), dryRun: Boolean(opts.dryRun), keys: keys.length, owners: byUser.size, orphans, comped, fixes, failed };
   if (dbReady && !opts.dryRun) await kv().set("reconcile:last", report, { ex: 30 * 24 * 60 * 60 }).catch(() => {});
   return report;
 }

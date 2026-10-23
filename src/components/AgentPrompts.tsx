@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useUser } from "@clerk/nextjs";
-import { badge, button } from "./button";
+import { button } from "./button";
 
 /* What a reader hands to their coding agent from an entry page. "Clone with your agent" copies one prompt that runs the
    whole rebuild loop on lookap's tools, written for the reader's plan (Starter builds from the frames and the
@@ -53,6 +53,21 @@ function CopyRow({ label, text, primary = false }: { label: string; text: string
   );
 }
 
+/* One tap copies the whole prompt for that stack; the button says so, and the prompt itself never fills the panel. */
+function CloneButton({ stack, text }: { stack: Stack; text: string }) {
+  const [state, setState] = useState<"idle" | "done" | "fail">("idle");
+  const copy = async () => {
+    try { await navigator.clipboard.writeText(text); setState("done"); } catch { setState("fail"); }
+    window.setTimeout(() => setState("idle"), 1800);
+  };
+  return (
+    <button type="button" onClick={() => void copy()} aria-live="polite" title={text} className={button(state === "done" ? "silver" : "outline", "h-auto flex-col gap-0.5 rounded-lg px-2 py-2 text-[12px]")}>
+      <span className="font-medium">{stack === "react" ? "React" : "HTML"}</span>
+      <span className="text-[11px] opacity-70">{state === "done" ? "Prompt copied" : state === "fail" ? "Copy blocked" : stack === "react" ? "Tailwind + Motion" : "and CSS"}</span>
+    </button>
+  );
+}
+
 const PLAN_LINE: Record<Plan, string> = {
   starter: "Written for Starter: your agent builds from the frames and the checklist. Pro adds measuring and the judge.",
   pro: "Written for Pro: your agent measures the clip and judges its rebuild until the checklist passes.",
@@ -64,7 +79,6 @@ const PLAN_LINE: Record<Plan, string> = {
 export function AgentPrompts({ slug, title, rebuilt = false, react = false }: { slug: string; title: string; measured?: boolean; rebuilt?: boolean; react?: boolean }) {
   const [open, setOpen] = useState<null | "clone" | "more">(null);
   const [plan, setPlan] = useState<"loading" | "none" | Plan>("loading");
-  const [stack, setStack] = useState<Stack>("react");
   const { isSignedIn } = useUser();
   const router = useRouter();
   const toggle = async (which: "clone" | "more") => {
@@ -97,17 +111,10 @@ export function AgentPrompts({ slug, title, rebuilt = false, react = false }: { 
       )}
       {open === "clone" && paid && (
         <div className="flex flex-col gap-2">
-          <div className="flex gap-1.5" role="radiogroup" aria-label="Stack">
-            {(["react", "html"] as const).map((s) => (
-              <button key={s} type="button" role="radio" aria-checked={stack === s} onClick={() => setStack(s)} className={badge(stack === s ? "active" : "chip", "h-7 px-3 text-[12px]")}>
-                {s === "react" ? "React + Tailwind + Motion" : "HTML and CSS"}
-              </button>
-            ))}
+          <div className="grid grid-cols-2 gap-1.5">
+            {(["react", "html"] as const).map((s) => <CloneButton key={s} stack={s} text={clonePrompt(slug, title, plan as Plan, s, rebuilt, react)} />)}
           </div>
-          <ul className="overflow-hidden rounded-lg bg-card ring-1 ring-line">
-            <CopyRow primary label="Clone it" text={clonePrompt(slug, title, plan as Plan, stack, rebuilt, react)} />
-          </ul>
-          <p className="text-[12px] leading-[1.5] text-subtle">{PLAN_LINE[plan as Plan]}{plan === "team" && stack === "react" && rebuilt && !react ? " This entry's finished file is HTML; your agent ports it." : ""} Paste it into Claude Code, Cursor, Codex or any agent with lookap connected. <Link href="/mcp" className="text-foreground underline underline-offset-2">Not connected yet?</Link></p>
+          <p className="text-[12px] leading-[1.5] text-subtle">{PLAN_LINE[plan as Plan]} Paste it into Claude Code, Cursor, Codex or any agent with lookap connected. <Link href="/mcp" className="text-foreground underline underline-offset-2">Not connected yet?</Link></p>
         </div>
       )}
       {open === "more" && paid && (

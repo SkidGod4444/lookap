@@ -61,7 +61,7 @@ export async function verifyKey(key: string, opts: { count?: boolean } = {}): Pr
   }
 }
 
-export type KeyRow = { keyId: string; start: string; name?: string; plan: string; createdAt: number; enabled: boolean };
+export type KeyRow = { keyId: string; start: string; name?: string; plan: string; createdAt: number; enabled: boolean; comp?: boolean };
 
 const row = (k: { keyId: string; start: string; name?: string; meta?: unknown; createdAt: number; enabled: boolean }): KeyRow => ({
   keyId: k.keyId,
@@ -70,6 +70,8 @@ const row = (k: { keyId: string; start: string; name?: string; meta?: unknown; c
   plan: String((k.meta as { plan?: string } | undefined)?.plan ?? "starter"),
   createdAt: k.createdAt,
   enabled: k.enabled,
+  /* a key given away by hand: meta { comp: true } in Unkey. Billing never switches it off. */
+  comp: (k.meta as { comp?: unknown } | undefined)?.comp === true,
 });
 
 /* The keys one user owns. */
@@ -112,7 +114,8 @@ export async function createKey(userId: string, plan: Exclude<Plan, "none">, nam
 
 /* Billing changes reach every key a user owns: switch them on or off, and move them to the plan they now pay for. */
 export async function setUserKeys(userId: string, patch: { enabled?: boolean; plan?: Exclude<Plan, "none"> }) {
-  const mine = await listKeys(userId);
+  /* comped keys are outside billing: neither switched off nor moved to another plan */
+  const mine = (await listKeys(userId)).filter((k) => !k.comp);
   await Promise.all(
     mine.map((k) =>
       unkey().keys.updateKey({
