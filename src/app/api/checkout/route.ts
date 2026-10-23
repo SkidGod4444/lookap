@@ -34,6 +34,11 @@ export async function GET(req: NextRequest) {
     if (embed) return NextResponse.json({ error: msg, account: "/account" }, { status: 409 });
     return NextResponse.redirect(new URL("/account", req.url));
   }
+  /* on a lower paid plan: Polar holds one subscription per customer, so this is an upgrade (POST /api/upgrade), not a checkout */
+  if ((RANK[have] ?? 0) > 0) {
+    if (embed) return NextResponse.json({ error: "Upgrade from the plan card: your current plan changes, with no second subscription.", upgrade: true }, { status: 409 });
+    return NextResponse.redirect(new URL("/pricing", req.url));
+  }
   /* The origin that will frame the embedded checkout: the page's own, as the browser reports it. */
   const origin = req.headers.get("origin") ?? (req.headers.get("x-forwarded-host") ? `https://${req.headers.get("x-forwarded-host")}` : req.nextUrl.origin);
   const product = productFor(plan, interval);

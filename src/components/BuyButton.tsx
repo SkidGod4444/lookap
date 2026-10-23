@@ -31,6 +31,19 @@ export function BuyButton({ plan, interval, label, primary, className = "" }: { 
   }, [isLoaded, isSignedIn]);
   const rank = RANK[plan] ?? 0, have = current ? (RANK[current] ?? 0) : 0;
   const lower = Boolean(isSignedIn && current && have > rank), same = Boolean(isSignedIn && current && have === rank && rank > 0);
+  /* on a lower paid plan: an upgrade of the one subscription, not a second checkout */
+  const upgrade = Boolean(isSignedIn && current && have > 0 && have < rank);
+  const NAME: Record<string, string> = { starter: "Starter", pro: "Pro", team: "Max" };
+  const doUpgrade = async () => {
+    if (!window.confirm(`Move your ${NAME[current!] ?? current} plan to ${NAME[plan] ?? plan} now? You are charged the difference for the rest of this billing period${current === "starter" ? ", and a running trial ends" : ""}.`)) return;
+    setBusy(true); setNote(null);
+    try {
+      const r = await fetch("/api/upgrade", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ plan, interval }) });
+      const d = (await r.json()) as { ok?: boolean; error?: string };
+      if (!r.ok || !d.ok) { setNote(d.error ?? "The upgrade could not be made."); return; }
+      router.push("/account?upgraded=1");
+    } catch { setNote("The upgrade could not be made. Try again."); } finally { setBusy(false); }
+  };
 
   const open = useCallback(async () => {
     setBusy(true); setNote(null);
@@ -54,6 +67,7 @@ export function BuyButton({ plan, interval, label, primary, className = "" }: { 
 
   const click = () => {
     if (!isLoaded || lower || same) return;
+    if (upgrade) { void doUpgrade(); return; }
     if (!isSignedIn) {
       const next = `${path}?buy=${plan}&interval=${interval}`;
       router.push(`${path}?signin=1&next=${encodeURIComponent(next)}`);
@@ -65,18 +79,18 @@ export function BuyButton({ plan, interval, label, primary, className = "" }: { 
   /* Back from sign-in with ?buy=<this plan>: open the checkout once, then clean the URL. */
   useEffect(() => {
     if (!isLoaded || !isSignedIn || opened.current) return;
-    if (params.get("buy") === plan && (params.get("interval") ?? "month") === interval) {
+    if (params.get("buy") === plan && (params.get("interval") ?? "month") === interval && current !== null && !upgrade && !lower && !same) {
       opened.current = true;
       window.history.replaceState(null, "", path);
       // eslint-disable-next-line react-hooks/set-state-in-effect -- open() starts a fetch; the state it sets is that fetch's loading flag
       void open();
     }
-  }, [isLoaded, isSignedIn, params, plan, interval, path, open]);
+  }, [isLoaded, isSignedIn, params, plan, interval, path, open, current, upgrade, lower, same]);
 
   return (
     <>
       <button type="button" onClick={click} disabled={busy || lower || same} aria-disabled={lower || same} title={lower ? "Your plan already includes this. Change plans from your account page." : same ? "This is your plan" : undefined} className={button(primary && !lower && !same ? "silver" : "outline", `${className} disabled:cursor-not-allowed disabled:opacity-50`)}>
-        {busy ? "Opening…" : same ? "Your plan" : lower ? "Below your plan" : label}
+        {busy ? (upgrade ? "Upgrading…" : "Opening…") : same ? "Your plan" : lower ? "Below your plan" : upgrade ? `Upgrade to ${NAME[plan] ?? plan}` : label}
       </button>
       {note && <p className="text-[12px] text-silver">{note}</p>}
     </>
