@@ -281,7 +281,8 @@ const verdict = {
   rubric: rubric ? { file: path.relative(ROOT, rubricPath), total: rubric.criteria.length, counted: counted.length, pass: passed.length, fail: failed.length, unsure: unsure.length, unjudged: unjudged.length, passRate: passRate == null ? null : Math.round(passRate * 100), licensed, criteria: judged.map((c) => ({ id: c.id, axis: c.axis, element: c.element, check: c.check, box: c.box, at: c.at, then: c.then, policy: c.policy, pass: c.verdict?.pass ?? null, seen: c.verdict?.seen ?? null, image: judge ? path.relative(ROOT, path.join(out, "judge", `${c.id}.png`)) : null })) } : null,
   judge,
 };
-writeFileSync(path.join(out, "verdict.json"), JSON.stringify(verdict, null, 1));
+/* a quick check never replaces a judged verdict: it goes beside it */
+writeFileSync(path.join(out, QUICK && !JUDGE ? "verdict.quick.json" : "verdict.json"), JSON.stringify(verdict, null, 1));
 
 /* the summary the agent reads: what fails first, then the numbers */
 const zoom = (c: { box: Box; at: number }) => `bun scripts/probe.ts ${slug} --zoom ${c.box.join(",")} --t ${c.at}`;
