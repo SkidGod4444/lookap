@@ -12,7 +12,8 @@
     "measure:all": "bun scripts/measure-all.ts",
     "drafts": "bun scripts/build-drafts.ts",
     "rebuilds": "bun scripts/build-rebuilds.ts",
-    "rubrics": "bun scripts/build-rubrics.ts"
+    "rubrics": "bun scripts/build-rubrics.ts",
+    "lessons": "bun scripts/lessons.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.136.0",

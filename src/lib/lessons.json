@@ -1,0 +1,67 @@
+{
+ "rounds": 27,
+ "rebuilds": 7,
+ "at": "2026-10-23",
+ "lessons": {
+  "stroke-weight": {
+   "fails": 20,
+   "rebuilds": 6,
+   "example": "glass lens rings: The rebuild shows a drawn tan stroke with a dark smear and no magnified, shifted painting or bright rim highlight like the clip's."
+  },
+  "text-grey": {
+   "fails": 7,
+   "rebuilds": 3,
+   "example": "painting backdrop: Yours has beige top and dark right, but the lower left is grey-green instead of lilac and yellow-green, and the bottom is paler than the clip's saturated green."
+  },
+  "text-width": {
+   "fails": 10,
+   "rebuilds": 5,
+   "example": "bottom title: The rebuild's script is about 11% narrower (465 vs 525 px in the tile) and its letterforms are smoother than the clip's, so it reads as a different font."
+  },
+  "icon-style": {
+   "fails": 11,
+   "rebuilds": 3,
+   "example": "pink glow (dislike active): The clip's glow is centred on the glyph and fades to near-white at the edges. The rebuild's is pinker across the whole button and its brightest spot sits above the glyph."
+  },
+  "shadow-depth": {
+   "fails": 6,
+   "rebuilds": 3,
+   "example": "button drop shadow: Rebuild's drop shadow below the buttons is much fainter than the clip's visible soft gray shadow."
+  },
+  "glow-falloff": {
+   "fails": 16,
+   "rebuilds": 5,
+   "example": "pink glow (dislike active): The clip's glow is centred on the glyph and fades to near-white at the edges. The rebuild's is pinker across the whole button and its brightest spot sits above the glyph."
+  },
+  "texture-not-blur": {
+   "fails": 9,
+   "rebuilds": 3,
+   "example": "glass lens rings: The rebuild's rings are thin faint stroked arcs with a smeared dark patch, where the clip's rims bend and refract the painting with a bright edge."
+  },
+  "motion-distance": {
+   "fails": 8,
+   "rebuilds": 4,
+   "example": "glass lens rings: The rebuild's ring starts at about y 340 and has left the crop by 6.45s, against the clip's move from about 382 to 357."
+  },
+  "position": {
+   "fails": 18,
+   "rebuilds": 4,
+   "example": "pink glow (dislike active): The clip's glow is centred on the glyph and fades to near-white at the edges. The rebuild's is pinker across the whole button and its brightest spot sits above the glyph."
+  },
+  "invented-motion": {
+   "fails": 2,
+   "rebuilds": 1,
+   "example": "dislike button (right half): The clip's dislike button looks about the same size at 2.63s and 2.95s (about 363 vs 360 px tall), while the rebuild's shrinks slightly (about 357 to 340 px, ~5%)."
+  },
+  "end-state": {
+   "fails": 3,
+   "rebuilds": 1,
+   "example": "overall: Both panels are full at 14.5s, but at 15.9s the rebuild's bottom card has faded almost to white while the clip's is only partly faded, so the end state does not match."
+  },
+  "shape-detail": {
+   "fails": 9,
+   "rebuilds": 3,
+   "example": "card Fewer Settings: Rebuild's orange wash and larger regular dots cover the whole card top, where the clip's wash peaks at top-centre with a fine, localized dither."
+  }
+ }
+}

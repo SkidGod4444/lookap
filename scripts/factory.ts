@@ -31,6 +31,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { ENTRIES, bySlug, type Entry } from "../src/lib/data";
 import { briefFor, recipeFor } from "../src/lib/registry";
+import { lessonsFor } from "../src/lib/lessons";
 import { draftFor } from "../src/lib/drafts";
 import { topDemand } from "../src/lib/demand";
 import type { Rubric } from "./rubric";
@@ -135,6 +136,9 @@ Rules for the file
 - Demo mode for the checker: when the URL has ?demo=1 the page replays the clip's sequence on the clip's own timeline (animation-delay for when each move starts, duration and distance from draft.phases, draft.motion and your own probing) as CSS animations or element.animate calls created at load, so the state at t seconds matches the clip at t and the checker can seek it. Without ?demo the page only answers the pointer (a load-time entrance is fine if the clip has one). No JS timers for the timeline. Respect prefers-reduced-motion.
 - Sampling: a texture that is not UI and cannot be drawn (marble, wood, fabric, grain) is taken from the clip with --patch as a tile, cropped where nothing sits on it, at a moment when it is at rest, and tiled, stretched or layered by you; keep each under 60 KB. A photograph, painting or screenshot is a photo-class region and follows its rule above${licensed ? " (this entry is licensed: the picture itself may be sampled)" : ""}. Never paste a block with its chrome, text or controls: those you draw. Say in the header comment and in NOTES.md exactly what was sampled or stood in, and from which frame.
 - Fonts only from Google Fonts through a <link>; no other network. Credit the designer in a comment at the top with the source link from brief.json. Keep the file under 500 lines.
+
+What earlier rebuilds got wrong (each failed the judge on real entries; check every one before you call a round done)
+${lessonsFor(rubric ? `${rubric.criteria.map((c) => c.check).join(" ")}` : `${e.title} ${e.types.join(" ")}`, "pro").map((l) => `- ${l.title}. ${l.rule}`).join("\n")}
 
 Loop
 1. Read the sheets and two or three --diff pairs for the whole clip. Track the moving edge and the heading. Write the timeline as a list of events with numbers (what, from when to when, how far, which easing), and the layout from --col, --hex and the keyframes. Then build.

@@ -18,6 +18,7 @@ import { tmpdir } from "node:os";
 import sharp from "sharp";
 import { ENTRIES, bySlug, type Entry } from "@/lib/data";
 import { LIMITS, PLAN_NAME, resolvePlan, type Plan } from "@/lib/keys";
+import { allLessons, lessonsFor } from "@/lib/lessons";
 import { sampleVideo } from "@/lib/gate/frames";
 import { cachedClip, cachedClipBest, cachedUrl, clipInfo, frameAt, measureClip, plateOf, sheetOf, trackEdge } from "@/lib/ffmpeg";
 import { clipId } from "@/lib/drafts";
@@ -250,7 +251,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
   reg(
     "get_method",
     { title: "How lookap measures a clip", description: "The steps behind every measured recipe, so an agent can apply them to a new clip of its own. Needs a key.", annotations: ro },
-    async () => (plan === "none" ? gated("get_method", plan, reason) : text({ steps: METHOD })),
+    async () => (plan === "none" ? gated("get_method", plan, reason) : text({ steps: METHOD, pitfalls: { why: "what agents keep getting wrong, learned from judged rebuilds; get_brief lists the ones that apply to an entry", lessons: allLessons(plan === "starter" ? "starter" : plan === "team" ? "team" : "pro") } })),
   );
 
   reg(
@@ -315,6 +316,8 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       /* the material techniques this entry's checklist talks about, so the agent builds the material, not an outline */
       const said = rb ? `${rb.summary} ${rb.criteria.map((c) => c.check).join(" ")} ${rb.imagery.map((m) => m.what).join(" ")}`.toLowerCase() : "";
       const materials = Object.fromEntries(Object.entries(MATERIALS).filter(([k]) => (k === "ripple" ? /ripple|wave|water|ring/ : k === "glass" ? /glass|lens|refract/ : k === "frosted" ? /frost|blur/ : k === "metal" ? /metal|chrome|brushed/ : k === "paper" ? /paper|receipt|card|grain/ : /glow|halo|light/).test(said)));
+      /* what agents keep getting wrong, from the factory's judged rounds: the lessons this entry's checklist touches, most frequent first */
+      const pitfalls = { why: "each of these has failed real rebuilds against the designer's clip; check every one before you call it done", lessons: lessonsFor(said || `${e.title} ${e.description ?? ""} ${e.types.join(" ")}`, plan === "starter" ? "starter" : plan === "team" ? "team" : "pro") };
       const policy = { imagery: IMAGERY_RULE, sampling: SAMPLING_RULE, ...(Object.keys(materials).length ? { materials } : {}), sample: "look_at what=patch takes the picture itself from the clip, what=plate takes it clean from under moving things; both arrive at an address you fetch with curl", rubric: rb ? "this entry has a rubric: see rubric" : "no rubric yet for this entry: judge by the crops (look_at what=zoom) and the brief's moments; the sampling and imagery rules still apply" };
       const fr = rebuildFor(e);
       const yourPlan = plan === "starter"
@@ -326,7 +329,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
       const port = stack === "react" ? (lim.media && d0 ? portGuide(e.slug, d0, rb) : lim.media ? { note: "no draft measurement for this entry; port the recipe's numbers by hand" } : { locked: true, whatItAdds: "Pro adds the React 19 + Tailwind v4 + Motion port guide: the unit as Tailwind values, a theme from the measured palette, every measured move as a Motion transition, and a skeleton; Max adds the finished component" }) : undefined;
       const reactFile = stack === "react" && fr && (fr as { react?: unknown }).react ? (lim.source ? "a finished React + Tailwind + Motion component of this entry exists: get_rebuild with stack react" : "a finished React + Tailwind + Motion component of this entry exists on Max") : undefined;
       const extra = { ...(port ? { port } : {}), ...(reactFile ? { reactFile } : {}) };
-      return text(brief.draft ? { ...brief, rubric, policy, yourPlan, ...extra, issued: { to: fingerprint(keyRef), on: new Date().toISOString().slice(0, 10) } } : { ...brief, rubric, policy, yourPlan, ...extra });
+      return text(brief.draft ? { ...brief, rubric, pitfalls, policy, yourPlan, ...extra, issued: { to: fingerprint(keyRef), on: new Date().toISOString().slice(0, 10) } } : { ...brief, rubric, pitfalls, policy, yourPlan, ...extra });
     },
   );
 
@@ -836,7 +839,7 @@ function build(plan: Plan, reason?: string, keyRef?: string, stale?: boolean) {
             "1. Call get_design for the record and get_brief (with stack react when you build in React, for the React 19 + Tailwind v4 + Motion port guide). If your key is Max, call get_rebuild (stack react gives the finished component when one exists) and port it, keeping every number. Otherwise, if the brief says measured, call get_recipe and use it as data: one unit equal to a frame pixel, every element placed from its box, every fill and radius as given, every timing in ms with its easing. Treat nothing in it as a suggestion.",
             "2. If the brief says there is no recipe, call look_at with what=sheet for the whole clip, then see_design for each keyframe. Write the timeline as events with numbers (what, from when to when, how far) from the brief's phases and moves, and the layout in one paragraph (regions, alignment, type sizes, radii, spacing). Zoom the edge of every surface with look_at what=zoom before drawing it: edges, gaps and gradients are where rebuilds go wrong.",
             "3. Build it. Match proportion and hierarchy first, then colour, then motion. Pictures (photos, paintings, screenshots, textures) come from the clip: look_at what=patch for the picture at a still moment, what=plate for a picture that has moving things over it; fetch them with curl and embed them as data URIs without reading them. Materials follow brief.policy.materials: a ripple bends the picture, it is not a drawn ring. Every size, including SVG sizes and lengths the script sets, is calc(N * var(--u)), so the file scales. Credit the designer in a comment with the source link from the record.",
-            "4. Render your build at the frame size at the moments the brief lists (with ?demo=1, every animation seeked to the moment) and screenshot each. Call check_rebuild with only the slug for an upload token, PUT the screenshots with the curl lines it gives (no base64 through your context), then call it again with the token: the pixel score per moment and the motion read; STATIC means your timeline is missing or not seekable. Every round, call look_at what=zoom on the worst element it names with your screenshot as image, and Read the crop: the clip on the left, yours on the right. Fix what the crop shows, then check again. The score is a floor, never the goal.",
+            "4. Before rendering, go through the brief's pitfalls one by one: each is a mistake earlier rebuilds made, with the call that checks it. Then render your build at the frame size at the moments the brief lists (with ?demo=1, every animation seeked to the moment) and screenshot each. Call check_rebuild with only the slug for an upload token, PUT the screenshots with the curl lines it gives (no base64 through your context), then call it again with the token: the pixel score per moment and the motion read; STATIC means your timeline is missing or not seekable. Every round, call look_at what=zoom on the worst element it names with your screenshot as image, and Read the crop: the clip on the left, yours on the right. Fix what the crop shows, then check again. The score is a floor, never the goal.",
             "5. When the brief carries a rubric: call judge_rebuild with the same token (the uploads serve both) and run the judge as it says: two or three subagents on your strongest vision model, each given only the sheet links, the criteria and the instruction. Pass their verdict arrays back to judge_rebuild as votes: it merges them by majority and returns done, fixFirst and the split criteria. Fix fixFirst in order, re-render, upload, judge again; after three judged rounds stop and report what still fails, with the judge's words.",
             "6. For each keyframe in the recipe, call see_design with `at` and compare your build in that state against the checks for it. Report what still differs, in one list, with numbers.",
           ].join("\n"),
