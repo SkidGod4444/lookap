@@ -1,0 +1,16 @@
+{
+ "model": "Claude Opus 5.5",
+ "modelId": "claude-opus-5-5",
+ "date": "2026-10-23",
+ "run": {
+  "model": "Claude Opus 5.5",
+  "turns": 114,
+  "outputTokens": 61409,
+  "totalTokens": 4813903,
+  "costUsd": 10.05,
+  "minutes": 24.3,
+  "score": 81
+ },
+ "hand": "none: the factory alone, 3 judged rounds, best round 3 kept; rubric 41 of 41 under a three-vote judge, checked against the screenshot by eye",
+ "hint": "A still page: the four plans side by side, with Pro and Enterprise in their gradient cards."
+}

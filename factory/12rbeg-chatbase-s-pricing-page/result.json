@@ -1,0 +1,192 @@
+{
+ "slug": "12rbeg-chatbase-s-pricing-page",
+ "title": "Chatbase's Pricing Page",
+ "author": "Chatbase",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "review",
+ "ended": "round limit",
+ "bestRound": 4,
+ "rank": 94,
+ "allPass": false,
+ "rubric": {
+  "pass": 44,
+  "fail": 1,
+  "unsure": 0,
+  "of": 45,
+  "failed": [
+   "c09 Subline reads 'Designed for every stage of your journey.' in mid grey (clearly lighter than the headline), ~16px, centred at y≈235"
+  ]
+ },
+ "score": 78,
+ "motion": "the clip does not move between the scored moments",
+ "imagery": [
+  {
+   "name": "Chatbase logo",
+   "class": "structured",
+   "box": [
+    129,
+    14,
+    114,
+    20
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "plan icons",
+   "class": "structured",
+   "box": [
+    149,
+    398,
+    808,
+    17
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "discount badge",
+   "class": "css",
+   "box": [
+    559,
+    319,
+    14,
+    14
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "Standard button gradient lip",
+   "class": "css",
+   "box": [
+    543,
+    580,
+    158,
+    12
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "hero hairline stripes",
+   "class": "css",
+   "box": [
+    129,
+    95,
+    986,
+    272
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 12.6,
+   "turns": 55,
+   "costUsd": 2.9228274,
+   "tokens": {
+    "written": 32565,
+    "read": 2473628
+   },
+   "judgeUsd": 0.876,
+   "ended": "completed",
+   "score": 77,
+   "rank": 81,
+   "allPass": false,
+   "rubric": {
+    "pass": 36,
+    "fail": 8,
+    "unsure": 1,
+    "of": 45
+   },
+   "motion": "the clip does not move between the scored moments",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 10,
+   "turns": 81,
+   "costUsd": 2.8836725999999993,
+   "tokens": {
+    "written": 28863,
+    "read": 3150703
+   },
+   "judgeUsd": 1.01,
+   "ended": "completed",
+   "score": 78,
+   "rank": 94,
+   "allPass": false,
+   "rubric": {
+    "pass": 44,
+    "fail": 1,
+    "unsure": 0,
+    "of": 45
+   },
+   "motion": "the clip does not move between the scored moments",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 5.6,
+   "turns": 23,
+   "costUsd": 0.6721880000000002,
+   "tokens": {
+    "written": 7025,
+    "read": 887077
+   },
+   "judgeUsd": 0.977,
+   "ended": "completed",
+   "score": 78,
+   "rank": 92,
+   "allPass": false,
+   "rubric": {
+    "pass": 43,
+    "fail": 2,
+    "unsure": 0,
+    "of": 45
+   },
+   "motion": "the clip does not move between the scored moments",
+   "kept": false
+  },
+  {
+   "round": 4,
+   "minutes": 5.7,
+   "turns": 20,
+   "costUsd": 0.6636672,
+   "tokens": {
+    "written": 6110,
+    "read": 895179
+   },
+   "judgeUsd": 0.517,
+   "ended": "completed",
+   "score": 78,
+   "rank": 94,
+   "allPass": false,
+   "rubric": {
+    "pass": 44,
+    "fail": 1,
+    "unsure": 0,
+    "of": 45
+   },
+   "motion": "the clip does not move between the scored moments",
+   "kept": true
+  }
+ ],
+ "minutes": 33.9,
+ "tokens": {
+  "written": 74563,
+  "read": 7406587
+ },
+ "cost": {
+  "codingUsd": 7.14,
+  "judgeUsd": 3.38,
+  "rubricUsd": 0.584,
+  "totalUsd": 11.11
+ },
+ "notes": true,
+ "at": "2026-10-23T17:25:22.988Z"
+}

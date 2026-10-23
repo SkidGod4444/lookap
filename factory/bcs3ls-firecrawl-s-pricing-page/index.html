@@ -1,0 +1,191 @@
+<!doctype html>
+<!--
+  Firecrawl's Pricing Page — rebuild of the pricing page by Firecrawl.
+  Source: https://www.firecrawl.dev/pricing (credit: Firecrawl)
+  Nothing sampled: logo, India flag, cursor are original SVG; the dot-matrix globe (SVG dots on
+  a 4 x 8 px grid inside a drawn land shape, darker speckles on its coasts) and the orange glyph texture (generated monospace characters) are drawn.
+-->
+<html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+@property --x{syntax:'<number>';inherits:true;initial-value:371}
+@property --v{syntax:'<integer>';inherits:true;initial-value:35}
+@property --sel{syntax:'<number>';inherits:true;initial-value:1}
+@property --g{syntax:'<number>';inherits:true;initial-value:1}
+@property --ty{syntax:'<number>';inherits:true;initial-value:551}
+@property --k{syntax:'<integer>';inherits:true;initial-value:3}
+@property --h{syntax:'<integer>';inherits:true;initial-value:5}
+html,body{margin:0;overflow:hidden;background:#f7f7f7}
+#stage{--u:1px;position:relative;width:calc(1350*var(--u));height:calc(1080*var(--u));overflow:hidden;background:#f7f7f7;
+  font-family:Geist,system-ui,sans-serif;color:#1a1a1a;--h:mod(var(--v),10);--k:calc((var(--v) - mod(var(--v),10))/10);
+  transition:--g .25s ease,--ty .38s cubic-bezier(.2,.7,.2,1)}
+#stage *{box-sizing:border-box}
+.a{position:absolute;white-space:nowrap}
+.c{transform:translateY(-50%)}
+.hl{position:absolute;background:#e3e3e3}
+.grey{color:#777}
+#nav a{position:absolute;top:calc(40*var(--u));transform:translate(-50%,-50%);font-size:calc(12.5*var(--u));font-weight:400;color:#222;text-decoration:none}
+.chev{display:inline-block;width:calc(5*var(--u));height:calc(5*var(--u));border-right:calc(1.3*var(--u)) solid #888;border-bottom:calc(1.3*var(--u)) solid #888;transform:rotate(45deg);margin-left:calc(6*var(--u));vertical-align:calc(3*var(--u))}
+#map{position:absolute;left:calc(430*var(--u));top:calc(84*var(--u));width:calc(680*var(--u));height:calc(161*var(--u))}
+#num{left:0;width:calc(1350*var(--u));text-align:center;top:calc(285*var(--u));font-size:calc(32*var(--u));font-weight:500;letter-spacing:calc(-.6*var(--u));font-variant-numeric:tabular-nums;counter-reset:k var(--k) h var(--h)}
+#num::before{content:counter(k) "," counter(h) "00"}
+#track{left:calc(262*var(--u));top:calc(337*var(--u));width:calc(826*var(--u));height:calc(4*var(--u));border-radius:calc(2*var(--u));background:#e2e2e2}
+#fill{left:calc(262*var(--u));top:calc(337*var(--u));height:calc(4*var(--u));border-radius:calc(2*var(--u));background:#ff4800;width:calc((var(--x) - 262)*var(--u))}
+#thumb{left:calc((var(--x) - 8)*var(--u));top:calc(331*var(--u));width:calc(16*var(--u));height:calc(16*var(--u));border-radius:50%;background:#ff4800;box-shadow:0 0 0 calc(2*var(--u)) #fff6,0 calc(1*var(--u)) calc(3*var(--u)) #0003;cursor:grab}
+#cur{left:calc((var(--x) - 5)*var(--u));top:calc(340*var(--u));width:calc(18*var(--u));height:calc(21*var(--u));pointer-events:none}
+.stop{position:absolute;transform:translateX(-50%);text-align:center;font-size:calc(10.5*var(--u));line-height:calc(15*var(--u));color:#8d8d8d;top:calc(352*var(--u))}
+.stop b{display:block;font-weight:500;color:color-mix(in srgb,#ff4800 calc(var(--p)*100%),#8d8d8d)}
+.stop i{position:absolute;left:50%;top:calc(-6*var(--u));width:calc(1.5*var(--u));height:calc(5*var(--u));background:color-mix(in srgb,#ff4800 calc(var(--p)*100%),#d6d6d6)}
+.stop span{color:color-mix(in srgb,#333 calc(var(--p)*100%),#9a9a9a)}
+.pl{left:0;width:calc(1350*var(--u));text-align:center;top:calc(401*var(--u));font-size:calc(11*var(--u));color:#ff4800;opacity:var(--p)}
+#grid{left:calc(224*var(--u));top:calc(491*var(--u));width:calc(904*var(--u));height:calc(522*var(--u));opacity:var(--g)}
+#scale{left:calc(224*var(--u));top:calc(491*var(--u));width:calc(904*var(--u));height:calc(600*var(--u));background:#f7f7f7;transform:translateY(calc(var(--ty)*var(--u)))}
+.col{position:absolute;top:0;height:100%;border-left:calc(1*var(--u)) solid #ececec}
+.tint{position:absolute;inset:0;background:#f7f2ee;opacity:var(--p)}
+.ttl{font-size:calc(13.5*var(--u));font-weight:400;color:#262626}
+.chip{display:inline-block;margin-left:calc(8*var(--u));padding:calc(2*var(--u)) calc(6*var(--u));border-radius:calc(4*var(--u));background:#fde6db;color:#f5733a;font-size:calc(10.5*var(--u));font-weight:400;vertical-align:calc(2*var(--u));opacity:var(--p)}
+.desc{white-space:normal;font-size:calc(11.5*var(--u));line-height:calc(16.5*var(--u));color:#6e6e6e}
+.cr{font-size:calc(11.5*var(--u));color:#333;display:flex;align-items:center;gap:calc(9*var(--u))}
+.ic{width:calc(13*var(--u));height:calc(13*var(--u));border-radius:50%;background:#8a8a8a;display:inline-grid;place-items:center}
+.ic::after{content:"";width:calc(4*var(--u));height:calc(6*var(--u));background:#fff;border-radius:50% 50% 45% 45%}
+.price{font-size:calc(31*var(--u));font-weight:500;letter-spacing:calc(-1*var(--u))}
+.price small{font-size:calc(11.5*var(--u));color:#9d9d9d;font-weight:400;letter-spacing:0;margin-left:calc(6*var(--u))}
+.tog{display:flex;align-items:center;font-size:calc(11.5*var(--u));font-weight:500;gap:calc(8*var(--u))}
+.tog i{width:calc(36*var(--u));height:calc(19*var(--u));border-radius:calc(10*var(--u));background:#ff4800;position:relative}
+.tog i::after{content:"";position:absolute;right:calc(2.5*var(--u));top:calc(2.5*var(--u));width:calc(18*var(--u));height:calc(14*var(--u));border-radius:calc(7*var(--u));background:#fff}
+.tog em{font-style:normal;color:#ff4800;font-size:calc(10*var(--u));position:absolute;right:0}
+.btn{height:calc(28*var(--u));border-radius:calc(7*var(--u));display:grid;place-items:center;font-size:calc(11.5*var(--u));font-weight:500;
+  background:color-mix(in srgb,#ff4800 calc(var(--p)*100%),#e9e9e9);color:color-mix(in srgb,#fff calc(var(--p)*100%),#222)}
+.btn.mute{background:#eeeeee;color:#8f8f8f}
+.vl{z-index:3;background:#dcdcdc}
+.ft{display:block;padding-left:calc(20*var(--u));font-size:calc(11.5*var(--u));line-height:calc(16*var(--u));color:#444;white-space:normal}
+.ft::before{content:"";position:absolute;left:0;top:0;width:calc(10*var(--u));height:calc(10*var(--u));margin-top:calc(3*var(--u));border-radius:50%;background:#d4d4d4 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M3 5.2l1.4 1.4L7.2 3.8' fill='none' stroke='%23fff' stroke-width='1.3'/%3E%3C/svg%3E") center/100%}
+.ft b{font-weight:500;color:#222;border-bottom:calc(1*var(--u)) dotted #aaa}
+/* the extra-credits row: the number, then 'extra credits per' on two short lines, the price at the right */
+.xc{display:inline-block;width:calc(68*var(--u));margin-left:calc(5*var(--u));white-space:normal;vertical-align:middle;line-height:calc(14*var(--u))}
+.xp{position:absolute;right:0;top:50%;transform:translateY(-50%)}
+.glyph{position:absolute;font-family:'Geist Mono',monospace;font-size:calc(6.5*var(--u));line-height:calc(6*var(--u));letter-spacing:calc(-.1*var(--u));color:#ff4800;white-space:pre;opacity:calc(var(--p)*.6);pointer-events:none}
+@media (prefers-reduced-motion:reduce){#stage{transition:none}}
+</style></head><body>
+<div id="stage">
+  <div class="hl vl" style="left:calc(224*var(--u));top:0;width:calc(1*var(--u));height:100%"></div>
+  <div class="hl vl" style="left:calc(1128*var(--u));top:0;width:calc(1*var(--u));height:100%"></div>
+  <div class="hl" style="left:0;top:calc(82*var(--u));width:100%;height:calc(1*var(--u))"></div>
+  <div class="hl" style="left:0;top:calc(245*var(--u));width:100%;height:calc(1*var(--u))"></div>
+  <div class="hl" style="left:0;top:calc(443*var(--u));width:100%;height:calc(1*var(--u))"></div>
+  <div class="hl" style="left:0;top:calc(491*var(--u));width:100%;height:calc(1*var(--u))"></div>
+  <div id="ticks"></div>
+  <div id="nav">
+    <svg class="a" style="left:calc(272*var(--u));top:calc(31*var(--u));width:calc(14*var(--u));height:calc(18*var(--u))" viewBox="0 0 14 18"><path d="M7 0c.6 3 3.6 4.6 5.4 7.6 2 3.6.6 8.4-3.6 9.9.9-1.4 1-3.2-.3-4.6-.4 1.5-1.4 2.3-2.4 2.6.7-2.1-.2-4.2-1.7-5.4-.1 2-1.6 3.1-1.9 5-.3 1.3.1 2.3.7 3-3-1-4.5-4.3-3.5-7.5C1 7.6 3 6.6 4.5 4.8 5.6 3.4 6.5 1.8 7 0z" fill="#ff4800"/></svg>
+    <span class="a c" style="left:calc(290*var(--u));top:calc(40*var(--u));font-size:calc(15*var(--u));font-weight:600;letter-spacing:calc(-.3*var(--u))">Firecrawl</span>
+    <a style="left:calc(510*var(--u))">Products<i class="chev"></i></a><a style="left:calc(600*var(--u))">Resources<i class="chev"></i></a>
+    <a style="left:calc(675*var(--u))">Pricing</a><a style="left:calc(729*var(--u))">Docs</a><a style="left:calc(778*var(--u))">Blog</a><a style="left:calc(842*var(--u))">Playground</a>
+    <svg class="a" style="left:calc(947*var(--u));top:calc(34*var(--u));width:calc(13*var(--u));height:calc(13*var(--u))" viewBox="0 0 16 16"><path fill="#7a7a7a" d="M8 0a8 8 0 0 0-2.5 15.6c.4 0 .5-.2.5-.4v-1.4c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.4.7 0-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8a7.4 7.4 0 0 1 4 0c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.6 3.9.3.3.5.8.5 1.5v2.2c0 .2.1.5.6.4A8 8 0 0 0 8 0z"/></svg>
+    <span class="a c" style="left:calc(964*var(--u));top:calc(40*var(--u));font-size:calc(12*var(--u));font-weight:400;color:#3a3a3a">189K</span>
+    <span class="a c" style="left:calc(1006*var(--u));top:calc(40*var(--u));height:calc(24*var(--u));padding:0 calc(9*var(--u));border-radius:calc(6*var(--u));background:#e8e8e8;font-size:calc(12*var(--u));font-weight:400;color:#2a2a2a;display:grid;place-items:center">Dashboard</span>
+  </div>
+  <svg id="map" viewBox="0 0 680 161"></svg>
+  <div class="a c" style="left:0;width:100%;text-align:center;top:calc(143*var(--u));font-size:calc(44*var(--u));font-weight:500;letter-spacing:calc(-1.5*var(--u));color:#262626">Flexible <span style="color:#ff4800">pricing</span></div>
+  <div class="a c grey" style="left:0;width:100%;text-align:center;top:calc(187*var(--u));font-size:calc(12.5*var(--u));color:#5f5f5f">Start for free, then scale as you grow.</div>
+  <div class="a c" id="num"></div>
+  <div class="a c grey" style="left:0;width:100%;text-align:center;top:calc(310*var(--u));font-size:calc(10*var(--u));color:#8a8a8a">credits/month</div>
+  <div class="a" id="track"></div><div class="a" id="fill"></div>
+  <div id="stops"></div>
+  <div id="lines"></div>
+  <div class="a c grey" style="left:0;width:100%;text-align:center;top:calc(420*var(--u));font-size:calc(10.5*var(--u));color:#a3a3a3">Prices shown are per month, billed annually.</div>
+  <div class="a" style="left:calc(240*var(--u));top:calc(458*var(--u));width:calc(400*var(--u));height:calc(20*var(--u));border-radius:calc(10*var(--u));background:#f9f9f9;border:calc(1*var(--u)) solid #ececec"></div>
+  <div class="a" style="left:calc(710*var(--u));top:calc(458*var(--u));width:calc(400*var(--u));height:calc(20*var(--u));border-radius:calc(10*var(--u));background:#f9f9f9;border:calc(1*var(--u)) solid #ececec"></div>
+  <div class="a c" style="left:calc(652*var(--u));top:calc(468*var(--u));display:flex;align-items:center;gap:calc(4*var(--u));font-size:calc(9.5*var(--u));font-weight:500">
+    <svg style="width:calc(12*var(--u));height:calc(9*var(--u))" viewBox="0 0 12 9"><path fill="#f93" d="M0 0h12v3H0z"/><path fill="#fff" d="M0 3h12v3H0z"/><path fill="#128807" d="M0 6h12v3H0z"/><circle cx="6" cy="4.5" r="1.1" fill="none" stroke="#008" stroke-width=".5"/></svg>INR<i class="chev" style="width:calc(4*var(--u));height:calc(4*var(--u));margin-left:calc(3*var(--u))"></i></div>
+  <div class="a" id="grid"></div>
+  <div class="a" id="scale"></div>
+  <svg class="a" id="cur" viewBox="0 0 18 21"><path d="M5.5 1.2c.9 0 1.6.7 1.6 1.6v6l.3-.1c.6-.4 1.6-.2 2 .5.6-.4 1.6-.2 2 .5.7-.4 1.7 0 1.9.8l.6 3.5c.4 2.5-.6 4.4-1.6 5.7H5.8l-3.6-4.9c-.6-.8-.4-1.8.4-2.2.6-.3 1.3-.1 1.7.4l.5.7V2.8c0-.9.7-1.6 1.6-1.6z" fill="#fff" stroke="#111" stroke-width="1.1" stroke-linejoin="round"/><path d="M8 10v4M10.3 10.3v3.7M12.6 11v3" stroke="#111" stroke-width=".9"/></svg>
+  <div class="a" id="thumb"></div>
+</div>
+<script>
+const $=id=>document.getElementById(id), u=n=>`calc(${n} * var(--u))`, st=$('stage'), D=4.82;
+const P=sel=>`clamp(0, 1 - abs(var(--sel) - ${sel}), 1)`;
+const el=(par,cls,css,html)=>{const e=document.createElement('div');e.className=cls;e.style.cssText=css;e.innerHTML=html||'';par.appendChild(e);return e};
+const at=(l,t,w)=>`left:${u(l)};top:${u(t)};`+(w?`width:${u(w)};`:'');
+// corner ticks
+for(const[x,y]of[[224,82],[1128,82],[224,245],[1128,245],[224,491],[1128,491]])el($('ticks'),'a',at(x-4,y)+`width:${u(9)};height:${u(1)};background:#d9d9d9`),el($('ticks'),'a',at(x,y-4)+`width:${u(1)};height:${u(9)};background:#d9d9d9`);
+// dot-matrix globe: 4 x 8 px dot grid (page x = 4k, y = 8k+4) inside the land shape, darker speckles on its coasts
+{const land=(x,y)=>{if(y<=84||y>=245)return false;if(((x-505)/80)**2+((y-88)/40)**2<1)return true;
+    if(x<800||(x-963)**2+(y-190)**2>175**2)return false;const a=x-978,b=y-152;
+    return !(Math.abs(Math.hypot(a,b)-42)<9&&!(b<0&&a>-5))&&!(y>150&&Math.abs(x-1008-(y-160)*.08)<12)&&!(y>212&&x>975&&x<1010)};
+  let s=11,h='';const r=()=>(s=(s*16807)%2147483647)/2147483647;
+  /* the clip's coast runs on a slant: dots start near x 833 at the bottom and x 893 at the top, feathered over ~40 px */
+  const edge=y=>833+(240-y)*.43;
+  for(let y=92;y<245;y+=8)for(let x=432;x<1110;x+=4)if(land(x,y)&&(x<700?r()<.5:x>edge(y)+40||(x>edge(y)-10&&r()<(x-edge(y)+10)/50))){
+    const coast=x>842&&(!land(x-9,y)||!land(x+9,y)||!land(x,y-9)||!land(x,y+9)),dk=coast?r()<.55:r()<.03;
+    h+=`<circle cx="${x-430}" cy="${y-84}" r="${dk?.85:.68}" fill="${dk?'#c2c2c2':x<700?'#e4e4e4':'#dcdcdc'}"/>`}
+  $('map').innerHTML=h}
+// slider stops
+const SX=[270,433,594,756,917,1080],SV=[1e3,5e3,1e5,5e5,1e6];
+[['1k','Free'],['5k','Hobby'],['100k','Standard'],['500k','Growth'],['1M','Scale'],['','Custom']].forEach(([a,b],i)=>{
+  const s=el(st,'stop',`left:${u(SX[i])};--p:${i<5?P(i):0}`,`<i></i><b>${a||'&nbsp;'}</b><span>${b}</span>`);if(i==5)s.querySelector('i').style.display='none'});
+['Free: ₹0/month','Hobby: ₹1,542/month','Standard: ₹8,001/month','Growth: ₹32,101/month','Scale: ₹57,744/month'].forEach((t,i)=>el($('lines'),'a c pl',`--p:${P(i)}`,t));
+// glyph texture: monospaced dots and ASCII, denser toward the bottom
+let seed=7;const rnd=()=>(seed=(seed*16807)%2147483647)/2147483647;
+function glyphs(w,rows){let s='';const n=Math.floor(w/3.8);for(let r=0;r<rows;r++){const d=Math.pow(r/(rows-1),2.6);
+  for(let c=0;c<n;c++){const q=rnd();s+=q>0.03+0.95*d?' ':d>.9&&q<.3?'X':d>.8&&q<.45?'+':d>.65&&q<.65?'-':q<.6?'.':':'}s+='\n'}return s}
+const F=(t)=>t.replace(/\*(.+?)\*/g,'<b>$1</b>');
+function column(par,x,w,i,c){
+  const k=el(par,'col',`left:${u(x)};width:${u(w)};--p:${c.free?0:P(i)}`);el(k,'tint','');
+  const L=22,W=w-44;
+  if(c.tex)el(k,'glyph',at(8,c.tex,w-16),glyphs(w-16,22));
+  el(k,'a c',at(L,c.y[0]),`<span class="ttl">${c.t}</span><span class="chip">Selected</span>`);
+  el(k,'a desc',at(L,c.y[1],W),c.d);
+  el(k,'a c cr',at(L,c.y[2]),`<i class="ic"></i>${c.cr}`);
+  if(c.hr)el(k,'hl',at(0,c.hr,w)+`height:${u(1)}`);
+  el(k,'a c price',at(L,c.y[3]),c.p);
+  if(c.s)el(k,'a c tog',at(L,c.y[4],W),`<i></i>Billed yearly<em>Save ${c.s}</em>`);
+  el(k,'a c btn'+(c.free?' mute':''),at(L,c.y[5],W),c.b);
+  c.f.forEach((f,j)=>el(k,'a ft',at(L,c.fy[j],W),F(f)));return k}
+const G=[
+ {t:'Free Plan',free:1,d:'A lightweight way to get started. No cost, no card, no hassle.',cr:'1,000 credits / month',p:'₹0<small>/month</small>',b:'Current plan',f:['*500* searches or *1,000* pages scraped','*2* concurrent requests','Low rate limits']},
+ {t:'Hobby',d:'Great for side projects and small tools. Fast, simple, no overkill.',cr:'5,000 credits / month',p:'₹1.5k<small>/month</small>',s:'₹3,663',b:'Subscribe',f:['*2,500* searches or *5,000* pages scraped','*5* concurrent requests','Basic support','*1,000* <span class="xc">extra credits per</span><span class="xp">₹482</span>']},
+ {t:'Standard',d:'Perfect for scaling with less effort. Simple, solid, dependable.',cr:'100,000 credits / month',p:'₹8k<small>/month</small>',s:'₹19,087',b:'Subscribe',f:['*50,000* searches or *100,000* pages scraped','*25* concurrent requests','Standard support','*2,000* <span class="xc">extra credits per</span><span class="xp">₹482</span>']},
+ {t:'Growth',d:'Built for high volume and speed. Firecrawl at full force.',cr:'500,000 credits / month',p:'₹32.1k<small>/month</small>',s:'₹78,936',b:'Subscribe',f:['*250,000* searches or *500,000* pages scraped','*50* concurrent requests','Priority support','*2,500* <span class="xc">extra credits per</span><span class="xp">₹482</span>']}];
+G.forEach((c,i)=>column($('grid'),i*226,226,i,Object.assign(c,{y:[32,49,113,184,231,278],hr:152,tex:c.free?0:172,fy:[327,388,431,474]})));
+for(const y of[317,374,419,461,521])el($('grid'),'hl',at(0,y,904)+`height:${u(1)}`);
+const sc=$('scale');
+el(sc,'hl',at(0,0,904)+`height:${u(1)}`);
+el(sc,'a c',at(19,32)+`font-size:${u(20)};font-weight:500`,'Scale Plans');
+el(sc,'a desc',at(19,47,250)+`font-size:${u(13)};line-height:${u(21)};color:#6a6a6a`,'High-volume plans for teams that need more power and dedicated support. Get access to higher rate limits, more concurrent browsers, and priority support. Scale checks out instantly, no sales call needed.');
+el(sc,'a c',at(19,466)+`font-size:${u(11.5)};color:#ff4800;font-weight:500`,'Need more? Contact us');
+column(sc,301,301,4,{t:'Scale',d:'For teams scaling their data pipelines',cr:'1,000,000 credits / month',p:'₹57,744<small>/month</small>',s:'₹173,929',b:'Subscribe',y:[29,46,87,146,194,239],tex:150,
+  f:['*500,000* searches or *1,000,000* pages scraped','*100* concurrent requests','Priority support','*5,000*<span class="xc">extra credits per</span><span class="xp">₹482</span>'],fy:[291,355,399,442]}).style.height=u(489);
+column(sc,602,302,9,{t:'Enterprise',d:'Power at your pace with custom solutions',cr:'Custom credits',p:'Custom',b:'Contact sales',y:[29,46,87,146,0,239],
+  f:['*Custom* concurrent requests','Dedicated support & SLA','Bulk discounts','Zero-data retention','SSO & advanced security'],fy:[288,331,375,419,462]}).style.height=u(489);
+el(sc,'hl',at(0,489,904)+`height:${u(1)}`);
+el(sc,'a c',at(19,533)+`font-size:${u(20)};font-weight:500;display:flex;align-items:center;gap:${u(8)}`,'<i class="ic" style="background:#777"></i>Pay-as-you-go');
+el(sc,'a desc',at(19,555,560)+`font-size:${u(12.5)};line-height:${u(18)};color:#555`,'Keep accessing web data with search and scrape when your credits run out. We add credits in 5 USD increments, up to a monthly limit you set. Paid plans only.');
+// value <-> thumb position, piecewise linear between stops
+const xOf=v=>{for(let i=0;i<4;i++)if(v<=SV[i+1])return SX[i]+(v-SV[i])/(SV[i+1]-SV[i])*(SX[i+1]-SX[i]);return SX[4]};
+const vOf=x=>{for(let i=0;i<4;i++)if(x<=SX[i+1])return SV[i]+(x-SX[i])/(SX[i+1]-SX[i])*(SV[i+1]-SV[i]);return SV[4]};
+const selOf=v=>v<=1e3?0:v<=5e3?1:v<=1e5?2:v<=5e5?3:4;
+const snap=v=>{const s=v<5e3?100:v<1e5?1e3:v<5e5?5e3:1e4;return Math.max(1e3,Math.round(v/s)*s)};
+function setX(x){x=Math.max(270,Math.min(917,x));const v=snap(vOf(x)),s=selOf(v);
+  st.style.setProperty('--x',x);st.style.setProperty('--v',v/100);st.style.setProperty('--sel',s);
+  st.style.setProperty('--g',s==4?0:1);st.style.setProperty('--ty',s==4?0:551)}
+let drag=false;const px=e=>(e.clientX-st.getBoundingClientRect().left)/st.getBoundingClientRect().width*1350;
+st.addEventListener('pointerdown',e=>{const y=(e.clientY-st.getBoundingClientRect().top)/st.getBoundingClientRect().height*1080;
+  if(y>318&&y<372){drag=true;st.setPointerCapture(e.pointerId);setX(px(e))}});
+st.addEventListener('pointermove',e=>{if(drag)setX(px(e))});
+st.addEventListener('pointerup',()=>drag=false);
+setX(371);
+// demo: the clip's drag, sampled every 0.1 s from the contact sheets
+if(new URLSearchParams(location.search).has('demo')){
+  const S=[[0,21e3],[.06,21e3],[.1,14e3],[.15,5600],[.2,4500],[.3,4200],[.4,4100],[.5,3900],[.6,3500],[.8,3400],[.9,3400],[1,3500],[1.1,4e3],[1.2,15e3],[1.3,56e3],[1.4,9e4],[1.5,205e3],[1.6,275e3],[1.7,33e4],[1.8,4e5],[1.9,58e4],[2,73e4],[2.1,78e4],[2.2,79e4],[3.1,79e4],[3.3,78e4],[3.45,77e4],[3.55,76e4],[3.6,67e4],[3.7,415e3],[3.8,305e3],[3.9,195e3],[4,135e3],[4.1,96e3],[4.2,9e4],[4.3,86e3],[D,86e3]];
+  const o={duration:D*1000,fill:'both',easing:'linear'};
+  st.animate(S.map(([t,v])=>({offset:t/D,'--x':String(xOf(v)),'--v':String(Math.round(v/100))})),o);
+  const K=[];S.forEach(([t,v],i)=>{const s=selOf(v);if(i&&s!==selOf(S[i-1][1]))K.push({offset:(t+.06)/D,'--sel':String(selOf(S[i-1][1]))},{offset:(t+.06)/D,'--sel':String(s)})});
+  K.unshift({offset:0,'--sel':String(selOf(S[0][1]))});K.push({offset:1,'--sel':String(selOf(S[S.length-1][1]))});
+  st.animate(K,o);
+  st.animate([[0,1],[1.92,1],[2,0],[3.62,0],[3.8,1],[D,1]].map(([t,g])=>({offset:t/D,'--g':String(g)})),o);
+  st.animate([[0,551],[1.9,551],[2,258],[2.13,89],[2.25,0],[3.6,0],[3.7,323],[3.8,445],[3.9,551],[D,551]].map(([t,y])=>({offset:t/D,'--ty':String(y)})),o);
+}
+</script>
+</body></html>

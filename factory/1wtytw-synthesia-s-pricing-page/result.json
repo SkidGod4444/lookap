@@ -1,0 +1,167 @@
+{
+ "slug": "1wtytw-synthesia-s-pricing-page",
+ "title": "Synthesia's Pricing Page",
+ "author": "Synthesia",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "pass",
+ "ended": "all criteria pass",
+ "bestRound": 3,
+ "rank": 96,
+ "allPass": true,
+ "rubric": {
+  "pass": 41,
+  "fail": 0,
+  "unsure": 0,
+  "of": 41,
+  "failed": []
+ },
+ "score": 81,
+ "motion": "the clip does not move between the scored moments",
+ "imagery": [
+  {
+   "name": "Pro card gradient",
+   "class": "css",
+   "box": [
+    636,
+    234,
+    234,
+    268
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "Enterprise card gradient",
+   "class": "css",
+   "box": [
+    898,
+    234,
+    234,
+    268
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "synthesia logo",
+   "class": "structured",
+   "box": [
+    112,
+    22,
+    75,
+    16
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "credits coin icons",
+   "class": "structured",
+   "box": [
+    389,
+    532,
+    278,
+    16
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "feature line icons",
+   "class": "structured",
+   "box": [
+    132,
+    522,
+    980,
+    474
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 12.2,
+   "turns": 51,
+   "costUsd": 3.7248977999999995,
+   "tokens": {
+    "written": 39443,
+    "read": 2391095
+   },
+   "judgeUsd": 0.961,
+   "ended": "completed",
+   "score": 80,
+   "rank": 87,
+   "allPass": false,
+   "rubric": {
+    "pass": 36,
+    "fail": 4,
+    "unsure": 1,
+    "of": 41
+   },
+   "motion": "the clip does not move between the scored moments",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 6.8,
+   "turns": 39,
+   "costUsd": 1.9569685999999997,
+   "tokens": {
+    "written": 14024,
+    "read": 1610686
+   },
+   "judgeUsd": 0.535,
+   "ended": "completed",
+   "score": 81,
+   "rank": 91,
+   "allPass": false,
+   "rubric": {
+    "pass": 38,
+    "fail": 2,
+    "unsure": 1,
+    "of": 41
+   },
+   "motion": "the clip does not move between the scored moments",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 5.3,
+   "turns": 24,
+   "costUsd": 0.7685718000000001,
+   "tokens": {
+    "written": 7942,
+    "read": 750713
+   },
+   "judgeUsd": 1.441,
+   "ended": "completed",
+   "score": 81,
+   "rank": 96,
+   "allPass": true,
+   "rubric": {
+    "pass": 41,
+    "fail": 0,
+    "unsure": 0,
+    "of": 41
+   },
+   "motion": "the clip does not move between the scored moments",
+   "kept": true
+  }
+ ],
+ "minutes": 24.3,
+ "tokens": {
+  "written": 61409,
+  "read": 4752494
+ },
+ "cost": {
+  "codingUsd": 6.45,
+  "judgeUsd": 2.94,
+  "rubricUsd": 0.661,
+  "totalUsd": 10.05
+ },
+ "notes": true,
+ "at": "2026-10-23T17:15:46.571Z"
+}

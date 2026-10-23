@@ -1,0 +1,1286 @@
+{
+ "slug": "12rbeg-chatbase-s-pricing-page",
+ "at": "2026-10-23T17:25:22.978Z",
+ "runs": 17,
+ "html": "factory/12rbeg-chatbase-s-pricing-page/index.html",
+ "pixel": {
+  "score": 78,
+  "stills": 78,
+  "motion": 78,
+  "moments": 4
+ },
+ "animations": 0,
+ "rank": 94,
+ "allPass": false,
+ "elements": [
+  {
+   "name": "headline",
+   "box": [
+    374,
+    97,
+    496,
+    116
+   ],
+   "deltaE": 1.6,
+   "delta": 43,
+   "shift": [
+    2,
+    -2
+   ],
+   "afterShift": 35,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Chatbase logo",
+   "box": [
+    129,
+    14,
+    114,
+    20
+   ],
+   "deltaE": 0.6,
+   "delta": 23,
+   "shift": null,
+   "afterShift": 23,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Enterprise column header",
+   "box": [
+    937,
+    398,
+    92,
+    18
+   ],
+   "deltaE": 1.5,
+   "delta": 23,
+   "shift": [
+    2,
+    0
+   ],
+   "afterShift": 21,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Standard column header",
+   "box": [
+    543,
+    398,
+    84,
+    18
+   ],
+   "deltaE": 2.5,
+   "delta": 22,
+   "shift": null,
+   "afterShift": 22,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "prices",
+   "box": [
+    149,
+    455,
+    900,
+    50
+   ],
+   "deltaE": 0.7,
+   "delta": 22,
+   "shift": null,
+   "afterShift": 22,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Free column header",
+   "box": [
+    149,
+    398,
+    53,
+    18
+   ],
+   "deltaE": 0.5,
+   "delta": 21,
+   "shift": null,
+   "afterShift": 21,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "discount text",
+   "box": [
+    579,
+    319,
+    107,
+    14
+   ],
+   "deltaE": 1.2,
+   "delta": 19,
+   "shift": [
+    8,
+    -2
+   ],
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "nav links",
+   "box": [
+    412,
+    16,
+    420,
+    15
+   ],
+   "deltaE": 1.7,
+   "delta": 18,
+   "shift": [
+    -2,
+    0
+   ],
+   "afterShift": 17,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Hobby column header",
+   "box": [
+    346,
+    398,
+    67,
+    18
+   ],
+   "deltaE": 1.2,
+   "delta": 18,
+   "shift": null,
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "discount badge icon",
+   "box": [
+    559,
+    319,
+    14,
+    14
+   ],
+   "deltaE": 10.4,
+   "delta": 16,
+   "shift": [
+    0,
+    -4
+   ],
+   "afterShift": 15,
+   "read": "wrong colour (deltaE 10.4)"
+  },
+  {
+   "name": "Pro column header",
+   "box": [
+    740,
+    398,
+    46,
+    18
+   ],
+   "deltaE": 0.7,
+   "delta": 16,
+   "shift": [
+    -2,
+    0
+   ],
+   "afterShift": 15,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "subline",
+   "box": [
+    481,
+    227,
+    282,
+    17
+   ],
+   "deltaE": 1.6,
+   "delta": 15,
+   "shift": [
+    -6,
+    0
+   ],
+   "afterShift": 15,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "plan icons",
+   "box": [
+    149,
+    398,
+    808,
+    17
+   ],
+   "deltaE": 0.7,
+   "delta": 15,
+   "shift": null,
+   "afterShift": 15,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Standard primary button",
+   "box": [
+    543,
+    548,
+    158,
+    44
+   ],
+   "deltaE": 1.5,
+   "delta": 15,
+   "shift": [
+    0,
+    -2
+   ],
+   "afterShift": 14,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1244,
+    996
+   ],
+   "deltaE": 0.4,
+   "delta": 14,
+   "shift": null,
+   "afterShift": 14,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Login button",
+   "box": [
+    1060,
+    9,
+    54,
+    29
+   ],
+   "deltaE": 0.5,
+   "delta": 13,
+   "shift": null,
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "feature lists",
+   "box": [
+    149,
+    625,
+    946,
+    350
+   ],
+   "deltaE": 0.9,
+   "delta": 13,
+   "shift": null,
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Yearly label",
+   "box": [
+    652,
+    275,
+    35,
+    14
+   ],
+   "deltaE": 1.4,
+   "delta": 12,
+   "shift": null,
+   "afterShift": 12,
+   "read": "matches"
+  },
+  {
+   "name": "pricing card",
+   "box": [
+    129,
+    376,
+    985,
+    620
+   ],
+   "deltaE": 0.9,
+   "delta": 12,
+   "shift": null,
+   "afterShift": 12,
+   "read": "matches"
+  },
+  {
+   "name": "outlined buttons",
+   "box": [
+    149,
+    554,
+    946,
+    38
+   ],
+   "deltaE": 0.5,
+   "delta": 11,
+   "shift": null,
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "nav bar",
+   "box": [
+    0,
+    0,
+    1244,
+    48
+   ],
+   "deltaE": 0.4,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "billing toggle track",
+   "box": [
+    526,
+    266,
+    192,
+    33
+   ],
+   "deltaE": 0.7,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "Free footnote",
+   "box": [
+    149,
+    743,
+    156,
+    26
+   ],
+   "deltaE": 0.7,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "Monthly thumb",
+   "box": [
+    529,
+    269,
+    90,
+    27
+   ],
+   "deltaE": 0.2,
+   "delta": 9,
+   "shift": null,
+   "afterShift": 9,
+   "read": "matches"
+  },
+  {
+   "name": "Popular tab",
+   "box": [
+    524,
+    354,
+    196,
+    22
+   ],
+   "deltaE": 1.7,
+   "delta": 8,
+   "shift": null,
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "background hairline stripes left",
+   "box": [
+    129,
+    95,
+    160,
+    272
+   ],
+   "deltaE": 0.3,
+   "delta": 1,
+   "shift": null,
+   "afterShift": 1,
+   "read": "matches"
+  },
+  {
+   "name": "background hairline stripes right",
+   "box": [
+    955,
+    95,
+    160,
+    272
+   ],
+   "deltaE": 0.4,
+   "delta": 1,
+   "shift": null,
+   "afterShift": 1,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "the clip does not move between the scored moments",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "0.5s",
+    "clip": 0,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "0.5s",
+    "to": "kf1",
+    "clip": 0,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "kf1",
+    "to": "2.5s",
+    "clip": 0,
+    "render": 0,
+    "read": "both still"
+   }
+  ],
+  "trajectories": []
+ },
+ "scale": {
+  "ok": true,
+  "changed": 7.3,
+  "read": "scales: the half-size render matches the full one (difference 7.3)"
+ },
+ "rubric": {
+  "file": "factory/12rbeg-chatbase-s-pricing-page/rubric.json",
+  "total": 45,
+  "counted": 45,
+  "pass": 44,
+  "fail": 1,
+  "unsure": 0,
+  "unjudged": 0,
+  "passRate": 98,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "motion",
+    "element": "whole page",
+    "check": "Nothing moves: the page at 0.5s and at 2.5s is identical, no element shifts, fades or changes colour",
+    "box": [
+     0,
+     0,
+     1244,
+     996
+    ],
+    "at": 0.5,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Top and bottom rows of the rebuild look identical, nothing moves. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "style",
+    "element": "page background",
+    "check": "Background is a flat very light grey (#fafafa), not pure white and not tinted",
+    "box": [
+     0,
+     50,
+     1244,
+     40
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Flat very light grey, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "style",
+    "element": "nav bar",
+    "check": "A 1px light-grey hairline runs the full width under the nav at y≈48",
+    "box": [
+     0,
+     40,
+     1244,
+     16
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Thin light hairline spans the width in both. [votes: yes/yes/unsure]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "position",
+    "element": "Chatbase logo",
+    "check": "Logo (mark + bold 'Chatbase') sits at the left, starting x≈129, vertically centred at y≈24",
+    "box": [
+     120,
+     8,
+     140,
+     32
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Mark and bold Chatbase wordmark match in size and position, within 3px. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "text",
+    "element": "nav links",
+    "check": "Nav reads exactly 'Product', 'Solutions', 'Resources' (each with a small down chevron), 'Customers', 'Enterprise', 'Pricing' in that order",
+    "box": [
+     405,
+     10,
+     435,
+     28
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same six links in order with chevrons on the first three. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "style",
+    "element": "Login button",
+    "check": "'Login' is in a white rounded button with a thin light border at the right edge, ending x≈1114",
+    "box": [
+     1052,
+     4,
+     70,
+     40
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White rounded button with thin border, ending at about the same x; the text is slightly larger and lighter. [votes: no/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "text",
+    "element": "headline",
+    "check": "Headline reads 'Predictable pricing' on line 1 and 'scalable plans' on line 2",
+    "box": [
+     360,
+     90,
+     520,
+     130
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both read 'Predictable pricing' / 'scalable plans' on two lines. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "style",
+    "element": "headline",
+    "check": "Headline is near-black, about 64px cap-to-descender per line, medium weight with tight letter-spacing, centred on x≈622",
+    "box": [
+     360,
+     90,
+     520,
+     130
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Near-black medium-weight headline, same width (~500 vs 491 at 1x) and centring. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "text",
+    "element": "subline",
+    "check": "Subline reads 'Designed for every stage of your journey.' in mid grey (clearly lighter than the headline), ~16px, centred at y≈235",
+    "box": [
+     470,
+     222,
+     305,
+     28
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "Subline is wider (~532 vs ~488 px at 1.75x, about 9%), runs off the crop edge, and looks darker than the clip's lighter grey. [votes: no/no/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "style",
+    "element": "billing toggle",
+    "check": "Toggle is a light-grey rounded track (~192x33) with a white raised thumb under 'Monthly' on the left half; 'Yearly' sits on the grey track, unselected",
+    "box": [
+     520,
+     260,
+     205,
+     45
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Light-grey track with a white thumb under Monthly, Yearly unselected; the track is slightly greyer than the clip's. [votes: yes/yes/no]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "text",
+    "element": "billing toggle",
+    "check": "'Monthly' is dark and medium weight; 'Yearly' is lighter grey",
+    "box": [
+     520,
+     260,
+     205,
+     45
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Monthly is dark and medium weight, Yearly is lighter grey, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "style",
+    "element": "discount badge",
+    "check": "A ~14px round badge filled with a pink-to-orange gradient carrying a white checkmark sits left of the text",
+    "box": [
+     552,
+     312,
+     30,
+     28
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Round pink-to-orange gradient badge with a white check, same size. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "text",
+    "element": "discount text",
+    "check": "Text reads '20% off yearly plans', dark grey, centred at y≈326",
+    "box": [
+     552,
+     312,
+     140,
+     28
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Text reads '20% off yearly plans' in dark grey at the same height, slightly larger but within tolerance. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "present",
+    "element": "background stripes",
+    "check": "Faint vertical hairlines (about 4 per side, ~52px apart) appear in the hero margins left of x≈290 and right of x≈955, between y≈95 and y≈365",
+    "box": [
+     120,
+     85,
+     1004,
+     290
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Four faint vertical stripes per side in the same hero margins. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "style",
+    "element": "background stripes",
+    "check": "Stripes are barely visible 1px lines that fade out at top and bottom; NOT solid grey bars, NOT a full grid with horizontal lines",
+    "box": [
+     120,
+     85,
+     180,
+     290
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Faint 1px stripes fading at top and bottom with no horizontal lines; the rebuild's are slightly more visible. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "position",
+    "element": "Popular tab",
+    "check": "A black tab spans exactly the Standard column width (x 524–720), from y≈354 to the card top at y≈376",
+    "box": [
+     515,
+     345,
+     215,
+     40
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Black tab spans the Standard column width and meets the card top, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "style",
+    "element": "Popular tab",
+    "check": "Tab has rounded top corners (~10px) and square bottom, and reads 'Popular' in small white text centred",
+    "box": [
+     515,
+     345,
+     215,
+     40
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rounded top corners, square bottom, small white centred 'Popular'. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "position",
+    "element": "pricing card",
+    "check": "Card spans x 129–1114 starting at y≈376 and runs off the bottom of the frame",
+    "box": [
+     120,
+     365,
+     1004,
+     631
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Card starts at the same y, spans the same width and runs off the bottom. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "style",
+    "element": "pricing card",
+    "check": "Card is white with a thin light-grey border and a large (~16px) radius on its top-left and top-right corners",
+    "box": [
+     120,
+     365,
+     60,
+     60
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White card with a thin border and a large top-left radius that matches the clip. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "style",
+    "element": "pricing card columns",
+    "check": "Card is split into 5 equal columns (~197px) by 1px light-grey vertical dividers at x≈327, 524, 720, 917",
+    "box": [
+     129,
+     376,
+     985,
+     620
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Five equal columns with 1px dividers at the same positions. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "position",
+    "element": "pricing card divider",
+    "check": "One horizontal 1px divider crosses all columns at y≈605, under the buttons",
+    "box": [
+     129,
+     595,
+     985,
+     20
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows a thin 1px horizontal line across the columns at the same height as the clip. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "text",
+    "element": "plan names",
+    "check": "Column titles read 'Free', 'Hobby', 'Standard', 'Pro', 'Enterprise', ~15px medium black at y≈406",
+    "box": [
+     140,
+     394,
+     910,
+     26
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Five titles Free/Hobby/Standard/Pro/Enterprise match in size, weight and position. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "imagery",
+    "element": "Free icon",
+    "check": "Free has a green four-point sparkle glyph",
+    "box": [
+     145,
+     396,
+     22,
+     22
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Green four-point sparkle matches the clip. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "imagery",
+    "element": "Hobby icon",
+    "check": "Hobby has a blue five-point star",
+    "box": [
+     342,
+     396,
+     22,
+     22
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Blue five-point star matches. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "imagery",
+    "element": "Standard icon",
+    "check": "Standard has an orange/amber six-point asterisk-like star",
+    "box": [
+     539,
+     396,
+     22,
+     22
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Amber six-point star matches. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "imagery",
+    "element": "Pro icon",
+    "check": "Pro has a pink eight-point burst",
+    "box": [
+     736,
+     396,
+     22,
+     22
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Pink eight-point burst matches. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "imagery",
+    "element": "Enterprise icon",
+    "check": "Enterprise has a red-orange ring (hollow circle), not a filled dot",
+    "box": [
+     933,
+     396,
+     22,
+     22
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Red-orange hollow ring, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "text",
+    "element": "prices",
+    "check": "Prices read '$0', '$40', '$150', '$500', and 'Let's Talk' across the five columns",
+    "box": [
+     140,
+     450,
+     920,
+     40
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "$0, $40, $150, $500, Let's Talk all read correctly. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "style",
+    "element": "prices",
+    "check": "Prices are ~30px, light/regular weight near-black, baseline at y≈482, left-aligned at each column's inner x (149, 346, 543, 740, 937)",
+    "box": [
+     140,
+     450,
+     920,
+     40
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Price size, weight and left alignment match the clip at each column x. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "text",
+    "element": "per month labels",
+    "check": "'per month' in small (~10px) grey appears under the first four prices at y≈497; none under 'Let's Talk'",
+    "box": [
+     140,
+     488,
+     920,
+     18
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'per month' in small grey under the first four prices, none under Let's Talk. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "text",
+    "element": "outlined buttons",
+    "check": "Buttons read 'Get started', 'Start 7-day trial', 'Start 7-day trial' (Standard), 'Start 7-day trial', 'Contact us'",
+    "box": [
+     140,
+     545,
+     965,
+     52
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "All five button labels match the clip. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "style",
+    "element": "outlined buttons",
+    "check": "Free, Hobby, Pro and Enterprise buttons are white with a 1px light-grey border, ~8px radius, 158x38 at y≈554, label dark medium ~13px centred",
+    "box": [
+     140,
+     545,
+     175,
+     52
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White buttons with a light border, rounded corners and centred label match the clip. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "style",
+    "element": "Standard primary button",
+    "check": "Standard's button is solid black with white 'Start 7-day trial' ~14px, ~8px radius, sitting about 6px higher (top y≈548) than the outlined buttons",
+    "box": [
+     535,
+     540,
+     175,
+     60
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Black button with white label raised above the outlined ones; label about 7% narrower than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "style",
+    "element": "Standard button gradient lip",
+    "check": "Under the black button a 5–6px rounded lip shows a horizontal gradient from orange (left) through pink to violet (right)",
+    "box": [
+     535,
+     575,
+     175,
+     22
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Orange-to-pink-to-violet gradient lip under the button, similar thickness. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "style",
+    "element": "Standard button gradient lip",
+    "check": "The lip is a smooth gradient band hugging the button's bottom corners; NOT a flat single-colour border, NOT a blurred glow spreading around the button",
+    "box": [
+     535,
+     540,
+     175,
+     60
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Crisp gradient band hugging the bottom corners, no glow or flat border. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "text",
+    "element": "feature leads",
+    "check": "Columns 2–5 open with 'Everything in Free +', 'Everything in Hobby +', 'Everything in Standard +', 'Everything in Pro +' at y≈633, medium dark",
+    "box": [
+     340,
+     622,
+     770,
+     22
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The four 'Everything in X +' leads match in text and position. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "text",
+    "element": "Free features",
+    "check": "Free lists 'Limited access to models' (underlined), '50 message credits/month', '1 member' with check marks",
+    "box": [
+     145,
+     622,
+     175,
+     110
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Three checked items with the first underlined; underline is a sparser dotted line than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "text",
+    "element": "Free footnote",
+    "check": "Grey small note reads 'AI agents get deleted after 14 days of inactivity on the free plan.' at y≈743–769",
+    "box": [
+     145,
+     738,
+     170,
+     36
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Grey two-line footnote text and size match the clip. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "present",
+    "element": "Hobby features",
+    "check": "Hobby has 6 checked items: Access to advanced models, 700 message credits/month, 2 members, Integrations, Basic analytics, Attachments",
+    "box": [
+     340,
+     650,
+     180,
+     200
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Six checked Hobby items match in text and spacing. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c39.png"
+   },
+   {
+    "id": "c40",
+    "axis": "present",
+    "element": "Standard features",
+    "check": "Standard has 11 checked items ending with 'Advanced integrations (Stripe, Zendesk, and more)' wrapping to three lines ending y≈975",
+    "box": [
+     537,
+     650,
+     180,
+     330
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Standard items match, with the last one wrapping to three lines at the same position. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c40.png"
+   },
+   {
+    "id": "c41",
+    "axis": "present",
+    "element": "Pro features",
+    "check": "Pro has 5 checked items: 15,000 message credits/month, 5 members, Advanced analytics, Sources suggestions, Tickets as a source",
+    "box": [
+     734,
+     650,
+     180,
+     155
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild lists the same 5 checked Pro items with matching text and spacing. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c41.png"
+   },
+   {
+    "id": "c42",
+    "axis": "present",
+    "element": "Enterprise features",
+    "check": "Enterprise has 10 checked items from 'Higher limits' to 'HIPAA-eligible'",
+    "box": [
+     931,
+     650,
+     180,
+     300
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows all 10 Enterprise items, Higher limits to HIPAA-eligible, same wording and wrap. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c42.png"
+   },
+   {
+    "id": "c43",
+    "axis": "style",
+    "element": "feature lists",
+    "check": "Some items carry a thin dotted/dashed underline (e.g. Helpdesk, Voice, Telephony, Advanced analytics, Flexible billing) while others (e.g. 3 members, API access, SSO) do not",
+    "box": [
+     537,
+     725,
+     375,
+     180
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same items (Helpdesk, Voice, Telephony, Personalization, Advanced analytics) have a thin dotted underline, and Outbound campaigns and API access have none. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c43.png"
+   },
+   {
+    "id": "c44",
+    "axis": "position",
+    "element": "feature lists",
+    "check": "Single-line feature rows are spaced ~29px apart, check glyph at column x+8 and text starting ~25px right of it",
+    "box": [
+     537,
+     725,
+     180,
+     180
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rows sit about 29px apart with the check at the same x and text starting at the same offset as the clip. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c44.png"
+   },
+   {
+    "id": "c45",
+    "axis": "style",
+    "element": "check glyphs",
+    "check": "Checks are thin dark stroked tick marks (~12px), no circle or fill behind them",
+    "box": [
+     540,
+     655,
+     30,
+     30
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Thin dark stroked ticks of about the same size with no circle or fill, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/12rbeg-chatbase-s-pricing-page/judge/c45.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 0.517,
+  "calls": 9,
+  "images": "factory/12rbeg-chatbase-s-pricing-page/judge",
+  "votes": 3,
+  "spread": [
+   43,
+   44,
+   43
+  ]
+ }
+}

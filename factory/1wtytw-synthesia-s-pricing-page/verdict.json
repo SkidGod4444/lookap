@@ -1,0 +1,1175 @@
+{
+ "slug": "1wtytw-synthesia-s-pricing-page",
+ "at": "2026-10-23T17:15:46.558Z",
+ "runs": 14,
+ "html": "factory/1wtytw-synthesia-s-pricing-page/index.html",
+ "pixel": {
+  "score": 81,
+  "stills": 81,
+  "motion": 81,
+  "moments": 4
+ },
+ "animations": 0,
+ "rank": 96,
+ "allPass": true,
+ "elements": [
+  {
+   "name": "page heading",
+   "box": [
+    351,
+    80,
+    543,
+    42
+   ],
+   "deltaE": 1.2,
+   "delta": 29,
+   "shift": [
+    -2,
+    2
+   ],
+   "afterShift": 19,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "billing radio group",
+   "box": [
+    972,
+    166,
+    160,
+    26
+   ],
+   "deltaE": 1.5,
+   "delta": 29,
+   "shift": [
+    4,
+    0
+   ],
+   "afterShift": 19,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "synthesia logo",
+   "box": [
+    112,
+    22,
+    75,
+    16
+   ],
+   "deltaE": 4.1,
+   "delta": 19,
+   "shift": null,
+   "afterShift": 19,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Most popular badge",
+   "box": [
+    696,
+    256,
+    97,
+    22
+   ],
+   "deltaE": 4.8,
+   "delta": 19,
+   "shift": [
+    4,
+    0
+   ],
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Basic feature list",
+   "box": [
+    132,
+    522,
+    194,
+    180
+   ],
+   "deltaE": 1.6,
+   "delta": 18,
+   "shift": null,
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Basic card",
+   "box": [
+    112,
+    234,
+    234,
+    268
+   ],
+   "deltaE": 0.3,
+   "delta": 16,
+   "shift": null,
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Starter card",
+   "box": [
+    374,
+    234,
+    234,
+    268
+   ],
+   "deltaE": 0.3,
+   "delta": 16,
+   "shift": null,
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Starter feature list",
+   "box": [
+    394,
+    742,
+    194,
+    254
+   ],
+   "deltaE": 1.4,
+   "delta": 16,
+   "shift": [
+    2,
+    0
+   ],
+   "afterShift": 14,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Enterprise feature list",
+   "box": [
+    918,
+    522,
+    194,
+    474
+   ],
+   "deltaE": 1.3,
+   "delta": 16,
+   "shift": null,
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "globe icon",
+   "box": [
+    1060,
+    23,
+    14,
+    14
+   ],
+   "deltaE": 0.8,
+   "delta": 15,
+   "shift": null,
+   "afterShift": 15,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "credits chips",
+   "box": [
+    132,
+    411,
+    980,
+    30
+   ],
+   "deltaE": 1.2,
+   "delta": 15,
+   "shift": [
+    0,
+    2
+   ],
+   "afterShift": 14,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Pro feature list",
+   "box": [
+    656,
+    742,
+    194,
+    254
+   ],
+   "deltaE": 1.2,
+   "delta": 15,
+   "shift": [
+    2,
+    0
+   ],
+   "afterShift": 14,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "product segmented control",
+   "box": [
+    112,
+    166,
+    241,
+    34
+   ],
+   "deltaE": 0.6,
+   "delta": 14,
+   "shift": null,
+   "afterShift": 14,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "credits coin icon",
+   "box": [
+    389,
+    532,
+    16,
+    16
+   ],
+   "deltaE": 4,
+   "delta": 14,
+   "shift": null,
+   "afterShift": 14,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "feature line icons",
+   "box": [
+    132,
+    522,
+    980,
+    474
+   ],
+   "deltaE": 1.2,
+   "delta": 13,
+   "shift": null,
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1244,
+    996
+   ],
+   "deltaE": 0.6,
+   "delta": 12,
+   "shift": null,
+   "afterShift": 12,
+   "read": "matches"
+  },
+  {
+   "name": "column rules",
+   "box": [
+    359,
+    502,
+    527,
+    494
+   ],
+   "deltaE": 1,
+   "delta": 12,
+   "shift": [
+    2,
+    0
+   ],
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "Log in link",
+   "box": [
+    1095,
+    22,
+    38,
+    16
+   ],
+   "deltaE": 0.4,
+   "delta": 11,
+   "shift": null,
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "Starter credits panel",
+   "box": [
+    374,
+    517,
+    234,
+    206
+   ],
+   "deltaE": 0.8,
+   "delta": 11,
+   "shift": [
+    2,
+    0
+   ],
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "Pro credits panel",
+   "box": [
+    636,
+    517,
+    234,
+    206
+   ],
+   "deltaE": 0.8,
+   "delta": 11,
+   "shift": [
+    2,
+    0
+   ],
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "yearly savings note",
+   "box": [
+    812,
+    172,
+    152,
+    13
+   ],
+   "deltaE": 3.1,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "Enterprise card",
+   "box": [
+    898,
+    234,
+    234,
+    268
+   ],
+   "deltaE": 1.4,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "Pro card",
+   "box": [
+    636,
+    234,
+    234,
+    268
+   ],
+   "deltaE": 1.5,
+   "delta": 9,
+   "shift": null,
+   "afterShift": 9,
+   "read": "matches"
+  },
+  {
+   "name": "plan buttons",
+   "box": [
+    132,
+    451,
+    980,
+    31
+   ],
+   "deltaE": 0.2,
+   "delta": 9,
+   "shift": null,
+   "afterShift": 9,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "the clip does not move between the scored moments",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "0.5s",
+    "clip": 0,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "0.5s",
+    "to": "kf1",
+    "clip": 0,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "kf1",
+    "to": "2.5s",
+    "clip": 0,
+    "render": 0,
+    "read": "both still"
+   }
+  ],
+  "trajectories": []
+ },
+ "scale": {
+  "ok": true,
+  "changed": 7.6,
+  "read": "scales: the half-size render matches the full one (difference 7.6)"
+ },
+ "rubric": {
+  "file": "factory/1wtytw-synthesia-s-pricing-page/rubric.json",
+  "total": 41,
+  "counted": 41,
+  "pass": 41,
+  "fail": 0,
+  "unsure": 0,
+  "unjudged": 0,
+  "passRate": 100,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "motion",
+    "element": "whole page",
+    "check": "Nothing moves: the page at 0.5s and at 2.5s is identical, with no scroll, hover state or animation anywhere",
+    "box": [
+     0,
+     0,
+     1244,
+     996
+    ],
+    "at": 0.5,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both clip and rebuild are identical between 0.5s and 2.5s, with no movement. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "style",
+    "element": "page background",
+    "check": "Background is a flat off-white (~#fbfbfb), not pure white and not tinted",
+    "box": [
+     0,
+     0,
+     1244,
+     996
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both backgrounds are the same flat off-white. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "position",
+    "element": "synthesia logo",
+    "check": "Logo sits top-left at about x112, y22, around 75px wide",
+    "box": [
+     100,
+     14,
+     100,
+     32
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Logo sits top-left at the same spot and is about 75px wide in both. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "imagery",
+    "element": "synthesia logo",
+    "check": "Logo is a blue rounded-rectangle ring mark followed by a dark bold lowercase 'synthesia' wordmark",
+    "box": [
+     108,
+     18,
+     90,
+     24
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Blue rounded ring mark followed by a dark bold lowercase 'synthesia' wordmark, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "text",
+    "element": "Log in link",
+    "check": "Top right reads 'Log in' in dark grey regular ~15px, with a thin grey globe icon to its left at about x1060",
+    "box": [
+     1050,
+     16,
+     90,
+     30
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Grey 'Log in' with a thin globe icon to its left, same size and weight as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "text",
+    "element": "page heading",
+    "check": "Heading reads exactly 'Pricing that scales with your needs'",
+    "box": [
+     340,
+     74,
+     565,
+     54
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Heading reads 'Pricing that scales with your needs' and spans the same width (~545px) as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "position",
+    "element": "page heading",
+    "check": "Heading is horizontally centred on the page (centre x≈622), with its cap line at y≈84 and baseline at y≈118 (~40px type)",
+    "box": [
+     340,
+     74,
+     565,
+     54
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Heading is centred at the same x and sits on the same cap line and baseline as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "style",
+    "element": "page heading",
+    "check": "Heading is dark navy, medium weight with tight tracking, not bold-black and not grey",
+    "box": [
+     340,
+     74,
+     565,
+     54
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Dark navy, medium weight, tight tracking, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "style",
+    "element": "product segmented control",
+    "check": "Segmented pill at x112-353, y166-200: the active segment 'VIDEO & SESSIONS' is a dark navy pill with white caps; 'API' is dark caps on the light track",
+    "box": [
+     108,
+     162,
+     250,
+     42
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Navy pill with white caps for VIDEO & SESSIONS, dark 'API' on the light track, same geometry as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "style",
+    "element": "billing radio group",
+    "check": "At right, 'MONTHLY' has an empty ring radio and 'YEARLY' has a filled dark radio dot, inside a light pill outline ending at x1132",
+    "box": [
+     968,
+     162,
+     168,
+     34
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Empty ring for MONTHLY, filled dot for YEARLY, inside the same light pill outline. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "text",
+    "element": "yearly savings note",
+    "check": "Grey small text left of the radios reads 'Save up to 3 months with yearly'",
+    "box": [
+     808,
+     168,
+     160,
+     20
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Grey 'Save up to 3 months with yearly' matches the clip's text, size and colour. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "position",
+    "element": "plan cards",
+    "check": "Four plan cards of equal width (~234px) in one row from x112 to x1132, top y234, bottom y502, with ~28px gaps",
+    "box": [
+     100,
+     226,
+     1044,
+     284
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Four equal cards in one row with the same edges, top and bottom and the same gaps as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "style",
+    "element": "plan cards",
+    "check": "Cards have rounded corners of about 12px",
+    "box": [
+     630,
+     228,
+     60,
+     60
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Corner radius of about 12px matches the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "style",
+    "element": "Basic card",
+    "check": "Basic and Starter cards are flat light grey (~#f3f3f3), with no gradient",
+    "box": [
+     112,
+     234,
+     496,
+     268
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Basic and Starter are flat light grey with no gradient, the same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "imagery",
+    "element": "Pro card",
+    "check": "Pro card is a smooth vertical gradient from deep navy (~#0c1030) at the top to soft periwinkle (~#a0b0ef) at the bottom, with no banding and no hard stops",
+    "box": [
+     636,
+     234,
+     234,
+     268
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Smooth navy-to-periwinkle gradient with no visible banding, matching the clip's colours. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "imagery",
+    "element": "Enterprise card",
+    "check": "Enterprise card is a smooth vertical gradient from near-black plum (~#141222) at the top to warm gold (~#c0a669) at the bottom",
+    "box": [
+     898,
+     234,
+     234,
+     268
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Smooth plum-to-gold gradient matches the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "text",
+    "element": "plan titles",
+    "check": "Card titles read 'Basic', 'Starter', 'Pro', 'Enterprise' at ~22px medium, left-aligned 20px inside each card at y≈266; dark on Basic/Starter, white on Pro/Enterprise",
+    "box": [
+     112,
+     250,
+     1020,
+     34
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Titles are the same size, position and colour as the clip: dark on Basic and Starter, white on Pro and Enterprise. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "present",
+    "element": "Most popular badge",
+    "check": "A translucent navy pill reading 'MOST POPULAR' in white small caps sits right of 'Pro' at about x696-793, y256-278",
+    "box": [
+     690,
+     250,
+     110,
+     34
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Translucent navy pill with white 'MOST POPULAR', same position and size as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "text",
+    "element": "Basic card",
+    "check": "Basic price reads '₹0 per month', with large '₹0' (~22px) and smaller 'per month'",
+    "box": [
+     128,
+     374,
+     140,
+     30
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Large '₹0' followed by smaller 'per month', same proportions as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "text",
+    "element": "Starter card",
+    "check": "Starter shows a struck-through grey '₹1,999' and 'Billed yearly.' above '₹1,499 per month'",
+    "box": [
+     390,
+     358,
+     160,
+     46
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Struck-through grey '₹1,999' and 'Billed yearly.' above '₹1,499 per month', matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "text",
+    "element": "Pro card",
+    "check": "Pro shows a struck '₹6,199 Billed yearly.' above white '₹4,649 per month'",
+    "box": [
+     652,
+     358,
+     170,
+     46
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Struck ₹6,199 with 'Billed yearly.' above white ₹4,649 per month, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "text",
+    "element": "Enterprise card",
+    "check": "Enterprise shows white 'Let's talk.' at ~22px on the price line (y≈388) instead of a price",
+    "box": [
+     914,
+     374,
+     120,
+     30
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White 'Let's talk.' at the same size and position on the gold card as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "text",
+    "element": "credits chips",
+    "check": "Chips read '500 CREDITS / MONTH', '15,000 CREDITS / YEAR', '72,000 CREDITS / YEAR' (with a down chevron) and 'CUSTOM CREDIT VOLUMES'",
+    "box": [
+     132,
+     411,
+     980,
+     30
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "All four chip labels match, including the chevron on the Pro chip. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "style",
+    "element": "credits chips",
+    "check": "Basic and Starter chips are white with a thin grey border; the Pro chip is filled pale lavender (~#ebeefb); the Enterprise chip is a translucent outline over the gold, with light text",
+    "box": [
+     132,
+     411,
+     980,
+     30
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White bordered chips on Basic and Starter, lavender on Pro, translucent outline on Enterprise, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "position",
+    "element": "plan buttons",
+    "check": "Each card has a full-width button 194x31 at y451, inset 20px from the card sides",
+    "box": [
+     112,
+     445,
+     1020,
+     44
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Full-width buttons sit at the same y (~251 in the tile) and are inset like the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "style",
+    "element": "plan buttons",
+    "check": "Basic, Starter and Enterprise buttons are dark navy (~#06091f) with white text; the Pro button is white with dark text",
+    "box": [
+     132,
+     451,
+     980,
+     31
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Navy buttons with white text on Basic, Starter and Enterprise, and a white Pro button, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "text",
+    "element": "plan buttons",
+    "check": "Button labels read 'Get started', 'Get started', 'Get started', 'Book demo'",
+    "box": [
+     132,
+     451,
+     980,
+     31
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Labels read Get started x3 and Book demo, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "present",
+    "element": "Starter credits panel",
+    "check": "Below the Starter and Pro cards (not Basic or Enterprise) sit light grey, thinly bordered rounded panels from y517 to y723",
+    "box": [
+     370,
+     512,
+     505,
+     216
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Grey bordered rounded panels sit under Starter and Pro only, at the same height as the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "imagery",
+    "element": "credits coin icon",
+    "check": "The CREDITS header has a small blue filled circle icon with a white mark, inside a white rounded square, then bold caps 'CREDITS' and a grey info circle",
+    "box": [
+     380,
+     525,
+     120,
+     30
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Blue circle with white mark in a white rounded square, then bold CREDITS and a grey info circle; the text is a touch larger (~4%). [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "text",
+    "element": "Starter credits panel",
+    "check": "Starter panel lines read 'Video up to ~150 min', 'Dubbing up to 197 min', 'Surveys up to 42 responses', with the 'up to …' part darker/bolder than the label",
+    "box": [
+     386,
+     565,
+     210,
+     60
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "All three lines match the clip's text, with 'up to …' darker and bolder than the label. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "text",
+    "element": "Pro credits panel",
+    "check": "Pro panel lines read 'Video up to ~720 min', 'Dubbing up to 947 min', 'Surveys up to 205 responses'",
+    "box": [
+     648,
+     565,
+     210,
+     60
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Lines read ~720 min, 947 min and 205 responses, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "present",
+    "element": "Starter credits panel",
+    "check": "Each credits panel ends with 'Roleplays' and an outlined pill '+ Add learner seat' at y≈694",
+    "box": [
+     386,
+     678,
+     210,
+     32
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Roleplays and an outlined '+ Add learner seat' pill match the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "text",
+    "element": "Basic feature list",
+    "check": "Basic list reads 'Free allowance' (bold, info icon), 'Share your content online via share link', 'Pre-built libraries, templates, roleplays, surveys', 'Videos carry a Synthesia watermark'",
+    "box": [
+     128,
+     520,
+     200,
+     184
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "All four labels match, with a bold Free allowance and an info icon. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "text",
+    "element": "Starter feature list",
+    "check": "Starter list begins 'Everything in Basic +' (bold) then 'Download your content', 'Remove Synthesia logo', 'AI Video Assistant', 'Survey Analytics', '3 guests', '125+ Synthesia AI Avatars'",
+    "box": [
+     390,
+     740,
+     200,
+     250
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The six Starter rows read the same as the clip's, with a bold heading. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "text",
+    "element": "Pro feature list",
+    "check": "Pro list begins 'Everything in Starter +' then '5 Personal Avatars', 'Branded video pages', 'Interactive videos', '5 guests', '180+ Synthesia AI Avatars', 'Flexible plan tiers'",
+    "box": [
+     652,
+     740,
+     200,
+     250
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The six Pro rows read the same as the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "text",
+    "element": "Enterprise feature list",
+    "check": "Enterprise list begins 'Everything in Pro +' directly under the card (y≈531) and includes 'Unlimited video minutes', '1-Click Translations into 140+ languages', 'SAML/SSO', 'Brand Kits', 'SCORM export', 'Dedicated CSM'",
+    "box": [
+     914,
+     520,
+     200,
+     450
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The list starts with Everything in Pro + and includes all the named items, in the same order as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "position",
+    "element": "Enterprise feature list",
+    "check": "Enterprise list rows are spaced about 37px apart (Unlimited video minutes y≈568, 240+ stock AI Avatars y≈660, SAML/SSO y≈735) and the list runs off the bottom edge",
+    "box": [
+     914,
+     550,
+     200,
+     446
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Row spacing and positions agree with the clip, and the list runs off the bottom. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "style",
+    "element": "feature line icons",
+    "check": "Every feature row has a thin outline icon (~14px, 1.5px stroke) in dark grey to the left of its label, not filled glyphs",
+    "box": [
+     912,
+     560,
+     40,
+     420
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Thin outline icons in dark grey on every row, not filled glyphs; the rebuild's are a little lighter. [votes: no/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "style",
+    "element": "feature lists",
+    "check": "Feature rows are separated by hairline light grey horizontal dividers spanning the column text width",
+    "box": [
+     394,
+     760,
+     200,
+     230
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Hairline light grey dividers between rows span the text width, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c39.png"
+   },
+   {
+    "id": "c40",
+    "axis": "present",
+    "element": "column rules",
+    "check": "Faint vertical grey rules run between columns below the cards at about x360, x622 and x884, down to the bottom edge",
+    "box": [
+     350,
+     500,
+     545,
+     496
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Faint vertical column rules run down to the bottom at similar positions to the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c40.png"
+   },
+   {
+    "id": "c41",
+    "axis": "style",
+    "element": "feature text",
+    "check": "Feature labels are dark navy ~13px regular on the off-white page; the first 'Everything in … +' row and 'Free allowance' are semibold",
+    "box": [
+     128,
+     520,
+     990,
+     250
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild's feature labels are dark navy regular text at about the clip's size, and 'Free allowance', 'Everything in Basic +', 'Everything in Starter +' and 'Everything in Pro +' are semibold like the clip's. I judged this from a downscaled tile, so fine weight differences could be missed. [votes: yes/yes/yes]",
+    "image": "factory/1wtytw-synthesia-s-pricing-page/judge/c41.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 1.441,
+  "calls": 9,
+  "images": "factory/1wtytw-synthesia-s-pricing-page/judge",
+  "votes": 3,
+  "spread": [
+   40,
+   41,
+   41
+  ]
+ }
+}

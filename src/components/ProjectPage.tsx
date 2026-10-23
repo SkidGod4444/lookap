@@ -126,7 +126,7 @@ export function ProjectPage({ slug }: { slug: string }) {
                   </>
                 )}
               </dl>
-              <p className="mt-2 text-[11px] leading-[1.5] text-subtle">{f.build.run ? `The agent run above is metered; it matched the clip's stills at ${f.build.run.score}/100 and missed the motion. ` : ""}{f.build.hand ? `Then ${f.build.hand}, not metered. ` : ""}Flip the switch above to use it. The file is on Max.</p>
+              <p className="mt-2 text-[11px] leading-[1.5] text-subtle">{f.build.run ? `The metered run above scored ${f.build.run.score}/100 on pixels against the clip. ` : ""}{f.build.hand ? (/^none\b/.test(f.build.hand) ? `No hand edits: ${f.build.hand.replace(/^none:?\s*/, "")}. ` : `Then ${f.build.hand}, not metered. `) : ""}Flip the switch above to use it. The file is on Max.</p>
             </div>
           ); })()}
           {recipe && (

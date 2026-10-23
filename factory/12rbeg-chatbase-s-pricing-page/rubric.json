@@ -1,0 +1,1077 @@
+{
+ "slug": "12rbeg-chatbase-s-pricing-page",
+ "frame": {
+  "w": 1244,
+  "h": 996
+ },
+ "at": "2026-10-23T16:51:30.226Z",
+ "model": "opus",
+ "costUsd": 0.584,
+ "summary": "A static, light pricing page (#fafafa ground, near-black type) at 1244x996; nothing moves across the 3 s (frame differences between 0 s, 0.5 s, 1.5 s, 2 s and 2.9 s are zero). Top nav bar 0–48 px with a hairline under it: Chatbase logo (bold black mark and wordmark) at left x≈129, centred links \"Product ⌄ Solutions ⌄ Resources ⌄ Customers Enterprise Pricing\" in 12–13 px dark grey, and a white outlined \"Login\" pill at right (x≈1060–1114). The hero is centred on x≈622: a two-line headline \"Predictable pricing / scalable plans\" (~64 px, medium weight, black, tight leading, y≈95–215), a grey subline \"Designed for every stage of your journey.\" at y≈235, a segmented toggle (grey track 526–718 × 266–298 with a white raised \"Monthly\" thumb on the left and grey \"Yearly\" on the right), and a pink–orange gradient check badge with \"20% off yearly plans\" at y≈326. Behind the hero, on both sides, runs a very faint set of vertical hairlines (about 4 per side, ~52 px apart, from y≈95 to ≈365) that fade at top and bottom. Below sits one wide white card (x 129–1114, top y≈376, large ~16 px top radius, runs off the bottom) split by 1 px light-grey dividers into five equal 197 px columns: Free, Hobby, Standard, Pro, Enterprise. Each column has a small coloured icon + 15 px name (y≈406), a large ~30 px light-weight price ($0, $40, $150, $500, \"Let's Talk\") with grey \"per month\" under it, an outlined white button with ~8 px radius at y≈554–591, a horizontal divider at y≈605, then an \"Everything in X +\" lead and a checkmark feature list at 29 px rhythm, some items dotted-underlined. The Standard column is the highlight: a black \"Popular\" tab with rounded top corners sits on top of it (524–720 × 354–376) and its button is solid black (543–701 × 548–586) with a rounded orange-to-pink-to-violet gradient lip showing 5–6 px under it.",
+ "elements": [
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1244,
+    996
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "flat #fafafa"
+  },
+  {
+   "name": "nav bar",
+   "box": [
+    0,
+    0,
+    1244,
+    48
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "same light ground with 1px light-grey hairline at y≈48"
+  },
+  {
+   "name": "Chatbase logo",
+   "box": [
+    129,
+    14,
+    114,
+    20
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "black square C-like mark + bold 'Chatbase' wordmark"
+  },
+  {
+   "name": "nav links",
+   "box": [
+    412,
+    16,
+    420,
+    15
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "Product ⌄, Solutions ⌄, Resources ⌄, Customers, Enterprise, Pricing; dark grey ~13px"
+  },
+  {
+   "name": "Login button",
+   "box": [
+    1060,
+    9,
+    54,
+    29
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "white pill-ish rounded rect, light border, 'Login' medium black"
+  },
+  {
+   "name": "background hairline stripes left",
+   "box": [
+    129,
+    95,
+    160,
+    272
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "~4 faint vertical lines ~52px apart, fading top and bottom"
+  },
+  {
+   "name": "background hairline stripes right",
+   "box": [
+    955,
+    95,
+    160,
+    272
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "mirror of left stripes"
+  },
+  {
+   "name": "headline",
+   "box": [
+    374,
+    97,
+    496,
+    116
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Predictable pricing' / 'scalable plans', ~64px medium black, centred"
+  },
+  {
+   "name": "subline",
+   "box": [
+    481,
+    227,
+    282,
+    17
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Designed for every stage of your journey.' grey ~16px"
+  },
+  {
+   "name": "billing toggle track",
+   "box": [
+    526,
+    266,
+    192,
+    33
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "light grey rounded track with faint border"
+  },
+  {
+   "name": "Monthly thumb",
+   "box": [
+    529,
+    269,
+    90,
+    27
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "white rounded rect, 'Monthly' dark medium"
+  },
+  {
+   "name": "Yearly label",
+   "box": [
+    652,
+    275,
+    35,
+    14
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "grey"
+  },
+  {
+   "name": "discount badge icon",
+   "box": [
+    559,
+    319,
+    14,
+    14
+   ],
+   "kind": "icon",
+   "class": "css",
+   "note": "pink-to-orange gradient circle with white check"
+  },
+  {
+   "name": "discount text",
+   "box": [
+    579,
+    319,
+    107,
+    14
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'20% off yearly plans' dark grey"
+  },
+  {
+   "name": "Popular tab",
+   "box": [
+    524,
+    354,
+    196,
+    22
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "black, rounded top corners, white 'Popular' ~11px"
+  },
+  {
+   "name": "pricing card",
+   "box": [
+    129,
+    376,
+    985,
+    620
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "white, 1px light border, ~16px top radius, 5 columns divided by 1px grey lines at x≈327,524,720,917; horizontal divider y≈605"
+  },
+  {
+   "name": "Free column header",
+   "box": [
+    149,
+    398,
+    53,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "green 4-point sparkle + 'Free'"
+  },
+  {
+   "name": "Hobby column header",
+   "box": [
+    346,
+    398,
+    67,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "blue 5-point star + 'Hobby'"
+  },
+  {
+   "name": "Standard column header",
+   "box": [
+    543,
+    398,
+    84,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "orange 6-point asterisk star + 'Standard'"
+  },
+  {
+   "name": "Pro column header",
+   "box": [
+    740,
+    398,
+    46,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "pink 8-point burst + 'Pro'"
+  },
+  {
+   "name": "Enterprise column header",
+   "box": [
+    937,
+    398,
+    92,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "red-orange ring + 'Enterprise'"
+  },
+  {
+   "name": "plan icons",
+   "box": [
+    149,
+    398,
+    808,
+    17
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "five small coloured glyphs, one per column"
+  },
+  {
+   "name": "prices",
+   "box": [
+    149,
+    455,
+    900,
+    50
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "$0, $40, $150, $500, Let's Talk ~30px light; 'per month' grey ~10px below the first four"
+  },
+  {
+   "name": "outlined buttons",
+   "box": [
+    149,
+    554,
+    946,
+    38
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "Get started / Start 7-day trial / Start 7-day trial / Contact us; white, 1px grey border, ~8px radius, 158px wide"
+  },
+  {
+   "name": "Standard primary button",
+   "box": [
+    543,
+    548,
+    158,
+    44
+   ],
+   "kind": "control",
+   "class": "css",
+   "note": "solid black, ~8px radius, white 'Start 7-day trial' ~14px, gradient lip orange→pink→violet beneath"
+  },
+  {
+   "name": "feature lists",
+   "box": [
+    149,
+    625,
+    946,
+    350
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "check glyph + 12–13px dark text, 29px rows, some dotted underlines"
+  },
+  {
+   "name": "Free footnote",
+   "box": [
+    149,
+    743,
+    156,
+    26
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'AI agents get deleted after 14 days of inactivity on the free plan.' grey ~10px"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "whole page",
+   "axis": "motion",
+   "check": "Nothing moves: the page at 0.5s and at 2.5s is identical, no element shifts, fades or changes colour",
+   "box": [
+    0,
+    0,
+    1244,
+    996
+   ],
+   "scope": "frame",
+   "at": 0.5,
+   "then": 2.5
+  },
+  {
+   "id": "c02",
+   "element": "page background",
+   "axis": "style",
+   "check": "Background is a flat very light grey (#fafafa), not pure white and not tinted",
+   "box": [
+    0,
+    50,
+    1244,
+    40
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "nav bar",
+   "axis": "style",
+   "check": "A 1px light-grey hairline runs the full width under the nav at y≈48",
+   "box": [
+    0,
+    40,
+    1244,
+    16
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "Chatbase logo",
+   "axis": "position",
+   "check": "Logo (mark + bold 'Chatbase') sits at the left, starting x≈129, vertically centred at y≈24",
+   "box": [
+    120,
+    8,
+    140,
+    32
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "nav links",
+   "axis": "text",
+   "check": "Nav reads exactly 'Product', 'Solutions', 'Resources' (each with a small down chevron), 'Customers', 'Enterprise', 'Pricing' in that order",
+   "box": [
+    405,
+    10,
+    435,
+    28
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "Login button",
+   "axis": "style",
+   "check": "'Login' is in a white rounded button with a thin light border at the right edge, ending x≈1114",
+   "box": [
+    1052,
+    4,
+    70,
+    40
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "headline",
+   "axis": "text",
+   "check": "Headline reads 'Predictable pricing' on line 1 and 'scalable plans' on line 2",
+   "box": [
+    360,
+    90,
+    520,
+    130
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "headline",
+   "axis": "style",
+   "check": "Headline is near-black, about 64px cap-to-descender per line, medium weight with tight letter-spacing, centred on x≈622",
+   "box": [
+    360,
+    90,
+    520,
+    130
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "subline",
+   "axis": "text",
+   "check": "Subline reads 'Designed for every stage of your journey.' in mid grey (clearly lighter than the headline), ~16px, centred at y≈235",
+   "box": [
+    470,
+    222,
+    305,
+    28
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "billing toggle",
+   "axis": "style",
+   "check": "Toggle is a light-grey rounded track (~192x33) with a white raised thumb under 'Monthly' on the left half; 'Yearly' sits on the grey track, unselected",
+   "box": [
+    520,
+    260,
+    205,
+    45
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "billing toggle",
+   "axis": "text",
+   "check": "'Monthly' is dark and medium weight; 'Yearly' is lighter grey",
+   "box": [
+    520,
+    260,
+    205,
+    45
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "discount badge",
+   "axis": "style",
+   "check": "A ~14px round badge filled with a pink-to-orange gradient carrying a white checkmark sits left of the text",
+   "box": [
+    552,
+    312,
+    30,
+    28
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "discount text",
+   "axis": "text",
+   "check": "Text reads '20% off yearly plans', dark grey, centred at y≈326",
+   "box": [
+    552,
+    312,
+    140,
+    28
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "background stripes",
+   "axis": "present",
+   "check": "Faint vertical hairlines (about 4 per side, ~52px apart) appear in the hero margins left of x≈290 and right of x≈955, between y≈95 and y≈365",
+   "box": [
+    120,
+    85,
+    1004,
+    290
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "background stripes",
+   "axis": "style",
+   "check": "Stripes are barely visible 1px lines that fade out at top and bottom; NOT solid grey bars, NOT a full grid with horizontal lines",
+   "box": [
+    120,
+    85,
+    180,
+    290
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "Popular tab",
+   "axis": "position",
+   "check": "A black tab spans exactly the Standard column width (x 524–720), from y≈354 to the card top at y≈376",
+   "box": [
+    515,
+    345,
+    215,
+    40
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "Popular tab",
+   "axis": "style",
+   "check": "Tab has rounded top corners (~10px) and square bottom, and reads 'Popular' in small white text centred",
+   "box": [
+    515,
+    345,
+    215,
+    40
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "pricing card",
+   "axis": "position",
+   "check": "Card spans x 129–1114 starting at y≈376 and runs off the bottom of the frame",
+   "box": [
+    120,
+    365,
+    1004,
+    631
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c19",
+   "element": "pricing card",
+   "axis": "style",
+   "check": "Card is white with a thin light-grey border and a large (~16px) radius on its top-left and top-right corners",
+   "box": [
+    120,
+    365,
+    60,
+    60
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "pricing card columns",
+   "axis": "style",
+   "check": "Card is split into 5 equal columns (~197px) by 1px light-grey vertical dividers at x≈327, 524, 720, 917",
+   "box": [
+    129,
+    376,
+    985,
+    620
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "pricing card divider",
+   "axis": "position",
+   "check": "One horizontal 1px divider crosses all columns at y≈605, under the buttons",
+   "box": [
+    129,
+    595,
+    985,
+    20
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "plan names",
+   "axis": "text",
+   "check": "Column titles read 'Free', 'Hobby', 'Standard', 'Pro', 'Enterprise', ~15px medium black at y≈406",
+   "box": [
+    140,
+    394,
+    910,
+    26
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "Free icon",
+   "axis": "imagery",
+   "check": "Free has a green four-point sparkle glyph",
+   "box": [
+    145,
+    396,
+    22,
+    22
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "Hobby icon",
+   "axis": "imagery",
+   "check": "Hobby has a blue five-point star",
+   "box": [
+    342,
+    396,
+    22,
+    22
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c25",
+   "element": "Standard icon",
+   "axis": "imagery",
+   "check": "Standard has an orange/amber six-point asterisk-like star",
+   "box": [
+    539,
+    396,
+    22,
+    22
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c26",
+   "element": "Pro icon",
+   "axis": "imagery",
+   "check": "Pro has a pink eight-point burst",
+   "box": [
+    736,
+    396,
+    22,
+    22
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c27",
+   "element": "Enterprise icon",
+   "axis": "imagery",
+   "check": "Enterprise has a red-orange ring (hollow circle), not a filled dot",
+   "box": [
+    933,
+    396,
+    22,
+    22
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "prices",
+   "axis": "text",
+   "check": "Prices read '$0', '$40', '$150', '$500', and 'Let's Talk' across the five columns",
+   "box": [
+    140,
+    450,
+    920,
+    40
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c29",
+   "element": "prices",
+   "axis": "style",
+   "check": "Prices are ~30px, light/regular weight near-black, baseline at y≈482, left-aligned at each column's inner x (149, 346, 543, 740, 937)",
+   "box": [
+    140,
+    450,
+    920,
+    40
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c30",
+   "element": "per month labels",
+   "axis": "text",
+   "check": "'per month' in small (~10px) grey appears under the first four prices at y≈497; none under 'Let's Talk'",
+   "box": [
+    140,
+    488,
+    920,
+    18
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c31",
+   "element": "outlined buttons",
+   "axis": "text",
+   "check": "Buttons read 'Get started', 'Start 7-day trial', 'Start 7-day trial' (Standard), 'Start 7-day trial', 'Contact us'",
+   "box": [
+    140,
+    545,
+    965,
+    52
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c32",
+   "element": "outlined buttons",
+   "axis": "style",
+   "check": "Free, Hobby, Pro and Enterprise buttons are white with a 1px light-grey border, ~8px radius, 158x38 at y≈554, label dark medium ~13px centred",
+   "box": [
+    140,
+    545,
+    175,
+    52
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c33",
+   "element": "Standard primary button",
+   "axis": "style",
+   "check": "Standard's button is solid black with white 'Start 7-day trial' ~14px, ~8px radius, sitting about 6px higher (top y≈548) than the outlined buttons",
+   "box": [
+    535,
+    540,
+    175,
+    60
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c34",
+   "element": "Standard button gradient lip",
+   "axis": "style",
+   "check": "Under the black button a 5–6px rounded lip shows a horizontal gradient from orange (left) through pink to violet (right)",
+   "box": [
+    535,
+    575,
+    175,
+    22
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c35",
+   "element": "Standard button gradient lip",
+   "axis": "style",
+   "check": "The lip is a smooth gradient band hugging the button's bottom corners; NOT a flat single-colour border, NOT a blurred glow spreading around the button",
+   "box": [
+    535,
+    540,
+    175,
+    60
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c36",
+   "element": "feature leads",
+   "axis": "text",
+   "check": "Columns 2–5 open with 'Everything in Free +', 'Everything in Hobby +', 'Everything in Standard +', 'Everything in Pro +' at y≈633, medium dark",
+   "box": [
+    340,
+    622,
+    770,
+    22
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c37",
+   "element": "Free features",
+   "axis": "text",
+   "check": "Free lists 'Limited access to models' (underlined), '50 message credits/month', '1 member' with check marks",
+   "box": [
+    145,
+    622,
+    175,
+    110
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c38",
+   "element": "Free footnote",
+   "axis": "text",
+   "check": "Grey small note reads 'AI agents get deleted after 14 days of inactivity on the free plan.' at y≈743–769",
+   "box": [
+    145,
+    738,
+    170,
+    36
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c39",
+   "element": "Hobby features",
+   "axis": "present",
+   "check": "Hobby has 6 checked items: Access to advanced models, 700 message credits/month, 2 members, Integrations, Basic analytics, Attachments",
+   "box": [
+    340,
+    650,
+    180,
+    200
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c40",
+   "element": "Standard features",
+   "axis": "present",
+   "check": "Standard has 11 checked items ending with 'Advanced integrations (Stripe, Zendesk, and more)' wrapping to three lines ending y≈975",
+   "box": [
+    537,
+    650,
+    180,
+    330
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c41",
+   "element": "Pro features",
+   "axis": "present",
+   "check": "Pro has 5 checked items: 15,000 message credits/month, 5 members, Advanced analytics, Sources suggestions, Tickets as a source",
+   "box": [
+    734,
+    650,
+    180,
+    155
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c42",
+   "element": "Enterprise features",
+   "axis": "present",
+   "check": "Enterprise has 10 checked items from 'Higher limits' to 'HIPAA-eligible'",
+   "box": [
+    931,
+    650,
+    180,
+    300
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c43",
+   "element": "feature lists",
+   "axis": "style",
+   "check": "Some items carry a thin dotted/dashed underline (e.g. Helpdesk, Voice, Telephony, Advanced analytics, Flexible billing) while others (e.g. 3 members, API access, SSO) do not",
+   "box": [
+    537,
+    725,
+    375,
+    180
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c44",
+   "element": "feature lists",
+   "axis": "position",
+   "check": "Single-line feature rows are spaced ~29px apart, check glyph at column x+8 and text starting ~25px right of it",
+   "box": [
+    537,
+    725,
+    180,
+    180
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c45",
+   "element": "check glyphs",
+   "axis": "style",
+   "check": "Checks are thin dark stroked tick marks (~12px), no circle or fill behind them",
+   "box": [
+    540,
+    655,
+    30,
+    30
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  }
+ ],
+ "imagery": [
+  {
+   "name": "Chatbase logo",
+   "box": [
+    129,
+    14,
+    114,
+    20
+   ],
+   "class": "structured",
+   "what": "black rounded-square C mark followed by bold 'Chatbase' wordmark",
+   "at": 1.5
+  },
+  {
+   "name": "plan icons",
+   "box": [
+    149,
+    398,
+    808,
+    17
+   ],
+   "class": "structured",
+   "what": "green 4-point sparkle, blue 5-point star, orange 6-point asterisk star, pink 8-point burst, red-orange ring",
+   "at": 1.5
+  },
+  {
+   "name": "discount badge",
+   "box": [
+    559,
+    319,
+    14,
+    14
+   ],
+   "class": "css",
+   "what": "pink-to-orange gradient circle with white check",
+   "at": 1.5
+  },
+  {
+   "name": "Standard button gradient lip",
+   "box": [
+    543,
+    580,
+    158,
+    12
+   ],
+   "class": "css",
+   "what": "orange→pink→violet horizontal gradient band under the black button",
+   "at": 1.5
+  },
+  {
+   "name": "hero hairline stripes",
+   "box": [
+    129,
+    95,
+    986,
+    272
+   ],
+   "class": "css",
+   "what": "faint vertical 1px lines in both hero margins, fading at top and bottom",
+   "at": 1.5
+  }
+ ],
+ "moves": []
+}

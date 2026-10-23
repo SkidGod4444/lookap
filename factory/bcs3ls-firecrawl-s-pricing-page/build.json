@@ -1,0 +1,16 @@
+{
+ "model": "Claude Opus 5.5",
+ "modelId": "claude-opus-5-5",
+ "date": "2026-10-23",
+ "run": {
+  "model": "Claude Opus 5.5",
+  "turns": 172,
+  "outputTokens": 94836,
+  "totalTokens": 7873218,
+  "costUsd": 12.06,
+  "minutes": 38.4,
+  "score": 84
+ },
+ "hand": "fixed by hand after 4 judged rounds (round 3 kept): the map's coastline, the orange glyph texture, feature-line wrap, the stacked extra-credits row and the Scale Plans paragraph; rubric 42 of 43 with none failing and one unsure under a three-vote judge, reviewed by eye",
+ "hint": "Drag the orange credits slider: the selected plan follows it, and past 1M the Scale plans slide up."
+}

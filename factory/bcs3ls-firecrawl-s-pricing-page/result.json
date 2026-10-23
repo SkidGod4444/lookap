@@ -1,0 +1,184 @@
+{
+ "slug": "bcs3ls-firecrawl-s-pricing-page",
+ "title": "Firecrawl's Pricing Page",
+ "author": "Firecrawl",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "review",
+ "ended": "round limit",
+ "bestRound": 3,
+ "rank": 95,
+ "allPass": true,
+ "rubric": {
+  "pass": 42,
+  "fail": 0,
+  "unsure": 1,
+  "of": 43,
+  "failed": [],
+  "counted": 43
+ },
+ "score": 84,
+ "motion": "the render changes where the clip changes",
+ "imagery": [
+  {
+   "name": "Firecrawl logo",
+   "class": "structured",
+   "box": [
+    272,
+    29,
+    88,
+    22
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "dot-matrix world map",
+   "class": "css",
+   "box": [
+    440,
+    82,
+    670,
+    166
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "orange glyph texture",
+   "class": "css",
+   "box": [
+    456,
+    640,
+    214,
+    160
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "India flag",
+   "class": "structured",
+   "box": [
+    656,
+    463,
+    12,
+    9
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 14.4,
+   "turns": 49,
+   "costUsd": 3.546620000000001,
+   "tokens": {
+    "written": 49009,
+    "read": 2690393
+   },
+   "judgeUsd": 0.962,
+   "ended": "completed",
+   "score": 83,
+   "rank": 84,
+   "allPass": false,
+   "rubric": {
+    "pass": 35,
+    "fail": 7,
+    "unsure": 1,
+    "of": 43
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 8.2,
+   "turns": 56,
+   "costUsd": 1.4647926000000002,
+   "tokens": {
+    "written": 19261,
+    "read": 2085035
+   },
+   "judgeUsd": 1.272,
+   "ended": "completed",
+   "score": 83,
+   "rank": 92,
+   "allPass": false,
+   "rubric": {
+    "pass": 40,
+    "fail": 2,
+    "unsure": 1,
+    "of": 43
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 8.4,
+   "turns": 42,
+   "costUsd": 1.4070343999999992,
+   "tokens": {
+    "written": 18213,
+    "read": 2016133
+   },
+   "judgeUsd": 0.943,
+   "ended": "completed",
+   "score": 83,
+   "rank": 95,
+   "allPass": false,
+   "rubric": {
+    "pass": 42,
+    "fail": 1,
+    "unsure": 0,
+    "of": 43
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 4,
+   "minutes": 7.5,
+   "turns": 25,
+   "costUsd": 0.798834,
+   "tokens": {
+    "written": 8353,
+    "read": 986821
+   },
+   "judgeUsd": 0.904,
+   "ended": "completed",
+   "score": 83,
+   "rank": 93,
+   "allPass": false,
+   "rubric": {
+    "pass": 41,
+    "fail": 1,
+    "unsure": 1,
+    "of": 43
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": false
+  }
+ ],
+ "minutes": 38.4,
+ "tokens": {
+  "written": 94836,
+  "read": 7778382
+ },
+ "cost": {
+  "codingUsd": 7.22,
+  "judgeUsd": 4.08,
+  "rubricUsd": 0.761,
+  "totalUsd": 12.06
+ },
+ "notes": true,
+ "at": "2026-10-23T17:30:08.323Z",
+ "handFix": {
+  "on": "2026-10-23",
+  "what": "map coastline and tone, orange glyph texture, feature-line wrap, stacked extra-credits row, Scale Plans paragraph",
+  "judge": "42/43 pass, 0 fail, 1 unsure, 3 votes"
+ }
+}

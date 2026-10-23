@@ -1,0 +1,412 @@
+{
+ "slug": "1wtytw-synthesia-s-pricing-page",
+ "measured": "draft",
+ "frame": {
+  "w": 1244,
+  "h": 996
+ },
+ "animations": 0,
+ "score": 81,
+ "stills": 81,
+ "motion": 81,
+ "keyframes": [
+  {
+   "keyframe": "0s",
+   "at": 0,
+   "still": false,
+   "score": 81,
+   "overall": 12,
+   "elements": [
+    {
+     "name": "draft 12 #ebeefa",
+     "box": [
+      656,
+      411,
+      194,
+      29
+     ],
+     "reference": "#e1e5f1",
+     "yours": "#dde0ee",
+     "delta": 15,
+     "colour": 4,
+     "deltaE": 1.8,
+     "shift": null,
+     "afterShift": 15,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 7 #121844",
+     "box": [
+      636,
+      235,
+      234,
+      43
+     ],
+     "reference": "#242b57",
+     "yours": "#293160",
+     "delta": 13,
+     "colour": 7,
+     "deltaE": 3.1,
+     "shift": null,
+     "afterShift": 13,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #25202a",
+     "box": [
+      898,
+      235,
+      234,
+      63
+     ],
+     "reference": "#312c34",
+     "yours": "#332e33",
+     "delta": 11,
+     "colour": 1,
+     "deltaE": 1.5,
+     "shift": null,
+     "afterShift": 11,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "A4",
+     "box": [
+      622,
+      0,
+      207,
+      166
+     ],
+     "delta": 23,
+     "over": []
+    },
+    {
+     "cell": "C3",
+     "box": [
+      415,
+      332,
+      207,
+      166
+     ],
+     "delta": 20,
+     "over": [
+      "draft 8 #06091f"
+     ]
+    },
+    {
+     "cell": "A3",
+     "box": [
+      415,
+      0,
+      207,
+      166
+     ],
+     "delta": 19,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "0.5s",
+   "at": 0.5,
+   "still": false,
+   "score": 81,
+   "overall": 12,
+   "elements": [
+    {
+     "name": "draft 12 #ebeefa",
+     "box": [
+      656,
+      411,
+      194,
+      29
+     ],
+     "reference": "#e1e5f2",
+     "yours": "#dde0ee",
+     "delta": 15,
+     "colour": 4,
+     "deltaE": 1.8,
+     "shift": null,
+     "afterShift": 15,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 7 #121844",
+     "box": [
+      636,
+      235,
+      234,
+      43
+     ],
+     "reference": "#242b57",
+     "yours": "#293160",
+     "delta": 13,
+     "colour": 7,
+     "deltaE": 3.1,
+     "shift": null,
+     "afterShift": 13,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #25202a",
+     "box": [
+      898,
+      235,
+      234,
+      63
+     ],
+     "reference": "#312c34",
+     "yours": "#332e33",
+     "delta": 11,
+     "colour": 1,
+     "deltaE": 1.4,
+     "shift": null,
+     "afterShift": 11,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "A4",
+     "box": [
+      622,
+      0,
+      207,
+      166
+     ],
+     "delta": 23,
+     "over": []
+    },
+    {
+     "cell": "C3",
+     "box": [
+      415,
+      332,
+      207,
+      166
+     ],
+     "delta": 20,
+     "over": [
+      "draft 8 #06091f"
+     ]
+    },
+    {
+     "cell": "A3",
+     "box": [
+      415,
+      0,
+      207,
+      166
+     ],
+     "delta": 19,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "kf1",
+   "at": 1.5,
+   "still": true,
+   "score": 81,
+   "overall": 12,
+   "elements": [
+    {
+     "name": "draft 12 #ebeefa",
+     "box": [
+      656,
+      411,
+      194,
+      29
+     ],
+     "reference": "#e1e5f2",
+     "yours": "#dde0ee",
+     "delta": 15,
+     "colour": 4,
+     "deltaE": 1.8,
+     "shift": null,
+     "afterShift": 15,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 7 #121844",
+     "box": [
+      636,
+      235,
+      234,
+      43
+     ],
+     "reference": "#242b57",
+     "yours": "#293160",
+     "delta": 13,
+     "colour": 7,
+     "deltaE": 3.1,
+     "shift": null,
+     "afterShift": 13,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #25202a",
+     "box": [
+      898,
+      235,
+      234,
+      63
+     ],
+     "reference": "#312c34",
+     "yours": "#332e33",
+     "delta": 11,
+     "colour": 1,
+     "deltaE": 1.4,
+     "shift": null,
+     "afterShift": 11,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "A4",
+     "box": [
+      622,
+      0,
+      207,
+      166
+     ],
+     "delta": 23,
+     "over": []
+    },
+    {
+     "cell": "C3",
+     "box": [
+      415,
+      332,
+      207,
+      166
+     ],
+     "delta": 20,
+     "over": [
+      "draft 8 #06091f"
+     ]
+    },
+    {
+     "cell": "A3",
+     "box": [
+      415,
+      0,
+      207,
+      166
+     ],
+     "delta": 19,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "2.5s",
+   "at": 2.5,
+   "still": false,
+   "score": 81,
+   "overall": 12,
+   "elements": [
+    {
+     "name": "draft 12 #ebeefa",
+     "box": [
+      656,
+      411,
+      194,
+      29
+     ],
+     "reference": "#e1e5f2",
+     "yours": "#dde0ee",
+     "delta": 15,
+     "colour": 4,
+     "deltaE": 1.8,
+     "shift": null,
+     "afterShift": 15,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 7 #121844",
+     "box": [
+      636,
+      235,
+      234,
+      43
+     ],
+     "reference": "#242b57",
+     "yours": "#293160",
+     "delta": 13,
+     "colour": 7,
+     "deltaE": 3.1,
+     "shift": null,
+     "afterShift": 13,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #25202a",
+     "box": [
+      898,
+      235,
+      234,
+      63
+     ],
+     "reference": "#312c34",
+     "yours": "#332e33",
+     "delta": 11,
+     "colour": 1,
+     "deltaE": 1.5,
+     "shift": null,
+     "afterShift": 11,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "A4",
+     "box": [
+      622,
+      0,
+      207,
+      166
+     ],
+     "delta": 23,
+     "over": []
+    },
+    {
+     "cell": "C3",
+     "box": [
+      415,
+      332,
+      207,
+      166
+     ],
+     "delta": 20,
+     "over": [
+      "draft 8 #06091f"
+     ]
+    },
+    {
+     "cell": "A3",
+     "box": [
+      415,
+      0,
+      207,
+      166
+     ],
+     "delta": 19,
+     "over": []
+    }
+   ]
+  }
+ ],
+ "runs": 14,
+ "at": "2026-10-23T17:15:46.558Z",
+ "rank": 96,
+ "allPass": true,
+ "rubric": {
+  "pass": 41,
+  "fail": 0,
+  "unsure": 0,
+  "of": 41
+ }
+}

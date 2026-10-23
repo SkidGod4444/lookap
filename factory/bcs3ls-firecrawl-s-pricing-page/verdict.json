@@ -1,0 +1,1683 @@
+{
+ "slug": "bcs3ls-firecrawl-s-pricing-page",
+ "at": "2026-10-23T17:55:08.338Z",
+ "runs": 24,
+ "html": "factory/bcs3ls-firecrawl-s-pricing-page/index.html",
+ "pixel": {
+  "score": 84,
+  "stills": 84,
+  "motion": 84,
+  "moments": 15
+ },
+ "animations": 4,
+ "rank": 95,
+ "allPass": true,
+ "elements": [
+  {
+   "name": "credits number",
+   "box": [
+    610,
+    268,
+    130,
+    36
+   ],
+   "deltaE": 1.6,
+   "delta": 29,
+   "shift": [
+    2,
+    0
+   ],
+   "afterShift": 25,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "hero headline",
+   "box": [
+    529,
+    120,
+    293,
+    46
+   ],
+   "deltaE": 2.7,
+   "delta": 24,
+   "shift": [
+    0,
+    2
+   ],
+   "afterShift": 24,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "plan price line",
+   "box": [
+    622,
+    396,
+    107,
+    14
+   ],
+   "deltaE": 5.6,
+   "delta": 24,
+   "shift": [
+    -2,
+    -2
+   ],
+   "afterShift": 22,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "billed yearly toggles",
+   "box": [
+    472,
+    715,
+    632,
+    18
+   ],
+   "deltaE": 2.5,
+   "delta": 23,
+   "shift": [
+    -2,
+    -2
+   ],
+   "afterShift": 20,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "feature lists",
+   "box": [
+    246,
+    820,
+    860,
+    180
+   ],
+   "deltaE": 0.7,
+   "delta": 22,
+   "shift": [
+    -6,
+    -2
+   ],
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Firecrawl logo",
+   "box": [
+    272,
+    29,
+    88,
+    22
+   ],
+   "deltaE": 1.3,
+   "delta": 21,
+   "shift": [
+    -2,
+    0
+   ],
+   "afterShift": 17,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "nav links",
+   "box": [
+    477,
+    32,
+    397,
+    18
+   ],
+   "deltaE": 1.8,
+   "delta": 20,
+   "shift": null,
+   "afterShift": 20,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "currency pill",
+   "box": [
+    648,
+    457,
+    58,
+    22
+   ],
+   "deltaE": 2.5,
+   "delta": 20,
+   "shift": [
+    -2,
+    0
+   ],
+   "afterShift": 15,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Dashboard button",
+   "box": [
+    1004,
+    28,
+    78,
+    26
+   ],
+   "deltaE": 0.8,
+   "delta": 18,
+   "shift": [
+    0,
+    -2
+   ],
+   "afterShift": 15,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "slider thumb",
+   "box": [
+    363,
+    331,
+    16,
+    16
+   ],
+   "deltaE": 6.8,
+   "delta": 18,
+   "shift": null,
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "GitHub star count",
+   "box": [
+    945,
+    32,
+    46,
+    18
+   ],
+   "deltaE": 0.2,
+   "delta": 16,
+   "shift": [
+    0,
+    -2
+   ],
+   "afterShift": 14,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "hero subline",
+   "box": [
+    565,
+    180,
+    221,
+    16
+   ],
+   "deltaE": 0.7,
+   "delta": 16,
+   "shift": null,
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "plan titles",
+   "box": [
+    246,
+    515,
+    723,
+    16
+   ],
+   "deltaE": 0.9,
+   "delta": 16,
+   "shift": null,
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "plan grid",
+   "box": [
+    224,
+    492,
+    904,
+    522
+   ],
+   "deltaE": 0.4,
+   "delta": 15,
+   "shift": null,
+   "afterShift": 15,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "selected column tint",
+   "box": [
+    450,
+    492,
+    226,
+    520
+   ],
+   "deltaE": 0.4,
+   "delta": 15,
+   "shift": [
+    -2,
+    -2
+   ],
+   "afterShift": 14,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "plan prices",
+   "box": [
+    246,
+    660,
+    820,
+    32
+   ],
+   "deltaE": 0.9,
+   "delta": 15,
+   "shift": null,
+   "afterShift": 15,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Scale Plans section (2.95s)",
+   "box": [
+    224,
+    492,
+    904,
+    492
+   ],
+   "deltaE": 0.4,
+   "delta": 15,
+   "shift": null,
+   "afterShift": 15,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "selected Subscribe button",
+   "box": [
+    473,
+    755,
+    180,
+    29
+   ],
+   "deltaE": 1.4,
+   "delta": 12,
+   "shift": [
+    2,
+    0
+   ],
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "orange glyph texture",
+   "box": [
+    456,
+    640,
+    214,
+    160
+   ],
+   "deltaE": 0.5,
+   "delta": 12,
+   "shift": null,
+   "afterShift": 12,
+   "read": "matches"
+  },
+  {
+   "name": "Pay-as-you-go section (2.95s)",
+   "box": [
+    248,
+    1010,
+    560,
+    70
+   ],
+   "deltaE": 0.8,
+   "delta": 12,
+   "shift": [
+    2,
+    -4
+   ],
+   "afterShift": 7,
+   "read": "matches"
+  },
+  {
+   "name": "slider stop labels",
+   "box": [
+    258,
+    353,
+    842,
+    30
+   ],
+   "deltaE": 0.3,
+   "delta": 11,
+   "shift": [
+    0,
+    -2
+   ],
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "other Subscribe/Current plan buttons",
+   "box": [
+    246,
+    755,
+    858,
+    29
+   ],
+   "deltaE": 1.1,
+   "delta": 11,
+   "shift": [
+    2,
+    0
+   ],
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1350,
+    1080
+   ],
+   "deltaE": 0.2,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "credits/month label",
+   "box": [
+    640,
+    306,
+    72,
+    12
+   ],
+   "deltaE": 0.2,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "nav bar",
+   "box": [
+    224,
+    0,
+    904,
+    82
+   ],
+   "deltaE": 0.3,
+   "delta": 9,
+   "shift": null,
+   "afterShift": 9,
+   "read": "matches"
+  },
+  {
+   "name": "dot-matrix world map",
+   "box": [
+    440,
+    82,
+    670,
+    166
+   ],
+   "deltaE": 0.4,
+   "delta": 9,
+   "shift": null,
+   "afterShift": 9,
+   "read": "matches"
+  },
+  {
+   "name": "billing note",
+   "box": [
+    570,
+    415,
+    211,
+    12
+   ],
+   "deltaE": 1.6,
+   "delta": 8,
+   "shift": null,
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "slider track",
+   "box": [
+    262,
+    336,
+    826,
+    6
+   ],
+   "deltaE": 2.4,
+   "delta": 7,
+   "shift": [
+    -8,
+    0
+   ],
+   "afterShift": 6,
+   "read": "matches"
+  },
+  {
+   "name": "Selected chip",
+   "box": [
+    518,
+    515,
+    51,
+    17
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "the render changes where the clip changes",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "0.05s",
+    "clip": 0.2,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "0.05s",
+    "to": "0.5s",
+    "clip": 1.4,
+    "render": 1,
+    "read": "both move"
+   },
+   {
+    "from": "0.5s",
+    "to": "kf1",
+    "clip": 0.2,
+    "render": 0.1,
+    "read": "both still"
+   },
+   {
+    "from": "kf1",
+    "to": "1.1s",
+    "clip": 0.2,
+    "render": 0.1,
+    "read": "both still"
+   },
+   {
+    "from": "1.1s",
+    "to": "1.2s",
+    "clip": 0.3,
+    "render": 0.2,
+    "read": "both still"
+   },
+   {
+    "from": "1.2s",
+    "to": "kf2",
+    "clip": 1.5,
+    "render": 1,
+    "read": "both move"
+   },
+   {
+    "from": "kf2",
+    "to": "kf3",
+    "clip": 1.5,
+    "render": 1.1,
+    "read": "both move"
+   },
+   {
+    "from": "kf3",
+    "to": "2.13s",
+    "clip": 4.9,
+    "render": 4.5,
+    "read": "both move"
+   },
+   {
+    "from": "2.13s",
+    "to": "2.3s",
+    "clip": 4.5,
+    "render": 4.1,
+    "read": "both move"
+   },
+   {
+    "from": "2.3s",
+    "to": "2.5s",
+    "clip": 0.1,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "2.5s",
+    "to": "kf4",
+    "clip": 0.2,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "kf4",
+    "to": "3.45s",
+    "clip": 0.3,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "3.45s",
+    "to": "3.83s",
+    "clip": 5.2,
+    "render": 4.9,
+    "read": "both move"
+   },
+   {
+    "from": "3.83s",
+    "to": "4.6s",
+    "clip": 2.7,
+    "render": 1.8,
+    "read": "both move"
+   }
+  ],
+  "trajectories": [
+   {
+    "element": "#ff4e00",
+    "box": [
+     474,
+     756,
+     178,
+     28
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 0.05,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 0.7,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 1.1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 1.2,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 1.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 1.8,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 2.13,
+      "dx": 0,
+      "dy": 0,
+      "delta": 17
+     },
+     {
+      "at": 2.3,
+      "dx": -12,
+      "dy": 2,
+      "delta": 13
+     },
+     {
+      "at": 2.5,
+      "dx": -6,
+      "dy": 0,
+      "delta": 13
+     },
+     {
+      "at": 2.95,
+      "dx": -12,
+      "dy": 2,
+      "delta": 13
+     },
+     {
+      "at": 3.45,
+      "dx": -4,
+      "dy": 2,
+      "delta": 13
+     },
+     {
+      "at": 3.83,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 4.6,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   },
+   {
+    "element": "#e5e5e5",
+    "box": [
+     379,
+     334,
+     709,
+     8
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": -10,
+      "dy": 0,
+      "delta": 4
+     },
+     {
+      "at": 0.05,
+      "dx": 0,
+      "dy": 0,
+      "delta": 4
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": 2,
+      "delta": 1
+     },
+     {
+      "at": 0.7,
+      "dx": -2,
+      "dy": 2,
+      "delta": 1
+     },
+     {
+      "at": 1.1,
+      "dx": 10,
+      "dy": -2,
+      "delta": 2
+     },
+     {
+      "at": 1.2,
+      "dx": 10,
+      "dy": 2,
+      "delta": 3
+     },
+     {
+      "at": 1.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 5
+     },
+     {
+      "at": 1.8,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 2.13,
+      "dx": 0,
+      "dy": 0,
+      "delta": 8
+     },
+     {
+      "at": 2.3,
+      "dx": 0,
+      "dy": 0,
+      "delta": 8
+     },
+     {
+      "at": 2.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 8
+     },
+     {
+      "at": 2.95,
+      "dx": 0,
+      "dy": 0,
+      "delta": 8
+     },
+     {
+      "at": 3.45,
+      "dx": 0,
+      "dy": 0,
+      "delta": 8
+     },
+     {
+      "at": 3.83,
+      "dx": -12,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 4.6,
+      "dx": 0,
+      "dy": 0,
+      "delta": 6
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   },
+   {
+    "element": "#fbdfd3",
+    "box": [
+     518,
+     515,
+     51,
+     17
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 0.05,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 0.5,
+      "dx": 4,
+      "dy": 0,
+      "delta": 13
+     },
+     {
+      "at": 0.7,
+      "dx": 4,
+      "dy": 0,
+      "delta": 13
+     },
+     {
+      "at": 1.1,
+      "dx": 4,
+      "dy": 0,
+      "delta": 13
+     },
+     {
+      "at": 1.2,
+      "dx": 4,
+      "dy": 0,
+      "delta": 13
+     },
+     {
+      "at": 1.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 1.8,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 2.13,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 2.3,
+      "dx": 2,
+      "dy": 0,
+      "delta": 14
+     },
+     {
+      "at": 2.5,
+      "dx": 2,
+      "dy": 0,
+      "delta": 14
+     },
+     {
+      "at": 2.95,
+      "dx": 2,
+      "dy": 0,
+      "delta": 14
+     },
+     {
+      "at": 3.45,
+      "dx": 2,
+      "dy": 0,
+      "delta": 14
+     },
+     {
+      "at": 3.83,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 4.6,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   }
+  ]
+ },
+ "scale": {
+  "ok": true,
+  "changed": 6.2,
+  "read": "scales: the half-size render matches the full one (difference 6.2)"
+ },
+ "rubric": {
+  "file": "factory/bcs3ls-firecrawl-s-pricing-page/rubric.json",
+  "total": 43,
+  "counted": 43,
+  "pass": 42,
+  "fail": 0,
+  "unsure": 1,
+  "unjudged": 0,
+  "passRate": 98,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "style",
+    "element": "page background",
+    "check": "Page background is a flat light grey near #f7f7f7, not pure white",
+    "box": [
+     0,
+     0,
+     1350,
+     1080
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild background is the same flat light grey as the clip, not white. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "position",
+    "element": "content column",
+    "check": "Content sits in a centred column bounded by faint 1px grey vertical hairlines at about x 224 and x 1128",
+    "box": [
+     200,
+     0,
+     950,
+     1080
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "unsure",
+    "seen": "The faint column hairlines are too faint to compare in this tile; the column placement looks the same. [votes: unsure/unsure/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "imagery",
+    "element": "Firecrawl logo",
+    "check": "Logo is an original orange flame glyph followed by dark 'Firecrawl' wordmark at about x 272–360, y 40",
+    "box": [
+     265,
+     25,
+     100,
+     30
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Orange flame glyph then dark 'Firecrawl' wordmark, same size and position as the clip. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "text",
+    "element": "nav links",
+    "check": "Nav reads 'Products', 'Resources', 'Pricing', 'Docs', 'Blog', 'Playground' in that order, Products and Resources with small chevrons",
+    "box": [
+     470,
+     28,
+     410,
+     26
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same six links in order, with chevrons on Products and Resources. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "style",
+    "element": "Dashboard button",
+    "check": "'Dashboard' sits in a light grey rounded pill at the right of the nav, with '189K' and a GitHub glyph to its left",
+    "box": [
+     940,
+     25,
+     150,
+     32
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Grey rounded 'Dashboard' pill with GitHub glyph and '189K' to its left, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "text",
+    "element": "hero headline",
+    "check": "Headline reads 'Flexible pricing', bold, about 44px, centred near x 675, y 143",
+    "box": [
+     520,
+     115,
+     310,
+     55
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'Flexible pricing' is bold and centred, at the same size as the clip. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "style",
+    "element": "hero headline",
+    "check": "'Flexible' is near-black and 'pricing' is bright orange (#ff4800)",
+    "box": [
+     520,
+     115,
+     310,
+     55
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'Flexible' is near-black and 'pricing' is bright orange, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "text",
+    "element": "hero subline",
+    "check": "Grey subline reads 'Start for free, then scale as you grow.' centred under the headline",
+    "box": [
+     555,
+     175,
+     240,
+     25
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Grey subline reads the same, centred, and matches the clip's size and tone. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "imagery",
+    "element": "dot-matrix world map",
+    "check": "Behind the hero a very faint grey dot/character map texture is visible (left and right of the headline), drawn as tiny dots, not a solid illustration or photo",
+    "box": [
+     440,
+     82,
+     670,
+     166
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Faint tiny-dot map texture on both sides of the headline, similar density to the clip. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "text",
+    "element": "credits number",
+    "check": "Large dark number reads '3,500' with grey 'credits/month' under it, centred at x ≈ 675",
+    "box": [
+     600,
+     265,
+     150,
+     55
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Dark '3,500' with grey 'credits/month' beneath, centred, same size as the clip. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "style",
+    "element": "slider track",
+    "check": "Slider track runs from x ≈ 262 to x ≈ 1088 at y ≈ 339; orange left of the thumb and light grey to the right",
+    "box": [
+     255,
+     330,
+     840,
+     20
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Orange fill left of the thumb and light grey right of it, with the same track extent and thickness. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "position",
+    "element": "slider thumb",
+    "check": "Orange circular thumb (~16px) sits at x ≈ 371 on the track",
+    "box": [
+     340,
+     325,
+     60,
+     30
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Orange ~16px thumb at the same track position; the clip's hover glow is absent but that is minor. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "text",
+    "element": "slider stop labels",
+    "check": "Under the track: '1k Free', '5k Hobby', '100k Standard', '500k Growth', '1M Scale', 'Custom' spaced across the track",
+    "box": [
+     255,
+     350,
+     850,
+     35
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "All six labels are present in order and spread across the track, with the same positions. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "style",
+    "element": "slider stop labels",
+    "check": "Only the active stop's value '5k' is orange with a small orange tick above it; the others are grey",
+    "box": [
+     410,
+     343,
+     45,
+     40
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'5k' is orange with a small orange tick above it, and the other labels are grey. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "text",
+    "element": "plan price line",
+    "check": "Orange line reads 'Hobby: ₹1,542/month' above grey 'Prices shown are per month, billed annually.'",
+    "box": [
+     560,
+     393,
+     230,
+     40
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Orange 'Hobby: ₹1,542/month' above the grey billing line, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "present",
+    "element": "currency pill",
+    "check": "A small 'INR' pill with an India flag and a chevron sits centred at y ≈ 468 between two long empty rounded bars",
+    "box": [
+     230,
+     455,
+     890,
+     26
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Small INR pill with flag and chevron, centred between two long empty rounded bars. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "position",
+    "element": "plan grid",
+    "check": "Four plan columns of equal width (~226px) start at x 224, 450, 676, 902 with titles at y ≈ 523",
+    "box": [
+     224,
+     492,
+     904,
+     520
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Four equal columns at the same x positions, with titles at the same height. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "text",
+    "element": "plan titles",
+    "check": "Column titles read 'Free Plan', 'Hobby', 'Standard', 'Growth'",
+    "box": [
+     240,
+     510,
+     800,
+     25
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Free Plan, Hobby (with Selected badge), Standard and Growth read the same. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "text",
+    "element": "plan prices",
+    "check": "Prices read '₹0', '₹1.5k', '₹8k', '₹32.1k', each about 30px dark with a smaller grey '/month'",
+    "box": [
+     240,
+     655,
+     840,
+     40
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "₹0, ₹1.5k, ₹8k and ₹32.1k at the same size, each with a smaller grey '/month'. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "style",
+    "element": "selected column tint",
+    "check": "Only the Hobby column has a warm peach background tint (#f7f2ee); the others are plain grey",
+    "box": [
+     440,
+     492,
+     250,
+     520
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Only the Hobby column has the warm peach tint, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "style",
+    "element": "Selected chip",
+    "check": "Next to 'Hobby' a small chip reads 'Selected' in orange text on a pale orange rounded background",
+    "box": [
+     510,
+     510,
+     65,
+     25
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Orange 'Selected' text on pale orange rounded chip matches the clip. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "style",
+    "element": "selected Subscribe button",
+    "check": "Hobby's Subscribe button is solid orange with white text; Standard and Growth Subscribe buttons are light grey with dark text",
+    "box": [
+     460,
+     750,
+     660,
+     40
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Hobby Subscribe is solid orange with white text; Standard and Growth are light grey with dark text, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "text",
+    "element": "Current plan button",
+    "check": "Free Plan column shows a grey button with muted text 'Current plan' and no toggle",
+    "box": [
+     240,
+     750,
+     195,
+     40
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Grey 'Current plan' button with muted text and no toggle, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "style",
+    "element": "billed yearly toggles",
+    "check": "Hobby, Standard and Growth each have an orange pill toggle with a white knob on the right, 'Billed yearly' and an orange 'Save ₹…' amount",
+    "box": [
+     465,
+     710,
+     650,
+     28
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Three orange pill toggles with white knob, 'Billed yearly' and orange 'Save ₹…' under Hobby, Standard and Growth. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "imagery",
+    "element": "orange glyph texture",
+    "check": "Behind the selected price/button area an orange texture of tiny dots and ASCII characters (x, +, -) is drawn, densest in rows below the button and thinning upward",
+    "box": [
+     450,
+     640,
+     226,
+     170
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Orange dots and x/+/- characters sit behind the button area and are densest in the rows below it, though somewhat sparser than the clip. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "style",
+    "element": "orange glyph texture",
+    "check": "The texture is discrete monospaced characters and dots, NOT a smooth gradient, blur or glow, and has no outline",
+    "box": [
+     450,
+     740,
+     226,
+     70
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Texture is discrete monospaced characters and dots with no blur, glow or outline, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "text",
+    "element": "feature lists",
+    "check": "Hobby features read '2,500 searches or 5,000 pages scraped', '5 concurrent requests', 'Basic support', '1,000 extra credits per ₹482'",
+    "box": [
+     465,
+     815,
+     200,
+     190
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "All four Hobby feature lines read the same as the clip, including '1,000 extra credits per ₹482'. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "motion",
+    "element": "credits number",
+    "check": "At the very start the number reads '21,000' with the thumb near x 600, and by 0.2s it reads about 3,500 with the thumb at x ≈ 371",
+    "box": [
+     250,
+     260,
+     850,
+     100
+    ],
+    "at": 0.05,
+    "then": 0.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Start frame reads 21,000 with Standard selected, and 0.5s reads 3,900 with Hobby selected, thumb at about the same x as the clip. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "motion",
+    "element": "slider thumb",
+    "check": "Nothing moves between 0.5s and 1.1s: thumb, number and selected column all hold still",
+    "box": [
+     224,
+     250,
+     904,
+     780
+    ],
+    "at": 0.5,
+    "then": 1.1,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Thumb, number and Hobby selection hold still between 0.5s and 1.1s (3,900 to 4,000 versus the clip's 3,900 to 3,700). [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "motion",
+    "element": "slider thumb",
+    "check": "Between 1.2s and 1.4s the thumb slides right about 206px to x ≈ 577 and the number counts up to '90,000'",
+    "box": [
+     250,
+     260,
+     850,
+     100
+    ],
+    "at": 1.2,
+    "then": 1.4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Thumb slides right to about x 650 and the number reads 90,000 at 1.4s, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "motion",
+    "element": "selected column tint",
+    "check": "At 1.4s the peach tint, 'Selected' chip and orange Subscribe button have jumped from Hobby to the Standard column, and the line reads 'Standard: ₹8,001/month'",
+    "box": [
+     224,
+     390,
+     904,
+     620
+    ],
+    "at": 0.7,
+    "then": 1.4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 1.4s the tint, Selected chip and orange button are on Standard and the line reads 'Standard: ₹8,001/month'. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "motion",
+    "element": "slider thumb",
+    "check": "Between 1.55s and 1.8s the thumb moves to x ≈ 716, the number reads '400,000', and Growth becomes the selected column with 'Growth: ₹32,101/month'",
+    "box": [
+     224,
+     260,
+     904,
+     760
+    ],
+    "at": 1.4,
+    "then": 1.8,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 1.8s the number reads 400,000 with the thumb near 500k and Growth selected, line 'Growth: ₹32,101/month'. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "motion",
+    "element": "plan grid",
+    "check": "Around 2.0s, as the thumb passes 1M, the 4-column plan grid disappears and is replaced by a 3-column Scale Plans section; the content slides up about 90px (Scale Plans heading from y ≈ 612 at 2.13s to y ≈ 523 by 2.3s)",
+    "box": [
+     224,
+     490,
+     904,
+     590
+    ],
+    "at": 2.13,
+    "then": 2.3,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 2.13s Scale Plans heading is at y 320 versus the clip's 321, and it sits near y 821 by 2.3s on both. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "text",
+    "element": "credits number",
+    "check": "At 2.95s the number reads '790,000', thumb at x ≈ 849, '1M' is orange and the line reads 'Scale: ₹57,744/month'",
+    "box": [
+     250,
+     260,
+     850,
+     170
+    ],
+    "at": 2.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Number reads 790,000, thumb at the same spot, 1M orange, line 'Scale: ₹57,744/month'. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "text",
+    "element": "Scale Plans section",
+    "check": "Left column heading 'Scale Plans' (~20px) with grey paragraph starting 'High-volume plans for teams that need more power and dedicated support.' and an orange 'Need more? Contact us' link near y 957",
+    "box": [
+     235,
+     510,
+     280,
+     460
+    ],
+    "at": 2.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'Scale Plans' heading, grey paragraph and orange 'Need more? Contact us' link near the bottom match the clip. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "style",
+    "element": "Scale Plans section",
+    "check": "The middle 'Scale' column is peach-tinted with a 'Selected' chip, price '₹57,744 /month', orange toggle, orange 'Subscribe' button and the orange glyph texture behind it",
+    "box": [
+     525,
+     492,
+     302,
+     492
+    ],
+    "at": 2.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Peach Scale column with Selected chip, ₹57,744 /month, orange toggle, orange Subscribe and glyph texture matches the clip. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "text",
+    "element": "Scale Plans section",
+    "check": "Right column 'Enterprise' shows 'Power at your pace with custom solutions', a large 'Custom' price and a grey 'Contact sales' button",
+    "box": [
+     828,
+     505,
+     300,
+     240
+    ],
+    "at": 2.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Enterprise column shows the same subtitle, large 'Custom' and grey 'Contact sales' button as the clip. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "present",
+    "element": "Pay-as-you-go section",
+    "check": "Below the plans a section with an icon and heading 'Pay-as-you-go' and a grey paragraph 'Keep accessing web data with search and scrape when your credits run out…' starts at y ≈ 1010",
+    "box": [
+     240,
+     1000,
+     580,
+     80
+    ],
+    "at": 2.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Pay-as-you-go heading with icon and the grey paragraph start at the same position as the clip. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "motion",
+    "element": "Scale Plans section",
+    "check": "Between 2.3s and 3.6s the layout holds still (only the faint background texture may flicker)",
+    "box": [
+     224,
+     250,
+     904,
+     830
+    ],
+    "at": 2.5,
+    "then": 3.45,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Layout holds still between 2.5s and 3.45s in the rebuild, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c39.png"
+   },
+   {
+    "id": "c40",
+    "axis": "motion",
+    "element": "plan grid",
+    "check": "Between 3.65s and 4.0s the thumb is dragged back left and the 4-column plan grid grows back in above, pushing the Scale Plans section down off the bottom (at 3.83s Scale Plans heading is near y 1000)",
+    "box": [
+     224,
+     250,
+     904,
+     830
+    ],
+    "at": 3.45,
+    "then": 3.83,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 3.83s the 4-column grid is back with Growth selected and Scale Plans pushed to the bottom edge at y about 1060, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c40.png"
+   },
+   {
+    "id": "c41",
+    "axis": "text",
+    "element": "credits number",
+    "check": "At the end the number reads '86,000', thumb near x 570, and Standard is the selected column with orange Subscribe",
+    "box": [
+     224,
+     260,
+     904,
+     560
+    ],
+    "at": 4.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild reads 86,000 with thumb near x 645 in the tile (same as clip's 175), Standard selected with orange Subscribe. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c41.png"
+   },
+   {
+    "id": "c42",
+    "axis": "motion",
+    "element": "selected column tint",
+    "check": "The highlight changes between columns instantly (no sliding highlight box travelling across columns)",
+    "box": [
+     224,
+     492,
+     904,
+     520
+    ],
+    "at": 1.2,
+    "then": 1.4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild's highlight sits on Hobby then Standard as whole-column tints with no sliding box visible, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c42.png"
+   },
+   {
+    "id": "c43",
+    "axis": "present",
+    "element": "hand cursor",
+    "check": "A hand-pointer cursor rides with the slider thumb throughout the drags",
+    "box": [
+     340,
+     330,
+     60,
+     40
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A hand pointer sits just below the thumb in the rebuild, as in the clip, though the rebuild's thumb has no glow. [votes: yes/yes/yes]",
+    "image": "factory/bcs3ls-firecrawl-s-pricing-page/judge/c43.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 0.726,
+  "calls": 9,
+  "images": "factory/bcs3ls-firecrawl-s-pricing-page/judge",
+  "votes": 3,
+  "spread": [
+   42,
+   42,
+   43
+  ]
+ }
+}

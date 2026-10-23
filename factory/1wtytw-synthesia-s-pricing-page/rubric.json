@@ -1,0 +1,981 @@
+{
+ "slug": "1wtytw-synthesia-s-pricing-page",
+ "frame": {
+  "w": 1244,
+  "h": 996
+ },
+ "at": "2026-10-23T16:51:29.884Z",
+ "model": "opus",
+ "costUsd": 0.661,
+ "summary": "A static, light (#fbfbfb) Synthesia pricing page at 1244x996; nothing moves across the 3s (the 0s vs 2.9s difference is 0.0% of the frame). Top bar: the blue rounded-rect 'synthesia' logo at left (x112,y22) and a globe icon plus 'Log in' at right (to x1132). A large centred dark navy heading 'Pricing that scales with your needs' (~40px, y80-122). Below it, at left, a pill segmented control with a dark navy active 'VIDEO & SESSIONS' and an inactive 'API'; at right, grey 'Save up to 3 months with yearly' and a pill radio group 'MONTHLY' (empty ring) / 'YEARLY' (filled dot). Four plan cards 234px wide with 28px gaps run from x112 to x1132, y234-502, about 12px radius: Basic and Starter are flat light grey; Pro is a vertical gradient from deep navy (#0c1030) at the top to periwinkle (#a0b0ef) at the bottom, with a translucent 'MOST POPULAR' pill; Enterprise is a vertical gradient from near-black plum (#141222) to warm gold (#c0a669). Each card has a title at y~266, a price line at y~388, a credits chip (y411, 30px) and a full-width button (y451, 31px): dark navy buttons on Basic, Starter and Enterprise, a white button on Pro. Under Starter and Pro sit light grey bordered 'CREDITS' panels (y517-723) with a blue coin icon, usage lines and a 'Roleplays / + Add learner seat' row. Below these are feature lists of thin line icons and dark labels, separated by hairline dividers, with faint vertical column rules between columns. All type is a geometric sans with dark navy (#060a20) text. The lists run off the bottom edge.",
+ "elements": [
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1244,
+    996
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "flat #fbfbfb off-white"
+  },
+  {
+   "name": "synthesia logo",
+   "box": [
+    112,
+    22,
+    75,
+    16
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "blue rounded-rect ring mark + dark bold lowercase 'synthesia' wordmark"
+  },
+  {
+   "name": "globe icon",
+   "box": [
+    1060,
+    23,
+    14,
+    14
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "thin grey line globe"
+  },
+  {
+   "name": "Log in link",
+   "box": [
+    1095,
+    22,
+    38,
+    16
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Log in' dark grey ~15px regular"
+  },
+  {
+   "name": "page heading",
+   "box": [
+    351,
+    80,
+    543,
+    42
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Pricing that scales with your needs' centred, ~40px medium, dark navy"
+  },
+  {
+   "name": "product segmented control",
+   "box": [
+    112,
+    166,
+    241,
+    34
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "light pill track with thin border; active 'VIDEO & SESSIONS' dark navy pill with white caps; inactive 'API' dark caps"
+  },
+  {
+   "name": "yearly savings note",
+   "box": [
+    812,
+    172,
+    152,
+    13
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Save up to 3 months with yearly' grey ~11px"
+  },
+  {
+   "name": "billing radio group",
+   "box": [
+    972,
+    166,
+    160,
+    26
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "pill container; 'MONTHLY' with empty ring radio, 'YEARLY' with filled dark radio dot"
+  },
+  {
+   "name": "Basic card",
+   "box": [
+    112,
+    234,
+    234,
+    268
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "flat light grey (~#f4f4f4), ~12px radius; 'Basic', '₹0 per month', chip '500 CREDITS / MONTH', dark 'Get started' button"
+  },
+  {
+   "name": "Starter card",
+   "box": [
+    374,
+    234,
+    234,
+    268
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "flat light grey; struck '₹1,999 Billed yearly.', '₹1,499 per month', chip '15,000 CREDITS / YEAR', dark 'Get started'"
+  },
+  {
+   "name": "Pro card",
+   "box": [
+    636,
+    234,
+    234,
+    268
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "vertical gradient navy #0c1030 top to periwinkle #a0b0ef bottom; white text; 'MOST POPULAR' pill; lavender chip '72,000 CREDITS / YEAR' with chevron; white 'Get started' button"
+  },
+  {
+   "name": "Most popular badge",
+   "box": [
+    696,
+    256,
+    97,
+    22
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "translucent lighter-navy pill with white caps 'MOST POPULAR'"
+  },
+  {
+   "name": "Enterprise card",
+   "box": [
+    898,
+    234,
+    234,
+    268
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "vertical gradient near-black #141222 top to gold #c0a669 bottom; white 'Enterprise' and 'Let's talk.'; outlined translucent chip 'CUSTOM CREDIT VOLUMES'; dark 'Book demo' button"
+  },
+  {
+   "name": "plan buttons",
+   "box": [
+    132,
+    451,
+    980,
+    31
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "four 194x31 buttons at x132/394/656/918, ~6px radius; dark #06091f except the white Pro one"
+  },
+  {
+   "name": "credits chips",
+   "box": [
+    132,
+    411,
+    980,
+    30
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "four 194x30 chips with a thin border and small caps labels"
+  },
+  {
+   "name": "Starter credits panel",
+   "box": [
+    374,
+    517,
+    234,
+    206
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "light grey bordered panel, ~12px radius: CREDITS header with blue coin icon, Video/Dubbing/Surveys lines, 'On top of the free allowance', 'Roleplays' + '+ Add learner seat' pill"
+  },
+  {
+   "name": "Pro credits panel",
+   "box": [
+    636,
+    517,
+    234,
+    206
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "same panel style with values ~720 min / 947 min / 205 responses"
+  },
+  {
+   "name": "credits coin icon",
+   "box": [
+    389,
+    532,
+    16,
+    16
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "blue (#5b6fd6-ish) filled circle with white rounded-rect mark, inside a small white rounded square"
+  },
+  {
+   "name": "Basic feature list",
+   "box": [
+    132,
+    522,
+    194,
+    180
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "Free allowance (bold + info icon), Share your content online via share link, Pre-built libraries, templates, roleplays, surveys, Videos carry a Synthesia watermark; line icons, hairline separators"
+  },
+  {
+   "name": "Starter feature list",
+   "box": [
+    394,
+    742,
+    194,
+    254
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "Everything in Basic + (bold), Download your content, Remove Synthesia logo, AI Video Assistant, Survey Analytics, 3 guests, 125+ Synthesia AI Avatars"
+  },
+  {
+   "name": "Pro feature list",
+   "box": [
+    656,
+    742,
+    194,
+    254
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "Everything in Starter + (bold), 5 Personal Avatars, Branded video pages, Interactive videos, 5 guests, 180+ Synthesia AI Avatars, Flexible plan tiers"
+  },
+  {
+   "name": "Enterprise feature list",
+   "box": [
+    918,
+    522,
+    194,
+    474
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "Everything in Pro + (bold), Unlimited video minutes, 1-Click Translations into 140+ languages, 240+ stock AI Avatars, Unlimited Personal Avatars, SAML/SSO, Live team collaboration, Brand Kits, SCORM export, Tailored onboarding, Implementation services, Dedicated CSM, (cut-off row)"
+  },
+  {
+   "name": "column rules",
+   "box": [
+    359,
+    502,
+    527,
+    494
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "faint 1px vertical grey lines near x360, 622, 884 between columns below the cards"
+  },
+  {
+   "name": "feature line icons",
+   "box": [
+    132,
+    522,
+    980,
+    474
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "thin ~14px grey-navy outline icons (check-circle, external link, book, video, download, scissors, clock, translate, avatar, lock, cursor, etc.)"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "whole page",
+   "axis": "motion",
+   "check": "Nothing moves: the page at 0.5s and at 2.5s is identical, with no scroll, hover state or animation anywhere",
+   "box": [
+    0,
+    0,
+    1244,
+    996
+   ],
+   "scope": "frame",
+   "at": 0.5,
+   "then": 2.5
+  },
+  {
+   "id": "c02",
+   "element": "page background",
+   "axis": "style",
+   "check": "Background is a flat off-white (~#fbfbfb), not pure white and not tinted",
+   "box": [
+    0,
+    0,
+    1244,
+    996
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "synthesia logo",
+   "axis": "position",
+   "check": "Logo sits top-left at about x112, y22, around 75px wide",
+   "box": [
+    100,
+    14,
+    100,
+    32
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "synthesia logo",
+   "axis": "imagery",
+   "check": "Logo is a blue rounded-rectangle ring mark followed by a dark bold lowercase 'synthesia' wordmark",
+   "box": [
+    108,
+    18,
+    90,
+    24
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "Log in link",
+   "axis": "text",
+   "check": "Top right reads 'Log in' in dark grey regular ~15px, with a thin grey globe icon to its left at about x1060",
+   "box": [
+    1050,
+    16,
+    90,
+    30
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "page heading",
+   "axis": "text",
+   "check": "Heading reads exactly 'Pricing that scales with your needs'",
+   "box": [
+    340,
+    74,
+    565,
+    54
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "page heading",
+   "axis": "position",
+   "check": "Heading is horizontally centred on the page (centre x≈622), with its cap line at y≈84 and baseline at y≈118 (~40px type)",
+   "box": [
+    340,
+    74,
+    565,
+    54
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "page heading",
+   "axis": "style",
+   "check": "Heading is dark navy, medium weight with tight tracking, not bold-black and not grey",
+   "box": [
+    340,
+    74,
+    565,
+    54
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "product segmented control",
+   "axis": "style",
+   "check": "Segmented pill at x112-353, y166-200: the active segment 'VIDEO & SESSIONS' is a dark navy pill with white caps; 'API' is dark caps on the light track",
+   "box": [
+    108,
+    162,
+    250,
+    42
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "billing radio group",
+   "axis": "style",
+   "check": "At right, 'MONTHLY' has an empty ring radio and 'YEARLY' has a filled dark radio dot, inside a light pill outline ending at x1132",
+   "box": [
+    968,
+    162,
+    168,
+    34
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "yearly savings note",
+   "axis": "text",
+   "check": "Grey small text left of the radios reads 'Save up to 3 months with yearly'",
+   "box": [
+    808,
+    168,
+    160,
+    20
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "plan cards",
+   "axis": "position",
+   "check": "Four plan cards of equal width (~234px) in one row from x112 to x1132, top y234, bottom y502, with ~28px gaps",
+   "box": [
+    100,
+    226,
+    1044,
+    284
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "plan cards",
+   "axis": "style",
+   "check": "Cards have rounded corners of about 12px",
+   "box": [
+    630,
+    228,
+    60,
+    60
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "Basic card",
+   "axis": "style",
+   "check": "Basic and Starter cards are flat light grey (~#f3f3f3), with no gradient",
+   "box": [
+    112,
+    234,
+    496,
+    268
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "Pro card",
+   "axis": "imagery",
+   "check": "Pro card is a smooth vertical gradient from deep navy (~#0c1030) at the top to soft periwinkle (~#a0b0ef) at the bottom, with no banding and no hard stops",
+   "box": [
+    636,
+    234,
+    234,
+    268
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "Enterprise card",
+   "axis": "imagery",
+   "check": "Enterprise card is a smooth vertical gradient from near-black plum (~#141222) at the top to warm gold (~#c0a669) at the bottom",
+   "box": [
+    898,
+    234,
+    234,
+    268
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "plan titles",
+   "axis": "text",
+   "check": "Card titles read 'Basic', 'Starter', 'Pro', 'Enterprise' at ~22px medium, left-aligned 20px inside each card at y≈266; dark on Basic/Starter, white on Pro/Enterprise",
+   "box": [
+    112,
+    250,
+    1020,
+    34
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "Most popular badge",
+   "axis": "present",
+   "check": "A translucent navy pill reading 'MOST POPULAR' in white small caps sits right of 'Pro' at about x696-793, y256-278",
+   "box": [
+    690,
+    250,
+    110,
+    34
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c19",
+   "element": "Basic card",
+   "axis": "text",
+   "check": "Basic price reads '₹0 per month', with large '₹0' (~22px) and smaller 'per month'",
+   "box": [
+    128,
+    374,
+    140,
+    30
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "Starter card",
+   "axis": "text",
+   "check": "Starter shows a struck-through grey '₹1,999' and 'Billed yearly.' above '₹1,499 per month'",
+   "box": [
+    390,
+    358,
+    160,
+    46
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "Pro card",
+   "axis": "text",
+   "check": "Pro shows a struck '₹6,199 Billed yearly.' above white '₹4,649 per month'",
+   "box": [
+    652,
+    358,
+    170,
+    46
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "Enterprise card",
+   "axis": "text",
+   "check": "Enterprise shows white 'Let's talk.' at ~22px on the price line (y≈388) instead of a price",
+   "box": [
+    914,
+    374,
+    120,
+    30
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "credits chips",
+   "axis": "text",
+   "check": "Chips read '500 CREDITS / MONTH', '15,000 CREDITS / YEAR', '72,000 CREDITS / YEAR' (with a down chevron) and 'CUSTOM CREDIT VOLUMES'",
+   "box": [
+    132,
+    411,
+    980,
+    30
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "credits chips",
+   "axis": "style",
+   "check": "Basic and Starter chips are white with a thin grey border; the Pro chip is filled pale lavender (~#ebeefb); the Enterprise chip is a translucent outline over the gold, with light text",
+   "box": [
+    132,
+    411,
+    980,
+    30
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c25",
+   "element": "plan buttons",
+   "axis": "position",
+   "check": "Each card has a full-width button 194x31 at y451, inset 20px from the card sides",
+   "box": [
+    112,
+    445,
+    1020,
+    44
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c26",
+   "element": "plan buttons",
+   "axis": "style",
+   "check": "Basic, Starter and Enterprise buttons are dark navy (~#06091f) with white text; the Pro button is white with dark text",
+   "box": [
+    132,
+    451,
+    980,
+    31
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c27",
+   "element": "plan buttons",
+   "axis": "text",
+   "check": "Button labels read 'Get started', 'Get started', 'Get started', 'Book demo'",
+   "box": [
+    132,
+    451,
+    980,
+    31
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "Starter credits panel",
+   "axis": "present",
+   "check": "Below the Starter and Pro cards (not Basic or Enterprise) sit light grey, thinly bordered rounded panels from y517 to y723",
+   "box": [
+    370,
+    512,
+    505,
+    216
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c29",
+   "element": "credits coin icon",
+   "axis": "imagery",
+   "check": "The CREDITS header has a small blue filled circle icon with a white mark, inside a white rounded square, then bold caps 'CREDITS' and a grey info circle",
+   "box": [
+    380,
+    525,
+    120,
+    30
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c30",
+   "element": "Starter credits panel",
+   "axis": "text",
+   "check": "Starter panel lines read 'Video up to ~150 min', 'Dubbing up to 197 min', 'Surveys up to 42 responses', with the 'up to …' part darker/bolder than the label",
+   "box": [
+    386,
+    565,
+    210,
+    60
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c31",
+   "element": "Pro credits panel",
+   "axis": "text",
+   "check": "Pro panel lines read 'Video up to ~720 min', 'Dubbing up to 947 min', 'Surveys up to 205 responses'",
+   "box": [
+    648,
+    565,
+    210,
+    60
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c32",
+   "element": "Starter credits panel",
+   "axis": "present",
+   "check": "Each credits panel ends with 'Roleplays' and an outlined pill '+ Add learner seat' at y≈694",
+   "box": [
+    386,
+    678,
+    210,
+    32
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c33",
+   "element": "Basic feature list",
+   "axis": "text",
+   "check": "Basic list reads 'Free allowance' (bold, info icon), 'Share your content online via share link', 'Pre-built libraries, templates, roleplays, surveys', 'Videos carry a Synthesia watermark'",
+   "box": [
+    128,
+    520,
+    200,
+    184
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c34",
+   "element": "Starter feature list",
+   "axis": "text",
+   "check": "Starter list begins 'Everything in Basic +' (bold) then 'Download your content', 'Remove Synthesia logo', 'AI Video Assistant', 'Survey Analytics', '3 guests', '125+ Synthesia AI Avatars'",
+   "box": [
+    390,
+    740,
+    200,
+    250
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c35",
+   "element": "Pro feature list",
+   "axis": "text",
+   "check": "Pro list begins 'Everything in Starter +' then '5 Personal Avatars', 'Branded video pages', 'Interactive videos', '5 guests', '180+ Synthesia AI Avatars', 'Flexible plan tiers'",
+   "box": [
+    652,
+    740,
+    200,
+    250
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c36",
+   "element": "Enterprise feature list",
+   "axis": "text",
+   "check": "Enterprise list begins 'Everything in Pro +' directly under the card (y≈531) and includes 'Unlimited video minutes', '1-Click Translations into 140+ languages', 'SAML/SSO', 'Brand Kits', 'SCORM export', 'Dedicated CSM'",
+   "box": [
+    914,
+    520,
+    200,
+    450
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c37",
+   "element": "Enterprise feature list",
+   "axis": "position",
+   "check": "Enterprise list rows are spaced about 37px apart (Unlimited video minutes y≈568, 240+ stock AI Avatars y≈660, SAML/SSO y≈735) and the list runs off the bottom edge",
+   "box": [
+    914,
+    550,
+    200,
+    446
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c38",
+   "element": "feature line icons",
+   "axis": "style",
+   "check": "Every feature row has a thin outline icon (~14px, 1.5px stroke) in dark grey to the left of its label, not filled glyphs",
+   "box": [
+    912,
+    560,
+    40,
+    420
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c39",
+   "element": "feature lists",
+   "axis": "style",
+   "check": "Feature rows are separated by hairline light grey horizontal dividers spanning the column text width",
+   "box": [
+    394,
+    760,
+    200,
+    230
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c40",
+   "element": "column rules",
+   "axis": "present",
+   "check": "Faint vertical grey rules run between columns below the cards at about x360, x622 and x884, down to the bottom edge",
+   "box": [
+    350,
+    500,
+    545,
+    496
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c41",
+   "element": "feature text",
+   "axis": "style",
+   "check": "Feature labels are dark navy ~13px regular on the off-white page; the first 'Everything in … +' row and 'Free allowance' are semibold",
+   "box": [
+    128,
+    520,
+    990,
+    250
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  }
+ ],
+ "imagery": [
+  {
+   "name": "Pro card gradient",
+   "box": [
+    636,
+    234,
+    234,
+    268
+   ],
+   "class": "css",
+   "what": "vertical linear gradient from deep navy #0c1030 to periwinkle #a0b0ef",
+   "at": 1.5
+  },
+  {
+   "name": "Enterprise card gradient",
+   "box": [
+    898,
+    234,
+    234,
+    268
+   ],
+   "class": "css",
+   "what": "vertical linear gradient from near-black plum #141222 through brown to gold #c0a669",
+   "at": 1.5
+  },
+  {
+   "name": "synthesia logo",
+   "box": [
+    112,
+    22,
+    75,
+    16
+   ],
+   "class": "structured",
+   "what": "blue rounded-rect ring mark + 'synthesia' wordmark",
+   "at": 1.5
+  },
+  {
+   "name": "credits coin icons",
+   "box": [
+    389,
+    532,
+    278,
+    16
+   ],
+   "class": "structured",
+   "what": "blue filled circle with a white rounded-rect mark in a white rounded tile, one per credits panel (x389 and x651)",
+   "at": 1.5
+  },
+  {
+   "name": "feature line icons",
+   "box": [
+    132,
+    522,
+    980,
+    474
+   ],
+   "class": "structured",
+   "what": "thin outline UI icons: check-circle, external link, book, video, download, scissors, wand, clipboard, people, avatar, clock, translate, lock, cursor, layers, headset",
+   "at": 1.5
+  }
+ ],
+ "moves": []
+}

@@ -1,0 +1,1102 @@
+{
+ "slug": "bcs3ls-firecrawl-s-pricing-page",
+ "frame": {
+  "w": 1350,
+  "h": 1080
+ },
+ "at": "2026-10-23T16:51:42.108Z",
+ "model": "opus",
+ "costUsd": 0.761,
+ "summary": "Light Firecrawl pricing page (#f7f7f7) in a centred 904px column (x 224–1128) framed by faint 1px grey hairlines with small corner ticks. Top: a 82px nav bar (orange flame logo + 'Firecrawl', centred links Products ▾ / Resources ▾ / Pricing / Docs / Blog / Playground, GitHub '189K' and a grey 'Dashboard' pill). Hero: centred 44px bold 'Flexible pricing' with 'pricing' in orange #ff4800, grey subline, and a faint dot-matrix world map shimmering in the background. Below, a credits block: a large tabular number (e.g. '3,500') over 'credits/month', a full-width slider (track x 262–1088 at y 339, orange fill to a 16px orange thumb, grey remainder, small tick marks) with labelled stops 1k Free · 5k Hobby · 100k Standard · 500k Growth · 1M Scale · Custom, the active stop's value turning orange, an orange 'Plan: ₹price/month' line and a grey 'Prices shown are per month, billed annually.' note; then an INR flag pill between two empty rounded bars. Below: a 4-column plan grid (Free Plan, Hobby, Standard, Growth) separated by hairlines, each with title, two-line description, credits line, big price '₹0/₹1.5k/₹8k/₹32.1k' + grey '/month', orange 'Billed yearly' toggle with orange 'Save ₹…', a Subscribe button and a checked feature list with dotted underlines. The selected plan's column gets a warm peach tint (#f7f2ee), an orange 'Selected' chip next to its name, a solid orange Subscribe button, and an orange ASCII/dot-character glitch texture rising behind the price/button area. Motion is a cursor dragging the slider: at 0–0.2s it snaps from 21,000 to ~3,500 (Hobby selected) and holds; 1.2–1.4s drags right to 90,000 (Standard selected); 1.55–1.8s to 400,000 (Growth selected); 1.8–2.0s to 790,000 (Scale): the 4-card grid collapses away and a 3-column Scale Plans section (Scale Plans copy / Scale ₹57,744 selected / Enterprise 'Custom') slides up ~90px into its place by ~2.27s with a 'Pay-as-you-go' section beneath; holds to 3.6s; 3.65–4.0s drags back to 86,000 (Standard selected) and the 4-card grid grows back in above, pushing Scale Plans down. The number counts with the thumb throughout; highlight, chip and orange button jump instantly between columns.",
+ "elements": [
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1350,
+    1080
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "#f7f7f7 light grey; content column x 224–1128 bounded by 1px #ebebeb hairlines"
+  },
+  {
+   "name": "nav bar",
+   "box": [
+    224,
+    0,
+    904,
+    82
+   ],
+   "kind": "chrome",
+   "class": null,
+   "note": "bottom hairline at y 82"
+  },
+  {
+   "name": "Firecrawl logo",
+   "box": [
+    272,
+    29,
+    88,
+    22
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "orange flame icon + dark 'Firecrawl' wordmark"
+  },
+  {
+   "name": "nav links",
+   "box": [
+    477,
+    32,
+    397,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "Products ▾, Resources ▾, Pricing, Docs, Blog, Playground; 13px dark"
+  },
+  {
+   "name": "GitHub star count",
+   "box": [
+    945,
+    32,
+    46,
+    18
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "github glyph + '189K'"
+  },
+  {
+   "name": "Dashboard button",
+   "box": [
+    1004,
+    28,
+    78,
+    26
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "light grey #ebebeb pill, radius ~6"
+  },
+  {
+   "name": "hero headline",
+   "box": [
+    529,
+    120,
+    293,
+    46
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Flexible pricing' ~44px bold; 'pricing' orange #ff4800"
+  },
+  {
+   "name": "hero subline",
+   "box": [
+    565,
+    180,
+    221,
+    16
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Start for free, then scale as you grow.'"
+  },
+  {
+   "name": "dot-matrix world map",
+   "box": [
+    440,
+    82,
+    670,
+    166
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "very faint grey dot/character map behind hero, flickering"
+  },
+  {
+   "name": "credits number",
+   "box": [
+    610,
+    268,
+    130,
+    36
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "~34px dark tabular number, e.g. '3,500'"
+  },
+  {
+   "name": "credits/month label",
+   "box": [
+    640,
+    306,
+    72,
+    12
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "grey"
+  },
+  {
+   "name": "slider track",
+   "box": [
+    262,
+    336,
+    826,
+    6
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "orange fill left of thumb, #e5e5e5 grey right, small tick marks"
+  },
+  {
+   "name": "slider thumb",
+   "box": [
+    363,
+    331,
+    16,
+    16
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "orange circle; hand cursor over it"
+  },
+  {
+   "name": "slider stop labels",
+   "box": [
+    258,
+    353,
+    842,
+    30
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "1k Free, 5k Hobby, 100k Standard, 500k Growth, 1M Scale, Custom; active value orange"
+  },
+  {
+   "name": "plan price line",
+   "box": [
+    622,
+    396,
+    107,
+    14
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "orange 'Hobby: ₹1,542/month'"
+  },
+  {
+   "name": "billing note",
+   "box": [
+    570,
+    415,
+    211,
+    12
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "grey 'Prices shown are per month, billed annually.'"
+  },
+  {
+   "name": "currency pill",
+   "box": [
+    648,
+    457,
+    58,
+    22
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "India flag + 'INR ▾' between two empty rounded outline bars"
+  },
+  {
+   "name": "plan grid",
+   "box": [
+    224,
+    492,
+    904,
+    522
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "4 columns ~226px wide divided by hairlines"
+  },
+  {
+   "name": "selected column tint",
+   "box": [
+    450,
+    492,
+    226,
+    520
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "warm peach #f7f2ee fill on the selected plan column (Hobby at 0.7s)"
+  },
+  {
+   "name": "Selected chip",
+   "box": [
+    518,
+    515,
+    51,
+    17
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "orange text on pale orange #fbdfd3 rounded chip"
+  },
+  {
+   "name": "plan titles",
+   "box": [
+    246,
+    515,
+    723,
+    16
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "Free Plan, Hobby, Standard, Growth"
+  },
+  {
+   "name": "plan prices",
+   "box": [
+    246,
+    660,
+    820,
+    32
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'₹0', '₹1.5k', '₹8k', '₹32.1k' ~30px + grey '/month'"
+  },
+  {
+   "name": "billed yearly toggles",
+   "box": [
+    472,
+    715,
+    632,
+    18
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "orange pill toggles with white knob right; 'Save ₹…' orange"
+  },
+  {
+   "name": "selected Subscribe button",
+   "box": [
+    473,
+    755,
+    180,
+    29
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "solid #ff4e00 orange, white text, radius ~8"
+  },
+  {
+   "name": "other Subscribe/Current plan buttons",
+   "box": [
+    246,
+    755,
+    858,
+    29
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "light grey #ebebeb fill, dark text; 'Current plan' grey text"
+  },
+  {
+   "name": "orange glyph texture",
+   "box": [
+    456,
+    640,
+    214,
+    160
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "orange dots and ASCII characters (x, +, -) densest below the button, fading upward"
+  },
+  {
+   "name": "feature lists",
+   "box": [
+    246,
+    820,
+    860,
+    180
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "grey check circles; values with dotted underline"
+  },
+  {
+   "name": "Scale Plans section (2.95s)",
+   "box": [
+    224,
+    492,
+    904,
+    492
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "3 columns: Scale Plans copy, Scale (selected, ₹57,744), Enterprise (Custom)"
+  },
+  {
+   "name": "Pay-as-you-go section (2.95s)",
+   "box": [
+    248,
+    1010,
+    560,
+    70
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "icon + 'Pay-as-you-go' heading + grey paragraph"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "page background",
+   "axis": "style",
+   "check": "Page background is a flat light grey near #f7f7f7, not pure white",
+   "box": [
+    0,
+    0,
+    1350,
+    1080
+   ],
+   "scope": "frame",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "content column",
+   "axis": "position",
+   "check": "Content sits in a centred column bounded by faint 1px grey vertical hairlines at about x 224 and x 1128",
+   "box": [
+    200,
+    0,
+    950,
+    1080
+   ],
+   "scope": "frame",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "Firecrawl logo",
+   "axis": "imagery",
+   "check": "Logo is an original orange flame glyph followed by dark 'Firecrawl' wordmark at about x 272–360, y 40",
+   "box": [
+    265,
+    25,
+    100,
+    30
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "nav links",
+   "axis": "text",
+   "check": "Nav reads 'Products', 'Resources', 'Pricing', 'Docs', 'Blog', 'Playground' in that order, Products and Resources with small chevrons",
+   "box": [
+    470,
+    28,
+    410,
+    26
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "Dashboard button",
+   "axis": "style",
+   "check": "'Dashboard' sits in a light grey rounded pill at the right of the nav, with '189K' and a GitHub glyph to its left",
+   "box": [
+    940,
+    25,
+    150,
+    32
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "hero headline",
+   "axis": "text",
+   "check": "Headline reads 'Flexible pricing', bold, about 44px, centred near x 675, y 143",
+   "box": [
+    520,
+    115,
+    310,
+    55
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "hero headline",
+   "axis": "style",
+   "check": "'Flexible' is near-black and 'pricing' is bright orange (#ff4800)",
+   "box": [
+    520,
+    115,
+    310,
+    55
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "hero subline",
+   "axis": "text",
+   "check": "Grey subline reads 'Start for free, then scale as you grow.' centred under the headline",
+   "box": [
+    555,
+    175,
+    240,
+    25
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "dot-matrix world map",
+   "axis": "imagery",
+   "check": "Behind the hero a very faint grey dot/character map texture is visible (left and right of the headline), drawn as tiny dots, not a solid illustration or photo",
+   "box": [
+    440,
+    82,
+    670,
+    166
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "credits number",
+   "axis": "text",
+   "check": "Large dark number reads '3,500' with grey 'credits/month' under it, centred at x ≈ 675",
+   "box": [
+    600,
+    265,
+    150,
+    55
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "slider track",
+   "axis": "style",
+   "check": "Slider track runs from x ≈ 262 to x ≈ 1088 at y ≈ 339; orange left of the thumb and light grey to the right",
+   "box": [
+    255,
+    330,
+    840,
+    20
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "slider thumb",
+   "axis": "position",
+   "check": "Orange circular thumb (~16px) sits at x ≈ 371 on the track",
+   "box": [
+    340,
+    325,
+    60,
+    30
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "slider stop labels",
+   "axis": "text",
+   "check": "Under the track: '1k Free', '5k Hobby', '100k Standard', '500k Growth', '1M Scale', 'Custom' spaced across the track",
+   "box": [
+    255,
+    350,
+    850,
+    35
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "slider stop labels",
+   "axis": "style",
+   "check": "Only the active stop's value '5k' is orange with a small orange tick above it; the others are grey",
+   "box": [
+    410,
+    343,
+    45,
+    40
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "plan price line",
+   "axis": "text",
+   "check": "Orange line reads 'Hobby: ₹1,542/month' above grey 'Prices shown are per month, billed annually.'",
+   "box": [
+    560,
+    393,
+    230,
+    40
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "currency pill",
+   "axis": "present",
+   "check": "A small 'INR' pill with an India flag and a chevron sits centred at y ≈ 468 between two long empty rounded bars",
+   "box": [
+    230,
+    455,
+    890,
+    26
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "plan grid",
+   "axis": "position",
+   "check": "Four plan columns of equal width (~226px) start at x 224, 450, 676, 902 with titles at y ≈ 523",
+   "box": [
+    224,
+    492,
+    904,
+    520
+   ],
+   "scope": "frame",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "plan titles",
+   "axis": "text",
+   "check": "Column titles read 'Free Plan', 'Hobby', 'Standard', 'Growth'",
+   "box": [
+    240,
+    510,
+    800,
+    25
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c19",
+   "element": "plan prices",
+   "axis": "text",
+   "check": "Prices read '₹0', '₹1.5k', '₹8k', '₹32.1k', each about 30px dark with a smaller grey '/month'",
+   "box": [
+    240,
+    655,
+    840,
+    40
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "selected column tint",
+   "axis": "style",
+   "check": "Only the Hobby column has a warm peach background tint (#f7f2ee); the others are plain grey",
+   "box": [
+    440,
+    492,
+    250,
+    520
+   ],
+   "scope": "frame",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "Selected chip",
+   "axis": "style",
+   "check": "Next to 'Hobby' a small chip reads 'Selected' in orange text on a pale orange rounded background",
+   "box": [
+    510,
+    510,
+    65,
+    25
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "selected Subscribe button",
+   "axis": "style",
+   "check": "Hobby's Subscribe button is solid orange with white text; Standard and Growth Subscribe buttons are light grey with dark text",
+   "box": [
+    460,
+    750,
+    660,
+    40
+   ],
+   "scope": "frame",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "Current plan button",
+   "axis": "text",
+   "check": "Free Plan column shows a grey button with muted text 'Current plan' and no toggle",
+   "box": [
+    240,
+    750,
+    195,
+    40
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "billed yearly toggles",
+   "axis": "style",
+   "check": "Hobby, Standard and Growth each have an orange pill toggle with a white knob on the right, 'Billed yearly' and an orange 'Save ₹…' amount",
+   "box": [
+    465,
+    710,
+    650,
+    28
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c25",
+   "element": "orange glyph texture",
+   "axis": "imagery",
+   "check": "Behind the selected price/button area an orange texture of tiny dots and ASCII characters (x, +, -) is drawn, densest in rows below the button and thinning upward",
+   "box": [
+    450,
+    640,
+    226,
+    170
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c26",
+   "element": "orange glyph texture",
+   "axis": "style",
+   "check": "The texture is discrete monospaced characters and dots, NOT a smooth gradient, blur or glow, and has no outline",
+   "box": [
+    450,
+    740,
+    226,
+    70
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c27",
+   "element": "feature lists",
+   "axis": "text",
+   "check": "Hobby features read '2,500 searches or 5,000 pages scraped', '5 concurrent requests', 'Basic support', '1,000 extra credits per ₹482'",
+   "box": [
+    465,
+    815,
+    200,
+    190
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "credits number",
+   "axis": "motion",
+   "check": "At the very start the number reads '21,000' with the thumb near x 600, and by 0.2s it reads about 3,500 with the thumb at x ≈ 371",
+   "box": [
+    250,
+    260,
+    850,
+    100
+   ],
+   "scope": "frame",
+   "at": 0.05,
+   "then": 0.5
+  },
+  {
+   "id": "c29",
+   "element": "slider thumb",
+   "axis": "motion",
+   "check": "Nothing moves between 0.5s and 1.1s: thumb, number and selected column all hold still",
+   "box": [
+    224,
+    250,
+    904,
+    780
+   ],
+   "scope": "frame",
+   "at": 0.5,
+   "then": 1.1
+  },
+  {
+   "id": "c30",
+   "element": "slider thumb",
+   "axis": "motion",
+   "check": "Between 1.2s and 1.4s the thumb slides right about 206px to x ≈ 577 and the number counts up to '90,000'",
+   "box": [
+    250,
+    260,
+    850,
+    100
+   ],
+   "scope": "frame",
+   "at": 1.2,
+   "then": 1.4
+  },
+  {
+   "id": "c31",
+   "element": "selected column tint",
+   "axis": "motion",
+   "check": "At 1.4s the peach tint, 'Selected' chip and orange Subscribe button have jumped from Hobby to the Standard column, and the line reads 'Standard: ₹8,001/month'",
+   "box": [
+    224,
+    390,
+    904,
+    620
+   ],
+   "scope": "frame",
+   "at": 0.7,
+   "then": 1.4
+  },
+  {
+   "id": "c32",
+   "element": "slider thumb",
+   "axis": "motion",
+   "check": "Between 1.55s and 1.8s the thumb moves to x ≈ 716, the number reads '400,000', and Growth becomes the selected column with 'Growth: ₹32,101/month'",
+   "box": [
+    224,
+    260,
+    904,
+    760
+   ],
+   "scope": "frame",
+   "at": 1.4,
+   "then": 1.8
+  },
+  {
+   "id": "c33",
+   "element": "plan grid",
+   "axis": "motion",
+   "check": "Around 2.0s, as the thumb passes 1M, the 4-column plan grid disappears and is replaced by a 3-column Scale Plans section; the content slides up about 90px (Scale Plans heading from y ≈ 612 at 2.13s to y ≈ 523 by 2.3s)",
+   "box": [
+    224,
+    490,
+    904,
+    590
+   ],
+   "scope": "frame",
+   "at": 2.13,
+   "then": 2.3
+  },
+  {
+   "id": "c34",
+   "element": "credits number",
+   "axis": "text",
+   "check": "At 2.95s the number reads '790,000', thumb at x ≈ 849, '1M' is orange and the line reads 'Scale: ₹57,744/month'",
+   "box": [
+    250,
+    260,
+    850,
+    170
+   ],
+   "scope": "crop",
+   "at": 2.95,
+   "then": null
+  },
+  {
+   "id": "c35",
+   "element": "Scale Plans section",
+   "axis": "text",
+   "check": "Left column heading 'Scale Plans' (~20px) with grey paragraph starting 'High-volume plans for teams that need more power and dedicated support.' and an orange 'Need more? Contact us' link near y 957",
+   "box": [
+    235,
+    510,
+    280,
+    460
+   ],
+   "scope": "crop",
+   "at": 2.95,
+   "then": null
+  },
+  {
+   "id": "c36",
+   "element": "Scale Plans section",
+   "axis": "style",
+   "check": "The middle 'Scale' column is peach-tinted with a 'Selected' chip, price '₹57,744 /month', orange toggle, orange 'Subscribe' button and the orange glyph texture behind it",
+   "box": [
+    525,
+    492,
+    302,
+    492
+   ],
+   "scope": "crop",
+   "at": 2.95,
+   "then": null
+  },
+  {
+   "id": "c37",
+   "element": "Scale Plans section",
+   "axis": "text",
+   "check": "Right column 'Enterprise' shows 'Power at your pace with custom solutions', a large 'Custom' price and a grey 'Contact sales' button",
+   "box": [
+    828,
+    505,
+    300,
+    240
+   ],
+   "scope": "crop",
+   "at": 2.95,
+   "then": null
+  },
+  {
+   "id": "c38",
+   "element": "Pay-as-you-go section",
+   "axis": "present",
+   "check": "Below the plans a section with an icon and heading 'Pay-as-you-go' and a grey paragraph 'Keep accessing web data with search and scrape when your credits run out…' starts at y ≈ 1010",
+   "box": [
+    240,
+    1000,
+    580,
+    80
+   ],
+   "scope": "crop",
+   "at": 2.95,
+   "then": null
+  },
+  {
+   "id": "c39",
+   "element": "Scale Plans section",
+   "axis": "motion",
+   "check": "Between 2.3s and 3.6s the layout holds still (only the faint background texture may flicker)",
+   "box": [
+    224,
+    250,
+    904,
+    830
+   ],
+   "scope": "frame",
+   "at": 2.5,
+   "then": 3.45
+  },
+  {
+   "id": "c40",
+   "element": "plan grid",
+   "axis": "motion",
+   "check": "Between 3.65s and 4.0s the thumb is dragged back left and the 4-column plan grid grows back in above, pushing the Scale Plans section down off the bottom (at 3.83s Scale Plans heading is near y 1000)",
+   "box": [
+    224,
+    250,
+    904,
+    830
+   ],
+   "scope": "frame",
+   "at": 3.45,
+   "then": 3.83
+  },
+  {
+   "id": "c41",
+   "element": "credits number",
+   "axis": "text",
+   "check": "At the end the number reads '86,000', thumb near x 570, and Standard is the selected column with orange Subscribe",
+   "box": [
+    224,
+    260,
+    904,
+    560
+   ],
+   "scope": "frame",
+   "at": 4.6,
+   "then": null
+  },
+  {
+   "id": "c42",
+   "element": "selected column tint",
+   "axis": "motion",
+   "check": "The highlight changes between columns instantly (no sliding highlight box travelling across columns)",
+   "box": [
+    224,
+    492,
+    904,
+    520
+   ],
+   "scope": "frame",
+   "at": 1.2,
+   "then": 1.4
+  },
+  {
+   "id": "c43",
+   "element": "hand cursor",
+   "axis": "present",
+   "check": "A hand-pointer cursor rides with the slider thumb throughout the drags",
+   "box": [
+    340,
+    330,
+    60,
+    40
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": null
+  }
+ ],
+ "imagery": [
+  {
+   "name": "Firecrawl logo",
+   "box": [
+    272,
+    29,
+    88,
+    22
+   ],
+   "class": "structured",
+   "what": "orange flame mark with dark 'Firecrawl' wordmark",
+   "at": 0.7
+  },
+  {
+   "name": "dot-matrix world map",
+   "box": [
+    440,
+    82,
+    670,
+    166
+   ],
+   "class": "css",
+   "what": "faint grey dotted/character world map texture behind hero, flickering",
+   "at": 0.7
+  },
+  {
+   "name": "orange glyph texture",
+   "box": [
+    456,
+    640,
+    214,
+    160
+   ],
+   "class": "css",
+   "what": "orange ASCII/dot character field behind the selected plan's price and Subscribe button, denser toward the bottom",
+   "at": 0.7
+  },
+  {
+   "name": "India flag",
+   "box": [
+    656,
+    463,
+    12,
+    9
+   ],
+   "class": "structured",
+   "what": "tiny India flag in the INR currency pill",
+   "at": 0.7
+  }
+ ],
+ "moves": [
+  {
+   "element": "slider thumb + credits number",
+   "what": "snaps left from 21,000 to ~3,500; Hobby selected",
+   "from": 0.05,
+   "to": 0.2,
+   "px": 228
+  },
+  {
+   "element": "slider thumb + credits number",
+   "what": "drag right to 90,000; Standard becomes selected (tint, chip, orange button jump)",
+   "from": 1.2,
+   "to": 1.4,
+   "px": 206
+  },
+  {
+   "element": "slider thumb + credits number",
+   "what": "drag right to 400,000; Growth selected",
+   "from": 1.55,
+   "to": 1.8,
+   "px": 139
+  },
+  {
+   "element": "slider thumb + credits number",
+   "what": "drag right to 790,000; Scale stop active",
+   "from": 1.8,
+   "to": 2,
+   "px": 133
+  },
+  {
+   "element": "plan grid → Scale Plans section",
+   "what": "4-card grid collapses away; Scale Plans 3-column section slides up into place",
+   "from": 1.98,
+   "to": 2.27,
+   "px": 90
+  },
+  {
+   "element": "slider thumb + plan grid",
+   "what": "drag back left to 86,000; 4-card grid grows back in, pushing Scale Plans down; Standard selected",
+   "from": 3.65,
+   "to": 4,
+   "px": 280
+  }
+ ]
+}

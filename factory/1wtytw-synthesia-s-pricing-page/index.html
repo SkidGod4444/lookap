@@ -1,0 +1,180 @@
+<!doctype html>
+<!--
+  Synthesia's Pricing Page — rebuild of a design by Synthesia.
+  Source: https://www.synthesia.io/pricing
+  Static page (the clip holds still for all 3 s). Nothing sampled: gradients, logo, coin and line icons are drawn.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Synthesia's Pricing Page</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;overflow:hidden;background:#fbfbfb}
+#stage{--u:1px;position:relative;width:calc(1244 * var(--u));height:calc(996 * var(--u));background:#fbfbfb;overflow:hidden;font-family:"Inter Tight",system-ui,sans-serif;color:#060a20;-webkit-font-smoothing:antialiased}
+#stage *{box-sizing:border-box}
+.a{position:absolute}
+svg.i{width:calc(14 * var(--u));height:calc(14 * var(--u));fill:none;stroke:#2b2e3d;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.logo{left:calc(112 * var(--u));top:calc(24 * var(--u));display:flex;align-items:center;gap:calc(3 * var(--u));font-weight:700;font-size:calc(13.5 * var(--u));letter-spacing:calc(-0.4 * var(--u));line-height:1}
+.logo svg{width:calc(13 * var(--u));height:calc(9 * var(--u))}
+.login{right:calc(111 * var(--u));top:calc(21 * var(--u));display:flex;align-items:center;gap:calc(11 * var(--u));font-size:calc(14 * var(--u));color:#6a6b70;line-height:calc(20 * var(--u))}
+.login em{width:calc(1 * var(--u));height:calc(16 * var(--u));background:#ececec}
+.login svg.i{width:calc(13 * var(--u));height:calc(13 * var(--u));stroke:#7c7c80;stroke-width:1.3}
+h1{position:absolute;left:0;right:0;top:calc(77 * var(--u));margin:0;text-align:center;font-weight:500;font-size:calc(38 * var(--u));line-height:calc(48 * var(--u));letter-spacing:calc(-1 * var(--u))}
+.seg{left:calc(112 * var(--u));top:calc(166 * var(--u));width:calc(241 * var(--u));height:calc(34 * var(--u));border-radius:calc(17 * var(--u));background:#efeff1;padding:calc(3 * var(--u));display:flex;align-items:center;font-size:calc(11.5 * var(--u));font-weight:500;letter-spacing:calc(0.6 * var(--u))}
+.seg b{font-weight:500;background:#060a20;color:#fff;border-radius:calc(14 * var(--u));height:calc(28 * var(--u));width:calc(162 * var(--u));display:flex;align-items:center;justify-content:center}
+.seg span{flex:1;text-align:center}
+.save{right:calc(282 * var(--u));top:calc(170 * var(--u));font-size:calc(11 * var(--u));color:#6c6e78;line-height:calc(16 * var(--u))}
+.radios{right:calc(112 * var(--u));top:calc(164 * var(--u));height:calc(30 * var(--u));width:calc(162 * var(--u));border-radius:calc(15 * var(--u));border:calc(1 * var(--u)) solid #ebebeb;background:#f3f3f4;display:flex;align-items:center;gap:calc(14 * var(--u));padding-left:calc(12 * var(--u));font-size:calc(11.5 * var(--u));font-weight:500;letter-spacing:calc(0.3 * var(--u))}
+.radios span{display:flex;align-items:center;gap:calc(6 * var(--u))}
+.radios i{width:calc(10 * var(--u));height:calc(10 * var(--u));border-radius:50%;border:calc(1.5 * var(--u)) solid #060a20;display:block}
+.radios i.on{background:radial-gradient(circle,#060a20 calc(2.6 * var(--u)),transparent calc(3 * var(--u)))}
+.rule{top:calc(234 * var(--u));bottom:0;width:calc(1 * var(--u));background:#dedede}
+.card{top:calc(234 * var(--u));width:calc(234 * var(--u));height:calc(268 * var(--u));border-radius:calc(12 * var(--u));background:#f3f3f3}
+.card h2{position:absolute;left:calc(20 * var(--u));top:calc(254 * var(--u) - 234 * var(--u));margin:0;font-size:calc(22.5 * var(--u));font-weight:500;letter-spacing:calc(-0.4 * var(--u));line-height:calc(24 * var(--u))}
+.was{position:absolute;left:calc(20 * var(--u));top:calc(125 * var(--u));font-size:calc(11 * var(--u));color:#73757f;line-height:calc(14 * var(--u))}
+.was s{color:#9a9ca4}
+.price{position:absolute;left:calc(20 * var(--u));top:calc(141 * var(--u));font-size:calc(22.5 * var(--u));font-weight:400;letter-spacing:calc(-0.3 * var(--u));line-height:calc(26 * var(--u))}
+.price small{font-size:calc(16 * var(--u));letter-spacing:0}
+.chip{position:absolute;left:calc(20 * var(--u));top:calc(177 * var(--u));width:calc(194 * var(--u));height:calc(30 * var(--u));border-radius:calc(6 * var(--u));background:#fff;border:calc(1 * var(--u)) solid #e3e3e5;display:flex;align-items:center;justify-content:center;gap:calc(14 * var(--u));font-size:calc(10.5 * var(--u));font-weight:500;letter-spacing:calc(0.3 * var(--u))}
+.btn{position:absolute;left:calc(20 * var(--u));top:calc(217 * var(--u));width:calc(194 * var(--u));height:calc(31 * var(--u));border-radius:calc(6 * var(--u));background:#06091f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:calc(12.5 * var(--u));font-weight:500}
+.pro{background:linear-gradient(180deg,#121846 0%,#1a2252 8%,#222c66 16%,#2d3882 25%,#3f4ea3 34%,#5262bc 42%,#5c6ec9 47%,#7083d9 54%,#8394e3 60%,#93a5ed 66%,#aab8ee 71%,#b1bef0 78%,#aebcf0 86%,#a5b4ef 94%,#a0afef 100%)}
+.ent{background:linear-gradient(180deg,#181628 0%,#221e28 8%,#2c2529 14%,#362e2d 20%,#3e352d 25%,#4a3c2e 32%,#564531 39%,#604d36 44%,#695638 50%,#76623c 57%,#826c41 63%,#8f7645 70%,#9a824b 76%,#a58a51 82%,#ae9557 88%,#b8a05c 93%,#c1a763 100%)}
+.pro h2,.ent h2,.pro .price,.ent .price{color:#fff}
+.pro .was,.pro .was s{color:#c9d0f2}
+.pop{position:absolute;left:calc(60 * var(--u));top:calc(22 * var(--u));height:calc(22 * var(--u));padding:0 calc(10 * var(--u));border-radius:calc(11 * var(--u));background:rgba(255,255,255,.13);color:#fff;font-size:calc(10 * var(--u));font-weight:500;letter-spacing:calc(0.4 * var(--u));display:flex;align-items:center}
+.pro .chip{background:#ebeefb;border-color:#ebeefb}
+.pro .chip svg{width:calc(10 * var(--u));height:calc(10 * var(--u));stroke:#060a20;fill:none;stroke-width:1.5}
+.pro .btn{background:#fff;color:#060a20}
+.ent .chip{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.35);color:#f1ece0}
+.panel{top:calc(517 * var(--u));width:calc(234 * var(--u));height:calc(206 * var(--u));border-radius:calc(12 * var(--u));background:#f3f3f3;border:calc(1 * var(--u)) solid #e6e6e6;padding:calc(15 * var(--u)) calc(14 * var(--u)) 0;font-size:calc(11.5 * var(--u));line-height:calc(20.5 * var(--u));color:#55575f}
+.ph{display:flex;align-items:center;gap:calc(9 * var(--u));font-size:calc(10.5 * var(--u));font-weight:600;letter-spacing:calc(0.3 * var(--u));color:#060a20;height:calc(17 * var(--u));margin-bottom:calc(14 * var(--u))}
+.coin{width:calc(18 * var(--u));height:calc(18 * var(--u))}
+.ph svg.i,.note svg.i{width:calc(11 * var(--u));height:calc(11 * var(--u));stroke:#6c6e78;stroke-width:1.2;margin-left:calc(-3 * var(--u))}
+.panel b{font-weight:600;color:#33353f}
+.panel>div:not([class]){font-size:calc(10.5 * var(--u));font-weight:500;letter-spacing:calc(0.2 * var(--u));position:relative;left:calc(-2 * var(--u));top:calc(1 * var(--u))}
+.note{display:flex;align-items:center;gap:calc(8 * var(--u));color:#7a7c86;margin-top:calc(9 * var(--u));padding-bottom:calc(10 * var(--u));border-bottom:calc(1 * var(--u)) solid #e3e3e3}
+.seat{display:flex;align-items:center;gap:calc(10 * var(--u));margin-top:calc(14 * var(--u));font-size:calc(11 * var(--u));font-weight:500;color:#55575f}
+.seat span{font-weight:500;color:#2b2e3d;font-size:calc(11 * var(--u));display:flex;align-items:center;gap:calc(8 * var(--u));height:calc(31 * var(--u));padding:0 calc(14 * var(--u)) 0 calc(11 * var(--u));border-radius:calc(16 * var(--u));border:calc(1 * var(--u)) solid #e0e0e2;background:#f6f6f7}
+.seat svg.i{width:calc(11 * var(--u));height:calc(11 * var(--u));stroke:#2b2e3d;stroke-width:1.3}
+ul{position:absolute;margin:0;padding:0;list-style:none;width:calc(194 * var(--u));font-size:calc(12.6 * var(--u));line-height:calc(17 * var(--u));color:#1b1e30}
+li svg.i{width:calc(15 * var(--u));height:calc(15 * var(--u));stroke:#4a4d58;stroke-width:1.1}
+li{display:flex;align-items:flex-start;gap:calc(7 * var(--u));padding:calc(10.25 * var(--u)) 0 calc(9.25 * var(--u));border-bottom:calc(1 * var(--u)) solid #e9e9e9}
+li svg.i{margin-top:calc(1.5 * var(--u))}
+li:last-child{border-bottom:0}
+li.h{font-weight:600}
+li.h svg.n{width:calc(12 * var(--u));height:calc(12 * var(--u));stroke:#6c6e78;stroke-width:1.2;margin:calc(2.5 * var(--u)) 0 0 calc(3 * var(--u))}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+<defs>
+<symbol id="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5"/><path d="M5.3 8.2l1.9 1.9 3.6-3.8"/></symbol>
+<symbol id="inf" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5"/><path d="M8 7.3v4M8 4.9v.1"/></symbol>
+<symbol id="ext" viewBox="0 0 16 16"><path d="M9.5 2h4.5v4.5M14 2L7.5 8.5M12 9.5v3.5a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3.5"/></symbol>
+<symbol id="book" viewBox="0 0 16 16"><path d="M1.5 3.5c2-.8 4-.8 6.5.6 2.5-1.4 4.5-1.4 6.5-.6v9c-2-.8-4-.8-6.5.6-2.5-1.4-4.5-1.4-6.5-.6zM8 4.1v9.1"/></symbol>
+<symbol id="vid" viewBox="0 0 16 16"><rect x="1.5" y="3.5" width="13" height="9" rx="1.5"/><path d="M6.8 6l3 2-3 2z"/></symbol>
+<symbol id="dl" viewBox="0 0 16 16"><path d="M8 2v8.5M4.5 7l3.5 3.5L11.5 7M2 14h12"/></symbol>
+<symbol id="cut" viewBox="0 0 16 16"><circle cx="4" cy="4" r="2.2"/><circle cx="4" cy="12" r="2.2"/><path d="M5.8 5.3L14 12.5M5.8 10.7L14 3.5"/></symbol>
+<symbol id="wand" viewBox="0 0 16 16"><path d="M2.5 13.5l8-8M12 1.5v2.5M13.2 2.8h-2.5M5 2v2M6 3H4M13.5 8.5v2M14.5 9.5h-2"/></symbol>
+<symbol id="clip" viewBox="0 0 16 16"><path d="M5.5 2.5H4a1 1 0 0 0-1 1V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V3.5a1 1 0 0 0-1-1h-1.5M5.5 1.5h5v2.5h-5zM5.8 9.2l1.6 1.6 3-3"/></symbol>
+<symbol id="ppl" viewBox="0 0 16 16"><circle cx="5" cy="6" r="2"/><circle cx="11" cy="6" r="2"/><path d="M1.5 12.5c.5-2 1.8-3 3.5-3s3 1 3.5 3M7.5 12.5c.5-2 1.8-3 3.5-3s3 1 3.5 3"/></symbol>
+<symbol id="av" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5"/><circle cx="8" cy="6.5" r="2.2"/><path d="M4 12.8c1-1.6 2.3-2.4 4-2.4s3 .8 4 2.4"/></symbol>
+<symbol id="avp" viewBox="0 0 16 16"><path d="M14.5 8A6.5 6.5 0 1 0 8 14.5"/><circle cx="8" cy="6.5" r="2.2"/><path d="M4 12.8c1-1.6 2.3-2.4 4-2.4 1 0 1.8.2 2.5.7M12.5 10.5v4M10.5 12.5h4"/></symbol>
+<symbol id="play" viewBox="0 0 16 16"><rect x="1.5" y="1.5" width="13" height="13" rx="2.5"/><path d="M6.5 5.5l4 2.5-4 2.5z"/></symbol>
+<symbol id="cur" viewBox="0 0 16 16"><circle cx="10" cy="4" r="2"/><path d="M6.5 12.5c.3-2.5 1.6-4 3.5-4s3.2 1.5 3.5 4M2 7l5.5 2-2.3.8L4.5 12z"/></symbol>
+<symbol id="lay" viewBox="0 0 16 16"><path d="M8 1.5l6.5 3.3L8 8.1 1.5 4.8zM1.5 8l6.5 3.3L14.5 8M1.5 11.2L8 14.5l6.5-3.3"/></symbol>
+<symbol id="clk" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.3 1.6"/></symbol>
+<symbol id="tr" viewBox="0 0 16 16"><path d="M1.5 3.5h7M5 2v1.5M3 3.5c.5 2.5 2.2 4.4 4.5 5.5M7 3.5c-.5 2.3-2.3 4.5-5 5.5M8.5 14.5l3-7 3 7M9.6 12h3.8"/></symbol>
+<symbol id="lock" viewBox="0 0 16 16"><rect x="2.5" y="7" width="11" height="7.5" rx="1.5"/><path d="M5 7V5a3 3 0 0 1 6 0v2M8 10v1.5"/></symbol>
+<symbol id="ptr" viewBox="0 0 16 16"><path d="M2 2l11 4.5-4.5 1.6L13.5 13 12 14.5 7 9.5 5.6 14z"/></symbol>
+<symbol id="kit" viewBox="0 0 16 16"><rect x="1.5" y="1.5" width="6" height="13" rx="1.5"/><path d="M1.5 6h6M1.5 10h6M7.5 6.5l3-3 3 3-6 6M7.5 14.5h5.5a1 1 0 0 0 1-1v-4.5h-3"/></symbol>
+<symbol id="hand" viewBox="0 0 16 16"><path d="M6 9.5L4.2 5.2M8 8.5L6.8 3.6M10 8.5l-.3-4.2M11.8 9.5l.6-3M5.2 12.5c1.5 1.8 4.5 2 6 .5l.6-3.5M5.2 12.5L3.5 10M1.5 6.5c.3 1 .8 1.8 1.5 2.4M13.8 3.5c.7.5 1.1 1.3 1.2 2.2"/></symbol>
+<symbol id="brief" viewBox="0 0 16 16"><rect x="1.5" y="4.5" width="13" height="9.5" rx="1.5"/><path d="M5.5 4.5V3a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v1.5M1.5 8.5h13M7 8.5v1.5h2V8.5"/></symbol>
+<symbol id="hs" viewBox="0 0 16 16"><path d="M2.5 10V8a5.5 5.5 0 0 1 11 0v2M2.5 9.5h2v4h-1a1 1 0 0 1-1-1zM13.5 9.5h-2v4h1a1 1 0 0 0 1-1zM12.5 13.5c0 1-1 1.5-3 1.5"/></symbol>
+<symbol id="glb" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c2 2 2.7 4 2.7 6.5S10 12.5 8 14.5C6 12.5 5.3 10.5 5.3 8S6 3.5 8 1.5"/></symbol>
+<symbol id="plus" viewBox="0 0 16 16"><path d="M8 2.5v11M2.5 8h11"/></symbol>
+</defs>
+</svg>
+<div id="stage">
+  <div class="a logo"><svg viewBox="0 0 16 11"><rect x="1.4" y="1.4" width="13.2" height="8.2" rx="2.6" fill="none" stroke="#2f5be0" stroke-width="2.8"/></svg>synthesia</div>
+  <div class="a login"><svg class="i"><use href="#glb"/></svg><em></em>Log in</div>
+  <h1>Pricing that scales with your needs</h1>
+  <div class="a seg"><b>VIDEO &amp; SESSIONS</b><span>API</span></div>
+  <div class="a save">Save up to 3 months with yearly</div>
+  <div class="a radios"><span><i></i>MONTHLY</span><span><i class="on"></i>YEARLY</span></div>
+
+  <div class="a rule" style="left:calc(360 * var(--u))"></div>
+  <div class="a rule" style="left:calc(622 * var(--u))"></div>
+  <div class="a rule" style="left:calc(884 * var(--u))"></div>
+
+  <div class="a card" style="left:calc(112 * var(--u))"><h2>Basic</h2>
+    <div class="price">₹0 <small>per month</small></div>
+    <div class="chip">500 CREDITS / MONTH</div><div class="btn">Get started</div></div>
+  <div class="a card" style="left:calc(374 * var(--u))"><h2>Starter</h2>
+    <div class="was"><s>₹1,999</s> Billed yearly.</div><div class="price">₹1,499 <small>per month</small></div>
+    <div class="chip">15,000 CREDITS / YEAR</div><div class="btn">Get started</div></div>
+  <div class="a card pro" style="left:calc(636 * var(--u))"><h2>Pro</h2><div class="pop">MOST POPULAR</div>
+    <div class="was"><s>₹6,199</s> Billed yearly.</div><div class="price">₹4,649 <small>per month</small></div>
+    <div class="chip">72,000 CREDITS / YEAR<svg viewBox="0 0 10 10"><path d="M2 3.8l3 3 3-3"/></svg></div><div class="btn">Get started</div></div>
+  <div class="a card ent" style="left:calc(898 * var(--u))"><h2>Enterprise</h2>
+    <div class="price">Let's talk.</div>
+    <div class="chip">CUSTOM CREDIT VOLUMES</div><div class="btn">Book demo</div></div>
+
+  <div class="a panel" style="left:calc(374 * var(--u))">
+    <div class="ph"><svg class="coin" viewBox="0 0 18 18"><rect x=".5" y=".5" width="17" height="17" rx="4.5" fill="#fff" stroke="#e4e4e8"/><circle cx="9" cy="9" r="5.5" fill="#5b6ff0"/><rect x="6.3" y="7.4" width="5.4" height="3.2" rx="1.6" fill="none" stroke="#fff" stroke-width="1.1"/></svg>CREDITS<svg class="i"><use href="#inf"/></svg></div>
+    <div>Video <b>up to ~150 min</b></div><div>Dubbing <b>up to 197 min</b></div><div>Surveys <b>up to 42 responses</b></div>
+    <div class="note">On top of the free allowance<svg class="i"><use href="#inf"/></svg></div>
+    <div class="seat">Roleplays<span><svg class="i"><use href="#plus"/></svg>Add learner seat</span></div>
+  </div>
+  <div class="a panel" style="left:calc(636 * var(--u))">
+    <div class="ph"><svg class="coin" viewBox="0 0 18 18"><rect x=".5" y=".5" width="17" height="17" rx="4.5" fill="#fff" stroke="#e4e4e8"/><circle cx="9" cy="9" r="5.5" fill="#5b6ff0"/><rect x="6.3" y="7.4" width="5.4" height="3.2" rx="1.6" fill="none" stroke="#fff" stroke-width="1.1"/></svg>CREDITS<svg class="i"><use href="#inf"/></svg></div>
+    <div>Video <b>up to ~720 min</b></div><div>Dubbing <b>up to 947 min</b></div><div>Surveys <b>up to 205 responses</b></div>
+    <div class="note">On top of the free allowance<svg class="i"><use href="#inf"/></svg></div>
+    <div class="seat">Roleplays<span><svg class="i"><use href="#plus"/></svg>Add learner seat</span></div>
+  </div>
+
+  <ul style="left:calc(132 * var(--u));top:calc(513 * var(--u))">
+    <li class="h"><svg class="i"><use href="#ck"/></svg>Free allowance<svg class="i n"><use href="#inf"/></svg></li>
+    <li><svg class="i"><use href="#ext"/></svg>Share your content online via share link</li>
+    <li><svg class="i"><use href="#book"/></svg>Pre-built libraries, templates, roleplays, surveys</li>
+    <li><svg class="i"><use href="#vid"/></svg>Videos carry a Synthesia watermark</li>
+  </ul>
+  <ul style="left:calc(394 * var(--u));top:calc(734 * var(--u))">
+    <li class="h"><svg class="i"><use href="#ck"/></svg>Everything in Basic +</li>
+    <li><svg class="i"><use href="#dl"/></svg>Download your content</li>
+    <li><svg class="i"><use href="#cut"/></svg>Remove Synthesia logo</li>
+    <li><svg class="i"><use href="#wand"/></svg>AI Video Assistant</li>
+    <li><svg class="i"><use href="#clip"/></svg>Survey Analytics</li>
+    <li><svg class="i"><use href="#ppl"/></svg>3 guests</li>
+    <li><svg class="i"><use href="#av"/></svg>125+ Synthesia AI Avatars</li>
+  </ul>
+  <ul style="left:calc(656 * var(--u));top:calc(734 * var(--u))">
+    <li class="h"><svg class="i"><use href="#ck"/></svg>Everything in Starter +</li>
+    <li><svg class="i"><use href="#avp"/></svg>5 Personal Avatars</li>
+    <li><svg class="i"><use href="#play"/></svg>Branded video pages</li>
+    <li><svg class="i"><use href="#cur"/></svg>Interactive videos</li>
+    <li><svg class="i"><use href="#ppl"/></svg>5 guests</li>
+    <li><svg class="i"><use href="#av"/></svg>180+ Synthesia AI Avatars</li>
+    <li><svg class="i"><use href="#lay"/></svg>Flexible plan tiers</li>
+  </ul>
+  <ul style="left:calc(918 * var(--u));top:calc(513 * var(--u))">
+    <li class="h"><svg class="i"><use href="#ck"/></svg>Everything in Pro +</li>
+    <li><svg class="i"><use href="#clk"/></svg>Unlimited video minutes</li>
+    <li><svg class="i"><use href="#tr"/></svg>1-Click Translations into 140+ languages</li>
+    <li><svg class="i"><use href="#av"/></svg>240+ stock AI Avatars</li>
+    <li><svg class="i"><use href="#avp"/></svg>Unlimited Personal Avatars</li>
+    <li><svg class="i"><use href="#lock"/></svg>SAML/SSO</li>
+    <li><svg class="i"><use href="#ptr"/></svg>Live team collaboration</li>
+    <li><svg class="i"><use href="#kit"/></svg>Brand Kits</li>
+    <li><svg class="i"><use href="#dl"/></svg>SCORM export</li>
+    <li><svg class="i"><use href="#hand"/></svg>Tailored onboarding</li>
+    <li><svg class="i"><use href="#brief"/></svg>Implementation services</li>
+    <li><svg class="i"><use href="#hs"/></svg>Dedicated CSM</li>
+    <li><svg class="i"><use href="#ppl"/></svg>Enterprise community</li>
+  </ul>
+</div>
+</body>
+</html>

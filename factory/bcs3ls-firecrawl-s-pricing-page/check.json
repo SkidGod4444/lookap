@@ -1,0 +1,1515 @@
+{
+ "slug": "bcs3ls-firecrawl-s-pricing-page",
+ "measured": "draft",
+ "frame": {
+  "w": 1350,
+  "h": 1080
+ },
+ "animations": 4,
+ "score": 84,
+ "stills": 84,
+ "motion": 84,
+ "keyframes": [
+  {
+   "keyframe": "0s",
+   "at": 0,
+   "still": false,
+   "score": 84,
+   "overall": 10,
+   "elements": [
+    {
+     "name": "draft 1 #ff4e00",
+     "box": [
+      474,
+      756,
+      178,
+      28
+     ],
+     "reference": "#e7e7e7",
+     "yours": "#e2e2e2",
+     "delta": 11,
+     "colour": 5,
+     "deltaE": 1.7,
+     "shift": null,
+     "afterShift": 11,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 2 #e5e5e5",
+     "box": [
+      379,
+      334,
+      709,
+      8
+     ],
+     "reference": "#efe0d9",
+     "yours": "#eee1dc",
+     "delta": 8,
+     "colour": 1,
+     "deltaE": 1.1,
+     "shift": null,
+     "afterShift": 8,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 3 #fbdfd3",
+     "box": [
+      518,
+      515,
+      51,
+      17
+     ],
+     "reference": "#f7f7f7",
+     "yours": "#f7f7f7",
+     "delta": 0,
+     "colour": 0,
+     "deltaE": 0,
+     "shift": null,
+     "afterShift": 0,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      450,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": [
+      "draft 1 #ff4e00"
+     ]
+    },
+    {
+     "cell": "E4",
+     "box": [
+      675,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": []
+    },
+    {
+     "cell": "E5",
+     "box": [
+      900,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "0.05s",
+   "at": 0.05,
+   "still": false,
+   "score": 84,
+   "overall": 10,
+   "elements": [
+    {
+     "name": "draft 1 #ff4e00",
+     "box": [
+      474,
+      756,
+      178,
+      28
+     ],
+     "reference": "#e7e7e7",
+     "yours": "#e2e2e2",
+     "delta": 11,
+     "colour": 5,
+     "deltaE": 1.7,
+     "shift": null,
+     "afterShift": 11,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 2 #e5e5e5",
+     "box": [
+      379,
+      334,
+      709,
+      8
+     ],
+     "reference": "#efe1db",
+     "yours": "#eee1dc",
+     "delta": 4,
+     "colour": 1,
+     "deltaE": 0.6,
+     "shift": null,
+     "afterShift": 4,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 3 #fbdfd3",
+     "box": [
+      518,
+      515,
+      51,
+      17
+     ],
+     "reference": "#f7f7f7",
+     "yours": "#f7f7f7",
+     "delta": 0,
+     "colour": 0,
+     "deltaE": 0,
+     "shift": null,
+     "afterShift": 0,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      450,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": [
+      "draft 1 #ff4e00"
+     ]
+    },
+    {
+     "cell": "E4",
+     "box": [
+      675,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": []
+    },
+    {
+     "cell": "E5",
+     "box": [
+      900,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "0.5s",
+   "at": 0.5,
+   "still": false,
+   "score": 84,
+   "overall": 10,
+   "elements": [
+    {
+     "name": "draft 3 #fbdfd3",
+     "box": [
+      518,
+      515,
+      51,
+      17
+     ],
+     "reference": "#f5cdba",
+     "yours": "#fbd8c8",
+     "delta": 16,
+     "colour": 10,
+     "deltaE": 4.6,
+     "shift": [
+      4,
+      0
+     ],
+     "afterShift": 13,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #ff4e00",
+     "box": [
+      474,
+      756,
+      178,
+      28
+     ],
+     "reference": "#fe5408",
+     "yours": "#ff510c",
+     "delta": 10,
+     "colour": 3,
+     "deltaE": 2,
+     "shift": null,
+     "afterShift": 10,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 2 #e5e5e5",
+     "box": [
+      379,
+      334,
+      709,
+      8
+     ],
+     "reference": "#eeeae8",
+     "yours": "#ede9e7",
+     "delta": 2,
+     "colour": 1,
+     "deltaE": 0.2,
+     "shift": null,
+     "afterShift": 2,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      450,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": [
+      "draft 1 #ff4e00"
+     ]
+    },
+    {
+     "cell": "E4",
+     "box": [
+      675,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": []
+    },
+    {
+     "cell": "E5",
+     "box": [
+      900,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "kf1",
+   "at": 0.7,
+   "still": true,
+   "score": 85,
+   "overall": 10,
+   "elements": [
+    {
+     "name": "draft 3 #fbdfd3",
+     "box": [
+      518,
+      515,
+      51,
+      17
+     ],
+     "reference": "#f5cdba",
+     "yours": "#fbd8c8",
+     "delta": 16,
+     "colour": 10,
+     "deltaE": 4.6,
+     "shift": [
+      4,
+      0
+     ],
+     "afterShift": 13,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #ff4e00",
+     "box": [
+      474,
+      756,
+      178,
+      28
+     ],
+     "reference": "#fe5408",
+     "yours": "#ff510c",
+     "delta": 10,
+     "colour": 3,
+     "deltaE": 1.9,
+     "shift": null,
+     "afterShift": 10,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 2 #e5e5e5",
+     "box": [
+      379,
+      334,
+      709,
+      8
+     ],
+     "reference": "#ededed",
+     "yours": "#ededed",
+     "delta": 2,
+     "colour": 1,
+     "deltaE": 0.3,
+     "shift": null,
+     "afterShift": 2,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      450,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": [
+      "draft 1 #ff4e00"
+     ]
+    },
+    {
+     "cell": "E4",
+     "box": [
+      675,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": []
+    },
+    {
+     "cell": "E5",
+     "box": [
+      900,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "1.1s",
+   "at": 1.1,
+   "still": false,
+   "score": 84,
+   "overall": 10,
+   "elements": [
+    {
+     "name": "draft 3 #fbdfd3",
+     "box": [
+      518,
+      515,
+      51,
+      17
+     ],
+     "reference": "#f5cdba",
+     "yours": "#fbd8c8",
+     "delta": 16,
+     "colour": 10,
+     "deltaE": 4.7,
+     "shift": [
+      4,
+      0
+     ],
+     "afterShift": 13,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #ff4e00",
+     "box": [
+      474,
+      756,
+      178,
+      28
+     ],
+     "reference": "#fe5408",
+     "yours": "#ff510c",
+     "delta": 10,
+     "colour": 3,
+     "deltaE": 1.9,
+     "shift": null,
+     "afterShift": 10,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 2 #e5e5e5",
+     "box": [
+      379,
+      334,
+      709,
+      8
+     ],
+     "reference": "#edebea",
+     "yours": "#ede9e7",
+     "delta": 7,
+     "colour": 2,
+     "deltaE": 1.2,
+     "shift": null,
+     "afterShift": 7,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      450,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": [
+      "draft 1 #ff4e00"
+     ]
+    },
+    {
+     "cell": "E4",
+     "box": [
+      675,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": []
+    },
+    {
+     "cell": "E5",
+     "box": [
+      900,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "1.2s",
+   "at": 1.2,
+   "still": false,
+   "score": 84,
+   "overall": 10,
+   "elements": [
+    {
+     "name": "draft 3 #fbdfd3",
+     "box": [
+      518,
+      515,
+      51,
+      17
+     ],
+     "reference": "#f5cdba",
+     "yours": "#fbd8c8",
+     "delta": 16,
+     "colour": 10,
+     "deltaE": 4.6,
+     "shift": [
+      4,
+      0
+     ],
+     "afterShift": 13,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #ff4e00",
+     "box": [
+      474,
+      756,
+      178,
+      28
+     ],
+     "reference": "#fe5408",
+     "yours": "#ff510c",
+     "delta": 10,
+     "colour": 3,
+     "deltaE": 1.9,
+     "shift": null,
+     "afterShift": 10,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 2 #e5e5e5",
+     "box": [
+      379,
+      334,
+      709,
+      8
+     ],
+     "reference": "#efe4df",
+     "yours": "#eee2de",
+     "delta": 8,
+     "colour": 1,
+     "deltaE": 0.7,
+     "shift": null,
+     "afterShift": 8,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      450,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": [
+      "draft 1 #ff4e00"
+     ]
+    },
+    {
+     "cell": "E4",
+     "box": [
+      675,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": []
+    },
+    {
+     "cell": "E5",
+     "box": [
+      900,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "kf2",
+   "at": 1.4,
+   "still": true,
+   "score": 84,
+   "overall": 10,
+   "elements": [
+    {
+     "name": "draft 1 #ff4e00",
+     "box": [
+      474,
+      756,
+      178,
+      28
+     ],
+     "reference": "#e6e0de",
+     "yours": "#e2e2e2",
+     "delta": 10,
+     "colour": 3,
+     "deltaE": 2.3,
+     "shift": null,
+     "afterShift": 10,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 2 #e5e5e5",
+     "box": [
+      379,
+      334,
+      709,
+      8
+     ],
+     "reference": "#f1d4c7",
+     "yours": "#f1d5c9",
+     "delta": 5,
+     "colour": 1,
+     "deltaE": 1.3,
+     "shift": null,
+     "afterShift": 5,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 3 #fbdfd3",
+     "box": [
+      518,
+      515,
+      51,
+      17
+     ],
+     "reference": "#f7f7f7",
+     "yours": "#f7f7f7",
+     "delta": 0,
+     "colour": 0,
+     "deltaE": 0,
+     "shift": null,
+     "afterShift": 0,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      450,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": [
+      "draft 1 #ff4e00"
+     ]
+    },
+    {
+     "cell": "E4",
+     "box": [
+      675,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": []
+    },
+    {
+     "cell": "E5",
+     "box": [
+      900,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "kf3",
+   "at": 1.8,
+   "still": true,
+   "score": 84,
+   "overall": 10,
+   "elements": [
+    {
+     "name": "draft 1 #ff4e00",
+     "box": [
+      474,
+      756,
+      178,
+      28
+     ],
+     "reference": "#e6e6e6",
+     "yours": "#e2e2e2",
+     "delta": 11,
+     "colour": 4,
+     "deltaE": 1.6,
+     "shift": null,
+     "afterShift": 11,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 2 #e5e5e5",
+     "box": [
+      379,
+      334,
+      709,
+      8
+     ],
+     "reference": "#f4c5ae",
+     "yours": "#f4c5b3",
+     "delta": 7,
+     "colour": 2,
+     "deltaE": 2.3,
+     "shift": null,
+     "afterShift": 7,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 3 #fbdfd3",
+     "box": [
+      518,
+      515,
+      51,
+      17
+     ],
+     "reference": "#f7f7f7",
+     "yours": "#f7f7f7",
+     "delta": 0,
+     "colour": 0,
+     "deltaE": 0,
+     "shift": null,
+     "afterShift": 0,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      450,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": [
+      "draft 1 #ff4e00"
+     ]
+    },
+    {
+     "cell": "E4",
+     "box": [
+      675,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": []
+    },
+    {
+     "cell": "E5",
+     "box": [
+      900,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "2.13s",
+   "at": 2.13,
+   "still": false,
+   "score": 85,
+   "overall": 10,
+   "elements": [
+    {
+     "name": "draft 1 #ff4e00",
+     "box": [
+      474,
+      756,
+      178,
+      28
+     ],
+     "reference": "#efe0d8",
+     "yours": "#f0ded6",
+     "delta": 17,
+     "colour": 1,
+     "deltaE": 0.8,
+     "shift": null,
+     "afterShift": 17,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 2 #e5e5e5",
+     "box": [
+      379,
+      334,
+      709,
+      8
+     ],
+     "reference": "#f6b698",
+     "yours": "#f6b79e",
+     "delta": 8,
+     "colour": 3,
+     "deltaE": 2.8,
+     "shift": null,
+     "afterShift": 8,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 3 #fbdfd3",
+     "box": [
+      518,
+      515,
+      51,
+      17
+     ],
+     "reference": "#f7f7f7",
+     "yours": "#f7f7f7",
+     "delta": 0,
+     "colour": 0,
+     "deltaE": 0,
+     "shift": null,
+     "afterShift": 0,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "F3",
+     "box": [
+      450,
+      900,
+      225,
+      180
+     ],
+     "delta": 27,
+     "over": []
+    },
+    {
+     "cell": "D2",
+     "box": [
+      225,
+      540,
+      225,
+      180
+     ],
+     "delta": 26,
+     "over": []
+    },
+    {
+     "cell": "E3",
+     "box": [
+      450,
+      720,
+      225,
+      180
+     ],
+     "delta": 18,
+     "over": [
+      "draft 1 #ff4e00"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "2.3s",
+   "at": 2.3,
+   "still": false,
+   "score": 84,
+   "overall": 10,
+   "elements": [
+    {
+     "name": "draft 3 #fbdfd3",
+     "box": [
+      518,
+      515,
+      51,
+      17
+     ],
+     "reference": "#e4dfdc",
+     "yours": "#e6e2df",
+     "delta": 21,
+     "colour": 2,
+     "deltaE": 0.9,
+     "shift": [
+      2,
+      0
+     ],
+     "afterShift": 14,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #ff4e00",
+     "box": [
+      474,
+      756,
+      178,
+      28
+     ],
+     "reference": "#f6f1ee",
+     "yours": "#f7efea",
+     "delta": 14,
+     "colour": 3,
+     "deltaE": 1.7,
+     "shift": [
+      -8,
+      2
+     ],
+     "afterShift": 13,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 2 #e5e5e5",
+     "box": [
+      379,
+      334,
+      709,
+      8
+     ],
+     "reference": "#f6b698",
+     "yours": "#f6b79e",
+     "delta": 8,
+     "colour": 3,
+     "deltaE": 2.8,
+     "shift": null,
+     "afterShift": 8,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "D2",
+     "box": [
+      225,
+      540,
+      225,
+      180
+     ],
+     "delta": 26,
+     "over": []
+    },
+    {
+     "cell": "E3",
+     "box": [
+      450,
+      720,
+      225,
+      180
+     ],
+     "delta": 21,
+     "over": [
+      "draft 1 #ff4e00"
+     ]
+    },
+    {
+     "cell": "F3",
+     "box": [
+      450,
+      900,
+      225,
+      180
+     ],
+     "delta": 20,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "2.5s",
+   "at": 2.5,
+   "still": false,
+   "score": 84,
+   "overall": 10,
+   "elements": [
+    {
+     "name": "draft 3 #fbdfd3",
+     "box": [
+      518,
+      515,
+      51,
+      17
+     ],
+     "reference": "#e4dfdc",
+     "yours": "#e6e2df",
+     "delta": 21,
+     "colour": 2,
+     "deltaE": 1,
+     "shift": [
+      2,
+      0
+     ],
+     "afterShift": 14,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #ff4e00",
+     "box": [
+      474,
+      756,
+      178,
+      28
+     ],
+     "reference": "#f6f1ef",
+     "yours": "#f7efea",
+     "delta": 14,
+     "colour": 3,
+     "deltaE": 1.8,
+     "shift": [
+      -6,
+      0
+     ],
+     "afterShift": 13,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 2 #e5e5e5",
+     "box": [
+      379,
+      334,
+      709,
+      8
+     ],
+     "reference": "#f6b698",
+     "yours": "#f6b79e",
+     "delta": 8,
+     "colour": 3,
+     "deltaE": 2.8,
+     "shift": null,
+     "afterShift": 8,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "D2",
+     "box": [
+      225,
+      540,
+      225,
+      180
+     ],
+     "delta": 26,
+     "over": []
+    },
+    {
+     "cell": "E3",
+     "box": [
+      450,
+      720,
+      225,
+      180
+     ],
+     "delta": 21,
+     "over": [
+      "draft 1 #ff4e00"
+     ]
+    },
+    {
+     "cell": "F3",
+     "box": [
+      450,
+      900,
+      225,
+      180
+     ],
+     "delta": 20,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "kf4",
+   "at": 2.95,
+   "still": true,
+   "score": 84,
+   "overall": 10,
+   "elements": [
+    {
+     "name": "draft 3 #fbdfd3",
+     "box": [
+      518,
+      515,
+      51,
+      17
+     ],
+     "reference": "#e4dfdc",
+     "yours": "#e6e2df",
+     "delta": 21,
+     "colour": 2,
+     "deltaE": 1,
+     "shift": [
+      2,
+      0
+     ],
+     "afterShift": 14,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #ff4e00",
+     "box": [
+      474,
+      756,
+      178,
+      28
+     ],
+     "reference": "#f6f1ef",
+     "yours": "#f7efea",
+     "delta": 14,
+     "colour": 3,
+     "deltaE": 1.8,
+     "shift": [
+      -8,
+      2
+     ],
+     "afterShift": 13,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 2 #e5e5e5",
+     "box": [
+      379,
+      334,
+      709,
+      8
+     ],
+     "reference": "#f6b698",
+     "yours": "#f6b79e",
+     "delta": 8,
+     "colour": 3,
+     "deltaE": 2.8,
+     "shift": null,
+     "afterShift": 8,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "D2",
+     "box": [
+      225,
+      540,
+      225,
+      180
+     ],
+     "delta": 26,
+     "over": []
+    },
+    {
+     "cell": "E3",
+     "box": [
+      450,
+      720,
+      225,
+      180
+     ],
+     "delta": 21,
+     "over": [
+      "draft 1 #ff4e00"
+     ]
+    },
+    {
+     "cell": "F3",
+     "box": [
+      450,
+      900,
+      225,
+      180
+     ],
+     "delta": 20,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "3.45s",
+   "at": 3.45,
+   "still": false,
+   "score": 83,
+   "overall": 10,
+   "elements": [
+    {
+     "name": "draft 3 #fbdfd3",
+     "box": [
+      518,
+      515,
+      51,
+      17
+     ],
+     "reference": "#e4dfdc",
+     "yours": "#e6e2df",
+     "delta": 21,
+     "colour": 2,
+     "deltaE": 1,
+     "shift": [
+      2,
+      0
+     ],
+     "afterShift": 14,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #ff4e00",
+     "box": [
+      474,
+      756,
+      178,
+      28
+     ],
+     "reference": "#f6f1ee",
+     "yours": "#f7efea",
+     "delta": 14,
+     "colour": 2,
+     "deltaE": 1.7,
+     "shift": [
+      -4,
+      2
+     ],
+     "afterShift": 13,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 2 #e5e5e5",
+     "box": [
+      379,
+      334,
+      709,
+      8
+     ],
+     "reference": "#f6b799",
+     "yours": "#f6b89f",
+     "delta": 8,
+     "colour": 3,
+     "deltaE": 2.8,
+     "shift": null,
+     "afterShift": 8,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "D2",
+     "box": [
+      225,
+      540,
+      225,
+      180
+     ],
+     "delta": 26,
+     "over": []
+    },
+    {
+     "cell": "E3",
+     "box": [
+      450,
+      720,
+      225,
+      180
+     ],
+     "delta": 21,
+     "over": [
+      "draft 1 #ff4e00"
+     ]
+    },
+    {
+     "cell": "F3",
+     "box": [
+      450,
+      900,
+      225,
+      180
+     ],
+     "delta": 20,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "3.83s",
+   "at": 3.83,
+   "still": false,
+   "score": 82,
+   "overall": 11,
+   "elements": [
+    {
+     "name": "draft 1 #ff4e00",
+     "box": [
+      474,
+      756,
+      178,
+      28
+     ],
+     "reference": "#e9e9e9",
+     "yours": "#e2e2e2",
+     "delta": 12,
+     "colour": 7,
+     "deltaE": 2.5,
+     "shift": null,
+     "afterShift": 12,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 2 #e5e5e5",
+     "box": [
+      379,
+      334,
+      709,
+      8
+     ],
+     "reference": "#f3c9b6",
+     "yours": "#f3cbbb",
+     "delta": 10,
+     "colour": 3,
+     "deltaE": 2.4,
+     "shift": null,
+     "afterShift": 10,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 3 #fbdfd3",
+     "box": [
+      518,
+      515,
+      51,
+      17
+     ],
+     "reference": "#f7f7f7",
+     "yours": "#f7f7f7",
+     "delta": 0,
+     "colour": 0,
+     "deltaE": 0,
+     "shift": null,
+     "afterShift": 0,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "F2",
+     "box": [
+      225,
+      900,
+      225,
+      180
+     ],
+     "delta": 25,
+     "over": []
+    },
+    {
+     "cell": "E3",
+     "box": [
+      450,
+      720,
+      225,
+      180
+     ],
+     "delta": 23,
+     "over": [
+      "draft 1 #ff4e00"
+     ]
+    },
+    {
+     "cell": "E4",
+     "box": [
+      675,
+      720,
+      225,
+      180
+     ],
+     "delta": 23,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "4.6s",
+   "at": 4.6,
+   "still": false,
+   "score": 84,
+   "overall": 10,
+   "elements": [
+    {
+     "name": "draft 1 #ff4e00",
+     "box": [
+      474,
+      756,
+      178,
+      28
+     ],
+     "reference": "#e7e7e7",
+     "yours": "#e2e2e2",
+     "delta": 11,
+     "colour": 5,
+     "deltaE": 1.6,
+     "shift": null,
+     "afterShift": 11,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 2 #e5e5e5",
+     "box": [
+      379,
+      334,
+      709,
+      8
+     ],
+     "reference": "#f1d5c8",
+     "yours": "#f1d5ca",
+     "delta": 6,
+     "colour": 1,
+     "deltaE": 1.4,
+     "shift": null,
+     "afterShift": 6,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 3 #fbdfd3",
+     "box": [
+      518,
+      515,
+      51,
+      17
+     ],
+     "reference": "#f7f7f7",
+     "yours": "#f7f7f7",
+     "delta": 0,
+     "colour": 0,
+     "deltaE": 0,
+     "shift": null,
+     "afterShift": 0,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      450,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": [
+      "draft 1 #ff4e00"
+     ]
+    },
+    {
+     "cell": "E4",
+     "box": [
+      675,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": []
+    },
+    {
+     "cell": "E5",
+     "box": [
+      900,
+      720,
+      225,
+      180
+     ],
+     "delta": 19,
+     "over": []
+    }
+   ]
+  }
+ ],
+ "runs": 24,
+ "at": "2026-10-23T17:55:08.338Z",
+ "rank": 95,
+ "allPass": true,
+ "rubric": {
+  "pass": 42,
+  "fail": 0,
+  "unsure": 1,
+  "of": 43
+ }
+}
