@@ -105,7 +105,7 @@ export function ProjectPage({ slug }: { slug: string }) {
             </a>
           )}
 
-          <AgentPrompts slug={entry.slug} title={entry.title} measured={Boolean(recipe)} />
+          <AgentPrompts slug={entry.slug} title={entry.title} measured={Boolean(recipe)} rebuilt={Boolean(live)} react={Boolean((FACTORY[entry.slug] as { react?: unknown } | undefined)?.react)} />
 
           <dl className="flex flex-col divide-y divide-dashed divide-line-strong [&>*]:flex [&>*]:items-start [&>*]:justify-between [&>*]:gap-3 [&>*]:py-2.5 text-[12px]">
             <div><dt className="font-medium text-foreground">Category</dt><dd><Link href={`/sections/${sectionSlug(entry.category)}`} className="text-subtle underline-offset-2 hover:text-foreground hover:underline">{entry.category}</Link></dd></div>
