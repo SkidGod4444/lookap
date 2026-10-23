@@ -1,0 +1,345 @@
+{
+ "slug": "1ipk9s-flyingpress-bento-feature-grid",
+ "ok": true,
+ "rest": 2.8,
+ "gestures": [
+  {
+   "step": "hover plugin widget card",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press plugin widget card",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release plugin widget card",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover status badge Active/Inactive",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press status badge Active/Inactive",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release status badge Active/Inactive",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover orange button",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press orange button",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release orange button",
+   "html": 3.2,
+   "port": 3.2,
+   "mismatch": false
+  },
+  {
+   "step": "hover chips Caching/Images/CSS & JS",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press chips Caching/Images/CSS & JS",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release chips Caching/Images/CSS & JS",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover toggle pill Page Caching",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press toggle pill Page Caching",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release toggle pill Page Caching",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover toggle pill Image Optimization",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press toggle pill Image Optimization",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release toggle pill Image Optimization",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover toggle pill Critical CSS",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "press toggle pill Critical CSS",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release toggle pill Critical CSS",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "hover metric pill top",
+   "html": 0,
+   "port": 0.6,
+   "mismatch": false
+  },
+  {
+   "step": "press metric pill top",
+   "html": 0,
+   "port": 0,
+   "mismatch": false
+  },
+  {
+   "step": "release metric pill top",
+   "html": 3.2,
+   "port": 1.7,
+   "mismatch": false
+  }
+ ],
+ "frames": [
+  {
+   "step": "at rest",
+   "diff": 2.8
+  },
+  {
+   "step": "hover plugin widget card",
+   "diff": 0.4
+  },
+  {
+   "step": "press plugin widget card",
+   "diff": 0.4
+  },
+  {
+   "step": "release plugin widget card",
+   "diff": 0.4
+  },
+  {
+   "step": "hover status badge Active/Inactive",
+   "diff": 0.2
+  },
+  {
+   "step": "press status badge Active/Inactive",
+   "diff": 0.2
+  },
+  {
+   "step": "release status badge Active/Inactive",
+   "diff": 0.2
+  },
+  {
+   "step": "hover orange button",
+   "diff": 1.4
+  },
+  {
+   "step": "press orange button",
+   "diff": 0.4
+  },
+  {
+   "step": "release orange button",
+   "diff": 0.8
+  },
+  {
+   "step": "hover chips Caching/Images/CSS & JS",
+   "diff": 2.6
+  },
+  {
+   "step": "press chips Caching/Images/CSS & JS",
+   "diff": 0.5
+  },
+  {
+   "step": "release chips Caching/Images/CSS & JS",
+   "diff": 0.8
+  },
+  {
+   "step": "hover toggle pill Page Caching",
+   "diff": 0.6
+  },
+  {
+   "step": "press toggle pill Page Caching",
+   "diff": 2.9
+  },
+  {
+   "step": "release toggle pill Page Caching",
+   "diff": 0.5
+  },
+  {
+   "step": "hover toggle pill Image Optimization",
+   "diff": 0.8
+  },
+  {
+   "step": "press toggle pill Image Optimization",
+   "diff": 3
+  },
+  {
+   "step": "release toggle pill Image Optimization",
+   "diff": 0.6
+  },
+  {
+   "step": "hover toggle pill Critical CSS",
+   "diff": 1
+  },
+  {
+   "step": "press toggle pill Critical CSS",
+   "diff": 0.8
+  },
+  {
+   "step": "release toggle pill Critical CSS",
+   "diff": 0.9
+  },
+  {
+   "step": "hover metric pill top",
+   "diff": 0.9
+  },
+  {
+   "step": "press metric pill top",
+   "diff": 1.2
+  },
+  {
+   "step": "release metric pill top",
+   "diff": 1.3
+  }
+ ],
+ "targets": [
+  {
+   "name": "plugin widget card",
+   "box": [
+    77,
+    282,
+    296,
+    120
+   ],
+   "x": 225,
+   "y": 342
+  },
+  {
+   "name": "status badge Active/Inactive",
+   "box": [
+    292,
+    302,
+    65,
+    22
+   ],
+   "x": 325,
+   "y": 313
+  },
+  {
+   "name": "orange button",
+   "box": [
+    92,
+    345,
+    267,
+    41
+   ],
+   "x": 226,
+   "y": 366
+  },
+  {
+   "name": "chips Caching/Images/CSS & JS",
+   "box": [
+    92,
+    424,
+    264,
+    26
+   ],
+   "x": 224,
+   "y": 437
+  },
+  {
+   "name": "toggle pill Page Caching",
+   "box": [
+    464,
+    283,
+    300,
+    52
+   ],
+   "x": 614,
+   "y": 309
+  },
+  {
+   "name": "toggle pill Image Optimization",
+   "box": [
+    435,
+    354,
+    300,
+    52
+   ],
+   "x": 585,
+   "y": 380
+  },
+  {
+   "name": "toggle pill Critical CSS",
+   "box": [
+    464,
+    425,
+    300,
+    52
+   ],
+   "x": 614,
+   "y": 451
+  },
+  {
+   "name": "metric pill top",
+   "box": [
+    839,
+    272,
+    296,
+    66
+   ],
+   "x": 987,
+   "y": 305
+  }
+ ],
+ "drags": false,
+ "at": "2026-10-23T13:29:20.691Z"
+}

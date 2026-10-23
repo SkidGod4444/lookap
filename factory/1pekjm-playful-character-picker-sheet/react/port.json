@@ -1,0 +1,20 @@
+{
+ "slug": "1pekjm-playful-character-picker-sheet",
+ "stack": "react-19 + tailwind-4 + motion",
+ "score": 79,
+ "html": 85,
+ "scales": true,
+ "moves": true,
+ "typed": true,
+ "interacts": true,
+ "ok": false,
+ "costUsd": 2.44,
+ "minutes": 7.7,
+ "turns": 19,
+ "tokens": {
+  "written": 17999,
+  "read": 1179498
+ },
+ "ended": "completed",
+ "at": "2026-10-23T13:37:03.835Z"
+}

@@ -1,0 +1,20 @@
+{
+ "slug": "1yi26a-accordion-faq-interaction",
+ "stack": "react-19 + tailwind-4 + motion",
+ "score": 53,
+ "html": 51,
+ "scales": true,
+ "moves": false,
+ "typed": true,
+ "interacts": true,
+ "ok": false,
+ "costUsd": 2.34,
+ "minutes": 10.1,
+ "turns": 16,
+ "tokens": {
+  "written": 15972,
+  "read": 901465
+ },
+ "ended": "completed",
+ "at": "2026-10-23T13:47:11.909Z"
+}
