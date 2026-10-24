@@ -26,7 +26,7 @@ export function FeedCard({ entry, eager = false, live = false }: { entry: Entry;
       <span className={badge("dark", "pointer-events-none absolute bottom-2 left-2 size-5 overflow-hidden text-[9px] font-semibold uppercase")}>
         {entry.x && hasLocalAvatar(entry.x) ? (
           /* eslint-disable-next-line @next/next/no-img-element -- a 64 px file served as is; next/image would add a request per card */
-          <img src={avatarUrl(entry.x)} alt="" width={20} height={20} loading="lazy" decoding="async" className="size-full rounded-full object-cover" />
+          <img src={avatarUrl(entry.x)} alt="" width={20} height={20} loading={eager ? "eager" : "lazy"} decoding="async" className="size-full rounded-full object-cover" />
         ) : (
           entry.author.slice(0, 2)
         )}
