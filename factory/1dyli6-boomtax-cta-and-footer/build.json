@@ -1,0 +1,16 @@
+{
+ "model": "Claude Opus 5.5",
+ "modelId": "claude-opus-5-5",
+ "date": "2026-10-24",
+ "run": {
+  "model": "Claude Opus 5.5",
+  "turns": 179,
+  "outputTokens": 96316,
+  "totalTokens": 7229884,
+  "costUsd": 10.51,
+  "minutes": 35.8,
+  "score": 84
+ },
+ "hand": "none: the factory alone, a retry after the account error; 4 judged rounds, best round 3 kept; rubric 49 of 49 under a three-vote judge, reviewed by eye",
+ "hint": "Watch the pulses run along the wires between the compliance badges."
+}

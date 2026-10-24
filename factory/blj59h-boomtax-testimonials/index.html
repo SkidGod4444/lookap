@@ -1,0 +1,123 @@
+<!doctype html>
+<!--
+  Boomtax Testimonials, rebuilt by lookap.
+  Design: BoomTax homepage, https://www.boomtax.com/ (credit: lookap)
+  Nothing sampled: pinstripes, hairlines and type are drawn in CSS. Fonts: Crimson Pro, IBM Plex Sans (Google Fonts).
+  Motion: the hairline under the heading breaks into pieces at 1.0-1.1s and re-forms short of both frame lines (128-1120) by 1.15s.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Boomtax Testimonials</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400&family=Crimson+Pro:wght@200..900&display=block" rel="stylesheet">
+<style id="patches"></style>
+<style>
+  html, body { margin: 0; padding: 0; overflow: hidden; background: #fbfbfb; }
+  #stage {
+    --u: 1px;
+    --line: #e9e9e9;
+    position: relative; overflow: hidden;
+    width: calc(1252 * var(--u)); height: calc(526 * var(--u));
+    background: #fbfbfb;
+  }
+  #stage > * { position: absolute; }
+  .stripes-tl, .stripes-tr, .stripes-band {
+    background-image: repeating-linear-gradient(90deg,
+      transparent 0, transparent calc(var(--p) - 1 * var(--u)),
+      #e8e8e8 calc(var(--p) - 1 * var(--u)), #e8e8e8 var(--p));
+  }
+  .stripes-tl { --p: calc(6.18 * var(--u)); left: 0; top: 0; width: calc(113 * var(--u)); height: calc(58 * var(--u));
+    background-position: calc(-1.7 * var(--u)) 0; }
+  .stripes-tr { --p: calc(6.06 * var(--u)); left: calc(1137 * var(--u)); top: 0; width: calc(115 * var(--u)); height: calc(58 * var(--u));
+    background-position: calc(-1.5 * var(--u)) 0; }
+  .stripes-band { --p: calc(6.55 * var(--u)); left: calc(117 * var(--u)); top: calc(420 * var(--u)); width: calc(1018 * var(--u)); height: calc(78 * var(--u));
+    background-position: calc(-0.5 * var(--u)) 0; }
+  .hl { height: calc(1 * var(--u)); background: var(--line); }
+  .vl { width: calc(1 * var(--u)); background: var(--line); }
+  .corner-rule-l { left: 0; top: calc(58 * var(--u)); width: calc(112 * var(--u)); }
+  .corner-rule-r { left: calc(1139 * var(--u)); top: calc(58 * var(--u)); width: calc(113 * var(--u)); }
+  .frame { top: 0; height: calc(499 * var(--u)); width: calc(2 * var(--u)); background: #e3e3e3; }
+  .frame.l { left: calc(115 * var(--u)); }
+  .frame.r { left: calc(1135 * var(--u)); }
+  .divider { top: calc(205 * var(--u)); height: calc(214 * var(--u)); }
+  .divider.a { left: calc(456 * var(--u)); }
+  .divider.b { left: calc(795 * var(--u)); }
+  .grid-bottom { left: calc(117 * var(--u)); width: calc(1018 * var(--u)); top: calc(419 * var(--u)); }
+  .section-bottom { left: 0; width: calc(1252 * var(--u)); top: calc(498 * var(--u)); }
+  .head-rule { height: calc(1 * var(--u)); background: #e5e5e5; box-shadow: 0 calc(1 * var(--u)) 0 #f1f1f1; top: calc(205 * var(--u)); left: calc(var(--x0) * var(--u)); width: calc((var(--x1) - var(--x0)) * var(--u)); }
+
+  h2 {
+    margin: 0; left: calc(-1 * var(--u)); width: calc(1252 * var(--u)); top: calc(60 * var(--u));
+    font: 360 calc(54.5 * var(--u)) / calc(45.5 * var(--u)) "Crimson Pro", Georgia, serif;
+    color: #041019; text-align: center; letter-spacing: calc(-0.3 * var(--u));
+  }
+  .quote {
+    top: calc(226 * var(--u)); width: calc(310 * var(--u));
+    font: 400 calc(14.5 * var(--u)) / calc(19.5 * var(--u)) "IBM Plex Sans", Arial, sans-serif;
+    color: #676767; margin: 0; white-space: nowrap; letter-spacing: calc(-0.25 * var(--u));
+  }
+  .q1, .s1 { left: calc(135 * var(--u)); }
+  .q2, .s2 { left: calc(475 * var(--u)); }
+  .q3, .s3 { left: calc(815 * var(--u)); }
+  .sig {
+    top: calc(376.5 * var(--u)); margin: 0; transform: translateX(calc(3 * var(--u))); white-space: nowrap;
+    font: 380 calc(19.8 * var(--u)) / calc(20 * var(--u)) "Crimson Pro", Georgia, serif; color: #141414;
+  }
+  .sig small { font-size: calc(15.4 * var(--u)); color: #1f1f1f; }
+
+  /* The heading rule is cut into pieces that drop out and come back on the clip's frames
+     (measured at y 205): full to 0.95s; gaps 321-383 and 955-1087 at 1.0s; only 400-955 at 1.05s;
+     400-1120 at 1.1s; 128-1120 from 1.15s on. Switch points sit halfway between samples. */
+  .head-rule { animation: 1.5s step-end both; }
+  .seg-end { animation-name: seg-end; }
+  .seg-b   { animation-name: seg-b; }
+  .seg-c   { animation-name: seg-c; }
+  .seg-f   { animation-name: seg-f; }
+  .seg-g   { animation-name: seg-g; }
+  @keyframes seg-end { 0% { opacity: 1; } 68.33%, 100% { opacity: 0; } }
+  @keyframes seg-b { 0% { opacity: 1; } 68.33% { opacity: 0; } 75%, 100% { opacity: 1; } }
+  @keyframes seg-c { 0% { opacity: 1; } 65% { opacity: 0; } 75%, 100% { opacity: 1; } }
+  @keyframes seg-f { 0% { opacity: 1; } 65% { opacity: 0; } 71.67%, 100% { opacity: 1; } }
+  @keyframes seg-g { 0% { opacity: 1; } 68.33% { opacity: 0; } 71.67%, 100% { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    .head-rule { animation: none; }
+    .seg-end { opacity: 0; }
+  }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="stripes-tl"></div>
+  <div class="stripes-tr"></div>
+  <div class="hl corner-rule-l"></div>
+  <div class="hl corner-rule-r"></div>
+  <div class="stripes-band"></div>
+  <div class="frame l"></div>
+  <div class="frame r"></div>
+  <div class="hl head-rule seg-end" style="--x0: 117; --x1: 128"></div>
+  <div class="hl head-rule seg-b" style="--x0: 128; --x1: 321"></div>
+  <div class="hl head-rule seg-c" style="--x0: 321; --x1: 383"></div>
+  <div class="hl head-rule seg-b" style="--x0: 383; --x1: 400"></div>
+  <div class="hl head-rule" style="--x0: 400; --x1: 955"></div>
+  <div class="hl head-rule seg-f" style="--x0: 955; --x1: 1087"></div>
+  <div class="hl head-rule seg-g" style="--x0: 1087; --x1: 1120"></div>
+  <div class="hl head-rule seg-end" style="--x0: 1120; --x1: 1135"></div>
+  <div class="vl divider a"></div>
+  <div class="vl divider b"></div>
+  <div class="hl grid-bottom"></div>
+  <div class="hl section-bottom"></div>
+
+  <h2>A Few Words from<br>Happy Customers.</h2>
+
+  <p class="quote q1">“We love BoomTax! We have used it for the last<br>three years and they have been a real life saver<br>when it comes to ACA compliance and reporting<br>health coverage. Worth every one of 5 stars and<br>then some!”</p>
+  <p class="quote q2">After careful research, we decided to go with<br>the BoomTax ACA software solution for our ACA<br>filing, and we had a flawless experience. Their<br>online system is very user friendly and they are<br>on top of the entire process. We highly<br>recommend BoomTax!</p>
+  <p class="quote q3">The customer support at Boomtax is<br>magnificent, when you need to use it, which is<br>hardly ever because the software works so<br>smoothly. I highly recommend their solution to<br>anyone who needs to comply with ACA<br>reporting requirements.</p>
+
+  <p class="sig s1">Linda G, <small>Maryland</small></p>
+  <p class="sig s2">Bianca P, <small>Arizona</small></p>
+  <p class="sig s3">Brian M, <small>Illinois</small></p>
+</div>
+</body>
+</html>

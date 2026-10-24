@@ -1,0 +1,851 @@
+{
+ "slug": "blj59h-boomtax-testimonials",
+ "frame": {
+  "w": 1252,
+  "h": 526
+ },
+ "at": "2026-10-24T08:50:02.655Z",
+ "model": "opus",
+ "costUsd": 0.598,
+ "summary": "A static, light testimonials section on an off-white #fbfbfb page. Two faint vertical frame lines at x≈116 and x≈1135 run from the top to y≈498 and bound a central column; outside it, the top-left (x 0–112) and top-right (x 1138–1252) corners down to y≈58 carry a fine vertical pinstripe texture (light grey hairlines ~6 px apart), and the same pinstripe fills a band across the column under the cards (y≈420–498). A full-width hairline at y≈498 closes the section above a plain strip. Centred in the column is a two-line high-contrast serif heading, \"A Few Words from / Happy Customers.\", near-black navy (#041019), ~48 px, spanning x≈423–830, y≈65–158. A light grey hairline at y≈205 separates the heading from a three-column ruled grid (columns 116–457, 457–796, 796–1135, rows y 205–419) divided by thin vertical rules; each cell holds a grey sans-serif quote (~15 px, ~19.5 px line height, six or fewer lines from y≈228) and, at y≈388, a serif signature: name ~19 px dark plus a smaller serif state. Almost nothing moves over the 1.5 s: text, grid and stripes hold still (difference views show only compression shimmer on edges). The one real change is the hairline under the heading: at 0.2 s it runs the full column, touching both frame lines (x≈116–1135); between ≈0.85 s and 1.05 s it retracts from both ends so that by 1.25 s it spans only x≈128–1120, leaving ~12–15 px gaps at each frame line.",
+ "elements": [
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1252,
+    526
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "flat off-white #fbfbfb"
+  },
+  {
+   "name": "left frame line",
+   "box": [
+    115,
+    0,
+    2,
+    498
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "pale grey vertical hairline, full height to y≈498"
+  },
+  {
+   "name": "right frame line",
+   "box": [
+    1134,
+    0,
+    2,
+    498
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "pale grey vertical hairline"
+  },
+  {
+   "name": "top-left pinstripe corner",
+   "box": [
+    0,
+    0,
+    112,
+    58
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "vertical light grey hairlines ~6px apart, closed by a horizontal hairline at y≈58"
+  },
+  {
+   "name": "top-right pinstripe corner",
+   "box": [
+    1138,
+    0,
+    114,
+    58
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "same pinstripe as top-left"
+  },
+  {
+   "name": "bottom pinstripe band",
+   "box": [
+    116,
+    420,
+    1019,
+    78
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "vertical hairlines ~6px apart under the card grid"
+  },
+  {
+   "name": "section bottom hairline",
+   "box": [
+    0,
+    497,
+    1252,
+    2
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "full-width pale line; plain strip below to 526"
+  },
+  {
+   "name": "heading line 1",
+   "box": [
+    423,
+    65,
+    407,
+    43
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'A Few Words from' serif, #041019, ~48px"
+  },
+  {
+   "name": "heading line 2",
+   "box": [
+    423,
+    112,
+    407,
+    46
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Happy Customers.' serif, #041019"
+  },
+  {
+   "name": "heading rule",
+   "box": [
+    116,
+    204,
+    1019,
+    2
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "#ededed hairline at y≈205; retracts to x≈128–1120 by 1.25s"
+  },
+  {
+   "name": "column divider 1",
+   "box": [
+    456,
+    206,
+    2,
+    213
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "pale vertical rule"
+  },
+  {
+   "name": "column divider 2",
+   "box": [
+    795,
+    206,
+    2,
+    213
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "pale vertical rule"
+  },
+  {
+   "name": "grid bottom rule",
+   "box": [
+    116,
+    418,
+    1019,
+    2
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "pale horizontal hairline at y≈419"
+  },
+  {
+   "name": "quote 1",
+   "box": [
+    138,
+    228,
+    297,
+    95
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "grey sans ~15px, 5 lines"
+  },
+  {
+   "name": "quote 2",
+   "box": [
+    478,
+    228,
+    295,
+    115
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "grey sans, 6 lines"
+  },
+  {
+   "name": "quote 3",
+   "box": [
+    818,
+    228,
+    288,
+    115
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "grey sans, 6 lines"
+  },
+  {
+   "name": "signature 1",
+   "box": [
+    138,
+    378,
+    132,
+    20
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Linda G,' serif ~19px + 'Maryland' smaller serif"
+  },
+  {
+   "name": "signature 2",
+   "box": [
+    478,
+    378,
+    124,
+    20
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Bianca P,' + 'Arizona'"
+  },
+  {
+   "name": "signature 3",
+   "box": [
+    818,
+    378,
+    116,
+    20
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Brian M,' + 'Illinois'"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "page background",
+   "axis": "style",
+   "check": "The page is a flat off-white (about #fbfbfb) with no gradient or shadow",
+   "box": [
+    0,
+    0,
+    1252,
+    526
+   ],
+   "scope": "frame",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "heading line 1",
+   "axis": "text",
+   "check": "First heading line reads exactly 'A Few Words from'",
+   "box": [
+    423,
+    65,
+    407,
+    43
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "heading line 2",
+   "axis": "text",
+   "check": "Second heading line reads exactly 'Happy Customers.' including the full stop",
+   "box": [
+    423,
+    112,
+    407,
+    46
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "heading",
+   "axis": "style",
+   "check": "Heading is set in a high-contrast serif (bracketed serifs, thick/thin strokes), not sans-serif",
+   "box": [
+    423,
+    65,
+    407,
+    93
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "heading",
+   "axis": "style",
+   "check": "Heading colour is near-black navy (about #041019), the darkest ink on the page",
+   "box": [
+    423,
+    65,
+    407,
+    93
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "heading",
+   "axis": "position",
+   "check": "Heading is horizontally centred at x≈626, spanning about x 423–830, with cap tops near y 65 and baseline of line 2 near y 152",
+   "box": [
+    400,
+    55,
+    450,
+    110
+   ],
+   "scope": "frame",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "heading",
+   "axis": "text",
+   "check": "Heading cap height is about 34px (font size ~48px), two lines ~47px apart",
+   "box": [
+    423,
+    65,
+    407,
+    93
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "left frame line",
+   "axis": "position",
+   "check": "A pale grey vertical hairline runs at x≈116 from the top edge down to y≈498",
+   "box": [
+    105,
+    0,
+    24,
+    500
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "right frame line",
+   "axis": "position",
+   "check": "A pale grey vertical hairline runs at x≈1135 from the top edge down to y≈498",
+   "box": [
+    1124,
+    0,
+    24,
+    500
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "top-left pinstripe corner",
+   "axis": "present",
+   "check": "The region x 0–112, y 0–58 is filled with fine vertical light-grey pinstripes, and it is closed by a horizontal hairline at y≈58",
+   "box": [
+    0,
+    0,
+    120,
+    64
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "top-right pinstripe corner",
+   "axis": "present",
+   "check": "The region x 1138–1252, y 0–58 has the same vertical pinstripes",
+   "box": [
+    1136,
+    0,
+    116,
+    64
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "bottom pinstripe band",
+   "axis": "present",
+   "check": "Below the card grid, a band from y≈420 to 498 between the frame lines is filled with vertical pinstripes",
+   "box": [
+    116,
+    415,
+    1019,
+    90
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "bottom pinstripe band",
+   "axis": "style",
+   "check": "Pinstripes are very low-contrast light grey hairlines (~1px) about 6px apart; they are straight, evenly spaced and never dark or bold",
+   "box": [
+    300,
+    430,
+    80,
+    40
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "pinstripe areas",
+   "axis": "style",
+   "check": "The pinstripe is only vertical lines: no diagonal hatching, no dots, no horizontal stripes inside the band",
+   "box": [
+    0,
+    0,
+    112,
+    58
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "page background",
+   "axis": "present",
+   "check": "Areas between the pinstripes (beside the grid, x 0–112 below y 58 and x 1138–1252 below y 58) are plain off-white with no stripes",
+   "box": [
+    0,
+    60,
+    112,
+    430
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "section bottom hairline",
+   "axis": "position",
+   "check": "A full-width pale hairline crosses the frame at y≈498, with a plain strip below it to the bottom edge",
+   "box": [
+    0,
+    490,
+    1252,
+    36
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "heading rule",
+   "axis": "position",
+   "check": "A light grey (#ededed) 1px hairline lies at y≈205 under the heading, spanning the column",
+   "box": [
+    116,
+    195,
+    1019,
+    20
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "card grid",
+   "axis": "present",
+   "check": "Exactly 3 testimonial cells sit side by side in one row",
+   "box": [
+    116,
+    205,
+    1019,
+    215
+   ],
+   "scope": "frame",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c19",
+   "element": "column dividers",
+   "axis": "position",
+   "check": "Thin pale vertical rules divide the cells at x≈457 and x≈796, running y≈205–419",
+   "box": [
+    440,
+    200,
+    370,
+    225
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "grid bottom rule",
+   "axis": "position",
+   "check": "A pale hairline at y≈419 closes the bottom of the grid, directly above the pinstripe band",
+   "box": [
+    116,
+    410,
+    1019,
+    20
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "card grid",
+   "axis": "style",
+   "check": "Cells have no fill, no shadow and no rounded corners; they are defined only by hairline rules",
+   "box": [
+    116,
+    205,
+    1019,
+    215
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "quote 1",
+   "axis": "text",
+   "check": "Quote 1 reads '“We love BoomTax! We have used it for the last three years and they have been a real life saver when it comes to ACA compliance and reporting health coverage. Worth every one of 5 stars and then some!”' with curly quote marks",
+   "box": [
+    138,
+    228,
+    297,
+    95
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "quote 2",
+   "axis": "text",
+   "check": "Quote 2 reads 'After careful research, we decided to go with the BoomTax ACA software solution for our ACA filing, and we had a flawless experience. Their online system is very user friendly and they are on top of the entire process. We highly recommend BoomTax!' with no quote marks",
+   "box": [
+    478,
+    228,
+    295,
+    115
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "quote 3",
+   "axis": "text",
+   "check": "Quote 3 reads 'The customer support at Boomtax is magnificent, when you need to use it, which is hardly ever because the software works so smoothly. I highly recommend their solution to anyone who needs to comply with ACA reporting requirements.'",
+   "box": [
+    818,
+    228,
+    288,
+    115
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c25",
+   "element": "quotes",
+   "axis": "style",
+   "check": "Quote text is a sans-serif at ~15px in medium grey (about #555–#666), clearly lighter than the heading and signatures",
+   "box": [
+    138,
+    228,
+    297,
+    95
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c26",
+   "element": "quotes",
+   "axis": "position",
+   "check": "Quote first lines start at y≈230 and left edges sit at x≈138, 478 and 818 (about 22px inside each cell)",
+   "box": [
+    116,
+    222,
+    1019,
+    20
+   ],
+   "scope": "frame",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c27",
+   "element": "quote 1",
+   "axis": "text",
+   "check": "Quote 1 wraps to 5 lines, quotes 2 and 3 to 6 lines each, with ~19.5px line spacing",
+   "box": [
+    116,
+    225,
+    1019,
+    125
+   ],
+   "scope": "frame",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "signature 1",
+   "axis": "text",
+   "check": "Signature 1 reads 'Linda G,' followed by 'Maryland'",
+   "box": [
+    138,
+    378,
+    132,
+    20
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c29",
+   "element": "signature 2",
+   "axis": "text",
+   "check": "Signature 2 reads 'Bianca P,' followed by 'Arizona'",
+   "box": [
+    478,
+    378,
+    124,
+    20
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c30",
+   "element": "signature 3",
+   "axis": "text",
+   "check": "Signature 3 reads 'Brian M,' followed by 'Illinois'",
+   "box": [
+    818,
+    378,
+    116,
+    20
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c31",
+   "element": "signatures",
+   "axis": "style",
+   "check": "Names are serif ~19px in near-black; the state after the comma is a visibly smaller serif (~15px) on the same baseline",
+   "box": [
+    138,
+    378,
+    132,
+    20
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c32",
+   "element": "signatures",
+   "axis": "position",
+   "check": "All three signatures share one baseline at y≈394, aligned with the quote left edges",
+   "box": [
+    116,
+    375,
+    1019,
+    25
+   ],
+   "scope": "frame",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c33",
+   "element": "heading rule",
+   "axis": "position",
+   "check": "At 0.2s the heading rule reaches both frame lines, running continuously from x≈116 to x≈1135",
+   "box": [
+    100,
+    195,
+    1050,
+    20
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c34",
+   "element": "heading rule",
+   "axis": "motion",
+   "check": "Between 0.2s and 1.25s the heading rule retracts from both ends: at 1.25s it spans only about x 128–1120, leaving ~12–15px gaps at each frame line",
+   "box": [
+    100,
+    195,
+    1050,
+    20
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": 1.25
+  },
+  {
+   "id": "c35",
+   "element": "heading rule",
+   "axis": "motion",
+   "check": "The rule holds full length through 0.7s and the retraction happens around 0.85–1.05s (at 1.0s the line shows breaks/partial segments)",
+   "box": [
+    100,
+    195,
+    1050,
+    20
+   ],
+   "scope": "crop",
+   "at": 0.7,
+   "then": 1
+  },
+  {
+   "id": "c36",
+   "element": "heading",
+   "axis": "motion",
+   "check": "Heading does not move, fade or change colour between 0.2s and 1.25s",
+   "box": [
+    423,
+    65,
+    407,
+    93
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": 1.25
+  },
+  {
+   "id": "c37",
+   "element": "quotes and signatures",
+   "axis": "motion",
+   "check": "Quote and signature text stay put with no fade, slide or reflow between 0.2s and 1.25s",
+   "box": [
+    116,
+    205,
+    1019,
+    215
+   ],
+   "scope": "frame",
+   "at": 0.2,
+   "then": 1.25
+  },
+  {
+   "id": "c38",
+   "element": "bottom pinstripe band",
+   "axis": "motion",
+   "check": "The pinstripes do not scroll or shift sideways between 0.2s and 1.25s",
+   "box": [
+    300,
+    430,
+    80,
+    40
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": 1.25
+  },
+  {
+   "id": "c39",
+   "element": "frame lines and dividers",
+   "axis": "motion",
+   "check": "Frame lines, column dividers and grid bottom rule stay fixed and full length between 0.2s and 1.25s",
+   "box": [
+    110,
+    0,
+    1030,
+    500
+   ],
+   "scope": "frame",
+   "at": 0.2,
+   "then": 1.25
+  }
+ ],
+ "imagery": [
+  {
+   "name": "pinstripe texture (corners and bottom band)",
+   "box": [
+    116,
+    420,
+    1019,
+    78
+   ],
+   "class": "css",
+   "what": "repeating vertical 1px light-grey hairlines about 6px apart on off-white, drawable with a repeating-linear-gradient",
+   "at": 0.2
+  }
+ ],
+ "moves": [
+  {
+   "element": "heading rule",
+   "what": "hairline under the heading retracts inward from both ends, from full column width (x 116–1135) to about x 128–1120",
+   "from": 0.85,
+   "to": 1.05,
+   "px": 13
+  }
+ ]
+}

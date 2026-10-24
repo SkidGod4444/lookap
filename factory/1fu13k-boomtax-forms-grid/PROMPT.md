@@ -1,0 +1,117 @@
+Rebuild the lookap entry "Boomtax Forms Grid" by lookap as one self-contained HTML file at factory/1fu13k-boomtax-forms-grid/index.html.
+
+What you have
+- factory/1fu13k-boomtax-forms-grid/brief.json: the record, the draft measurement (frame, phases, keyframes with their times, background, palette, element boxes, moves), the credit, and the measuring method behind every recipe.
+- factory/1fu13k-boomtax-forms-grid/rubric.json: the checklist this rebuild is judged against, written from the clip. Its summary: A light features section on an off-white #fafafa page. A central white panel runs from about x=115 to x=1135; outside it, both side margins (x 0–115 and 1135–1252) are filled with fine, faint grey vertical pinstripes. At the top of the panel sits a centred two-line serif heading in near-black navy, "Covering All the / Essential Forms." (about 48 px type, lines at y≈70–118 and 117–163, centred on x≈626). Below it, from y≈212 to the bottom edge, an isometric field fills the panel: dozens of thin white form-card slabs (about 150×80 px, 3D with a light grey side edge and soft shadow). Each card has a teal-blue serif form code ("1099-MISC", "W-2", "1094-C/1095-C", "California Pay Data", …) and two lines of small grey serif subtitle. The cards are tilted on a diamond grid and fade into the background towards every edge of the field. Centred at x≈626, y≈300 a white cylindrical puck floats over the grid, with a grey side wall and a raised blue disc on top carrying a thin pale-green ring and a green check mark. A soft green radial glow spreads under and below the puck (about 440–820 × 300–630). The six or so cards inside it are tinted mint green with bright green rims, as if lit from the puck. Motion: the card field drifts slowly and continuously along the isometric diagonal toward the lower right, about 70 px right and 35 px down per loop. Cards entering the glow turn green and cards leaving it turn white, because the glow is fixed to the frame. At the same time the puck rises slowly by about 25 px (its lower edge in column 626 goes from y≈311 at 0.6 s to y≈284 at 2.9 s). The heading, the pinstripes and the glow position never move. The loop restarts at about 0.5–0.65 s: the grid and the puck jump back to their start. In the source this splice shows as a brief blend or wipe, so a seamless loop is the target. All corners are softly rounded (cards about 6 px, puck fully circular).
+- The designer's clip at its keyframes (frame 1252 x 650, 3.17s):
+  - kf1 at 0.25s: public/drafts/btform/kf1.jpg
+  Read every one of them before writing anything, then describe the layout to yourself in one paragraph: regions, alignment, type scale, radii, spacing rhythm, what moves between the keyframes.
+- The clip itself, through `bun scripts/probe.ts 1fu13k-boomtax-forms-grid`:
+    --sheet a,b                 a contact sheet of that span at 10 fps (36 frames), written to factory/1fu13k-boomtax-forms-grid/sheets/; cover the whole clip in 3.6 s spans and Read every sheet
+    --diff a,b                  the clip at a, at b, and what changed between them in white: which thing moves, which only has something pass over it; written to factory/1fu13k-boomtax-forms-grid/diff/
+    --col x --t t1,t2           light/mid/dark runs down column x at those times: row heights, gaps, borders, where things sit
+    --col x --t t --hex a,b     exact colours, one per pixel, from y a to b: the true gradient of a surface, a border's real colour, a gap's shade
+    --row y --t t [--hex a,b]   the same along a row
+    --track x --from a --to b   the top and bottom edge of the red/dark/light stuff in column x per frame at 60 fps: a motion's start, end, distance and shape
+    --zoom x,y,w,h --t t        that crop of the clip at up to 4x beside the same crop of your render at that moment (run the checker with --at t first), written to factory/1fu13k-boomtax-forms-grid/zoom/
+    --patch x,y,w,h --t t --as name
+                                a texture tile from the clip as a small JPEG, written to factory/1fu13k-boomtax-forms-grid/patches/ and set into your index.html as --patch-name in <style id="patches">, for background-image: var(--patch-name). The only way to sample; never retype base64 yourself. Refused above a tile's size.
+    --placeholder x,y,w,h --t t --as name
+                                a coarse colour grid of that region, set as --placeholder-name: the stand-in for a photograph, painting or screenshot the rebuild may not copy.
+    --drive "press x,y; move x,y; shot name; release; wait ms; click x,y; hover x,y"
+                                real pointer gestures on your page, screenshots to factory/1fu13k-boomtax-forms-grid/drive/
+  Keyframes are moments when nothing moves. Everything between them (how a thing enters, stretches, snaps, settles, in what order) is only in the frames, so look there before you decide the timeline.
+- The checker: `bun --conditions=react-server scripts/check-build.ts 1fu13k-boomtax-forms-grid`. It renders your file at the frame size, seeks every animation on the page to each moment, screenshots, and compares with the clip at the keyframes, the middle of every measured phase and the rubric's moments. It prints: a pixel score per moment (a floor, not a goal: it cannot tell a drawn ring from a glass lens or a nine-spoke spinner from a disc), the elements whose colour (deltaE) or place (shift) differ, whether your render moves where the clip moves, and how each measured moving part keeps step. It writes factory/1fu13k-boomtax-forms-grid/side.png (designer left, yours right, one row per moment) and factory/1fu13k-boomtax-forms-grid/verdict.json. --at t1,t2 adds moments; --quick scores only the keyframes and your --at moments. The rubric itself is judged by a separate vision model after your session ends, criterion by criterion on crop pairs; you cannot run it, so check each criterion by eye with --zoom before you stop.
+
+The checklist (every line must be true of your file; the judge looks at a crop of the clip beside the same crop of your render):
+  c01 [style, page background] The page background is a flat off-white close to #fafafa, with no gradient or tint (look at 0.25s)
+  c02 [present, left pinstripe margin] The left margin (x 0–115) is filled with fine, faint grey vertical pinstripes running the full height (look at 0.25s)
+  c03 [present, right pinstripe margin] The right margin (x≈1135–1252) carries the same faint vertical pinstripes (look at 0.25s)
+  c04 [style, pinstripes] The pinstripes are thin and low-contrast (light grey on off-white), not bold dark lines (look at 0.25s)
+  c05 [text, heading line 1] The first heading line reads exactly "Covering All the" (look at 0.25s)
+  c06 [text, heading line 2] The second heading line reads exactly "Essential Forms." with the full stop (look at 0.25s)
+  c07 [style, heading] The heading is set in a high-contrast serif face (bracketed serifs, like Libre Baskerville), not a sans (look at 0.25s)
+  c08 [style, heading] The heading colour is near-black navy (very dark), at full brightness against the background (look at 0.25s)
+  c09 [position, heading] The heading is centred horizontally on x≈626, with line 1 spanning about x 452–802 and the cap tops near y≈72 (look at 0.25s)
+  c10 [style, heading] The heading is about 48 px type with tight leading: the two baselines are about 46 px apart and the lines nearly touch (look at 0.25s)
+  c11 [present, card field] Below y≈212 an isometric field of many form cards (at least 25 visible) fills the panel width (look at 0.25s)
+  c12 [style, card field] The cards are tilted on a diamond/isometric grid (each card a rotated, skewed parallelogram), not an upright rectangular grid (look at 0.25s)
+  c13 [style, card field] The card field fades to the background towards its left, right, top and bottom edges; the outer cards are faint and ghostly (look at 0.25s)
+  c14 [style, form card] Each card is a thin 3D slab: a white top face with a visible light-grey side edge about 5–6 px thick and a soft shadow, not a flat outlined rectangle (look at 0.25s)
+  c15 [style, form card] The card corners are softly rounded, about 6 px (look at 0.25s)
+  c16 [style, form card] The form code on each card is a teal-blue serif (e.g. "1099-MISC"), larger than the grey subtitle beneath it (look at 0.25s)
+  c17 [text, form card] A central card reads "1099-MISC" with the subtitle "Miscellaneous Income" on two lines (look at 0.25s)
+  c18 [text, form card] A card left of centre reads "California Pay Data" with the subtitle "Sate Compliance Reporting" (look at 0.25s)
+  c19 [text, form card] A card below centre reads "1094-C/1095-C" with the subtitle "Employer-Provided Health Insurance" (look at 0.25s)
+  c20 [text, form card] Card codes elsewhere include "W-2" ("Wage and Tax Statement"), "1099-HC" ("Massachusetts Health Coverage"), "1099-DIV", "1099-R", "1099-C", "1099-K" and "1099-NEC" (look at 0.25s)
+  c21 [style, form card] The text on each card is rotated to follow the card's isometric tilt (rising to the upper right), not upright (look at 0.25s)
+  c22 [present, green glow] A soft green glow spreads beneath and below the puck, centred about x 626, y 440 (look at 0.25s)
+  c23 [style, green glow] The glow has no hard edge or ring: it fades smoothly into the white field, and is not a flat green shape (look at 0.25s)
+  c24 [style, green-lit cards] About 6 cards inside the glow have a mint-green top face (around #d8f4c7) and bright green rims, while the cards outside it stay white (look at 0.25s)
+  c25 [style, green-lit cards] The card directly under the puck is the most saturated green, and the tint weakens with distance from the puck (look at 0.25s)
+  c26 [present, puck] A white cylindrical puck floats above the grid, centred on x≈626 (look at 0.25s)
+  c27 [position, puck] The puck's white body spans about x 561–692 and y 268–348 (look at 0.25s)
+  c28 [style, puck] The puck reads as a solid 3D cylinder: an elliptical white top and a visible light-grey side wall about 20–25 px tall, not a flat circle with an outline (look at 0.25s)
+  c29 [style, puck blue cap] On top of the puck sits a raised, saturated mid-blue (#1a8be6) elliptical disc with its own thin grey side edge (look at 0.25s)
+  c30 [style, puck blue cap] The blue cap carries one thin pale-green elliptical ring inset from its edge (look at 0.25s)
+  c31 [imagery, check mark] A bright green check mark (short left stroke, long right stroke, lying flat in perspective) sits centred in the blue cap (look at 0.25s)
+  c32 [style, puck] The puck sits in front of the cards: it overlaps the top of the green card under it, which it partly hides (look at 0.25s)
+  c33 [motion, card field] The whole card field moves between the two moments, while the heading stays put (compare 1s with 1.75s)
+  c34 [motion, card field] The cards drift along the isometric diagonal toward the lower right (right and down together, about 2 px right for every 1 px down), not straight sideways (compare 0.8s with 2.5s)
+  c35 [motion, card field] Over about 1.7 s the "1099-MISC" card moves from about (527,455) to about (598,490): roughly 70 px right and 35 px down (compare 0.8s with 2.5s)
+  c36 [motion, card field] The drift is slow and continuous with no pause: the cards' positions differ at each of 1.0 s, 1.75 s and 2.5 s (compare 1s with 2.5s)
+  c37 [motion, green glow] The green glow stays fixed in the frame as the cards pass under it: cards that enter the glow turn green and cards that leave it turn white (compare 0.8s with 2.5s)
+  c38 [motion, puck] The puck stays centred on x≈626 and does not move sideways (compare 0.8s with 2.5s)
+  c39 [motion, puck] The puck rises slowly by about 25 px: its lower edge goes from about y 311 at 0.6 s to about y 284 at 2.9 s, at a steady pace (compare 0.6s with 2.9s)
+  c40 [motion, heading] The heading does not move or change at all (compare 0.25s with 2.5s)
+  c41 [motion, pinstripes] The pinstripe margins do not move (compare 0.25s with 2.5s)
+  c42 [motion, card field] The motion loops: the grid and puck at 2.5 s look nearly the same as at 0.25 s, and at about 0.55 s they jump back to the start (up-left by one drift span, the puck down by about 25 px) (compare 0.25s with 2.5s)
+  c43 [motion, card field] Between 0.8 s and 2.5 s the cards keep their layout and spacing: they slide as one rigid field and do not rearrange or flip (compare 0.8s with 2.5s)
+
+Imagery (what the clip shows that is not plain UI, and the rule for each):
+  - isometric card field [160,215,930,435] is css: diamond grid of white 3D tax-form card slabs with serif labels, fading out at the edges. Rule: draw it: CSS or inline SVG, exact to the crops (gradients, rings, glass, lenses, spinners, shadows, text art are all drawable)
+  - green glow [440,300,380,330] is css: soft radial green light tinting the central cards. Rule: draw it: CSS or inline SVG, exact to the crops (gradients, rings, glass, lenses, spinners, shadows, text art are all drawable)
+  - puck [561,268,131,80] is css: white cylinder with a raised blue cap and a pale-green ring. Rule: draw it: CSS or inline SVG, exact to the crops (gradients, rings, glass, lenses, spinners, shadows, text art are all drawable)
+  - check mark [618,285,18,20] is structured: green check mark on the blue cap, drawn in perspective. Rule: draw an original SVG with the same silhouette, weight and colours; it is judged on silhouette and colour, not pixels
+  - pinstripe margins [0,0,115,650] is css: faint grey vertical pinstripes in both side margins. Rule: draw it: CSS or inline SVG, exact to the crops (gradients, rings, glass, lenses, spinners, shadows, text art are all drawable)
+
+How to look (this is where rebuilds go wrong)
+- Find what moves with --diff before you decide the timeline: two frames half a second apart, in two or three parts of the clip. The draft's motion rows can be fooled by a thing passing over a region. Then --track the moving edge for its start, end, distance and speed.
+- Track something that should not move. Run --track through the heading with --class dark over the whole clip. If the heading moves when a panel opens or the thing enters, the page is a centred column that reflows, and you copy that layout rule rather than absolute coordinates. If it does not move during a drag, that gesture is a transform, not layout.
+- Zoom before you draw. For every surface, --zoom a 150 x 130 crop of its edge at the rest moment and read it: how thick is the edge, what colour, is there a gap behind it, which side is lit. Then --hex a column through it for the real numbers.
+- Materials are part of the design: a glass ring refracts what is behind it at its rim (the background shifts and a highlight runs along the edge), it is not an outline; a frosted panel shows the picture through it; rims, bevels, inner highlights, the lip under a key, the shade inside a fold. Draw what the crop shows, not what a component library would do.
+- Known ways rebuilds fail, in order of how often: a water ripple or lens drawn as hard concentric rings or a stroked outline, where the clip shows the picture beneath bending softly with a faint crest (build it as displacement or magnification of the background with soft falloff, never as a drawn ring); type dimmer, lighter or a different weight than the clip's; a texture as a flat gradient where the clip has grain; a seam where a patch tiles; a page that does not move while the clip does (the checker says STATIC); a wrong count (spokes, dots, rows, rings); the wrong thing moving (the background drifting when it is the rings that grow); timing read from the stills instead of tracked.
+- Interaction is the design. Whatever the clip's cursor does (hover, click, press, drag) the page must do for a real pointer, with the same response and timing. Test with --drive and Read the screenshots.
+
+Rules for the file
+- The page is exactly the frame: html and body margin 0, overflow hidden, a #stage of 1252 x 650 px, background #fafafa. Set --u: 1px on #stage and write every size as calc(N * var(--u)), including an inline SVG's size (give it a CSS width and height in var(--u), not only width and height attributes) and every length the script sets or animates (calc(${n} * var(--u)), never ${n}px). The site shows the file at any size by changing --u; the checker renders it at half size and fails it if anything stays full size. Nothing outside the stage.
+- Place elements from the keyframes and crops you looked at. The draft boxes are a first pass and the rubric boxes a second: trust your eyes over both. Fills from --hex, exact. Match proportion and hierarchy first, then colour, then motion.
+- Demo mode for the checker: when the URL has ?demo=1 the page replays the clip's sequence on the clip's own timeline (animation-delay for when each move starts, duration and distance from draft.phases, draft.motion and your own probing) as CSS animations or element.animate calls created at load, so the state at t seconds matches the clip at t and the checker can seek it. Without ?demo the page only answers the pointer (a load-time entrance is fine if the clip has one). No JS timers for the timeline. Respect prefers-reduced-motion.
+- Sampling: a texture that is not UI and cannot be drawn (marble, wood, fabric, grain) is taken from the clip with --patch as a tile, cropped where nothing sits on it, at a moment when it is at rest, and tiled, stretched or layered by you; keep each under 60 KB. A photograph, painting or screenshot is a photo-class region and follows its rule above (this entry is licensed: the picture itself may be sampled). Never paste a block with its chrome, text or controls: those you draw. Say in the header comment and in NOTES.md exactly what was sampled or stood in, and from which frame.
+- Fonts only from Google Fonts through a <link>; no other network. Credit the designer in a comment at the top with the source link from brief.json. Keep the file under 500 lines.
+
+What earlier rebuilds got wrong (each failed the judge on real entries; check every one before you call a round done)
+- Glows and washes flat, mis-centred or the wrong strength. A radial glow or colour wash has a centre, a peak colour and a falloff. Agents draw an even tint across the whole element. Find where it is strongest, sample the peak and two points on the way out, and build the gradient from those stops. Halftone and dot fields: match dot size, spacing and where they fade.
+- Text the right words but the wrong width. A substituted or wrongly weighted font sets the same words 5 to 10 percent wider or narrower. Measure the pixel width of one full line in the clip and adjust font-size, weight and letter-spacing until your line matches it within 2 percent. Script and handwritten faces need the right family, not the nearest script.
+- Motion the right kind but the wrong distance or speed. Agents get what moves right and how far wrong: a slide of 88 px built as 19, a rise twice as fast. Track every moving element and read its start, end and timing from the clip. A move is right when its position matches at three moments, not when it looks similar.
+- Secondary text set too light. Subtitles, captions and body copy end up a lighter grey than the clip's. Anti-aliasing makes an averaged sample look lighter than the ink: take the darkest pixels inside the glyph stems, not the average of the text box.
+- Shadows and borders too faint. Drop shadows, hairline borders and the step between a card and its background are drawn weaker than in the clip, until cards float on nothing. Sample the shadow's darkest row and its spread; sample a card's fill against the page: pure white on grey reads very differently from off-white on grey.
+- Strokes and small marks drawn too thin or too small. Rings, spinners, chevrons, ticks, dashes, dots and outlines come out thinner and smaller than the clip's almost every time: an agent's default is a 1.5 px line icon. Measure the stroke width and the mark's outer size in source pixels and use those numbers. A spinner is usually a thick ring on a faint track, not a thin open arc.
+- Positions and spacing off by tens of pixels. Parts land 20 to 40 px from where the clip has them, and repeated parts get uneven spacing. Read every box from the clip, not by eye: the brief's boxes are a first pass, so confirm each against a frame. Repeated parts (rings, rows, cards) share one pitch; measure it once and step by it.
+- Shapes simplified and small parts dropped. A bubble's tail, an antenna, the gaps in staggered bars, a curved bulge built as a straight wedge, a sliver of an avatar: agents simplify the outline and drop small parts. Before drawing any shape, zoom on it and list its parts; check each part is in your render.
+
+Loop
+1. Read the sheets and two or three --diff pairs for the whole clip. Track the moving edge and the heading. Write the timeline as a list of events with numbers (what, from when to when, how far, which easing), and the layout from --col, --hex and the keyframes. Then build.
+2. Run the checker, read side.png, then --zoom the worst region of the worst moment, the edge of each surface, and every rubric criterion you are not sure of. Fix what the crops show: layout first, then materials, then motion. Run the checker again. Stop when the crops match the clip for every criterion, or after four runs of the checker: more runs past that have not bought anything in earlier entries, and the judge runs when you stop.
+3. --drive the interactions the clip shows and Read the screenshots. Fix what does not answer the pointer.
+4. Write factory/1fu13k-boomtax-forms-grid/NOTES.md with three parts: "Timeline" (the event list from step 1, as measured), "Differences" (what still differs, with numbers, and every photo-class region stood in rather than reproduced) and "Pattern" (one thing you learned that applies beyond this entry, written as a design note of 3 to 6 factual sentences under a short name).
+
+Do not create or change any file outside factory/1fu13k-boomtax-forms-grid/. Do not run anything other than the probe and the checker.
+
+This pass has a focus, from the person who asked for the rerun. It outranks polish elsewhere:
+Motion first. The last pass still sat still in 1 of 7 spans and the card trajectories drifted out of step. The whole section should feel alive and loop seamlessly with the clip (period 3.17 s, from t=0):
+- The card field slides as one rigid field along the isometric diagonal, down-right about 2 px right per 1 px down: the "1099-MISC" card goes from ~(527,455) to ~(598,490) over ~1.7 s, slow, linear and continuous with no pause; positions differ at 1.0, 1.75 and 2.5 s. At ~0.55 s it jumps back up-left one drift span (the loop seam), matching the clip; time it so the measured trajectories stay in step rather than drifting.
+- The green glow stays fixed in frame: cards turn green as they enter it and white as they leave.
+- The puck stays centred on x≈626 and rises steadily ~25 px (lower edge y 311 at 0.6 s to y 284 at 2.9 s), resetting with the loop.
+- Heading and pinstripe margins never move.
+Also fix the failed static item: the card field fades to the background toward all four edges, so the outer cards are faint and ghostly (a mask or gradient over the field).

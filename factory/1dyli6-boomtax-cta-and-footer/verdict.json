@@ -1,0 +1,1333 @@
+{
+ "slug": "1dyli6-boomtax-cta-and-footer",
+ "at": "2026-10-24T09:18:16.676Z",
+ "runs": 15,
+ "html": "factory/1dyli6-boomtax-cta-and-footer/index.html",
+ "pixel": {
+  "score": 84,
+  "stills": 84,
+  "motion": 84,
+  "moments": 8
+ },
+ "animations": 15,
+ "rank": 87,
+ "allPass": false,
+ "elements": [
+  {
+   "name": "PCI DSS card",
+   "box": [
+    924,
+    205,
+    152,
+    105
+   ],
+   "deltaE": 1.9,
+   "delta": 24,
+   "shift": [
+    0,
+    4
+   ],
+   "afterShift": 22,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Boomtax wordmark",
+   "box": [
+    145,
+    412,
+    128,
+    30
+   ],
+   "deltaE": 1.3,
+   "delta": 24,
+   "shift": [
+    -2,
+    -4
+   ],
+   "afterShift": 22,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "COMODO card",
+   "box": [
+    798,
+    133,
+    152,
+    95
+   ],
+   "deltaE": 1.5,
+   "delta": 23,
+   "shift": [
+    8,
+    2
+   ],
+   "afterShift": 22,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "IRS card",
+   "box": [
+    748,
+    236,
+    118,
+    88
+   ],
+   "deltaE": 2.1,
+   "delta": 23,
+   "shift": null,
+   "afterShift": 23,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "HIPAA card",
+   "box": [
+    507,
+    130,
+    152,
+    95
+   ],
+   "deltaE": 1.5,
+   "delta": 20,
+   "shift": [
+    2,
+    4
+   ],
+   "afterShift": 15,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "SOC 2 puck",
+   "box": [
+    457,
+    230,
+    115,
+    85
+   ],
+   "deltaE": 2.7,
+   "delta": 20,
+   "shift": [
+    0,
+    -2
+   ],
+   "afterShift": 19,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "badge illustration",
+   "box": [
+    455,
+    128,
+    622,
+    197
+   ],
+   "deltaE": 0.8,
+   "delta": 19,
+   "shift": null,
+   "afterShift": 19,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "connector wires",
+   "box": [
+    560,
+    180,
+    390,
+    145
+   ],
+   "deltaE": 1.1,
+   "delta": 19,
+   "shift": null,
+   "afterShift": 19,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "headline",
+   "box": [
+    117,
+    145,
+    262,
+    92
+   ],
+   "deltaE": 1.6,
+   "delta": 18,
+   "shift": null,
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "primary button",
+   "box": [
+    116,
+    254,
+    132,
+    40
+   ],
+   "deltaE": 2.3,
+   "delta": 18,
+   "shift": [
+    2,
+    2
+   ],
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "CERTIFIED bar",
+   "box": [
+    636,
+    172,
+    140,
+    118
+   ],
+   "deltaE": 2,
+   "delta": 18,
+   "shift": null,
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "secondary button",
+   "box": [
+    257,
+    254,
+    104,
+    40
+   ],
+   "deltaE": 1.2,
+   "delta": 17,
+   "shift": null,
+   "afterShift": 17,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "copyright",
+   "box": [
+    145,
+    451,
+    238,
+    18
+   ],
+   "deltaE": 1.5,
+   "delta": 14,
+   "shift": [
+    0,
+    2
+   ],
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Forms column",
+   "box": [
+    581,
+    415,
+    120,
+    135
+   ],
+   "deltaE": 0.3,
+   "delta": 13,
+   "shift": null,
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "footer rule",
+   "box": [
+    0,
+    364,
+    1252,
+    2
+   ],
+   "deltaE": 4.6,
+   "delta": 12,
+   "shift": null,
+   "afterShift": 12,
+   "read": "matches"
+  },
+  {
+   "name": "Product column",
+   "box": [
+    459,
+    415,
+    65,
+    135
+   ],
+   "deltaE": 0.4,
+   "delta": 11,
+   "shift": null,
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "Support column",
+   "box": [
+    744,
+    415,
+    100,
+    135
+   ],
+   "deltaE": 0.2,
+   "delta": 11,
+   "shift": null,
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1252,
+    606
+   ],
+   "deltaE": 0.2,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "Tools column",
+   "box": [
+    871,
+    415,
+    236,
+    191
+   ],
+   "deltaE": 0.1,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "top rule",
+   "box": [
+    0,
+    75,
+    1252,
+    2
+   ],
+   "deltaE": 2.9,
+   "delta": 7,
+   "shift": [
+    0,
+    -2
+   ],
+   "afterShift": 6,
+   "read": "matches"
+  },
+  {
+   "name": "footer left stripe margin",
+   "box": [
+    0,
+    366,
+    115,
+    240
+   ],
+   "deltaE": 0.1,
+   "delta": 5,
+   "shift": [
+    4,
+    -8
+   ],
+   "afterShift": 5,
+   "read": "matches"
+  },
+  {
+   "name": "footer right stripe margin",
+   "box": [
+    1135,
+    366,
+    117,
+    240
+   ],
+   "deltaE": 0,
+   "delta": 5,
+   "shift": null,
+   "afterShift": 5,
+   "read": "matches"
+  },
+  {
+   "name": "top stripe field",
+   "box": [
+    115,
+    0,
+    1025,
+    76
+   ],
+   "deltaE": 0.2,
+   "delta": 4,
+   "shift": null,
+   "afterShift": 4,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "STATIC: the clip moves between the scored moments and the render does not",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "0.5s",
+    "clip": 2,
+    "render": 0,
+    "read": "render still where the clip moves"
+   },
+   {
+    "from": "0.5s",
+    "to": "1s",
+    "clip": 0.3,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "1s",
+    "to": "kf1",
+    "clip": 0.3,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "kf1",
+    "to": "2.1s",
+    "clip": 0.3,
+    "render": 0.1,
+    "read": "both still"
+   },
+   {
+    "from": "2.1s",
+    "to": "2.5s",
+    "clip": 2.1,
+    "render": 0,
+    "read": "render still where the clip moves"
+   },
+   {
+    "from": "2.5s",
+    "to": "kf2",
+    "clip": 1.8,
+    "render": 0,
+    "read": "render still where the clip moves"
+   },
+   {
+    "from": "kf2",
+    "to": "kf3",
+    "clip": 0.6,
+    "render": 0,
+    "read": "render still where the clip moves"
+   }
+  ],
+  "trajectories": []
+ },
+ "scale": {
+  "ok": true,
+  "changed": 4.5,
+  "read": "scales: the half-size render matches the full one (difference 4.5)"
+ },
+ "rubric": {
+  "file": "factory/1dyli6-boomtax-cta-and-footer/rubric.json",
+  "total": 49,
+  "counted": 49,
+  "pass": 49,
+  "fail": 0,
+  "unsure": 0,
+  "unjudged": 0,
+  "passRate": 100,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "style",
+    "element": "page background",
+    "check": "Background is a flat near-white light grey (~#fbfbfb), no gradient",
+    "box": [
+     0,
+     0,
+     1252,
+     606
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both are a flat near-white grey with no gradient. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "position",
+    "element": "top rule",
+    "check": "A full-width 1px light grey horizontal rule sits at y≈76",
+    "box": [
+     0,
+     66,
+     1252,
+     20
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rule and faint stripes show in both halves at the same height, but the strip is thin. [votes: yes/yes/unsure]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "position",
+    "element": "footer rule",
+    "check": "A second full-width 1px light grey rule sits at y≈365 separating CTA band from footer",
+    "box": [
+     0,
+     355,
+     1252,
+     20
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A footer rule with stripe margins appears in both at the same height. [votes: yes/yes/unsure]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "present",
+    "element": "top stripe field",
+    "check": "The top band (y 0-76) shows faint vertical hairline stripes spanning roughly x 115-1140, with plain background left of x 115",
+    "box": [
+     60,
+     0,
+     300,
+     80
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Hairline stripes start at about x 105 in both with plain space to the left. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "style",
+    "element": "top stripe field",
+    "check": "Stripes are very faint thin vertical lines (barely darker than the background), not solid bars or a dark pattern",
+    "box": [
+     115,
+     0,
+     300,
+     76
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Stripes are equally faint, thin and light in both. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "present",
+    "element": "footer stripe margins",
+    "check": "Footer side margins (x 0-115 and x 1135-1252, y 366-606) are filled with the same faint vertical stripes while the footer content area between them is plain",
+    "box": [
+     0,
+     366,
+     1252,
+     240
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Faint stripes fill the footer side margins in both and the content area is plain. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "text",
+    "element": "headline",
+    "check": "Headline reads exactly 'Ready to' on line 1 and 'Get Started?' on line 2",
+    "box": [
+     110,
+     140,
+     280,
+     100
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Reads 'Ready to / Get Started?' on two lines in both. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "style",
+    "element": "headline",
+    "check": "Headline is a near-black serif face at ~46px cap-to-descender, regular weight",
+    "box": [
+     110,
+     140,
+     280,
+     100
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Near-black regular serif at about the same size and weight in both. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "position",
+    "element": "headline",
+    "check": "Headline left edge at x≈117, first line top ≈148, second line baseline ≈232",
+    "box": [
+     100,
+     135,
+     300,
+     110
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Left edge is within about 3px of the clip and the line positions match. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "position",
+    "element": "primary button",
+    "check": "Blue button box about x 116-248, y 254-294 (132x40), left-aligned with the headline",
+    "box": [
+     100,
+     245,
+     160,
+     60
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Blue button sits at the same box and aligns with the headline in both. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "style",
+    "element": "primary button",
+    "check": "Primary button fill is a solid saturated blue ~#0097fb with square or near-square (≤3px) corners",
+    "box": [
+     110,
+     250,
+     145,
+     50
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Solid saturated blue with square corners in both. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "text",
+    "element": "primary button",
+    "check": "Primary button label reads 'Try Boomtax Free' in white sans ~14px",
+    "box": [
+     110,
+     250,
+     145,
+     50
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White 'Try Boomtax Free' label, about 6% wider than the clip's but the same size class. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "position",
+    "element": "secondary button",
+    "check": "Secondary button sits right of the primary with ~9px gap, about x 257-361, same 40px height",
+    "box": [
+     245,
+     250,
+     125,
+     50
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Secondary button sits right of the primary with the same gap, width and height. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "style",
+    "element": "secondary button",
+    "check": "Secondary button is white with a very faint 1px grey border, square corners",
+    "box": [
+     250,
+     250,
+     120,
+     50
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White fill and 1px light grey border with square corners; the border is slightly crisper than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "text",
+    "element": "secondary button",
+    "check": "Secondary button reads 'Book a Demo' in dark near-black sans",
+    "box": [
+     250,
+     250,
+     120,
+     50
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'Book a Demo' in dark near-black sans in both. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "position",
+    "element": "badge illustration",
+    "check": "Illustration occupies about x 455-1077, y 128-325, right of the CTA text",
+    "box": [
+     440,
+     115,
+     650,
+     220
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The illustration spans about the same area right of the text. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "present",
+    "element": "badge illustration",
+    "check": "Exactly six badge objects are visible: HIPAA card, round SOC 2 puck, CERTIFIED bar, COMODO card, IRS card, PCI DSS card",
+    "box": [
+     450,
+     125,
+     630,
+     205
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Six objects (HIPAA, SOC 2, CERTIFIED, COMODO, IRS, PCI DSS) are visible in both. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "style",
+    "element": "badge illustration",
+    "check": "Badges are drawn in isometric projection as white extruded slabs with light grey shaded side faces and thin grey outlines, no heavy drop shadows",
+    "box": [
+     450,
+     125,
+     630,
+     205
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White isometric slabs with grey side faces and thin outlines, no heavy shadow. [votes: yes/yes/no]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "position",
+    "element": "HIPAA card",
+    "check": "HIPAA card top-left of the illustration at about x 507-659, y 130-225",
+    "box": [
+     500,
+     125,
+     165,
+     105
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "HIPAA card sits at the same top-left spot, within about 9px at 3x. [votes: yes/yes/no]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "imagery",
+    "element": "HIPAA card",
+    "check": "HIPAA card shows a blue outlined pill logo with padlock icon and 'HIPAA COMPLIANT', an original drawing with the same blue colour and silhouette",
+    "box": [
+     500,
+     125,
+     165,
+     105
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same blue pill with a padlock and 'HIPAA COMPLIANT'; the lock drawing differs in detail only. [votes: yes/yes/no]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "imagery",
+    "element": "SOC 2 puck",
+    "check": "SOC 2 badge is a round cylindrical puck (not a slab) with a blue and black ring seal reading 'AICPA SOC 2'",
+    "box": [
+     452,
+     225,
+     125,
+     95
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows a round white puck with blue/black AICPA SOC 2 ring seal, same as clip. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "text",
+    "element": "CERTIFIED bar",
+    "check": "Centre bar carries the word 'CERTIFIED' in dark serif type along its top face, angled up to the right",
+    "box": [
+     630,
+     165,
+     150,
+     130
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "CERTIFIED in dark serif, angled up to the right on the front face, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "style",
+    "element": "CERTIFIED bar",
+    "check": "CERTIFIED bar is a long tall extruded block with small round port dots on its end faces",
+    "box": [
+     630,
+     165,
+     150,
+     130
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Long tall extruded block with two round port dots on the left end face and two at the top end, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "imagery",
+    "element": "COMODO card",
+    "check": "Top-right card shows a red padlock mark and red 'COMODO' word",
+    "box": [
+     792,
+     128,
+     165,
+     105
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Red padlock and red COMODO word on the top-right card, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "imagery",
+    "element": "IRS card",
+    "check": "Lower-middle card shows a black IRS logo (eagle with horizontal lines and 'IRS')",
+    "box": [
+     742,
+     230,
+     130,
+     100
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Black IRS emblem with horizontal lines and IRS letters on the lower-middle card, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "imagery",
+    "element": "PCI DSS card",
+    "check": "Right card shows a dark green 'PCI' mark with green check and 'DSS COMPLIANT'",
+    "box": [
+     918,
+     200,
+     165,
+     115
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Dark green PCI mark with green check and DSS COMPLIANT on the right card, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "style",
+    "element": "connector wires",
+    "check": "Badges are linked by thin ~1px grey lines that run in stepped zig-zag paths between small round port dots",
+    "box": [
+     560,
+     180,
+     390,
+     145
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Thin grey stepped zig-zag wires with small round port dots link the badges, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "style",
+    "element": "connector wires",
+    "check": "Wires are plain hairlines: no arrows, no dashes, no thick tubes",
+    "box": [
+     560,
+     180,
+     390,
+     145
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Wires are plain 1px hairlines with no arrows, dashes or thick tubes, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "present",
+    "element": "blue wire pulses",
+    "check": "At least two short blue segments are visible on different grey wires at the same moment",
+    "box": [
+     560,
+     180,
+     400,
+     145
+    ],
+    "at": 2.1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 2.1s the rebuild shows three or more blue segments on different wires (left of CERTIFIED, under IRS, right), as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "style",
+    "element": "blue wire pulses",
+    "check": "A pulse is the wire itself turning blue over a short stretch (~20-60px), same 1px width and soft fading ends, not a dot, glow blob or thick bar",
+    "box": [
+     590,
+     200,
+     200,
+     120
+    ],
+    "at": 2.1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild pulses are the wire itself turning blue, about 1px wide and 30-60px long; slightly more saturated than the clip's but the same kind of thing. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "motion",
+    "element": "blue wire pulses",
+    "check": "Blue segments are on different wires/positions between 1.6s and 2.1s (e.g. on the IRS-PCI wire near x 895-945 at 1.6s and on the SOC2-CERTIFIED and IRS left wires near x 625-770 at 2.1s)",
+    "box": [
+     560,
+     180,
+     400,
+     145
+    ],
+    "at": 1.6,
+    "then": 2.1,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild's blue sits on the IRS-left and right wires at 1.6s and moves to the CERTIFIED-left and IRS-left wires at 2.1s, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "motion",
+    "element": "blue wire pulses",
+    "check": "Pulses travel along the wire paths (following their bends) rather than fading in and out in place",
+    "box": [
+     700,
+     180,
+     180,
+     130
+    ],
+    "at": 2.5,
+    "then": 3,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild's blue moves to different spots on the wires between 2.5s and 3s and bends with the wire corners. [votes: yes/unsure/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "motion",
+    "element": "blue wire pulses",
+    "check": "Between 3.0s and 3.4s the pulse on the COMODO wire (near x 790-845, y 185-200) has shifted position along the wire",
+    "box": [
+     740,
+     170,
+     130,
+     60
+    ],
+    "at": 3,
+    "then": 3.4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild's blue on the COMODO wire sits at a different spot along the wire at 3.4s than at 3s. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "motion",
+    "element": "blue wire pulses",
+    "check": "Pulses run continuously across the whole clip: some wire carries blue at 0.5s, 1s, 2.1s, 2.5s, 3s and 3.4s",
+    "box": [
+     560,
+     180,
+     400,
+     145
+    ],
+    "at": 0.5,
+    "then": 3.4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild has blue on some wire at both 0.5s and 3.4s, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "motion",
+    "element": "blue wire pulses",
+    "check": "After a pulse passes, the wire behind it returns to plain grey (no permanent blue trail builds up)",
+    "box": [
+     560,
+     180,
+     400,
+     145
+    ],
+    "at": 1,
+    "then": 3,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Wires the pulse has left return to grey in the rebuild at 3s, with no blue trail left behind. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "motion",
+    "element": "badge illustration",
+    "check": "The badge tiles themselves do not move, scale or change between 1.6s and 3.4s",
+    "box": [
+     450,
+     125,
+     630,
+     205
+    ],
+    "at": 1.6,
+    "then": 3.4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Badge tiles are in the same place and size at 1.6s and 3.4s in the rebuild. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "motion",
+    "element": "page layout",
+    "check": "Headline, buttons and footer text stay fixed for the whole clip; only the wire pulses change",
+    "box": [
+     0,
+     0,
+     1252,
+     606
+    ],
+    "at": 0.5,
+    "then": 3.4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Headline, buttons and footer text are identical at 0.5s and 3.4s in the rebuild; only the wire blue changes. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "text",
+    "element": "Boomtax wordmark",
+    "check": "Footer wordmark reads 'Boomtax' in near-black serif, with 'tax' set heavier than 'Boom'",
+    "box": [
+     140,
+     405,
+     140,
+     42
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Near-black serif 'Boomtax' with 'tax' heavier than 'Boom'; the rebuild's weight contrast is slightly stronger than the clip's. [votes: yes/yes/no]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "position",
+    "element": "Boomtax wordmark",
+    "check": "Wordmark left edge at x≈145, vertical centre ≈427",
+    "box": [
+     130,
+     400,
+     160,
+     50
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Wordmark left edge and vertical centre match the clip, both at about y 178 in the tile. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c39.png"
+   },
+   {
+    "id": "c40",
+    "axis": "text",
+    "element": "copyright",
+    "check": "Under the wordmark reads exactly '© 2025. BoomTax - All rights reserved.' in mid-grey sans ~14px",
+    "box": [
+     140,
+     448,
+     250,
+     24
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Text reads '© 2025. BoomTax - All rights reserved.' in mid-grey sans, about 535px wide in both panels. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c40.png"
+   },
+   {
+    "id": "c41",
+    "axis": "present",
+    "element": "footer columns",
+    "check": "Exactly four link columns with headings 'Product', 'Forms', 'Support', 'Tools' in that order left to right",
+    "box": [
+     450,
+     410,
+     670,
+     30
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Four headings Product, Forms, Support, Tools in the same order as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c41.png"
+   },
+   {
+    "id": "c42",
+    "axis": "position",
+    "element": "footer columns",
+    "check": "Column headings start at x≈459, 581, 744 and 871 on a shared line at y≈424",
+    "box": [
+     450,
+     410,
+     670,
+     30
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Headings sit on one line at the same x positions as the clip (about 711, 853, 917 vs 184, 245, 327, 390 in panel offsets). [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c42.png"
+   },
+   {
+    "id": "c43",
+    "axis": "style",
+    "element": "footer columns",
+    "check": "Column headings are near-black serif ~18px; links beneath are lighter grey sans ~14px",
+    "box": [
+     450,
+     410,
+     670,
+     150
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Near-black serif headings and lighter grey sans links match the clip in size and weight. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c43.png"
+   },
+   {
+    "id": "c44",
+    "axis": "text",
+    "element": "Product column",
+    "check": "Product links read 'Home', 'Features', 'Pricing', 'Login'",
+    "box": [
+     455,
+     445,
+     70,
+     105
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Home, Features, Pricing, Login read the same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c44.png"
+   },
+   {
+    "id": "c45",
+    "axis": "text",
+    "element": "Forms column",
+    "check": "Forms links read 'ACA Forms', '1099 Forms', 'W-2 Forms', 'Pay Data Reporting'",
+    "box": [
+     577,
+     445,
+     130,
+     105
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "ACA Forms, 1099 Forms, W-2 Forms, Pay Data Reporting match the clip. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c45.png"
+   },
+   {
+    "id": "c46",
+    "axis": "text",
+    "element": "Support column",
+    "check": "Support links read 'Tax News', 'Knowledgebase', 'Chat', 'Contact Us'",
+    "box": [
+     740,
+     445,
+     110,
+     105
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Tax News, Knowledgebase, Chat, Contact Us match the clip. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c46.png"
+   },
+   {
+    "id": "c47",
+    "axis": "text",
+    "element": "Tools column",
+    "check": "Tools links read 'Do I need to file ACA?', 'Do I need to file CA Pay Data Reports?', 'ACA Code Series 1', 'ACA Code Series 2', 'Employee vs Contractor', 'Do I need to file a BOI Report'",
+    "box": [
+     866,
+     445,
+     245,
+     161
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "All six Tools links read the same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c47.png"
+   },
+   {
+    "id": "c48",
+    "axis": "position",
+    "element": "footer columns",
+    "check": "Link rows are spaced ~28px apart starting at y≈456 (456, 484, 512, 540, ...)",
+    "box": [
+     450,
+     445,
+     670,
+     161
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Link rows sit at the same y positions as the clip (about 28px apart). [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c48.png"
+   },
+   {
+    "id": "c49",
+    "axis": "position",
+    "element": "Tools column",
+    "check": "The sixth Tools link sits at y≈596 and is cut off by the bottom frame edge",
+    "box": [
+     866,
+     585,
+     200,
+     21
+    ],
+    "at": 1.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Sixth Tools link is cut off at the bottom edge in the rebuild just as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1dyli6-boomtax-cta-and-footer/judge/c49.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 0.668,
+  "calls": 9,
+  "images": "factory/1dyli6-boomtax-cta-and-footer/judge",
+  "votes": 3,
+  "spread": [
+   49,
+   48,
+   43
+  ]
+ }
+}

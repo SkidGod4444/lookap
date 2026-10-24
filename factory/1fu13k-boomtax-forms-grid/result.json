@@ -1,0 +1,170 @@
+{
+ "slug": "1fu13k-boomtax-forms-grid",
+ "title": "Boomtax Forms Grid",
+ "author": "lookap",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "review",
+ "ended": "round limit",
+ "bestRound": 1,
+ "rank": 93,
+ "allPass": false,
+ "rubric": {
+  "pass": 40,
+  "fail": 2,
+  "unsure": 1,
+  "of": 43,
+  "failed": [
+   "c24 About 6 cards inside the glow have a mint-green top face (around #d8f4c7) and bright green rims, while the cards outside it stay white",
+   "c29 On top of the puck sits a raised, saturated mid-blue (#1a8be6) elliptical disc with its own thin grey side edge"
+  ]
+ },
+ "score": 87,
+ "motion": "the render changes where the clip changes",
+ "imagery": [
+  {
+   "name": "isometric card field",
+   "class": "css",
+   "box": [
+    160,
+    215,
+    930,
+    435
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "green glow",
+   "class": "css",
+   "box": [
+    440,
+    300,
+    380,
+    330
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "puck",
+   "class": "css",
+   "box": [
+    561,
+    268,
+    131,
+    80
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "check mark",
+   "class": "structured",
+   "box": [
+    618,
+    285,
+    18,
+    20
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "pinstripe margins",
+   "class": "css",
+   "box": [
+    0,
+    0,
+    115,
+    650
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 12.4,
+   "turns": 42,
+   "costUsd": 3.3021392,
+   "tokens": {
+    "written": 39007,
+    "read": 2235680
+   },
+   "judgeUsd": 0.981,
+   "ended": "completed",
+   "score": 87,
+   "rank": 93,
+   "allPass": false,
+   "rubric": {
+    "pass": 40,
+    "fail": 2,
+    "unsure": 1,
+    "of": 43
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 6.9,
+   "turns": 29,
+   "costUsd": 1.0211244,
+   "tokens": {
+    "written": 12283,
+    "read": 1266174
+   },
+   "judgeUsd": 0.662,
+   "ended": "completed",
+   "score": 86,
+   "rank": 89,
+   "allPass": false,
+   "rubric": {
+    "pass": 38,
+    "fail": 5,
+    "unsure": 0,
+    "of": 43
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": false
+  },
+  {
+   "round": 3,
+   "minutes": 8.8,
+   "turns": 30,
+   "costUsd": 2.304207,
+   "tokens": {
+    "written": 22360,
+    "read": 1660118
+   },
+   "judgeUsd": 0.542,
+   "ended": "completed",
+   "score": 86,
+   "rank": 91,
+   "allPass": false,
+   "rubric": {
+    "pass": 39,
+    "fail": 3,
+    "unsure": 1,
+    "of": 43
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": false
+  }
+ ],
+ "minutes": 28.2,
+ "tokens": {
+  "written": 73650,
+  "read": 5161972
+ },
+ "cost": {
+  "codingUsd": 6.63,
+  "judgeUsd": 2.19,
+  "rubricUsd": 0.721,
+  "totalUsd": 9.53
+ },
+ "notes": true,
+ "at": "2026-10-24T10:05:26.982Z"
+}

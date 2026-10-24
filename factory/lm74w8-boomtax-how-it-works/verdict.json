@@ -1,0 +1,1227 @@
+{
+ "slug": "lm74w8-boomtax-how-it-works",
+ "at": "2026-10-24T10:05:16.227Z",
+ "runs": 21,
+ "html": "factory/lm74w8-boomtax-how-it-works/index.html",
+ "pixel": {
+  "score": 79,
+  "stills": 79,
+  "motion": 78,
+  "moments": 8
+ },
+ "animations": 11,
+ "rank": 84,
+ "allPass": false,
+ "elements": [
+  {
+   "name": "headline",
+   "box": [
+    165,
+    50,
+    330,
+    96
+   ],
+   "deltaE": 1.4,
+   "delta": 34,
+   "shift": [
+    -2,
+    4
+   ],
+   "afterShift": 18,
+   "read": "misplaced by 2 x 4 px"
+  },
+  {
+   "name": "step 2 title",
+   "box": [
+    431,
+    410,
+    146,
+    20
+   ],
+   "deltaE": 3.1,
+   "delta": 20,
+   "shift": null,
+   "afterShift": 20,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "step 1 title",
+   "box": [
+    8,
+    410,
+    184,
+    20
+   ],
+   "deltaE": 2.5,
+   "delta": 19,
+   "shift": null,
+   "afterShift": 19,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "header panel border",
+   "box": [
+    116,
+    0,
+    1020,
+    193
+   ],
+   "deltaE": 0.3,
+   "delta": 18,
+   "shift": [
+    -2,
+    2
+   ],
+   "afterShift": 12,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Try Boomtax Free button",
+   "box": [
+    808,
+    104,
+    132,
+    41
+   ],
+   "deltaE": 3.5,
+   "delta": 17,
+   "shift": null,
+   "afterShift": 17,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Book a Demo button",
+   "box": [
+    949,
+    104,
+    104,
+    41
+   ],
+   "deltaE": 0.7,
+   "delta": 17,
+   "shift": [
+    2,
+    0
+   ],
+   "afterShift": 17,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "step 3 illustration",
+   "box": [
+    875,
+    225,
+    345,
+    155
+   ],
+   "deltaE": 1.1,
+   "delta": 17,
+   "shift": [
+    -2,
+    -6
+   ],
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "step 3 title",
+   "box": [
+    853,
+    410,
+    134,
+    20
+   ],
+   "deltaE": 2.4,
+   "delta": 17,
+   "shift": null,
+   "afterShift": 17,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "intro paragraph",
+   "box": [
+    808,
+    50,
+    262,
+    36
+   ],
+   "deltaE": 0.8,
+   "delta": 15,
+   "shift": [
+    -4,
+    0
+   ],
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "step 2 illustration",
+   "box": [
+    455,
+    220,
+    335,
+    160
+   ],
+   "deltaE": 1.5,
+   "delta": 14,
+   "shift": [
+    -2,
+    -2
+   ],
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "step 3 subtitle",
+   "box": [
+    853,
+    435,
+    286,
+    16
+   ],
+   "deltaE": 0.5,
+   "delta": 14,
+   "shift": null,
+   "afterShift": 14,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1252,
+    468
+   ],
+   "deltaE": 0.5,
+   "delta": 13,
+   "shift": [
+    0,
+    2
+   ],
+   "afterShift": 12,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "step 1 subtitle",
+   "box": [
+    8,
+    435,
+    276,
+    16
+   ],
+   "deltaE": 0.3,
+   "delta": 13,
+   "shift": [
+    -2,
+    0
+   ],
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "section divider lines",
+   "box": [
+    0,
+    193,
+    1252,
+    275
+   ],
+   "deltaE": 0.6,
+   "delta": 11,
+   "shift": null,
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "step 1 illustration",
+   "box": [
+    25,
+    215,
+    350,
+    175
+   ],
+   "deltaE": 0.9,
+   "delta": 11,
+   "shift": null,
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "step 2 subtitle",
+   "box": [
+    431,
+    435,
+    320,
+    16
+   ],
+   "deltaE": 0.6,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "the render stays still in 5 of 7 spans where the clip moves",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "0.13s",
+    "clip": 1.9,
+    "render": 0.2,
+    "read": "render still where the clip moves"
+   },
+   {
+    "from": "0.13s",
+    "to": "0.5s",
+    "clip": 2.2,
+    "render": 0.4,
+    "read": "both move"
+   },
+   {
+    "from": "0.5s",
+    "to": "1s",
+    "clip": 3.7,
+    "render": 0.2,
+    "read": "render still where the clip moves"
+   },
+   {
+    "from": "1s",
+    "to": "1.38s",
+    "clip": 4.3,
+    "render": 0.2,
+    "read": "render still where the clip moves"
+   },
+   {
+    "from": "1.38s",
+    "to": "kf1",
+    "clip": 2.4,
+    "render": 0.1,
+    "read": "render still where the clip moves"
+   },
+   {
+    "from": "kf1",
+    "to": "2.25s",
+    "clip": 0.9,
+    "render": 0.2,
+    "read": "both move"
+   },
+   {
+    "from": "2.25s",
+    "to": "2.5s",
+    "clip": 1.4,
+    "render": 0.2,
+    "read": "render still where the clip moves"
+   }
+  ],
+  "trajectories": [
+   {
+    "element": "#e4e5e6",
+    "box": [
+     484,
+     225,
+     75,
+     110
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 13
+     },
+     {
+      "at": 0.13,
+      "dx": 0,
+      "dy": 0,
+      "delta": 13
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 13
+     },
+     {
+      "at": 1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 14
+     },
+     {
+      "at": 1.38,
+      "dx": 0,
+      "dy": 0,
+      "delta": 13
+     },
+     {
+      "at": 2,
+      "dx": 0,
+      "dy": 0,
+      "delta": 13
+     },
+     {
+      "at": 2.25,
+      "dx": 0,
+      "dy": 0,
+      "delta": 13
+     },
+     {
+      "at": 2.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 13
+     }
+    ],
+    "read": "in step"
+   },
+   {
+    "element": "#e4e5e6",
+    "box": [
+     49,
+     225,
+     51,
+     113
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": -4,
+      "delta": 11
+     },
+     {
+      "at": 0.13,
+      "dx": 2,
+      "dy": -6,
+      "delta": 11
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": -4,
+      "delta": 14
+     },
+     {
+      "at": 1,
+      "dx": 2,
+      "dy": -4,
+      "delta": 11
+     },
+     {
+      "at": 1.38,
+      "dx": 2,
+      "dy": -4,
+      "delta": 10
+     },
+     {
+      "at": 2,
+      "dx": 2,
+      "dy": -4,
+      "delta": 11
+     },
+     {
+      "at": 2.25,
+      "dx": 0,
+      "dy": -2,
+      "delta": 10
+     },
+     {
+      "at": 2.5,
+      "dx": 0,
+      "dy": -2,
+      "delta": 10
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   }
+  ]
+ },
+ "scale": {
+  "ok": true,
+  "changed": 5,
+  "read": "scales: the half-size render matches the full one (difference 5)"
+ },
+ "rubric": {
+  "file": "factory/lm74w8-boomtax-how-it-works/rubric.json",
+  "total": 42,
+  "counted": 42,
+  "pass": 41,
+  "fail": 1,
+  "unsure": 0,
+  "unjudged": 0,
+  "passRate": 98,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "style",
+    "element": "page background",
+    "check": "The page background is a flat near-white (#fbfbfb), with no gradient or texture",
+    "box": [
+     0,
+     0,
+     1252,
+     468
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild background is the same flat near-white with no gradient or texture. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "text",
+    "element": "headline",
+    "check": "The headline reads exactly 'We Made Tax' on line 1 and 'Season Simple.' on line 2",
+    "box": [
+     165,
+     50,
+     330,
+     96
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild reads 'We Made Tax' / 'Season Simple.' on two lines, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "style",
+    "element": "headline",
+    "check": "The headline is in a dark navy, near-black serif typeface (not sans), regular weight",
+    "box": [
+     165,
+     50,
+     330,
+     96
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild headline is a dark navy regular serif like the clip, only marginally softer. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "position",
+    "element": "headline",
+    "check": "The headline starts at x≈165, spans y≈50 to 145, and has a cap height of roughly 35 to 40px (font about 46px)",
+    "box": [
+     165,
+     50,
+     330,
+     96
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild headline starts at the same x (~82 in tile) and spans the same two lines at the same size. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "text",
+    "element": "intro paragraph",
+    "check": "The paragraph reads 'Easily manage your 1099s, W-2s, and ACA' / 'forms in one simple, automated workflow.' on two lines",
+    "box": [
+     808,
+     50,
+     262,
+     36
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild paragraph reads the same two lines with identical breaks. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "style",
+    "element": "intro paragraph",
+    "check": "The paragraph is mid-grey sans-serif at about 14px, clearly lighter than the headline",
+    "box": [
+     808,
+     50,
+     262,
+     36
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild paragraph is the same mid-grey sans at matching size. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "style",
+    "element": "Try Boomtax Free button",
+    "check": "The primary button is a solid bright blue (#0196fc) rectangle with near-square corners (radius ≤3px)",
+    "box": [
+     808,
+     104,
+     132,
+     41
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild button is the same solid bright blue with near-square corners. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "text",
+    "element": "Try Boomtax Free button",
+    "check": "The primary button reads 'Try Boomtax Free' in white",
+    "box": [
+     808,
+     104,
+     132,
+     41
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild button label 'Try Boomtax Free' is white, same size as the clip. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "style",
+    "element": "Book a Demo button",
+    "check": "The second button is white with a faint light-grey 1px border, the same height (≈41px) as the blue button, sitting ≈9px to its right",
+    "box": [
+     949,
+     104,
+     104,
+     41
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild second button is white with a faint light-grey border, same height and gap as the clip. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "text",
+    "element": "Book a Demo button",
+    "check": "The second button reads 'Book a Demo' in dark text",
+    "box": [
+     949,
+     104,
+     104,
+     41
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild reads 'Book a Demo' in dark text, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "present",
+    "element": "header panel border",
+    "check": "Faint vertical hairlines at x≈116 and x≈1136 frame the header from the top edge down to y≈192",
+    "box": [
+     100,
+     0,
+     1052,
+     195
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows the same faint vertical hairlines framing the header at the same x (~57 and ~567 in tile). [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "position",
+    "element": "section divider lines",
+    "check": "A 1px light-grey horizontal hairline runs across the full width at y≈193",
+    "box": [
+     0,
+     185,
+     1252,
+     16
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild has the same 1px grey horizontal hairline at the same y (~100 in tile). [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "position",
+    "element": "section divider lines",
+    "check": "Two vertical hairlines at x≈414 and x≈836 split the lower area into three equal columns",
+    "box": [
+     0,
+     193,
+     1252,
+     275
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild column dividers sit at ~207 and ~417 in tile, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "text",
+    "element": "step 1 title",
+    "check": "Column 1 title reads 'Drag & Drop Your Data' in a dark serif ~18px at x≈8, y≈420",
+    "box": [
+     8,
+     410,
+     184,
+     20
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild reads 'Drag & Drop Your Data' in a dark serif at the same position and size. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "text",
+    "element": "step 1 subtitle",
+    "check": "Column 1 subtitle reads 'We'll check to make sure there are no errors.' in grey sans ~14px",
+    "box": [
+     8,
+     435,
+     276,
+     16
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild subtitle reads the same in grey sans at matching size. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "text",
+    "element": "step 2 title",
+    "check": "Column 2 title reads 'Send to Recipients' in a dark serif starting at x≈431",
+    "box": [
+     431,
+     410,
+     146,
+     20
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild reads 'Send to Recipients' in dark serif starting at the same x. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "text",
+    "element": "step 2 subtitle",
+    "check": "Column 2 subtitle reads 'We'll print, fold, stuff and mail your recipient copies.' in grey sans",
+    "box": [
+     431,
+     435,
+     320,
+     16
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild subtitle text and grey sans style match the clip. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "text",
+    "element": "step 3 title",
+    "check": "Column 3 title reads 'E-File and Done!' in a dark serif starting at x≈853",
+    "box": [
+     853,
+     410,
+     134,
+     20
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild reads 'E-File and Done!' in dark serif at the same x and size. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "text",
+    "element": "step 3 subtitle",
+    "check": "Column 3 subtitle reads 'We'll e-file your forms in less than 15 minutes.' in grey sans",
+    "box": [
+     853,
+     435,
+     286,
+     16
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild subtitle text and grey sans style match the clip. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "imagery",
+    "element": "step 1 illustration",
+    "check": "Column 1 shows an original isometric line drawing: a tall tilted document with text lines and a signature, a small tile with a blue gear, and two stacked document cards inside a dashed isometric outline, in light grey with soft shading",
+    "box": [
+     25,
+     215,
+     350,
+     175
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild has the tilted signed document, blue gear tile, two stacked cards in a dashed isometric outline in light grey; details are slightly lighter than the clip. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "style",
+    "element": "step 1 illustration",
+    "check": "The upper-right doc card carries a bright green check inside a green ring; the lower-left card's check and ring are pale grey",
+    "box": [
+     170,
+     255,
+     180,
+     90
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Upper card has a bright green check in a green ring, lower card's are pale grey, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "style",
+    "element": "step 1 illustration",
+    "check": "The outline that encloses the two doc cards is dashed grey (not solid)",
+    "box": [
+     145,
+     250,
+     230,
+     135
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A dashed grey outline encloses both cards, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "imagery",
+    "element": "step 2 illustration",
+    "check": "Column 2 shows an original isometric drawing of two grey envelopes, a round puck with a pale green check, a tall stack of tiles and two more tiles, each tile topped by a blue document glyph, joined by thin grey wires",
+    "box": [
+     455,
+     220,
+     335,
+     160
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Two grey envelopes, a puck with a pale green check, a tall stack and two tiles with blue glyphs, joined by thin grey wires, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "present",
+    "element": "step 2 illustration",
+    "check": "Exactly 3 blue-topped document tiles or stacks appear (one tall stack plus two single tiles)",
+    "box": [
+     680,
+     290,
+     110,
+     90
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Three blue-topped tiles: one tall stack and two single tiles, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "imagery",
+    "element": "step 3 illustration",
+    "check": "Column 3 shows an original isometric drawing of a grey ring with a blue tag hanging inside, a green spreadsheet tile, a grey printer tile, a white box with a yellow lightning bolt and a blue tile, joined by a thin wire",
+    "box": [
+     875,
+     225,
+     345,
+     155
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Ring with blue tag, green tile, grey printer tile, white box with bolt and blue tile, joined by a wire, matching the clip. [votes: yes/no/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "style",
+    "element": "step 3 illustration",
+    "check": "The bolt on the white box is yellow/amber, and the box is white with soft grey isometric side faces, not outlined in black",
+    "box": [
+     1040,
+     290,
+     118,
+     85
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Amber bolt on a white box with soft grey side faces and no black outline, like the clip. [votes: yes/no/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "style",
+    "element": "selection marquee",
+    "check": "The marquee is a thin (≈1px) light-blue outline with no fill, with a small square handle at each of its 4 corners",
+    "box": [
+     20,
+     212,
+     102,
+     136
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Thin light-blue unfilled outline with a square handle at each of the 4 corners, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "position",
+    "element": "selection marquee",
+    "check": "At rest the marquee spans x≈27 to 115 and y≈218 to 342, enclosing the whole document",
+    "box": [
+     20,
+     212,
+     102,
+     136
+    ],
+    "at": 2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The marquee runs about x 25 to 288 in the crop in both panels, enclosing the whole document. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "motion",
+    "element": "selection marquee",
+    "check": "The marquee grows from a small box (≈16x16 at the top-left corner 27,218) at 0.13s to about 46x62 at 0.5s; its top-left corner stays fixed",
+    "box": [
+     20,
+     212,
+     102,
+     136
+    ],
+    "at": 0.13,
+    "then": 0.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The box is about 16x16 at 0.13s and about 45x62 at 0.5s, with the top-left corner fixed, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "motion",
+    "element": "selection marquee",
+    "check": "Between 0.5s and 1.38s the marquee's bottom-right corner moves from ≈(73,280) to ≈(115,342), and it is fully grown by about 1.4s",
+    "box": [
+     20,
+     212,
+     102,
+     136
+    ],
+    "at": 0.5,
+    "then": 1.38,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The bottom-right corner moves from about (73,280) to about (115,342) and is fully grown at 1.38s, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "motion",
+    "element": "selection marquee",
+    "check": "The marquee does not change between 2s and 2.5s; it stays drawn and is not removed",
+    "box": [
+     20,
+     212,
+     102,
+     136
+    ],
+    "at": 2,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The marquee is unchanged and still drawn at 2s and 2.5s, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "present",
+    "element": "cursor arrow",
+    "check": "A white arrow pointer with a dark outline sits at the marquee's growing bottom-right corner (≈112,338 at 1s)",
+    "box": [
+     95,
+     320,
+     35,
+     35
+    ],
+    "at": 1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A white arrow with a dark outline sits on the marquee's bottom-right corner at 1s, as in the clip. [votes: yes/no/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "motion",
+    "element": "cursor arrow",
+    "check": "After the drag, the cursor moves down-right off the document to ≈(153,385) by 2s, where it shows as a hollow outlined arrow, and it is gone by 2.5s",
+    "box": [
+     100,
+     330,
+     70,
+     70
+    ],
+    "at": 2,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The hollow outlined arrow sits near the same spot below the document at 2s and is gone at 2.5s, as in the clip. [votes: yes/no/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "present",
+    "element": "step 2 green pulse",
+    "check": "At 0.13s a short bright green stretch lights the wire between the envelope and the puck (≈555 to 600, y≈320); the rest of the wire is grey",
+    "box": [
+     540,
+     300,
+     80,
+     35
+    ],
+    "at": 0.13,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A green stretch lights the wire next to the puck at 0.13s and the rest of the wire is grey. It is brighter than the clip's faint pulse. [votes: yes/no/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "style",
+    "element": "step 2 green pulse",
+    "check": "The pulse is a soft glowing green stretch of the wire itself, not a separate dot or arrow, and it fades at both ends",
+    "box": [
+     540,
+     300,
+     80,
+     35
+    ],
+    "at": 0.13,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The pulse is a soft glowing green stretch of the wire that fades at both ends, with no separate dot. [votes: yes/no/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "motion",
+    "element": "step 2 green pulse",
+    "check": "Between 2s and 2.5s a green stretch appears on the wire beyond the puck, toward the tile stack (≈640 to 690, y 290 to 315); at 2s that wire is all grey",
+    "box": [
+     630,
+     280,
+     80,
+     45
+    ],
+    "at": 2,
+    "then": 2.5,
+    "policy": null,
+    "pass": "no",
+    "seen": "The wire is grey at 2s, but at 2.5s the rebuild shows a thick bright glowing green zigzag on a different, longer stretch, where the clip has a faint thin green stretch. [votes: no/no/no]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "present",
+    "element": "step 3 blue pulse",
+    "check": "At 0.13s a blue stretch lights the vertical wire below the ring's tag (x≈930, y≈290 to 345)",
+    "box": [
+     915,
+     280,
+     30,
+     75
+    ],
+    "at": 0.13,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A blue stretch lights the vertical wire below the tag at 0.13s. It is thicker and brighter than the clip's. [votes: yes/no/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "motion",
+    "element": "step 3 blue pulse",
+    "check": "The blue stretch travels along the wire: near (985,378) at 0.5s, then right and up to ≈(1045,355) by 1.38s",
+    "box": [
+     920,
+     330,
+     150,
+     55
+    ],
+    "at": 0.5,
+    "then": 1.38,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The blue stretch sits on the lower-left wire at 0.5s and on the right segment toward the box by 1.38s, tracking the clip's path. [votes: yes/no/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "motion",
+    "element": "step 3 blue pulse",
+    "check": "By 2s the blue stretch reaches the box's port (≈1065,345), and by 2.5s the wire is grey again",
+    "box": [
+     1040,
+     325,
+     40,
+     40
+    ],
+    "at": 2,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Blue reaches the box port at 2s and the wire is grey at 2.5s, as in the clip. [votes: yes/no/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c39.png"
+   },
+   {
+    "id": "c40",
+    "axis": "motion",
+    "element": "step 3 illustration",
+    "check": "The blue tag inside the ring sways slightly (a few px tilt/shift) between 2s and 2.5s, while the ring itself stays put",
+    "box": [
+     905,
+     225,
+     60,
+     70
+    ],
+    "at": 2,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The tag tilts and shifts a few px between 2s and 2.5s while the ring stays put, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c40.png"
+   },
+   {
+    "id": "c41",
+    "axis": "motion",
+    "element": "headline",
+    "check": "No text, button or divider line moves at any time: header and column labels are identical at 0.13s and 2.5s",
+    "box": [
+     0,
+     0,
+     1252,
+     468
+    ],
+    "at": 0.13,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Header, body text, buttons and column labels sit at identical positions at 0.13s and 2.5s in the rebuild, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c41.png"
+   },
+   {
+    "id": "c42",
+    "axis": "motion",
+    "element": "step 1 illustration",
+    "check": "The document, gear tile and doc cards in column 1 do not move while the marquee is dragged",
+    "box": [
+     25,
+     215,
+     350,
+     175
+    ],
+    "at": 0.5,
+    "then": 2,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Document, gear tile and doc cards stay put between 0.5s and 2s in the rebuild, as in the clip; only the marquee grows. [votes: yes/yes/yes]",
+    "image": "factory/lm74w8-boomtax-how-it-works/judge/c42.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 0.558,
+  "calls": 9,
+  "images": "factory/lm74w8-boomtax-how-it-works/judge",
+  "votes": 3,
+  "spread": [
+   41,
+   32,
+   41
+  ]
+ }
+}

@@ -1,0 +1,158 @@
+{
+ "slug": "at1qnr-boomtax-hero-section",
+ "title": "Boomtax Hero Section",
+ "author": "lookap",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "review",
+ "ended": "round limit",
+ "bestRound": 3,
+ "rank": 94,
+ "allPass": false,
+ "rubric": {
+  "pass": 43,
+  "fail": 2,
+  "unsure": 0,
+  "of": 45,
+  "failed": [
+   "c21 Logos are drawn as simple grey vector marks with recognisable silhouettes (F badge + wordmark, qb circle + wordmark, X grid, xero lowercase, zoho linked boxes, folded PDF page)",
+   "c28 Machine top carries a black rounded-square badge with a white lowercase \"b\", green glowing arrow marks above and below it, and a small green dot at the right corner"
+  ]
+ },
+ "score": 84,
+ "motion": "the render changes where the clip changes",
+ "imagery": [
+  {
+   "name": "partner logos",
+   "class": "structured",
+   "box": [
+    0,
+    422,
+    1252,
+    72
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "isometric pipeline",
+   "class": "structured",
+   "box": [
+    120,
+    494,
+    1016,
+    400
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "machine mouth glow",
+   "class": "css",
+   "box": [
+    615,
+    685,
+    80,
+    75
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "stripe ground",
+   "class": "css",
+   "box": [
+    0,
+    0,
+    116,
+    370
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 10.8,
+   "turns": 62,
+   "costUsd": 2.0287390000000007,
+   "tokens": {
+    "written": 38198,
+    "read": 2340930
+   },
+   "judgeUsd": 0.9,
+   "ended": "completed",
+   "score": 83,
+   "rank": 73,
+   "allPass": false,
+   "rubric": {
+    "pass": 30,
+    "fail": 13,
+    "unsure": 2,
+    "of": 45
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 9.2,
+   "turns": 51,
+   "costUsd": 1.6845164,
+   "tokens": {
+    "written": 27939,
+    "read": 1880492
+   },
+   "judgeUsd": 0.604,
+   "ended": "completed",
+   "score": 83,
+   "rank": 87,
+   "allPass": false,
+   "rubric": {
+    "pass": 39,
+    "fail": 6,
+    "unsure": 0,
+    "of": 45
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 9.9,
+   "turns": 56,
+   "costUsd": 2.8167474,
+   "tokens": {
+    "written": 28924,
+    "read": 2343429
+   },
+   "judgeUsd": 0.648,
+   "ended": "completed",
+   "score": 84,
+   "rank": 94,
+   "allPass": false,
+   "rubric": {
+    "pass": 43,
+    "fail": 2,
+    "unsure": 0,
+    "of": 45
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  }
+ ],
+ "minutes": 29.9,
+ "tokens": {
+  "written": 95061,
+  "read": 6564851
+ },
+ "cost": {
+  "codingUsd": 6.53,
+  "judgeUsd": 2.15,
+  "rubricUsd": 0.66,
+  "totalUsd": 9.34
+ },
+ "notes": true,
+ "at": "2026-10-24T10:07:06.800Z"
+}

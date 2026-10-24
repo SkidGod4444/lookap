@@ -1,0 +1,157 @@
+{
+ "slug": "lm74w8-boomtax-how-it-works",
+ "title": "Boomtax How It Works",
+ "author": "lookap",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "review",
+ "ended": "round limit",
+ "bestRound": 3,
+ "rank": 84,
+ "allPass": false,
+ "rubric": {
+  "pass": 41,
+  "fail": 1,
+  "unsure": 0,
+  "of": 42,
+  "failed": [
+   "c36 Between 2s and 2.5s a green stretch appears on the wire beyond the puck, toward the tile stack (≈640 to 690, y 290 to 315); at 2s that wire is all grey"
+  ]
+ },
+ "score": 79,
+ "motion": "the render stays still in 5 of 7 spans where the clip moves",
+ "imagery": [
+  {
+   "name": "step 1 illustration",
+   "class": "structured",
+   "box": [
+    25,
+    215,
+    350,
+    175
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "step 2 illustration",
+   "class": "structured",
+   "box": [
+    455,
+    220,
+    335,
+    160
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "step 3 illustration",
+   "class": "structured",
+   "box": [
+    875,
+    225,
+    345,
+    155
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "cursor arrow",
+   "class": "structured",
+   "box": [
+    105,
+    330,
+    16,
+    20
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 10.7,
+   "turns": 39,
+   "costUsd": 2.5590734000000004,
+   "tokens": {
+    "written": 25594,
+    "read": 2090010
+   },
+   "judgeUsd": 0.978,
+   "ended": "completed",
+   "score": 79,
+   "rank": 74,
+   "allPass": false,
+   "rubric": {
+    "pass": 35,
+    "fail": 7,
+    "unsure": 0,
+    "of": 42
+   },
+   "motion": "STATIC: the clip moves between the scored moments and the render does not",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 12.8,
+   "turns": 63,
+   "costUsd": 3.4507268,
+   "tokens": {
+    "written": 37440,
+    "read": 3282230
+   },
+   "judgeUsd": 0.659,
+   "ended": "completed",
+   "score": 79,
+   "rank": 82,
+   "allPass": false,
+   "rubric": {
+    "pass": 40,
+    "fail": 2,
+    "unsure": 0,
+    "of": 42
+   },
+   "motion": "the render stays still in 5 of 7 spans where the clip moves",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 4.5,
+   "turns": 18,
+   "costUsd": 0.6800650000000001,
+   "tokens": {
+    "written": 5059,
+    "read": 737542
+   },
+   "judgeUsd": 0.558,
+   "ended": "completed",
+   "score": 79,
+   "rank": 84,
+   "allPass": false,
+   "rubric": {
+    "pass": 41,
+    "fail": 1,
+    "unsure": 0,
+    "of": 42
+   },
+   "motion": "the render stays still in 5 of 7 spans where the clip moves",
+   "kept": true
+  }
+ ],
+ "minutes": 28,
+ "tokens": {
+  "written": 68093,
+  "read": 6109782
+ },
+ "cost": {
+  "codingUsd": 6.69,
+  "judgeUsd": 2.2,
+  "rubricUsd": 0.595,
+  "totalUsd": 9.48
+ },
+ "notes": true,
+ "at": "2026-10-24T10:05:16.257Z"
+}

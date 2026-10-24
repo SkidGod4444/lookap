@@ -1,0 +1,16 @@
+{
+ "model": "Claude Opus 5.5",
+ "modelId": "claude-opus-5-5",
+ "date": "2026-10-24",
+ "run": {
+  "model": "Claude Opus 5.5",
+  "turns": 175,
+  "outputTokens": 67448,
+  "totalTokens": 6766789,
+  "costUsd": 8.52,
+  "minutes": 25.9,
+  "score": 84
+ },
+ "hand": "none: the factory alone, a retry after the account error; 4 judged rounds, best round 3 kept; rubric 37 of 39 under a three-vote judge, reviewed by eye",
+ "hint": "Watch the rule under the heading break and re-form at about one second."
+}

@@ -1,0 +1,469 @@
+{
+ "slug": "blj59h-boomtax-testimonials",
+ "measured": "draft",
+ "frame": {
+  "w": 1252,
+  "h": 526
+ },
+ "animations": 7,
+ "score": 84,
+ "stills": 84,
+ "motion": 84,
+ "keyframes": [
+  {
+   "keyframe": "0s",
+   "at": 0,
+   "still": false,
+   "score": 84,
+   "overall": 10,
+   "elements": [
+    {
+     "name": "draft 2 #020f19",
+     "box": [
+      427,
+      114,
+      34,
+      34
+     ],
+     "reference": "#9fa7aa",
+     "yours": "#acb0b3",
+     "delta": 35,
+     "colour": 10,
+     "deltaE": 4,
+     "shift": [
+      0,
+      2
+     ],
+     "afterShift": 26,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #041019",
+     "box": [
+      564,
+      68,
+      40,
+      35
+     ],
+     "reference": "#aab0b3",
+     "yours": "#b4b7ba",
+     "delta": 28,
+     "colour": 8,
+     "deltaE": 2.9,
+     "shift": [
+      2,
+      2
+     ],
+     "afterShift": 18,
+     "cause": "different drawing: size, shape or texture"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "B4",
+     "box": [
+      626,
+      88,
+      209,
+      88
+     ],
+     "delta": 42,
+     "over": []
+    },
+    {
+     "cell": "B3",
+     "box": [
+      417,
+      88,
+      209,
+      88
+     ],
+     "delta": 27,
+     "over": [
+      "draft 1 #041019",
+      "draft 2 #020f19"
+     ]
+    },
+    {
+     "cell": "A3",
+     "box": [
+      417,
+      0,
+      209,
+      88
+     ],
+     "delta": 16,
+     "over": [
+      "draft 1 #041019"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "kf1",
+   "at": 0.2,
+   "still": true,
+   "score": 84,
+   "overall": 10,
+   "elements": [
+    {
+     "name": "draft 2 #020f19",
+     "box": [
+      427,
+      114,
+      34,
+      34
+     ],
+     "reference": "#9da4a8",
+     "yours": "#acb0b3",
+     "delta": 31,
+     "colour": 13,
+     "deltaE": 4.9,
+     "shift": [
+      0,
+      2
+     ],
+     "afterShift": 19,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #041019",
+     "box": [
+      564,
+      68,
+      40,
+      35
+     ],
+     "reference": "#aaafb2",
+     "yours": "#b4b7ba",
+     "delta": 28,
+     "colour": 9,
+     "deltaE": 3.3,
+     "shift": [
+      2,
+      2
+     ],
+     "afterShift": 14,
+     "cause": "misplaced: yours sits 2 px left and 2 px above the reference"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "B4",
+     "box": [
+      626,
+      88,
+      209,
+      88
+     ],
+     "delta": 42,
+     "over": []
+    },
+    {
+     "cell": "B3",
+     "box": [
+      417,
+      88,
+      209,
+      88
+     ],
+     "delta": 27,
+     "over": [
+      "draft 1 #041019",
+      "draft 2 #020f19"
+     ]
+    },
+    {
+     "cell": "A3",
+     "box": [
+      417,
+      0,
+      209,
+      88
+     ],
+     "delta": 19,
+     "over": [
+      "draft 1 #041019"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "0.7s",
+   "at": 0.7,
+   "still": false,
+   "score": 84,
+   "overall": 10,
+   "elements": [
+    {
+     "name": "draft 2 #020f19",
+     "box": [
+      427,
+      114,
+      34,
+      34
+     ],
+     "reference": "#9ea6a9",
+     "yours": "#acb0b3",
+     "delta": 33,
+     "colour": 12,
+     "deltaE": 4.4,
+     "shift": [
+      0,
+      2
+     ],
+     "afterShift": 22,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #041019",
+     "box": [
+      564,
+      68,
+      40,
+      35
+     ],
+     "reference": "#aab0b3",
+     "yours": "#b4b7ba",
+     "delta": 30,
+     "colour": 8,
+     "deltaE": 3.1,
+     "shift": [
+      2,
+      2
+     ],
+     "afterShift": 16,
+     "cause": "misplaced: yours sits 2 px left and 2 px above the reference"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "B4",
+     "box": [
+      626,
+      88,
+      209,
+      88
+     ],
+     "delta": 42,
+     "over": []
+    },
+    {
+     "cell": "B3",
+     "box": [
+      417,
+      88,
+      209,
+      88
+     ],
+     "delta": 26,
+     "over": [
+      "draft 1 #041019",
+      "draft 2 #020f19"
+     ]
+    },
+    {
+     "cell": "A3",
+     "box": [
+      417,
+      0,
+      209,
+      88
+     ],
+     "delta": 17,
+     "over": [
+      "draft 1 #041019"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "1s",
+   "at": 1,
+   "still": false,
+   "score": 84,
+   "overall": 10,
+   "elements": [
+    {
+     "name": "draft 2 #020f19",
+     "box": [
+      427,
+      114,
+      34,
+      34
+     ],
+     "reference": "#a0a7ab",
+     "yours": "#acb0b3",
+     "delta": 36,
+     "colour": 10,
+     "deltaE": 3.9,
+     "shift": [
+      0,
+      2
+     ],
+     "afterShift": 28,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #041019",
+     "box": [
+      564,
+      68,
+      40,
+      35
+     ],
+     "reference": "#abb1b4",
+     "yours": "#b4b7ba",
+     "delta": 27,
+     "colour": 7,
+     "deltaE": 2.8,
+     "shift": [
+      2,
+      2
+     ],
+     "afterShift": 20,
+     "cause": "different drawing: size, shape or texture"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "B4",
+     "box": [
+      626,
+      88,
+      209,
+      88
+     ],
+     "delta": 42,
+     "over": []
+    },
+    {
+     "cell": "B3",
+     "box": [
+      417,
+      88,
+      209,
+      88
+     ],
+     "delta": 27,
+     "over": [
+      "draft 1 #041019",
+      "draft 2 #020f19"
+     ]
+    },
+    {
+     "cell": "A3",
+     "box": [
+      417,
+      0,
+      209,
+      88
+     ],
+     "delta": 15,
+     "over": [
+      "draft 1 #041019"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "kf2",
+   "at": 1.25,
+   "still": true,
+   "score": 84,
+   "overall": 10,
+   "elements": [
+    {
+     "name": "draft 2 #020f19",
+     "box": [
+      427,
+      114,
+      34,
+      34
+     ],
+     "reference": "#9ea4a8",
+     "yours": "#acb0b3",
+     "delta": 31,
+     "colour": 12,
+     "deltaE": 4.7,
+     "shift": [
+      0,
+      2
+     ],
+     "afterShift": 19,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #041019",
+     "box": [
+      564,
+      68,
+      40,
+      35
+     ],
+     "reference": "#a9afb2",
+     "yours": "#b4b7ba",
+     "delta": 28,
+     "colour": 9,
+     "deltaE": 3.3,
+     "shift": [
+      2,
+      2
+     ],
+     "afterShift": 14,
+     "cause": "misplaced: yours sits 2 px left and 2 px above the reference"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "B4",
+     "box": [
+      626,
+      88,
+      209,
+      88
+     ],
+     "delta": 42,
+     "over": []
+    },
+    {
+     "cell": "B3",
+     "box": [
+      417,
+      88,
+      209,
+      88
+     ],
+     "delta": 27,
+     "over": [
+      "draft 1 #041019",
+      "draft 2 #020f19"
+     ]
+    },
+    {
+     "cell": "A3",
+     "box": [
+      417,
+      0,
+      209,
+      88
+     ],
+     "delta": 18,
+     "over": [
+      "draft 1 #041019"
+     ]
+    }
+   ]
+  }
+ ],
+ "runs": 28,
+ "at": "2026-10-24T09:15:58.357Z",
+ "rank": 81,
+ "allPass": false,
+ "rubric": {
+  "pass": 36,
+  "fail": 1,
+  "unsure": 2,
+  "of": 39
+ }
+}

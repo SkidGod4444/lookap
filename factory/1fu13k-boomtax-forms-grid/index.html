@@ -1,0 +1,120 @@
+<!doctype html>
+<!--
+  Boomtax Forms Grid, rebuilt by lookap from the Boomtax homepage.
+  Source: https://www.boomtax.com/  (credit: lookap)
+  Everything is drawn: CSS + inline SVG. Nothing sampled, no stand-ins.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Boomtax Forms Grid</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;overflow:hidden;background:#fafafa}
+#stage{--u:1px;position:relative;width:calc(1252*var(--u));height:calc(650*var(--u));background:#fafafa;overflow:hidden;font-family:'Libre Baskerville',Georgia,serif}
+.stripes{position:absolute;top:0;height:100%;background:repeating-linear-gradient(to right,#ebebeb 0 calc(1*var(--u)),#fbfbfb calc(1*var(--u)) calc(6*var(--u)))}
+.stripes.l{left:0;width:calc(115*var(--u));background-position:calc(5*var(--u)) 0}
+.stripes.r{left:calc(1135*var(--u));width:calc(117*var(--u));background-position:calc(-1*var(--u)) 0}
+.panel{position:absolute;left:calc(115*var(--u));width:calc(1020*var(--u));top:0;height:100%;background:#fbfbfb}
+h1{position:absolute;left:0;right:0;top:calc(72*var(--u));margin:0;text-align:center;font-weight:400;color:#0d1526;
+  font-size:calc(var(--fs)*var(--u));line-height:calc(46*var(--u));letter-spacing:calc(var(--ls)*var(--u));--fs:45;--ls:-1.5}
+/* glow: peak #d4f6bc right under the puck (y≈400), #ddf4cc at 445, #eaf5e6 at 540, gone by 630 (col 626, 0.8s) */
+.glow{position:absolute;inset:0;background:
+  radial-gradient(calc(110*var(--u)) calc(95*var(--u)) at calc(628*var(--u)) calc(375*var(--u)),rgba(190,240,150,.75) 0%,rgba(200,242,170,.4) 55%,rgba(220,246,205,0) 100%),
+  radial-gradient(calc(230*var(--u)) calc(250*var(--u)) at calc(620*var(--u)) calc(400*var(--u)),rgba(205,243,185,.9) 0%,rgba(214,244,200,.7) 30%,rgba(228,245,222,.45) 60%,rgba(240,249,238,.2) 85%,rgba(251,251,251,0) 100%)}
+/* edge fade on all four sides: ellipse around the glow, plus top and bottom ramps, so outer cards are ghosts */
+.fade{position:absolute;inset:0;--m:radial-gradient(calc(500*var(--u)) calc(300*var(--u)) at calc(626*var(--u)) calc(440*var(--u)),#000 0%,#000 25%,rgba(0,0,0,.5) 55%,rgba(0,0,0,.14) 80%,transparent 100%),linear-gradient(to bottom,transparent calc(205*var(--u)),#000 calc(330*var(--u)),#000 calc(545*var(--u)),rgba(0,0,0,.2) calc(650*var(--u)));
+  -webkit-mask-image:var(--m);-webkit-mask-composite:source-in;mask-image:var(--m);mask-composite:intersect}
+/* wash over cards and gaps alike (multiply): row 470 holds #d9f3cc from x 550 to 700, #ecfaea at 770; col 626 #e6f5e5 at 530, #f7fbf7 at 610 */
+.wash{position:absolute;inset:0;mix-blend-mode:multiply;pointer-events:none;background:
+  radial-gradient(calc(105*var(--u)) calc(62*var(--u)) at calc(626*var(--u)) calc(352*var(--u)),rgb(196,240,150) 0%,rgba(214,245,180,.7) 45%,rgba(255,255,255,0) 100%),
+  radial-gradient(calc(230*var(--u)) calc(240*var(--u)) at calc(622*var(--u)) calc(450*var(--u)),rgb(238,250,230) 0%,rgb(240,250,234) 40%,rgb(245,251,241) 70%,rgb(251,253,250) 88%,rgba(255,255,255,0) 100%)}
+.lit{position:absolute;inset:0;--lm:radial-gradient(calc(165*var(--u)) calc(175*var(--u)) at calc(622*var(--u)) calc(385*var(--u)),#000 0%,rgba(0,0,0,.85) 35%,rgba(0,0,0,.35) 68%,transparent 100%);
+  -webkit-mask-image:var(--lm);mask-image:var(--lm)}
+.drift{position:absolute;left:0;top:0}
+/* the field plane: 2:1 isometric. local (u,v) -> screen (.707(u+v), .354(v-u)) */
+.field{position:absolute;left:calc(604*var(--u));top:calc(362*var(--u));width:0;height:0;transform-origin:0 0;transform:scaleY(.5) rotate(-45deg)}
+.card{position:absolute;width:calc(158*var(--u));height:calc(74*var(--u));margin:calc(-37*var(--u)) 0 0 calc(-79*var(--u));box-sizing:border-box;
+  border-radius:calc(7*var(--u));background:#fff;border:calc(1.2*var(--u)) solid #dcdcdf;text-align:center;padding-top:calc(9*var(--u));
+  /* side slab ≈6px on screen (local 8.5 along -u+v), grey #d4d4d7 → #bcbcc0 with a darker foot, then a soft drop shadow */
+  box-shadow:calc(-1.7*var(--u)) calc(1.7*var(--u)) 0 #d6d6d9,calc(-3.4*var(--u)) calc(3.4*var(--u)) 0 #cfcfd2,calc(-5.1*var(--u)) calc(5.1*var(--u)) 0 #c8c8cb,calc(-6.8*var(--u)) calc(6.8*var(--u)) 0 #c0c0c4,calc(-8.5*var(--u)) calc(8.5*var(--u)) 0 #aeaeb2,calc(-14*var(--u)) calc(14*var(--u)) calc(12*var(--u)) rgba(30,40,50,.12)}
+.card b{display:block;font-weight:400;color:#3a9dc2;font-size:calc(15.5*var(--u));line-height:calc(21*var(--u));white-space:nowrap;letter-spacing:calc(-.3*var(--u))}
+.card i{display:block;font-style:normal;color:#737b82;font-size:calc(10.5*var(--u));line-height:calc(13*var(--u));padding:calc(2*var(--u)) calc(22*var(--u)) 0}
+.lit .card{background:#d4f7bc;border:calc(1.8*var(--u)) solid #84e055;
+  box-shadow:calc(-1.7*var(--u)) calc(1.7*var(--u)) 0 #b2f080,calc(-3.4*var(--u)) calc(3.4*var(--u)) 0 #a8ec70,calc(-5.1*var(--u)) calc(5.1*var(--u)) 0 #a0e866,calc(-6.8*var(--u)) calc(6.8*var(--u)) 0 #96e25c,calc(-8.5*var(--u)) calc(8.5*var(--u)) 0 #84d84a,calc(-12*var(--u)) calc(12*var(--u)) calc(18*var(--u)) rgba(110,220,70,.55)}
+.lit .card b{color:#2f9e86}.lit .card i{color:#6c8a6a}
+.puck{position:absolute;left:calc(558*var(--u));top:calc(264*var(--u));width:calc(140*var(--u));height:calc(100*var(--u));overflow:visible}
+/* timeline (T=3.17s): the field never stops: linear (41.8,20.6) px/s down-right. 0–0.55 it replays the 2.25–2.8 stretch (0.25 = 2.5);
+   at 0.55 it jumps back up-left (the clip's splice), then 0.55–2.5 glides linearly, easing out 2.5–2.9 (+5px) and creeping to 3.17. 1099-MISC: (527,455) at 0.8, (598,490) at 2.5.
+   Puck: rests low to 0.6, rises 27px linearly to 2.9, rests. Without ?demo the page holds the 0.25s state. */
+.drift{transform:translate(calc(79*var(--u)),calc(38.2*var(--u)))}
+.demo .drift{animation:drift 3.17s linear infinite}
+.demo .puck{animation:rise 3.17s linear infinite}
+@keyframes drift{0%{transform:translate(calc(68.5*var(--u)),calc(33*var(--u)))}
+  17.35%{transform:translate(calc(91.5*var(--u)),calc(44.3*var(--u)))}
+  17.36%{transform:translate(calc(-2.5*var(--u)),calc(-2*var(--u)))}
+  78.86%{transform:translate(calc(79*var(--u)),calc(38.2*var(--u)));animation-timing-function:ease-out}
+  91.5%{transform:translate(calc(84.5*var(--u)),calc(41*var(--u)))}
+  100%{transform:translate(calc(86.5*var(--u)),calc(42*var(--u)))}}
+@keyframes rise{0%,18.9%{transform:translateY(0)}91.5%,100%{transform:translateY(calc(-27*var(--u)))}}
+@media (prefers-reduced-motion:reduce){.demo .drift,.demo .puck{animation:none}}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="stripes l"></div><div class="panel"></div><div class="stripes r"></div>
+  <h1>Covering All the<br>Essential Forms.</h1>
+  <div class="fade">
+    <div class="glow"></div>
+    <div class="base"><div class="drift"><div class="field"></div></div></div>
+    <div class="lit"><div class="drift"><div class="field"></div></div></div>
+    <div class="wash"></div>
+  </div>
+  <svg class="puck" viewBox="0 0 140 100" aria-hidden="true">
+    <defs>
+      <linearGradient id="wall" x1="0" x2="1"><stop offset="0" stop-color="#e4e4e6"/><stop offset=".25" stop-color="#f7f7f8"/><stop offset=".75" stop-color="#f7f7f8"/><stop offset="1" stop-color="#e0e0e2"/></linearGradient>
+      <linearGradient id="capwall" x1="0" x2="1"><stop offset="0" stop-color="#cfcfd3"/><stop offset=".5" stop-color="#e2e2e5"/><stop offset="1" stop-color="#cbcbcf"/></linearGradient>
+      <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0096f8"/><stop offset=".5" stop-color="#08a2ea"/><stop offset="1" stop-color="#0196f5"/></linearGradient>
+    </defs>
+    <path d="M5 40v14a65 34 0 0 0 130 0V40z" fill="url(#wall)" stroke="#c2c2c5" stroke-width="1"/>
+    <ellipse cx="70" cy="40" rx="65" ry="34" fill="#fcfbfb" stroke="#c8c8cb" stroke-width="1"/>
+    <path d="M37.5 30v12a32.5 17 0 0 0 65 0V30z" fill="url(#capwall)" stroke="#c0c0c4" stroke-width=".7"/>
+    <ellipse cx="70" cy="30" rx="32.5" ry="17" fill="url(#cap)" stroke="#1f7fc4" stroke-width=".8"/>
+    <ellipse cx="70" cy="30.5" rx="23" ry="12" fill="none" stroke="#9ff0b4" stroke-width="1.4"/>
+    <path d="M64.5 36.4l6.6 .4 2.1-13" fill="none" stroke="#33e05a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
+<script>
+(function(){
+  if(/[?&]demo=1/.test(location.search))document.getElementById('stage').classList.add('demo');
+  var F={
+    'W-2':'Wage and Tax Statement','1094-B/1095-B':'Self Funded or Insurer Coverage','1099-HC':'Massachusetts Health Coverage',
+    '1099-C':'Cancellation of Debt','1099-DIV':'Dividends and Distributions','California Pay Data':'Sate Compliance Reporting',
+    '1099-MISC':'Miscellaneous Income','1094-C/1095-C':'Employer-Provided Health Insurance','1099-NEC':'Nonemployee Compensation',
+    '1099-K':'Payment Card Transactions','1099-R':'Retirement Distributions'
+  };
+  // lattice read from the clip at 0.8s: step A=(84,42) down-right (local v 119), step C=(-85,90) down-left (local u -187, v 67).
+  // card (0,0) = 1099-C under the puck at start (604,362). Rows repeat every 3, shifted one card per repeat.
+  var R=[['1099-C','1094-B/1095-B','1099-HC','W-2'],['1099-MISC','1094-C/1095-C','1099-DIV','California Pay Data'],['1099-HC','1099-NEC','1099-K','1099-R']];
+  function L(i,j){var q=Math.floor(j/3),r=j-3*q;return R[r][(((i-q)%4)+4)%4]}
+  // the arrangement the clip shows at 0.25s and 2.5s (1099-MISC at card (0,1))
+  function G(i,j){return j==0?L(i+1,j):j==-1?L(i,j):L(i-1,j)}
+  function build(lab){
+    var cards=[];
+    for(var j=-5;j<=6;j++)for(var i=-7;i<=7;i++){
+      var u=-187*j,v=119*i+67*j,sx=604+.7071*(u+v),sy=362+.3536*(v-u);
+      if(sx<-170||sx>1310||sy<90||sy>720)continue;
+      var k=lab(i,j);
+      cards.push([sy,'<div class="card" style="left:calc('+u+' * var(--u));top:calc('+v+' * var(--u))"><b>'+k+'</b><i>'+F[k]+'</i></div>']);
+    }
+    cards.sort(function(a,b){return a[0]-b[0]});
+    return cards.map(function(c){return c[1]}).join('');
+  }
+  var hm=build(function(i,j){return G(i+1,j)});
+  document.querySelectorAll('.field').forEach(function(el){el.innerHTML=hm});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1430 @@
+{
+ "slug": "at1qnr-boomtax-hero-section",
+ "at": "2026-10-24T10:07:06.761Z",
+ "runs": 23,
+ "html": "factory/at1qnr-boomtax-hero-section/index.html",
+ "pixel": {
+  "score": 84,
+  "stills": 85,
+  "motion": 84,
+  "moments": 7
+ },
+ "animations": 4,
+ "rank": 94,
+ "allPass": false,
+ "elements": [
+  {
+   "name": "check tablet",
+   "box": [
+    810,
+    655,
+    52,
+    80
+   ],
+   "deltaE": 9,
+   "delta": 31,
+   "shift": [
+    -2,
+    -8
+   ],
+   "afterShift": 20,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "headline",
+   "box": [
+    381,
+    95,
+    490,
+    110
+   ],
+   "deltaE": 1.1,
+   "delta": 30,
+   "shift": null,
+   "afterShift": 30,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "nav Log in",
+   "box": [
+    969,
+    10,
+    38,
+    18
+   ],
+   "deltaE": 1.7,
+   "delta": 26,
+   "shift": null,
+   "afterShift": 26,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "nav wordmark Boomtax",
+   "box": [
+    133,
+    6,
+    107,
+    26
+   ],
+   "deltaE": 3.8,
+   "delta": 25,
+   "shift": [
+    -2,
+    -2
+   ],
+   "afterShift": 19,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "primary button",
+   "box": [
+    487,
+    295,
+    149,
+    46
+   ],
+   "deltaE": 2.3,
+   "delta": 19,
+   "shift": null,
+   "afterShift": 19,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "subhead",
+   "box": [
+    425,
+    217,
+    402,
+    42
+   ],
+   "deltaE": 0.5,
+   "delta": 18,
+   "shift": [
+    6,
+    -2
+   ],
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "upload station",
+   "box": [
+    427,
+    745,
+    117,
+    108
+   ],
+   "deltaE": 2,
+   "delta": 18,
+   "shift": null,
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Boomtax machine",
+   "box": [
+    527,
+    615,
+    170,
+    152
+   ],
+   "deltaE": 3.9,
+   "delta": 17,
+   "shift": null,
+   "afterShift": 17,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "secondary button",
+   "box": [
+    648,
+    295,
+    118,
+    46
+   ],
+   "deltaE": 1.2,
+   "delta": 16,
+   "shift": [
+    0,
+    2
+   ],
+   "afterShift": 15,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "mail station",
+   "box": [
+    691,
+    508,
+    118,
+    108
+   ],
+   "deltaE": 2,
+   "delta": 16,
+   "shift": [
+    -2,
+    -4
+   ],
+   "afterShift": 14,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "centre column card",
+   "box": [
+    116,
+    0,
+    1020,
+    422
+   ],
+   "deltaE": 0.2,
+   "delta": 14,
+   "shift": null,
+   "afterShift": 14,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "floating green sheet tile",
+   "box": [
+    541,
+    540,
+    57,
+    34
+   ],
+   "deltaE": 4.2,
+   "delta": 14,
+   "shift": [
+    0,
+    -2
+   ],
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "paper stack",
+   "box": [
+    313,
+    645,
+    57,
+    62
+   ],
+   "deltaE": 3.4,
+   "delta": 14,
+   "shift": [
+    -2,
+    -2
+   ],
+   "afterShift": 12,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "nav Book a Demo",
+   "box": [
+    1028,
+    0,
+    108,
+    42
+   ],
+   "deltaE": 0.9,
+   "delta": 13,
+   "shift": null,
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "wire paths",
+   "box": [
+    430,
+    590,
+    330,
+    300
+   ],
+   "deltaE": 1.5,
+   "delta": 13,
+   "shift": null,
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Excel logo",
+   "box": [
+    502,
+    442,
+    37,
+    32
+   ],
+   "deltaE": 4.7,
+   "delta": 12,
+   "shift": null,
+   "afterShift": 12,
+   "read": "matches"
+  },
+  {
+   "name": "floating grey file tile",
+   "box": [
+    186,
+    545,
+    56,
+    35
+   ],
+   "deltaE": 4.8,
+   "delta": 12,
+   "shift": null,
+   "afterShift": 12,
+   "read": "matches"
+  },
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1252,
+    894
+   ],
+   "deltaE": 0,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "xero logo",
+   "box": [
+    699,
+    446,
+    65,
+    24
+   ],
+   "deltaE": 1.8,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "nav links",
+   "box": [
+    256,
+    10,
+    257,
+    18
+   ],
+   "deltaE": 1,
+   "delta": 9,
+   "shift": null,
+   "afterShift": 9,
+   "read": "matches"
+  },
+  {
+   "name": "zoho logo",
+   "box": [
+    903,
+    442,
+    80,
+    34
+   ],
+   "deltaE": 1.3,
+   "delta": 9,
+   "shift": [
+    -2,
+    0
+   ],
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "isometric pipeline illustration",
+   "box": [
+    120,
+    494,
+    1016,
+    400
+   ],
+   "deltaE": 0.5,
+   "delta": 9,
+   "shift": null,
+   "afterShift": 9,
+   "read": "matches"
+  },
+  {
+   "name": "FreshBooks logo",
+   "box": [
+    38,
+    445,
+    120,
+    28
+   ],
+   "deltaE": 1.6,
+   "delta": 8,
+   "shift": null,
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "quickbooks logo",
+   "box": [
+    243,
+    445,
+    130,
+    28
+   ],
+   "deltaE": 1.1,
+   "delta": 8,
+   "shift": null,
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "nav bottom rule",
+   "box": [
+    116,
+    42,
+    1020,
+    1
+   ],
+   "deltaE": 2.5,
+   "delta": 7,
+   "shift": null,
+   "afterShift": 7,
+   "read": "matches"
+  },
+  {
+   "name": "side gutter stripes",
+   "box": [
+    0,
+    0,
+    116,
+    370
+   ],
+   "deltaE": 1.2,
+   "delta": 5,
+   "shift": null,
+   "afterShift": 5,
+   "read": "matches"
+  },
+  {
+   "name": "partner logo strip",
+   "box": [
+    0,
+    422,
+    1252,
+    72
+   ],
+   "deltaE": 0.1,
+   "delta": 5,
+   "shift": null,
+   "afterShift": 5,
+   "read": "matches"
+  },
+  {
+   "name": "PDF file icon",
+   "box": [
+    1139,
+    440,
+    30,
+    36
+   ],
+   "deltaE": 0.4,
+   "delta": 4,
+   "shift": null,
+   "afterShift": 4,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "the render changes where the clip changes",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "0.5s",
+    "clip": 2.6,
+    "render": 1.4,
+    "read": "both move"
+   },
+   {
+    "from": "0.5s",
+    "to": "1.05s",
+    "clip": 3.4,
+    "render": 1,
+    "read": "both move"
+   },
+   {
+    "from": "1.05s",
+    "to": "kf1",
+    "clip": 1.8,
+    "render": 1,
+    "read": "both move"
+   },
+   {
+    "from": "kf1",
+    "to": "2.4s",
+    "clip": 1,
+    "render": 0.8,
+    "read": "both move"
+   },
+   {
+    "from": "2.4s",
+    "to": "2.95s",
+    "clip": 2.1,
+    "render": 1.4,
+    "read": "both move"
+   },
+   {
+    "from": "2.95s",
+    "to": "kf2",
+    "clip": 2.7,
+    "render": 1.5,
+    "read": "both move"
+   }
+  ],
+  "trajectories": [
+   {
+    "element": "#c9cdd0",
+    "box": [
+     527,
+     673,
+     81,
+     91
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": -2,
+      "delta": 16
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": -2,
+      "delta": 15
+     },
+     {
+      "at": 1.05,
+      "dx": 2,
+      "dy": 0,
+      "delta": 15
+     },
+     {
+      "at": 1.9,
+      "dx": 0,
+      "dy": -2,
+      "delta": 16
+     },
+     {
+      "at": 2.4,
+      "dx": 0,
+      "dy": -2,
+      "delta": 16
+     },
+     {
+      "at": 2.95,
+      "dx": 2,
+      "dy": 0,
+      "delta": 15
+     },
+     {
+      "at": 3.45,
+      "dx": 0,
+      "dy": -2,
+      "delta": 15
+     }
+    ],
+    "read": "in step"
+   },
+   {
+    "element": "#c1c1c2",
+    "box": [
+     199,
+     494,
+     197,
+     113
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 0.5,
+      "dx": -4,
+      "dy": -2,
+      "delta": 11
+     },
+     {
+      "at": 1.05,
+      "dx": -2,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 1.9,
+      "dx": -6,
+      "dy": -2,
+      "delta": 12
+     },
+     {
+      "at": 2.4,
+      "dx": -6,
+      "dy": -2,
+      "delta": 12
+     },
+     {
+      "at": 2.95,
+      "dx": -4,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 3.45,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   }
+  ]
+ },
+ "scale": {
+  "ok": true,
+  "changed": 3.9,
+  "read": "scales: the half-size render matches the full one (difference 3.9)"
+ },
+ "rubric": {
+  "file": "factory/at1qnr-boomtax-hero-section/rubric.json",
+  "total": 45,
+  "counted": 45,
+  "pass": 43,
+  "fail": 2,
+  "unsure": 0,
+  "unjudged": 0,
+  "passRate": 96,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "style",
+    "element": "page background",
+    "check": "The page ground is a flat off-white near #fafafa, not pure white and not tinted",
+    "box": [
+     0,
+     0,
+     1252,
+     894
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild ground is the same flat off-white as the clip. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "present",
+    "element": "side gutter stripes",
+    "check": "The left gutter (x 0–116, y 0–370) is filled with fine vertical grey hairline stripes a few px apart, the same as the right gutter x 1136–1252",
+    "box": [
+     0,
+     0,
+     116,
+     370
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild gutter has fine vertical grey hairline stripes a few px apart, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "style",
+    "element": "side gutter stripes",
+    "check": "The stripes are thin 1px vertical lines, not a solid grey band and not a dot or diagonal pattern",
+    "box": [
+     1136,
+     0,
+     116,
+     370
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Stripes are thin 1px vertical lines in both, similar spacing and tone. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "position",
+    "element": "centre column card",
+    "check": "A light-bordered centre column spans x≈116 to 1136 and ends at y≈422",
+    "box": [
+     116,
+     0,
+     1020,
+     422
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Centre column border spans x≈116–1136 and ends near y≈422 in both. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "text",
+    "element": "nav wordmark Boomtax",
+    "check": "Top-left wordmark reads \"Boomtax\" in a dark serif, starting at x≈133",
+    "box": [
+     133,
+     6,
+     107,
+     26
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild wordmark reads Boomtax in a dark serif at the same position and size. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "text",
+    "element": "nav links",
+    "check": "Nav links read \"Features\", \"Pricing\", \"Our Story\", \"Contact\" left to right in grey sans",
+    "box": [
+     256,
+     8,
+     260,
+     22
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild nav reads Features, Pricing, Our Story, Contact in grey sans, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "text",
+    "element": "nav Log in",
+    "check": "Right of the nav reads \"Log in\" then \"Book a Demo\", with a vertical hairline divider between them at x≈1028",
+    "box": [
+     960,
+     0,
+     176,
+     42
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Log in and Book a Demo with a vertical hairline divider between them, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "present",
+    "element": "nav bottom rule",
+    "check": "A hairline grey rule runs under the nav at y≈42",
+    "box": [
+     116,
+     36,
+     1020,
+     12
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A faint hairline rule appears under the nav in both. [votes: yes/unsure/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "text",
+    "element": "headline",
+    "check": "Headline reads exactly \"E-File Your Tax\" on line 1 and \"Forms in Seconds.\" on line 2",
+    "box": [
+     381,
+     95,
+     490,
+     110
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild reads E-File Your Tax / Forms in Seconds. on two lines, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "style",
+    "element": "headline",
+    "check": "Headline is a high-contrast serif in near-black (#04131a), about 58px cap-to-descender, not a sans",
+    "box": [
+     381,
+     95,
+     490,
+     110
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild headline is the same near-black high-contrast serif at the same size. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "position",
+    "element": "headline",
+    "check": "Headline is horizontally centred on x≈626, spanning x≈381–871, line 1 top at y≈100",
+    "box": [
+     381,
+     95,
+     490,
+     110
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Headline is centred and at the same x span and y as the clip. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "text",
+    "element": "subhead",
+    "check": "Subhead reads \"Upload your data and let Boomtax handle everything from\" / \"filing to mailing with total accuracy and compliance.\" on two centred lines",
+    "box": [
+     425,
+     217,
+     402,
+     42
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild subhead has the same two centred lines of text as the clip. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "style",
+    "element": "subhead",
+    "check": "Subhead is mid-grey sans about 16px, clearly lighter than the headline",
+    "box": [
+     425,
+     217,
+     402,
+     42
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Subhead is the same mid-grey sans at the same size, lighter than the headline. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "style",
+    "element": "primary button",
+    "check": "Primary button is solid bright blue #0196fb with square (≤2px) corners, about 149x46px",
+    "box": [
+     487,
+     295,
+     149,
+     46
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild button is the same solid bright blue with square corners and the same size. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "text",
+    "element": "primary button",
+    "check": "Primary button reads \"Try Boomtax Free\" in white medium sans",
+    "box": [
+     487,
+     295,
+     149,
+     46
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild button reads Try Boomtax Free in white medium sans, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "style",
+    "element": "secondary button",
+    "check": "Secondary button is white with a 1px light grey border, same height as the primary, about 10px to its right",
+    "box": [
+     648,
+     295,
+     118,
+     46
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild secondary button is white with a light grey 1px border, same height and gap as the clip. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "text",
+    "element": "secondary button",
+    "check": "Secondary button reads \"Book a Demo\" in dark sans",
+    "box": [
+     648,
+     295,
+     118,
+     46
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild reads Book a Demo in dark sans, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "position",
+    "element": "partner logo strip",
+    "check": "A full-width logo strip sits at y≈422–494, split into six cells by vertical hairlines at x≈203, 414, 625, 836, 1047",
+    "box": [
+     0,
+     422,
+     1252,
+     72
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild logo strip spans y≈422–494 with five vertical dividers at the same x positions as the clip. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "text",
+    "element": "partner logo strip",
+    "check": "Logos left to right are FreshBooks, intuit quickbooks, an Excel mark, xero, zoho, a PDF file icon",
+    "box": [
+     0,
+     422,
+     1252,
+     72
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows FreshBooks, intuit quickbooks, Excel, xero, zoho, PDF icon in the same order. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "style",
+    "element": "partner logo strip",
+    "check": "All partner logos are light grey monochrome, none in brand colour",
+    "box": [
+     0,
+     422,
+     1252,
+     72
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "All rebuild logos are light grey monochrome like the clip's, with none in brand colour. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "imagery",
+    "element": "FreshBooks logo",
+    "check": "Logos are drawn as simple grey vector marks with recognisable silhouettes (F badge + wordmark, qb circle + wordmark, X grid, xero lowercase, zoho linked boxes, folded PDF page)",
+    "box": [
+     0,
+     422,
+     1252,
+     72
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "Logo silhouettes match but the rebuild's marks and wordmarks are visibly paler grey than the clip's. [votes: no/yes/no]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "present",
+    "element": "isometric pipeline illustration",
+    "check": "Below the logo strip an isometric illustration fills y≈494–894 on the same vertical-stripe ground",
+    "box": [
+     120,
+     494,
+     1016,
+     400
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Isometric illustration fills the area below the logo strip on striped ground in both. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "imagery",
+    "element": "isometric pipeline illustration",
+    "check": "The illustration is flat iso line art: white extruded blocks with thin grey outlines and soft grey side faces, no photographic texture",
+    "box": [
+     120,
+     494,
+     1016,
+     400
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both are flat white iso blocks with thin grey outlines and soft grey sides, no texture. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "position",
+    "element": "input conveyor with file tiles",
+    "check": "The input belt runs diagonally from the top-left (x≈195, y≈494) down-right into the machine's left face (x≈530, y≈680)",
+    "box": [
+     195,
+     494,
+     340,
+     190
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Input belt runs diagonally from top-left into the machine's left face at the same angle and position. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "style",
+    "element": "input conveyor with file tiles",
+    "check": "Belt tiles are white rounded iso squares, each carrying one coloured file icon: grey, red PDF, blue DOC, black, green XLS, blue",
+    "box": [
+     195,
+     494,
+     340,
+     190
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White rounded iso tiles with grey, red PDF, blue DOC, black, green XLS icons in the same order. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "present",
+    "element": "input conveyor with file tiles",
+    "check": "About six file tiles are visible on the input belt, evenly spaced about 55px apart in x",
+    "box": [
+     195,
+     494,
+     340,
+     190
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "About six tiles are visible on the belt, spaced about as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "position",
+    "element": "Boomtax machine",
+    "check": "The machine block sits at x≈527–697, y≈615–767, where the two belts meet",
+    "box": [
+     527,
+     615,
+     170,
+     152
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Machine sits at the same x≈263–345 / y position in the frame as the clip. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "style",
+    "element": "Boomtax machine",
+    "check": "Machine top carries a black rounded-square badge with a white lowercase \"b\", green glowing arrow marks above and below it, and a small green dot at the right corner",
+    "box": [
+     560,
+     630,
+     130,
+     60
+    ],
+    "at": 2.95,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "Rebuild's green arrows are crisp solid arrows, where the clip's are small soft glowing marks. [votes: no/no/no]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "style",
+    "element": "Boomtax machine",
+    "check": "The machine mouth on its right face glows lime/yellow-green with a soft blurred halo spilling outside the opening, not a hard-edged green rectangle",
+    "box": [
+     615,
+     685,
+     80,
+     75
+    ],
+    "at": 2.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild's mouth glows lime with a soft halo spilling outside the opening, though paler than the clip. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "style",
+    "element": "output conveyor with check tiles",
+    "check": "Output belt tiles are white iso squares with a blue form icon and a green check mark",
+    "box": [
+     620,
+     715,
+     370,
+     179
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White iso tiles with a blue form icon and a green check on the output belt, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "position",
+    "element": "output conveyor with check tiles",
+    "check": "The output belt leaves the machine mouth and runs down-right off the bottom edge near x≈990, y≈894",
+    "box": [
+     620,
+     715,
+     370,
+     179
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Output belt leaves the mouth and runs down-right off the bottom edge near x≈990 in both. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "present",
+    "element": "mail station",
+    "check": "A white iso base with a grey envelope and an upright blue screen sits at x≈691–809, y≈508–616",
+    "box": [
+     691,
+     508,
+     118,
+     108
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White base with a grey envelope and an upright blue screen is present at the same spot. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "present",
+    "element": "check tablet",
+    "check": "A blue upright iso tablet with a green check floats at x≈810–862, y≈655–735, with a dotted grey line under it",
+    "box": [
+     805,
+     650,
+     60,
+     130
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Blue upright tablet with a green check and a dotted line beneath is present. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "present",
+    "element": "upload station",
+    "check": "A white iso base with a yellow lightning bolt and an upright blue round screen sits at x≈427–544, y≈745–853",
+    "box": [
+     427,
+     745,
+     117,
+     108
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White base with a yellow bolt and an upright blue 100% screen is present. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "present",
+    "element": "paper stack",
+    "check": "A stack of white paper sheets with a blue icon on top sits at x≈313–370, y≈645–707",
+    "box": [
+     313,
+     645,
+     57,
+     62
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White paper stack with a blue ZIP icon on top is present at the same spot. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "present",
+    "element": "floating grey file tile",
+    "check": "A loose grey file tile floats at x≈186–242, y≈545–580, and a green sheet tile at x≈541–598, y≈540–574, off the belt",
+    "box": [
+     180,
+     535,
+     425,
+     50
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Loose grey HTM tile at the left and green sheet tile at the right float off the belt. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "style",
+    "element": "wire paths",
+    "check": "Thin grey 1px zigzag wire lines link the machine to the mail station and the upload station",
+    "box": [
+     430,
+     590,
+     330,
+     300
+    ],
+    "at": 1.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Thin grey zigzag wires link the machine to the mail and upload stations in both. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "motion",
+    "element": "input conveyor with file tiles",
+    "check": "The red PDF tile moves down-right along the belt, from about (370,560) to about (432,594): about 62px right and 34px down",
+    "box": [
+     300,
+     500,
+     200,
+     120
+    ],
+    "at": 1.9,
+    "then": 3.45,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild's PDF tile moves about 170px right and 85px down in the 2.75x crop, matching the clip's 173/82. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "motion",
+    "element": "input conveyor with file tiles",
+    "check": "The belt barely advances between 1.9s and 2.4s (under 10px), then moves clearly between 2.4s and 2.95s (about 30px in x)",
+    "box": [
+     195,
+     494,
+     340,
+     190
+    ],
+    "at": 1.9,
+    "then": 2.95,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Belt advances in the same down-right direction by a similar distance (about 49px vs 42px in x) between 1.9s and 2.95s. [votes: yes/yes/unsure]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c39.png"
+   },
+   {
+    "id": "c40",
+    "axis": "motion",
+    "element": "output conveyor with check tiles",
+    "check": "Output check tiles move down-right in step with the input belt, the same direction and a similar distance",
+    "box": [
+     620,
+     715,
+     370,
+     179
+    ],
+    "at": 2.4,
+    "then": 3.45,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Output check tiles shift down-right slightly between 2.4s and 3.45s in both, with similar distance. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c40.png"
+   },
+   {
+    "id": "c41",
+    "axis": "motion",
+    "element": "Boomtax machine",
+    "check": "The tile in the machine mouth shows green inside the glow, and blue check tiles appear beyond it as the belt advances",
+    "box": [
+     615,
+     685,
+     120,
+     90
+    ],
+    "at": 2.4,
+    "then": 2.95,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows a green tile inside the yellow-green glow at the mouth and blue check tiles on the belt beyond it, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c41.png"
+   },
+   {
+    "id": "c42",
+    "axis": "motion",
+    "element": "headline",
+    "check": "Headline, subhead, buttons, nav and logo strip do not move or change",
+    "box": [
+     0,
+     0,
+     1252,
+     494
+    ],
+    "at": 0.5,
+    "then": 3.45,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Headline, subhead, buttons, nav and logo strip are identical between 0.5s and 3.45s in the rebuild, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c42.png"
+   },
+   {
+    "id": "c43",
+    "axis": "motion",
+    "element": "mail station",
+    "check": "The mail station, check tablet, upload station, paper stack, floating tiles and machine body stay in place",
+    "box": [
+     180,
+     500,
+     700,
+     394
+    ],
+    "at": 0.5,
+    "then": 3.45,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Mail station, tablet, upload station, floating tiles and machine body sit at the same positions at both times in the rebuild. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c43.png"
+   },
+   {
+    "id": "c44",
+    "axis": "motion",
+    "element": "input conveyor with file tiles",
+    "check": "Tiles glide smoothly with eased speed changes, never jump a slot in a single frame",
+    "box": [
+     300,
+     500,
+     200,
+     120
+    ],
+    "at": 2.4,
+    "then": 2.95,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Tiles advance about one slot between 2.4s and 2.95s in both clip and rebuild, with no single-frame jumps visible. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c44.png"
+   },
+   {
+    "id": "c45",
+    "axis": "motion",
+    "element": "input conveyor with file tiles",
+    "check": "New file tiles keep entering from the top-left edge, so the belt is never empty during the clip",
+    "box": [
+     195,
+     494,
+     200,
+     80
+    ],
+    "at": 0.5,
+    "then": 3.45,
+    "policy": null,
+    "pass": "yes",
+    "seen": "New tiles (XLS, ZIP) appear at the top-left of the belt by 3.45s in the rebuild, so the belt is never empty, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/at1qnr-boomtax-hero-section/judge/c45.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 0.648,
+  "calls": 9,
+  "images": "factory/at1qnr-boomtax-hero-section/judge",
+  "votes": 3,
+  "spread": [
+   43,
+   43,
+   42
+  ]
+ }
+}

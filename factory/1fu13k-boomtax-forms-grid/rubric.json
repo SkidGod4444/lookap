@@ -1,0 +1,901 @@
+{
+ "slug": "1fu13k-boomtax-forms-grid",
+ "frame": {
+  "w": 1252,
+  "h": 650
+ },
+ "at": "2026-10-24T08:30:45.700Z",
+ "model": "opus",
+ "costUsd": 0.721,
+ "summary": "A light features section on an off-white #fafafa page. A central white panel runs from about x=115 to x=1135; outside it, both side margins (x 0–115 and 1135–1252) are filled with fine, faint grey vertical pinstripes. At the top of the panel sits a centred two-line serif heading in near-black navy, \"Covering All the / Essential Forms.\" (about 48 px type, lines at y≈70–118 and 117–163, centred on x≈626). Below it, from y≈212 to the bottom edge, an isometric field fills the panel: dozens of thin white form-card slabs (about 150×80 px, 3D with a light grey side edge and soft shadow). Each card has a teal-blue serif form code (\"1099-MISC\", \"W-2\", \"1094-C/1095-C\", \"California Pay Data\", …) and two lines of small grey serif subtitle. The cards are tilted on a diamond grid and fade into the background towards every edge of the field. Centred at x≈626, y≈300 a white cylindrical puck floats over the grid, with a grey side wall and a raised blue disc on top carrying a thin pale-green ring and a green check mark. A soft green radial glow spreads under and below the puck (about 440–820 × 300–630). The six or so cards inside it are tinted mint green with bright green rims, as if lit from the puck. Motion: the card field drifts slowly and continuously along the isometric diagonal toward the lower right, about 70 px right and 35 px down per loop. Cards entering the glow turn green and cards leaving it turn white, because the glow is fixed to the frame. At the same time the puck rises slowly by about 25 px (its lower edge in column 626 goes from y≈311 at 0.6 s to y≈284 at 2.9 s). The heading, the pinstripes and the glow position never move. The loop restarts at about 0.5–0.65 s: the grid and the puck jump back to their start. In the source this splice shows as a brief blend or wipe, so a seamless loop is the target. All corners are softly rounded (cards about 6 px, puck fully circular).",
+ "elements": [
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1252,
+    650
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "off-white #fafafa"
+  },
+  {
+   "name": "left pinstripe margin",
+   "box": [
+    0,
+    0,
+    115,
+    650
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "fine faint grey vertical lines, ~6 px pitch"
+  },
+  {
+   "name": "right pinstripe margin",
+   "box": [
+    1135,
+    0,
+    117,
+    650
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "same pinstripes, mirrored"
+  },
+  {
+   "name": "central panel",
+   "box": [
+    115,
+    0,
+    1020,
+    650
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "near-white panel between the margins; faint seam at y≈212 where the grid region begins"
+  },
+  {
+   "name": "heading line 1",
+   "box": [
+    452,
+    70,
+    350,
+    48
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "\"Covering All the\" serif, near-black navy"
+  },
+  {
+   "name": "heading line 2",
+   "box": [
+    450,
+    117,
+    352,
+    46
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "\"Essential Forms.\" serif, same size"
+  },
+  {
+   "name": "isometric card field",
+   "box": [
+    160,
+    215,
+    930,
+    435
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "diamond grid of 3D white card slabs, fading to background at all edges"
+  },
+  {
+   "name": "form card (typical)",
+   "box": [
+    520,
+    450,
+    155,
+    90
+   ],
+   "kind": "control",
+   "class": "css",
+   "note": "white slab ~6 px thick, grey side edge, soft shadow, rounded ~6 px corners; teal-blue serif code plus two grey subtitle lines"
+  },
+  {
+   "name": "green-lit cards",
+   "box": [
+    440,
+    330,
+    410,
+    270
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "about 6 cards inside the glow tinted mint #d8f4c7 with bright green rims"
+  },
+  {
+   "name": "green glow",
+   "box": [
+    440,
+    300,
+    380,
+    330
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "soft radial green light under/below the puck, no hard edge"
+  },
+  {
+   "name": "puck",
+   "box": [
+    561,
+    268,
+    131,
+    80
+   ],
+   "kind": "icon",
+   "class": "css",
+   "note": "white cylinder with grey side wall, floating above the grid"
+  },
+  {
+   "name": "puck blue cap",
+   "box": [
+    593,
+    277,
+    66,
+    45
+   ],
+   "kind": "icon",
+   "class": "css",
+   "note": "raised blue #1a8be6 disc with a thin pale-green inner ring"
+  },
+  {
+   "name": "check mark",
+   "box": [
+    618,
+    285,
+    18,
+    20
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "green check, drawn as a short stroke and a long stroke"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "page background",
+   "axis": "style",
+   "check": "The page background is a flat off-white close to #fafafa, with no gradient or tint",
+   "box": [
+    0,
+    0,
+    1252,
+    650
+   ],
+   "scope": "frame",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "left pinstripe margin",
+   "axis": "present",
+   "check": "The left margin (x 0–115) is filled with fine, faint grey vertical pinstripes running the full height",
+   "box": [
+    0,
+    0,
+    115,
+    650
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "right pinstripe margin",
+   "axis": "present",
+   "check": "The right margin (x≈1135–1252) carries the same faint vertical pinstripes",
+   "box": [
+    1135,
+    0,
+    117,
+    650
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "pinstripes",
+   "axis": "style",
+   "check": "The pinstripes are thin and low-contrast (light grey on off-white), not bold dark lines",
+   "box": [
+    0,
+    200,
+    115,
+    200
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "heading line 1",
+   "axis": "text",
+   "check": "The first heading line reads exactly \"Covering All the\"",
+   "box": [
+    440,
+    65,
+    375,
+    55
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "heading line 2",
+   "axis": "text",
+   "check": "The second heading line reads exactly \"Essential Forms.\" with the full stop",
+   "box": [
+    440,
+    112,
+    375,
+    55
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "heading",
+   "axis": "style",
+   "check": "The heading is set in a high-contrast serif face (bracketed serifs, like Libre Baskerville), not a sans",
+   "box": [
+    440,
+    65,
+    375,
+    105
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "heading",
+   "axis": "style",
+   "check": "The heading colour is near-black navy (very dark), at full brightness against the background",
+   "box": [
+    440,
+    65,
+    375,
+    105
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "heading",
+   "axis": "position",
+   "check": "The heading is centred horizontally on x≈626, with line 1 spanning about x 452–802 and the cap tops near y≈72",
+   "box": [
+    440,
+    60,
+    375,
+    110
+   ],
+   "scope": "frame",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "heading",
+   "axis": "style",
+   "check": "The heading is about 48 px type with tight leading: the two baselines are about 46 px apart and the lines nearly touch",
+   "box": [
+    440,
+    65,
+    375,
+    105
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "card field",
+   "axis": "present",
+   "check": "Below y≈212 an isometric field of many form cards (at least 25 visible) fills the panel width",
+   "box": [
+    160,
+    215,
+    930,
+    435
+   ],
+   "scope": "frame",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "card field",
+   "axis": "style",
+   "check": "The cards are tilted on a diamond/isometric grid (each card a rotated, skewed parallelogram), not an upright rectangular grid",
+   "box": [
+    160,
+    215,
+    930,
+    435
+   ],
+   "scope": "frame",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "card field",
+   "axis": "style",
+   "check": "The card field fades to the background towards its left, right, top and bottom edges; the outer cards are faint and ghostly",
+   "box": [
+    160,
+    215,
+    930,
+    435
+   ],
+   "scope": "frame",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "form card",
+   "axis": "style",
+   "check": "Each card is a thin 3D slab: a white top face with a visible light-grey side edge about 5–6 px thick and a soft shadow, not a flat outlined rectangle",
+   "box": [
+    430,
+    400,
+    260,
+    150
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "form card",
+   "axis": "style",
+   "check": "The card corners are softly rounded, about 6 px",
+   "box": [
+    430,
+    400,
+    260,
+    150
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "form card",
+   "axis": "style",
+   "check": "The form code on each card is a teal-blue serif (e.g. \"1099-MISC\"), larger than the grey subtitle beneath it",
+   "box": [
+    520,
+    450,
+    160,
+    90
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "form card",
+   "axis": "text",
+   "check": "A central card reads \"1099-MISC\" with the subtitle \"Miscellaneous Income\" on two lines",
+   "box": [
+    520,
+    450,
+    160,
+    90
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "form card",
+   "axis": "text",
+   "check": "A card left of centre reads \"California Pay Data\" with the subtitle \"Sate Compliance Reporting\"",
+   "box": [
+    435,
+    405,
+    160,
+    95
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c19",
+   "element": "form card",
+   "axis": "text",
+   "check": "A card below centre reads \"1094-C/1095-C\" with the subtitle \"Employer-Provided Health Insurance\"",
+   "box": [
+    600,
+    500,
+    170,
+    95
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "form card",
+   "axis": "text",
+   "check": "Card codes elsewhere include \"W-2\" (\"Wage and Tax Statement\"), \"1099-HC\" (\"Massachusetts Health Coverage\"), \"1099-DIV\", \"1099-R\", \"1099-C\", \"1099-K\" and \"1099-NEC\"",
+   "box": [
+    160,
+    215,
+    930,
+    435
+   ],
+   "scope": "frame",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "form card",
+   "axis": "style",
+   "check": "The text on each card is rotated to follow the card's isometric tilt (rising to the upper right), not upright",
+   "box": [
+    520,
+    450,
+    160,
+    90
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "green glow",
+   "axis": "present",
+   "check": "A soft green glow spreads beneath and below the puck, centred about x 626, y 440",
+   "box": [
+    440,
+    300,
+    380,
+    330
+   ],
+   "scope": "frame",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "green glow",
+   "axis": "style",
+   "check": "The glow has no hard edge or ring: it fades smoothly into the white field, and is not a flat green shape",
+   "box": [
+    400,
+    290,
+    460,
+    350
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "green-lit cards",
+   "axis": "style",
+   "check": "About 6 cards inside the glow have a mint-green top face (around #d8f4c7) and bright green rims, while the cards outside it stay white",
+   "box": [
+    440,
+    330,
+    410,
+    270
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c25",
+   "element": "green-lit cards",
+   "axis": "style",
+   "check": "The card directly under the puck is the most saturated green, and the tint weakens with distance from the puck",
+   "box": [
+    440,
+    330,
+    410,
+    270
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c26",
+   "element": "puck",
+   "axis": "present",
+   "check": "A white cylindrical puck floats above the grid, centred on x≈626",
+   "box": [
+    555,
+    260,
+    145,
+    95
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c27",
+   "element": "puck",
+   "axis": "position",
+   "check": "The puck's white body spans about x 561–692 and y 268–348",
+   "box": [
+    555,
+    260,
+    145,
+    95
+   ],
+   "scope": "frame",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "puck",
+   "axis": "style",
+   "check": "The puck reads as a solid 3D cylinder: an elliptical white top and a visible light-grey side wall about 20–25 px tall, not a flat circle with an outline",
+   "box": [
+    555,
+    260,
+    145,
+    95
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c29",
+   "element": "puck blue cap",
+   "axis": "style",
+   "check": "On top of the puck sits a raised, saturated mid-blue (#1a8be6) elliptical disc with its own thin grey side edge",
+   "box": [
+    590,
+    274,
+    72,
+    52
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c30",
+   "element": "puck blue cap",
+   "axis": "style",
+   "check": "The blue cap carries one thin pale-green elliptical ring inset from its edge",
+   "box": [
+    590,
+    274,
+    72,
+    52
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c31",
+   "element": "check mark",
+   "axis": "imagery",
+   "check": "A bright green check mark (short left stroke, long right stroke, lying flat in perspective) sits centred in the blue cap",
+   "box": [
+    608,
+    280,
+    36,
+    30
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c32",
+   "element": "puck",
+   "axis": "style",
+   "check": "The puck sits in front of the cards: it overlaps the top of the green card under it, which it partly hides",
+   "box": [
+    530,
+    300,
+    190,
+    100
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c33",
+   "element": "card field",
+   "axis": "motion",
+   "check": "The whole card field moves between the two moments, while the heading stays put",
+   "box": [
+    160,
+    215,
+    930,
+    435
+   ],
+   "scope": "frame",
+   "at": 1,
+   "then": 1.75
+  },
+  {
+   "id": "c34",
+   "element": "card field",
+   "axis": "motion",
+   "check": "The cards drift along the isometric diagonal toward the lower right (right and down together, about 2 px right for every 1 px down), not straight sideways",
+   "box": [
+    430,
+    400,
+    300,
+    200
+   ],
+   "scope": "crop",
+   "at": 0.8,
+   "then": 2.5
+  },
+  {
+   "id": "c35",
+   "element": "card field",
+   "axis": "motion",
+   "check": "Over about 1.7 s the \"1099-MISC\" card moves from about (527,455) to about (598,490): roughly 70 px right and 35 px down",
+   "box": [
+    440,
+    400,
+    260,
+    160
+   ],
+   "scope": "crop",
+   "at": 0.8,
+   "then": 2.5
+  },
+  {
+   "id": "c36",
+   "element": "card field",
+   "axis": "motion",
+   "check": "The drift is slow and continuous with no pause: the cards' positions differ at each of 1.0 s, 1.75 s and 2.5 s",
+   "box": [
+    430,
+    400,
+    300,
+    200
+   ],
+   "scope": "crop",
+   "at": 1,
+   "then": 2.5
+  },
+  {
+   "id": "c37",
+   "element": "green glow",
+   "axis": "motion",
+   "check": "The green glow stays fixed in the frame as the cards pass under it: cards that enter the glow turn green and cards that leave it turn white",
+   "box": [
+    440,
+    300,
+    380,
+    330
+   ],
+   "scope": "crop",
+   "at": 0.8,
+   "then": 2.5
+  },
+  {
+   "id": "c38",
+   "element": "puck",
+   "axis": "motion",
+   "check": "The puck stays centred on x≈626 and does not move sideways",
+   "box": [
+    555,
+    240,
+    145,
+    115
+   ],
+   "scope": "crop",
+   "at": 0.8,
+   "then": 2.5
+  },
+  {
+   "id": "c39",
+   "element": "puck",
+   "axis": "motion",
+   "check": "The puck rises slowly by about 25 px: its lower edge goes from about y 311 at 0.6 s to about y 284 at 2.9 s, at a steady pace",
+   "box": [
+    555,
+    235,
+    145,
+    120
+   ],
+   "scope": "crop",
+   "at": 0.6,
+   "then": 2.9
+  },
+  {
+   "id": "c40",
+   "element": "heading",
+   "axis": "motion",
+   "check": "The heading does not move or change at all",
+   "box": [
+    440,
+    60,
+    375,
+    110
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": 2.5
+  },
+  {
+   "id": "c41",
+   "element": "pinstripes",
+   "axis": "motion",
+   "check": "The pinstripe margins do not move",
+   "box": [
+    0,
+    0,
+    115,
+    650
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": 2.5
+  },
+  {
+   "id": "c42",
+   "element": "card field",
+   "axis": "motion",
+   "check": "The motion loops: the grid and puck at 2.5 s look nearly the same as at 0.25 s, and at about 0.55 s they jump back to the start (up-left by one drift span, the puck down by about 25 px)",
+   "box": [
+    160,
+    215,
+    930,
+    435
+   ],
+   "scope": "frame",
+   "at": 0.25,
+   "then": 2.5
+  },
+  {
+   "id": "c43",
+   "element": "card field",
+   "axis": "motion",
+   "check": "Between 0.8 s and 2.5 s the cards keep their layout and spacing: they slide as one rigid field and do not rearrange or flip",
+   "box": [
+    160,
+    215,
+    930,
+    435
+   ],
+   "scope": "frame",
+   "at": 0.8,
+   "then": 2.5
+  }
+ ],
+ "imagery": [
+  {
+   "name": "isometric card field",
+   "box": [
+    160,
+    215,
+    930,
+    435
+   ],
+   "class": "css",
+   "what": "diamond grid of white 3D tax-form card slabs with serif labels, fading out at the edges",
+   "at": 0.25
+  },
+  {
+   "name": "green glow",
+   "box": [
+    440,
+    300,
+    380,
+    330
+   ],
+   "class": "css",
+   "what": "soft radial green light tinting the central cards",
+   "at": 0.25
+  },
+  {
+   "name": "puck",
+   "box": [
+    561,
+    268,
+    131,
+    80
+   ],
+   "class": "css",
+   "what": "white cylinder with a raised blue cap and a pale-green ring",
+   "at": 0.25
+  },
+  {
+   "name": "check mark",
+   "box": [
+    618,
+    285,
+    18,
+    20
+   ],
+   "class": "structured",
+   "what": "green check mark on the blue cap, drawn in perspective",
+   "at": 0.25
+  },
+  {
+   "name": "pinstripe margins",
+   "box": [
+    0,
+    0,
+    115,
+    650
+   ],
+   "class": "css",
+   "what": "faint grey vertical pinstripes in both side margins",
+   "at": 0.25
+  }
+ ],
+ "moves": [
+  {
+   "element": "card field",
+   "what": "slides as one rigid field along the isometric diagonal toward the lower right, continuously; cards pick up and lose the green tint as they cross the fixed glow",
+   "from": 0.6,
+   "to": 3.17,
+   "px": 78
+  },
+  {
+   "element": "puck",
+   "what": "rises slowly and steadily, staying centred on x 626",
+   "from": 0.6,
+   "to": 2.9,
+   "px": 27
+  },
+  {
+   "element": "card field + puck",
+   "what": "loop restart: jumps back to the start position (a brief blend or wipe in the source; should be seamless)",
+   "from": 0.5,
+   "to": 0.65,
+   "px": null
+  }
+ ]
+}

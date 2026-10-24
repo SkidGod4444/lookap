@@ -1,0 +1,979 @@
+{
+ "slug": "lm74w8-boomtax-how-it-works",
+ "frame": {
+  "w": 1252,
+  "h": 468
+ },
+ "at": "2026-10-24T08:30:06.146Z",
+ "model": "opus",
+ "costUsd": 0.595,
+ "summary": "A light (#fbfbfb) marketing section, 1252x468. Top band: a thin-bordered header panel (x 116 to 1136, y 0 to 192) holds a large dark serif headline \"We Made Tax / Season Simple.\" on two lines at left (x 165, y 50 to 145, about 46px), and at right a small grey sans paragraph \"Easily manage your 1099s, W-2s, and ACA / forms in one simple, automated workflow.\" (x 808, y 50) above two 41px-tall buttons: a solid bright blue (#0196fc) \"Try Boomtax Free\" with white text and a white, faintly bordered \"Book a Demo\" with dark text. Below a 1px hairline at y 193, three equal step columns split by vertical hairlines at x 414 and 836. Each column holds a monochrome light-grey isometric line illustration with blue/green accents (top, y 200 to 390), then a dark serif title (~18px, y 420) and a grey sans subtitle (~14px, y 443): \"Drag & Drop Your Data / We'll check to make sure there are no errors.\", \"Send to Recipients / We'll print, fold, stuff and mail your recipient copies.\", \"E-File and Done! / We'll e-file your forms in less than 15 minutes.\" Column 1: a tilted document with a signature, a gear tile, and two stacked document cards inside a dashed isometric outline, one with a green check ring and one with a grey check. Column 2: two envelopes wired to a round puck with a pale-green check, wired to a tall stack of tiles and two more tiles with blue document glyphs. Column 3: a grey ring with a blue balloon/tag hanging inside it, wired down and across to a white box with a yellow lightning bolt, surrounded by a green spreadsheet tile, a grey printer tile and a blue tile. The motion runs within the illustrations; the type and layout stay still. Column 1: a cursor arrow drags a 1px light-blue selection marquee with small square corner handles from the document's top-left (27,218) to its bottom-right, growing from roughly 16x16 at 0.13s to 88x124 (27..115 x 218..342) by about 1.4s. The marquee stays, and the cursor moves off to about (153,385) as a hollow arrow by 2s and is gone by 2.5s. Column 2: a short glowing green segment travels along the thin grey wire: envelope to puck around 0.1 to 0.5s, then puck onward to the stack around 2.2 to 2.5s. Column 3: a short blue segment travels along the wire from the balloon down (x≈930) and right to the box's port (≈1065,345) between 0.1s and 2s, and the balloon in the ring sways a few px around 2.5s.",
+ "elements": [
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1252,
+    468
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "flat #fbfbfb"
+  },
+  {
+   "name": "header panel border",
+   "box": [
+    116,
+    0,
+    1020,
+    193
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "1px very light grey vertical hairlines at x 116 and 1136, ending at y 192"
+  },
+  {
+   "name": "headline",
+   "box": [
+    165,
+    50,
+    330,
+    96
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'We Made Tax' / 'Season Simple.' in a dark navy (#06131a) serif, ~46px, two lines"
+  },
+  {
+   "name": "intro paragraph",
+   "box": [
+    808,
+    50,
+    262,
+    36
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "grey sans, ~14px, two lines"
+  },
+  {
+   "name": "Try Boomtax Free button",
+   "box": [
+    808,
+    104,
+    132,
+    41
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "solid #0196fc, square-ish corners, white medium text"
+  },
+  {
+   "name": "Book a Demo button",
+   "box": [
+    949,
+    104,
+    104,
+    41
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "white with a faint light-grey border, dark text"
+  },
+  {
+   "name": "section divider lines",
+   "box": [
+    0,
+    193,
+    1252,
+    275
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "1px horizontal hairline at y 193; vertical hairlines at x 414 and x 836"
+  },
+  {
+   "name": "step 1 illustration",
+   "box": [
+    25,
+    215,
+    350,
+    175
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "isometric grey line art: document with signature, gear tile, two doc cards in a dashed outline with green/grey check rings"
+  },
+  {
+   "name": "selection marquee",
+   "box": [
+    27,
+    218,
+    88,
+    124
+   ],
+   "kind": "motion",
+   "class": "css",
+   "note": "1px light-blue (#4aa8d8-ish) rectangle with 4 small square corner handles, grows with the drag"
+  },
+  {
+   "name": "cursor arrow",
+   "box": [
+    105,
+    330,
+    16,
+    20
+   ],
+   "kind": "motion",
+   "class": "structured",
+   "note": "white arrow pointer with dark outline, drags the marquee, then drifts to ~(153,385) and fades"
+  },
+  {
+   "name": "step 2 illustration",
+   "box": [
+    455,
+    220,
+    335,
+    160
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "two envelopes, round puck with pale green check, document tile stack and two blue doc tiles, thin grey wires"
+  },
+  {
+   "name": "step 2 green pulse",
+   "box": [
+    555,
+    290,
+    140,
+    40
+   ],
+   "kind": "motion",
+   "class": "css",
+   "note": "short glowing green stretch of wire that travels along the grey wire"
+  },
+  {
+   "name": "step 3 illustration",
+   "box": [
+    875,
+    225,
+    345,
+    155
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "grey ring with blue tag/balloon, green sheet tile, grey printer tile, white box with yellow bolt, blue tile, thin wire"
+  },
+  {
+   "name": "step 3 blue pulse",
+   "box": [
+    925,
+    280,
+    145,
+    100
+   ],
+   "kind": "motion",
+   "class": "css",
+   "note": "short blue stretch of wire moving from the balloon down and across to the box port"
+  },
+  {
+   "name": "step 1 title",
+   "box": [
+    8,
+    410,
+    184,
+    20
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Drag & Drop Your Data' dark serif ~18px"
+  },
+  {
+   "name": "step 1 subtitle",
+   "box": [
+    8,
+    435,
+    276,
+    16
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "grey sans ~14px"
+  },
+  {
+   "name": "step 2 title",
+   "box": [
+    431,
+    410,
+    146,
+    20
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Send to Recipients' dark serif ~18px"
+  },
+  {
+   "name": "step 2 subtitle",
+   "box": [
+    431,
+    435,
+    320,
+    16
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "grey sans ~14px"
+  },
+  {
+   "name": "step 3 title",
+   "box": [
+    853,
+    410,
+    134,
+    20
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'E-File and Done!' dark serif ~18px"
+  },
+  {
+   "name": "step 3 subtitle",
+   "box": [
+    853,
+    435,
+    286,
+    16
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "grey sans ~14px"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "page background",
+   "axis": "style",
+   "check": "The page background is a flat near-white (#fbfbfb), with no gradient or texture",
+   "box": [
+    0,
+    0,
+    1252,
+    468
+   ],
+   "scope": "frame",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "headline",
+   "axis": "text",
+   "check": "The headline reads exactly 'We Made Tax' on line 1 and 'Season Simple.' on line 2",
+   "box": [
+    165,
+    50,
+    330,
+    96
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "headline",
+   "axis": "style",
+   "check": "The headline is in a dark navy, near-black serif typeface (not sans), regular weight",
+   "box": [
+    165,
+    50,
+    330,
+    96
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "headline",
+   "axis": "position",
+   "check": "The headline starts at x≈165, spans y≈50 to 145, and has a cap height of roughly 35 to 40px (font about 46px)",
+   "box": [
+    165,
+    50,
+    330,
+    96
+   ],
+   "scope": "frame",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "intro paragraph",
+   "axis": "text",
+   "check": "The paragraph reads 'Easily manage your 1099s, W-2s, and ACA' / 'forms in one simple, automated workflow.' on two lines",
+   "box": [
+    808,
+    50,
+    262,
+    36
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "intro paragraph",
+   "axis": "style",
+   "check": "The paragraph is mid-grey sans-serif at about 14px, clearly lighter than the headline",
+   "box": [
+    808,
+    50,
+    262,
+    36
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "Try Boomtax Free button",
+   "axis": "style",
+   "check": "The primary button is a solid bright blue (#0196fc) rectangle with near-square corners (radius ≤3px)",
+   "box": [
+    808,
+    104,
+    132,
+    41
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "Try Boomtax Free button",
+   "axis": "text",
+   "check": "The primary button reads 'Try Boomtax Free' in white",
+   "box": [
+    808,
+    104,
+    132,
+    41
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "Book a Demo button",
+   "axis": "style",
+   "check": "The second button is white with a faint light-grey 1px border, the same height (≈41px) as the blue button, sitting ≈9px to its right",
+   "box": [
+    949,
+    104,
+    104,
+    41
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "Book a Demo button",
+   "axis": "text",
+   "check": "The second button reads 'Book a Demo' in dark text",
+   "box": [
+    949,
+    104,
+    104,
+    41
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "header panel border",
+   "axis": "present",
+   "check": "Faint vertical hairlines at x≈116 and x≈1136 frame the header from the top edge down to y≈192",
+   "box": [
+    100,
+    0,
+    1052,
+    195
+   ],
+   "scope": "frame",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "section divider lines",
+   "axis": "position",
+   "check": "A 1px light-grey horizontal hairline runs across the full width at y≈193",
+   "box": [
+    0,
+    185,
+    1252,
+    16
+   ],
+   "scope": "frame",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "section divider lines",
+   "axis": "position",
+   "check": "Two vertical hairlines at x≈414 and x≈836 split the lower area into three equal columns",
+   "box": [
+    0,
+    193,
+    1252,
+    275
+   ],
+   "scope": "frame",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "step 1 title",
+   "axis": "text",
+   "check": "Column 1 title reads 'Drag & Drop Your Data' in a dark serif ~18px at x≈8, y≈420",
+   "box": [
+    8,
+    410,
+    184,
+    20
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "step 1 subtitle",
+   "axis": "text",
+   "check": "Column 1 subtitle reads 'We'll check to make sure there are no errors.' in grey sans ~14px",
+   "box": [
+    8,
+    435,
+    276,
+    16
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "step 2 title",
+   "axis": "text",
+   "check": "Column 2 title reads 'Send to Recipients' in a dark serif starting at x≈431",
+   "box": [
+    431,
+    410,
+    146,
+    20
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "step 2 subtitle",
+   "axis": "text",
+   "check": "Column 2 subtitle reads 'We'll print, fold, stuff and mail your recipient copies.' in grey sans",
+   "box": [
+    431,
+    435,
+    320,
+    16
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "step 3 title",
+   "axis": "text",
+   "check": "Column 3 title reads 'E-File and Done!' in a dark serif starting at x≈853",
+   "box": [
+    853,
+    410,
+    134,
+    20
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c19",
+   "element": "step 3 subtitle",
+   "axis": "text",
+   "check": "Column 3 subtitle reads 'We'll e-file your forms in less than 15 minutes.' in grey sans",
+   "box": [
+    853,
+    435,
+    286,
+    16
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "step 1 illustration",
+   "axis": "imagery",
+   "check": "Column 1 shows an original isometric line drawing: a tall tilted document with text lines and a signature, a small tile with a blue gear, and two stacked document cards inside a dashed isometric outline, in light grey with soft shading",
+   "box": [
+    25,
+    215,
+    350,
+    175
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "step 1 illustration",
+   "axis": "style",
+   "check": "The upper-right doc card carries a bright green check inside a green ring; the lower-left card's check and ring are pale grey",
+   "box": [
+    170,
+    255,
+    180,
+    90
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "step 1 illustration",
+   "axis": "style",
+   "check": "The outline that encloses the two doc cards is dashed grey (not solid)",
+   "box": [
+    145,
+    250,
+    230,
+    135
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "step 2 illustration",
+   "axis": "imagery",
+   "check": "Column 2 shows an original isometric drawing of two grey envelopes, a round puck with a pale green check, a tall stack of tiles and two more tiles, each tile topped by a blue document glyph, joined by thin grey wires",
+   "box": [
+    455,
+    220,
+    335,
+    160
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "step 2 illustration",
+   "axis": "present",
+   "check": "Exactly 3 blue-topped document tiles or stacks appear (one tall stack plus two single tiles)",
+   "box": [
+    680,
+    290,
+    110,
+    90
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c25",
+   "element": "step 3 illustration",
+   "axis": "imagery",
+   "check": "Column 3 shows an original isometric drawing of a grey ring with a blue tag hanging inside, a green spreadsheet tile, a grey printer tile, a white box with a yellow lightning bolt and a blue tile, joined by a thin wire",
+   "box": [
+    875,
+    225,
+    345,
+    155
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c26",
+   "element": "step 3 illustration",
+   "axis": "style",
+   "check": "The bolt on the white box is yellow/amber, and the box is white with soft grey isometric side faces, not outlined in black",
+   "box": [
+    1040,
+    290,
+    118,
+    85
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c27",
+   "element": "selection marquee",
+   "axis": "style",
+   "check": "The marquee is a thin (≈1px) light-blue outline with no fill, with a small square handle at each of its 4 corners",
+   "box": [
+    20,
+    212,
+    102,
+    136
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "selection marquee",
+   "axis": "position",
+   "check": "At rest the marquee spans x≈27 to 115 and y≈218 to 342, enclosing the whole document",
+   "box": [
+    20,
+    212,
+    102,
+    136
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": null
+  },
+  {
+   "id": "c29",
+   "element": "selection marquee",
+   "axis": "motion",
+   "check": "The marquee grows from a small box (≈16x16 at the top-left corner 27,218) at 0.13s to about 46x62 at 0.5s; its top-left corner stays fixed",
+   "box": [
+    20,
+    212,
+    102,
+    136
+   ],
+   "scope": "crop",
+   "at": 0.13,
+   "then": 0.5
+  },
+  {
+   "id": "c30",
+   "element": "selection marquee",
+   "axis": "motion",
+   "check": "Between 0.5s and 1.38s the marquee's bottom-right corner moves from ≈(73,280) to ≈(115,342), and it is fully grown by about 1.4s",
+   "box": [
+    20,
+    212,
+    102,
+    136
+   ],
+   "scope": "crop",
+   "at": 0.5,
+   "then": 1.38
+  },
+  {
+   "id": "c31",
+   "element": "selection marquee",
+   "axis": "motion",
+   "check": "The marquee does not change between 2s and 2.5s; it stays drawn and is not removed",
+   "box": [
+    20,
+    212,
+    102,
+    136
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": 2.5
+  },
+  {
+   "id": "c32",
+   "element": "cursor arrow",
+   "axis": "present",
+   "check": "A white arrow pointer with a dark outline sits at the marquee's growing bottom-right corner (≈112,338 at 1s)",
+   "box": [
+    95,
+    320,
+    35,
+    35
+   ],
+   "scope": "crop",
+   "at": 1,
+   "then": null
+  },
+  {
+   "id": "c33",
+   "element": "cursor arrow",
+   "axis": "motion",
+   "check": "After the drag, the cursor moves down-right off the document to ≈(153,385) by 2s, where it shows as a hollow outlined arrow, and it is gone by 2.5s",
+   "box": [
+    100,
+    330,
+    70,
+    70
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": 2.5
+  },
+  {
+   "id": "c34",
+   "element": "step 2 green pulse",
+   "axis": "present",
+   "check": "At 0.13s a short bright green stretch lights the wire between the envelope and the puck (≈555 to 600, y≈320); the rest of the wire is grey",
+   "box": [
+    540,
+    300,
+    80,
+    35
+   ],
+   "scope": "crop",
+   "at": 0.13,
+   "then": null
+  },
+  {
+   "id": "c35",
+   "element": "step 2 green pulse",
+   "axis": "style",
+   "check": "The pulse is a soft glowing green stretch of the wire itself, not a separate dot or arrow, and it fades at both ends",
+   "box": [
+    540,
+    300,
+    80,
+    35
+   ],
+   "scope": "crop",
+   "at": 0.13,
+   "then": null
+  },
+  {
+   "id": "c36",
+   "element": "step 2 green pulse",
+   "axis": "motion",
+   "check": "Between 2s and 2.5s a green stretch appears on the wire beyond the puck, toward the tile stack (≈640 to 690, y 290 to 315); at 2s that wire is all grey",
+   "box": [
+    630,
+    280,
+    80,
+    45
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": 2.5
+  },
+  {
+   "id": "c37",
+   "element": "step 3 blue pulse",
+   "axis": "present",
+   "check": "At 0.13s a blue stretch lights the vertical wire below the ring's tag (x≈930, y≈290 to 345)",
+   "box": [
+    915,
+    280,
+    30,
+    75
+   ],
+   "scope": "crop",
+   "at": 0.13,
+   "then": null
+  },
+  {
+   "id": "c38",
+   "element": "step 3 blue pulse",
+   "axis": "motion",
+   "check": "The blue stretch travels along the wire: near (985,378) at 0.5s, then right and up to ≈(1045,355) by 1.38s",
+   "box": [
+    920,
+    330,
+    150,
+    55
+   ],
+   "scope": "crop",
+   "at": 0.5,
+   "then": 1.38
+  },
+  {
+   "id": "c39",
+   "element": "step 3 blue pulse",
+   "axis": "motion",
+   "check": "By 2s the blue stretch reaches the box's port (≈1065,345), and by 2.5s the wire is grey again",
+   "box": [
+    1040,
+    325,
+    40,
+    40
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": 2.5
+  },
+  {
+   "id": "c40",
+   "element": "step 3 illustration",
+   "axis": "motion",
+   "check": "The blue tag inside the ring sways slightly (a few px tilt/shift) between 2s and 2.5s, while the ring itself stays put",
+   "box": [
+    905,
+    225,
+    60,
+    70
+   ],
+   "scope": "crop",
+   "at": 2,
+   "then": 2.5
+  },
+  {
+   "id": "c41",
+   "element": "headline",
+   "axis": "motion",
+   "check": "No text, button or divider line moves at any time: header and column labels are identical at 0.13s and 2.5s",
+   "box": [
+    0,
+    0,
+    1252,
+    468
+   ],
+   "scope": "frame",
+   "at": 0.13,
+   "then": 2.5
+  },
+  {
+   "id": "c42",
+   "element": "step 1 illustration",
+   "axis": "motion",
+   "check": "The document, gear tile and doc cards in column 1 do not move while the marquee is dragged",
+   "box": [
+    25,
+    215,
+    350,
+    175
+   ],
+   "scope": "crop",
+   "at": 0.5,
+   "then": 2
+  }
+ ],
+ "imagery": [
+  {
+   "name": "step 1 illustration",
+   "box": [
+    25,
+    215,
+    350,
+    175
+   ],
+   "class": "structured",
+   "what": "isometric grey line art: a signed document leaning upright with a soft shadow, a blue gear tile, and two document cards (one with a green check ring, one with a grey check) in a dashed isometric frame",
+   "at": 2
+  },
+  {
+   "name": "step 2 illustration",
+   "box": [
+    455,
+    220,
+    335,
+    160
+   ],
+   "class": "structured",
+   "what": "two grey envelopes wired to a round puck with a pale green check, wired on to a tall tile stack and two tiles, each topped by a blue document glyph",
+   "at": 2
+  },
+  {
+   "name": "step 3 illustration",
+   "box": [
+    875,
+    225,
+    345,
+    155
+   ],
+   "class": "structured",
+   "what": "grey ring with a blue tag inside, green spreadsheet tile, grey printer tile, white hub box with a yellow lightning bolt, blue tile; one thin wire runs from the tag to the hub",
+   "at": 2
+  },
+  {
+   "name": "cursor arrow",
+   "box": [
+    105,
+    330,
+    16,
+    20
+   ],
+   "class": "structured",
+   "what": "standard white arrow mouse pointer with a dark outline",
+   "at": 1
+  }
+ ],
+ "moves": [
+  {
+   "element": "selection marquee",
+   "what": "bottom-right corner drags out from (43,234) to (115,342); top-left stays at (27,218)",
+   "from": 0.05,
+   "to": 1.45,
+   "px": 72
+  },
+  {
+   "element": "cursor arrow",
+   "what": "rides the marquee corner during the drag, then drifts down-right to about (153,385) and fades out",
+   "from": 0.05,
+   "to": 2.4,
+   "px": 160
+  },
+  {
+   "element": "step 2 green pulse",
+   "what": "green glow travels along the wire from the envelope to the puck",
+   "from": 0.05,
+   "to": 0.6,
+   "px": 60
+  },
+  {
+   "element": "step 2 green pulse",
+   "what": "green glow travels from the puck along the wire toward the tile stack",
+   "from": 2.15,
+   "to": 2.6,
+   "px": 60
+  },
+  {
+   "element": "step 3 blue pulse",
+   "what": "blue glow travels down from the tag (x≈930), then right along the wire to the hub's port (≈1065,345)",
+   "from": 0.05,
+   "to": 2.1,
+   "px": 230
+  },
+  {
+   "element": "step 3 illustration",
+   "what": "blue tag inside the ring sways a few px",
+   "from": 2.15,
+   "to": 2.6,
+   "px": 5
+  }
+ ]
+}

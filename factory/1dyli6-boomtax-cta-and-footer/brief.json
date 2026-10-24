@@ -1,0 +1,225 @@
+{
+ "slug": "1dyli6-boomtax-cta-and-footer",
+ "title": "Boomtax CTA and Footer",
+ "measured": false,
+ "recipe": null,
+ "what": "A closing call to action with isometric compliance badges (HIPAA, SOC 2, PCI DSS, IRS) above a multi-column footer.",
+ "frame": {
+  "ratio": 2.065,
+  "shape": "landscape",
+  "media": "clip"
+ },
+ "tone": "light surface, dark type",
+ "traits": [
+  "Footer",
+  "CTA",
+  "Isometric"
+ ],
+ "section": "Footer",
+ "steps": [
+  "Call see_design for the frame and read the layout from it: regions, alignment, type scale, corner radii, spacing rhythm.",
+  "The media is a clip: name each state you can see (rest, hover, press, open) and the order they occur in.",
+  "Build with the project's own stack and tokens; match proportion and hierarchy before matching pixels.",
+  "A draft measurement is attached: its phases, moves and palette are measured from the clip; its boxes are a first pass to check against the keyframes."
+ ],
+ "draft": {
+  "frame": {
+   "w": 1252,
+   "h": 606
+  },
+  "duration": 3.53,
+  "phases": [
+   [
+    0.05,
+    0.05
+   ],
+   [
+    0.15,
+    0.2
+   ],
+   [
+    0.45,
+    0.5
+   ],
+   [
+    0.65,
+    0.65
+   ],
+   [
+    0.85,
+    0.95
+   ],
+   [
+    2.25,
+    2.25
+   ],
+   [
+    2.35,
+    2.35
+   ],
+   [
+    2.5,
+    2.55
+   ],
+   [
+    2.75,
+    2.8
+   ],
+   [
+    3.2,
+    3.2
+   ]
+  ],
+  "keyframes": [
+   {
+    "name": "kf1",
+    "at": 1.6,
+    "hold": [
+     1,
+     2.2
+    ]
+   },
+   {
+    "name": "kf2",
+    "at": 3,
+    "hold": [
+     2.85,
+     3.15
+    ]
+   },
+   {
+    "name": "kf3",
+    "at": 3.4,
+    "hold": [
+     3.25,
+     3.5
+    ]
+   }
+  ],
+  "moments": [
+   {
+    "at": 1.6,
+    "name": "kf1"
+   },
+   {
+    "at": 3,
+    "name": "kf2"
+   },
+   {
+    "at": 3.4,
+    "name": "kf3"
+   }
+  ],
+  "anchors": [],
+  "background": "#fbfbfb",
+  "palette": [
+   {
+    "hex": "#fbfbfb",
+    "share": 89.8
+   },
+   {
+    "hex": "#eaebeb",
+    "share": 4.1
+   },
+   {
+    "hex": "#d7d8d9",
+    "share": 0.7
+   },
+   {
+    "hex": "#c7c8c9",
+    "share": 0.7
+   },
+   {
+    "hex": "#0097fb",
+    "share": 0.5
+   },
+   {
+    "hex": "#b8b8b9",
+    "share": 0.4
+   },
+   {
+    "hex": "#767778",
+    "share": 0.2
+   },
+   {
+    "hex": "#010507",
+    "share": 0.2
+   }
+  ],
+  "elements": [
+   {
+    "box": [
+     118,
+     254,
+     130,
+     40
+    ],
+    "fill": "#0296f8"
+   },
+   {
+    "box": [
+     475,
+     288,
+     86,
+     23
+    ],
+    "fill": "#dddddf"
+   }
+  ],
+  "motion": [],
+  "coverage": "flat regions found; boxes and fills are usable as given",
+  "confidence": {
+   "phases": "measured: sampled every 50 ms",
+   "motion": "measured: moves of the first keyframe's big parts, edges read at full resolution; dTop and dLeft are the distance in source px",
+   "palette": "measured for areas; small things do not reach it",
+   "anchors": "measured where the content stands clear of its background (reliable true): the box of everything that is not background at a phase's start and end, and which edges moved; where the content fills the frame the field says so and look_at what=track is the way to read an edge",
+   "elements": "draft: flat regions at the first keyframe; nested parts split or merge, text and thin parts are missing; check each box against the keyframe (see_design with at) before trusting it"
+  }
+ },
+ "motion": {
+  "status": "draft measured: draft.phases say when things move, draft.anchors which edges, draft.motion how far; the presets below are only for states the clip never shows",
+  "enter": "fade up 12 px, 320 ms, cubic-bezier(0.2, 0.8, 0.2, 1)",
+  "hover": "colour or ring only, 150 ms",
+  "press": "scale 0.98, 120 ms",
+  "reducedMotion": "respect prefers-reduced-motion: no entrance, instant hover"
+ },
+ "text": null,
+ "notes": [
+  {
+   "slug": "motion-from-stills",
+   "title": "Giving motion to a still, honestly"
+  }
+ ],
+ "credit": {
+  "author": "lookap",
+  "x": null,
+  "source": "https://www.boomtax.com/"
+ },
+ "method": [
+  "Fetch the clip; read size, fps and duration from the container.",
+  "Dump frames at 2 fps plus a contact sheet; pick the idle and active moments and dump those at full resolution.",
+  "Convert the chosen frames to raw RGB and measure: bounding boxes of every element, exact hex at flat regions, luminance profiles across edges for the lighting, a per-frame luma trace of the moving region for timing.",
+  "Build with one unit, --u, equal to one source pixel at the design size, and write every size as calc(N * var(--u)).",
+  "Light rounded objects with inset box-shadows on one overlay (rim, near glow, wide falloff); stacked linear gradients show a seam at the corner.",
+  "Render the build headless at --u: 1px, crop to the frame, put it beside the source frame, and look. Fix the three largest differences. Repeat."
+ ],
+ "build": null,
+ "oneShot": "No measured recipe, but a draft: build from draft.elements and draft.motion, look at each keyframe with see_design (at), then call check_rebuild with a screenshot; its regions are reliable, its element rows are as good as the draft boxes.",
+ "keyframeFiles": [
+  {
+   "name": "kf1",
+   "at": 1.6,
+   "file": "public/drafts/btcta/kf1.jpg"
+  },
+  {
+   "name": "kf2",
+   "at": 3,
+   "file": "public/drafts/btcta/kf2.jpg"
+  },
+  {
+   "name": "kf3",
+   "at": 3.4,
+   "file": "public/drafts/btcta/kf3.jpg"
+  }
+ ]
+}

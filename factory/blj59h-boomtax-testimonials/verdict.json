@@ -1,0 +1,1146 @@
+{
+ "slug": "blj59h-boomtax-testimonials",
+ "at": "2026-10-24T09:11:10.061Z",
+ "runs": 22,
+ "html": "factory/blj59h-boomtax-testimonials/index.html",
+ "pixel": {
+  "score": 84,
+  "stills": 84,
+  "motion": 84,
+  "moments": 5
+ },
+ "animations": 7,
+ "rank": 83,
+ "allPass": false,
+ "elements": [
+  {
+   "name": "heading line 2",
+   "box": [
+    423,
+    112,
+    407,
+    46
+   ],
+   "deltaE": 1.3,
+   "delta": 40,
+   "shift": [
+    -4,
+    0
+   ],
+   "afterShift": 39,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "heading line 1",
+   "box": [
+    423,
+    65,
+    407,
+    43
+   ],
+   "deltaE": 0.8,
+   "delta": 34,
+   "shift": [
+    0,
+    -2
+   ],
+   "afterShift": 31,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "signature 3",
+   "box": [
+    818,
+    378,
+    116,
+    20
+   ],
+   "deltaE": 0.9,
+   "delta": 19,
+   "shift": null,
+   "afterShift": 19,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "signature 1",
+   "box": [
+    138,
+    378,
+    132,
+    20
+   ],
+   "deltaE": 0.7,
+   "delta": 18,
+   "shift": [
+    -2,
+    0
+   ],
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "signature 2",
+   "box": [
+    478,
+    378,
+    124,
+    20
+   ],
+   "deltaE": 1,
+   "delta": 18,
+   "shift": null,
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "quote 1",
+   "box": [
+    138,
+    228,
+    297,
+    95
+   ],
+   "deltaE": 0.9,
+   "delta": 12,
+   "shift": null,
+   "afterShift": 12,
+   "read": "matches"
+  },
+  {
+   "name": "quote 2",
+   "box": [
+    478,
+    228,
+    295,
+    115
+   ],
+   "deltaE": 1.2,
+   "delta": 12,
+   "shift": null,
+   "afterShift": 12,
+   "read": "matches"
+  },
+  {
+   "name": "quote 3",
+   "box": [
+    818,
+    228,
+    288,
+    115
+   ],
+   "deltaE": 1.2,
+   "delta": 12,
+   "shift": null,
+   "afterShift": 12,
+   "read": "matches"
+  },
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1252,
+    526
+   ],
+   "deltaE": 0.3,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "left frame line",
+   "box": [
+    115,
+    0,
+    2,
+    498
+   ],
+   "deltaE": 3.5,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "column divider 1",
+   "box": [
+    456,
+    206,
+    2,
+    213
+   ],
+   "deltaE": 3.3,
+   "delta": 9,
+   "shift": [
+    -2,
+    -2
+   ],
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "column divider 2",
+   "box": [
+    795,
+    206,
+    2,
+    213
+   ],
+   "deltaE": 3.1,
+   "delta": 9,
+   "shift": null,
+   "afterShift": 9,
+   "read": "matches"
+  },
+  {
+   "name": "top-left pinstripe corner",
+   "box": [
+    0,
+    0,
+    112,
+    58
+   ],
+   "deltaE": 0.2,
+   "delta": 3,
+   "shift": null,
+   "afterShift": 3,
+   "read": "matches"
+  },
+  {
+   "name": "top-right pinstripe corner",
+   "box": [
+    1138,
+    0,
+    114,
+    58
+   ],
+   "deltaE": 0.2,
+   "delta": 3,
+   "shift": null,
+   "afterShift": 3,
+   "read": "matches"
+  },
+  {
+   "name": "bottom pinstripe band",
+   "box": [
+    116,
+    420,
+    1019,
+    78
+   ],
+   "deltaE": 0.1,
+   "delta": 3,
+   "shift": null,
+   "afterShift": 3,
+   "read": "matches"
+  },
+  {
+   "name": "section bottom hairline",
+   "box": [
+    0,
+    497,
+    1252,
+    2
+   ],
+   "deltaE": 0.7,
+   "delta": 3,
+   "shift": null,
+   "afterShift": 3,
+   "read": "matches"
+  },
+  {
+   "name": "grid bottom rule",
+   "box": [
+    116,
+    418,
+    1019,
+    2
+   ],
+   "deltaE": 1.4,
+   "delta": 3,
+   "shift": null,
+   "afterShift": 3,
+   "read": "matches"
+  },
+  {
+   "name": "right frame line",
+   "box": [
+    1134,
+    0,
+    2,
+    498
+   ],
+   "deltaE": 0.3,
+   "delta": 1,
+   "shift": null,
+   "afterShift": 1,
+   "read": "matches"
+  },
+  {
+   "name": "heading rule",
+   "box": [
+    116,
+    204,
+    1019,
+    2
+   ],
+   "deltaE": 0.5,
+   "delta": 1,
+   "shift": null,
+   "afterShift": 1,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "STATIC: the clip moves between the scored moments and the render does not",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "kf1",
+    "clip": 1.1,
+    "render": 0,
+    "read": "render still where the clip moves"
+   },
+   {
+    "from": "kf1",
+    "to": "0.7s",
+    "clip": 1.5,
+    "render": 0,
+    "read": "render still where the clip moves"
+   },
+   {
+    "from": "0.7s",
+    "to": "1s",
+    "clip": 1.2,
+    "render": 0,
+    "read": "render still where the clip moves"
+   },
+   {
+    "from": "1s",
+    "to": "kf2",
+    "clip": 2.6,
+    "render": 0,
+    "read": "render still where the clip moves"
+   }
+  ],
+  "trajectories": [
+   {
+    "element": "#041019",
+    "box": [
+     564,
+     68,
+     40,
+     35
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 2,
+      "dy": 0,
+      "delta": 21
+     },
+     {
+      "at": 0.2,
+      "dx": 2,
+      "dy": 0,
+      "delta": 15
+     },
+     {
+      "at": 0.7,
+      "dx": 2,
+      "dy": 0,
+      "delta": 19
+     },
+     {
+      "at": 1,
+      "dx": 4,
+      "dy": 0,
+      "delta": 21
+     },
+     {
+      "at": 1.25,
+      "dx": 2,
+      "dy": 0,
+      "delta": 16
+     }
+    ],
+    "read": "offset by about 2 px throughout"
+   },
+   {
+    "element": "#020f19",
+    "box": [
+     427,
+     114,
+     34,
+     34
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 2,
+      "dy": 0,
+      "delta": 30
+     },
+     {
+      "at": 0.2,
+      "dx": 2,
+      "dy": 0,
+      "delta": 24
+     },
+     {
+      "at": 0.7,
+      "dx": 2,
+      "dy": 0,
+      "delta": 26
+     },
+     {
+      "at": 1,
+      "dx": 2,
+      "dy": 0,
+      "delta": 33
+     },
+     {
+      "at": 1.25,
+      "dx": 2,
+      "dy": 0,
+      "delta": 24
+     }
+    ],
+    "read": "in step"
+   }
+  ]
+ },
+ "scale": {
+  "ok": true,
+  "changed": 6.8,
+  "read": "scales: the half-size render matches the full one (difference 6.8)"
+ },
+ "rubric": {
+  "file": "factory/blj59h-boomtax-testimonials/rubric.json",
+  "total": 39,
+  "counted": 39,
+  "pass": 37,
+  "fail": 2,
+  "unsure": 0,
+  "unjudged": 0,
+  "passRate": 95,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "style",
+    "element": "page background",
+    "check": "The page is a flat off-white (about #fbfbfb) with no gradient or shadow",
+    "box": [
+     0,
+     0,
+     1252,
+     526
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild background is the same flat off-white as the clip, with no gradient or shadow. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "text",
+    "element": "heading line 1",
+    "check": "First heading line reads exactly 'A Few Words from'",
+    "box": [
+     423,
+     65,
+     407,
+     43
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild reads 'A Few Words from' exactly, as the clip does. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "text",
+    "element": "heading line 2",
+    "check": "Second heading line reads exactly 'Happy Customers.' including the full stop",
+    "box": [
+     423,
+     112,
+     407,
+     46
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild reads 'Happy Customers.' with the full stop, as the clip does. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "style",
+    "element": "heading",
+    "check": "Heading is set in a high-contrast serif (bracketed serifs, thick/thin strokes), not sans-serif",
+    "box": [
+     423,
+     65,
+     407,
+     93
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "Rebuild is a serif but visibly bolder with less thick/thin contrast than the clip's lighter, finer serif. [votes: yes/no/no]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "style",
+    "element": "heading",
+    "check": "Heading colour is near-black navy (about #041019), the darkest ink on the page",
+    "box": [
+     423,
+     65,
+     407,
+     93
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild heading is near-black navy, the same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "position",
+    "element": "heading",
+    "check": "Heading is horizontally centred at x≈626, spanning about x 423–830, with cap tops near y 65 and baseline of line 2 near y 152",
+    "box": [
+     400,
+     55,
+     450,
+     110
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild heading is centred with the same span and baselines as the clip. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "text",
+    "element": "heading",
+    "check": "Heading cap height is about 34px (font size ~48px), two lines ~47px apart",
+    "box": [
+     423,
+     65,
+     407,
+     93
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild cap height and 47px line spacing match the clip. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "position",
+    "element": "left frame line",
+    "check": "A pale grey vertical hairline runs at x≈116 from the top edge down to y≈498",
+    "box": [
+     105,
+     0,
+     24,
+     500
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both show a pale vertical hairline at the same x in the crop. [votes: unsure/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "position",
+    "element": "right frame line",
+    "check": "A pale grey vertical hairline runs at x≈1135 from the top edge down to y≈498",
+    "box": [
+     1124,
+     0,
+     24,
+     500
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both show a pale vertical hairline at the same x in the crop. [votes: unsure/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "present",
+    "element": "top-left pinstripe corner",
+    "check": "The region x 0–112, y 0–58 is filled with fine vertical light-grey pinstripes, and it is closed by a horizontal hairline at y≈58",
+    "box": [
+     0,
+     0,
+     120,
+     64
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild has the same fine vertical pinstripes and a closing hairline at the bottom as the clip. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "present",
+    "element": "top-right pinstripe corner",
+    "check": "The region x 1138–1252, y 0–58 has the same vertical pinstripes",
+    "box": [
+     1136,
+     0,
+     116,
+     64
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild has the same vertical pinstripes in the top-right corner, closed by a hairline. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "present",
+    "element": "bottom pinstripe band",
+    "check": "Below the card grid, a band from y≈420 to 498 between the frame lines is filled with vertical pinstripes",
+    "box": [
+     116,
+     415,
+     1019,
+     90
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild bottom band is filled with fine vertical pinstripes like the clip. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "style",
+    "element": "bottom pinstripe band",
+    "check": "Pinstripes are very low-contrast light grey hairlines (~1px) about 6px apart; they are straight, evenly spaced and never dark or bold",
+    "box": [
+     300,
+     430,
+     80,
+     40
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild stripes are faint light-grey hairlines about 6px apart, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "style",
+    "element": "pinstripe areas",
+    "check": "The pinstripe is only vertical lines: no diagonal hatching, no dots, no horizontal stripes inside the band",
+    "box": [
+     0,
+     0,
+     112,
+     58
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows only vertical lines, with no diagonal, dot or horizontal pattern. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "present",
+    "element": "page background",
+    "check": "Areas between the pinstripes (beside the grid, x 0–112 below y 58 and x 1138–1252 below y 58) are plain off-white with no stripes",
+    "box": [
+     0,
+     60,
+     112,
+     430
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild side areas below y 58 are plain off-white with no stripes, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "position",
+    "element": "section bottom hairline",
+    "check": "A full-width pale hairline crosses the frame at y≈498, with a plain strip below it to the bottom edge",
+    "box": [
+     0,
+     490,
+     1252,
+     36
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild has a full-width pale hairline near y≈498 with a plain strip below, like the clip. [votes: yes/yes/unsure]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "position",
+    "element": "heading rule",
+    "check": "A light grey (#ededed) 1px hairline lies at y≈205 under the heading, spanning the column",
+    "box": [
+     116,
+     195,
+     1019,
+     20
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows a faint grey hairline at y≈205 across the column, like the clip. [votes: yes/yes/unsure]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "present",
+    "element": "card grid",
+    "check": "Exactly 3 testimonial cells sit side by side in one row",
+    "box": [
+     116,
+     205,
+     1019,
+     215
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows 3 testimonial cells side by side in one row, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "position",
+    "element": "column dividers",
+    "check": "Thin pale vertical rules divide the cells at x≈457 and x≈796, running y≈205–419",
+    "box": [
+     440,
+     200,
+     370,
+     225
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows thin pale vertical dividers at the cell edges running down to the bottom rule, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "position",
+    "element": "grid bottom rule",
+    "check": "A pale hairline at y≈419 closes the bottom of the grid, directly above the pinstripe band",
+    "box": [
+     116,
+     410,
+     1019,
+     20
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild has a pale hairline closing the grid bottom, directly above the pinstripes, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "style",
+    "element": "card grid",
+    "check": "Cells have no fill, no shadow and no rounded corners; they are defined only by hairline rules",
+    "box": [
+     116,
+     205,
+     1019,
+     215
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both show unfilled, square, shadowless cells separated only by hairline rules. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "text",
+    "element": "quote 1",
+    "check": "Quote 1 reads '“We love BoomTax! We have used it for the last three years and they have been a real life saver when it comes to ACA compliance and reporting health coverage. Worth every one of 5 stars and then some!”' with curly quote marks",
+    "box": [
+     138,
+     228,
+     297,
+     95
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same five-line text with a curly opening quote and closing ” after 'some!'; the divider clips the first letters of the right panel. [votes: unsure/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "text",
+    "element": "quote 2",
+    "check": "Quote 2 reads 'After careful research, we decided to go with the BoomTax ACA software solution for our ACA filing, and we had a flawless experience. Their online system is very user friendly and they are on top of the entire process. We highly recommend BoomTax!' with no quote marks",
+    "box": [
+     478,
+     228,
+     295,
+     115
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same text with no quote marks, same wrapping. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "text",
+    "element": "quote 3",
+    "check": "Quote 3 reads 'The customer support at Boomtax is magnificent, when you need to use it, which is hardly ever because the software works so smoothly. I highly recommend their solution to anyone who needs to comply with ACA reporting requirements.'",
+    "box": [
+     818,
+     228,
+     288,
+     115
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same text, same line breaks. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "style",
+    "element": "quotes",
+    "check": "Quote text is a sans-serif at ~15px in medium grey (about #555–#666), clearly lighter than the heading and signatures",
+    "box": [
+     138,
+     228,
+     297,
+     95
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Quote text is the same medium-grey sans at the same size and weight in both panels. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "position",
+    "element": "quotes",
+    "check": "Quote first lines start at y≈230 and left edges sit at x≈138, 478 and 818 (about 22px inside each cell)",
+    "box": [
+     116,
+     222,
+     1019,
+     20
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Quote first lines and left edges sit at the same positions in both panels, within a pixel or two. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "text",
+    "element": "quote 1",
+    "check": "Quote 1 wraps to 5 lines, quotes 2 and 3 to 6 lines each, with ~19.5px line spacing",
+    "box": [
+     116,
+     225,
+     1019,
+     125
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Wraps to 5, 6 and 6 lines in both, with matching line spacing. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "text",
+    "element": "signature 1",
+    "check": "Signature 1 reads 'Linda G,' followed by 'Maryland'",
+    "box": [
+     138,
+     378,
+     132,
+     20
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Reads 'Linda G, Maryland' in both. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "text",
+    "element": "signature 2",
+    "check": "Signature 2 reads 'Bianca P,' followed by 'Arizona'",
+    "box": [
+     478,
+     378,
+     124,
+     20
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Reads 'Bianca P, Arizona' in both. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "text",
+    "element": "signature 3",
+    "check": "Signature 3 reads 'Brian M,' followed by 'Illinois'",
+    "box": [
+     818,
+     378,
+     116,
+     20
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Reads 'Brian M, Illinois' in both. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "style",
+    "element": "signatures",
+    "check": "Names are serif ~19px in near-black; the state after the comma is a visibly smaller serif (~15px) on the same baseline",
+    "box": [
+     138,
+     378,
+     132,
+     20
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "The rebuild's names and states are visibly bolder and darker than the clip's lighter serif, although the size ratio and baseline match. [votes: no/no/no]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "position",
+    "element": "signatures",
+    "check": "All three signatures share one baseline at y≈394, aligned with the quote left edges",
+    "box": [
+     116,
+     375,
+     1019,
+     25
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "All three signatures share one baseline at the same height as the clip, aligned with the quote left edges. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "position",
+    "element": "heading rule",
+    "check": "At 0.2s the heading rule reaches both frame lines, running continuously from x≈116 to x≈1135",
+    "box": [
+     100,
+     195,
+     1050,
+     20
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rule runs full width in both panels, starting about 15px in from the panel edge on both. [votes: unsure/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "motion",
+    "element": "heading rule",
+    "check": "Between 0.2s and 1.25s the heading rule retracts from both ends: at 1.25s it spans only about x 128–1120, leaving ~12–15px gaps at each frame line",
+    "box": [
+     100,
+     195,
+     1050,
+     20
+    ],
+    "at": 0.2,
+    "then": 1.25,
+    "policy": null,
+    "pass": "yes",
+    "seen": "In both, the rule is full length at 0.2s and has pulled in from the frame lines by about 12-15 px at 1.25s. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "motion",
+    "element": "heading rule",
+    "check": "The rule holds full length through 0.7s and the retraction happens around 0.85–1.05s (at 1.0s the line shows breaks/partial segments)",
+    "box": [
+     100,
+     195,
+     1050,
+     20
+    ],
+    "at": 0.7,
+    "then": 1,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both rules are full at 0.7s and show breaks and partial segments at 1s. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "motion",
+    "element": "heading",
+    "check": "Heading does not move, fade or change colour between 0.2s and 1.25s",
+    "box": [
+     423,
+     65,
+     407,
+     93
+    ],
+    "at": 0.2,
+    "then": 1.25,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The heading is identical between the two moments in both panels. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "motion",
+    "element": "quotes and signatures",
+    "check": "Quote and signature text stay put with no fade, slide or reflow between 0.2s and 1.25s",
+    "box": [
+     116,
+     205,
+     1019,
+     215
+    ],
+    "at": 0.2,
+    "then": 1.25,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Quotes and signatures are unchanged between 0.2s and 1.25s in both. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "motion",
+    "element": "bottom pinstripe band",
+    "check": "The pinstripes do not scroll or shift sideways between 0.2s and 1.25s",
+    "box": [
+     300,
+     430,
+     80,
+     40
+    ],
+    "at": 0.2,
+    "then": 1.25,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The band at the bottom is static between the two moments in both panels. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "motion",
+    "element": "frame lines and dividers",
+    "check": "Frame lines, column dividers and grid bottom rule stay fixed and full length between 0.2s and 1.25s",
+    "box": [
+     110,
+     0,
+     1030,
+     500
+    ],
+    "at": 0.2,
+    "then": 1.25,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Frame lines, dividers and bottom rule are in the same places at both moments in both panels. [votes: yes/yes/yes]",
+    "image": "factory/blj59h-boomtax-testimonials/judge/c39.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 0.417,
+  "calls": 6,
+  "images": "factory/blj59h-boomtax-testimonials/judge",
+  "votes": 3,
+  "spread": [
+   34,
+   37,
+   35
+  ]
+ }
+}

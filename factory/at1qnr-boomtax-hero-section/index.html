@@ -1,0 +1,201 @@
+<!doctype html>
+<!--
+  Boomtax Hero Section, rebuilt by lookap from the clip of https://www.boomtax.com/
+  Credit: lookap (source https://www.boomtax.com/). Nothing sampled: stripes, logos and the
+  isometric pipeline are original CSS/SVG drawn from the 1.9s and 2.95s frames.
+-->
+<html lang="en"><head><meta charset="utf-8"><title>Boomtax Hero Section</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400..800&display=swap" rel="stylesheet">
+<style id="patches"></style>
+<style>
+html,body{margin:0;overflow:hidden;background:#fafafa}
+#stage{--u:1px;position:relative;width:calc(1252*var(--u));height:calc(894*var(--u));background:#fafafa;overflow:hidden;font-family:"Inter",sans-serif;
+  --fast:cubic-bezier(.45,0,.35,1);--out:cubic-bezier(.25,.6,.45,1)}
+#stage *{box-sizing:border-box}
+.abs{position:absolute}
+.gut{top:0;height:calc(370*var(--u));width:calc(116*var(--u));border-bottom:calc(1*var(--u)) solid #ececec;
+  background:repeating-linear-gradient(90deg,transparent 0 calc(4*var(--u)),#e9e9e9 calc(4*var(--u)) calc(5*var(--u)),transparent calc(5*var(--u)) calc(6*var(--u)))}
+.col{left:calc(116*var(--u));top:0;width:calc(1021*var(--u));height:calc(423*var(--u));border:calc(1*var(--u)) solid #ececec;border-top:0;background:#fbfbfb}
+.ground{left:calc(116*var(--u));top:calc(494*var(--u));width:calc(1020*var(--u));height:calc(400*var(--u));
+  background:repeating-linear-gradient(90deg,#ededed 0 calc(1*var(--u)),transparent calc(1*var(--u)) calc(7*var(--u)))}
+.navrule{left:calc(116*var(--u));top:calc(42*var(--u));width:calc(1020*var(--u));height:calc(1*var(--u));background:#ececec}
+.navdiv{left:calc(1028*var(--u));top:0;width:calc(1*var(--u));height:calc(42*var(--u));background:#ececec}
+.nav{top:calc(7*var(--u));font-size:calc(13.2*var(--u));line-height:calc(24*var(--u));color:#737a7e;white-space:nowrap;text-decoration:none;transition:color .15s}
+.nav:hover{color:#04131a}
+.nav.dk{color:#0d1417;font-weight:500}
+.word{left:calc(133*var(--u));top:calc(4*var(--u));font:400 calc(22*var(--u))/calc(30*var(--u)) "Libre Baskerville",serif;color:#04131a;letter-spacing:calc(-.4*var(--u))}
+h1{position:absolute;margin:0;left:0;width:calc(1252*var(--u));top:calc(99*var(--u));text-align:center;font:400 calc(54*var(--u))/calc(53*var(--u)) "Libre Baskerville",serif;color:#04131a;letter-spacing:calc(-1.6*var(--u))}
+.sub{left:0;width:calc(1252*var(--u));top:calc(215*var(--u));text-align:center;font-size:calc(16*var(--u));line-height:calc(21.5*var(--u));color:#6b7176;margin:0}
+.btn{top:calc(296*var(--u));height:calc(46*var(--u));display:flex;align-items:center;justify-content:center;font-size:calc(15*var(--u));font-weight:450;border-radius:calc(1*var(--u));cursor:pointer;transition:background .15s}
+.b1{left:calc(488*var(--u));width:calc(149*var(--u));background:#0196fb;color:#fff}
+.b1:hover{background:#0a87e0}
+.b2{left:calc(646*var(--u));width:calc(120*var(--u));background:#fcfcfc;color:#1d2327;border:calc(1*var(--u)) solid #e3e3e3}
+.b2:hover{background:#f4f4f4}
+.strip{left:0;top:calc(422*var(--u));width:calc(1252*var(--u));height:calc(72*var(--u));border-bottom:calc(1*var(--u)) solid #ececec}
+.cdiv{top:calc(422*var(--u));width:calc(1*var(--u));height:calc(72*var(--u));background:#ececec}
+svg.full{position:absolute;left:0;top:0;width:calc(1252*var(--u));height:calc(894*var(--u));overflow:visible}
+.clipIn{position:absolute;inset:0;clip-path:polygon(0 calc(494*var(--u)),100% calc(494*var(--u)),100% 100%,0 100%)}
+.clipOut{position:absolute;inset:0;clip-path:polygon(calc(622*var(--u)) calc(713*var(--u)),calc(1252*var(--u)) calc(366*var(--u)),100% 100%,calc(622*var(--u)) 100%)}
+/* tiles already past the face plane (below the opening's floor edge) are drawn again over the green mouth */
+.front{position:absolute;inset:0;clip-path:polygon(calc(604*var(--u)) calc(762*var(--u)),calc(1252*var(--u)) calc(394.6*var(--u)),100% 100%,calc(604*var(--u)) 100%)}
+/* 7.4s = two clip periods; each 3.7s half has the clip's three beats (pushes 0-.45, 1.3-1.8, 2.45-3.25s) and advances 3 pitches (162px) */
+.tiles{animation:belt 7.4s linear infinite}
+@keyframes belt{
+0%{transform:translate(0,0);animation-timing-function:var(--out)}
+6.081%{transform:translate(calc(33*var(--u)),calc(18.71*var(--u)));animation-timing-function:linear}
+17.568%{transform:translate(calc(50*var(--u)),calc(28.35*var(--u)));animation-timing-function:var(--fast)}
+24.324%{transform:translate(calc(88*var(--u)),calc(49.9*var(--u)));animation-timing-function:linear}
+33.108%{transform:translate(calc(96*var(--u)),calc(54.43*var(--u)));animation-timing-function:var(--fast)}
+43.919%{transform:translate(calc(150*var(--u)),calc(85.05*var(--u)));animation-timing-function:linear}
+47.973%{transform:translate(calc(156*var(--u)),calc(88.45*var(--u)));animation-timing-function:linear}
+50%{transform:translate(calc(162*var(--u)),calc(91.85*var(--u)));animation-timing-function:var(--out)}
+56.081%{transform:translate(calc(195*var(--u)),calc(110.57*var(--u)));animation-timing-function:linear}
+67.568%{transform:translate(calc(212*var(--u)),calc(120.2*var(--u)));animation-timing-function:var(--fast)}
+74.324%{transform:translate(calc(250*var(--u)),calc(141.75*var(--u)));animation-timing-function:linear}
+83.108%{transform:translate(calc(258*var(--u)),calc(146.29*var(--u)));animation-timing-function:var(--fast)}
+93.919%{transform:translate(calc(312*var(--u)),calc(176.9*var(--u)));animation-timing-function:linear}
+97.973%{transform:translate(calc(318*var(--u)),calc(180.31*var(--u)));animation-timing-function:linear}
+100%{transform:translate(calc(324*var(--u)),calc(183.71*var(--u)))}}
+.mouth{position:absolute;inset:0;clip-path:polygon(calc(620*var(--u)) calc(720*var(--u)),calc(682*var(--u)) calc(685*var(--u)),calc(682*var(--u)) calc(728*var(--u)),calc(620*var(--u)) calc(763*var(--u)))}
+@media (prefers-reduced-motion:reduce){.tiles{animation-play-state:paused}}
+</style></head><body>
+<div id="stage">
+  <div class="abs gut" style="left:0"></div>
+  <div class="abs gut" style="left:calc(1136*var(--u))"></div>
+  <div class="abs col"></div>
+  <div class="abs navrule"></div><div class="abs navdiv"></div>
+  <div class="abs word">Boomtax</div>
+  <a class="abs nav" style="left:calc(256*var(--u))">Features</a>
+  <a class="abs nav" style="left:calc(328*var(--u))">Pricing</a>
+  <a class="abs nav" style="left:calc(388*var(--u))">Our Story</a>
+  <a class="abs nav" style="left:calc(465*var(--u))">Contact</a>
+  <a class="abs nav dk" style="left:calc(969*var(--u))">Log in</a>
+  <a class="abs nav dk" style="left:calc(1040*var(--u))">Book a Demo</a>
+  <h1>E-File Your Tax<br>Forms in Seconds.</h1>
+  <p class="abs sub">Upload your data and let Boomtax handle everything from<br>filing to mailing with total accuracy and compliance.</p>
+  <div class="abs btn b1">Try Boomtax Free</div>
+  <div class="abs btn b2">Book a Demo</div>
+  <div class="abs strip"></div>
+  <div class="abs cdiv" style="left:calc(203*var(--u))"></div><div class="abs cdiv" style="left:calc(414*var(--u))"></div>
+  <div class="abs cdiv" style="left:calc(625*var(--u))"></div><div class="abs cdiv" style="left:calc(836*var(--u))"></div>
+  <div class="abs cdiv" style="left:calc(1047*var(--u))"></div>
+  <svg class="full" viewBox="0 0 1252 894" aria-label="partner logos" fill="#dcdee1">
+    <!-- FreshBooks -->
+    <rect x="39" y="446" width="24" height="25" rx="5"/><path d="M47 452h10v4h-6v3h5v4h-5v6h-4z" fill="#fafafa"/>
+    <text x="69" y="465" font-family="Inter" font-weight="600" font-size="17" letter-spacing="-.3">FreshBooks</text>
+    <!-- intuit quickbooks -->
+    <circle cx="254" cy="458" r="11.5"/><text x="254" y="462.5" text-anchor="middle" font-family="Inter" font-weight="700" font-size="11" fill="#fafafa">qb</text>
+    <text x="270" y="451" font-family="Inter" font-weight="600" font-size="9">intuit</text>
+    <text x="269" y="467" font-family="Inter" font-weight="600" font-size="20" letter-spacing="-.2">quickbooks.</text>
+    <!-- Excel -->
+    <rect x="514" y="444" width="22" height="28" rx="1.5" fill="none" stroke="#dcdee1" stroke-width="2"/>
+    <path d="M520 450h14M520 456h14M520 462h14M520 468h14M527 446v24" stroke="#dcdee1" stroke-width="1.6"/>
+    <rect x="503" y="447" width="18" height="21" rx="1.5"/><path d="M507 452l9 11M516 452l-9 11" stroke="#fafafa" stroke-width="2.2"/>
+    <!-- xero -->
+    <text x="731" y="467" text-anchor="middle" font-family="Inter" font-weight="400" font-size="27" letter-spacing="-.5">xero</text>
+    <!-- zoho -->
+    <g fill="none" stroke="#dcdee1" stroke-width="2.6" stroke-linejoin="round">
+      <path d="M906 447l17 2-2 19-17-2z"/><path d="M924 447h17v20h-17z"/><path d="M943 448l15-2 2 20-15 2z"/><path d="M961 447h20v19h-20z"/></g>
+    <text x="943" y="477" text-anchor="middle" font-family="Inter" font-size="5" letter-spacing="2">ZOHO</text>
+    <!-- PDF -->
+    <path d="M1140 442h20l8 8v27h-28z" fill="none" stroke="#dcdee1" stroke-width="1.6"/><path d="M1160 442v8h8" fill="none" stroke="#dcdee1" stroke-width="1.4"/>
+    <text x="1154" y="471" text-anchor="middle" font-family="Inter" font-size="6.5" font-weight="600">PDF</text>
+    <path d="M1150 461c2-6 3-10 4-12 1 2 1 7 6 11-4 0-8 1-10 1z" fill="none" stroke="#dcdee1" stroke-width="1"/>
+  </svg>
+  <div class="abs ground"></div>
+  <div class="clipIn"><svg class="full" id="beltIn" viewBox="0 0 1252 894"></svg><svg class="full tiles" id="tilesIn" viewBox="0 0 1252 894"></svg></div>
+  <svg class="full" id="props" viewBox="0 0 1252 894"></svg>
+  <div class="clipOut"><svg class="full" id="beltOut" viewBox="0 0 1252 894"></svg><svg class="full tiles" id="tilesOut" viewBox="0 0 1252 894"></svg></div>
+  <div class="mouth"><svg class="full tiles" id="tilesMouth" viewBox="0 0 1252 894"></svg></div>
+  <div class="front"><svg class="full tiles" id="tilesFront" viewBox="0 0 1252 894"></svg></div>
+  <svg class="full" id="glow" viewBox="0 0 1252 894" style="pointer-events:none"></svg>
+</div>
+<script>
+// iso plane: local x along e1 (down-right), local y along e2 (down-left); screen up is -y
+const A=0.87,B=0.493, P=(x,y)=>`matrix(${A},${B},${-A},${B},${x},${y})`;
+const R=(x,y)=>`matrix(${A},${-B},0,1,${x},${y})`;   // upright panel facing down-right (along -e2)
+const L=(x,y)=>`matrix(${A},${B},0,1,${x},${y})`;    // upright panel facing down-left (along e1)
+const OL='#c3c6ca', SIDE='#e6e8ea';
+const ICON={grey:['#7b8590','HTM'],red:['#e5252a','PDF'],doc:['#1f6fe0','DOC'],black:['#1b1f24','∧'],xls:['#13774a','XLS'],blue:['#1a7fe8','ZIP'],check:['#1a8cf0','']};
+const UP=`matrix(${.5/A},${-.5/A},${.5/B},${.5/B},0,0)`; // undoes P so a tick reads upright on screen
+function icon(kind,s=1.4){const [c,t]=ICON[kind];
+  let g=`<g transform="scale(${s})"><path d="M-7 -8h9l5 5v11h-14z" fill="${c}"/><path d="M2 -8v5h5" fill="#fff" opacity=".45"/>`;
+  if(kind==='check') g=`<g transform="scale(${s*1.05})"><path d="M-8 -8h11l5 5v11h-16z" fill="#1a8cf0"/><path d="M3 -8v5h5z" fill="#0d6fd0"/><g transform="${UP}"><path d="M-3.4 -.3l2.2 2.4 4.6-5" fill="none" stroke="#52e06a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></g>`;
+  else g+=`<text x="0" y="5" text-anchor="middle" font-family="Inter" font-weight="700" font-size="${kind==='black'?7:4.6}" fill="#fff">${t}</text>`;
+  return g+'</g>';}
+function tile(x,y,kind,s=31,h=5,side='#dcdfe2',edge='#b8bcc1'){const r=s/2;
+  return `<g transform="translate(0,${h})"><g transform="${P(x,y)}"><rect x="${-r}" y="${-r}" width="${s}" height="${s}" rx="5" fill="${side}" stroke="${edge}" stroke-width="1.1"/></g></g>`+
+    `<g transform="${P(x,y)}"><rect x="${-r}" y="${-r}" width="${s}" height="${s}" rx="5" fill="#fff" stroke="${edge}" stroke-width="1.1"/>${kind?icon(kind):''}</g>`;}
+function slab(x,y,x0,x1,w,h){ // belt top face from x0..x1 along e1, width w across, side thickness h
+  return `<g transform="translate(0,${h})"><g transform="${P(x,y)}"><rect x="${x0}" y="${-w/2}" width="${x1-x0}" height="${w}" fill="${SIDE}" stroke="${OL}" stroke-width=".8"/></g></g>`+
+    `<path d="M${x+x0*A+w/2*A},${y+x0*B-w/2*B}" />`+
+    `<g transform="${P(x,y)}"><rect x="${x0}" y="${-w/2}" width="${x1-x0}" height="${w}" fill="#fff" stroke="${OL}" stroke-width=".8"/></g>`;}
+function block(x,y,lx,ly,h,r=6){ // box: top face local [0,lx]x[-ly,0] at screen (x,y) = left corner, height h
+  const bx=x+lx*A, by=y+lx*B, tx=x+ly*A, ty=y-ly*B, rx=bx+ly*A, ry=by-ly*B;
+  return `<path d="M${x},${y}L${bx},${by}L${bx},${by+h}L${x},${y+h}Z" fill="#e5e6e8" stroke="${OL}" stroke-width=".9" stroke-linejoin="round"/>`+
+    `<path d="M${bx},${by}L${rx},${ry}L${rx},${ry+h}L${bx},${by+h}Z" fill="#f3f4f5" stroke="${OL}" stroke-width=".9" stroke-linejoin="round"/>`+
+    `<g transform="${P(x,y)}"><rect x="0" y="${-ly}" width="${lx}" height="${ly}" rx="${r}" fill="#fff" stroke="${OL}" stroke-width=".9"/></g>`;}
+const order=['grey','red','doc','black','xls','blue'];
+// input belt: red tile centre (367,562) at 1.9s; base = that minus the belt offset at 1.9s (89.2, 50.6)
+let s=slab(361,559,-330,215,52,8); document.getElementById('beltIn').innerHTML=s;
+s=''; for(let i=-10;i<=5;i++) s+=tile(277.8+54*i,505.4+30.6*i,order[((i+1)%6+6)%6]);
+document.getElementById('tilesIn').innerHTML=s;
+// output belt: tile in the mouth at (661,732) at 1.9s; inside the opening the same tiles show green
+document.getElementById('beltOut').innerHTML=slab(654,737,12,560,52,8);
+s=''; let g=''; for(let i=-6;i<=9;i++){s+=tile(571.8+54*i,681.4+30.6*i,'check');
+  // the lime is emitted by the tile: a blurred lime field rides with it, so the opening is pale at 2.4s and full lime at 2.95s
+  g+=`<g transform="${P(571.8+54*i,681.4+30.6*i)}"><rect x="-21" y="-21" width="42" height="42" rx="8" fill="#c3f033" opacity=".85" filter="url(#emit)"/><rect x="-15.5" y="-15.5" width="31" height="31" rx="5" fill="#d2f64a" stroke="#b5e43a" stroke-width="1.5"/><rect x="-11.5" y="-11.5" width="23" height="23" rx="2.5" fill="#05d43c"/><g transform="${UP}"><path d="M-5 0l3 3.5 6.5-7" fill="none" stroke="#7ee870" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g></g>`;}
+document.getElementById('tilesOut').innerHTML=s; document.getElementById('tilesMouth').innerHTML=`<defs><filter id="emit" x="-.5" y="-.5" width="2" height="2"><feGaussianBlur stdDeviation="4.5"/></filter></defs>`+g; document.getElementById('tilesFront').innerHTML=s;
+// props
+const W='fill="none" stroke="#b9bcc0" stroke-width="1"';
+let p=`<g ${W}><path d="M556 726v36l69 60-120 72"/><path d="M453 837v14l50 43"/><path d="M689 691v26"/>
+  <path d="M719 592v14l30 17-33 27 33 22-16 12 12 9-45 26-11-6v-12"/>
+  <path d="M839 734v40" stroke-dasharray="2 3"/></g>
+  <ellipse cx="846" cy="792" rx="24" ry="5" transform="rotate(-28 846 792)" fill="#cfd2d6" opacity=".55" filter="url(#soft2)"/>`;
+p+=tile(214,560,'grey',30);
+p+=tile(570,555,'xls',30);
+// paper stack: mid-grey sheet edges (#bec1c2) every 3px, per the 1.9s column at x=330
+for(let k=0;k<14;k++) p+=`<g transform="translate(0,${-k*3})">${tile(341,697,null,34,3,'#bec1c2','#a9adb0')}</g>`;
+p+=`<g transform="${P(341,658)}">${icon('blue',1.6)}</g>`;
+// mail station: thick rounded base, big grey envelope, upright blue screen with two green squares
+p+=block(692,566,66,67,18,10);
+p+=`<g transform="${P(728,566)}"><rect x="-13" y="-10" width="26" height="20" rx="2.5" fill="#9ea4aa"/><path d="M-13 -10l26 20M13 -10l-26 20" stroke="#e9ecee" stroke-width="1.6"/></g>`;
+p+=`<circle cx="719" cy="592" r="2.2" fill="#6d7378"/>`;
+p+=`<g transform="${L(744,540)}"><rect x="0" y="-33" width="55" height="33" rx="2.5" fill="#e7e9eb" stroke="${OL}"/><rect x="1.5" y="-31.5" width="51" height="30" rx="2" fill="url(#scr)"/>
+  <rect x="7" y="-27" width="6" height="6" rx="1.2" fill="#46c46e" stroke="#e8f4ff" stroke-width="1"/><rect x="7" y="-17" width="6" height="6" rx="1.2" fill="#46c46e" stroke="#e8f4ff" stroke-width="1"/></g>`;
+// check tablet: grey side edge, blue face, thin green ring round a green check
+p+=`<g transform="${R(809,733)}"><rect x="0" y="-55" width="4" height="55" fill="#c9ccd0"/></g>`;
+p+=`<g transform="${R(812,732)}"><rect x="0" y="-55" width="56" height="55" rx="2.5" fill="#e3e6e9" stroke="${OL}"/><rect x="1.5" y="-53.5" width="53" height="52" rx="2" fill="url(#scr)"/>
+  <circle cx="28" cy="-28" r="15" fill="none" stroke="#4fe36b" stroke-width="1" opacity=".9"/>
+  <path d="M20 -27l6 7 10-15" fill="none" stroke="#3fdc5a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>`;
+// upload station: thick base, large yellow bolt, upright screen with a green 100% ring
+p+=block(428,802,68,63,20,10);
+p+=`<circle cx="453" cy="837" r="2.2" fill="#6d7378"/>`;
+p+=`<g transform="${P(468,800)} scale(1.4)"><path d="M-14 -3h14l-4 -6 18 9h-14l4 6z" fill="#f2bf26"/></g>`;
+p+=`<g transform="${L(480,793)}"><rect x="0" y="-46" width="55" height="46" rx="2.5" fill="#e7e9eb" stroke="${OL}"/><rect x="1.5" y="-44.5" width="51" height="43" rx="2" fill="url(#scr)"/>
+  <circle cx="26" cy="-24" r="13" fill="none" stroke="#7ce98c" stroke-width="2.6"/><circle cx="26" cy="-24" r="15.5" fill="none" stroke="#c9f5cf" stroke-width="1"/>
+  <text x="26" y="-21.5" text-anchor="middle" font-family="Inter" font-weight="700" font-size="7" fill="#fff">100%</text>
+  <circle cx="46" cy="-7" r="2" fill="none" stroke="#fff" stroke-width="1"/></g>`;
+// machine
+p+=block(528,674,84,112,52,9);
+// badge lies in the top face: black rounded square, white "b"; green glowing arrows above and below along e1
+p+=`<g transform="${P(612,662)}"><g filter="url(#soft2)" fill="#c2f5b4"><rect x="-37" y="-7" width="20" height="14" rx="7"/><rect x="17" y="-7" width="20" height="14" rx="7"/></g>
+  <g fill="none" stroke="#2fc94f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(-27,0) ${UP}"><path d="M-4.5 0h9M2 -2.5l2.5 2.5-2.5 2.5"/></g><g transform="translate(27,0) ${UP}"><path d="M-4.5 0h9M2 -2.5l2.5 2.5-2.5 2.5"/></g></g>
+  <rect x="-15" y="-15" width="30" height="30" rx="7" fill="#1f2a32"/>
+  <text transform="rotate(-90)" x="0" y="8" text-anchor="middle" font-family="Inter" font-weight="700" font-size="24" fill="#fff">b</text></g>
+  <circle cx="678" cy="657" r="3.6" fill="#5cc263" stroke="#3f9a49" stroke-width=".8"/>`;
+p+=`<circle cx="556" cy="726" r="2" fill="#6d7378"/><circle cx="689" cy="691" r="1.8" fill="#6d7378"/>`;
+// mouth opening on the right face: white left reveal, lime interior brightest at the floor, no outline
+p+=`<path d="M617 721L622 719V762L617 765Z" fill="#fff"/><path d="M620 720L682 685V728L620 763Z" fill="url(#mouthG)"/>`;
+document.getElementById('props').innerHTML=`<defs><linearGradient id="scr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8cc8ff"/><stop offset="1" stop-color="#1f86f2"/></linearGradient>
+  <linearGradient id="mouthG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d2e3a6"/><stop offset=".25" stop-color="#d5ea96"/><stop offset=".6" stop-color="#ccE28d"/><stop offset=".75" stop-color="#e8fba6"/><stop offset="1" stop-color="#eef9c4"/></linearGradient>
+  <filter id="soft" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="1.2"/></filter>
+  <filter id="soft2" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="2"/></filter></defs>`+p;
+// mouth glow: soft lime halo spilling past the opening (strongest at the rim, fading over ~10px), above the belt
+document.getElementById('glow').innerHTML=`<defs><filter id="halo" x="-.5" y="-.5" width="2" height="2"><feGaussianBlur stdDeviation="6"/></filter></defs>
+  <path d="M620 722L682 687V728L620 763Z" fill="#d8f74a" opacity=".22" filter="url(#halo)"/>
+  <path d="M606 764L682 722L700 740L624 782Z" fill="#eafa8c" opacity=".55" filter="url(#halo)"/>
+  <path d="M606 722L622 714V766L606 772Z" fill="#e2f86a" opacity=".35" filter="url(#halo)"/>`;
+</script>
+</body></html>

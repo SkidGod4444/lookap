@@ -1,0 +1,238 @@
+{
+ "slug": "1dyli6-boomtax-cta-and-footer",
+ "title": "Boomtax CTA and Footer",
+ "author": "lookap",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "review",
+ "ended": "round limit",
+ "bestRound": 3,
+ "rank": 87,
+ "allPass": false,
+ "rubric": {
+  "pass": 49,
+  "fail": 0,
+  "unsure": 0,
+  "of": 49,
+  "failed": []
+ },
+ "score": 84,
+ "motion": "STATIC: the clip moves between the scored moments and the render does not",
+ "imagery": [
+  {
+   "name": "HIPAA badge",
+   "class": "structured",
+   "box": [
+    507,
+    130,
+    152,
+    95
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "SOC 2 puck",
+   "class": "structured",
+   "box": [
+    457,
+    230,
+    115,
+    85
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "CERTIFIED bar",
+   "class": "structured",
+   "box": [
+    636,
+    172,
+    140,
+    118
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "COMODO badge",
+   "class": "structured",
+   "box": [
+    798,
+    133,
+    152,
+    95
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "IRS badge",
+   "class": "structured",
+   "box": [
+    748,
+    236,
+    118,
+    88
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "PCI DSS badge",
+   "class": "structured",
+   "box": [
+    924,
+    205,
+    152,
+    105
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "connector wires + pulses",
+   "class": "css",
+   "box": [
+    560,
+    180,
+    390,
+    145
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "hairline stripe fields",
+   "class": "css",
+   "box": [
+    0,
+    0,
+    1252,
+    606
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "Boomtax wordmark",
+   "class": "structured",
+   "box": [
+    145,
+    412,
+    128,
+    30
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 14.2,
+   "turns": 51,
+   "costUsd": 3.2488976,
+   "tokens": {
+    "written": 48147,
+    "read": 2442801
+   },
+   "judgeUsd": 1.029,
+   "ended": "completed",
+   "score": 83,
+   "rank": 81,
+   "allPass": false,
+   "rubric": {
+    "pass": 45,
+    "fail": 4,
+    "unsure": 0,
+    "of": 49
+   },
+   "motion": "STATIC: the clip moves between the scored moments and the render does not",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 6.6,
+   "turns": 37,
+   "costUsd": 1.0232907999999998,
+   "tokens": {
+    "written": 13635,
+    "read": 1009202
+   },
+   "judgeUsd": 0.645,
+   "ended": "completed",
+   "score": 84,
+   "rank": 84,
+   "allPass": false,
+   "rubric": {
+    "pass": 47,
+    "fail": 1,
+    "unsure": 1,
+    "of": 49
+   },
+   "motion": "STATIC: the clip moves between the scored moments and the render does not",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 6.9,
+   "turns": 33,
+   "costUsd": 1.0764409999999998,
+   "tokens": {
+    "written": 13943,
+    "read": 1464706
+   },
+   "judgeUsd": 0.668,
+   "ended": "completed",
+   "score": 84,
+   "rank": 87,
+   "allPass": false,
+   "rubric": {
+    "pass": 49,
+    "fail": 0,
+    "unsure": 0,
+    "of": 49
+   },
+   "motion": "STATIC: the clip moves between the scored moments and the render does not",
+   "kept": true
+  },
+  {
+   "round": 4,
+   "minutes": 8.1,
+   "turns": 58,
+   "costUsd": 1.4968135999999996,
+   "tokens": {
+    "written": 20591,
+    "read": 2216859
+   },
+   "judgeUsd": 0.623,
+   "ended": "completed",
+   "score": 84,
+   "rank": 83,
+   "allPass": false,
+   "rubric": {
+    "pass": 46,
+    "fail": 1,
+    "unsure": 2,
+    "of": 49
+   },
+   "motion": "STATIC: the clip moves between the scored moments and the render does not",
+   "kept": false
+  }
+ ],
+ "minutes": 35.8,
+ "tokens": {
+  "written": 96316,
+  "read": 7133568
+ },
+ "cost": {
+  "codingUsd": 6.85,
+  "judgeUsd": 2.96,
+  "rubricUsd": 0.701,
+  "totalUsd": 10.51
+ },
+ "notes": true,
+ "at": "2026-10-24T09:26:23.876Z"
+}

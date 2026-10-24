@@ -1,0 +1,364 @@
+{
+ "slug": "1fu13k-boomtax-forms-grid",
+ "title": "Boomtax Forms Grid",
+ "measured": false,
+ "recipe": null,
+ "what": "An isometric field of tax form cards (1099s, W-2s, ACA) fanning out from a central check badge with a soft green glow.",
+ "frame": {
+  "ratio": 1.925,
+  "shape": "landscape",
+  "media": "clip"
+ },
+ "tone": "light surface, dark type",
+ "traits": [
+  "Features",
+  "Isometric",
+  "Grid"
+ ],
+ "section": "Features",
+ "steps": [
+  "Call see_design for the frame and read the layout from it: regions, alignment, type scale, corner radii, spacing rhythm.",
+  "The media is a clip: name each state you can see (rest, hover, press, open) and the order they occur in.",
+  "Build with the project's own stack and tokens; match proportion and hierarchy before matching pixels.",
+  "A draft measurement is attached: its phases, moves and palette are measured from the clip; its boxes are a first pass to check against the keyframes."
+ ],
+ "draft": {
+  "frame": {
+   "w": 1252,
+   "h": 650
+  },
+  "duration": 3.17,
+  "phases": [
+   [
+    0.55,
+    0.55
+   ],
+   [
+    0.65,
+    0.95
+   ],
+   [
+    1.05,
+    2.45
+   ],
+   [
+    2.55,
+    2.55
+   ],
+   [
+    2.65,
+    2.65
+   ],
+   [
+    2.75,
+    2.75
+   ],
+   [
+    2.85,
+    2.85
+   ],
+   [
+    2.95,
+    2.95
+   ],
+   [
+    3.05,
+    3.05
+   ]
+  ],
+  "keyframes": [
+   {
+    "name": "kf1",
+    "at": 0.25,
+    "hold": [
+     0,
+     0.5
+    ]
+   }
+  ],
+  "moments": [
+   {
+    "at": 0.25,
+    "name": "kf1"
+   },
+   {
+    "at": 0.8,
+    "name": "mid-phase"
+   },
+   {
+    "at": 1.75,
+    "name": "mid-phase"
+   }
+  ],
+  "anchors": [
+   {
+    "phase": [
+     0.65,
+     0.95
+    ],
+    "read": "top and bottom and right fixed, left +16",
+    "moved": {
+     "top": 0,
+     "bottom": 0,
+     "left": 16,
+     "right": -4
+    },
+    "reliable": true
+   },
+   {
+    "phase": [
+     1.05,
+     2.45
+    ],
+    "read": "top and bottom fixed, left +12, right +40",
+    "moved": {
+     "top": 0,
+     "bottom": 0,
+     "left": 12,
+     "right": 40
+    },
+    "reliable": true
+   }
+  ],
+  "background": "#fafafa",
+  "palette": [
+   {
+    "hex": "#fafafa",
+    "share": 83.3
+   },
+   {
+    "hex": "#ebebeb",
+    "share": 4.8
+   },
+   {
+    "hex": "#ebf6e8",
+    "share": 2.4
+   },
+   {
+    "hex": "#d8f4c8",
+    "share": 1.1
+   },
+   {
+    "hex": "#e3f6da",
+    "share": 1
+   },
+   {
+    "hex": "#dcf4d5",
+    "share": 0.6
+   },
+   {
+    "hex": "#d2f5b9",
+    "share": 0.6
+   },
+   {
+    "hex": "#d9dbd9",
+    "share": 0.6
+   }
+  ],
+  "elements": [
+   {
+    "box": [
+     502,
+     326,
+     260,
+     223
+    ],
+    "fill": "#d8f4c7"
+   },
+   {
+    "box": [
+     614,
+     359,
+     144,
+     83
+    ],
+    "fill": "#d8f6c5"
+   },
+   {
+    "box": [
+     537,
+     453,
+     136,
+     59
+    ],
+    "fill": "#d7f3ce"
+   },
+   {
+    "box": [
+     518,
+     406,
+     68,
+     64
+    ],
+    "fill": "#d7f4c6"
+   }
+  ],
+  "motion": [
+   {
+    "element": "#d8f4c7",
+    "box": [
+     502,
+     326,
+     260,
+     223
+    ],
+    "moves": [
+     {
+      "from": 0,
+      "to": 0.05,
+      "dTop": 16,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 0.2,
+      "to": 1.6,
+      "dTop": -4,
+      "dLeft": -47,
+      "ms": 1400
+     },
+     {
+      "from": 1.65,
+      "to": 2.45,
+      "dTop": -8,
+      "dLeft": 47,
+      "ms": 800
+     },
+     {
+      "from": 2.5,
+      "to": 2.8,
+      "dTop": -4,
+      "dLeft": -55,
+      "ms": 300
+     }
+    ]
+   },
+   {
+    "element": "#d8f6c5",
+    "box": [
+     614,
+     359,
+     144,
+     83
+    ],
+    "moves": [
+     {
+      "from": 0,
+      "to": 0.05,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 0.75,
+      "to": 0.9,
+      "dTop": 2,
+      "dLeft": 0,
+      "ms": 150
+     },
+     {
+      "from": 1.2,
+      "to": 1.25,
+      "dTop": -3,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 1.35,
+      "to": 1.4,
+      "dTop": -1,
+      "dLeft": 0,
+      "ms": 50
+     }
+    ]
+   },
+   {
+    "element": "#eaf7e6",
+    "box": [
+     712,
+     410,
+     100,
+     82
+    ],
+    "moves": [
+     {
+      "from": 2.3,
+      "to": 2.35,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     }
+    ]
+   },
+   {
+    "element": "#d7f3ce",
+    "box": [
+     537,
+     453,
+     136,
+     59
+    ],
+    "moves": [
+     {
+      "from": 1,
+      "to": 1.05,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 2.7,
+      "to": 2.75,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     }
+    ]
+   }
+  ],
+  "coverage": "flat regions found; boxes and fills are usable as given",
+  "confidence": {
+   "phases": "measured: sampled every 50 ms",
+   "motion": "measured: moves of the first keyframe's big parts, edges read at full resolution; dTop and dLeft are the distance in source px",
+   "palette": "measured for areas; small things do not reach it",
+   "anchors": "measured where the content stands clear of its background (reliable true): the box of everything that is not background at a phase's start and end, and which edges moved; where the content fills the frame the field says so and look_at what=track is the way to read an edge",
+   "elements": "draft: flat regions at the first keyframe; nested parts split or merge, text and thin parts are missing; check each box against the keyframe (see_design with at) before trusting it"
+  }
+ },
+ "motion": {
+  "status": "draft measured: draft.phases say when things move, draft.anchors which edges, draft.motion how far; the presets below are only for states the clip never shows",
+  "enter": "fade up 12 px, 320 ms, cubic-bezier(0.2, 0.8, 0.2, 1)",
+  "hover": "colour or ring only, 150 ms",
+  "press": "scale 0.98, 120 ms",
+  "reducedMotion": "respect prefers-reduced-motion: no entrance, instant hover"
+ },
+ "text": null,
+ "notes": [
+  {
+   "slug": "motion-from-stills",
+   "title": "Giving motion to a still, honestly"
+  }
+ ],
+ "credit": {
+  "author": "lookap",
+  "x": null,
+  "source": "https://www.boomtax.com/"
+ },
+ "method": [
+  "Fetch the clip; read size, fps and duration from the container.",
+  "Dump frames at 2 fps plus a contact sheet; pick the idle and active moments and dump those at full resolution.",
+  "Convert the chosen frames to raw RGB and measure: bounding boxes of every element, exact hex at flat regions, luminance profiles across edges for the lighting, a per-frame luma trace of the moving region for timing.",
+  "Build with one unit, --u, equal to one source pixel at the design size, and write every size as calc(N * var(--u)).",
+  "Light rounded objects with inset box-shadows on one overlay (rim, near glow, wide falloff); stacked linear gradients show a seam at the corner.",
+  "Render the build headless at --u: 1px, crop to the frame, put it beside the source frame, and look. Fix the three largest differences. Repeat."
+ ],
+ "build": null,
+ "oneShot": "No measured recipe, but a draft: build from draft.elements and draft.motion, look at each keyframe with see_design (at), then call check_rebuild with a screenshot; its regions are reliable, its element rows are as good as the draft boxes.",
+ "keyframeFiles": [
+  {
+   "name": "kf1",
+   "at": 0.25,
+   "file": "public/drafts/btform/kf1.jpg"
+  }
+ ]
+}

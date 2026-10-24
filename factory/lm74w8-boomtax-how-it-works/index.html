@@ -1,0 +1,184 @@
+<!doctype html>
+<!--
+  Boomtax How It Works, rebuilt by lookap from the clip.
+  Credit: lookap, after https://www.boomtax.com/
+  Nothing sampled: every illustration, the cursor and the marquee are original inline SVG/CSS drawn from the 2s frame.
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style id="patches"></style>
+<style>
+html,body{margin:0;overflow:hidden;background:#fbfbfb}
+#stage{--u:1px;position:relative;width:calc(1252*var(--u));height:calc(468*var(--u));background:#fbfbfb;overflow:hidden;font-family:"IBM Plex Sans",system-ui,sans-serif}
+.abs{position:absolute}
+.vl{position:absolute;width:calc(1*var(--u));background:#ededed}
+.hl{position:absolute;height:calc(1*var(--u));background:#ededed}
+h1{position:absolute;margin:0;left:calc(165*var(--u));top:calc(51*var(--u));font:400 calc(44*var(--u))/calc(49*var(--u)) "Libre Baskerville",Georgia,serif;color:#08101c;letter-spacing:calc(-0.9*var(--u));-webkit-text-stroke:calc(0.45*var(--u)) #fbfbfb}
+.intro{left:calc(808*var(--u));top:calc(49*var(--u));font-size:calc(13.4*var(--u));line-height:calc(19.5*var(--u));color:#6b7077;margin:0}
+.btn{position:absolute;top:calc(105*var(--u));height:calc(40*var(--u));box-sizing:border-box;display:flex;align-items:center;justify-content:center;font-size:calc(13*var(--u));font-weight:500;border-radius:calc(2*var(--u))}
+.b1{left:calc(808*var(--u));width:calc(131*var(--u));background:#0196fc;color:#f2faff;font-weight:400;font-size:calc(13.4*var(--u));letter-spacing:calc(0.15*var(--u))}
+.b2{left:calc(949*var(--u));width:calc(104*var(--u));background:#fff;color:#101318;font-weight:600;border:calc(1*var(--u)) solid #ededed}
+.t{position:absolute;top:calc(410*var(--u));font:400 calc(15.8*var(--u))/calc(24*var(--u)) "Libre Baskerville",Georgia,serif;color:#141b27;margin:0;letter-spacing:calc(-0.3*var(--u));-webkit-text-stroke:calc(0.3*var(--u)) #fbfbfb}
+.s{position:absolute;top:calc(434*var(--u));font-size:calc(13.7*var(--u));line-height:calc(18*var(--u));color:#6b7077;margin:0}
+svg.art{position:absolute;left:0;top:0;width:calc(1252*var(--u));height:calc(468*var(--u))}
+.st{stroke:#cdcfd2;stroke-width:1;stroke-linejoin:round}
+.wire{fill:none;stroke:#c9cbce;stroke-width:1.2}
+.pulse{fill:none;stroke-width:2.6;stroke-opacity:.9;stroke-linecap:round;stroke-dasharray:0 1000;opacity:0}
+#mq{position:absolute;left:calc(27*var(--u));top:calc(218*var(--u));width:calc(88*var(--u));height:calc(124*var(--u));border:calc(1.5*var(--u)) solid #55b2ea;box-sizing:border-box}
+#mq i{position:absolute;width:calc(5*var(--u));height:calc(5*var(--u));box-sizing:border-box;background:#bfe0f5;border:calc(1*var(--u)) solid #4fa9de;margin:calc(-2.75*var(--u))}
+#cur{filter:drop-shadow(calc(2*var(--u)) calc(2.5*var(--u)) calc(2.5*var(--u)) rgba(0,0,0,.3))}
+.pulse.halo{stroke-width:6;stroke-opacity:.35;filter:blur(calc(2.5*var(--u)))}
+#cur{position:absolute;left:calc(153*var(--u));top:calc(385*var(--u));width:calc(13*var(--u));height:calc(19*var(--u));opacity:0}
+#cur svg{width:100%;height:100%;display:block}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="vl" style="left:calc(116*var(--u));top:0;height:calc(193*var(--u))"></div>
+  <div class="vl" style="left:calc(1136*var(--u));top:0;height:calc(193*var(--u))"></div>
+  <div class="hl" style="left:0;top:calc(193*var(--u));width:100%"></div>
+  <div class="vl" style="left:calc(414*var(--u));top:calc(193*var(--u));height:calc(275*var(--u))"></div>
+  <div class="vl" style="left:calc(836*var(--u));top:calc(193*var(--u));height:calc(275*var(--u))"></div>
+
+  <h1>We Made Tax<br>Season Simple.</h1>
+  <p class="abs intro">Easily manage your 1099s, W-2s, and ACA<br>forms in one simple, automated workflow.</p>
+  <a class="btn b1">Try Boomtax Free</a>
+  <a class="btn b2">Book a Demo</a>
+
+  <h3 class="t" style="left:calc(8*var(--u))">Drag &amp; Drop Your Data</h3>
+  <p class="s" style="left:calc(8*var(--u))">We'll check to make sure there are no errors.</p>
+  <h3 class="t" style="left:calc(431*var(--u))">Send to Recipients</h3>
+  <p class="s" style="left:calc(431*var(--u))">We'll print, fold, stuff and mail your recipient copies.</p>
+  <h3 class="t" style="left:calc(853*var(--u))">E-File and Done!</h3>
+  <p class="s" style="left:calc(853*var(--u))">We'll e-file your forms in less than 15 minutes.</p>
+
+  <svg class="art" viewBox="0 0 1252 468" aria-hidden="true">
+    <defs>
+      <linearGradient id="docg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2f3f4"/><stop offset="1" stop-color="#e3e4e6"/></linearGradient>
+      <linearGradient id="tagg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7cc6ff"/><stop offset="1" stop-color="#0a8cf0"/></linearGradient>
+      <filter id="bl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.5"/></filter>
+      <filter id="gl" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      <g id="tile"><path class="st" d="M-27 0 L0 -14 L27 0 L27 7 L0 21 L-27 7Z" fill="#dfe0e2"/><path class="st" d="M-27 0 L0 -14 L27 0 L0 14Z" fill="#fff"/></g>
+      <path id="bdoc" d="M-17 -1 L4 -12 L12 -8 L17 -2 L-4 9Z"/>
+    </defs>
+
+    <!-- column 1 -->
+    <line x1="58" y1="377" x2="102" y2="356" stroke="#c9cacc" stroke-width="7" stroke-linecap="round" filter="url(#bl)" opacity=".7"/>
+    <path class="st" d="M41 252 L47 248 L47 340 L41 343Z" fill="#d4d5d7"/>
+    <path class="st" d="M47 248 L99 222 L102 228 L102 312 L50 340 L47 340Z" fill="url(#docg)"/>
+    <g stroke="#9ea1a5" stroke-width="1.4" stroke-linecap="round">
+      <path d="M56 255 L84 241 M56 261 L90 244 M56 270 L74 261 M78 259 L92 252 M56 276 L92 258 M56 282 L88 266 M56 288 L80 276 M56 300 L68 294"/>
+    </g>
+    <path d="M60 326 C62 316 66 310 64 320 C62 332 58 330 64 324 C67 321 70 322 73 319" fill="none" stroke="#8f9296" stroke-width="1.2"/>
+    <path d="M147 327 L207 290 L215 286 L277 251 L372 306 L242 382Z M181 270 L207 288" fill="none" stroke="#b9bbbe" stroke-width="1.1" stroke-dasharray="4 3"/>
+    <use href="#tile" x="167" y="258"/>
+    <g transform="translate(167 257) scale(1.25 .75)" fill="#0b8df0">
+      <circle r="5.6"/><g stroke="#0b8df0" stroke-width="3"><path d="M0 -8 V8 M-8 0 H8 M-5.7 -5.7 L5.7 5.7 M5.7 -5.7 L-5.7 5.7"/></g><circle r="2.2" fill="#fff"/>
+    </g>
+    <path d="M240 330 L300 352 L352 318 M182 344 L242 386 L292 356" fill="none" stroke="#d7d8da" stroke-width="6" filter="url(#bl)" opacity=".8"/>
+    <g>
+      <path class="st" d="M232 298 L277 269 L345 314 L300 340Z" fill="#e3e4e6"/>
+      <path class="st" d="M232 294 L277 265 L345 310 L300 336Z" fill="#eeeff0"/>
+      <path class="st" d="M232 290 L277 261 L345 306 L300 332Z" fill="#e6e7e9"/>
+      <path class="st" d="M232 286 L277 257 L345 302 L300 328 Z" fill="#fff"/>
+      <ellipse cx="289" cy="292" rx="21" ry="14" fill="none" stroke="#9fe8b5" stroke-width="2"/>
+      <path d="M284 285 L289 298 L297 291" fill="none" stroke="#5fd385" stroke-width="3.4" stroke-linejoin="round"/>
+    </g>
+    <g>
+      <path class="st" d="M175 331 L220 300 L287 344 L242 372 L242 379 L175 338Z" fill="#e5e6e8"/>
+      <path class="st" d="M287 344 L287 351 L242 379 L242 372Z" fill="#dadbdd"/>
+      <path class="st" d="M175 331 L220 300 L287 344 L242 372Z" fill="#fff"/>
+      <ellipse cx="230" cy="335" rx="20" ry="13" fill="none" stroke="#e6e7e8" stroke-width="1.4"/>
+      <path d="M225 329 L230 341 L238 335" fill="none" stroke="#bdbfc2" stroke-width="3" stroke-linejoin="round"/>
+    </g>
+
+    <!-- column 2 -->
+    <g id="env">
+      <path class="st" d="M452 272 L459 268 L459 336 L452 340Z" fill="#d5d6d8"/>
+      <path class="st" d="M459 268 L534 225 L537 229 L537 292 L461 336 L459 336Z" fill="#e8e8e9"/>
+    </g>
+    <path class="st" d="M474 271 L481 267 L481 334 L474 338Z" fill="#d5d6d8"/>
+    <path class="st" d="M481 267 L556 222 L559 227 L559 290 L483 334 L481 334Z" fill="#f3f3f4"/>
+    <path d="M482 268 L522 283 L557 225 M482 333 L512 292 M558 289 L536 279" fill="none" stroke="#b5b7ba" stroke-width="1"/>
+    <path class="wire" id="w1" d="M526 302 L528 318 L551 313 L579 327 L607 303"/>
+    <path class="pulse" id="p1" pathLength="100" d="M526 302 L528 318 L551 313 L579 327 L607 303" stroke="#8ee8a4" filter="url(#gl)"/>
+    <path class="wire" id="w2" d="M653 283 L686 257 L704 259 L714 272 L674 287 L676 302 L629 329 L674 356 L690 346"/>
+    <path class="pulse" id="p2" pathLength="100" d="M653 283 L686 257 L704 259 L714 272 L674 287 L676 302 L629 329 L674 356 L690 346" stroke="#3ee07a" filter="url(#gl)"/>
+    <path class="st" d="M593 280 V297 A31 19 0 0 0 655 297 V280Z" fill="#e7e8ea"/>
+    <ellipse class="st" cx="624" cy="280" rx="31" ry="19" fill="#fff"/>
+    <ellipse cx="624" cy="279" rx="21" ry="12.5" fill="none" stroke="#9fe6b6" stroke-width="1.4"/>
+    <path d="M619 273 L623 284 L630 276" fill="none" stroke="#7fcf99" stroke-width="2.4" stroke-linejoin="round"/>
+    <circle cx="609" cy="302" r="2.2" fill="#6d7075"/>
+    <g transform="translate(709 333)">
+      <use href="#tile" y="-2"/><use href="#tile" y="-5"/><use href="#tile" y="-8"/><use href="#tile" y="-11"/><use href="#tile" y="-14"/><use href="#tile" y="-17"/>
+      <use href="#bdoc" y="-17" fill="#0a8df2"/>
+    </g>
+    <g transform="translate(762 312)"><use href="#tile" y="-2"/><use href="#tile" y="-5"/><use href="#bdoc" y="-5" fill="#0a8df2"/></g>
+    <g transform="translate(759 360)"><use href="#tile" y="-2"/><use href="#tile" y="-5"/><use href="#bdoc" y="-5" fill="#0a8df2"/></g>
+
+    <!-- column 3 -->
+    <line x1="912" y1="370" x2="950" y2="347" stroke="#cfd0d2" stroke-width="6" stroke-linecap="round" filter="url(#bl)" opacity=".7"/>
+    <g transform="rotate(14 918 278)">
+      <ellipse cx="918" cy="278" rx="40" ry="56" fill="none" stroke="#b9bbbe" stroke-width="13"/>
+      <ellipse cx="918" cy="278" rx="40" ry="56" fill="none" stroke="#ebeced" stroke-width="11"/>
+      <ellipse cx="923" cy="278" rx="35" ry="51" fill="none" stroke="#c9cbce" stroke-width="1.2"/>
+    </g>
+    <ellipse class="st" cx="923" cy="227" rx="6" ry="3.5" fill="#f2f2f3"/>
+    <path class="wire" d="M928 281 L928 343 L991 377 L1036 355 L1061 362 L1066 350"/>
+    <path class="pulse" id="p3" pathLength="100" d="M928 281 L928 343 L991 377 L1036 355 L1061 362 L1066 350" stroke="#2b9cf5" filter="url(#gl)"/>
+    <g transform="translate(928 281)"><g id="tag"><g transform="translate(-928 -281)">
+      <path d="M923 252 C924 243 934 239 942 244 C950 249 953 258 950 268 C944 273 934 276 924 276Z" fill="url(#tagg)" stroke="#2b8fe0" stroke-width=".8"/>
+      <path d="M924 276 L928 281" stroke="#9a9da1" stroke-width="1"/>
+    </g></g></g>
+    <circle cx="928" cy="281" r="2" fill="#fff" stroke="#9a9da1"/>
+    <use href="#tile" x="986" y="304"/>
+    <g transform="translate(986 303)"><path d="M-14 0 L5 -10 L14 -5 L-5 5Z" fill="#1d7a3c"/><path d="M-6 0 L4 -5 M-9 1 L1 -4 M-3 2 L7 -3" stroke="#bfe5cb" stroke-width="1.2"/></g>
+    <use href="#tile" x="1108" y="279"/>
+    <g transform="translate(1108 277)"><path d="M-14 0 L5 -10 L14 -5 L-5 5Z" fill="#647181"/><path d="M-8 -4 L2 -9 L7 -6 L-3 -1Z" fill="#8995a3"/></g>
+    <path class="st" d="M1041 322 L1041 347 L1094 375 L1094 350Z" fill="#ecedef"/>
+    <path class="st" d="M1094 350 L1094 375 L1151 343 L1151 318Z" fill="#dfe0e3"/>
+    <path class="st" d="M1041 322 L1098 290 L1151 318 L1094 350Z" fill="#fff"/>
+    <circle cx="1066" cy="347" r="2.6" fill="#5a5e63"/>
+    <path d="M1100 309 L1088 322 L1097 322 L1091 333 L1108 318 L1099 318 L1104 309Z" fill="#f5c330" stroke="#e9ac10" stroke-width=".6"/>
+    <use href="#tile" x="1189" y="350"/>
+    <g transform="translate(1189 348)"><use href="#bdoc" fill="#0a8df2"/></g>
+  </svg>
+
+  <div id="mq"><i style="left:0;top:0"></i><i style="right:calc(-1*var(--u));top:0"></i><i style="left:0;bottom:calc(-1*var(--u))"></i><i style="right:calc(-1*var(--u));bottom:calc(-1*var(--u))"></i></div>
+  <div id="cur"><svg viewBox="0 0 13 19"><path id="cp" d="M1 1 L1 15 L4.5 11.6 L7 17.5 L9.4 16.5 L7 10.8 L12 10.8Z" fill="#fff" stroke="#4a4f56" stroke-width="1.1" stroke-linejoin="round"/><path id="ct" d="M1.5 9 L11 1.5 L12 16.5Z" fill="none" stroke="#9a9ea3" stroke-width="1.5" stroke-linejoin="round" opacity="0"/></svg></div>
+</div>
+<script>
+(function(){
+  if (!/[?&]demo=1/.test(location.search)) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const D = 2733, u = n => `calc(${n} * var(--u))`;
+  const o = { duration: D, fill: 'both', easing: 'linear' };
+  const at = (t) => t * 1000 / D;
+  // marquee: top-left fixed at (27,218), bottom-right dragged out
+  const mq = [[0,0,0],[0.05,4,4],[0.13,16,16],[0.5,46,62],[1.0,85,120],[1.38,88,124],[2.73,88,124]];
+  document.getElementById('mq').animate(mq.map(([t,w,h]) => ({ offset: at(t), width: u(w), height: u(h), opacity: t < 0.04 ? 0 : 1 })), o);
+  // cursor follows the corner, then drifts off and fades
+  const cu = [[0,27,218,0],[0.05,30,221,1],[0.13,42,233,1],[0.5,72,279,1],[1.0,111,337,1],[1.38,114,341,1],[1.6,124,358,1],[2.0,145,378,1],[2.1,146,379,1],[2.4,148,381,0],[2.73,148,381,0]];
+  document.getElementById('cur').animate(cu.map(([t,x,y,a]) => ({ offset: at(t), left: u(x), top: u(y), opacity: a })), o);
+  // the arrow empties to a faint hollow outline as it drifts off
+  document.getElementById('cp').animate([{ offset: 0, fillOpacity: 1, stroke: '#4a4f56' }, { offset: at(1.6), fillOpacity: 1, stroke: '#4a4f56' }, { offset: at(1.85), fillOpacity: 0, stroke: '#b5b8bc', opacity: 1 }, { offset: at(1.95), fillOpacity: 0, stroke: '#b5b8bc', opacity: 0 }, { offset: 1, fillOpacity: 0, stroke: '#b5b8bc', opacity: 0 }], o);
+  // off the document the pointer rests as a hollow grey triangle
+  document.getElementById('ct').animate([{ offset: 0, opacity: 0 }, { offset: at(1.85), opacity: 0 }, { offset: at(1.95), opacity: 1 }, { offset: 1, opacity: 1 }], o);
+  // pulses: a dash on a pathLength=100 copy of the wire; h = head position along the wire
+  // each pulse gets a wide, faint halo copy beneath its pale core so the stretch fades out at its edges
+  const pulse = (id, len, pts) => { const el = document.getElementById(id), halo = el.cloneNode(); halo.removeAttribute('id'); halo.classList.add('halo'); el.before(halo);
+    [el, halo].forEach(n => n.animate(pts.map(([t,h,a]) => ({ offset: at(t), strokeDasharray: `${len} 1000`, strokeDashoffset: String(len - h), opacity: a })), o)); };
+  pulse('p1', 40, [[0,20,.8],[0.13,83,.8],[0.5,140,.8],[0.52,140,0],[2.73,140,0]]);
+  pulse('p2', 34, [[0,0,0],[2.2,0,0],[2.21,0,1],[2.5,62,1],[2.73,95,1]]);
+  pulse('p3', 34, [[0,4,1],[0.13,32,1],[0.5,66,1],[1.38,92,1],[2.0,104,1],[2.35,134,1],[2.4,134,0],[2.73,134,0]]);
+  // tag sways inside the ring
+  const tag = document.getElementById('tag');
+  tag.style.transformBox = 'view-box'; tag.style.transformOrigin = '0 0';
+  tag.animate([{ offset: 0, transform: 'rotate(0deg)' }, { offset: at(2.05), transform: 'rotate(0deg)' }, { offset: at(2.5), transform: 'rotate(-8deg)' }, { offset: at(2.62), transform: 'rotate(-3deg)' }, { offset: 1, transform: 'rotate(0deg)' }], o);
+})();
+</script>
+</body>
+</html>

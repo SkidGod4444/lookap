@@ -1,0 +1,16 @@
+{
+ "model": "Claude Opus 5.5",
+ "modelId": "claude-opus-5-5",
+ "date": "2026-10-24",
+ "run": {
+  "model": "Claude Opus 5.5",
+  "turns": 101,
+  "outputTokens": 73650,
+  "totalTokens": 5235622,
+  "costUsd": 9.53,
+  "minutes": 28.2,
+  "score": 87
+ },
+ "hand": "none: the factory alone, the third run, with a motion focus; kept over a 41 of 43 file that sat still in one motion span; 3 judged rounds, best round 1 kept; rubric 40 of 43 under a three-vote judge, reviewed by eye",
+ "hint": "Watch the form cards drift under the green glow while the puck rises."
+}

@@ -1,0 +1,145 @@
+{
+ "slug": "blj59h-boomtax-testimonials",
+ "title": "Boomtax Testimonials",
+ "author": "lookap",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "review",
+ "ended": "round limit",
+ "bestRound": 3,
+ "rank": 83,
+ "allPass": false,
+ "rubric": {
+  "pass": 37,
+  "fail": 2,
+  "unsure": 0,
+  "of": 39,
+  "failed": [
+   "c04 Heading is set in a high-contrast serif (bracketed serifs, thick/thin strokes), not sans-serif",
+   "c31 Names are serif ~19px in near-black; the state after the comma is a visibly smaller serif (~15px) on the same baseline"
+  ]
+ },
+ "score": 84,
+ "motion": "STATIC: the clip moves between the scored moments and the render does not",
+ "imagery": [
+  {
+   "name": "pinstripe texture (corners and bottom band)",
+   "class": "css",
+   "box": [
+    116,
+    420,
+    1019,
+    78
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 7.5,
+   "turns": 52,
+   "costUsd": 1.5386300000000004,
+   "tokens": {
+    "written": 24107,
+    "read": 2042437
+   },
+   "judgeUsd": 0.693,
+   "ended": "completed",
+   "score": 82,
+   "rank": 81,
+   "allPass": false,
+   "rubric": {
+    "pass": 36,
+    "fail": 1,
+    "unsure": 2,
+    "of": 39
+   },
+   "motion": "STATIC: the clip moves between the scored moments and the render does not",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 7.7,
+   "turns": 48,
+   "costUsd": 2.5400962,
+   "tokens": {
+    "written": 22056,
+    "read": 2305918
+   },
+   "judgeUsd": 0.418,
+   "ended": "completed",
+   "score": 85,
+   "rank": 82,
+   "allPass": false,
+   "rubric": {
+    "pass": 36,
+    "fail": 0,
+    "unsure": 3,
+    "of": 39
+   },
+   "motion": "STATIC: the clip moves between the scored moments and the render does not",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 6,
+   "turns": 48,
+   "costUsd": 1.0753212000000003,
+   "tokens": {
+    "written": 13943,
+    "read": 1439997
+   },
+   "judgeUsd": 0.417,
+   "ended": "completed",
+   "score": 84,
+   "rank": 83,
+   "allPass": false,
+   "rubric": {
+    "pass": 37,
+    "fail": 2,
+    "unsure": 0,
+    "of": 39
+   },
+   "motion": "STATIC: the clip moves between the scored moments and the render does not",
+   "kept": true
+  },
+  {
+   "round": 4,
+   "minutes": 4.8,
+   "turns": 27,
+   "costUsd": 0.7388232,
+   "tokens": {
+    "written": 7342,
+    "read": 910989
+   },
+   "judgeUsd": 0.497,
+   "ended": "completed",
+   "score": 84,
+   "rank": 81,
+   "allPass": false,
+   "rubric": {
+    "pass": 36,
+    "fail": 1,
+    "unsure": 2,
+    "of": 39
+   },
+   "motion": "STATIC: the clip moves between the scored moments and the render does not",
+   "kept": false
+  }
+ ],
+ "minutes": 25.9,
+ "tokens": {
+  "written": 67448,
+  "read": 6699341
+ },
+ "cost": {
+  "codingUsd": 5.89,
+  "judgeUsd": 2.02,
+  "rubricUsd": 0.598,
+  "totalUsd": 8.52
+ },
+ "notes": true,
+ "at": "2026-10-24T09:15:58.376Z"
+}

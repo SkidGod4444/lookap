@@ -1,0 +1,1314 @@
+{
+ "slug": "1fu13k-boomtax-forms-grid",
+ "at": "2026-10-24T09:49:41.327Z",
+ "runs": 34,
+ "html": "factory/1fu13k-boomtax-forms-grid/index.html",
+ "pixel": {
+  "score": 87,
+  "stills": 87,
+  "motion": 87,
+  "moments": 8
+ },
+ "animations": 3,
+ "rank": 93,
+ "allPass": false,
+ "elements": [
+  {
+   "name": "heading line 2",
+   "box": [
+    450,
+    117,
+    352,
+    46
+   ],
+   "deltaE": 1.7,
+   "delta": 21,
+   "shift": null,
+   "afterShift": 21,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "puck",
+   "box": [
+    561,
+    268,
+    131,
+    80
+   ],
+   "deltaE": 8.4,
+   "delta": 21,
+   "shift": null,
+   "afterShift": 21,
+   "read": "wrong colour (deltaE 8.4)"
+  },
+  {
+   "name": "puck blue cap",
+   "box": [
+    593,
+    277,
+    66,
+    45
+   ],
+   "deltaE": 6.5,
+   "delta": 19,
+   "shift": [
+    0,
+    -2
+   ],
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "check mark",
+   "box": [
+    618,
+    285,
+    18,
+    20
+   ],
+   "deltaE": 0.6,
+   "delta": 19,
+   "shift": [
+    0,
+    -2
+   ],
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "heading line 1",
+   "box": [
+    452,
+    70,
+    350,
+    48
+   ],
+   "deltaE": 2.7,
+   "delta": 18,
+   "shift": null,
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "form card (typical)",
+   "box": [
+    520,
+    450,
+    155,
+    90
+   ],
+   "deltaE": 0.8,
+   "delta": 18,
+   "shift": [
+    -8,
+    -8
+   ],
+   "afterShift": 12,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "green-lit cards",
+   "box": [
+    440,
+    330,
+    410,
+    270
+   ],
+   "deltaE": 1.2,
+   "delta": 17,
+   "shift": [
+    -8,
+    -8
+   ],
+   "afterShift": 15,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "green glow",
+   "box": [
+    440,
+    300,
+    380,
+    330
+   ],
+   "deltaE": 1.1,
+   "delta": 16,
+   "shift": [
+    -8,
+    -8
+   ],
+   "afterShift": 15,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "isometric card field",
+   "box": [
+    160,
+    215,
+    930,
+    435
+   ],
+   "deltaE": 0.3,
+   "delta": 11,
+   "shift": null,
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "central panel",
+   "box": [
+    115,
+    0,
+    1020,
+    650
+   ],
+   "deltaE": 0.3,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1252,
+    650
+   ],
+   "deltaE": 0.2,
+   "delta": 9,
+   "shift": null,
+   "afterShift": 9,
+   "read": "matches"
+  },
+  {
+   "name": "left pinstripe margin",
+   "box": [
+    0,
+    0,
+    115,
+    650
+   ],
+   "deltaE": 0.8,
+   "delta": 5,
+   "shift": null,
+   "afterShift": 5,
+   "read": "matches"
+  },
+  {
+   "name": "right pinstripe margin",
+   "box": [
+    1135,
+    0,
+    117,
+    650
+   ],
+   "deltaE": 0.9,
+   "delta": 5,
+   "shift": null,
+   "afterShift": 5,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "the render changes where the clip changes",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "kf1",
+    "clip": 1,
+    "render": 4.5,
+    "read": "both move"
+   },
+   {
+    "from": "kf1",
+    "to": "0.6s",
+    "clip": 2.7,
+    "render": 4.2,
+    "read": "both move"
+   },
+   {
+    "from": "0.6s",
+    "to": "0.8s",
+    "clip": 3.6,
+    "render": 4.7,
+    "read": "both move"
+   },
+   {
+    "from": "0.8s",
+    "to": "1s",
+    "clip": 4.1,
+    "render": 4.7,
+    "read": "both move"
+   },
+   {
+    "from": "1s",
+    "to": "1.75s",
+    "clip": 5,
+    "render": 5.8,
+    "read": "both move"
+   },
+   {
+    "from": "1.75s",
+    "to": "2.5s",
+    "clip": 5.5,
+    "render": 5.8,
+    "read": "both move"
+   },
+   {
+    "from": "2.5s",
+    "to": "2.9s",
+    "clip": 4.5,
+    "render": 4.2,
+    "read": "both move"
+   }
+  ],
+  "trajectories": [
+   {
+    "element": "#d8f4c7",
+    "box": [
+     502,
+     326,
+     260,
+     223
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": -12,
+      "dy": -6,
+      "delta": 17
+     },
+     {
+      "at": 0.25,
+      "dx": 0,
+      "dy": 0,
+      "delta": 15
+     },
+     {
+      "at": 0.6,
+      "dx": 0,
+      "dy": 0,
+      "delta": 16
+     },
+     {
+      "at": 0.8,
+      "dx": 0,
+      "dy": 0,
+      "delta": 17
+     },
+     {
+      "at": 1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 19
+     },
+     {
+      "at": 1.75,
+      "dx": 0,
+      "dy": 0,
+      "delta": 17
+     },
+     {
+      "at": 2.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 15
+     },
+     {
+      "at": 2.9,
+      "dx": -2,
+      "dy": -6,
+      "delta": 18
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   },
+   {
+    "element": "#d8f6c5",
+    "box": [
+     614,
+     359,
+     144,
+     83
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": -12,
+      "dy": -8,
+      "delta": 14
+     },
+     {
+      "at": 0.25,
+      "dx": -6,
+      "dy": -2,
+      "delta": 13
+     },
+     {
+      "at": 0.6,
+      "dx": -12,
+      "dy": -2,
+      "delta": 16
+     },
+     {
+      "at": 0.8,
+      "dx": 0,
+      "dy": 6,
+      "delta": 16
+     },
+     {
+      "at": 1,
+      "dx": 12,
+      "dy": 12,
+      "delta": 16
+     },
+     {
+      "at": 1.75,
+      "dx": 8,
+      "dy": 8,
+      "delta": 13
+     },
+     {
+      "at": 2.5,
+      "dx": -2,
+      "dy": -2,
+      "delta": 13
+     },
+     {
+      "at": 2.9,
+      "dx": 12,
+      "dy": 6,
+      "delta": 13
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   },
+   {
+    "element": "#eaf7e6",
+    "box": [
+     712,
+     410,
+     100,
+     82
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": -12,
+      "dy": -12,
+      "delta": 11
+     },
+     {
+      "at": 0.25,
+      "dx": -4,
+      "dy": -8,
+      "delta": 10
+     },
+     {
+      "at": 0.6,
+      "dx": -12,
+      "dy": -8,
+      "delta": 11
+     },
+     {
+      "at": 0.8,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 1,
+      "dx": 12,
+      "dy": 8,
+      "delta": 12
+     },
+     {
+      "at": 1.75,
+      "dx": 8,
+      "dy": 4,
+      "delta": 12
+     },
+     {
+      "at": 2.5,
+      "dx": 0,
+      "dy": -8,
+      "delta": 10
+     },
+     {
+      "at": 2.9,
+      "dx": 10,
+      "dy": 0,
+      "delta": 10
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   },
+   {
+    "element": "#d7f3ce",
+    "box": [
+     537,
+     453,
+     136,
+     59
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": -10,
+      "dy": -10,
+      "delta": 10
+     },
+     {
+      "at": 0.25,
+      "dx": 2,
+      "dy": -4,
+      "delta": 9
+     },
+     {
+      "at": 0.6,
+      "dx": 10,
+      "dy": -4,
+      "delta": 12
+     },
+     {
+      "at": 0.8,
+      "dx": 2,
+      "dy": -4,
+      "delta": 12
+     },
+     {
+      "at": 1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 14
+     },
+     {
+      "at": 1.75,
+      "dx": -4,
+      "dy": -4,
+      "delta": 11
+     },
+     {
+      "at": 2.5,
+      "dx": 0,
+      "dy": -4,
+      "delta": 9
+     },
+     {
+      "at": 2.9,
+      "dx": -2,
+      "dy": -6,
+      "delta": 13
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   }
+  ]
+ },
+ "scale": {
+  "ok": true,
+  "changed": 3.8,
+  "read": "scales: the half-size render matches the full one (difference 3.8)"
+ },
+ "rubric": {
+  "file": "factory/1fu13k-boomtax-forms-grid/rubric.json",
+  "total": 43,
+  "counted": 43,
+  "pass": 40,
+  "fail": 2,
+  "unsure": 1,
+  "unjudged": 0,
+  "passRate": 93,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "style",
+    "element": "page background",
+    "check": "The page background is a flat off-white close to #fafafa, with no gradient or tint",
+    "box": [
+     0,
+     0,
+     1252,
+     650
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild background is the same flat off-white with no tint. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "present",
+    "element": "left pinstripe margin",
+    "check": "The left margin (x 0–115) is filled with fine, faint grey vertical pinstripes running the full height",
+    "box": [
+     0,
+     0,
+     115,
+     650
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Left margin shows the same fine faint vertical pinstripes full height. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "present",
+    "element": "right pinstripe margin",
+    "check": "The right margin (x≈1135–1252) carries the same faint vertical pinstripes",
+    "box": [
+     1135,
+     0,
+     117,
+     650
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Right margin carries matching faint pinstripes. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "style",
+    "element": "pinstripes",
+    "check": "The pinstripes are thin and low-contrast (light grey on off-white), not bold dark lines",
+    "box": [
+     0,
+     200,
+     115,
+     200
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Stripes are thin light grey, similar spacing and contrast to the clip. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "text",
+    "element": "heading line 1",
+    "check": "The first heading line reads exactly \"Covering All the\"",
+    "box": [
+     440,
+     65,
+     375,
+     55
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Line 1 reads 'Covering All the' in both. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "text",
+    "element": "heading line 2",
+    "check": "The second heading line reads exactly \"Essential Forms.\" with the full stop",
+    "box": [
+     440,
+     112,
+     375,
+     55
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Line 2 reads 'Essential Forms.' with full stop in both. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "style",
+    "element": "heading",
+    "check": "The heading is set in a high-contrast serif face (bracketed serifs, like Libre Baskerville), not a sans",
+    "box": [
+     440,
+     65,
+     375,
+     105
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same high-contrast bracketed serif (Libre Baskerville look). [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "style",
+    "element": "heading",
+    "check": "The heading colour is near-black navy (very dark), at full brightness against the background",
+    "box": [
+     440,
+     65,
+     375,
+     105
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Heading is the same near-black navy as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "position",
+    "element": "heading",
+    "check": "The heading is centred horizontally on x≈626, with line 1 spanning about x 452–802 and the cap tops near y≈72",
+    "box": [
+     440,
+     60,
+     375,
+     110
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Heading spans about x155–417 in panel, matching the clip's position and cap tops. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "style",
+    "element": "heading",
+    "check": "The heading is about 48 px type with tight leading: the two baselines are about 46 px apart and the lines nearly touch",
+    "box": [
+     440,
+     65,
+     375,
+     105
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same size and tight leading; lines nearly touch as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "present",
+    "element": "card field",
+    "check": "Below y≈212 an isometric field of many form cards (at least 25 visible) fills the panel width",
+    "box": [
+     160,
+     215,
+     930,
+     435
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows a field of roughly 30 cards filling the panel width, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "style",
+    "element": "card field",
+    "check": "The cards are tilted on a diamond/isometric grid (each card a rotated, skewed parallelogram), not an upright rectangular grid",
+    "box": [
+     160,
+     215,
+     930,
+     435
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Cards are on the same diamond/isometric grid. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "style",
+    "element": "card field",
+    "check": "The card field fades to the background towards its left, right, top and bottom edges; the outer cards are faint and ghostly",
+    "box": [
+     160,
+     215,
+     930,
+     435
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Outer cards fade to ghostly on all sides, though bottom cards are slightly stronger than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "style",
+    "element": "form card",
+    "check": "Each card is a thin 3D slab: a white top face with a visible light-grey side edge about 5–6 px thick and a soft shadow, not a flat outlined rectangle",
+    "box": [
+     430,
+     400,
+     260,
+     150
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild cards are white slabs with a visible grey side edge about 4px and soft shadow, close to the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "style",
+    "element": "form card",
+    "check": "The card corners are softly rounded, about 6 px",
+    "box": [
+     430,
+     400,
+     260,
+     150
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Corners are softly rounded at about the same radius. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "style",
+    "element": "form card",
+    "check": "The form code on each card is a teal-blue serif (e.g. \"1099-MISC\"), larger than the grey subtitle beneath it",
+    "box": [
+     520,
+     450,
+     160,
+     90
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Teal-blue serif code is larger than the grey subtitle, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "text",
+    "element": "form card",
+    "check": "A central card reads \"1099-MISC\" with the subtitle \"Miscellaneous Income\" on two lines",
+    "box": [
+     520,
+     450,
+     160,
+     90
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Card reads '1099-MISC' with 'Miscellaneous / Income' on two lines. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "text",
+    "element": "form card",
+    "check": "A card left of centre reads \"California Pay Data\" with the subtitle \"Sate Compliance Reporting\"",
+    "box": [
+     435,
+     405,
+     160,
+     95
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Card reads 'California Pay Data' with 'Sate Compliance / Reporting'. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "text",
+    "element": "form card",
+    "check": "A card below centre reads \"1094-C/1095-C\" with the subtitle \"Employer-Provided Health Insurance\"",
+    "box": [
+     600,
+     500,
+     170,
+     95
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Card reads '1094-C/1095-C' with 'Employer-Provided Health Insurance'. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "text",
+    "element": "form card",
+    "check": "Card codes elsewhere include \"W-2\" (\"Wage and Tax Statement\"), \"1099-HC\" (\"Massachusetts Health Coverage\"), \"1099-DIV\", \"1099-R\", \"1099-C\", \"1099-K\" and \"1099-NEC\"",
+    "box": [
+     160,
+     215,
+     930,
+     435
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "W-2, 1099-HC, DIV, R, C, K and NEC cards with matching subtitles are visible. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "style",
+    "element": "form card",
+    "check": "The text on each card is rotated to follow the card's isometric tilt (rising to the upper right), not upright",
+    "box": [
+     520,
+     450,
+     160,
+     90
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Card text tilts up to the right in both, matching angle. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "present",
+    "element": "green glow",
+    "check": "A soft green glow spreads beneath and below the puck, centred about x 626, y 440",
+    "box": [
+     440,
+     300,
+     380,
+     330
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Soft green glow below the puck in both, centred near x 626. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "style",
+    "element": "green glow",
+    "check": "The glow has no hard edge or ring: it fades smoothly into the white field, and is not a flat green shape",
+    "box": [
+     400,
+     290,
+     460,
+     350
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Glow fades smoothly into white with no ring in both. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "style",
+    "element": "green-lit cards",
+    "check": "About 6 cards inside the glow have a mint-green top face (around #d8f4c7) and bright green rims, while the cards outside it stay white",
+    "box": [
+     440,
+     330,
+     410,
+     270
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "Rebuild has about 6 mint cards, but several lit ones have grey or white rims where the clip's rims are bright green. [votes: no/no/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "style",
+    "element": "green-lit cards",
+    "check": "The card directly under the puck is the most saturated green, and the tint weakens with distance from the puck",
+    "box": [
+     440,
+     330,
+     410,
+     270
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Top card under the puck is the most saturated and the tint fades outward, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "present",
+    "element": "puck",
+    "check": "A white cylindrical puck floats above the grid, centred on x≈626",
+    "box": [
+     555,
+     260,
+     145,
+     95
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White cylindrical puck floats above the grid, centred at the same x. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "position",
+    "element": "puck",
+    "check": "The puck's white body spans about x 561–692 and y 268–348",
+    "box": [
+     555,
+     260,
+     145,
+     95
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Puck body spans about the same width, roughly 97 px at this scale, at the same position. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "style",
+    "element": "puck",
+    "check": "The puck reads as a solid 3D cylinder: an elliptical white top and a visible light-grey side wall about 20–25 px tall, not a flat circle with an outline",
+    "box": [
+     555,
+     260,
+     145,
+     95
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Elliptical white top and grey side wall of similar height in both, about 15 px. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "style",
+    "element": "puck blue cap",
+    "check": "On top of the puck sits a raised, saturated mid-blue (#1a8be6) elliptical disc with its own thin grey side edge",
+    "box": [
+     590,
+     274,
+     72,
+     52
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "Rebuild's blue cap has a much thicker grey side wall than the clip's thin edge. [votes: no/no/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "style",
+    "element": "puck blue cap",
+    "check": "The blue cap carries one thin pale-green elliptical ring inset from its edge",
+    "box": [
+     590,
+     274,
+     72,
+     52
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "One thin pale-green ring inset on the blue cap in both. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "imagery",
+    "element": "check mark",
+    "check": "A bright green check mark (short left stroke, long right stroke, lying flat in perspective) sits centred in the blue cap",
+    "box": [
+     608,
+     280,
+     36,
+     30
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Bright green flat check, short left stroke and long right, centred in the cap in both. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "style",
+    "element": "puck",
+    "check": "The puck sits in front of the cards: it overlaps the top of the green card under it, which it partly hides",
+    "box": [
+     530,
+     300,
+     190,
+     100
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Puck overlaps and partly hides the top of the green card under it in both. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "motion",
+    "element": "card field",
+    "check": "The whole card field moves between the two moments, while the heading stays put",
+    "box": [
+     160,
+     215,
+     930,
+     435
+    ],
+    "at": 1,
+    "then": 1.75,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Cards shift between the moments in both while the heading stays fixed. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "motion",
+    "element": "card field",
+    "check": "The cards drift along the isometric diagonal toward the lower right (right and down together, about 2 px right for every 1 px down), not straight sideways",
+    "box": [
+     430,
+     400,
+     300,
+     200
+    ],
+    "at": 0.8,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Cards drift right and down along the diagonal in both, about 2.6:1 ratio. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "motion",
+    "element": "card field",
+    "check": "Over about 1.7 s the \"1099-MISC\" card moves from about (527,455) to about (598,490): roughly 70 px right and 35 px down",
+    "box": [
+     440,
+     400,
+     260,
+     160
+    ],
+    "at": 0.8,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "1099-MISC moves about 150 px right and 64 px down in the crop, versus 160 and 74 in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "motion",
+    "element": "card field",
+    "check": "The drift is slow and continuous with no pause: the cards' positions differ at each of 1.0 s, 1.75 s and 2.5 s",
+    "box": [
+     430,
+     400,
+     300,
+     200
+    ],
+    "at": 1,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Card positions differ between the moments in both, with steady drift. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "motion",
+    "element": "green glow",
+    "check": "The green glow stays fixed in the frame as the cards pass under it: cards that enter the glow turn green and cards that leave it turn white",
+    "box": [
+     440,
+     300,
+     380,
+     330
+    ],
+    "at": 0.8,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Glow stays fixed while cards entering turn green and those leaving fade to white, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "motion",
+    "element": "puck",
+    "check": "The puck stays centred on x≈626 and does not move sideways",
+    "box": [
+     555,
+     240,
+     145,
+     115
+    ],
+    "at": 0.8,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Puck stays at the same x in both moments, within a few px. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "motion",
+    "element": "puck",
+    "check": "The puck rises slowly by about 25 px: its lower edge goes from about y 311 at 0.6 s to about y 284 at 2.9 s, at a steady pace",
+    "box": [
+     555,
+     235,
+     145,
+     120
+    ],
+    "at": 0.6,
+    "then": 2.9,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Puck lower edge rises about 30 px between the moments in both. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c39.png"
+   },
+   {
+    "id": "c40",
+    "axis": "motion",
+    "element": "heading",
+    "check": "The heading does not move or change at all",
+    "box": [
+     440,
+     60,
+     375,
+     110
+    ],
+    "at": 0.25,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Heading is identical at both moments in both. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c40.png"
+   },
+   {
+    "id": "c41",
+    "axis": "motion",
+    "element": "pinstripes",
+    "check": "The pinstripe margins do not move",
+    "box": [
+     0,
+     0,
+     115,
+     650
+    ],
+    "at": 0.25,
+    "then": 2.5,
+    "policy": null,
+    "pass": "unsure",
+    "seen": "The crop shows only cards and no visible pinstripe margins in either panel, so I can't judge them. [votes: unsure/no/unsure]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c41.png"
+   },
+   {
+    "id": "c42",
+    "axis": "motion",
+    "element": "card field",
+    "check": "The motion loops: the grid and puck at 2.5 s look nearly the same as at 0.25 s, and at about 0.55 s they jump back to the start (up-left by one drift span, the puck down by about 25 px)",
+    "box": [
+     160,
+     215,
+     930,
+     435
+    ],
+    "at": 0.25,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild grid and puck at 2.5s sit within a few px of their 0.25s positions, as in the clip; the jump-back at 0.55s isn't visible. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c42.png"
+   },
+   {
+    "id": "c43",
+    "axis": "motion",
+    "element": "card field",
+    "check": "Between 0.8 s and 2.5 s the cards keep their layout and spacing: they slide as one rigid field and do not rearrange or flip",
+    "box": [
+     160,
+     215,
+     930,
+     435
+    ],
+    "at": 0.8,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild cards keep their layout and spacing between 0.8s and 2.5s, sliding as one rigid field like the clip, with no flips. [votes: yes/yes/yes]",
+    "image": "factory/1fu13k-boomtax-forms-grid/judge/c43.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 0.981,
+  "calls": 9,
+  "images": "factory/1fu13k-boomtax-forms-grid/judge",
+  "votes": 3,
+  "spread": [
+   40,
+   40,
+   42
+  ]
+ }
+}

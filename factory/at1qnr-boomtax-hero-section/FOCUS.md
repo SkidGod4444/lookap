@@ -1,0 +1,6 @@
+Motion first. The section must be visibly alive, never a still picture with a few tweaks. Every animation loops seamlessly with the clip's period (3.7 s) starting at t=0, so it matches the clip at each scored moment and keeps running after:
+- File tiles ride the input belt down-right along the isometric diagonal (about 62 px right, 34 px down over the clip), with the belt's hold-then-advance rhythm (barely moves 1.9 to 2.4 s, then about 30 px by 2.95 s), eased, never jumping a slot. New tiles keep entering from the top-left edge so the belt is never empty.
+- Output check tiles leave the machine and move down-right in step with the input belt.
+- The machine mouth glows lime with a soft blurred halo; the tile inside it shows green, and blue check tiles appear beyond it as the belt advances.
+- Text, nav, buttons, logos and the stations stay still.
+Also fix the static items the last judge failed: nav labels "Features", "Pricing", "Our Story", "Contact" in grey sans; subhead mid-grey ~16px; primary button "Try Boomtax Free" in white medium sans; secondary button white with 1px light grey border, same height, ~10px right; partner logos as recognisable grey vector marks; black rounded-square "b" badge with green arrows and a green dot on the machine top.

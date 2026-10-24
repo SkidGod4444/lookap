@@ -1,0 +1,16 @@
+{
+ "model": "Claude Opus 5.5",
+ "modelId": "claude-opus-5-5",
+ "date": "2026-10-24",
+ "run": {
+  "model": "Claude Opus 5.5",
+  "turns": 169,
+  "outputTokens": 95061,
+  "totalTokens": 6659912,
+  "costUsd": 9.34,
+  "minutes": 29.9,
+  "score": 84
+ },
+ "hand": "none: the factory alone, the second run, with a motion focus (the first had one round before the account error); 3 judged rounds, best round 3 kept; rubric 43 of 45 under a three-vote judge, reviewed by eye",
+ "hint": "Watch files ride the belt into the machine and come out as checked tiles."
+}

@@ -1,0 +1,1178 @@
+{
+ "slug": "1dyli6-boomtax-cta-and-footer",
+ "frame": {
+  "w": 1252,
+  "h": 606
+ },
+ "at": "2026-10-24T08:50:37.045Z",
+ "model": "opus",
+ "costUsd": 0.701,
+ "summary": "A static light-grey (#fbfbfb) closing section 1252x606 in three horizontal bands. Top band (y 0-76) is empty apart from a faint field of vertical hairline stripes spanning x≈115-1140, closed by a 1px light-grey rule at y≈76. Middle CTA band (y 76-365): on the left a two-line near-black serif headline \"Ready to / Get Started?\" (~46px, x 117) above two square-cornered 40px buttons, a solid blue (#0097fb) \"Try Boomtax Free\" and a white, thinly bordered \"Book a Demo\". The right two-thirds hold an isometric line illustration (x≈455-1077, y≈128-325): five white extruded badge tiles (HIPAA card, round AICPA SOC 2 puck, a long CERTIFIED bar in the centre, COMODO card, IRS card, PCI DSS card) with soft grey sides and small round port dots, all joined by thin 1px grey stepped/zig-zag wires. Bottom footer band (y 365-606) sits under another rule; its side margins (x 0-115 and 1135-1252) are filled with the same vertical hairline stripes. Footer content: serif \"Boomtax\" wordmark (\"tax\" heavier) with \"© 2025. BoomTax - All rights reserved.\" under it, then four link columns (Product, Forms, Support, Tools) with serif headings at y≈424 and grey sans links on a 28px rhythm; the Tools column runs off the bottom edge. The only motion: short blue light pulses (about 20-60px long) run along the grey connector wires between badges all through the clip, several at once on different wires. The wire turns blue where a pulse passes and goes grey again after it. Layout, text, badges and buttons never move. Frame-wide faint edge flicker in the difference views is video compression, not motion.",
+ "elements": [
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1252,
+    606
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "flat #fbfbfb"
+  },
+  {
+   "name": "top stripe field",
+   "box": [
+    115,
+    0,
+    1025,
+    76
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "faint vertical hairlines, ~1px light grey, irregular 6-12px spacing"
+  },
+  {
+   "name": "top rule",
+   "box": [
+    0,
+    75,
+    1252,
+    2
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "1px light grey #eaebeb full width"
+  },
+  {
+   "name": "footer rule",
+   "box": [
+    0,
+    364,
+    1252,
+    2
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "1px light grey full width"
+  },
+  {
+   "name": "footer left stripe margin",
+   "box": [
+    0,
+    366,
+    115,
+    240
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "vertical hairline stripes"
+  },
+  {
+   "name": "footer right stripe margin",
+   "box": [
+    1135,
+    366,
+    117,
+    240
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "vertical hairline stripes"
+  },
+  {
+   "name": "headline",
+   "box": [
+    117,
+    145,
+    262,
+    92
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Ready to' / 'Get Started?' serif, near-black, ~46px, 2 lines"
+  },
+  {
+   "name": "primary button",
+   "box": [
+    116,
+    254,
+    132,
+    40
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "solid #0097fb, white sans 'Try Boomtax Free', square corners"
+  },
+  {
+   "name": "secondary button",
+   "box": [
+    257,
+    254,
+    104,
+    40
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "white fill, 1px very light grey border, dark 'Book a Demo'"
+  },
+  {
+   "name": "badge illustration",
+   "box": [
+    455,
+    128,
+    622,
+    197
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "isometric line illustration of six compliance badges joined by wires"
+  },
+  {
+   "name": "HIPAA card",
+   "box": [
+    507,
+    130,
+    152,
+    95
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "white isometric slab, blue pill logo 'HIPAA COMPLIANT' with padlock"
+  },
+  {
+   "name": "SOC 2 puck",
+   "box": [
+    457,
+    230,
+    115,
+    85
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "round white puck, blue/black AICPA SOC 2 seal"
+  },
+  {
+   "name": "CERTIFIED bar",
+   "box": [
+    636,
+    172,
+    140,
+    118
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "long extruded bar, serif italic-looking 'CERTIFIED' on top face, port dots on ends"
+  },
+  {
+   "name": "COMODO card",
+   "box": [
+    798,
+    133,
+    152,
+    95
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "white slab, red padlock + 'COMODO' logo"
+  },
+  {
+   "name": "IRS card",
+   "box": [
+    748,
+    236,
+    118,
+    88
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "white slab, black IRS eagle-lines logo"
+  },
+  {
+   "name": "PCI DSS card",
+   "box": [
+    924,
+    205,
+    152,
+    105
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "white slab, dark green PCI + 'DSS COMPLIANT' logo"
+  },
+  {
+   "name": "connector wires",
+   "box": [
+    560,
+    180,
+    390,
+    145
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "1px grey stepped zig-zag lines between port dots"
+  },
+  {
+   "name": "blue wire pulses",
+   "box": [
+    580,
+    180,
+    370,
+    145
+   ],
+   "kind": "motion",
+   "class": "css",
+   "note": "short blue segments travelling along wires"
+  },
+  {
+   "name": "Boomtax wordmark",
+   "box": [
+    145,
+    412,
+    128,
+    30
+   ],
+   "kind": "text",
+   "class": "structured",
+   "note": "serif, near-black, 'tax' bolder"
+  },
+  {
+   "name": "copyright",
+   "box": [
+    145,
+    451,
+    238,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'© 2025. BoomTax - All rights reserved.' grey sans ~14px"
+  },
+  {
+   "name": "Product column",
+   "box": [
+    459,
+    415,
+    65,
+    135
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "heading + Home, Features, Pricing, Login"
+  },
+  {
+   "name": "Forms column",
+   "box": [
+    581,
+    415,
+    120,
+    135
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "heading + ACA Forms, 1099 Forms, W-2 Forms, Pay Data Reporting"
+  },
+  {
+   "name": "Support column",
+   "box": [
+    744,
+    415,
+    100,
+    135
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "heading + Tax News, Knowledgebase, Chat, Contact Us"
+  },
+  {
+   "name": "Tools column",
+   "box": [
+    871,
+    415,
+    236,
+    191
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "heading + 6 links, last clipped at frame bottom"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "page background",
+   "axis": "style",
+   "check": "Background is a flat near-white light grey (~#fbfbfb), no gradient",
+   "box": [
+    0,
+    0,
+    1252,
+    606
+   ],
+   "scope": "frame",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "top rule",
+   "axis": "position",
+   "check": "A full-width 1px light grey horizontal rule sits at y≈76",
+   "box": [
+    0,
+    66,
+    1252,
+    20
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "footer rule",
+   "axis": "position",
+   "check": "A second full-width 1px light grey rule sits at y≈365 separating CTA band from footer",
+   "box": [
+    0,
+    355,
+    1252,
+    20
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "top stripe field",
+   "axis": "present",
+   "check": "The top band (y 0-76) shows faint vertical hairline stripes spanning roughly x 115-1140, with plain background left of x 115",
+   "box": [
+    60,
+    0,
+    300,
+    80
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "top stripe field",
+   "axis": "style",
+   "check": "Stripes are very faint thin vertical lines (barely darker than the background), not solid bars or a dark pattern",
+   "box": [
+    115,
+    0,
+    300,
+    76
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "footer stripe margins",
+   "axis": "present",
+   "check": "Footer side margins (x 0-115 and x 1135-1252, y 366-606) are filled with the same faint vertical stripes while the footer content area between them is plain",
+   "box": [
+    0,
+    366,
+    1252,
+    240
+   ],
+   "scope": "frame",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "headline",
+   "axis": "text",
+   "check": "Headline reads exactly 'Ready to' on line 1 and 'Get Started?' on line 2",
+   "box": [
+    110,
+    140,
+    280,
+    100
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "headline",
+   "axis": "style",
+   "check": "Headline is a near-black serif face at ~46px cap-to-descender, regular weight",
+   "box": [
+    110,
+    140,
+    280,
+    100
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "headline",
+   "axis": "position",
+   "check": "Headline left edge at x≈117, first line top ≈148, second line baseline ≈232",
+   "box": [
+    100,
+    135,
+    300,
+    110
+   ],
+   "scope": "frame",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "primary button",
+   "axis": "position",
+   "check": "Blue button box about x 116-248, y 254-294 (132x40), left-aligned with the headline",
+   "box": [
+    100,
+    245,
+    160,
+    60
+   ],
+   "scope": "frame",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "primary button",
+   "axis": "style",
+   "check": "Primary button fill is a solid saturated blue ~#0097fb with square or near-square (≤3px) corners",
+   "box": [
+    110,
+    250,
+    145,
+    50
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "primary button",
+   "axis": "text",
+   "check": "Primary button label reads 'Try Boomtax Free' in white sans ~14px",
+   "box": [
+    110,
+    250,
+    145,
+    50
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "secondary button",
+   "axis": "position",
+   "check": "Secondary button sits right of the primary with ~9px gap, about x 257-361, same 40px height",
+   "box": [
+    245,
+    250,
+    125,
+    50
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "secondary button",
+   "axis": "style",
+   "check": "Secondary button is white with a very faint 1px grey border, square corners",
+   "box": [
+    250,
+    250,
+    120,
+    50
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "secondary button",
+   "axis": "text",
+   "check": "Secondary button reads 'Book a Demo' in dark near-black sans",
+   "box": [
+    250,
+    250,
+    120,
+    50
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "badge illustration",
+   "axis": "position",
+   "check": "Illustration occupies about x 455-1077, y 128-325, right of the CTA text",
+   "box": [
+    440,
+    115,
+    650,
+    220
+   ],
+   "scope": "frame",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "badge illustration",
+   "axis": "present",
+   "check": "Exactly six badge objects are visible: HIPAA card, round SOC 2 puck, CERTIFIED bar, COMODO card, IRS card, PCI DSS card",
+   "box": [
+    450,
+    125,
+    630,
+    205
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "badge illustration",
+   "axis": "style",
+   "check": "Badges are drawn in isometric projection as white extruded slabs with light grey shaded side faces and thin grey outlines, no heavy drop shadows",
+   "box": [
+    450,
+    125,
+    630,
+    205
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c19",
+   "element": "HIPAA card",
+   "axis": "position",
+   "check": "HIPAA card top-left of the illustration at about x 507-659, y 130-225",
+   "box": [
+    500,
+    125,
+    165,
+    105
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "HIPAA card",
+   "axis": "imagery",
+   "check": "HIPAA card shows a blue outlined pill logo with padlock icon and 'HIPAA COMPLIANT', an original drawing with the same blue colour and silhouette",
+   "box": [
+    500,
+    125,
+    165,
+    105
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "SOC 2 puck",
+   "axis": "imagery",
+   "check": "SOC 2 badge is a round cylindrical puck (not a slab) with a blue and black ring seal reading 'AICPA SOC 2'",
+   "box": [
+    452,
+    225,
+    125,
+    95
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "CERTIFIED bar",
+   "axis": "text",
+   "check": "Centre bar carries the word 'CERTIFIED' in dark serif type along its top face, angled up to the right",
+   "box": [
+    630,
+    165,
+    150,
+    130
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "CERTIFIED bar",
+   "axis": "style",
+   "check": "CERTIFIED bar is a long tall extruded block with small round port dots on its end faces",
+   "box": [
+    630,
+    165,
+    150,
+    130
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "COMODO card",
+   "axis": "imagery",
+   "check": "Top-right card shows a red padlock mark and red 'COMODO' word",
+   "box": [
+    792,
+    128,
+    165,
+    105
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c25",
+   "element": "IRS card",
+   "axis": "imagery",
+   "check": "Lower-middle card shows a black IRS logo (eagle with horizontal lines and 'IRS')",
+   "box": [
+    742,
+    230,
+    130,
+    100
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c26",
+   "element": "PCI DSS card",
+   "axis": "imagery",
+   "check": "Right card shows a dark green 'PCI' mark with green check and 'DSS COMPLIANT'",
+   "box": [
+    918,
+    200,
+    165,
+    115
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c27",
+   "element": "connector wires",
+   "axis": "style",
+   "check": "Badges are linked by thin ~1px grey lines that run in stepped zig-zag paths between small round port dots",
+   "box": [
+    560,
+    180,
+    390,
+    145
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "connector wires",
+   "axis": "style",
+   "check": "Wires are plain hairlines: no arrows, no dashes, no thick tubes",
+   "box": [
+    560,
+    180,
+    390,
+    145
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c29",
+   "element": "blue wire pulses",
+   "axis": "present",
+   "check": "At least two short blue segments are visible on different grey wires at the same moment",
+   "box": [
+    560,
+    180,
+    400,
+    145
+   ],
+   "scope": "crop",
+   "at": 2.1,
+   "then": null
+  },
+  {
+   "id": "c30",
+   "element": "blue wire pulses",
+   "axis": "style",
+   "check": "A pulse is the wire itself turning blue over a short stretch (~20-60px), same 1px width and soft fading ends, not a dot, glow blob or thick bar",
+   "box": [
+    590,
+    200,
+    200,
+    120
+   ],
+   "scope": "crop",
+   "at": 2.1,
+   "then": null
+  },
+  {
+   "id": "c31",
+   "element": "blue wire pulses",
+   "axis": "motion",
+   "check": "Blue segments are on different wires/positions between 1.6s and 2.1s (e.g. on the IRS-PCI wire near x 895-945 at 1.6s and on the SOC2-CERTIFIED and IRS left wires near x 625-770 at 2.1s)",
+   "box": [
+    560,
+    180,
+    400,
+    145
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": 2.1
+  },
+  {
+   "id": "c32",
+   "element": "blue wire pulses",
+   "axis": "motion",
+   "check": "Pulses travel along the wire paths (following their bends) rather than fading in and out in place",
+   "box": [
+    700,
+    180,
+    180,
+    130
+   ],
+   "scope": "crop",
+   "at": 2.5,
+   "then": 3
+  },
+  {
+   "id": "c33",
+   "element": "blue wire pulses",
+   "axis": "motion",
+   "check": "Between 3.0s and 3.4s the pulse on the COMODO wire (near x 790-845, y 185-200) has shifted position along the wire",
+   "box": [
+    740,
+    170,
+    130,
+    60
+   ],
+   "scope": "crop",
+   "at": 3,
+   "then": 3.4
+  },
+  {
+   "id": "c34",
+   "element": "blue wire pulses",
+   "axis": "motion",
+   "check": "Pulses run continuously across the whole clip: some wire carries blue at 0.5s, 1s, 2.1s, 2.5s, 3s and 3.4s",
+   "box": [
+    560,
+    180,
+    400,
+    145
+   ],
+   "scope": "crop",
+   "at": 0.5,
+   "then": 3.4
+  },
+  {
+   "id": "c35",
+   "element": "blue wire pulses",
+   "axis": "motion",
+   "check": "After a pulse passes, the wire behind it returns to plain grey (no permanent blue trail builds up)",
+   "box": [
+    560,
+    180,
+    400,
+    145
+   ],
+   "scope": "crop",
+   "at": 1,
+   "then": 3
+  },
+  {
+   "id": "c36",
+   "element": "badge illustration",
+   "axis": "motion",
+   "check": "The badge tiles themselves do not move, scale or change between 1.6s and 3.4s",
+   "box": [
+    450,
+    125,
+    630,
+    205
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": 3.4
+  },
+  {
+   "id": "c37",
+   "element": "page layout",
+   "axis": "motion",
+   "check": "Headline, buttons and footer text stay fixed for the whole clip; only the wire pulses change",
+   "box": [
+    0,
+    0,
+    1252,
+    606
+   ],
+   "scope": "frame",
+   "at": 0.5,
+   "then": 3.4
+  },
+  {
+   "id": "c38",
+   "element": "Boomtax wordmark",
+   "axis": "text",
+   "check": "Footer wordmark reads 'Boomtax' in near-black serif, with 'tax' set heavier than 'Boom'",
+   "box": [
+    140,
+    405,
+    140,
+    42
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c39",
+   "element": "Boomtax wordmark",
+   "axis": "position",
+   "check": "Wordmark left edge at x≈145, vertical centre ≈427",
+   "box": [
+    130,
+    400,
+    160,
+    50
+   ],
+   "scope": "frame",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c40",
+   "element": "copyright",
+   "axis": "text",
+   "check": "Under the wordmark reads exactly '© 2025. BoomTax - All rights reserved.' in mid-grey sans ~14px",
+   "box": [
+    140,
+    448,
+    250,
+    24
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c41",
+   "element": "footer columns",
+   "axis": "present",
+   "check": "Exactly four link columns with headings 'Product', 'Forms', 'Support', 'Tools' in that order left to right",
+   "box": [
+    450,
+    410,
+    670,
+    30
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c42",
+   "element": "footer columns",
+   "axis": "position",
+   "check": "Column headings start at x≈459, 581, 744 and 871 on a shared line at y≈424",
+   "box": [
+    450,
+    410,
+    670,
+    30
+   ],
+   "scope": "frame",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c43",
+   "element": "footer columns",
+   "axis": "style",
+   "check": "Column headings are near-black serif ~18px; links beneath are lighter grey sans ~14px",
+   "box": [
+    450,
+    410,
+    670,
+    150
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c44",
+   "element": "Product column",
+   "axis": "text",
+   "check": "Product links read 'Home', 'Features', 'Pricing', 'Login'",
+   "box": [
+    455,
+    445,
+    70,
+    105
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c45",
+   "element": "Forms column",
+   "axis": "text",
+   "check": "Forms links read 'ACA Forms', '1099 Forms', 'W-2 Forms', 'Pay Data Reporting'",
+   "box": [
+    577,
+    445,
+    130,
+    105
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c46",
+   "element": "Support column",
+   "axis": "text",
+   "check": "Support links read 'Tax News', 'Knowledgebase', 'Chat', 'Contact Us'",
+   "box": [
+    740,
+    445,
+    110,
+    105
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c47",
+   "element": "Tools column",
+   "axis": "text",
+   "check": "Tools links read 'Do I need to file ACA?', 'Do I need to file CA Pay Data Reports?', 'ACA Code Series 1', 'ACA Code Series 2', 'Employee vs Contractor', 'Do I need to file a BOI Report'",
+   "box": [
+    866,
+    445,
+    245,
+    161
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c48",
+   "element": "footer columns",
+   "axis": "position",
+   "check": "Link rows are spaced ~28px apart starting at y≈456 (456, 484, 512, 540, ...)",
+   "box": [
+    450,
+    445,
+    670,
+    161
+   ],
+   "scope": "frame",
+   "at": 1.6,
+   "then": null
+  },
+  {
+   "id": "c49",
+   "element": "Tools column",
+   "axis": "position",
+   "check": "The sixth Tools link sits at y≈596 and is cut off by the bottom frame edge",
+   "box": [
+    866,
+    585,
+    200,
+    21
+   ],
+   "scope": "crop",
+   "at": 1.6,
+   "then": null
+  }
+ ],
+ "imagery": [
+  {
+   "name": "HIPAA badge",
+   "box": [
+    507,
+    130,
+    152,
+    95
+   ],
+   "class": "structured",
+   "what": "isometric white slab with blue 'HIPAA COMPLIANT' pill logo and padlock",
+   "at": 1.6
+  },
+  {
+   "name": "SOC 2 puck",
+   "box": [
+    457,
+    230,
+    115,
+    85
+   ],
+   "class": "structured",
+   "what": "round isometric puck with blue/black AICPA SOC 2 seal",
+   "at": 1.6
+  },
+  {
+   "name": "CERTIFIED bar",
+   "box": [
+    636,
+    172,
+    140,
+    118
+   ],
+   "class": "structured",
+   "what": "long extruded block lettered 'CERTIFIED' with port dots",
+   "at": 1.6
+  },
+  {
+   "name": "COMODO badge",
+   "box": [
+    798,
+    133,
+    152,
+    95
+   ],
+   "class": "structured",
+   "what": "white slab with red padlock 'COMODO SSL CERTIFICATE' logo",
+   "at": 1.6
+  },
+  {
+   "name": "IRS badge",
+   "box": [
+    748,
+    236,
+    118,
+    88
+   ],
+   "class": "structured",
+   "what": "white slab with black IRS eagle logo",
+   "at": 1.6
+  },
+  {
+   "name": "PCI DSS badge",
+   "box": [
+    924,
+    205,
+    152,
+    105
+   ],
+   "class": "structured",
+   "what": "white slab with green PCI DSS COMPLIANT logo",
+   "at": 1.6
+  },
+  {
+   "name": "connector wires + pulses",
+   "box": [
+    560,
+    180,
+    390,
+    145
+   ],
+   "class": "css",
+   "what": "1px grey stepped wires with short blue pulses travelling along them",
+   "at": 2.1
+  },
+  {
+   "name": "hairline stripe fields",
+   "box": [
+    0,
+    0,
+    1252,
+    606
+   ],
+   "class": "css",
+   "what": "faint vertical hairline stripes in the top band and footer side margins",
+   "at": 1.6
+  },
+  {
+   "name": "Boomtax wordmark",
+   "box": [
+    145,
+    412,
+    128,
+    30
+   ],
+   "class": "structured",
+   "what": "serif wordmark, 'tax' bolder",
+   "at": 1.6
+  }
+ ],
+ "moves": [
+  {
+   "element": "blue wire pulses",
+   "what": "short blue segments travel along the grey connector wires between badges, several at a time on different wires, looping continuously",
+   "from": 0,
+   "to": 3.53,
+   "px": null
+  },
+  {
+   "element": "pulse on IRS-PCI wire",
+   "what": "blue stretch near x 895-945, y 280-315 at 1.6s, gone by 2.1s",
+   "from": 1.6,
+   "to": 2.1,
+   "px": null
+  },
+  {
+   "element": "pulse on SOC2-CERTIFIED and IRS left wires",
+   "what": "blue segments appear near x 625-640 y 285-298 and x 715-770 y 290-322 at 2.1s",
+   "from": 1.6,
+   "to": 2.1,
+   "px": null
+  },
+  {
+   "element": "pulse on CERTIFIED-IRS / COMODO wires",
+   "what": "blue at x 725-800 y 215-265 at 2.5s, moves to COMODO wire x 815-840 at 3s and x 790-800 at 3.4s",
+   "from": 2.5,
+   "to": 3.4,
+   "px": null
+  }
+ ]
+}

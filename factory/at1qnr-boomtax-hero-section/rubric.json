@@ -1,0 +1,1137 @@
+{
+ "slug": "at1qnr-boomtax-hero-section",
+ "frame": {
+  "w": 1252,
+  "h": 894
+ },
+ "at": "2026-10-24T08:30:26.108Z",
+ "model": "opus",
+ "costUsd": 0.66,
+ "summary": "A light SaaS hero on #fafafa. A white centred column (x 116–1136, hairline grey border) holds the top half. The side gutters (x 0–116 and 1136–1252, y 0–370) are filled with fine vertical grey hairline stripes. A nav bar at the top: serif wordmark \"Boomtax\" at the left, grey sans links \"Features / Pricing / Our Story / Contact\", and at the right \"Log in\" and \"Book a Demo\", split by a hairline divider. A hairline rule runs under the nav at y≈42. The headline \"E-File Your Tax / Forms in Seconds.\" is a near-black (#04131a) high-contrast serif, about 58 px, on two centred lines (y 95–205). Under it sits a two-line grey sans subhead, then two 46 px tall square-cornered buttons: solid #0196fb \"Try Boomtax Free\" with white text, and a white bordered \"Book a Demo\". Below the column, a full-width strip (y 422–494) has six hairline-divided cells of grey monochrome partner logos: FreshBooks, intuit quickbooks, an Excel mark, xero, zoho and a PDF file icon. The bottom (y 494–894) is an isometric line illustration on the same striped ground. An input conveyor runs from the top-left down-right into a white Boomtax machine (black rounded \"b\" badge, green arrow glows, a green status dot, a lime-green glowing mouth). It carries white iso tiles with coloured file icons (grey, red PDF, blue DOC, black, green XLS, blue). An output conveyor leaves the machine down-right carrying blue tiles with green checks. Around it float static props on thin grey wire paths: a grey file tile, a green sheet tile, a paper stack, a mail station with a blue screen, a blue check tablet, and an upload station with a yellow bolt. The only motion is the two belts. Every tile slides down-right along its belt with an eased, pulsing advance of about 40–60 px in x (about 0.57 px of y per px of x) per ~1.5 s, nearly pausing around 1.9–2.4 s. A tile entering the mouth goes green in the glow and comes out as a blue check tile. The page text, logos, props and the machine stay still.",
+ "elements": [
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1252,
+    894
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "#fafafa off-white"
+  },
+  {
+   "name": "side gutter stripes",
+   "box": [
+    0,
+    0,
+    116,
+    370
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "fine vertical grey hairline stripes, also at x 1136–1252 and behind the illustration"
+  },
+  {
+   "name": "centre column card",
+   "box": [
+    116,
+    0,
+    1020,
+    422
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "white/near-white with 1px light grey border"
+  },
+  {
+   "name": "nav wordmark Boomtax",
+   "box": [
+    133,
+    6,
+    107,
+    26
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "serif, near-black"
+  },
+  {
+   "name": "nav links",
+   "box": [
+    256,
+    10,
+    257,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "Features, Pricing, Our Story, Contact; grey sans ~15px"
+  },
+  {
+   "name": "nav Log in",
+   "box": [
+    969,
+    10,
+    38,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "dark sans"
+  },
+  {
+   "name": "nav Book a Demo",
+   "box": [
+    1028,
+    0,
+    108,
+    42
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "dark sans text, hairline divider at left"
+  },
+  {
+   "name": "nav bottom rule",
+   "box": [
+    116,
+    42,
+    1020,
+    1
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "hairline grey"
+  },
+  {
+   "name": "headline",
+   "box": [
+    381,
+    95,
+    490,
+    110
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "E-File Your Tax / Forms in Seconds. serif ~58px #04131a"
+  },
+  {
+   "name": "subhead",
+   "box": [
+    425,
+    217,
+    402,
+    42
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "two lines grey sans ~16px"
+  },
+  {
+   "name": "primary button",
+   "box": [
+    487,
+    295,
+    149,
+    46
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "#0196fb fill, white text Try Boomtax Free, square corners"
+  },
+  {
+   "name": "secondary button",
+   "box": [
+    648,
+    295,
+    118,
+    46
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "white with light grey border, dark text Book a Demo"
+  },
+  {
+   "name": "partner logo strip",
+   "box": [
+    0,
+    422,
+    1252,
+    72
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "six cells split by hairlines at x≈203,414,625,836,1047"
+  },
+  {
+   "name": "FreshBooks logo",
+   "box": [
+    38,
+    445,
+    120,
+    28
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "grey monochrome"
+  },
+  {
+   "name": "quickbooks logo",
+   "box": [
+    243,
+    445,
+    130,
+    28
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "grey, small 'intuit' above"
+  },
+  {
+   "name": "Excel logo",
+   "box": [
+    502,
+    442,
+    37,
+    32
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "grey"
+  },
+  {
+   "name": "xero logo",
+   "box": [
+    699,
+    446,
+    65,
+    24
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "grey"
+  },
+  {
+   "name": "zoho logo",
+   "box": [
+    903,
+    442,
+    80,
+    34
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "grey outlined links"
+  },
+  {
+   "name": "PDF file icon",
+   "box": [
+    1139,
+    440,
+    30,
+    36
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "grey"
+  },
+  {
+   "name": "isometric pipeline illustration",
+   "box": [
+    120,
+    494,
+    1016,
+    400
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "flat iso line art"
+  },
+  {
+   "name": "input conveyor with file tiles",
+   "box": [
+    195,
+    494,
+    340,
+    190
+   ],
+   "kind": "motion",
+   "class": "structured",
+   "note": "belt down-right into machine; tiles move"
+  },
+  {
+   "name": "Boomtax machine",
+   "box": [
+    527,
+    615,
+    170,
+    152
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "white iso box, black b badge, green glows, lime mouth"
+  },
+  {
+   "name": "output conveyor with check tiles",
+   "box": [
+    620,
+    715,
+    370,
+    179
+   ],
+   "kind": "motion",
+   "class": "structured",
+   "note": "blue tiles with green check, move down-right"
+  },
+  {
+   "name": "floating grey file tile",
+   "box": [
+    186,
+    545,
+    56,
+    35
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "static"
+  },
+  {
+   "name": "floating green sheet tile",
+   "box": [
+    541,
+    540,
+    57,
+    34
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "static"
+  },
+  {
+   "name": "paper stack",
+   "box": [
+    313,
+    645,
+    57,
+    62
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "stacked sheets with blue icon on top"
+  },
+  {
+   "name": "mail station",
+   "box": [
+    691,
+    508,
+    118,
+    108
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "white base, envelope, blue screen"
+  },
+  {
+   "name": "check tablet",
+   "box": [
+    810,
+    655,
+    52,
+    80
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "blue panel with green check"
+  },
+  {
+   "name": "upload station",
+   "box": [
+    427,
+    745,
+    117,
+    108
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "white base, yellow bolt, blue round screen"
+  },
+  {
+   "name": "wire paths",
+   "box": [
+    430,
+    590,
+    330,
+    300
+   ],
+   "kind": "decoration",
+   "class": "structured",
+   "note": "thin grey zigzag lines"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "page background",
+   "axis": "style",
+   "check": "The page ground is a flat off-white near #fafafa, not pure white and not tinted",
+   "box": [
+    0,
+    0,
+    1252,
+    894
+   ],
+   "scope": "frame",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "side gutter stripes",
+   "axis": "present",
+   "check": "The left gutter (x 0–116, y 0–370) is filled with fine vertical grey hairline stripes a few px apart, the same as the right gutter x 1136–1252",
+   "box": [
+    0,
+    0,
+    116,
+    370
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "side gutter stripes",
+   "axis": "style",
+   "check": "The stripes are thin 1px vertical lines, not a solid grey band and not a dot or diagonal pattern",
+   "box": [
+    1136,
+    0,
+    116,
+    370
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "centre column card",
+   "axis": "position",
+   "check": "A light-bordered centre column spans x≈116 to 1136 and ends at y≈422",
+   "box": [
+    116,
+    0,
+    1020,
+    422
+   ],
+   "scope": "frame",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "nav wordmark Boomtax",
+   "axis": "text",
+   "check": "Top-left wordmark reads \"Boomtax\" in a dark serif, starting at x≈133",
+   "box": [
+    133,
+    6,
+    107,
+    26
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "nav links",
+   "axis": "text",
+   "check": "Nav links read \"Features\", \"Pricing\", \"Our Story\", \"Contact\" left to right in grey sans",
+   "box": [
+    256,
+    8,
+    260,
+    22
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "nav Log in",
+   "axis": "text",
+   "check": "Right of the nav reads \"Log in\" then \"Book a Demo\", with a vertical hairline divider between them at x≈1028",
+   "box": [
+    960,
+    0,
+    176,
+    42
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "nav bottom rule",
+   "axis": "present",
+   "check": "A hairline grey rule runs under the nav at y≈42",
+   "box": [
+    116,
+    36,
+    1020,
+    12
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "headline",
+   "axis": "text",
+   "check": "Headline reads exactly \"E-File Your Tax\" on line 1 and \"Forms in Seconds.\" on line 2",
+   "box": [
+    381,
+    95,
+    490,
+    110
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "headline",
+   "axis": "style",
+   "check": "Headline is a high-contrast serif in near-black (#04131a), about 58px cap-to-descender, not a sans",
+   "box": [
+    381,
+    95,
+    490,
+    110
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "headline",
+   "axis": "position",
+   "check": "Headline is horizontally centred on x≈626, spanning x≈381–871, line 1 top at y≈100",
+   "box": [
+    381,
+    95,
+    490,
+    110
+   ],
+   "scope": "frame",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "subhead",
+   "axis": "text",
+   "check": "Subhead reads \"Upload your data and let Boomtax handle everything from\" / \"filing to mailing with total accuracy and compliance.\" on two centred lines",
+   "box": [
+    425,
+    217,
+    402,
+    42
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "subhead",
+   "axis": "style",
+   "check": "Subhead is mid-grey sans about 16px, clearly lighter than the headline",
+   "box": [
+    425,
+    217,
+    402,
+    42
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "primary button",
+   "axis": "style",
+   "check": "Primary button is solid bright blue #0196fb with square (≤2px) corners, about 149x46px",
+   "box": [
+    487,
+    295,
+    149,
+    46
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "primary button",
+   "axis": "text",
+   "check": "Primary button reads \"Try Boomtax Free\" in white medium sans",
+   "box": [
+    487,
+    295,
+    149,
+    46
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "secondary button",
+   "axis": "style",
+   "check": "Secondary button is white with a 1px light grey border, same height as the primary, about 10px to its right",
+   "box": [
+    648,
+    295,
+    118,
+    46
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "secondary button",
+   "axis": "text",
+   "check": "Secondary button reads \"Book a Demo\" in dark sans",
+   "box": [
+    648,
+    295,
+    118,
+    46
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "partner logo strip",
+   "axis": "position",
+   "check": "A full-width logo strip sits at y≈422–494, split into six cells by vertical hairlines at x≈203, 414, 625, 836, 1047",
+   "box": [
+    0,
+    422,
+    1252,
+    72
+   ],
+   "scope": "frame",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c19",
+   "element": "partner logo strip",
+   "axis": "text",
+   "check": "Logos left to right are FreshBooks, intuit quickbooks, an Excel mark, xero, zoho, a PDF file icon",
+   "box": [
+    0,
+    422,
+    1252,
+    72
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "partner logo strip",
+   "axis": "style",
+   "check": "All partner logos are light grey monochrome, none in brand colour",
+   "box": [
+    0,
+    422,
+    1252,
+    72
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "FreshBooks logo",
+   "axis": "imagery",
+   "check": "Logos are drawn as simple grey vector marks with recognisable silhouettes (F badge + wordmark, qb circle + wordmark, X grid, xero lowercase, zoho linked boxes, folded PDF page)",
+   "box": [
+    0,
+    422,
+    1252,
+    72
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "isometric pipeline illustration",
+   "axis": "present",
+   "check": "Below the logo strip an isometric illustration fills y≈494–894 on the same vertical-stripe ground",
+   "box": [
+    120,
+    494,
+    1016,
+    400
+   ],
+   "scope": "frame",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "isometric pipeline illustration",
+   "axis": "imagery",
+   "check": "The illustration is flat iso line art: white extruded blocks with thin grey outlines and soft grey side faces, no photographic texture",
+   "box": [
+    120,
+    494,
+    1016,
+    400
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "input conveyor with file tiles",
+   "axis": "position",
+   "check": "The input belt runs diagonally from the top-left (x≈195, y≈494) down-right into the machine's left face (x≈530, y≈680)",
+   "box": [
+    195,
+    494,
+    340,
+    190
+   ],
+   "scope": "frame",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c25",
+   "element": "input conveyor with file tiles",
+   "axis": "style",
+   "check": "Belt tiles are white rounded iso squares, each carrying one coloured file icon: grey, red PDF, blue DOC, black, green XLS, blue",
+   "box": [
+    195,
+    494,
+    340,
+    190
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c26",
+   "element": "input conveyor with file tiles",
+   "axis": "present",
+   "check": "About six file tiles are visible on the input belt, evenly spaced about 55px apart in x",
+   "box": [
+    195,
+    494,
+    340,
+    190
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c27",
+   "element": "Boomtax machine",
+   "axis": "position",
+   "check": "The machine block sits at x≈527–697, y≈615–767, where the two belts meet",
+   "box": [
+    527,
+    615,
+    170,
+    152
+   ],
+   "scope": "frame",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "Boomtax machine",
+   "axis": "style",
+   "check": "Machine top carries a black rounded-square badge with a white lowercase \"b\", green glowing arrow marks above and below it, and a small green dot at the right corner",
+   "box": [
+    560,
+    630,
+    130,
+    60
+   ],
+   "scope": "crop",
+   "at": 2.95,
+   "then": null
+  },
+  {
+   "id": "c29",
+   "element": "Boomtax machine",
+   "axis": "style",
+   "check": "The machine mouth on its right face glows lime/yellow-green with a soft blurred halo spilling outside the opening, not a hard-edged green rectangle",
+   "box": [
+    615,
+    685,
+    80,
+    75
+   ],
+   "scope": "crop",
+   "at": 2.95,
+   "then": null
+  },
+  {
+   "id": "c30",
+   "element": "output conveyor with check tiles",
+   "axis": "style",
+   "check": "Output belt tiles are white iso squares with a blue form icon and a green check mark",
+   "box": [
+    620,
+    715,
+    370,
+    179
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c31",
+   "element": "output conveyor with check tiles",
+   "axis": "position",
+   "check": "The output belt leaves the machine mouth and runs down-right off the bottom edge near x≈990, y≈894",
+   "box": [
+    620,
+    715,
+    370,
+    179
+   ],
+   "scope": "frame",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c32",
+   "element": "mail station",
+   "axis": "present",
+   "check": "A white iso base with a grey envelope and an upright blue screen sits at x≈691–809, y≈508–616",
+   "box": [
+    691,
+    508,
+    118,
+    108
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c33",
+   "element": "check tablet",
+   "axis": "present",
+   "check": "A blue upright iso tablet with a green check floats at x≈810–862, y≈655–735, with a dotted grey line under it",
+   "box": [
+    805,
+    650,
+    60,
+    130
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c34",
+   "element": "upload station",
+   "axis": "present",
+   "check": "A white iso base with a yellow lightning bolt and an upright blue round screen sits at x≈427–544, y≈745–853",
+   "box": [
+    427,
+    745,
+    117,
+    108
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c35",
+   "element": "paper stack",
+   "axis": "present",
+   "check": "A stack of white paper sheets with a blue icon on top sits at x≈313–370, y≈645–707",
+   "box": [
+    313,
+    645,
+    57,
+    62
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c36",
+   "element": "floating grey file tile",
+   "axis": "present",
+   "check": "A loose grey file tile floats at x≈186–242, y≈545–580, and a green sheet tile at x≈541–598, y≈540–574, off the belt",
+   "box": [
+    180,
+    535,
+    425,
+    50
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c37",
+   "element": "wire paths",
+   "axis": "style",
+   "check": "Thin grey 1px zigzag wire lines link the machine to the mail station and the upload station",
+   "box": [
+    430,
+    590,
+    330,
+    300
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": null
+  },
+  {
+   "id": "c38",
+   "element": "input conveyor with file tiles",
+   "axis": "motion",
+   "check": "The red PDF tile moves down-right along the belt, from about (370,560) to about (432,594): about 62px right and 34px down",
+   "box": [
+    300,
+    500,
+    200,
+    120
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": 3.45
+  },
+  {
+   "id": "c39",
+   "element": "input conveyor with file tiles",
+   "axis": "motion",
+   "check": "The belt barely advances between 1.9s and 2.4s (under 10px), then moves clearly between 2.4s and 2.95s (about 30px in x)",
+   "box": [
+    195,
+    494,
+    340,
+    190
+   ],
+   "scope": "crop",
+   "at": 1.9,
+   "then": 2.95
+  },
+  {
+   "id": "c40",
+   "element": "output conveyor with check tiles",
+   "axis": "motion",
+   "check": "Output check tiles move down-right in step with the input belt, the same direction and a similar distance",
+   "box": [
+    620,
+    715,
+    370,
+    179
+   ],
+   "scope": "crop",
+   "at": 2.4,
+   "then": 3.45
+  },
+  {
+   "id": "c41",
+   "element": "Boomtax machine",
+   "axis": "motion",
+   "check": "The tile in the machine mouth shows green inside the glow, and blue check tiles appear beyond it as the belt advances",
+   "box": [
+    615,
+    685,
+    120,
+    90
+   ],
+   "scope": "crop",
+   "at": 2.4,
+   "then": 2.95
+  },
+  {
+   "id": "c42",
+   "element": "headline",
+   "axis": "motion",
+   "check": "Headline, subhead, buttons, nav and logo strip do not move or change",
+   "box": [
+    0,
+    0,
+    1252,
+    494
+   ],
+   "scope": "frame",
+   "at": 0.5,
+   "then": 3.45
+  },
+  {
+   "id": "c43",
+   "element": "mail station",
+   "axis": "motion",
+   "check": "The mail station, check tablet, upload station, paper stack, floating tiles and machine body stay in place",
+   "box": [
+    180,
+    500,
+    700,
+    394
+   ],
+   "scope": "frame",
+   "at": 0.5,
+   "then": 3.45
+  },
+  {
+   "id": "c44",
+   "element": "input conveyor with file tiles",
+   "axis": "motion",
+   "check": "Tiles glide smoothly with eased speed changes, never jump a slot in a single frame",
+   "box": [
+    300,
+    500,
+    200,
+    120
+   ],
+   "scope": "crop",
+   "at": 2.4,
+   "then": 2.95
+  },
+  {
+   "id": "c45",
+   "element": "input conveyor with file tiles",
+   "axis": "motion",
+   "check": "New file tiles keep entering from the top-left edge, so the belt is never empty during the clip",
+   "box": [
+    195,
+    494,
+    200,
+    80
+   ],
+   "scope": "crop",
+   "at": 0.5,
+   "then": 3.45
+  }
+ ],
+ "imagery": [
+  {
+   "name": "partner logos",
+   "box": [
+    0,
+    422,
+    1252,
+    72
+   ],
+   "class": "structured",
+   "what": "grey monochrome FreshBooks, intuit quickbooks, Excel, xero, zoho and PDF marks",
+   "at": 1.9
+  },
+  {
+   "name": "isometric pipeline",
+   "box": [
+    120,
+    494,
+    1016,
+    400
+   ],
+   "class": "structured",
+   "what": "flat iso illustration: file tiles on a belt into a white Boomtax machine with a glowing mouth, blue check tiles out, plus mail, upload and paper-stack stations on grey wires",
+   "at": 1.9
+  },
+  {
+   "name": "machine mouth glow",
+   "box": [
+    615,
+    685,
+    80,
+    75
+   ],
+   "class": "css",
+   "what": "lime/yellow-green soft blurred glow around the output opening",
+   "at": 2.95
+  },
+  {
+   "name": "stripe ground",
+   "box": [
+    0,
+    0,
+    116,
+    370
+   ],
+   "class": "css",
+   "what": "repeating fine vertical grey hairlines on off-white",
+   "at": 1.9
+  }
+ ],
+ "moves": [
+  {
+   "element": "input conveyor file tiles",
+   "what": "slide down-right along the belt toward the machine, eased pulse",
+   "from": 0.5,
+   "to": 1.6,
+   "px": 57
+  },
+  {
+   "element": "input conveyor file tiles",
+   "what": "near pause, under 10px of travel",
+   "from": 1.9,
+   "to": 2.4,
+   "px": 8
+  },
+  {
+   "element": "input conveyor file tiles",
+   "what": "slide down-right again, settling about 3.15s",
+   "from": 2.45,
+   "to": 3.45,
+   "px": 54
+  },
+  {
+   "element": "output conveyor check tiles",
+   "what": "slide down-right away from the machine in step with the input belt",
+   "from": 0.5,
+   "to": 3.45,
+   "px": null
+  },
+  {
+   "element": "machine mouth tile",
+   "what": "the tile in the mouth goes green in the lime glow and comes out as a blue check tile",
+   "from": 2.4,
+   "to": 2.95,
+   "px": null
+  }
+ ]
+}

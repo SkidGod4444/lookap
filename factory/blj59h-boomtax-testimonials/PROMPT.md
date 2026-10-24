@@ -1,0 +1,102 @@
+Rebuild the lookap entry "Boomtax Testimonials" by lookap as one self-contained HTML file at factory/blj59h-boomtax-testimonials/index.html.
+
+What you have
+- factory/blj59h-boomtax-testimonials/brief.json: the record, the draft measurement (frame, phases, keyframes with their times, background, palette, element boxes, moves), the credit, and the measuring method behind every recipe.
+- factory/blj59h-boomtax-testimonials/rubric.json: the checklist this rebuild is judged against, written from the clip. Its summary: A static, light testimonials section on an off-white #fbfbfb page. Two faint vertical frame lines at x≈116 and x≈1135 run from the top to y≈498 and bound a central column; outside it, the top-left (x 0–112) and top-right (x 1138–1252) corners down to y≈58 carry a fine vertical pinstripe texture (light grey hairlines ~6 px apart), and the same pinstripe fills a band across the column under the cards (y≈420–498). A full-width hairline at y≈498 closes the section above a plain strip. Centred in the column is a two-line high-contrast serif heading, "A Few Words from / Happy Customers.", near-black navy (#041019), ~48 px, spanning x≈423–830, y≈65–158. A light grey hairline at y≈205 separates the heading from a three-column ruled grid (columns 116–457, 457–796, 796–1135, rows y 205–419) divided by thin vertical rules; each cell holds a grey sans-serif quote (~15 px, ~19.5 px line height, six or fewer lines from y≈228) and, at y≈388, a serif signature: name ~19 px dark plus a smaller serif state. Almost nothing moves over the 1.5 s: text, grid and stripes hold still (difference views show only compression shimmer on edges). The one real change is the hairline under the heading: at 0.2 s it runs the full column, touching both frame lines (x≈116–1135); between ≈0.85 s and 1.05 s it retracts from both ends so that by 1.25 s it spans only x≈128–1120, leaving ~12–15 px gaps at each frame line.
+- The designer's clip at its keyframes (frame 1252 x 526, 1.5s):
+  - kf1 at 0.2s: public/drafts/bttest/kf1.jpg
+  - kf2 at 1.25s: public/drafts/bttest/kf2.jpg
+  Read every one of them before writing anything, then describe the layout to yourself in one paragraph: regions, alignment, type scale, radii, spacing rhythm, what moves between the keyframes.
+- The clip itself, through `bun scripts/probe.ts blj59h-boomtax-testimonials`:
+    --sheet a,b                 a contact sheet of that span at 10 fps (36 frames), written to factory/blj59h-boomtax-testimonials/sheets/; cover the whole clip in 3.6 s spans and Read every sheet
+    --diff a,b                  the clip at a, at b, and what changed between them in white: which thing moves, which only has something pass over it; written to factory/blj59h-boomtax-testimonials/diff/
+    --col x --t t1,t2           light/mid/dark runs down column x at those times: row heights, gaps, borders, where things sit
+    --col x --t t --hex a,b     exact colours, one per pixel, from y a to b: the true gradient of a surface, a border's real colour, a gap's shade
+    --row y --t t [--hex a,b]   the same along a row
+    --track x --from a --to b   the top and bottom edge of the red/dark/light stuff in column x per frame at 60 fps: a motion's start, end, distance and shape
+    --zoom x,y,w,h --t t        that crop of the clip at up to 4x beside the same crop of your render at that moment (run the checker with --at t first), written to factory/blj59h-boomtax-testimonials/zoom/
+    --patch x,y,w,h --t t --as name
+                                a texture tile from the clip as a small JPEG, written to factory/blj59h-boomtax-testimonials/patches/ and set into your index.html as --patch-name in <style id="patches">, for background-image: var(--patch-name). The only way to sample; never retype base64 yourself. Refused above a tile's size.
+    --placeholder x,y,w,h --t t --as name
+                                a coarse colour grid of that region, set as --placeholder-name: the stand-in for a photograph, painting or screenshot the rebuild may not copy.
+    --drive "press x,y; move x,y; shot name; release; wait ms; click x,y; hover x,y"
+                                real pointer gestures on your page, screenshots to factory/blj59h-boomtax-testimonials/drive/
+  Keyframes are moments when nothing moves. Everything between them (how a thing enters, stretches, snaps, settles, in what order) is only in the frames, so look there before you decide the timeline.
+- The checker: `bun --conditions=react-server scripts/check-build.ts blj59h-boomtax-testimonials`. It renders your file at the frame size, seeks every animation on the page to each moment, screenshots, and compares with the clip at the keyframes, the middle of every measured phase and the rubric's moments. It prints: a pixel score per moment (a floor, not a goal: it cannot tell a drawn ring from a glass lens or a nine-spoke spinner from a disc), the elements whose colour (deltaE) or place (shift) differ, whether your render moves where the clip moves, and how each measured moving part keeps step. It writes factory/blj59h-boomtax-testimonials/side.png (designer left, yours right, one row per moment) and factory/blj59h-boomtax-testimonials/verdict.json. --at t1,t2 adds moments; --quick scores only the keyframes and your --at moments. The rubric itself is judged by a separate vision model after your session ends, criterion by criterion on crop pairs; you cannot run it, so check each criterion by eye with --zoom before you stop.
+
+The checklist (every line must be true of your file; the judge looks at a crop of the clip beside the same crop of your render):
+  c01 [style, page background] The page is a flat off-white (about #fbfbfb) with no gradient or shadow (look at 0.2s)
+  c02 [text, heading line 1] First heading line reads exactly 'A Few Words from' (look at 0.2s)
+  c03 [text, heading line 2] Second heading line reads exactly 'Happy Customers.' including the full stop (look at 0.2s)
+  c04 [style, heading] Heading is set in a high-contrast serif (bracketed serifs, thick/thin strokes), not sans-serif (look at 0.2s)
+  c05 [style, heading] Heading colour is near-black navy (about #041019), the darkest ink on the page (look at 0.2s)
+  c06 [position, heading] Heading is horizontally centred at x≈626, spanning about x 423–830, with cap tops near y 65 and baseline of line 2 near y 152 (look at 0.2s)
+  c07 [text, heading] Heading cap height is about 34px (font size ~48px), two lines ~47px apart (look at 0.2s)
+  c08 [position, left frame line] A pale grey vertical hairline runs at x≈116 from the top edge down to y≈498 (look at 0.2s)
+  c09 [position, right frame line] A pale grey vertical hairline runs at x≈1135 from the top edge down to y≈498 (look at 0.2s)
+  c10 [present, top-left pinstripe corner] The region x 0–112, y 0–58 is filled with fine vertical light-grey pinstripes, and it is closed by a horizontal hairline at y≈58 (look at 0.2s)
+  c11 [present, top-right pinstripe corner] The region x 1138–1252, y 0–58 has the same vertical pinstripes (look at 0.2s)
+  c12 [present, bottom pinstripe band] Below the card grid, a band from y≈420 to 498 between the frame lines is filled with vertical pinstripes (look at 0.2s)
+  c13 [style, bottom pinstripe band] Pinstripes are very low-contrast light grey hairlines (~1px) about 6px apart; they are straight, evenly spaced and never dark or bold (look at 0.2s)
+  c14 [style, pinstripe areas] The pinstripe is only vertical lines: no diagonal hatching, no dots, no horizontal stripes inside the band (look at 0.2s)
+  c15 [present, page background] Areas between the pinstripes (beside the grid, x 0–112 below y 58 and x 1138–1252 below y 58) are plain off-white with no stripes (look at 0.2s)
+  c16 [position, section bottom hairline] A full-width pale hairline crosses the frame at y≈498, with a plain strip below it to the bottom edge (look at 0.2s)
+  c17 [position, heading rule] A light grey (#ededed) 1px hairline lies at y≈205 under the heading, spanning the column (look at 0.2s)
+  c18 [present, card grid] Exactly 3 testimonial cells sit side by side in one row (look at 0.2s)
+  c19 [position, column dividers] Thin pale vertical rules divide the cells at x≈457 and x≈796, running y≈205–419 (look at 0.2s)
+  c20 [position, grid bottom rule] A pale hairline at y≈419 closes the bottom of the grid, directly above the pinstripe band (look at 0.2s)
+  c21 [style, card grid] Cells have no fill, no shadow and no rounded corners; they are defined only by hairline rules (look at 0.2s)
+  c22 [text, quote 1] Quote 1 reads '“We love BoomTax! We have used it for the last three years and they have been a real life saver when it comes to ACA compliance and reporting health coverage. Worth every one of 5 stars and then some!”' with curly quote marks (look at 0.2s)
+  c23 [text, quote 2] Quote 2 reads 'After careful research, we decided to go with the BoomTax ACA software solution for our ACA filing, and we had a flawless experience. Their online system is very user friendly and they are on top of the entire process. We highly recommend BoomTax!' with no quote marks (look at 0.2s)
+  c24 [text, quote 3] Quote 3 reads 'The customer support at Boomtax is magnificent, when you need to use it, which is hardly ever because the software works so smoothly. I highly recommend their solution to anyone who needs to comply with ACA reporting requirements.' (look at 0.2s)
+  c25 [style, quotes] Quote text is a sans-serif at ~15px in medium grey (about #555–#666), clearly lighter than the heading and signatures (look at 0.2s)
+  c26 [position, quotes] Quote first lines start at y≈230 and left edges sit at x≈138, 478 and 818 (about 22px inside each cell) (look at 0.2s)
+  c27 [text, quote 1] Quote 1 wraps to 5 lines, quotes 2 and 3 to 6 lines each, with ~19.5px line spacing (look at 0.2s)
+  c28 [text, signature 1] Signature 1 reads 'Linda G,' followed by 'Maryland' (look at 0.2s)
+  c29 [text, signature 2] Signature 2 reads 'Bianca P,' followed by 'Arizona' (look at 0.2s)
+  c30 [text, signature 3] Signature 3 reads 'Brian M,' followed by 'Illinois' (look at 0.2s)
+  c31 [style, signatures] Names are serif ~19px in near-black; the state after the comma is a visibly smaller serif (~15px) on the same baseline (look at 0.2s)
+  c32 [position, signatures] All three signatures share one baseline at y≈394, aligned with the quote left edges (look at 0.2s)
+  c33 [position, heading rule] At 0.2s the heading rule reaches both frame lines, running continuously from x≈116 to x≈1135 (look at 0.2s)
+  c34 [motion, heading rule] Between 0.2s and 1.25s the heading rule retracts from both ends: at 1.25s it spans only about x 128–1120, leaving ~12–15px gaps at each frame line (compare 0.2s with 1.25s)
+  c35 [motion, heading rule] The rule holds full length through 0.7s and the retraction happens around 0.85–1.05s (at 1.0s the line shows breaks/partial segments) (compare 0.7s with 1s)
+  c36 [motion, heading] Heading does not move, fade or change colour between 0.2s and 1.25s (compare 0.2s with 1.25s)
+  c37 [motion, quotes and signatures] Quote and signature text stay put with no fade, slide or reflow between 0.2s and 1.25s (compare 0.2s with 1.25s)
+  c38 [motion, bottom pinstripe band] The pinstripes do not scroll or shift sideways between 0.2s and 1.25s (compare 0.2s with 1.25s)
+  c39 [motion, frame lines and dividers] Frame lines, column dividers and grid bottom rule stay fixed and full length between 0.2s and 1.25s (compare 0.2s with 1.25s)
+
+Imagery (what the clip shows that is not plain UI, and the rule for each):
+  - pinstripe texture (corners and bottom band) [116,420,1019,78] is css: repeating vertical 1px light-grey hairlines about 6px apart on off-white, drawable with a repeating-linear-gradient. Rule: draw it: CSS or inline SVG, exact to the crops (gradients, rings, glass, lenses, spinners, shadows, text art are all drawable)
+
+How to look (this is where rebuilds go wrong)
+- Find what moves with --diff before you decide the timeline: two frames half a second apart, in two or three parts of the clip. The draft's motion rows can be fooled by a thing passing over a region. Then --track the moving edge for its start, end, distance and speed.
+- Track something that should not move. Run --track through the heading with --class dark over the whole clip. If the heading moves when a panel opens or the thing enters, the page is a centred column that reflows, and you copy that layout rule rather than absolute coordinates. If it does not move during a drag, that gesture is a transform, not layout.
+- Zoom before you draw. For every surface, --zoom a 150 x 130 crop of its edge at the rest moment and read it: how thick is the edge, what colour, is there a gap behind it, which side is lit. Then --hex a column through it for the real numbers.
+- Materials are part of the design: a glass ring refracts what is behind it at its rim (the background shifts and a highlight runs along the edge), it is not an outline; a frosted panel shows the picture through it; rims, bevels, inner highlights, the lip under a key, the shade inside a fold. Draw what the crop shows, not what a component library would do.
+- Known ways rebuilds fail, in order of how often: a water ripple or lens drawn as hard concentric rings or a stroked outline, where the clip shows the picture beneath bending softly with a faint crest (build it as displacement or magnification of the background with soft falloff, never as a drawn ring); type dimmer, lighter or a different weight than the clip's; a texture as a flat gradient where the clip has grain; a seam where a patch tiles; a page that does not move while the clip does (the checker says STATIC); a wrong count (spokes, dots, rows, rings); the wrong thing moving (the background drifting when it is the rings that grow); timing read from the stills instead of tracked.
+- Interaction is the design. Whatever the clip's cursor does (hover, click, press, drag) the page must do for a real pointer, with the same response and timing. Test with --drive and Read the screenshots.
+
+Rules for the file
+- The page is exactly the frame: html and body margin 0, overflow hidden, a #stage of 1252 x 526 px, background #fafbfb. Set --u: 1px on #stage and write every size as calc(N * var(--u)), including an inline SVG's size (give it a CSS width and height in var(--u), not only width and height attributes) and every length the script sets or animates (calc(${n} * var(--u)), never ${n}px). The site shows the file at any size by changing --u; the checker renders it at half size and fails it if anything stays full size. Nothing outside the stage.
+- Place elements from the keyframes and crops you looked at. The draft boxes are a first pass and the rubric boxes a second: trust your eyes over both. Fills from --hex, exact. Match proportion and hierarchy first, then colour, then motion.
+- Demo mode for the checker: when the URL has ?demo=1 the page replays the clip's sequence on the clip's own timeline (animation-delay for when each move starts, duration and distance from draft.phases, draft.motion and your own probing) as CSS animations or element.animate calls created at load, so the state at t seconds matches the clip at t and the checker can seek it. Without ?demo the page only answers the pointer (a load-time entrance is fine if the clip has one). No JS timers for the timeline. Respect prefers-reduced-motion.
+- Sampling: a texture that is not UI and cannot be drawn (marble, wood, fabric, grain) is taken from the clip with --patch as a tile, cropped where nothing sits on it, at a moment when it is at rest, and tiled, stretched or layered by you; keep each under 60 KB. A photograph, painting or screenshot is a photo-class region and follows its rule above (this entry is licensed: the picture itself may be sampled). Never paste a block with its chrome, text or controls: those you draw. Say in the header comment and in NOTES.md exactly what was sampled or stood in, and from which frame.
+- Fonts only from Google Fonts through a <link>; no other network. Credit the designer in a comment at the top with the source link from brief.json. Keep the file under 500 lines.
+
+What earlier rebuilds got wrong (each failed the judge on real entries; check every one before you call a round done)
+- Glows and washes flat, mis-centred or the wrong strength. A radial glow or colour wash has a centre, a peak colour and a falloff. Agents draw an even tint across the whole element. Find where it is strongest, sample the peak and two points on the way out, and build the gradient from those stops. Halftone and dot fields: match dot size, spacing and where they fade.
+- Text the right words but the wrong width. A substituted or wrongly weighted font sets the same words 5 to 10 percent wider or narrower. Measure the pixel width of one full line in the clip and adjust font-size, weight and letter-spacing until your line matches it within 2 percent. Script and handwritten faces need the right family, not the nearest script.
+- Motion the right kind but the wrong distance or speed. Agents get what moves right and how far wrong: a slide of 88 px built as 19, a rise twice as fast. Track every moving element and read its start, end and timing from the clip. A move is right when its position matches at three moments, not when it looks similar.
+- Secondary text set too light. Subtitles, captions and body copy end up a lighter grey than the clip's. Anti-aliasing makes an averaged sample look lighter than the ink: take the darkest pixels inside the glyph stems, not the average of the text box.
+- Shadows and borders too faint. Drop shadows, hairline borders and the step between a card and its background are drawn weaker than in the clip, until cards float on nothing. Sample the shadow's darkest row and its spread; sample a card's fill against the page: pure white on grey reads very differently from off-white on grey.
+- Strokes and small marks drawn too thin or too small. Rings, spinners, chevrons, ticks, dashes, dots and outlines come out thinner and smaller than the clip's almost every time: an agent's default is a 1.5 px line icon. Measure the stroke width and the mark's outer size in source pixels and use those numbers. A spinner is usually a thick ring on a faint track, not a thin open arc.
+- Positions and spacing off by tens of pixels. Parts land 20 to 40 px from where the clip has them, and repeated parts get uneven spacing. Read every box from the clip, not by eye: the brief's boxes are a first pass, so confirm each against a frame. Repeated parts (rings, rows, cards) share one pitch; measure it once and step by it.
+- Shapes simplified and small parts dropped. A bubble's tail, an antenna, the gaps in staggered bars, a curved bulge built as a straight wedge, a sliver of an avatar: agents simplify the outline and drop small parts. Before drawing any shape, zoom on it and list its parts; check each part is in your render.
+
+Loop
+1. Read the sheets and two or three --diff pairs for the whole clip. Track the moving edge and the heading. Write the timeline as a list of events with numbers (what, from when to when, how far, which easing), and the layout from --col, --hex and the keyframes. Then build.
+2. Run the checker, read side.png, then --zoom the worst region of the worst moment, the edge of each surface, and every rubric criterion you are not sure of. Fix what the crops show: layout first, then materials, then motion. Run the checker again. Stop when the crops match the clip for every criterion, or after four runs of the checker: more runs past that have not bought anything in earlier entries, and the judge runs when you stop.
+3. --drive the interactions the clip shows and Read the screenshots. Fix what does not answer the pointer.
+4. Write factory/blj59h-boomtax-testimonials/NOTES.md with three parts: "Timeline" (the event list from step 1, as measured), "Differences" (what still differs, with numbers, and every photo-class region stood in rather than reproduced) and "Pattern" (one thing you learned that applies beyond this entry, written as a design note of 3 to 6 factual sentences under a short name).
+
+Do not create or change any file outside factory/blj59h-boomtax-testimonials/. Do not run anything other than the probe and the checker.
