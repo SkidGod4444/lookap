@@ -1,0 +1,1504 @@
+{
+ "slug": "1oi0w9-lanyard-id-badge-portfolio",
+ "at": "2026-10-24T01:22:20.879Z",
+ "runs": 32,
+ "html": "factory/1oi0w9-lanyard-id-badge-portfolio/index.html",
+ "pixel": {
+  "score": 40,
+  "stills": 45,
+  "motion": 39,
+  "moments": 11
+ },
+ "animations": 7,
+ "rank": 85,
+ "allPass": false,
+ "elements": [
+  {
+   "name": "mouse cursor",
+   "box": [
+    1040,
+    710,
+    14,
+    20
+   ],
+   "deltaE": 24.6,
+   "delta": 99,
+   "shift": [
+    8,
+    -4
+   ],
+   "afterShift": 47,
+   "read": "misplaced by 8 x 4 px"
+  },
+  {
+   "name": "giant name",
+   "box": [
+    0,
+    770,
+    1556,
+    290
+   ],
+   "deltaE": 0.3,
+   "delta": 70,
+   "shift": [
+    -6,
+    4
+   ],
+   "afterShift": 65,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "card name 'Sam'",
+   "box": [
+    660,
+    474,
+    165,
+    66
+   ],
+   "deltaE": 0.5,
+   "delta": 61,
+   "shift": [
+    -2,
+    -4
+   ],
+   "afterShift": 41,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1556,
+    1080
+   ],
+   "deltaE": 0.1,
+   "delta": 33,
+   "shift": null,
+   "afterShift": 33,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "card name 'Cheng'",
+   "box": [
+    660,
+    525,
+    245,
+    85
+   ],
+   "deltaE": 2.6,
+   "delta": 33,
+   "shift": [
+    2,
+    0
+   ],
+   "afterShift": 30,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "pill Kleiner Perkins Fellows",
+   "box": [
+    666,
+    826,
+    124,
+    17
+   ],
+   "deltaE": 1.4,
+   "delta": 31,
+   "shift": [
+    -2,
+    -2
+   ],
+   "afterShift": 29,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "badge drop shadow",
+   "box": [
+    640,
+    500,
+    320,
+    430
+   ],
+   "deltaE": 0.9,
+   "delta": 30,
+   "shift": null,
+   "afterShift": 30,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "pill Oracle",
+   "box": [
+    796,
+    826,
+    42,
+    17
+   ],
+   "deltaE": 4.8,
+   "delta": 29,
+   "shift": [
+    -2,
+    -2
+   ],
+   "afterShift": 26,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "pill Multiply",
+   "box": [
+    844,
+    826,
+    52,
+    17
+   ],
+   "deltaE": 3.3,
+   "delta": 28,
+   "shift": [
+    0,
+    -2
+   ],
+   "afterShift": 22,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "lanyard strap",
+   "box": [
+    651,
+    0,
+    262,
+    300
+   ],
+   "deltaE": 2.6,
+   "delta": 27,
+   "shift": null,
+   "afterShift": 27,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "top-left intro text",
+   "box": [
+    124,
+    106,
+    220,
+    44
+   ],
+   "deltaE": 1,
+   "delta": 25,
+   "shift": [
+    4,
+    0
+   ],
+   "afterShift": 22,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "top-right status text",
+   "box": [
+    1192,
+    106,
+    247,
+    44
+   ],
+   "deltaE": 1,
+   "delta": 25,
+   "shift": [
+    -2,
+    0
+   ],
+   "afterShift": 24,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "badge card",
+   "box": [
+    637,
+    445,
+    288,
+    420
+   ],
+   "deltaE": 0.3,
+   "delta": 24,
+   "shift": [
+    0,
+    -2
+   ],
+   "afterShift": 23,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "clear badge holder",
+   "box": [
+    617,
+    360,
+    327,
+    525
+   ],
+   "deltaE": 0.5,
+   "delta": 22,
+   "shift": [
+    0,
+    -2
+   ],
+   "afterShift": 22,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "current role line",
+   "box": [
+    666,
+    772,
+    155,
+    14
+   ],
+   "deltaE": 2.9,
+   "delta": 20,
+   "shift": [
+    8,
+    2
+   ],
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "'Previously' label",
+   "box": [
+    666,
+    806,
+    52,
+    14
+   ],
+   "deltaE": 1,
+   "delta": 19,
+   "shift": [
+    4,
+    0
+   ],
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "metal swivel clip",
+   "box": [
+    762,
+    288,
+    38,
+    110
+   ],
+   "deltaE": 1.2,
+   "delta": 17,
+   "shift": [
+    0,
+    -4
+   ],
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "'Currently' label",
+   "box": [
+    666,
+    752,
+    50,
+    14
+   ],
+   "deltaE": 0.1,
+   "delta": 14,
+   "shift": null,
+   "afterShift": 14,
+   "read": "different drawing: size, shape or texture"
+  }
+ ],
+ "motion": {
+  "read": "the render changes where the clip changes",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "kf1",
+    "clip": 0,
+    "render": 1.1,
+    "read": "render moves where the clip is still"
+   },
+   {
+    "from": "kf1",
+    "to": "0.63s",
+    "clip": 2.7,
+    "render": 4.2,
+    "read": "both move"
+   },
+   {
+    "from": "0.63s",
+    "to": "1s",
+    "clip": 2.5,
+    "render": 1.4,
+    "read": "both move"
+   },
+   {
+    "from": "1s",
+    "to": "2.5s",
+    "clip": 8.4,
+    "render": 8.4,
+    "read": "both move"
+   },
+   {
+    "from": "2.5s",
+    "to": "6s",
+    "clip": 8,
+    "render": 7.2,
+    "read": "both move"
+   },
+   {
+    "from": "6s",
+    "to": "7.93s",
+    "clip": 6.8,
+    "render": 7.3,
+    "read": "both move"
+   },
+   {
+    "from": "7.93s",
+    "to": "10.5s",
+    "clip": 10.3,
+    "render": 7.4,
+    "read": "both move"
+   },
+   {
+    "from": "10.5s",
+    "to": "15.8s",
+    "clip": 11.4,
+    "render": 7.6,
+    "read": "both move"
+   },
+   {
+    "from": "15.8s",
+    "to": "kf2",
+    "clip": 6,
+    "render": 6.3,
+    "read": "both move"
+   },
+   {
+    "from": "kf2",
+    "to": "17.52s",
+    "clip": 3.2,
+    "render": 4.5,
+    "read": "both move"
+   }
+  ],
+  "trajectories": [
+   {
+    "element": "#f2f2f2",
+    "box": [
+     617,
+     360,
+     328,
+     524
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": -2,
+      "delta": 21
+     },
+     {
+      "at": 0.25,
+      "dx": 2,
+      "dy": -2,
+      "delta": 22
+     },
+     {
+      "at": 0.63,
+      "dx": -12,
+      "dy": -2,
+      "delta": 25
+     },
+     {
+      "at": 1,
+      "dx": 6,
+      "dy": 0,
+      "delta": 24
+     },
+     {
+      "at": 2.5,
+      "dx": -8,
+      "dy": -4,
+      "delta": 22
+     },
+     {
+      "at": 6,
+      "dx": -8,
+      "dy": -4,
+      "delta": 19
+     },
+     {
+      "at": 7.93,
+      "dx": 6,
+      "dy": -6,
+      "delta": 52
+     },
+     {
+      "at": 10.5,
+      "dx": -8,
+      "dy": -4,
+      "delta": 19
+     },
+     {
+      "at": 15.8,
+      "dx": -4,
+      "dy": -2,
+      "delta": 21
+     },
+     {
+      "at": 16.9,
+      "dx": 6,
+      "dy": -2,
+      "delta": 25
+     },
+     {
+      "at": 17.52,
+      "dx": 6,
+      "dy": -4,
+      "delta": 24
+     }
+    ],
+    "read": "drifts: the gap grows over time (wrong speed or start)"
+   },
+   {
+    "element": "#fdfdfd",
+    "box": [
+     673,
+     0,
+     217,
+     242
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 27
+     },
+     {
+      "at": 0.25,
+      "dx": 2,
+      "dy": 6,
+      "delta": 25
+     },
+     {
+      "at": 0.63,
+      "dx": -6,
+      "dy": 12,
+      "delta": 28
+     },
+     {
+      "at": 1,
+      "dx": -8,
+      "dy": 12,
+      "delta": 27
+     },
+     {
+      "at": 2.5,
+      "dx": 10,
+      "dy": 0,
+      "delta": 65
+     },
+     {
+      "at": 6,
+      "dx": -12,
+      "dy": 0,
+      "delta": 53
+     },
+     {
+      "at": 7.93,
+      "dx": 12,
+      "dy": 12,
+      "delta": 57
+     },
+     {
+      "at": 10.5,
+      "dx": 12,
+      "dy": 10,
+      "delta": 6
+     },
+     {
+      "at": 15.8,
+      "dx": 12,
+      "dy": 12,
+      "delta": 47
+     },
+     {
+      "at": 16.9,
+      "dx": 6,
+      "dy": 12,
+      "delta": 27
+     },
+     {
+      "at": 17.52,
+      "dx": 4,
+      "dy": 10,
+      "delta": 32
+     }
+    ],
+    "read": "drifts: the gap grows over time (wrong speed or start)"
+   },
+   {
+    "element": "#060606",
+    "box": [
+     337,
+     838,
+     248,
+     158
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": -8,
+      "dy": 12,
+      "delta": 83
+     },
+     {
+      "at": 0.25,
+      "dx": -8,
+      "dy": 12,
+      "delta": 83
+     },
+     {
+      "at": 0.63,
+      "dx": -8,
+      "dy": 12,
+      "delta": 82
+     },
+     {
+      "at": 1,
+      "dx": -8,
+      "dy": 12,
+      "delta": 81
+     },
+     {
+      "at": 2.5,
+      "dx": -8,
+      "dy": 12,
+      "delta": 83
+     },
+     {
+      "at": 6,
+      "dx": -8,
+      "dy": 12,
+      "delta": 83
+     },
+     {
+      "at": 7.93,
+      "dx": -8,
+      "dy": 12,
+      "delta": 83
+     },
+     {
+      "at": 10.5,
+      "dx": -8,
+      "dy": 12,
+      "delta": 83
+     },
+     {
+      "at": 15.8,
+      "dx": -8,
+      "dy": 12,
+      "delta": 81
+     },
+     {
+      "at": 16.9,
+      "dx": -8,
+      "dy": 12,
+      "delta": 82
+     },
+     {
+      "at": 17.52,
+      "dx": -8,
+      "dy": 12,
+      "delta": 82
+     }
+    ],
+    "read": "offset by about 14 px throughout"
+   },
+   {
+    "element": "#fbfcfb",
+    "box": [
+     792,
+     0,
+     166,
+     322
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 20
+     },
+     {
+      "at": 0.25,
+      "dx": 4,
+      "dy": 0,
+      "delta": 18
+     },
+     {
+      "at": 0.63,
+      "dx": -4,
+      "dy": 8,
+      "delta": 19
+     },
+     {
+      "at": 1,
+      "dx": -2,
+      "dy": 0,
+      "delta": 19
+     },
+     {
+      "at": 2.5,
+      "dx": -12,
+      "dy": 0,
+      "delta": 51
+     },
+     {
+      "at": 6,
+      "dx": -12,
+      "dy": 0,
+      "delta": 29
+     },
+     {
+      "at": 7.93,
+      "dx": 12,
+      "dy": 12,
+      "delta": 18
+     },
+     {
+      "at": 10.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 15.8,
+      "dx": 12,
+      "dy": 8,
+      "delta": 43
+     },
+     {
+      "at": 16.9,
+      "dx": 8,
+      "dy": 2,
+      "delta": 28
+     },
+     {
+      "at": 17.52,
+      "dx": 12,
+      "dy": 6,
+      "delta": 19
+     }
+    ],
+    "read": "drifts: the gap grows over time (wrong speed or start)"
+   }
+  ]
+ },
+ "scale": {
+  "ok": true,
+  "changed": 4.4,
+  "read": "scales: the half-size render matches the full one (difference 4.4)"
+ },
+ "rubric": {
+  "file": "factory/1oi0w9-lanyard-id-badge-portfolio/rubric.json",
+  "total": 43,
+  "counted": 43,
+  "pass": 41,
+  "fail": 2,
+  "unsure": 0,
+  "unjudged": 0,
+  "passRate": 95,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "style",
+    "element": "page background",
+    "check": "The background is a flat off-white (≈#fdfdfd) with no gradient or texture",
+    "box": [
+     0,
+     0,
+     1556,
+     1080
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both backgrounds are flat off-white with no gradient or texture. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "text",
+    "element": "top-left intro text",
+    "check": "Top-left reads exactly 'I design products and the' on line 1 and 'stories behind them. [more]' on line 2",
+    "box": [
+     124,
+     106,
+     220,
+     44
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild reads 'I design products and the / stories behind them. [more]' with matching line breaks. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "position",
+    "element": "top-left intro text",
+    "check": "The intro text's left edge is at x≈124 and its first line's top at y≈106",
+    "box": [
+     124,
+     106,
+     220,
+     44
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Left edge and first-line top line up with the clip within a pixel or two. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "style",
+    "element": "top-left intro text",
+    "check": "'[more]' is grey and underlined while the rest of the paragraph is black",
+    "box": [
+     290,
+     128,
+     56,
+     22
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'[more]' is grey and underlined with brackets while the rest is black, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "text",
+    "element": "top-right status text",
+    "check": "Top-right reads exactly 'Currently studying Arts,' then 'Technology, & Business @ USC'",
+    "box": [
+     1192,
+     106,
+     247,
+     44
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild reads 'Currently studying Arts,' / 'Technology, & Business @ USC', about 2% wider than the clip. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "position",
+    "element": "top-right status text",
+    "check": "The status text is right-aligned with its right edge at x≈1438",
+    "box": [
+     1192,
+     106,
+     247,
+     44
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both blocks are right-aligned and end at the same right edge. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "style",
+    "element": "top-left intro text",
+    "check": "Both corner paragraphs are set in a black serif at ≈17px, regular weight",
+    "box": [
+     124,
+     106,
+     1315,
+     44
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both corner paragraphs are small black regular serif at the same size. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "text",
+    "element": "giant name",
+    "check": "A giant 'Sam Cheng' spans the bottom of the frame",
+    "box": [
+     0,
+     770,
+     1556,
+     290
+    ],
+    "at": 2.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A giant 'Sam Cheng' spans the bottom, cut by the right edge, in both. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "style",
+    "element": "giant name",
+    "check": "The giant name is a black (#060606) regular-weight serif with bracketed serifs",
+    "box": [
+     0,
+     770,
+     600,
+     240
+    ],
+    "at": 2.5,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "Rebuild's 'Sam' looks heavier, with thicker strokes and less bracketed serifs than the clip's regular-weight serif. [votes: no/no/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "position",
+    "element": "giant name",
+    "check": "The giant 'S' starts at x≈0 and the cap tops sit at y≈775; the 'g' is cut by the right edge and its descender reaches y≈1060",
+    "box": [
+     0,
+     770,
+     1556,
+     290
+    ],
+    "at": 2.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'S' starts at x≈0, cap tops and the cut 'g' sit where the clip's do. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "style",
+    "element": "giant name",
+    "check": "The giant letters' cap height is about 225px (top ≈775, baseline ≈1000)",
+    "box": [
+     0,
+     770,
+     600,
+     240
+    ],
+    "at": 2.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Cap height is about 225px in both, with the same top and baseline. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "present",
+    "element": "lanyard strap",
+    "check": "A dark charcoal flat strap runs from the top edge in a V to a single point above the badge",
+    "box": [
+     651,
+     0,
+     262,
+     300
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A dark charcoal flat strap runs in a V to a single point above the badge in both. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "position",
+    "element": "lanyard strap",
+    "check": "At rest the strap leaves the top edge at x≈651–675 and x≈890–912 and meets at x≈780, y≈280",
+    "box": [
+     651,
+     0,
+     262,
+     300
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Strap exits at the same top positions and meets at x≈780 near y≈280. [votes: yes/yes/no]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "style",
+    "element": "lanyard strap",
+    "check": "The strap is a flat ≈14px band of charcoal (#2e312d), not a thin line and not pure black",
+    "box": [
+     651,
+     0,
+     262,
+     300
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Strap is a flat charcoal band about as wide as the clip's, not black. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "style",
+    "element": "metal swivel clip",
+    "check": "The clip is a silver/grey metal loop and hook with light-to-dark shading, hooked through the holder's top slot",
+    "box": [
+     762,
+     288,
+     38,
+     110
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Silver metal loop and ribbed shaft with light-to-dark shading, hooked in the slot as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "position",
+    "element": "clear badge holder",
+    "check": "At rest the holder spans about x 617–944 and y 360–885, centred near x≈780",
+    "box": [
+     617,
+     360,
+     327,
+     525
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Holder spans the same area and is centred at x≈780. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "style",
+    "element": "clear badge holder",
+    "check": "The holder has rounded corners (≈18px radius) and a thin light grey outline",
+    "box": [
+     617,
+     360,
+     327,
+     525
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rounded corners and a thin light grey outline match the clip. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "present",
+    "element": "clear badge holder",
+    "check": "The top strip of the holder has exactly two round holes (one at each side) and one rounded horizontal slot between them",
+    "box": [
+     630,
+     370,
+     300,
+     45
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Two round holes with a rounded horizontal slot between them, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "style",
+    "element": "clear badge holder",
+    "check": "A ridged seal line of fine horizontal grey lines crosses the holder below the holes at y≈425–435",
+    "box": [
+     625,
+     420,
+     315,
+     20
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A band of fine horizontal grey ridge lines crosses below the holes, slightly more uniform than the clip's. [votes: yes/no/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "style",
+    "element": "clear badge holder",
+    "check": "The holder is clear plastic: the giant black letter stem shows through its right margin at x≈925–940, y≈770–870",
+    "box": [
+     900,
+     760,
+     50,
+     130
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The black letter stem shows through the holder's right margin at the same place. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "style",
+    "element": "clear badge holder",
+    "check": "The holder is NOT frosted or blurred: text seen through its margin stays sharp-edged, and it is NOT a solid white panel",
+    "box": [
+     900,
+     760,
+     50,
+     130
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Holder margin edges stay sharp and clear in both, not frosted and not solid white. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "style",
+    "element": "badge card",
+    "check": "The card inside is opaque light grey/white and fully hides the giant 'C' behind it",
+    "box": [
+     637,
+     445,
+     288,
+     420
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Card is opaque light grey and fully hides the giant C in both. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "text",
+    "element": "card name 'Sam'",
+    "check": "The card shows 'Sam' in black serif ≈70px with 'Cheng' directly below it, overlapping its bottom",
+    "box": [
+     660,
+     474,
+     245,
+     140
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Black serif 'Sam' with 'Cheng' directly below, overlapping its bottom, at similar size. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "style",
+    "element": "card name 'Cheng'",
+    "check": "'Cheng' on the card is bright saturated blue (≈#1a1ae6), 'Sam' is black",
+    "box": [
+     660,
+     474,
+     245,
+     140
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Cheng is saturated blue and Sam black, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "style",
+    "element": "card name 'Cheng'",
+    "check": "The card name letters have a rough, inky printed edge (slightly fuzzy), not a perfectly crisp vector edge",
+    "box": [
+     660,
+     474,
+     245,
+     140
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild letters have a similar rough inky fuzzy edge. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "text",
+    "element": "'Currently' label",
+    "check": "Lower on the card: 'Currently' in bold italic, then 'Design, Tech, & Business @ USC' in grey, then 'Previously' in bold italic",
+    "box": [
+     660,
+     748,
+     200,
+     75
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Currently, grey Design line, Previously appear in the same order and styles. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "present",
+    "element": "pill Kleiner Perkins Fellows",
+    "check": "Exactly three pills sit in one row at the card's bottom-left",
+    "box": [
+     660,
+     822,
+     245,
+     26
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Three pills in one row at the bottom-left, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "text",
+    "element": "pill Kleiner Perkins Fellows",
+    "check": "The pills read, left to right, 'Kleiner Perkins Fellows', 'Oracle', 'Multiply'",
+    "box": [
+     660,
+     822,
+     245,
+     26
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Pills read Kleiner Perkins Fellows, Oracle, Multiply. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "style",
+    "element": "pill Oracle",
+    "check": "Pill fills are black, red and deep purple respectively, each with white serif text and fully rounded ends",
+    "box": [
+     660,
+     822,
+     245,
+     26
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Black, red and deep purple pills with white serif text and rounded ends. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "style",
+    "element": "badge drop shadow",
+    "check": "A soft blurred light-grey shadow lies to the right of and below the badge, with no hard edge",
+    "box": [
+     640,
+     500,
+     320,
+     430
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Soft blurred grey shadow below and to the right with no hard edge, similar to the clip. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "style",
+    "element": "badge drop shadow",
+    "check": "The strap also casts a soft grey shadow offset to the right of it on the background",
+    "box": [
+     790,
+     0,
+     200,
+     330
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Strap casts a soft grey shadow offset to its right, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "motion",
+    "element": "giant name",
+    "check": "The giant name does not move at all between the two moments",
+    "box": [
+     0,
+     770,
+     1556,
+     290
+    ],
+    "at": 0.25,
+    "then": 16.9,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Giant name is in the same place at both moments in both. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "motion",
+    "element": "top-left intro text",
+    "check": "Neither corner paragraph moves between the two moments",
+    "box": [
+     124,
+     106,
+     1315,
+     44
+    ],
+    "at": 0.25,
+    "then": 7.93,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both corner paragraphs are static between moments. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "motion",
+    "element": "clear badge holder",
+    "check": "Between 0.25s and 0.63s the badge sways: it tilts a few degrees and its bottom shifts ≈30px left while the strap top stays fixed",
+    "box": [
+     580,
+     340,
+     380,
+     560
+    ],
+    "at": 0.25,
+    "then": 0.63,
+    "policy": null,
+    "pass": "no",
+    "seen": "At 0.63s the clip badge has swayed and its bottom shifted left, but the rebuild badge is still hanging unchanged with no tilt. [votes: no/no/no]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "motion",
+    "element": "clear badge holder",
+    "check": "By 2.5s the badge has been dragged up and right: it lies rotated ≈90° (text reading bottom-to-top) near x 830–1355, y 195–515",
+    "box": [
+     830,
+     180,
+     540,
+     420
+    ],
+    "at": 1,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 2.5s the rebuild badge is sideways at about x 800-1380, y 140-475, similar to the clip's 770-1350, 200-580, though tilted a bit more. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "motion",
+    "element": "lanyard strap",
+    "check": "During the drag the strap bends into a curve and follows the badge instead of staying a rigid V",
+    "box": [
+     700,
+     0,
+     320,
+     320
+    ],
+    "at": 1,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The rebuild strap bends and follows the badge at 2.5s, though it curves a little less than the clip's. [votes: no/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "motion",
+    "element": "giant name",
+    "check": "Once the badge moves away the full giant 'C' becomes visible (it is no longer covered)",
+    "box": [
+     660,
+     770,
+     200,
+     240
+    ],
+    "at": 0.25,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Full giant C is uncovered at 2.5s in both. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "motion",
+    "element": "clear badge holder",
+    "check": "At 7.93s the badge hangs tilted ≈35° counter-clockwise with its body lower-right of the clip, the strap bowed to the left",
+    "box": [
+     540,
+     0,
+     580,
+     820
+    ],
+    "at": 7.93,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 7.93s the rebuild badge hangs tilted about 35° counter-clockwise with its body lower-right and the strap bowed, close to the clip. [votes: no/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "motion",
+    "element": "clear badge holder",
+    "check": "The badge is grabbed and lifted to the top of the frame again around 5.5–6.5s and 9.5–11s (badge near the top, rotated sideways)",
+    "box": [
+     0,
+     0,
+     1556,
+     600
+    ],
+    "at": 6,
+    "then": 10.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Badge is near the top and rotated sideways at both 6s and 10.5s in both, similar positions. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c39.png"
+   },
+   {
+    "id": "c40",
+    "axis": "motion",
+    "element": "clear badge holder",
+    "check": "From ≈12s to 17.5s the badge swings like a pendulum with shrinking amplitude: ≈15° tilt at 16.9s, ≈10° at 17.52s, returning toward hanging centred under x≈780",
+    "box": [
+     580,
+     280,
+     560,
+     640
+    ],
+    "at": 16.9,
+    "then": 17.52,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild tilts about 15 degrees at 16.9s and settles to about 5-10 degrees at 17.52s, hanging near x 780 like the clip. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c40.png"
+   },
+   {
+    "id": "c41",
+    "axis": "motion",
+    "element": "badge drop shadow",
+    "check": "The shadow moves and rotates with the badge rather than staying in place",
+    "box": [
+     540,
+     300,
+     620,
+     640
+    ],
+    "at": 0.25,
+    "then": 16.9,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild's soft shadow shifts and tilts with the badge between 0.25s and 16.9s, as in the clip, though it is fainter. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c41.png"
+   },
+   {
+    "id": "c42",
+    "axis": "style",
+    "element": "mouse cursor",
+    "check": "While over or dragging the badge the cursor is an open/grab hand, elsewhere an arrow",
+    "box": [
+     1150,
+     260,
+     40,
+     40
+    ],
+    "at": 2.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows an open grab hand at 2.5s like the clip's, though the crop is offset and the hand is partly cut off. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c42.png"
+   },
+   {
+    "id": "c43",
+    "axis": "imagery",
+    "element": "clear badge holder",
+    "check": "The holder, clip and strap are drawn as a rendered 3D object (shaded plastic and metal), not a flat outline icon",
+    "box": [
+     600,
+     0,
+     360,
+     890
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild's holder, metal clip and strap are shaded and rendered like the clip's, though the clip is slightly flatter and thinner. [votes: yes/yes/yes]",
+    "image": "factory/1oi0w9-lanyard-id-badge-portfolio/judge/c43.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 1.15,
+  "calls": 9,
+  "images": "factory/1oi0w9-lanyard-id-badge-portfolio/judge",
+  "votes": 3,
+  "spread": [
+   39,
+   40,
+   41
+  ]
+ }
+}

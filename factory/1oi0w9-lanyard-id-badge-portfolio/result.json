@@ -1,0 +1,181 @@
+{
+ "slug": "1oi0w9-lanyard-id-badge-portfolio",
+ "title": "Lanyard ID Badge Portfolio",
+ "author": "Sam Cheng",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "review",
+ "ended": "round limit",
+ "bestRound": 4,
+ "rank": 85,
+ "allPass": false,
+ "rubric": {
+  "pass": 41,
+  "fail": 2,
+  "unsure": 0,
+  "of": 43,
+  "failed": [
+   "c09 The giant name is a black (#060606) regular-weight serif with bracketed serifs",
+   "c34 Between 0.25s and 0.63s the badge sways: it tilts a few degrees and its bottom shifts ≈30px left while the strap top stays fixed"
+  ]
+ },
+ "score": 40,
+ "motion": "the render changes where the clip changes",
+ "imagery": [
+  {
+   "name": "lanyard strap",
+   "class": "css",
+   "box": [
+    651,
+    0,
+    262,
+    300
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "metal swivel clip",
+   "class": "css",
+   "box": [
+    762,
+    288,
+    38,
+    110
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "clear badge holder",
+   "class": "css",
+   "box": [
+    617,
+    360,
+    327,
+    525
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "badge drop shadow",
+   "class": "css",
+   "box": [
+    640,
+    500,
+    320,
+    430
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 67.2,
+   "turns": 2,
+   "costUsd": 2.4959048,
+   "tokens": {
+    "written": 47816,
+    "read": 2989328
+   },
+   "judgeUsd": 0.942,
+   "ended": "completed",
+   "score": 30,
+   "rank": 70,
+   "allPass": false,
+   "rubric": {
+    "pass": 33,
+    "fail": 10,
+    "unsure": 0,
+    "of": 43
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 38.9,
+   "turns": 103,
+   "costUsd": 2.4991236,
+   "tokens": {
+    "written": 36591,
+    "read": 3988936
+   },
+   "judgeUsd": 0.606,
+   "ended": "completed",
+   "score": 47,
+   "rank": 83,
+   "allPass": false,
+   "rubric": {
+    "pass": 39,
+    "fail": 3,
+    "unsure": 1,
+    "of": 43
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 101,
+   "turns": 54,
+   "costUsd": 1.8939176000000002,
+   "tokens": {
+    "written": 29131,
+    "read": 2755385
+   },
+   "judgeUsd": 1.009,
+   "ended": "completed",
+   "score": 44,
+   "rank": 81,
+   "allPass": false,
+   "rubric": {
+    "pass": 38,
+    "fail": 5,
+    "unsure": 0,
+    "of": 43
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": false
+  },
+  {
+   "round": 4,
+   "minutes": 26,
+   "turns": 95,
+   "costUsd": 2.3651516,
+   "tokens": {
+    "written": 32473,
+    "read": 4321541
+   },
+   "judgeUsd": 1.15,
+   "ended": "completed",
+   "score": 40,
+   "rank": 85,
+   "allPass": false,
+   "rubric": {
+    "pass": 41,
+    "fail": 2,
+    "unsure": 0,
+    "of": 43
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  }
+ ],
+ "minutes": 233.1,
+ "tokens": {
+  "written": 146011,
+  "read": 14055190
+ },
+ "cost": {
+  "codingUsd": 9.25,
+  "judgeUsd": 3.71,
+  "rubricUsd": 0.737,
+  "totalUsd": 13.7
+ },
+ "notes": true,
+ "at": "2026-10-24T01:22:20.924Z"
+}

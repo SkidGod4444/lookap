@@ -1,0 +1,16 @@
+{
+ "model": "Claude Opus 5.5",
+ "modelId": "claude-opus-5-5",
+ "date": "2026-10-24",
+ "run": {
+  "model": "Claude Opus 5.5",
+  "turns": 254,
+  "outputTokens": 146011,
+  "totalTokens": 14201201,
+  "costUsd": 13.7,
+  "minutes": 233.1,
+  "score": 40
+ },
+ "hand": "none: the factory alone, 4 judged rounds, best round 4 kept; rubric 41 of 43 under a three-vote judge, reviewed by eye; the big drag swings drift from the clip's path",
+ "hint": "Grab the badge and fling it: it swings on its strap and settles."
+}

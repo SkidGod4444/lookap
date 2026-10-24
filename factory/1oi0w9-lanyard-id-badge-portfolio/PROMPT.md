@@ -1,0 +1,109 @@
+Rebuild the lookap entry "Lanyard ID Badge Portfolio" by Sam Cheng as one self-contained HTML file at factory/1oi0w9-lanyard-id-badge-portfolio/index.html.
+
+What you have
+- factory/1oi0w9-lanyard-id-badge-portfolio/brief.json: the record, the draft measurement (frame, phases, keyframes with their times, background, palette, element boxes, moves), the credit, and the measuring method behind every recipe.
+- factory/1oi0w9-lanyard-id-badge-portfolio/rubric.json: the checklist this rebuild is judged against, written from the clip. Its summary: A clean off-white (#fdfdfd) portfolio hero. Two small black serif paragraphs sit top-left ("I design products and the / stories behind them. [more]", left edge x=124, y≈106) and top-right ("Currently studying Arts, / Technology, & Business @ USC", right-aligned to x≈1438). Across the bottom runs a giant black serif "Sam Cheng" (cap height ≈225px, y≈770–1060), bleeding off both side edges and the bottom ("g" cut at the right edge). In the middle hangs a 3D physics lanyard: a dark charcoal flat strap forms a V from the top edge (x≈651 and x≈912) down to a silver metal swivel clip at x≈780, y≈290–400, holding a clear plastic badge holder (≈327×525px, rounded corners, two punched holes and a slot at the top, a ridged zip seal line under them). The holder is transparent plastic: its clear margin shows the giant black text through it, while the white card inside is opaque and hides the "C" of the giant name. The card carries "Sam" in black and "Cheng" in blue (#1a1ae6-ish) serif with a slightly rough, inky printed edge, then "Currently / Design, Tech, & Business @ USC / Previously" and three pills: black "Kleiner Perkins Fellows", red "Oracle", purple "Multiply". A soft grey drop shadow falls right and down behind the badge and the strap. Only the lanyard and badge move: at 0.5–1.0s the badge sways a few degrees; from ≈1.35s the cursor (a grab hand) drags it up and right, the strap bends and the badge lies rotated ≈90° at the top right (2.5s); it is released and swings pendulum-like, is grabbed and flung again around 5.5–6.5s and 9.5–11s, and from ≈12s swings with decaying amplitude, settling to a slight tilt by 17.5s. The corner text and the giant name never move.
+- The designer's clip at its keyframes (frame 1556 x 1080, 17.98s):
+  - kf1 at 0.25s: public/drafts/t4w2axe/kf1.jpg
+  - kf2 at 16.9s: public/drafts/t4w2axe/kf2.jpg
+  Read every one of them before writing anything, then describe the layout to yourself in one paragraph: regions, alignment, type scale, radii, spacing rhythm, what moves between the keyframes.
+- The clip itself, through `bun scripts/probe.ts 1oi0w9-lanyard-id-badge-portfolio`:
+    --sheet a,b                 a contact sheet of that span at 10 fps (36 frames), written to factory/1oi0w9-lanyard-id-badge-portfolio/sheets/; cover the whole clip in 3.6 s spans and Read every sheet
+    --diff a,b                  the clip at a, at b, and what changed between them in white: which thing moves, which only has something pass over it; written to factory/1oi0w9-lanyard-id-badge-portfolio/diff/
+    --col x --t t1,t2           light/mid/dark runs down column x at those times: row heights, gaps, borders, where things sit
+    --col x --t t --hex a,b     exact colours, one per pixel, from y a to b: the true gradient of a surface, a border's real colour, a gap's shade
+    --row y --t t [--hex a,b]   the same along a row
+    --track x --from a --to b   the top and bottom edge of the red/dark/light stuff in column x per frame at 60 fps: a motion's start, end, distance and shape
+    --zoom x,y,w,h --t t        that crop of the clip at up to 4x beside the same crop of your render at that moment (run the checker with --at t first), written to factory/1oi0w9-lanyard-id-badge-portfolio/zoom/
+    --patch x,y,w,h --t t --as name
+                                a texture tile from the clip as a small JPEG, written to factory/1oi0w9-lanyard-id-badge-portfolio/patches/ and set into your index.html as --patch-name in <style id="patches">, for background-image: var(--patch-name). The only way to sample; never retype base64 yourself. Refused above a tile's size.
+    --placeholder x,y,w,h --t t --as name
+                                a coarse colour grid of that region, set as --placeholder-name: the stand-in for a photograph, painting or screenshot the rebuild may not copy.
+    --drive "press x,y; move x,y; shot name; release; wait ms; click x,y; hover x,y"
+                                real pointer gestures on your page, screenshots to factory/1oi0w9-lanyard-id-badge-portfolio/drive/
+  Keyframes are moments when nothing moves. Everything between them (how a thing enters, stretches, snaps, settles, in what order) is only in the frames, so look there before you decide the timeline.
+- The checker: `bun --conditions=react-server scripts/check-build.ts 1oi0w9-lanyard-id-badge-portfolio`. It renders your file at the frame size, seeks every animation on the page to each moment, screenshots, and compares with the clip at the keyframes, the middle of every measured phase and the rubric's moments. It prints: a pixel score per moment (a floor, not a goal: it cannot tell a drawn ring from a glass lens or a nine-spoke spinner from a disc), the elements whose colour (deltaE) or place (shift) differ, whether your render moves where the clip moves, and how each measured moving part keeps step. It writes factory/1oi0w9-lanyard-id-badge-portfolio/side.png (designer left, yours right, one row per moment) and factory/1oi0w9-lanyard-id-badge-portfolio/verdict.json. --at t1,t2 adds moments; --quick scores only the keyframes and your --at moments. The rubric itself is judged by a separate vision model after your session ends, criterion by criterion on crop pairs; you cannot run it, so check each criterion by eye with --zoom before you stop.
+
+The checklist (every line must be true of your file; the judge looks at a crop of the clip beside the same crop of your render):
+  c01 [style, page background] The background is a flat off-white (≈#fdfdfd) with no gradient or texture (look at 0.25s)
+  c02 [text, top-left intro text] Top-left reads exactly 'I design products and the' on line 1 and 'stories behind them. [more]' on line 2 (look at 0.25s)
+  c03 [position, top-left intro text] The intro text's left edge is at x≈124 and its first line's top at y≈106 (look at 0.25s)
+  c04 [style, top-left intro text] '[more]' is grey and underlined while the rest of the paragraph is black (look at 0.25s)
+  c05 [text, top-right status text] Top-right reads exactly 'Currently studying Arts,' then 'Technology, & Business @ USC' (look at 0.25s)
+  c06 [position, top-right status text] The status text is right-aligned with its right edge at x≈1438 (look at 0.25s)
+  c07 [style, top-left intro text] Both corner paragraphs are set in a black serif at ≈17px, regular weight (look at 0.25s)
+  c08 [text, giant name] A giant 'Sam Cheng' spans the bottom of the frame (look at 2.5s)
+  c09 [style, giant name] The giant name is a black (#060606) regular-weight serif with bracketed serifs (look at 2.5s)
+  c10 [position, giant name] The giant 'S' starts at x≈0 and the cap tops sit at y≈775; the 'g' is cut by the right edge and its descender reaches y≈1060 (look at 2.5s)
+  c11 [style, giant name] The giant letters' cap height is about 225px (top ≈775, baseline ≈1000) (look at 2.5s)
+  c12 [present, lanyard strap] A dark charcoal flat strap runs from the top edge in a V to a single point above the badge (look at 0.25s)
+  c13 [position, lanyard strap] At rest the strap leaves the top edge at x≈651–675 and x≈890–912 and meets at x≈780, y≈280 (look at 0.25s)
+  c14 [style, lanyard strap] The strap is a flat ≈14px band of charcoal (#2e312d), not a thin line and not pure black (look at 0.25s)
+  c15 [style, metal swivel clip] The clip is a silver/grey metal loop and hook with light-to-dark shading, hooked through the holder's top slot (look at 0.25s)
+  c16 [position, clear badge holder] At rest the holder spans about x 617–944 and y 360–885, centred near x≈780 (look at 0.25s)
+  c17 [style, clear badge holder] The holder has rounded corners (≈18px radius) and a thin light grey outline (look at 0.25s)
+  c18 [present, clear badge holder] The top strip of the holder has exactly two round holes (one at each side) and one rounded horizontal slot between them (look at 0.25s)
+  c19 [style, clear badge holder] A ridged seal line of fine horizontal grey lines crosses the holder below the holes at y≈425–435 (look at 0.25s)
+  c20 [style, clear badge holder] The holder is clear plastic: the giant black letter stem shows through its right margin at x≈925–940, y≈770–870 (look at 0.25s)
+  c21 [style, clear badge holder] The holder is NOT frosted or blurred: text seen through its margin stays sharp-edged, and it is NOT a solid white panel (look at 0.25s)
+  c22 [style, badge card] The card inside is opaque light grey/white and fully hides the giant 'C' behind it (look at 0.25s)
+  c23 [text, card name 'Sam'] The card shows 'Sam' in black serif ≈70px with 'Cheng' directly below it, overlapping its bottom (look at 0.25s)
+  c24 [style, card name 'Cheng'] 'Cheng' on the card is bright saturated blue (≈#1a1ae6), 'Sam' is black (look at 0.25s)
+  c25 [style, card name 'Cheng'] The card name letters have a rough, inky printed edge (slightly fuzzy), not a perfectly crisp vector edge (look at 0.25s)
+  c26 [text, 'Currently' label] Lower on the card: 'Currently' in bold italic, then 'Design, Tech, & Business @ USC' in grey, then 'Previously' in bold italic (look at 0.25s)
+  c27 [present, pill Kleiner Perkins Fellows] Exactly three pills sit in one row at the card's bottom-left (look at 0.25s)
+  c28 [text, pill Kleiner Perkins Fellows] The pills read, left to right, 'Kleiner Perkins Fellows', 'Oracle', 'Multiply' (look at 0.25s)
+  c29 [style, pill Oracle] Pill fills are black, red and deep purple respectively, each with white serif text and fully rounded ends (look at 0.25s)
+  c30 [style, badge drop shadow] A soft blurred light-grey shadow lies to the right of and below the badge, with no hard edge (look at 0.25s)
+  c31 [style, badge drop shadow] The strap also casts a soft grey shadow offset to the right of it on the background (look at 0.25s)
+  c32 [motion, giant name] The giant name does not move at all between the two moments (compare 0.25s with 16.9s)
+  c33 [motion, top-left intro text] Neither corner paragraph moves between the two moments (compare 0.25s with 7.93s)
+  c34 [motion, clear badge holder] Between 0.25s and 0.63s the badge sways: it tilts a few degrees and its bottom shifts ≈30px left while the strap top stays fixed (compare 0.25s with 0.63s)
+  c35 [motion, clear badge holder] By 2.5s the badge has been dragged up and right: it lies rotated ≈90° (text reading bottom-to-top) near x 830–1355, y 195–515 (compare 1s with 2.5s)
+  c36 [motion, lanyard strap] During the drag the strap bends into a curve and follows the badge instead of staying a rigid V (compare 1s with 2.5s)
+  c37 [motion, giant name] Once the badge moves away the full giant 'C' becomes visible (it is no longer covered) (compare 0.25s with 2.5s)
+  c38 [motion, clear badge holder] At 7.93s the badge hangs tilted ≈35° counter-clockwise with its body lower-right of the clip, the strap bowed to the left (look at 7.93s)
+  c39 [motion, clear badge holder] The badge is grabbed and lifted to the top of the frame again around 5.5–6.5s and 9.5–11s (badge near the top, rotated sideways) (compare 6s with 10.5s)
+  c40 [motion, clear badge holder] From ≈12s to 17.5s the badge swings like a pendulum with shrinking amplitude: ≈15° tilt at 16.9s, ≈10° at 17.52s, returning toward hanging centred under x≈780 (compare 16.9s with 17.52s)
+  c41 [motion, badge drop shadow] The shadow moves and rotates with the badge rather than staying in place (compare 0.25s with 16.9s)
+  c42 [style, mouse cursor] While over or dragging the badge the cursor is an open/grab hand, elsewhere an arrow (look at 2.5s)
+  c43 [imagery, clear badge holder] The holder, clip and strap are drawn as a rendered 3D object (shaded plastic and metal), not a flat outline icon (look at 0.25s)
+
+Imagery (what the clip shows that is not plain UI, and the rule for each):
+  - lanyard strap [651,0,262,300] is css: flat charcoal fabric strap in a V, rope-simulated, with soft offset shadow. Rule: draw it: CSS or inline SVG, exact to the crops (gradients, rings, glass, lenses, spinners, shadows, text art are all drawable)
+  - metal swivel clip [762,288,38,110] is css: silver metal swivel loop and hook, shaded grey. Rule: draw it: CSS or inline SVG, exact to the crops (gradients, rings, glass, lenses, spinners, shadows, text art are all drawable)
+  - clear badge holder [617,360,327,525] is css: transparent plastic ID sleeve with rounded corners, two holes, a slot and ridged seal, holding an opaque printed card. Rule: draw it: CSS or inline SVG, exact to the crops (gradients, rings, glass, lenses, spinners, shadows, text art are all drawable)
+  - badge drop shadow [640,500,320,430] is css: soft grey blurred shadow of badge and strap, offset right and down. Rule: draw it: CSS or inline SVG, exact to the crops (gradients, rings, glass, lenses, spinners, shadows, text art are all drawable)
+
+How to look (this is where rebuilds go wrong)
+- Find what moves with --diff before you decide the timeline: two frames half a second apart, in two or three parts of the clip. The draft's motion rows can be fooled by a thing passing over a region. Then --track the moving edge for its start, end, distance and speed.
+- Track something that should not move. Run --track through the heading with --class dark over the whole clip. If the heading moves when a panel opens or the thing enters, the page is a centred column that reflows, and you copy that layout rule rather than absolute coordinates. If it does not move during a drag, that gesture is a transform, not layout.
+- Zoom before you draw. For every surface, --zoom a 150 x 130 crop of its edge at the rest moment and read it: how thick is the edge, what colour, is there a gap behind it, which side is lit. Then --hex a column through it for the real numbers.
+- Materials are part of the design: a glass ring refracts what is behind it at its rim (the background shifts and a highlight runs along the edge), it is not an outline; a frosted panel shows the picture through it; rims, bevels, inner highlights, the lip under a key, the shade inside a fold. Draw what the crop shows, not what a component library would do.
+- Known ways rebuilds fail, in order of how often: a water ripple or lens drawn as hard concentric rings or a stroked outline, where the clip shows the picture beneath bending softly with a faint crest (build it as displacement or magnification of the background with soft falloff, never as a drawn ring); type dimmer, lighter or a different weight than the clip's; a texture as a flat gradient where the clip has grain; a seam where a patch tiles; a page that does not move while the clip does (the checker says STATIC); a wrong count (spokes, dots, rows, rings); the wrong thing moving (the background drifting when it is the rings that grow); timing read from the stills instead of tracked.
+- Interaction is the design. Whatever the clip's cursor does (hover, click, press, drag) the page must do for a real pointer, with the same response and timing. Test with --drive and Read the screenshots.
+
+Rules for the file
+- The page is exactly the frame: html and body margin 0, overflow hidden, a #stage of 1556 x 1080 px, background #fdfdfd. Set --u: 1px on #stage and write every size as calc(N * var(--u)), including an inline SVG's size (give it a CSS width and height in var(--u), not only width and height attributes) and every length the script sets or animates (calc(${n} * var(--u)), never ${n}px). The site shows the file at any size by changing --u; the checker renders it at half size and fails it if anything stays full size. Nothing outside the stage.
+- Place elements from the keyframes and crops you looked at. The draft boxes are a first pass and the rubric boxes a second: trust your eyes over both. Fills from --hex, exact. Match proportion and hierarchy first, then colour, then motion.
+- Demo mode for the checker: when the URL has ?demo=1 the page replays the clip's sequence on the clip's own timeline (animation-delay for when each move starts, duration and distance from draft.phases, draft.motion and your own probing) as CSS animations or element.animate calls created at load, so the state at t seconds matches the clip at t and the checker can seek it. Without ?demo the page only answers the pointer (a load-time entrance is fine if the clip has one). No JS timers for the timeline. Respect prefers-reduced-motion.
+- Sampling: a texture that is not UI and cannot be drawn (marble, wood, fabric, grain) is taken from the clip with --patch as a tile, cropped where nothing sits on it, at a moment when it is at rest, and tiled, stretched or layered by you; keep each under 60 KB. A photograph, painting or screenshot is a photo-class region and follows its rule above (this entry is licensed: the picture itself may be sampled). Never paste a block with its chrome, text or controls: those you draw. Say in the header comment and in NOTES.md exactly what was sampled or stood in, and from which frame.
+- Fonts only from Google Fonts through a <link>; no other network. Credit the designer in a comment at the top with the source link from brief.json. Keep the file under 500 lines.
+
+What earlier rebuilds got wrong (each failed the judge on real entries; check every one before you call a round done)
+- Glows and washes flat, mis-centred or the wrong strength. A radial glow or colour wash has a centre, a peak colour and a falloff. Agents draw an even tint across the whole element. Find where it is strongest, sample the peak and two points on the way out, and build the gradient from those stops. Halftone and dot fields: match dot size, spacing and where they fade.
+- Text the right words but the wrong width. A substituted or wrongly weighted font sets the same words 5 to 10 percent wider or narrower. Measure the pixel width of one full line in the clip and adjust font-size, weight and letter-spacing until your line matches it within 2 percent. Script and handwritten faces need the right family, not the nearest script.
+- Motion the right kind but the wrong distance or speed. Agents get what moves right and how far wrong: a slide of 88 px built as 19, a rise twice as fast. Track every moving element and read its start, end and timing from the clip. A move is right when its position matches at three moments, not when it looks similar.
+- Library outline icons where the clip has its own glyphs. Agents reach for an outline icon set. The clip's icons are often filled, chunky or glossy, and of a different shape. Match fill against outline, the weight and the silhouette; draw the SVG path from the zoomed frame instead of picking the nearest named icon.
+- Blur used to fake texture or glass. A painting, canvas, grain or foliage is not a blurred gradient, and glass is not a stroked outline. Painted or photographic imagery comes from the clip itself (sampled, under the imagery rule) or is drawn with real texture. Glass shows the background displaced and magnified inside the shape, with a bright rim.
+- Strokes and small marks drawn too thin or too small. Rings, spinners, chevrons, ticks, dashes, dots and outlines come out thinner and smaller than the clip's almost every time: an agent's default is a 1.5 px line icon. Measure the stroke width and the mark's outer size in source pixels and use those numbers. A spinner is usually a thick ring on a faint track, not a thin open arc.
+- Positions and spacing off by tens of pixels. Parts land 20 to 40 px from where the clip has them, and repeated parts get uneven spacing. Read every box from the clip, not by eye: the brief's boxes are a first pass, so confirm each against a frame. Repeated parts (rings, rows, cards) share one pitch; measure it once and step by it.
+- Shapes simplified and small parts dropped. A bubble's tail, an antenna, the gaps in staggered bars, a curved bulge built as a straight wedge, a sliver of an avatar: agents simplify the outline and drop small parts. Before drawing any shape, zoom on it and list its parts; check each part is in your render.
+
+Loop
+1. Read the sheets and two or three --diff pairs for the whole clip. Track the moving edge and the heading. Write the timeline as a list of events with numbers (what, from when to when, how far, which easing), and the layout from --col, --hex and the keyframes. Then build.
+2. Run the checker, read side.png, then --zoom the worst region of the worst moment, the edge of each surface, and every rubric criterion you are not sure of. Fix what the crops show: layout first, then materials, then motion. Run the checker again. Stop when the crops match the clip for every criterion, or after four runs of the checker: more runs past that have not bought anything in earlier entries, and the judge runs when you stop.
+3. --drive the interactions the clip shows and Read the screenshots. Fix what does not answer the pointer.
+4. Write factory/1oi0w9-lanyard-id-badge-portfolio/NOTES.md with three parts: "Timeline" (the event list from step 1, as measured), "Differences" (what still differs, with numbers, and every photo-class region stood in rather than reproduced) and "Pattern" (one thing you learned that applies beyond this entry, written as a design note of 3 to 6 factual sentences under a short name).
+
+Do not create or change any file outside factory/1oi0w9-lanyard-id-badge-portfolio/. Do not run anything other than the probe and the checker.

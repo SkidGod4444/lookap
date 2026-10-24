@@ -1,0 +1,977 @@
+{
+ "slug": "1oi0w9-lanyard-id-badge-portfolio",
+ "frame": {
+  "w": 1556,
+  "h": 1080
+ },
+ "at": "2026-10-23T00:54:26.232Z",
+ "model": "opus",
+ "costUsd": 0.737,
+ "summary": "A clean off-white (#fdfdfd) portfolio hero. Two small black serif paragraphs sit top-left (\"I design products and the / stories behind them. [more]\", left edge x=124, y≈106) and top-right (\"Currently studying Arts, / Technology, & Business @ USC\", right-aligned to x≈1438). Across the bottom runs a giant black serif \"Sam Cheng\" (cap height ≈225px, y≈770–1060), bleeding off both side edges and the bottom (\"g\" cut at the right edge). In the middle hangs a 3D physics lanyard: a dark charcoal flat strap forms a V from the top edge (x≈651 and x≈912) down to a silver metal swivel clip at x≈780, y≈290–400, holding a clear plastic badge holder (≈327×525px, rounded corners, two punched holes and a slot at the top, a ridged zip seal line under them). The holder is transparent plastic: its clear margin shows the giant black text through it, while the white card inside is opaque and hides the \"C\" of the giant name. The card carries \"Sam\" in black and \"Cheng\" in blue (#1a1ae6-ish) serif with a slightly rough, inky printed edge, then \"Currently / Design, Tech, & Business @ USC / Previously\" and three pills: black \"Kleiner Perkins Fellows\", red \"Oracle\", purple \"Multiply\". A soft grey drop shadow falls right and down behind the badge and the strap. Only the lanyard and badge move: at 0.5–1.0s the badge sways a few degrees; from ≈1.35s the cursor (a grab hand) drags it up and right, the strap bends and the badge lies rotated ≈90° at the top right (2.5s); it is released and swings pendulum-like, is grabbed and flung again around 5.5–6.5s and 9.5–11s, and from ≈12s swings with decaying amplitude, settling to a slight tilt by 17.5s. The corner text and the giant name never move.",
+ "elements": [
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1556,
+    1080
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "flat off-white #fdfdfd, no gradient"
+  },
+  {
+   "name": "top-left intro text",
+   "box": [
+    124,
+    106,
+    220,
+    44
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "two lines of black serif ≈17px: 'I design products and the' / 'stories behind them. [more]'; '[more]' is grey with an underline"
+  },
+  {
+   "name": "top-right status text",
+   "box": [
+    1192,
+    106,
+    247,
+    44
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "right-aligned black serif ≈17px: 'Currently studying Arts,' / 'Technology, & Business @ USC'"
+  },
+  {
+   "name": "giant name",
+   "box": [
+    0,
+    770,
+    1556,
+    290
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Sam Cheng' in black #060606 regular-weight serif, cap height ≈225px, bleeds off the left, right and bottom edges; static"
+  },
+  {
+   "name": "lanyard strap",
+   "box": [
+    651,
+    0,
+    262,
+    300
+   ],
+   "kind": "image",
+   "class": "css",
+   "note": "flat charcoal (#2e312d) strap ≈14px wide forming a V from the top edge to the clip; bends like a rope during drags"
+  },
+  {
+   "name": "metal swivel clip",
+   "box": [
+    762,
+    288,
+    38,
+    110
+   ],
+   "kind": "image",
+   "class": "css",
+   "note": "silver/grey metal loop and hook with darker grey shading, joins strap to the holder slot"
+  },
+  {
+   "name": "clear badge holder",
+   "box": [
+    617,
+    360,
+    327,
+    525
+   ],
+   "kind": "image",
+   "class": "css",
+   "note": "transparent plastic sleeve, thin light grey outline, ≈18px corner radius, two round holes (≈28px) and a rounded slot at the top, ridged seal line at y≈425–435; giant black text visible through its margins"
+  },
+  {
+   "name": "badge card",
+   "box": [
+    637,
+    445,
+    288,
+    420
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "opaque very light grey/white card (#f2f2f2) inside the holder; hides the giant text behind it"
+  },
+  {
+   "name": "card name 'Sam'",
+   "box": [
+    660,
+    474,
+    165,
+    66
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "black serif ≈70px with a rough inky/printed edge"
+  },
+  {
+   "name": "card name 'Cheng'",
+   "box": [
+    660,
+    525,
+    245,
+    85
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "bright blue serif ≈70px overlapping the bottom of 'Sam', rough printed edge"
+  },
+  {
+   "name": "'Currently' label",
+   "box": [
+    666,
+    752,
+    50,
+    14
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "small bold italic black serif"
+  },
+  {
+   "name": "current role line",
+   "box": [
+    666,
+    772,
+    155,
+    14
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Design, Tech, & Business @ USC' small grey serif"
+  },
+  {
+   "name": "'Previously' label",
+   "box": [
+    666,
+    806,
+    52,
+    14
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "small bold italic black serif"
+  },
+  {
+   "name": "pill Kleiner Perkins Fellows",
+   "box": [
+    666,
+    826,
+    124,
+    17
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "black fully-rounded pill, white serif text"
+  },
+  {
+   "name": "pill Oracle",
+   "box": [
+    796,
+    826,
+    42,
+    17
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "red (#c8102e-ish) pill, white serif text"
+  },
+  {
+   "name": "pill Multiply",
+   "box": [
+    844,
+    826,
+    52,
+    17
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "deep purple (#3a1a9e-ish) pill, white serif text"
+  },
+  {
+   "name": "badge drop shadow",
+   "box": [
+    640,
+    500,
+    320,
+    430
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "soft light-grey blurred shadow offset right/down behind the badge and strap; moves with the badge"
+  },
+  {
+   "name": "mouse cursor",
+   "box": [
+    1040,
+    710,
+    14,
+    20
+   ],
+   "kind": "chrome",
+   "class": null,
+   "note": "arrow at rest, open/grab hand when over or dragging the badge"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "page background",
+   "axis": "style",
+   "check": "The background is a flat off-white (≈#fdfdfd) with no gradient or texture",
+   "box": [
+    0,
+    0,
+    1556,
+    1080
+   ],
+   "scope": "frame",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "top-left intro text",
+   "axis": "text",
+   "check": "Top-left reads exactly 'I design products and the' on line 1 and 'stories behind them. [more]' on line 2",
+   "box": [
+    124,
+    106,
+    220,
+    44
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "top-left intro text",
+   "axis": "position",
+   "check": "The intro text's left edge is at x≈124 and its first line's top at y≈106",
+   "box": [
+    124,
+    106,
+    220,
+    44
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "top-left intro text",
+   "axis": "style",
+   "check": "'[more]' is grey and underlined while the rest of the paragraph is black",
+   "box": [
+    290,
+    128,
+    56,
+    22
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "top-right status text",
+   "axis": "text",
+   "check": "Top-right reads exactly 'Currently studying Arts,' then 'Technology, & Business @ USC'",
+   "box": [
+    1192,
+    106,
+    247,
+    44
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "top-right status text",
+   "axis": "position",
+   "check": "The status text is right-aligned with its right edge at x≈1438",
+   "box": [
+    1192,
+    106,
+    247,
+    44
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "top-left intro text",
+   "axis": "style",
+   "check": "Both corner paragraphs are set in a black serif at ≈17px, regular weight",
+   "box": [
+    124,
+    106,
+    1315,
+    44
+   ],
+   "scope": "frame",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "giant name",
+   "axis": "text",
+   "check": "A giant 'Sam Cheng' spans the bottom of the frame",
+   "box": [
+    0,
+    770,
+    1556,
+    290
+   ],
+   "scope": "frame",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "giant name",
+   "axis": "style",
+   "check": "The giant name is a black (#060606) regular-weight serif with bracketed serifs",
+   "box": [
+    0,
+    770,
+    600,
+    240
+   ],
+   "scope": "crop",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "giant name",
+   "axis": "position",
+   "check": "The giant 'S' starts at x≈0 and the cap tops sit at y≈775; the 'g' is cut by the right edge and its descender reaches y≈1060",
+   "box": [
+    0,
+    770,
+    1556,
+    290
+   ],
+   "scope": "frame",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "giant name",
+   "axis": "style",
+   "check": "The giant letters' cap height is about 225px (top ≈775, baseline ≈1000)",
+   "box": [
+    0,
+    770,
+    600,
+    240
+   ],
+   "scope": "crop",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "lanyard strap",
+   "axis": "present",
+   "check": "A dark charcoal flat strap runs from the top edge in a V to a single point above the badge",
+   "box": [
+    651,
+    0,
+    262,
+    300
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "lanyard strap",
+   "axis": "position",
+   "check": "At rest the strap leaves the top edge at x≈651–675 and x≈890–912 and meets at x≈780, y≈280",
+   "box": [
+    651,
+    0,
+    262,
+    300
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "lanyard strap",
+   "axis": "style",
+   "check": "The strap is a flat ≈14px band of charcoal (#2e312d), not a thin line and not pure black",
+   "box": [
+    651,
+    0,
+    262,
+    300
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "metal swivel clip",
+   "axis": "style",
+   "check": "The clip is a silver/grey metal loop and hook with light-to-dark shading, hooked through the holder's top slot",
+   "box": [
+    762,
+    288,
+    38,
+    110
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "clear badge holder",
+   "axis": "position",
+   "check": "At rest the holder spans about x 617–944 and y 360–885, centred near x≈780",
+   "box": [
+    617,
+    360,
+    327,
+    525
+   ],
+   "scope": "frame",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "clear badge holder",
+   "axis": "style",
+   "check": "The holder has rounded corners (≈18px radius) and a thin light grey outline",
+   "box": [
+    617,
+    360,
+    327,
+    525
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "clear badge holder",
+   "axis": "present",
+   "check": "The top strip of the holder has exactly two round holes (one at each side) and one rounded horizontal slot between them",
+   "box": [
+    630,
+    370,
+    300,
+    45
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c19",
+   "element": "clear badge holder",
+   "axis": "style",
+   "check": "A ridged seal line of fine horizontal grey lines crosses the holder below the holes at y≈425–435",
+   "box": [
+    625,
+    420,
+    315,
+    20
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "clear badge holder",
+   "axis": "style",
+   "check": "The holder is clear plastic: the giant black letter stem shows through its right margin at x≈925–940, y≈770–870",
+   "box": [
+    900,
+    760,
+    50,
+    130
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "clear badge holder",
+   "axis": "style",
+   "check": "The holder is NOT frosted or blurred: text seen through its margin stays sharp-edged, and it is NOT a solid white panel",
+   "box": [
+    900,
+    760,
+    50,
+    130
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "badge card",
+   "axis": "style",
+   "check": "The card inside is opaque light grey/white and fully hides the giant 'C' behind it",
+   "box": [
+    637,
+    445,
+    288,
+    420
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "card name 'Sam'",
+   "axis": "text",
+   "check": "The card shows 'Sam' in black serif ≈70px with 'Cheng' directly below it, overlapping its bottom",
+   "box": [
+    660,
+    474,
+    245,
+    140
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "card name 'Cheng'",
+   "axis": "style",
+   "check": "'Cheng' on the card is bright saturated blue (≈#1a1ae6), 'Sam' is black",
+   "box": [
+    660,
+    474,
+    245,
+    140
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c25",
+   "element": "card name 'Cheng'",
+   "axis": "style",
+   "check": "The card name letters have a rough, inky printed edge (slightly fuzzy), not a perfectly crisp vector edge",
+   "box": [
+    660,
+    474,
+    245,
+    140
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c26",
+   "element": "'Currently' label",
+   "axis": "text",
+   "check": "Lower on the card: 'Currently' in bold italic, then 'Design, Tech, & Business @ USC' in grey, then 'Previously' in bold italic",
+   "box": [
+    660,
+    748,
+    200,
+    75
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c27",
+   "element": "pill Kleiner Perkins Fellows",
+   "axis": "present",
+   "check": "Exactly three pills sit in one row at the card's bottom-left",
+   "box": [
+    660,
+    822,
+    245,
+    26
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "pill Kleiner Perkins Fellows",
+   "axis": "text",
+   "check": "The pills read, left to right, 'Kleiner Perkins Fellows', 'Oracle', 'Multiply'",
+   "box": [
+    660,
+    822,
+    245,
+    26
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c29",
+   "element": "pill Oracle",
+   "axis": "style",
+   "check": "Pill fills are black, red and deep purple respectively, each with white serif text and fully rounded ends",
+   "box": [
+    660,
+    822,
+    245,
+    26
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c30",
+   "element": "badge drop shadow",
+   "axis": "style",
+   "check": "A soft blurred light-grey shadow lies to the right of and below the badge, with no hard edge",
+   "box": [
+    640,
+    500,
+    320,
+    430
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c31",
+   "element": "badge drop shadow",
+   "axis": "style",
+   "check": "The strap also casts a soft grey shadow offset to the right of it on the background",
+   "box": [
+    790,
+    0,
+    200,
+    330
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c32",
+   "element": "giant name",
+   "axis": "motion",
+   "check": "The giant name does not move at all between the two moments",
+   "box": [
+    0,
+    770,
+    1556,
+    290
+   ],
+   "scope": "frame",
+   "at": 0.25,
+   "then": 16.9
+  },
+  {
+   "id": "c33",
+   "element": "top-left intro text",
+   "axis": "motion",
+   "check": "Neither corner paragraph moves between the two moments",
+   "box": [
+    124,
+    106,
+    1315,
+    44
+   ],
+   "scope": "frame",
+   "at": 0.25,
+   "then": 7.93
+  },
+  {
+   "id": "c34",
+   "element": "clear badge holder",
+   "axis": "motion",
+   "check": "Between 0.25s and 0.63s the badge sways: it tilts a few degrees and its bottom shifts ≈30px left while the strap top stays fixed",
+   "box": [
+    580,
+    340,
+    380,
+    560
+   ],
+   "scope": "frame",
+   "at": 0.25,
+   "then": 0.63
+  },
+  {
+   "id": "c35",
+   "element": "clear badge holder",
+   "axis": "motion",
+   "check": "By 2.5s the badge has been dragged up and right: it lies rotated ≈90° (text reading bottom-to-top) near x 830–1355, y 195–515",
+   "box": [
+    830,
+    180,
+    540,
+    420
+   ],
+   "scope": "frame",
+   "at": 1,
+   "then": 2.5
+  },
+  {
+   "id": "c36",
+   "element": "lanyard strap",
+   "axis": "motion",
+   "check": "During the drag the strap bends into a curve and follows the badge instead of staying a rigid V",
+   "box": [
+    700,
+    0,
+    320,
+    320
+   ],
+   "scope": "frame",
+   "at": 1,
+   "then": 2.5
+  },
+  {
+   "id": "c37",
+   "element": "giant name",
+   "axis": "motion",
+   "check": "Once the badge moves away the full giant 'C' becomes visible (it is no longer covered)",
+   "box": [
+    660,
+    770,
+    200,
+    240
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": 2.5
+  },
+  {
+   "id": "c38",
+   "element": "clear badge holder",
+   "axis": "motion",
+   "check": "At 7.93s the badge hangs tilted ≈35° counter-clockwise with its body lower-right of the clip, the strap bowed to the left",
+   "box": [
+    540,
+    0,
+    580,
+    820
+   ],
+   "scope": "frame",
+   "at": 7.93,
+   "then": null
+  },
+  {
+   "id": "c39",
+   "element": "clear badge holder",
+   "axis": "motion",
+   "check": "The badge is grabbed and lifted to the top of the frame again around 5.5–6.5s and 9.5–11s (badge near the top, rotated sideways)",
+   "box": [
+    0,
+    0,
+    1556,
+    600
+   ],
+   "scope": "frame",
+   "at": 6,
+   "then": 10.5
+  },
+  {
+   "id": "c40",
+   "element": "clear badge holder",
+   "axis": "motion",
+   "check": "From ≈12s to 17.5s the badge swings like a pendulum with shrinking amplitude: ≈15° tilt at 16.9s, ≈10° at 17.52s, returning toward hanging centred under x≈780",
+   "box": [
+    580,
+    280,
+    560,
+    640
+   ],
+   "scope": "frame",
+   "at": 16.9,
+   "then": 17.52
+  },
+  {
+   "id": "c41",
+   "element": "badge drop shadow",
+   "axis": "motion",
+   "check": "The shadow moves and rotates with the badge rather than staying in place",
+   "box": [
+    540,
+    300,
+    620,
+    640
+   ],
+   "scope": "frame",
+   "at": 0.25,
+   "then": 16.9
+  },
+  {
+   "id": "c42",
+   "element": "mouse cursor",
+   "axis": "style",
+   "check": "While over or dragging the badge the cursor is an open/grab hand, elsewhere an arrow",
+   "box": [
+    1150,
+    260,
+    40,
+    40
+   ],
+   "scope": "crop",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c43",
+   "element": "clear badge holder",
+   "axis": "imagery",
+   "check": "The holder, clip and strap are drawn as a rendered 3D object (shaded plastic and metal), not a flat outline icon",
+   "box": [
+    600,
+    0,
+    360,
+    890
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  }
+ ],
+ "imagery": [
+  {
+   "name": "lanyard strap",
+   "box": [
+    651,
+    0,
+    262,
+    300
+   ],
+   "class": "css",
+   "what": "flat charcoal fabric strap in a V, rope-simulated, with soft offset shadow",
+   "at": 0.25
+  },
+  {
+   "name": "metal swivel clip",
+   "box": [
+    762,
+    288,
+    38,
+    110
+   ],
+   "class": "css",
+   "what": "silver metal swivel loop and hook, shaded grey",
+   "at": 0.25
+  },
+  {
+   "name": "clear badge holder",
+   "box": [
+    617,
+    360,
+    327,
+    525
+   ],
+   "class": "css",
+   "what": "transparent plastic ID sleeve with rounded corners, two holes, a slot and ridged seal, holding an opaque printed card",
+   "at": 0.25
+  },
+  {
+   "name": "badge drop shadow",
+   "box": [
+    640,
+    500,
+    320,
+    430
+   ],
+   "class": "css",
+   "what": "soft grey blurred shadow of badge and strap, offset right and down",
+   "at": 0.25
+  }
+ ],
+ "moves": [
+  {
+   "element": "badge + strap",
+   "what": "idle sway: badge tilts a few degrees and drifts ≈30px left, then back",
+   "from": 0.5,
+   "to": 1.05,
+   "px": 30
+  },
+  {
+   "element": "badge + strap",
+   "what": "grabbed and dragged up-right; strap bends; badge ends rotated ≈90° at top right",
+   "from": 1.35,
+   "to": 2.5,
+   "px": 450
+  },
+  {
+   "element": "badge + strap",
+   "what": "released and swings back down, overshooting to the left (≈35° tilt at 7.93s)",
+   "from": 2.6,
+   "to": 5.5,
+   "px": null
+  },
+  {
+   "element": "badge + strap",
+   "what": "grabbed and lifted to the top again, rotated sideways, then released",
+   "from": 5.5,
+   "to": 7,
+   "px": null
+  },
+  {
+   "element": "badge + strap",
+   "what": "second drag/fling to the top and release",
+   "from": 9.5,
+   "to": 11.5,
+   "px": null
+  },
+  {
+   "element": "badge + strap",
+   "what": "decaying pendulum swing settling under the clip to a ≈10° tilt",
+   "from": 12,
+   "to": 17.95,
+   "px": null
+  },
+  {
+   "element": "giant name and corner text",
+   "what": "static for the whole clip",
+   "from": 0,
+   "to": 17.98,
+   "px": 0
+  }
+ ]
+}
