@@ -55,7 +55,7 @@ const EXTRA: CatalogRow[] = [
     author: "Albia Hossain", x: "AlbiaHossain", source: "https://x.com/AlbiaHossain/status/2110349874608931157",
     ref: "https://vibrant.design/feed/muhvp71-typewriter-writing-app", published: "2026-10-18T00:00:00.000Z",
     description: "A minimalist writing app UI with a skeuomorphic typewriter carriage rolling across textured paper, paired with a dark mobile keyboard.",
-    poster: "https://cdn.vibrant.design/videos/muhvp71/card/poster/1280.webp?v=3b0e418f8c27", video: "https://cdn.vibrant.design/videos/muhvp71/card/720p.mp4?v=3b0e418f8c27", w: 332, h: 720,
+    poster: "https://lookap.s3.ap-south-1.amazonaws.com/videos/muhvp71/card/poster/1280.webp?v=3b0e418f8c27", video: "https://lookap.s3.ap-south-1.amazonaws.com/videos/muhvp71/card/720p.mp4?v=3b0e418f8c27", w: 332, h: 720,
   },
 ];
 
