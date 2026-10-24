@@ -1,0 +1,912 @@
+{
+ "slug": "b0jj7f-gpu-pods-card-animation",
+ "frame": {
+  "w": 1080,
+  "h": 1080
+ },
+ "at": "2026-10-22T21:51:32.713Z",
+ "model": "opus",
+ "costUsd": 0.633,
+ "summary": "A centred 1080×1080 light composition: a #eeeeee backdrop with a faint 3×3 grid of hairlines (x≈234/847, y≈234/847). It holds one off-white card (#f9f9f9, ~16px radius, soft white rim and very soft shadow) at [293,286,494,509]. Inside the card's top is an inset illustration panel [302,295,476,291] with a barely visible 1px border. It shows a skeuomorphic grey GPU: a brushed-silver rounded board [370,382,237,100] with two dark 7-blade fans in grey rings, four dark corner screws, and white heatsink fin strips peeking above and below. A row of tiny tick dots runs above it, and a long soft drop shadow falls toward the lower right. A short black cable runs from the right side into a small square port plate with four screws and a dark round socket. Below, left-aligned at x=321, sit the black semibold title \"GPU Pods\", two lines of mid-grey body copy, and a dark near-black gradient \"Deploy Pod\" button (~8px radius, white label, soft drop shadow). Motion: at 0s the panel is empty. From ~0.1s to 0.3s a pale, flat, low-contrast GPU fades in with its tick rows. Around 0.3–0.5s a pale port plate and cable appear to the right. From ~0.5s to 1.0s the drawing gains depth: fans darken, screws, fins and shadow appear, the cable turns black, and the plate settles ~5px left to x≈645. From then to 7.8s the only motion is both fans spinning continuously. Card, text and button never move.",
+ "elements": [
+  {
+   "name": "Backdrop",
+   "box": [
+    0,
+    0,
+    1080,
+    1080
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "flat #eeeeee"
+  },
+  {
+   "name": "Grid hairlines",
+   "box": [
+    0,
+    234,
+    1080,
+    614
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "faint 1px lines at x≈234, x≈847, y≈234, y≈847 spanning the frame"
+  },
+  {
+   "name": "Card",
+   "box": [
+    293,
+    286,
+    494,
+    509
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "#f9f9f9, radius ~16, thin white rim, very soft shadow"
+  },
+  {
+   "name": "Illustration panel",
+   "box": [
+    302,
+    295,
+    476,
+    291
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "inset panel, same off-white, faint 1px border, radius ~12"
+  },
+  {
+   "name": "GPU board",
+   "box": [
+    370,
+    382,
+    237,
+    100
+   ],
+   "kind": "image",
+   "class": "css",
+   "note": "brushed silver rounded rect, radius ~10, grey 1-2px edge, light-to-darker gradient"
+  },
+  {
+   "name": "Left fan",
+   "box": [
+    398,
+    393,
+    78,
+    78
+   ],
+   "kind": "image",
+   "class": "css",
+   "note": "grey ring, dark grey 7 curved blades, light hub ring centre ~(437,431)"
+  },
+  {
+   "name": "Right fan",
+   "box": [
+    501,
+    393,
+    78,
+    78
+   ],
+   "kind": "image",
+   "class": "css",
+   "note": "same as left, centre ~(540,431)"
+  },
+  {
+   "name": "Board screws",
+   "box": [
+    376,
+    387,
+    226,
+    89
+   ],
+   "kind": "image",
+   "class": "css",
+   "note": "4 dark round screws at board corners"
+  },
+  {
+   "name": "Heatsink fins top",
+   "box": [
+    390,
+    362,
+    200,
+    20
+   ],
+   "kind": "image",
+   "class": "css",
+   "note": "white fin strip behind board top edge with row of 12 tiny tick dots above"
+  },
+  {
+   "name": "Heatsink fins bottom",
+   "box": [
+    388,
+    482,
+    200,
+    16
+   ],
+   "kind": "image",
+   "class": "css",
+   "note": "white segmented fin strip under board"
+  },
+  {
+   "name": "GPU drop shadow",
+   "box": [
+    390,
+    470,
+    265,
+    60
+   ],
+   "kind": "image",
+   "class": "css",
+   "note": "soft grey shadow cast diagonally to lower right"
+  },
+  {
+   "name": "Cable",
+   "box": [
+    607,
+    421,
+    62,
+    20
+   ],
+   "kind": "image",
+   "class": "css",
+   "note": "short black cylinder with collar at board end"
+  },
+  {
+   "name": "Port plate",
+   "box": [
+    645,
+    399,
+    65,
+    66
+   ],
+   "kind": "image",
+   "class": "css",
+   "note": "white rounded square, grey edge, 4 grey screws, dark round socket at ~(677,431)"
+  },
+  {
+   "name": "Title",
+   "box": [
+    321,
+    610,
+    121,
+    28
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "\"GPU Pods\", near-black, semibold ~26px"
+  },
+  {
+   "name": "Body copy",
+   "box": [
+    321,
+    654,
+    337,
+    47
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "two lines, mid-grey ~#8c8c8c, ~17px"
+  },
+  {
+   "name": "Deploy Pod button",
+   "box": [
+    321,
+    720,
+    127,
+    46
+   ],
+   "kind": "control",
+   "class": "css",
+   "note": "dark gradient #2b2b2b→#111, radius ~8, white label, drop shadow"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "Backdrop",
+   "axis": "style",
+   "check": "Background is a flat light grey (~#eeeeee), not white",
+   "box": [
+    0,
+    0,
+    1080,
+    1080
+   ],
+   "scope": "frame",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "Grid hairlines",
+   "axis": "present",
+   "check": "Faint thin grid lines cross the backdrop at about x=234, x=847, y=234 and y=847",
+   "box": [
+    0,
+    0,
+    1080,
+    1080
+   ],
+   "scope": "frame",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "Card",
+   "axis": "position",
+   "check": "Card spans about x 293–787, y 286–795 and is centred in the frame",
+   "box": [
+    293,
+    286,
+    494,
+    509
+   ],
+   "scope": "frame",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "Card",
+   "axis": "style",
+   "check": "Card is off-white (~#f9f9f9), slightly lighter than the backdrop, with rounded corners ~16px",
+   "box": [
+    293,
+    286,
+    494,
+    509
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "Card",
+   "axis": "style",
+   "check": "Card edge reads as a soft white rim and diffuse shadow, with no dark or hard outline stroke",
+   "box": [
+    283,
+    276,
+    514,
+    529
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "Illustration panel",
+   "axis": "position",
+   "check": "Inset panel occupies the card's top about x 302–778, y 295–586, ending ~24px above the title",
+   "box": [
+    302,
+    295,
+    476,
+    291
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "Illustration panel",
+   "axis": "style",
+   "check": "Panel boundary is a barely visible 1px light-grey line with rounded corners, same fill as the card",
+   "box": [
+    302,
+    295,
+    476,
+    291
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "GPU board",
+   "axis": "position",
+   "check": "GPU board rectangle spans about x 370–607, y 382–482 inside the panel",
+   "box": [
+    360,
+    372,
+    257,
+    120
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "GPU board",
+   "axis": "style",
+   "check": "Board is a silver metal face with a light-to-darker grey gradient, a thin grey edge and ~10px radius, not a flat single colour",
+   "box": [
+    370,
+    382,
+    237,
+    100
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "Fans",
+   "axis": "present",
+   "check": "Exactly two round fans sit side by side on the board, centres near (437,431) and (540,431)",
+   "box": [
+    390,
+    385,
+    200,
+    95
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "Left fan",
+   "axis": "style",
+   "check": "Each fan has a light grey outer ring, dark grey curved blades and a light hub with a ring around a pale centre",
+   "box": [
+    398,
+    393,
+    78,
+    78
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "Left fan",
+   "axis": "imagery",
+   "check": "Fan shows about 7 curved, swept blades (6–8), not straight spokes",
+   "box": [
+    398,
+    393,
+    78,
+    78
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "Board screws",
+   "axis": "present",
+   "check": "Four dark round screws sit at the board's four corners",
+   "box": [
+    370,
+    382,
+    237,
+    100
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "Heatsink fins top",
+   "axis": "present",
+   "check": "A white fin strip shows above the board's top edge, topped by a row of tiny tick dots near y≈364",
+   "box": [
+    385,
+    355,
+    210,
+    30
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "Heatsink fins bottom",
+   "axis": "present",
+   "check": "A white segmented fin strip shows under the board's bottom edge, about y 482–498",
+   "box": [
+    385,
+    478,
+    210,
+    25
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "GPU drop shadow",
+   "axis": "style",
+   "check": "A soft blurred grey shadow falls to the lower right of the GPU, extending to about x 650, y 530; no hard-edged shadow shape",
+   "box": [
+    380,
+    460,
+    290,
+    80
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "Cable",
+   "axis": "style",
+   "check": "A short black cable with a collar joins the board's right edge to the port plate at about y 431",
+   "box": [
+    600,
+    415,
+    75,
+    30
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "Port plate",
+   "axis": "position",
+   "check": "Port plate is a small rounded white square at about x 645–710, y 399–465",
+   "box": [
+    640,
+    394,
+    75,
+    76
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c19",
+   "element": "Port plate",
+   "axis": "style",
+   "check": "Port plate has four small grey screws at its corners and a dark round socket in its centre",
+   "box": [
+    645,
+    399,
+    65,
+    66
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "Title",
+   "axis": "text",
+   "check": "Title reads exactly \"GPU Pods\"",
+   "box": [
+    321,
+    610,
+    121,
+    28
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "Title",
+   "axis": "style",
+   "check": "Title is near-black, semibold, about 26px, left edge at x≈321",
+   "box": [
+    321,
+    610,
+    121,
+    28
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "Body copy",
+   "axis": "text",
+   "check": "Body reads \"Deploy a dedicated GPU environment for AI\" on line 1 and \"development, testing, and model fine-tuning.\" on line 2",
+   "box": [
+    321,
+    654,
+    337,
+    47
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "Body copy",
+   "axis": "style",
+   "check": "Body text is mid-grey (~#8c8c8c), clearly lighter than the title, about 17px with ~27px line spacing",
+   "box": [
+    321,
+    654,
+    337,
+    47
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "Deploy Pod button",
+   "axis": "position",
+   "check": "Button spans about x 321–448, y 720–766, left-aligned with the title",
+   "box": [
+    316,
+    715,
+    137,
+    56
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c25",
+   "element": "Deploy Pod button",
+   "axis": "style",
+   "check": "Button fill is near-black with a subtle top-lighter vertical gradient and ~8px corner radius",
+   "box": [
+    321,
+    720,
+    127,
+    46
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c26",
+   "element": "Deploy Pod button",
+   "axis": "text",
+   "check": "Button label reads \"Deploy Pod\" in white, ~16px, centred",
+   "box": [
+    321,
+    720,
+    127,
+    46
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c27",
+   "element": "Deploy Pod button",
+   "axis": "style",
+   "check": "Button casts a soft grey drop shadow below it",
+   "box": [
+    315,
+    740,
+    140,
+    40
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "Illustration panel",
+   "axis": "present",
+   "check": "At the very start the illustration panel is empty: no GPU, cable or plate visible",
+   "box": [
+    302,
+    295,
+    476,
+    291
+   ],
+   "scope": "crop",
+   "at": 0,
+   "then": null
+  },
+  {
+   "id": "c29",
+   "element": "Card",
+   "axis": "present",
+   "check": "Card, title, body and button are already fully visible at 0s (no entrance for the text block)",
+   "box": [
+    293,
+    286,
+    494,
+    509
+   ],
+   "scope": "frame",
+   "at": 0,
+   "then": null
+  },
+  {
+   "id": "c30",
+   "element": "GPU board",
+   "axis": "motion",
+   "check": "Between 0s and 0.3s a pale, low-contrast flat GPU (board, two light-grey fans, tick rows above and below) appears in the panel",
+   "box": [
+    330,
+    350,
+    320,
+    170
+   ],
+   "scope": "crop",
+   "at": 0,
+   "then": 0.3
+  },
+  {
+   "id": "c31",
+   "element": "GPU board",
+   "axis": "style",
+   "check": "At 0.25s the GPU is still flat and pale: no screws, no shadow, light grey fans",
+   "box": [
+    340,
+    340,
+    400,
+    200
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": null
+  },
+  {
+   "id": "c32",
+   "element": "Port plate",
+   "axis": "motion",
+   "check": "The port plate and a grey cable are absent at 0.25s and present (still pale) by 0.5s, plate at about x 650–715",
+   "box": [
+    600,
+    390,
+    130,
+    90
+   ],
+   "scope": "crop",
+   "at": 0.25,
+   "then": 0.5
+  },
+  {
+   "id": "c33",
+   "element": "GPU board",
+   "axis": "motion",
+   "check": "Between 0.5s and 1.0s the GPU gains depth: fans darken, corner screws, heatsink fins and the lower-right drop shadow appear",
+   "box": [
+    360,
+    355,
+    300,
+    180
+   ],
+   "scope": "crop",
+   "at": 0.5,
+   "then": 1
+  },
+  {
+   "id": "c34",
+   "element": "Cable",
+   "axis": "motion",
+   "check": "Between 0.5s and 1.0s the cable turns from mid grey to black and the port plate settles ~5px left (to x≈645)",
+   "box": [
+    600,
+    390,
+    130,
+    90
+   ],
+   "scope": "crop",
+   "at": 0.5,
+   "then": 1
+  },
+  {
+   "id": "c35",
+   "element": "GPU board",
+   "axis": "motion",
+   "check": "The GPU illustration has finished building by ~1.0s and looks the same at 1.0s and 2.5s apart from the fans",
+   "box": [
+    360,
+    355,
+    360,
+    180
+   ],
+   "scope": "crop",
+   "at": 1,
+   "then": 2.5
+  },
+  {
+   "id": "c36",
+   "element": "Left fan",
+   "axis": "motion",
+   "check": "The left fan's blades rotate between 3.9s and 4.4s while the fan ring stays in place",
+   "box": [
+    398,
+    393,
+    78,
+    78
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": 4.4
+  },
+  {
+   "id": "c37",
+   "element": "Right fan",
+   "axis": "motion",
+   "check": "The right fan's blades rotate between 3.9s and 4.4s",
+   "box": [
+    501,
+    393,
+    78,
+    78
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": 4.4
+  },
+  {
+   "id": "c38",
+   "element": "Fans",
+   "axis": "motion",
+   "check": "Fans are still spinning near the end of the clip (blade positions differ between 7.0s and 7.5s)",
+   "box": [
+    390,
+    385,
+    200,
+    95
+   ],
+   "scope": "crop",
+   "at": 7,
+   "then": 7.5
+  },
+  {
+   "id": "c39",
+   "element": "GPU board",
+   "axis": "motion",
+   "check": "After 1s the board, screws, cable and plate do not move; only fan blades change between 3.9s and 4.4s",
+   "box": [
+    360,
+    355,
+    360,
+    180
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": 4.4
+  },
+  {
+   "id": "c40",
+   "element": "Card",
+   "axis": "motion",
+   "check": "Card, title, body copy and button do not move or change across the whole clip",
+   "box": [
+    293,
+    286,
+    494,
+    509
+   ],
+   "scope": "frame",
+   "at": 1,
+   "then": 7.5
+  },
+  {
+   "id": "c41",
+   "element": "GPU board",
+   "axis": "imagery",
+   "check": "GPU is drawn as a clean skeuomorphic vector (gradients, soft shadow), not a photo, and matches the clip's silhouette: board, 2 fans, fins, cable, plate",
+   "box": [
+    360,
+    355,
+    360,
+    180
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  },
+  {
+   "id": "c42",
+   "element": "GPU board",
+   "axis": "style",
+   "check": "Whole illustration stays greyscale: no colour hues anywhere",
+   "box": [
+    302,
+    295,
+    476,
+    291
+   ],
+   "scope": "crop",
+   "at": 3.9,
+   "then": null
+  }
+ ],
+ "imagery": [
+  {
+   "name": "GPU illustration",
+   "box": [
+    370,
+    362,
+    340,
+    170
+   ],
+   "class": "css",
+   "what": "skeuomorphic silver GPU board with two dark 7-blade fans, corner screws, white heatsink fins, soft drop shadow, black cable into a square port plate with socket",
+   "at": 3.9
+  },
+  {
+   "name": "Fan",
+   "box": [
+    398,
+    393,
+    78,
+    78
+   ],
+   "class": "css",
+   "what": "round fan: grey ring, dark curved blades, light hub; spins continuously",
+   "at": 3.9
+  },
+  {
+   "name": "Port plate",
+   "box": [
+    645,
+    399,
+    65,
+    66
+   ],
+   "class": "css",
+   "what": "white rounded square plate with 4 screws and a dark socket",
+   "at": 3.9
+  }
+ ],
+ "moves": [
+  {
+   "element": "GPU board (flat pale state)",
+   "what": "fades in from empty panel with tick rows",
+   "from": 0.05,
+   "to": 0.3,
+   "px": null
+  },
+  {
+   "element": "Port plate + cable",
+   "what": "appear pale to the right of the board",
+   "from": 0.3,
+   "to": 0.5,
+   "px": null
+  },
+  {
+   "element": "GPU depth (fans darken, screws, fins, shadow)",
+   "what": "illustration gains 3D detail and shadow",
+   "from": 0.5,
+   "to": 1,
+   "px": null
+  },
+  {
+   "element": "Port plate",
+   "what": "settles left as cable darkens to black",
+   "from": 0.5,
+   "to": 1,
+   "px": 5
+  },
+  {
+   "element": "Both fans",
+   "what": "blades rotate continuously in place",
+   "from": 0.2,
+   "to": 7.8,
+   "px": null
+  }
+ ]
+}

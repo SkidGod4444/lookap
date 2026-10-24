@@ -1,0 +1,231 @@
+<!doctype html>
+<!--
+  GPU Pods Card Animation — design by Rah Man Designer (@UiRahMan92)
+  Source: https://x.com/UiRahMan92/status/2106682089039139085
+  Rebuild: one HTML file, everything drawn in CSS + inline SVG. Nothing sampled, no stand-ins.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>GPU Pods Card Animation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; overflow: hidden; background: #f0f0f0; }
+  #stage { --u: 1px; position: relative; width: calc(1080 * var(--u)); height: calc(1080 * var(--u));
+    background: #f0f0f0; overflow: hidden; font-family: Geist, system-ui, sans-serif; }
+  .abs { position: absolute; }
+  #backdrop { left: 0; top: 0; width: 100%; height: 100%; background: #eeeeee; }
+  .gv { top: 0; width: calc(2 * var(--u)); height: 100%; background: linear-gradient(90deg, #e7e7e7 50%, #eaeaea 50%); }
+  .gh { left: 0; height: calc(2 * var(--u)); width: 100%; background: linear-gradient(#e7e7e7 50%, #eaeaea 50%); }
+  #card { left: calc(293 * var(--u)); top: calc(286 * var(--u)); width: calc(494 * var(--u)); height: calc(509 * var(--u));
+    box-sizing: border-box; border-radius: calc(16 * var(--u)); background: #f9f9f9;
+    border: calc(1 * var(--u)) solid #ffffff;
+    box-shadow: 0 calc(1 * var(--u)) calc(2 * var(--u)) rgba(0,0,0,.025), 0 calc(10 * var(--u)) calc(34 * var(--u)) rgba(0,0,0,.035); }
+  #panel { left: calc(302 * var(--u)); top: calc(295 * var(--u)); width: calc(476 * var(--u)); height: calc(291 * var(--u));
+    box-sizing: border-box; border-radius: calc(10 * var(--u)); background: #f9f9f9; border: calc(1 * var(--u)) solid #efefef; }
+  #title { left: calc(321 * var(--u)); top: calc(608 * var(--u)); margin: 0; font-size: calc(26 * var(--u)); line-height: calc(32 * var(--u));
+    font-weight: 600; color: #0d0d0d; letter-spacing: calc(-0.3 * var(--u)); }
+  #body { left: calc(321 * var(--u)); top: calc(650 * var(--u)); margin: 0; font-size: calc(17 * var(--u)); line-height: calc(27 * var(--u));
+    font-weight: 300; color: #8c8c8c; white-space: nowrap; letter-spacing: calc(-0.1 * var(--u)); }
+  #btn { left: calc(321 * var(--u)); top: calc(720 * var(--u)); width: calc(127 * var(--u)); height: calc(46 * var(--u));
+    border: 0; padding: 0; border-radius: calc(8 * var(--u)); color: #fff; font: 300 calc(16 * var(--u)) Geist, system-ui, sans-serif;
+    background: linear-gradient(#3c3c3c, #1b1b1b 55%, #121212); cursor: pointer;
+    box-shadow: inset 0 calc(1 * var(--u)) 0 rgba(255,255,255,.14), 0 calc(2 * var(--u)) calc(3 * var(--u)) rgba(0,0,0,.2),
+      0 calc(8 * var(--u)) calc(10 * var(--u)) rgba(0,0,0,.1), 0 calc(16 * var(--u)) calc(26 * var(--u)) calc(2 * var(--u)) rgba(0,0,0,.12);
+    transition: transform .15s ease, box-shadow .15s ease; }
+  #btn:hover { background: linear-gradient(#474747, #222 55%, #161616); }
+  #btn:active { transform: translateY(calc(1 * var(--u))); box-shadow: inset 0 calc(1 * var(--u)) 0 rgba(255,255,255,.1), 0 calc(3 * var(--u)) calc(6 * var(--u)) rgba(0,0,0,.2); }
+  svg.ill { position: absolute; pointer-events: none; overflow: visible; }
+  #gpu { left: 0; top: 0; width: calc(1080 * var(--u)); height: calc(1080 * var(--u)); }
+  #port { left: calc(600 * var(--u)); top: calc(380 * var(--u)); width: calc(130 * var(--u)); height: calc(100 * var(--u)); }
+  .spin { transform-box: view-box; transform-origin: 0 0; }
+  /* timeline (measured from the clip, 60 fps) */
+  #gpu { animation: build 0.2s 0.1s cubic-bezier(.3,.6,.4,1) both; }
+  #port { animation: portIn 0.25s 0.25s ease-out both, settle 0.5s 0.5s cubic-bezier(.3,.7,.3,1) both; }
+  .d { animation: depth 0.5s 0.5s ease-in-out both; }
+  .d1 { animation: depth 0.25s 0.28s ease-out both; }
+  .p { animation: depth 0.5s 0.5s ease-in-out reverse both; }
+  .spin { animation: spin 1.6s linear infinite; }
+  @keyframes build { from { opacity: 0; filter: blur(calc(6 * var(--u))); } to { opacity: 1; filter: blur(0); } }
+  @keyframes portIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes settle { from { translate: 0 0; } to { translate: calc(-5 * var(--u)) 0; } }
+  @keyframes depth { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) {
+    #gpu, #port, .d, .d1, .p { animation-duration: 0.01s; animation-delay: 0s; }
+    .spin { animation: none; }
+  }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="backdrop" class="abs"></div>
+  <div class="abs gv" style="left:calc(233 * var(--u))"></div>
+  <div class="abs gv" style="left:calc(847 * var(--u))"></div>
+  <div class="abs gh" style="top:calc(233 * var(--u))"></div>
+  <div class="abs gh" style="top:calc(847 * var(--u))"></div>
+
+  <div id="card" class="abs"></div>
+  <div id="panel" class="abs"></div>
+
+  <svg id="gpu" class="ill" viewBox="0 0 1080 1080" aria-hidden="true">
+    <defs>
+      <linearGradient id="board" gradientUnits="userSpaceOnUse" x1="370" y1="382" x2="607" y2="482">
+        <stop offset="0" stop-color="#f8f8f8"/><stop offset=".25" stop-color="#ececec"/><stop offset=".45" stop-color="#dfdfdf"/>
+        <stop offset=".8" stop-color="#c3c3c3"/><stop offset="1" stop-color="#a6a6a6"/>
+      </linearGradient>
+      <linearGradient id="brush" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#fff" stop-opacity=".25"/><stop offset=".35" stop-color="#fff" stop-opacity="0"/>
+        <stop offset=".6" stop-color="#fff" stop-opacity=".18"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+      </linearGradient>
+      <!-- each blade: lit along its leading edge, dark along its trailing edge -->
+      <linearGradient id="blade" x1="1" y1=".2" x2=".05" y2=".9">
+        <stop offset="0" stop-color="#78777c"/><stop offset=".5" stop-color="#5d5c61"/><stop offset="1" stop-color="#47464b"/>
+      </linearGradient>
+      <!-- darkening toward the hub, shared by all blades -->
+      <radialGradient id="sheen" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="34">
+        <stop offset=".38" stop-color="#000" stop-opacity=".3"/><stop offset=".75" stop-color="#000" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="bladeP" x1="0" y1="-1" x2="0" y2="1">
+        <stop offset="0" stop-color="#cdcdcd"/><stop offset="1" stop-color="#a9a9a9"/>
+      </linearGradient>
+      <radialGradient id="hub"><stop offset=".5" stop-color="#d7d7d8"/><stop offset=".62" stop-color="#b8b8ba"/><stop offset="1" stop-color="#5a5a5d"/></radialGradient>
+      <radialGradient id="screw" cx=".35" cy=".3"><stop offset="0" stop-color="#8a8a8a"/><stop offset=".6" stop-color="#4a4a4a"/><stop offset="1" stop-color="#2c2c2c"/></radialGradient>
+      <linearGradient id="shd" gradientUnits="userSpaceOnUse" x1="560" y1="450" x2="625" y2="515">
+        <stop offset="0" stop-color="#000" stop-opacity=".34"/><stop offset=".5" stop-color="#000" stop-opacity=".14"/><stop offset="1" stop-color="#000" stop-opacity="0"/>
+      </linearGradient>
+      <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6"/></filter>
+      <filter id="soft3" x="-10%" y="-10%" width="130%" height="140%"><feGaussianBlur stdDeviation="2.4"/></filter>
+      <filter id="soft2"x="-10%" y="-50%" width="120%" height="200%"><feGaussianBlur stdDeviation="2"/></filter>
+      <!-- one broad swept blade: 46° of a 51.4° sector, swept 22° hub-to-rim, so 7 chunky blades with dark gaps -->
+      <path id="bl" transform="scale(1 -1)" d="M 13 0 Q 22.9 1.6 31.5 12.7 A 34 34 0 0 1 12.74 31.52 Q 14.78 17.62 9.03 9.35 A 13 13 0 0 0 13 0 Z"/>
+      <g id="bladesP" fill="url(#bladeP)">
+        <use href="#bl"/><use href="#bl" transform="rotate(51.43)"/><use href="#bl" transform="rotate(102.86)"/><use href="#bl" transform="rotate(154.29)"/>
+        <use href="#bl" transform="rotate(205.71)"/><use href="#bl" transform="rotate(257.14)"/><use href="#bl" transform="rotate(308.57)"/>
+      </g>
+      <g id="bladesD" fill="url(#blade)">
+        <use href="#bl"/><use href="#bl" transform="rotate(51.43)"/><use href="#bl" transform="rotate(102.86)"/><use href="#bl" transform="rotate(154.29)"/>
+        <use href="#bl" transform="rotate(205.71)"/><use href="#bl" transform="rotate(257.14)"/><use href="#bl" transform="rotate(308.57)"/>
+      </g>
+      <g id="sheenD" fill="url(#sheen)">
+        <use href="#bl"/><use href="#bl" transform="rotate(51.43)"/><use href="#bl" transform="rotate(102.86)"/><use href="#bl" transform="rotate(154.29)"/>
+        <use href="#bl" transform="rotate(205.71)"/><use href="#bl" transform="rotate(257.14)"/><use href="#bl" transform="rotate(308.57)"/>
+      </g>
+      <!-- GPU silhouette (board + fins) for the swept cast shadow -->
+      <g id="sil"><rect x="370" y="382" width="237" height="100" rx="10"/><rect x="390" y="470" width="198" height="28" rx="2"/></g>
+    </defs>
+
+    <!-- depth: long soft shadow toward lower right + contact shadow under the fins -->
+    <!-- the silhouette stepped 4px down-right ten times: dark at the object, a 45° left edge, fading by x 650 / y 535 -->
+    <g class="d">
+      <g fill="#000" fill-opacity=".023" filter="url(#soft3)">
+        <use href="#sil" x="2" y="2"/><use href="#sil" x="4" y="4"/><use href="#sil" x="6" y="6"/><use href="#sil" x="8" y="8"/>
+        <use href="#sil" x="10" y="10"/><use href="#sil" x="12" y="12"/><use href="#sil" x="14" y="14"/><use href="#sil" x="16" y="16"/>
+        <use href="#sil" x="18" y="18"/><use href="#sil" x="20" y="20"/><use href="#sil" x="22" y="22"/><use href="#sil" x="24" y="24"/>
+        <use href="#sil" x="26" y="26"/><use href="#sil" x="28" y="28"/><use href="#sil" x="30" y="30"/><use href="#sil" x="32" y="32"/>
+        <use href="#sil" x="34" y="34"/><use href="#sil" x="36" y="36"/><use href="#sil" x="38" y="38"/><use href="#sil" x="40" y="40"/>
+      </g>
+      <rect x="392" y="495" width="198" height="7" fill="#000" opacity=".3" filter="url(#soft2)"/>
+    </g>
+
+    <!-- pale tick rows (flat state); fins cover the lower ones later -->
+    <!-- tiny round dots, 2.2px, pitch 15.7, centred y 363.5 -->
+    <g fill="#e0e0e0">
+      <circle cx="403" cy="363.5" r="1.1"/><circle cx="418.7" cy="363.5" r="1.1"/><circle cx="434.4" cy="363.5" r="1.1"/>
+      <circle cx="450.1" cy="363.5" r="1.1"/><circle cx="465.8" cy="363.5" r="1.1"/><circle cx="481.5" cy="363.5" r="1.1"/>
+      <circle cx="497.2" cy="363.5" r="1.1"/><circle cx="512.9" cy="363.5" r="1.1"/><circle cx="528.6" cy="363.5" r="1.1"/>
+      <circle cx="544.3" cy="363.5" r="1.1"/><circle cx="560" cy="363.5" r="1.1"/><circle cx="575.7" cy="363.5" r="1.1"/>
+    </g>
+    <g fill="#d6d6d6" class="p">
+      <rect x="402" y="489" width="1" height="15"/><rect x="417.7" y="489" width="1" height="15"/><rect x="433.4" y="489" width="1" height="15"/>
+      <rect x="449.1" y="489" width="1" height="15"/><rect x="464.8" y="489" width="1" height="15"/><rect x="480.5" y="489" width="1" height="15"/>
+      <rect x="496.2" y="489" width="1" height="15"/><rect x="511.9" y="489" width="1" height="15"/><rect x="527.6" y="489" width="1" height="15"/>
+      <rect x="543.3" y="489" width="1" height="15"/><rect x="559" y="489" width="1" height="15"/><rect x="574.7" y="489" width="1" height="15"/>
+    </g>
+
+    <!-- heatsink fins (depth) -->
+    <g class="d">
+      <!-- top strip: starts y 367, rounded top corners r7, faint segment seams -->
+      <rect x="390" y="367" width="198" height="24" rx="7" fill="#e5e5e5"/>
+      <rect x="394" y="367.3" width="190" height="1.2" rx=".6" fill="#eeeeee"/>
+      <g fill="#dcdcdc"><rect x="429" y="370" width=".8" height="11"/><rect x="469" y="370" width=".8" height="11"/>
+        <rect x="509" y="370" width=".8" height="11"/><rect x="549" y="370" width=".8" height="11"/></g>
+      <rect x="390" y="476" width="198" height="22" rx="4" fill="#e6e6e6"/>
+      <rect x="390" y="496" width="198" height="2" rx="1" fill="#d2d2d2"/>
+      <g fill="#d0d0d0">
+        <rect x="405" y="483" width="1" height="13"/><rect x="420.7" y="483" width="1" height="13"/><rect x="436.4" y="483" width="1" height="13"/>
+        <rect x="452.1" y="483" width="1" height="13"/><rect x="467.8" y="483" width="1" height="13"/><rect x="483.5" y="483" width="1" height="13"/>
+        <rect x="499.2" y="483" width="1" height="13"/><rect x="514.9" y="483" width="1" height="13"/><rect x="530.6" y="483" width="1" height="13"/>
+        <rect x="546.3" y="483" width="1" height="13"/><rect x="562" y="483" width="1" height="13"/><rect x="577.7" y="483" width="1" height="13"/>
+      </g>
+      <g fill="#cfcfcf">
+        <circle cx="403" cy="363.5" r="1.2"/><circle cx="418.7" cy="363.5" r="1.2"/><circle cx="434.4" cy="363.5" r="1.2"/>
+        <circle cx="450.1" cy="363.5" r="1.2"/><circle cx="465.8" cy="363.5" r="1.2"/><circle cx="481.5" cy="363.5" r="1.2"/>
+        <circle cx="497.2" cy="363.5" r="1.2"/><circle cx="512.9" cy="363.5" r="1.2"/><circle cx="528.6" cy="363.5" r="1.2"/>
+        <circle cx="544.3" cy="363.5" r="1.2"/><circle cx="560" cy="363.5" r="1.2"/><circle cx="575.7" cy="363.5" r="1.2"/>
+      </g>
+    </g>
+
+    <!-- board: flat pale face, then the brushed silver face -->
+    <rect x="370.5" y="381.5" width="236" height="100" rx="10" fill="#f2f2f2" stroke="#cdcdcd"/>
+    <g class="d1">
+      <rect x="370.5" y="381.5" width="236" height="100" rx="10" fill="url(#board)" stroke="#9a9a9a" stroke-width="1.2"/>
+      <rect x="370.5" y="381.5" width="236" height="100" rx="10" fill="url(#brush)"/>
+      <rect x="372" y="383" width="233" height="97" rx="8.5" fill="none" stroke="#fff" stroke-opacity=".9"/>
+    </g>
+    <g class="d">
+      <circle cx="382" cy="392.5" r="5" fill="url(#screw)"/><circle cx="595.5" cy="392.5" r="5" fill="url(#screw)"/>
+      <circle cx="382" cy="471" r="5" fill="url(#screw)"/><circle cx="595.5" cy="471" r="5" fill="url(#screw)"/>
+    </g>
+    <!-- fans: ring stays, blades + hub spin -->
+    <!-- ring r34–40 #a2, dark well, 7 broad swept blades (dark at hub, lighter out), hub: grey ring r8.5–12.5 round a pale #d7 centre -->
+    <g transform="translate(437 431)">
+      <circle r="40" fill="#b4b4b4"/><circle r="39.3" fill="none" stroke="#9c9c9e" stroke-width="1.4" class="d1"/>
+      <circle r="34.5" fill="#cfcfcf"/><circle r="34.5" fill="#222226" stroke="#2a2a2e" stroke-width="1" class="d1"/>
+      <g class="spin"><use href="#bladesP"/><g class="d1"><use href="#bladesD"/><use href="#sheenD"/></g>
+        <circle r="12.5" fill="#c4c4c4" stroke="#b0b0b0"/><circle r="12.5" fill="#86868a" stroke="#2c2c30" stroke-width="1" class="d1"/>
+        <circle r="8.5" fill="#d7d7d9"/><circle r="8.5" fill="none" stroke="#a9a9ac" stroke-width=".8" class="d1"/></g>
+    </g>
+    <g transform="translate(540 431)">
+      <circle r="40" fill="#b4b4b4"/><circle r="39.3" fill="none" stroke="#9c9c9e" stroke-width="1.4" class="d1"/>
+      <circle r="34.5" fill="#cfcfcf"/><circle r="34.5" fill="#222226" stroke="#2a2a2e" stroke-width="1" class="d1"/>
+      <g class="spin" style="animation-delay:-0.4s"><use href="#bladesP"/><g class="d1"><use href="#bladesD"/><use href="#sheenD"/></g>
+        <circle r="12.5" fill="#c4c4c4" stroke="#b0b0b0"/><circle r="12.5" fill="#86868a" stroke="#2c2c30" stroke-width="1" class="d1"/>
+        <circle r="8.5" fill="#d7d7d9"/><circle r="8.5" fill="none" stroke="#a9a9ac" stroke-width=".8" class="d1"/></g>
+    </g>
+  </svg>
+
+  <!-- port plate + cable: appears 0.3–0.5s at x 650, settles 5px left by 1.0s -->
+  <svg id="port" class="ill" viewBox="600 380 130 100" aria-hidden="true">
+    <defs>
+      <linearGradient id="plate" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fdfdfd"/><stop offset="1" stop-color="#ececec"/></linearGradient>
+      <radialGradient id="sock" cx=".45" cy=".4"><stop offset="0" stop-color="#2a2a2c"/><stop offset=".6" stop-color="#1a1a1c"/><stop offset=".8" stop-color="#3c3c3f"/><stop offset="1" stop-color="#6a6a6d"/></radialGradient>
+      <radialGradient id="ps" cx=".35" cy=".3"><stop offset="0" stop-color="#c8c8c8"/><stop offset="1" stop-color="#8a8a8a"/></radialGradient>
+      <linearGradient id="cab" gradientUnits="userSpaceOnUse" x1="0" y1="425" x2="0" y2="437.5"><stop offset="0" stop-color="#4c4c50"/><stop offset=".5" stop-color="#2c2c30"/><stop offset="1" stop-color="#08080a"/></linearGradient>
+      <linearGradient id="col" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#48484c"/><stop offset=".55" stop-color="#28282c"/><stop offset="1" stop-color="#0a0a0a"/></linearGradient>
+      <filter id="psh"x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3"/></filter>
+    </defs>
+    <rect x="650.5" y="399.5" width="64" height="65" rx="8" fill="url(#plate)" stroke="#d2d2d2"/>
+    <rect x="652" y="401" width="61" height="62" rx="6.5" fill="none" stroke="#fff"/>
+    <circle cx="661" cy="410.5" r="3.6" fill="url(#ps)"/><circle cx="704" cy="410.5" r="3.6" fill="url(#ps)"/>
+    <circle cx="661" cy="453.5" r="3.6" fill="url(#ps)"/><circle cx="704" cy="453.5" r="3.6" fill="url(#ps)"/>
+    <!-- socket r13, then the cable (12.5 thick, lit on top) bending down into it, collar 15×20 at the board edge -->
+    <circle cx="682.5" cy="431" r="13" fill="#bdbdbd"/>
+    <circle class="d" cx="682.5" cy="431" r="13" fill="url(#sock)"/>
+    <path d="M 622 431 L 680 431" fill="none" stroke="#9a9a9a" stroke-width="12.5" stroke-linecap="round"/>
+    <rect x="612" y="421" width="15" height="20" rx="1.5" fill="#7a7a7a"/>
+    <g class="d">
+      <path d="M 622 431 L 680 431" fill="none" stroke="url(#cab)" stroke-width="12.5" stroke-linecap="round"/>
+      <g stroke="#6e6e6e" stroke-width=".9"><path d="M 659 412.5 L 663 408.5"/><path d="M 702 412.5 L 706 408.5"/><path d="M 659 455.5 L 663 451.5"/><path d="M 702 455.5 L 706 451.5"/></g>
+      <rect x="612" y="421" width="15" height="20" rx="1.5" fill="url(#col)"/>
+    </g>
+  </svg>
+
+  <h2 id="title" class="abs">GPU Pods</h2>
+  <p id="body" class="abs">Deploy a dedicated GPU environment for AI<br>development, testing, and model fine-tuning.</p>
+  <button id="btn" class="abs">Deploy Pod</button>
+</div>
+</body>
+</html>

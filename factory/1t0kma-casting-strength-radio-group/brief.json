@@ -1,0 +1,317 @@
+{
+ "slug": "1t0kma-casting-strength-radio-group",
+ "title": "Casting Strength Radio Group",
+ "measured": false,
+ "recipe": null,
+ "what": "A minimal radio-button card UI lets users pick a casting strength, pairing clean typography with playful spell-themed option descriptions.",
+ "frame": {
+  "ratio": 1.333,
+  "shape": "landscape",
+  "media": "clip"
+ },
+ "tone": "light surface, dark type",
+ "traits": [
+  "Radio",
+  "Cards",
+  "Playful"
+ ],
+ "section": "Interface",
+ "steps": [
+  "Call see_design for the frame and read the layout from it: regions, alignment, type scale, corner radii, spacing rhythm.",
+  "The media is a clip: name each state you can see (rest, hover, press, open) and the order they occur in.",
+  "Build with the project's own stack and tokens; match proportion and hierarchy before matching pixels.",
+  "A draft measurement is attached: its phases, moves and palette are measured from the clip; its boxes are a first pass to check against the keyframes."
+ ],
+ "draft": {
+  "frame": {
+   "w": 1440,
+   "h": 1080
+  },
+  "duration": 11.15,
+  "phases": [
+   [
+    1.75,
+    1.75
+   ],
+   [
+    5.75,
+    5.75
+   ],
+   [
+    6.85,
+    6.85
+   ],
+   [
+    7.9,
+    7.9
+   ]
+  ],
+  "keyframes": [
+   {
+    "name": "kf1",
+    "at": 0.85,
+    "hold": [
+     0,
+     1.7
+    ]
+   },
+   {
+    "name": "kf2",
+    "at": 3.75,
+    "hold": [
+     1.8,
+     5.7
+    ]
+   },
+   {
+    "name": "kf3",
+    "at": 6.3,
+    "hold": [
+     5.8,
+     6.8
+    ]
+   },
+   {
+    "name": "kf4",
+    "at": 7.4,
+    "hold": [
+     6.9,
+     7.85
+    ]
+   }
+  ],
+  "moments": [
+   {
+    "at": 0.85,
+    "name": "kf1"
+   },
+   {
+    "at": 3.75,
+    "name": "kf2"
+   },
+   {
+    "at": 6.3,
+    "name": "kf3"
+   },
+   {
+    "at": 7.4,
+    "name": "kf4"
+   }
+  ],
+  "anchors": [],
+  "background": "#f9f9f9",
+  "palette": [
+   {
+    "hex": "#f9f9f9",
+    "share": 98.8
+   },
+   {
+    "hex": "#e9e9e9",
+    "share": 0.2
+   },
+   {
+    "hex": "#d8d8d8",
+    "share": 0.2
+   },
+   {
+    "hex": "#cac9c9",
+    "share": 0.1
+   },
+   {
+    "hex": "#595858",
+    "share": 0.1
+   },
+   {
+    "hex": "#686766",
+    "share": 0.1
+   },
+   {
+    "hex": "#787776",
+    "share": 0.1
+   },
+   {
+    "hex": "#a8a7a7",
+    "share": 0.1
+   }
+  ],
+  "elements": [],
+  "motion": [
+   {
+    "element": "#dddddd",
+    "box": [
+     404,
+     323,
+     619,
+     435
+    ],
+    "moves": [
+     {
+      "from": 0.6,
+      "to": 0.65,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 1,
+      "to": 1.35,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 350
+     },
+     {
+      "from": 1.6,
+      "to": 1.65,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 1.7,
+      "to": 1.75,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     }
+    ]
+   },
+   {
+    "element": "#fefefe",
+    "box": [
+     452,
+     663,
+     34,
+     35
+    ],
+    "moves": [
+     {
+      "from": 2.4,
+      "to": 2.45,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 2.5,
+      "to": 2.75,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 250
+     },
+     {
+      "from": 7.25,
+      "to": 7.35,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 7.4,
+      "to": 7.5,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     }
+    ]
+   },
+   {
+    "element": "#fefefe",
+    "box": [
+     452,
+     552,
+     34,
+     34
+    ],
+    "moves": [
+     {
+      "from": 1.15,
+      "to": 1.25,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 1.35,
+      "to": 1.45,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 5.05,
+      "to": 5.2,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 150
+     },
+     {
+      "from": 5.25,
+      "to": 5.35,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     }
+    ]
+   }
+  ],
+  "coverage": "flat regions found; boxes and fills are usable as given",
+  "confidence": {
+   "phases": "measured: sampled every 50 ms",
+   "motion": "measured: moves of the first keyframe's big parts, edges read at full resolution; dTop and dLeft are the distance in source px",
+   "palette": "measured for areas; small things do not reach it",
+   "anchors": "measured where the content stands clear of its background (reliable true): the box of everything that is not background at a phase's start and end, and which edges moved; where the content fills the frame the field says so and look_at what=track is the way to read an edge",
+   "elements": "draft: flat regions at the first keyframe; nested parts split or merge, text and thin parts are missing; check each box against the keyframe (see_design with at) before trusting it"
+  }
+ },
+ "motion": {
+  "status": "draft measured: draft.phases say when things move, draft.anchors which edges, draft.motion how far; the presets below are only for states the clip never shows",
+  "enter": "fade up 12 px, 320 ms, cubic-bezier(0.2, 0.8, 0.2, 1)",
+  "hover": "colour or ring only, 150 ms",
+  "press": "scale 0.98, 120 ms",
+  "reducedMotion": "respect prefers-reduced-motion: no entrance, instant hover"
+ },
+ "text": null,
+ "notes": [
+  {
+   "slug": "motion-from-stills",
+   "title": "Giving motion to a still, honestly"
+  }
+ ],
+ "credit": {
+  "author": "George",
+  "x": "vanjek",
+  "source": "https://x.com/vanjek/status/2107793811497992535"
+ },
+ "method": [
+  "Fetch the clip; read size, fps and duration from the container.",
+  "Dump frames at 2 fps plus a contact sheet; pick the idle and active moments and dump those at full resolution.",
+  "Convert the chosen frames to raw RGB and measure: bounding boxes of every element, exact hex at flat regions, luminance profiles across edges for the lighting, a per-frame luma trace of the moving region for timing.",
+  "Build with one unit, --u, equal to one source pixel at the design size, and write every size as calc(N * var(--u)).",
+  "Light rounded objects with inset box-shadows on one overlay (rim, near glow, wide falloff); stacked linear gradients show a seam at the corner.",
+  "Render the build headless at --u: 1px, crop to the frame, put it beside the source frame, and look. Fix the three largest differences. Repeat."
+ ],
+ "build": null,
+ "oneShot": "No measured recipe, but a draft: build from draft.elements and draft.motion, look at each keyframe with see_design (at), then call check_rebuild with a screenshot; its regions are reliable, its element rows are as good as the draft boxes.",
+ "keyframeFiles": [
+  {
+   "name": "kf1",
+   "at": 0.85,
+   "file": "public/drafts/tvjdkep/kf1.jpg"
+  },
+  {
+   "name": "kf2",
+   "at": 3.75,
+   "file": "public/drafts/tvjdkep/kf2.jpg"
+  },
+  {
+   "name": "kf3",
+   "at": 6.3,
+   "file": "public/drafts/tvjdkep/kf3.jpg"
+  },
+  {
+   "name": "kf4",
+   "at": 7.4,
+   "file": "public/drafts/tvjdkep/kf4.jpg"
+  }
+ ]
+}

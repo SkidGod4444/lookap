@@ -1,0 +1,16 @@
+{
+ "model": "Claude Opus 5.5",
+ "modelId": "claude-opus-5-5",
+ "date": "2026-10-24",
+ "run": {
+  "model": "Claude Opus 5.5",
+  "turns": 213,
+  "outputTokens": 110018,
+  "totalTokens": 10006217,
+  "costUsd": 11.72,
+  "minutes": 111.7,
+  "score": 95
+ },
+ "hand": "none: the factory alone, 4 judged rounds, best round 4 kept; rubric 39 of 42 under a three-vote judge (the fan blades are thinner than the clip's), reviewed by eye",
+ "hint": "Watch the GPU build into depth and its fans spin up."
+}

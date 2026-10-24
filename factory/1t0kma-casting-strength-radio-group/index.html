@@ -1,0 +1,279 @@
+<!doctype html>
+<!--
+  Casting Strength Radio Group: a rebuild of the design by George (@vanjek)
+  Source: https://x.com/vanjek/status/2107793811497992535
+  Nothing sampled from the clip: card, radios, pixel particles and both cursors are drawn in CSS / inline SVG.
+  ?demo=1 replays the clip's 11.15s sequence as Web Animations created at load (seekable).
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Casting Strength Radio Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..600&display=swap" rel="stylesheet">
+<style id="patches"></style>
+<style>
+  html, body { margin: 0; padding: 0; overflow: hidden; background: #f9f9f9; }
+  #stage {
+    --u: 1px;
+    position: relative; width: calc(1440 * var(--u)); height: calc(1080 * var(--u));
+    background: #f9f9f9; overflow: hidden;
+    font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased;
+  }
+  .card {
+    position: absolute; left: calc(405 * var(--u)); top: calc(323 * var(--u));
+    width: calc(617 * var(--u)); height: calc(433 * var(--u)); box-sizing: border-box;
+    background: #fdfdfd; border: calc(1 * var(--u)) solid #d9d9d9; border-top-color: #d2d2d2; border-bottom-color: #c9c9c9;
+    border-radius: calc(36 * var(--u));
+    /* the clip's top edge is a soft 3px line: #ededed above, #d9d9d9, #f2f2f2 inside, and the page above it
+       is #f6-#f7 for ~25px, a faint halo that makes the line read (col 700, 0.85s) */
+    box-shadow: 0 calc(-1 * var(--u)) 0 #e6e6e6, inset 0 calc(1 * var(--u)) 0 #eeeeee,
+      0 calc(-2 * var(--u)) calc(26 * var(--u)) rgba(0,0,0,0.03),
+      0 calc(4 * var(--u)) calc(44 * var(--u)) rgba(0,0,0,0.075), 0 calc(1 * var(--u)) calc(3 * var(--u)) rgba(0,0,0,0.04);
+  }
+  .label {
+    position: absolute; left: calc(447 * var(--u)); top: calc(361 * var(--u));
+    font-size: calc(23.4 * var(--u)); line-height: calc(28 * var(--u)); color: #625f5d; font-weight: 420;
+    letter-spacing: calc(0.35 * var(--u));
+  }
+  .row { position: absolute; left: calc(428 * var(--u)); width: calc(572 * var(--u)); height: calc(108 * var(--u)); cursor: pointer; }
+  .pill {
+    position: absolute; inset: 0; border-radius: calc(18 * var(--u)); background: #f2f2f2;
+    opacity: 0; transition: opacity .2s ease;
+  }
+  #stage:not(.demo) .row:hover .pill { opacity: 1; }
+  .radio {
+    position: absolute; left: calc(21 * var(--u)); top: calc(33.5 * var(--u));
+    width: calc(40 * var(--u)); height: calc(40 * var(--u)); box-sizing: border-box;
+    border-radius: 50%; border: calc(2 * var(--u)) solid #c9c9c9; background: #fff;
+  }
+  .disc {
+    position: absolute; left: calc(21 * var(--u)); top: calc(33.5 * var(--u));
+    width: calc(40 * var(--u)); height: calc(40 * var(--u)); border-radius: 50%;
+    background:
+      radial-gradient(circle at 50% 50%, #fff 0 calc(6.0 * var(--u)), transparent calc(6.8 * var(--u))),
+      linear-gradient(135deg, #2160d8 0%, #1f6de3 28%, #1b89e6 72%, #1c95e6 100%);
+    opacity: 0;
+  }
+  .disc.on { opacity: 1; }
+  .title {
+    position: absolute; left: calc(85 * var(--u)); top: calc(23 * var(--u)); white-space: nowrap;
+    font-size: calc(26 * var(--u)); line-height: calc(32 * var(--u)); font-weight: 450; color: #464646;
+    letter-spacing: calc(0.5 * var(--u));
+    transition: color .15s ease;
+  }
+  .row.sel .title { color: #0d0c0c; }
+  #stage:not(.demo) .row:hover .title { color: #0d0c0c; }
+  .desc {
+    position: absolute; left: calc(86 * var(--u)); top: calc(59 * var(--u)); white-space: nowrap;
+    font-size: calc(22 * var(--u)); line-height: calc(28 * var(--u)); color: #666; font-weight: 400;
+  }
+  #fx { position: absolute; inset: 0; pointer-events: none; z-index: 5; }
+  .px { position: absolute; left: 0; top: 0; opacity: 0; }
+  #cursor { position: absolute; left: 0; top: 0; width: calc(36 * var(--u)); height: calc(42 * var(--u)); z-index: 9; display: none; pointer-events: none; }
+  .demo #cursor { display: block; }
+  #cursor svg { position: absolute; left: 0; top: 0; width: calc(36 * var(--u)); height: calc(42 * var(--u));
+    filter: drop-shadow(0 calc(1.5 * var(--u)) calc(1.5 * var(--u)) rgba(0,0,0,0.35)); }
+  .demo { pointer-events: none; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="card"></div>
+  <div class="label">Casting strength</div>
+  <div class="row sel" style="top: calc(403 * var(--u))"><div class="pill"></div><div class="radio"></div><div class="disc on"></div>
+    <div class="title">Whisper</div><div class="desc">A quiet spell, barely felt</div></div>
+  <div class="row" style="top: calc(514 * var(--u))"><div class="pill"></div><div class="radio"></div><div class="disc"></div>
+    <div class="title">Chant</div><div class="desc">Steady power, held for a while</div></div>
+  <div class="row" style="top: calc(625 * var(--u))"><div class="pill"></div><div class="radio"></div><div class="disc"></div>
+    <div class="title">Invocation</div><div class="desc">Everything, all at once</div></div>
+  <div id="fx"></div>
+  <div id="cursor">
+    <svg id="arrow" viewBox="0 0 24 28"><path d="M3 2v19.5l4.7-4.4 3.2 7.4 3.3-1.4-3.2-7.3h6.6z" fill="#111" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    <svg id="hand" viewBox="0 0 24 28" style="opacity:0"><path d="M8.6 14.2V3.6a1.8 1.8 0 0 1 3.6 0v8.2-1.6a1.8 1.8 0 0 1 3.6 0v2.4-1.4a1.8 1.8 0 0 1 3.6 0v2.2-.8a1.7 1.7 0 0 1 3.4 0v5.6c0 4.3-2.7 7.6-7 7.6h-2.2c-2.6 0-4.2-1.2-5.6-3.3l-4.3-6.4c-.8-1.2-.5-2.6.7-3.1 1-.4 2.1 0 2.9 1l1.3 1.9z" fill="#fff" stroke="#111" stroke-width="1.3" stroke-linejoin="round"/>
+      <path d="M12.2 15.2v4.6M15.8 15.2v4.6M19.4 15.6v4.2" stroke="#111" stroke-width="1.1" stroke-linecap="round"/></svg>
+  </div>
+</div>
+<script>
+(() => {
+  const stage = document.getElementById('stage'), fx = document.getElementById('fx');
+  const rows = [...document.querySelectorAll('.row')];
+  const discs = rows.map(r => r.querySelector('.disc'));
+  const U = n => `calc(${n} * var(--u))`;
+  const CX = 469, CY = [457.5, 568.5, 679.5];
+  const D = 11.15;
+  const PALE = ['#3d8fe8', '#5aa3ec', '#7db6f0', '#9dc8f3', '#bcdaf6'];
+  // a transfer (s): the source disc is cut away over SWEEP, cells fly, the target is rebuilt from LS to LS + LAND
+  const SWEEP = 0.18, LS = 0.26, LAND = 0.24, END = 0.54;
+  let seed = 7;
+  const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+  const mix = t => {  // the disc's own diagonal gradient, deep blue top-left to sky blue bottom-right
+    const a = [0x21, 0x60, 0xd8], b = [0x1c, 0x95, 0xe6];
+    return 'rgb(' + a.map((v, i) => Math.round(v + (b[i] - v) * t)).join(',') + ')';
+  };
+  const ease = t => t < .5 ? 2 * t * t : 1 - 2 * (1 - t) * (1 - t);
+  const pos = (x, y, s) => `translate(${U(+(x - s / 2).toFixed(1))}, ${U(+(y - s / 2).toFixed(1))})`;
+  const arc = (x0, y0, x1, y1, mx, my, t) => {
+    const a = (1 - t) * (1 - t), b = 2 * t * (1 - t), d = t * t;
+    return [a * x0 + b * mx + d * x1, a * y0 + b * my + d * y1];
+  };
+  const add = (s, color, kf, delay, dur) => {
+    const el = document.createElement('div');
+    el.className = 'px';
+    el.style.width = el.style.height = U(s);
+    el.style.background = color;
+    fx.appendChild(el);
+    el.animate(kf, { duration: dur * 1000, delay: delay * 1000, fill: 'none' });
+  };
+
+  // clip-path keeping the part of a 40px disc where (p - centre) . d < s (in disc px, as %)
+  const hp = ([dx, dy], s) => {
+    const n = [-dy, dx], P = (a, b) => `${(20 + dx * a + n[0] * b) * 2.5}% ${(20 + dy * a + n[1] * b) * 2.5}%`;
+    return `polygon(${P(s, 90)}, ${P(s, -90)}, ${P(s - 160, -90)}, ${P(s - 160, 90)})`;
+  };
+  const unit = (x, y) => { const l = Math.hypot(x, y) || 1; return [x / l, y / l]; };
+
+  // One transfer. From T the source disc is cut away by a stepped line sweeping from the side facing the
+  // arc; each 4px cell it uncovers shows in the disc's own colour, breaks off and flies a curved arc
+  // (bulge = sideways push of the arc's control point, px). The target disc is rebuilt by a line sweeping in
+  // from the arriving side, each cell vanishing into it as the line reaches it. Returns the disc sweeps.
+  function spawnHop(from, to, T, bulge, side) {
+    const sy = CY[from], ty = CY[to];
+    // the cut faces the target row, leaning toward the bulge (clip: W→C breaks on its right, C→I bottom)
+    const lean = side ?? Math.max(-30, Math.min(30, bulge * 0.5)), dir = Math.sign(ty - sy);
+    // with a side cut (W→C) the target fills from its lower left first, the stream landing on it from the right
+    const d = unit(lean, 55 * dir), d2 = side != null ? unit(-55, 30) : unit(lean, -55 * dir);
+    const src = [], dst = [];
+    for (let gy = -18; gy <= 18; gy += 4) for (let gx = -18; gx <= 18; gx += 4) {
+      const r = Math.hypot(gx, gy);
+      if (r > 19.5 || r < 6.5) continue;
+      const cut = SWEEP * (26 - (gx * d[0] + gy * d[1])) / 52;
+      src.push({ gx, gy, cut, dep: cut + 0.004 + rnd() * 0.05 });
+      dst.push({ gx, gy, line: LS + LAND * (26 - (gx * d2[0] + gy * d2[1])) / 52 });
+    }
+    src.sort((a, b) => a.dep - b.dep); dst.sort((a, b) => a.line - b.line);
+    src.forEach((c, i) => {
+      const t = dst[i], arr = t.line - 0.02;
+      const x0 = CX + c.gx, y0 = sy + c.gy, x1 = CX + t.gx, y1 = ty + t.gy;
+      const mx = (x0 + x1) / 2 + bulge * (0.5 + rnd() * 0.9) + (rnd() - .5) * 100, my = (y0 + y1) / 2 + (rnd() - .5) * 80;
+      const O = s => s / END;
+      const kf = [{ offset: 0, transform: pos(x0, y0, 4), opacity: 0 },
+                  { offset: O(c.cut), transform: pos(x0, y0, 4), opacity: 0 },
+                  { offset: O(c.cut + 0.001), transform: pos(x0, y0, 4), opacity: 1 },
+                  { offset: O(c.dep), transform: pos(x0, y0, 4), opacity: 1 }];
+      for (let k = 1; k < 8; k++) {
+        const [x, y] = arc(x0, y0, x1, y1, mx, my, ease(k / 8));
+        kf.push({ offset: O(c.dep + (arr - c.dep) * k / 8), transform: pos(Math.round(x / 2) * 2, Math.round(y / 2) * 2, 4), opacity: 0.85 });
+      }
+      kf.push({ offset: O(arr), transform: pos(x1, y1, 4), opacity: 1 },
+              { offset: O(t.line + 0.02), transform: pos(x1, y1, 4), opacity: 1 },
+              { offset: O(t.line + 0.021), transform: pos(x1, y1, 4), opacity: 0 },
+              { offset: 1, transform: pos(x1, y1, 4), opacity: 0 });
+      const home = mix((c.gx + c.gy + 40) / 80);
+      add(4, rnd() < 0.6 ? home : PALE[Math.floor(rnd() * PALE.length)], kf, T, END);
+    });
+    for (let i = 0; i < 70; i++) { // loose paler pixels that scatter wide of the stream and trail it in
+      const a = rnd() * Math.PI * 2, r = 6 + rnd() * 14, s = rnd() < .6 ? 4 : 6;
+      const x0 = CX + Math.cos(a) * r, y0 = sy + Math.sin(a) * r, x1 = CX + Math.cos(a) * r * .8, y1 = ty - Math.sin(a) * r * .8;
+      const mx = (x0 + x1) / 2 + bulge * (0.6 + rnd() * 1.1) + (rnd() - .5) * 110, my = (y0 + y1) / 2 + (rnd() - .5) * 90;
+      const dep = 0.02 + rnd() * 0.15, dur = 0.26 + rnd() * 0.16, kf = [];
+      for (let k = 0; k <= 8; k++) {
+        const [x, y] = arc(x0, y0, x1, y1, mx, my, ease(k / 8));
+        kf.push({ transform: pos(Math.round(x / 2) * 2, Math.round(y / 2) * 2, s), opacity: k === 0 || k === 8 ? 0 : 0.8 });
+      }
+      add(s, PALE[Math.floor(rnd() * PALE.length)], kf, T + dep, dur);
+    }
+    return { out: [T, T + SWEEP, hp(d, 26), hp(d, -26)], in: [T + LS, T + LS + LAND, hp([-d2[0], -d2[1]], -26), hp([-d2[0], -d2[1]], 26)] };
+  }
+  const FULL = hp([0, 1], 60), NONE = hp([0, 1], -60);
+  // clip-path timeline of one disc from [t0, t1, from, to] sweeps, stepped like the pixel grid
+  function sweepTrack(el, init, ev) {
+    const kf = [{ offset: 0, clipPath: init }];
+    let cur = init;
+    for (const [t0, t1, a, b] of ev.sort((x, y) => x[0] - y[0])) {
+      kf.push({ offset: (t0 - 0.002) / D, clipPath: cur }, { offset: t0 / D, clipPath: a, easing: 'steps(9, end)' }, { offset: t1 / D, clipPath: b });
+      cur = b;
+    }
+    kf.push({ offset: 1, clipPath: cur });
+    el.animate(kf, { duration: D * 1000, fill: 'both' });
+  }
+
+  // keyframes from a list of [time, value, fade] changes over the whole clip
+  function track(el, prop, init, changes, extra) {
+    const kf = [{ offset: 0, [prop]: init }];
+    let cur = init, last = 0;
+    for (const [t, v, f] of changes.sort((a, b) => a[0] - b[0])) {
+      const a = Math.max(last, t / D), b = Math.max(a, Math.min(1, (t + f) / D));
+      kf.push({ offset: a, [prop]: cur });
+      kf.push({ offset: b, [prop]: v });
+      cur = v; last = b;
+    }
+    kf.push({ offset: 1, [prop]: cur });
+    el.animate(kf, { duration: D * 1000, fill: 'both', ...extra });
+  }
+
+  const demo = new URLSearchParams(location.search).has('demo');
+  if (demo) {
+    stage.classList.add('demo');
+    rows[0].classList.remove('sel');
+    // transfer starts read from the 10 fps sheets: the frame where the source disc first breaks, less ~0.03s
+    // [start, from, to, bulge px (+ = right), cut side]; W→C breaks on the disc's right and swings out over the text
+    const hops = [[0.92, 0, 1, 180, 120], [2.2, 1, 2, -200], [3.68, 2, 0, -120], [4.87, 0, 1, 180, 120],
+                  [6.22, 1, 2, -200], [7.24, 2, 0, 70], [8.33, 0, 2, -120], [9.85, 2, 0, -110]];
+    const sweeps = [[], [], []], sel = [[0, 0]];
+    for (const [T, a, b, bulge, side] of hops) {
+      const s = spawnHop(a, b, T, bulge, side);
+      sweeps[a].push(s.out); sweeps[b].push(s.in);
+      sel.push([T + 0.25, b]);
+    }
+    discs.forEach((d, i) => { d.style.opacity = 1; sweepTrack(d, i === 0 ? FULL : NONE, sweeps[i]); });
+    // hovered row over time (-1 = none)
+    const hov = [[0, -1], [0.55, 1], [2.0, 2], [3.42, 0], [4.55, 1], [5.6, 2], [7.0, 0],
+                 [7.8, 1], [8.05, 2], [9.15, 1], [9.42, 0], [10.42, -1]];
+    rows.forEach((r, i) => {
+      track(r.querySelector('.pill'), 'opacity', 0, hov.slice(1).map(([t, h]) => [t, h === i ? 1 : 0, 0.2]));
+      const act = t => (hov.filter(h => h[0] <= t).pop()[1] === i) || (sel.filter(s => s[0] <= t).pop()[1] === i);
+      const ts = [...hov.map(h => h[0]), ...sel.map(s => s[0])].sort((a, b) => a - b).slice(1);
+      track(r.querySelector('.title'), 'color', i === 0 ? '#0d0c0c' : '#464646',
+            ts.map(t => [t, act(t + 1e-4) ? '#0d0c0c' : '#464646', 0.15]));
+    });
+    // cursor: top-left of its 36x42 box
+    const path = [[0, 1112, 640], [0.3, 1112, 640], [0.58, 846, 561], [1.95, 846, 561], [2.12, 893, 662],
+                  [3.3, 893, 662], [3.5, 893, 467], [4.45, 893, 467], [4.68, 868, 560], [5.42, 868, 560],
+                  [5.65, 892, 662], [6.75, 892, 662], [7.0, 852, 438], [7.72, 852, 438], [7.92, 862, 555],
+                  [8.08, 880, 662], [9.0, 880, 662], [9.18, 872, 560], [9.32, 872, 560], [9.48, 875, 455],
+                  [10.32, 875, 455], [10.6, 1112, 640], [D, 1112, 640]];
+    const cur = document.getElementById('cursor');
+    cur.animate(path.map(([t, x, y]) => ({ offset: t / D, transform: `translate(${U(x)}, ${U(y)})`, easing: 'ease-in-out' })),
+                { duration: D * 1000, fill: 'both' });
+    const handOn = hov.slice(1).map(([t, h]) => [t - 0.05, h >= 0 ? 1 : 0, 0.01]);
+    track(document.getElementById('hand'), 'opacity', 0, handOn.map(a => [...a]));
+    track(document.getElementById('arrow'), 'opacity', 1, handOn.map(([t, v, f]) => [t, 1 - v, f]));
+    track(document.getElementById('hand'), 'transform', 'scale(1)', hops.flatMap(([T]) => [[T - 0.1, 'scale(0.88)', 0.06], [T, 'scale(1)', 0.08]]),
+          { composite: 'add' });
+    return;
+  }
+
+  // interactive: click a row to cast the selection over to it
+  let current = 0, busy = false;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  rows.forEach((r, i) => r.addEventListener('click', () => {
+    if (i === current || busy) return;
+    const from = current; current = i;
+    rows[from].classList.remove('sel'); r.classList.add('sel');
+    if (reduce) { discs[from].classList.remove('on'); discs[i].classList.add('on'); return; }
+    busy = true;
+    while (fx.firstChild) fx.firstChild.remove();
+    const s = (from === 0 && i === 1) ? spawnHop(from, i, 0, 180, 120)
+      : spawnHop(from, i, 0, (from === 2 && i === 0 && Math.random() < .3) ? 70 : -110);
+    const cut = (el, [t0, t1, a, b]) => el.animate([{ clipPath: a, easing: 'steps(9, end)' }, { clipPath: b }],
+      { duration: (t1 - t0) * 1000, delay: t0 * 1000, fill: 'both' });
+    discs[from].style.opacity = discs[i].style.opacity = 1;
+    cut(discs[from], s.out).finished.then(a => { a.cancel(); discs[from].style.opacity = ''; discs[from].classList.remove('on'); });
+    cut(discs[i], s.in).finished.then(a => { discs[i].classList.add('on'); a.cancel(); busy = false; });
+  }));
+})();
+</script>
+</body>
+</html>

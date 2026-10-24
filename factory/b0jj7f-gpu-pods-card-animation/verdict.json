@@ -1,0 +1,1388 @@
+{
+ "slug": "b0jj7f-gpu-pods-card-animation",
+ "at": "2026-10-23T20:13:15.325Z",
+ "runs": 19,
+ "html": "factory/b0jj7f-gpu-pods-card-animation/index.html",
+ "pixel": {
+  "score": 95,
+  "stills": 95,
+  "motion": 95,
+  "moments": 10
+ },
+ "animations": 22,
+ "rank": 94,
+ "allPass": false,
+ "elements": [
+  {
+   "name": "Title",
+   "box": [
+    321,
+    610,
+    121,
+    28
+   ],
+   "deltaE": 1.9,
+   "delta": 18,
+   "shift": null,
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Deploy Pod button",
+   "box": [
+    321,
+    720,
+    127,
+    46
+   ],
+   "deltaE": 1,
+   "delta": 14,
+   "shift": [
+    0,
+    2
+   ],
+   "afterShift": 12,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Body copy",
+   "box": [
+    321,
+    654,
+    337,
+    47
+   ],
+   "deltaE": 0.3,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "Card",
+   "box": [
+    293,
+    286,
+    494,
+    509
+   ],
+   "deltaE": 0,
+   "delta": 5,
+   "shift": null,
+   "afterShift": 5,
+   "read": "matches"
+  },
+  {
+   "name": "Backdrop",
+   "box": [
+    0,
+    0,
+    1080,
+    1080
+   ],
+   "deltaE": 0,
+   "delta": 2,
+   "shift": null,
+   "afterShift": 2,
+   "read": "matches"
+  },
+  {
+   "name": "Grid hairlines",
+   "box": [
+    0,
+    234,
+    1080,
+    614
+   ],
+   "deltaE": 0,
+   "delta": 2,
+   "shift": null,
+   "afterShift": 2,
+   "read": "matches"
+  },
+  {
+   "name": "Illustration panel",
+   "box": [
+    302,
+    295,
+    476,
+    291
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "GPU board",
+   "box": [
+    370,
+    382,
+    237,
+    100
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "Left fan",
+   "box": [
+    398,
+    393,
+    78,
+    78
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "Right fan",
+   "box": [
+    501,
+    393,
+    78,
+    78
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "Board screws",
+   "box": [
+    376,
+    387,
+    226,
+    89
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "Heatsink fins top",
+   "box": [
+    390,
+    362,
+    200,
+    20
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "Heatsink fins bottom",
+   "box": [
+    388,
+    482,
+    200,
+    16
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "GPU drop shadow",
+   "box": [
+    390,
+    470,
+    265,
+    60
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "Cable",
+   "box": [
+    607,
+    421,
+    62,
+    20
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "Port plate",
+   "box": [
+    645,
+    399,
+    65,
+    66
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "the render changes where the clip changes",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "0.25s",
+    "clip": 1.3,
+    "render": 0.9,
+    "read": "both move"
+   },
+   {
+    "from": "0.25s",
+    "to": "0.3s",
+    "clip": 0.7,
+    "render": 0.2,
+    "read": "both move"
+   },
+   {
+    "from": "0.3s",
+    "to": "0.5s",
+    "clip": 1.1,
+    "render": 1.2,
+    "read": "both move"
+   },
+   {
+    "from": "0.5s",
+    "to": "1s",
+    "clip": 1.6,
+    "render": 1.2,
+    "read": "both move"
+   },
+   {
+    "from": "1s",
+    "to": "2.5s",
+    "clip": 0.2,
+    "render": 0.2,
+    "read": "both still"
+   },
+   {
+    "from": "2.5s",
+    "to": "kf1",
+    "clip": 0.4,
+    "render": 0.1,
+    "read": "both move"
+   },
+   {
+    "from": "kf1",
+    "to": "4.4s",
+    "clip": 0.4,
+    "render": 0.1,
+    "read": "both move"
+   },
+   {
+    "from": "4.4s",
+    "to": "7s",
+    "clip": 0.4,
+    "render": 0.2,
+    "read": "both move"
+   },
+   {
+    "from": "7s",
+    "to": "7.5s",
+    "clip": 0.4,
+    "render": 0.1,
+    "read": "both move"
+   }
+  ],
+  "trajectories": [
+   {
+    "element": "#dfdfdf",
+    "box": [
+     373,
+     383,
+     224,
+     98
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 0.25,
+      "dx": -2,
+      "dy": -6,
+      "delta": 15
+     },
+     {
+      "at": 0.3,
+      "dx": -2,
+      "dy": -6,
+      "delta": 21
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 2.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 13
+     },
+     {
+      "at": 3.9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 4.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 13
+     },
+     {
+      "at": 7,
+      "dx": 0,
+      "dy": 0,
+      "delta": 13
+     },
+     {
+      "at": 7.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   },
+   {
+    "element": "#dcdcdc",
+    "box": [
+     393,
+     483,
+     195,
+     15
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 0.25,
+      "dx": -12,
+      "dy": -4,
+      "delta": 13
+     },
+     {
+      "at": 0.3,
+      "dx": -12,
+      "dy": -2,
+      "delta": 10
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": 4,
+      "delta": 10
+     },
+     {
+      "at": 1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 8
+     },
+     {
+      "at": 2.5,
+      "dx": -12,
+      "dy": 2,
+      "delta": 10
+     },
+     {
+      "at": 3.9,
+      "dx": 2,
+      "dy": 2,
+      "delta": 9
+     },
+     {
+      "at": 4.4,
+      "dx": -10,
+      "dy": 2,
+      "delta": 10
+     },
+     {
+      "at": 7,
+      "dx": 2,
+      "dy": 2,
+      "delta": 10
+     },
+     {
+      "at": 7.5,
+      "dx": 2,
+      "dy": 2,
+      "delta": 10
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   },
+   {
+    "element": "#c3c3c3",
+    "box": [
+     403,
+     421,
+     203,
+     60
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 0.25,
+      "dx": -2,
+      "dy": -6,
+      "delta": 20
+     },
+     {
+      "at": 0.3,
+      "dx": -2,
+      "dy": -4,
+      "delta": 26
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": -2,
+      "delta": 11
+     },
+     {
+      "at": 1,
+      "dx": 0,
+      "dy": -2,
+      "delta": 12
+     },
+     {
+      "at": 2.5,
+      "dx": 0,
+      "dy": -2,
+      "delta": 13
+     },
+     {
+      "at": 3.9,
+      "dx": 0,
+      "dy": -2,
+      "delta": 12
+     },
+     {
+      "at": 4.4,
+      "dx": 0,
+      "dy": -2,
+      "delta": 13
+     },
+     {
+      "at": 7,
+      "dx": 0,
+      "dy": -2,
+      "delta": 13
+     },
+     {
+      "at": 7.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 13
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   },
+   {
+    "element": "#8d8d8d",
+    "box": [
+     396,
+     438,
+     248,
+     69
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 0.25,
+      "dx": 0,
+      "dy": -6,
+      "delta": 17
+     },
+     {
+      "at": 0.3,
+      "dx": 2,
+      "dy": -4,
+      "delta": 22
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": -2,
+      "delta": 14
+     },
+     {
+      "at": 1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 14
+     },
+     {
+      "at": 2.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 14
+     },
+     {
+      "at": 3.9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 14
+     },
+     {
+      "at": 4.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 14
+     },
+     {
+      "at": 7,
+      "dx": 0,
+      "dy": 0,
+      "delta": 15
+     },
+     {
+      "at": 7.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 14
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   }
+  ]
+ },
+ "scale": {
+  "ok": true,
+  "changed": 1.5,
+  "read": "scales: the half-size render matches the full one (difference 1.5)"
+ },
+ "rubric": {
+  "file": "factory/b0jj7f-gpu-pods-card-animation/rubric.json",
+  "total": 42,
+  "counted": 42,
+  "pass": 39,
+  "fail": 2,
+  "unsure": 1,
+  "unjudged": 0,
+  "passRate": 93,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "style",
+    "element": "Backdrop",
+    "check": "Background is a flat light grey (~#eeeeee), not white",
+    "box": [
+     0,
+     0,
+     1080,
+     1080
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both backdrops are the same flat light grey, not white. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "present",
+    "element": "Grid hairlines",
+    "check": "Faint thin grid lines cross the backdrop at about x=234, x=847, y=234 and y=847",
+    "box": [
+     0,
+     0,
+     1080,
+     1080
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "unsure",
+    "seen": "The crop is inside the card, so no grid hairlines are visible in either panel. [votes: unsure/unsure/unsure]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "position",
+    "element": "Card",
+    "check": "Card spans about x 293–787, y 286–795 and is centred in the frame",
+    "box": [
+     293,
+     286,
+     494,
+     509
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Card edges and title position line up with the clip within a few px. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "style",
+    "element": "Card",
+    "check": "Card is off-white (~#f9f9f9), slightly lighter than the backdrop, with rounded corners ~16px",
+    "box": [
+     293,
+     286,
+     494,
+     509
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both cards are the same off-white with similar rounded corners. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "style",
+    "element": "Card",
+    "check": "Card edge reads as a soft white rim and diffuse shadow, with no dark or hard outline stroke",
+    "box": [
+     283,
+     276,
+     514,
+     529
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both edges are a soft white rim with a diffuse shadow and no dark outline. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "position",
+    "element": "Illustration panel",
+    "check": "Inset panel occupies the card's top about x 302–778, y 295–586, ending ~24px above the title",
+    "box": [
+     302,
+     295,
+     476,
+     291
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The inset panel and the GPU sit in the same place, with the panel bottom at the same height above the title. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "style",
+    "element": "Illustration panel",
+    "check": "Panel boundary is a barely visible 1px light-grey line with rounded corners, same fill as the card",
+    "box": [
+     302,
+     295,
+     476,
+     291
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both panels have a faint 1px light-grey border with rounded corners and the card's fill. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "position",
+    "element": "GPU board",
+    "check": "GPU board rectangle spans about x 370–607, y 382–482 inside the panel",
+    "box": [
+     360,
+     372,
+     257,
+     120
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The board spans the same area, about 233px wide, in both. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "style",
+    "element": "GPU board",
+    "check": "Board is a silver metal face with a light-to-darker grey gradient, a thin grey edge and ~10px radius, not a flat single colour",
+    "box": [
+     370,
+     382,
+     237,
+     100
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both boards are silver with a light-to-dark gradient, a thin grey edge and rounded corners. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "present",
+    "element": "Fans",
+    "check": "Exactly two round fans sit side by side on the board, centres near (437,431) and (540,431)",
+    "box": [
+     390,
+     385,
+     200,
+     95
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both show exactly two round fans side by side at matching positions. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "style",
+    "element": "Left fan",
+    "check": "Each fan has a light grey outer ring, dark grey curved blades and a light hub with a ring around a pale centre",
+    "box": [
+     398,
+     393,
+     78,
+     78
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "Rebuild blades are thin, sharp-edged and dark-lined, where the clip's are fatter, softer and grainier; the rebuild's hub ring is also paler and its outer ring is a flatter line. [votes: yes/no/no]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "imagery",
+    "element": "Left fan",
+    "check": "Fan shows about 7 curved, swept blades (6–8), not straight spokes",
+    "box": [
+     398,
+     393,
+     78,
+     78
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "The rebuild has about 9 thin, tightly swept blades; the clip has about 7 broader, fatter blades. [votes: no/yes/no]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "present",
+    "element": "Board screws",
+    "check": "Four dark round screws sit at the board's four corners",
+    "box": [
+     370,
+     382,
+     237,
+     100
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Four dark round screws sit at the board corners in both. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "present",
+    "element": "Heatsink fins top",
+    "check": "A white fin strip shows above the board's top edge, topped by a row of tiny tick dots near y≈364",
+    "box": [
+     385,
+     355,
+     210,
+     30
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both show a white fin strip above the board with a row of tick dots on top. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "present",
+    "element": "Heatsink fins bottom",
+    "check": "A white segmented fin strip shows under the board's bottom edge, about y 482–498",
+    "box": [
+     385,
+     478,
+     210,
+     25
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both show a white segmented fin strip under the board; the rebuild's corners are squarer. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "style",
+    "element": "GPU drop shadow",
+    "check": "A soft blurred grey shadow falls to the lower right of the GPU, extending to about x 650, y 530; no hard-edged shadow shape",
+    "box": [
+     380,
+     460,
+     290,
+     80
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Soft blurred grey shadow falls to the lower right and reaches a similar extent. [votes: no/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "style",
+    "element": "Cable",
+    "check": "A short black cable with a collar joins the board's right edge to the port plate at about y 431",
+    "box": [
+     600,
+     415,
+     75,
+     30
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both show a short black cable with a collar at the board's right edge. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "position",
+    "element": "Port plate",
+    "check": "Port plate is a small rounded white square at about x 645–710, y 399–465",
+    "box": [
+     640,
+     394,
+     75,
+     76
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both are small rounded white squares at the same position and size. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "style",
+    "element": "Port plate",
+    "check": "Port plate has four small grey screws at its corners and a dark round socket in its centre",
+    "box": [
+     645,
+     399,
+     65,
+     66
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both have four grey corner screws and a dark round socket in the centre. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "text",
+    "element": "Title",
+    "check": "Title reads exactly \"GPU Pods\"",
+    "box": [
+     321,
+     610,
+     121,
+     28
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both read \"GPU Pods\" in a matching bold weight and size. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "style",
+    "element": "Title",
+    "check": "Title is near-black, semibold, about 26px, left edge at x≈321",
+    "box": [
+     321,
+     610,
+     121,
+     28
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Title is near-black semibold at the same size and left edge as the clip. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "text",
+    "element": "Body copy",
+    "check": "Body reads \"Deploy a dedicated GPU environment for AI\" on line 1 and \"development, testing, and model fine-tuning.\" on line 2",
+    "box": [
+     321,
+     654,
+     337,
+     47
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both lines read identically to the clip, with the same line break. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "style",
+    "element": "Body copy",
+    "check": "Body text is mid-grey (~#8c8c8c), clearly lighter than the title, about 17px with ~27px line spacing",
+    "box": [
+     321,
+     654,
+     337,
+     47
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Body is the same mid-grey, size and two-line spacing as the clip. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "position",
+    "element": "Deploy Pod button",
+    "check": "Button spans about x 321–448, y 720–766, left-aligned with the title",
+    "box": [
+     316,
+     715,
+     137,
+     56
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Button has the same width and height and sits left-aligned under the text, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "style",
+    "element": "Deploy Pod button",
+    "check": "Button fill is near-black with a subtle top-lighter vertical gradient and ~8px corner radius",
+    "box": [
+     321,
+     720,
+     127,
+     46
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Fill is near-black with a faint top-lighter gradient and a similar rounded corner radius. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "text",
+    "element": "Deploy Pod button",
+    "check": "Button label reads \"Deploy Pod\" in white, ~16px, centred",
+    "box": [
+     321,
+     720,
+     127,
+     46
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White 'Deploy Pod' label is centred at about the same size as the clip's. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "style",
+    "element": "Deploy Pod button",
+    "check": "Button casts a soft grey drop shadow below it",
+    "box": [
+     315,
+     740,
+     140,
+     40
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Soft grey shadow below the button matches the clip's. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "present",
+    "element": "Illustration panel",
+    "check": "At the very start the illustration panel is empty: no GPU, cable or plate visible",
+    "box": [
+     302,
+     295,
+     476,
+     291
+    ],
+    "at": 0,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Illustration panel is empty at 0s in both. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "present",
+    "element": "Card",
+    "check": "Card, title, body and button are already fully visible at 0s (no entrance for the text block)",
+    "box": [
+     293,
+     286,
+     494,
+     509
+    ],
+    "at": 0,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Card, title, body and button are fully visible at 0s in both, at the same positions. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "motion",
+    "element": "GPU board",
+    "check": "Between 0s and 0.3s a pale, low-contrast flat GPU (board, two light-grey fans, tick rows above and below) appears in the panel",
+    "box": [
+     330,
+     350,
+     320,
+     170
+    ],
+    "at": 0,
+    "then": 0.3,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both go from an empty panel at 0s to a pale flat GPU with two fans and tick rows at 0.3s. The rebuild's fans are lighter and its cable stub is already visible. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "style",
+    "element": "GPU board",
+    "check": "At 0.25s the GPU is still flat and pale: no screws, no shadow, light grey fans",
+    "box": [
+     340,
+     340,
+     400,
+     200
+    ],
+    "at": 0.25,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 0.25s the rebuild GPU is flat and pale with light-grey fans and no screws or shadow, which fits the criterion; the clip's fans are slightly darker. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "motion",
+    "element": "Port plate",
+    "check": "The port plate and a grey cable are absent at 0.25s and present (still pale) by 0.5s, plate at about x 650–715",
+    "box": [
+     600,
+     390,
+     130,
+     90
+    ],
+    "at": 0.25,
+    "then": 0.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "No plate at 0.25s and plate plus grey cable at 0.5s, with the plate at the same x as the clip. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "motion",
+    "element": "GPU board",
+    "check": "Between 0.5s and 1.0s the GPU gains depth: fans darken, corner screws, heatsink fins and the lower-right drop shadow appear",
+    "box": [
+     360,
+     355,
+     300,
+     180
+    ],
+    "at": 0.5,
+    "then": 1,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Between 0.5s and 1s the rebuild's fans darken and it gains corner screws, fins and a lower-right shadow, as the clip does. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "motion",
+    "element": "Cable",
+    "check": "Between 0.5s and 1.0s the cable turns from mid grey to black and the port plate settles ~5px left (to x≈645)",
+    "box": [
+     600,
+     390,
+     130,
+     90
+    ],
+    "at": 0.5,
+    "then": 1,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Cable goes from grey to black and the plate shifts about 12px at 2.75x (about 4-5px) left, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "motion",
+    "element": "GPU board",
+    "check": "The GPU illustration has finished building by ~1.0s and looks the same at 1.0s and 2.5s apart from the fans",
+    "box": [
+     360,
+     355,
+     360,
+     180
+    ],
+    "at": 1,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Board, screws, fins, cable and plate look the same at 1s and 2.5s apart from fan blades. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "motion",
+    "element": "Left fan",
+    "check": "The left fan's blades rotate between 3.9s and 4.4s while the fan ring stays in place",
+    "box": [
+     398,
+     393,
+     78,
+     78
+    ],
+    "at": 3.9,
+    "then": 4.4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Left fan blades sit at different angles between 3.9s and 4.4s while the ring stays fixed. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "motion",
+    "element": "Right fan",
+    "check": "The right fan's blades rotate between 3.9s and 4.4s",
+    "box": [
+     501,
+     393,
+     78,
+     78
+    ],
+    "at": 3.9,
+    "then": 4.4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Right fan blade angles differ between 3.9s and 4.4s. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "motion",
+    "element": "Fans",
+    "check": "Fans are still spinning near the end of the clip (blade positions differ between 7.0s and 7.5s)",
+    "box": [
+     390,
+     385,
+     200,
+     95
+    ],
+    "at": 7,
+    "then": 7.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Blade positions differ between 7s and 7.5s in both fans. [votes: yes/yes/no]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "motion",
+    "element": "GPU board",
+    "check": "After 1s the board, screws, cable and plate do not move; only fan blades change between 3.9s and 4.4s",
+    "box": [
+     360,
+     355,
+     360,
+     180
+    ],
+    "at": 3.9,
+    "then": 4.4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Only blade angles change between 3.9s and 4.4s; board, screws, cable and plate stay fixed. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c39.png"
+   },
+   {
+    "id": "c40",
+    "axis": "motion",
+    "element": "Card",
+    "check": "Card, title, body copy and button do not move or change across the whole clip",
+    "box": [
+     293,
+     286,
+     494,
+     509
+    ],
+    "at": 1,
+    "then": 7.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Card, title, body and button are identical between 1s and 7.5s. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c40.png"
+   },
+   {
+    "id": "c41",
+    "axis": "imagery",
+    "element": "GPU board",
+    "check": "GPU is drawn as a clean skeuomorphic vector (gradients, soft shadow), not a photo, and matches the clip's silhouette: board, 2 fans, fins, cable, plate",
+    "box": [
+     360,
+     355,
+     360,
+     180
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild is a clean vector board with two fans, top and bottom fins, cable and screw plate, soft shadow, matching the clip's silhouette; fan blades are a bit sharper and the cable shorter, but the same parts are all present. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c41.png"
+   },
+   {
+    "id": "c42",
+    "axis": "style",
+    "element": "GPU board",
+    "check": "Whole illustration stays greyscale: no colour hues anywhere",
+    "box": [
+     302,
+     295,
+     476,
+     291
+    ],
+    "at": 3.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild is entirely grey, white and black with no colour hues, the same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/b0jj7f-gpu-pods-card-animation/judge/c42.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 0.668,
+  "calls": 9,
+  "images": "factory/b0jj7f-gpu-pods-card-animation/judge",
+  "votes": 3,
+  "spread": [
+   39,
+   40,
+   38
+  ]
+ }
+}

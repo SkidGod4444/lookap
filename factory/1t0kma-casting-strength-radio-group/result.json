@@ -1,0 +1,155 @@
+{
+ "slug": "1t0kma-casting-strength-radio-group",
+ "title": "Casting Strength Radio Group",
+ "author": "George",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "pass",
+ "ended": "all criteria pass",
+ "bestRound": 3,
+ "rank": 97,
+ "allPass": true,
+ "rubric": {
+  "pass": 39,
+  "fail": 0,
+  "unsure": 1,
+  "of": 40,
+  "failed": []
+ },
+ "score": 93,
+ "motion": "the render changes where the clip changes",
+ "imagery": [
+  {
+   "name": "selected radio donut",
+   "class": "css",
+   "box": [
+    449,
+    437,
+    40,
+    40
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "pixel particle stream",
+   "class": "css",
+   "box": [
+    365,
+    560,
+    190,
+    140
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "card shadow",
+   "class": "css",
+   "box": [
+    405,
+    740,
+    617,
+    60
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "cursor",
+   "class": "structured",
+   "box": [
+    853,
+    560,
+    36,
+    42
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 28.4,
+   "turns": 68,
+   "costUsd": 4.2730996,
+   "tokens": {
+    "written": 51611,
+    "read": 3741064
+   },
+   "judgeUsd": 0.853,
+   "ended": "budget_exhausted",
+   "score": 93,
+   "rank": 83,
+   "allPass": false,
+   "rubric": {
+    "pass": 31,
+    "fail": 7,
+    "unsure": 2,
+    "of": 40
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 23.1,
+   "turns": 64,
+   "costUsd": 2.4435632000000003,
+   "tokens": {
+    "written": 34835,
+    "read": 4111532
+   },
+   "judgeUsd": 0.68,
+   "ended": "completed",
+   "score": 93,
+   "rank": 90,
+   "allPass": false,
+   "rubric": {
+    "pass": 35,
+    "fail": 4,
+    "unsure": 1,
+    "of": 40
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 16,
+   "turns": 55,
+   "costUsd": 2.7199492000000007,
+   "tokens": {
+    "written": 22264,
+    "read": 2097219
+   },
+   "judgeUsd": 0.646,
+   "ended": "completed",
+   "score": 93,
+   "rank": 97,
+   "allPass": true,
+   "rubric": {
+    "pass": 39,
+    "fail": 0,
+    "unsure": 1,
+    "of": 40
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  }
+ ],
+ "minutes": 67.5,
+ "tokens": {
+  "written": 108710,
+  "read": 9949815
+ },
+ "cost": {
+  "codingUsd": 9.44,
+  "judgeUsd": 2.18,
+  "rubricUsd": 0.778,
+  "totalUsd": 12.39
+ },
+ "notes": true,
+ "at": "2026-10-23T19:37:31.352Z"
+}

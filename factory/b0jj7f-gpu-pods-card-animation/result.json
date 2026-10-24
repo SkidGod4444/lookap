@@ -1,0 +1,169 @@
+{
+ "slug": "b0jj7f-gpu-pods-card-animation",
+ "title": "GPU Pods Card Animation",
+ "author": "Rah Man Designer",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "review",
+ "ended": "round limit",
+ "bestRound": 3,
+ "rank": 94,
+ "allPass": false,
+ "rubric": {
+  "pass": 39,
+  "fail": 2,
+  "unsure": 1,
+  "of": 42,
+  "failed": [
+   "c11 Each fan has a light grey outer ring, dark grey curved blades and a light hub with a ring around a pale centre",
+   "c12 Fan shows about 7 curved, swept blades (6–8), not straight spokes"
+  ]
+ },
+ "score": 95,
+ "motion": "the render changes where the clip changes",
+ "imagery": [
+  {
+   "name": "GPU illustration",
+   "class": "css",
+   "box": [
+    370,
+    362,
+    340,
+    170
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "Fan",
+   "class": "css",
+   "box": [
+    398,
+    393,
+    78,
+    78
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "Port plate",
+   "class": "css",
+   "box": [
+    645,
+    399,
+    65,
+    66
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 12.6,
+   "turns": 62,
+   "costUsd": 1.9026532000000003,
+   "tokens": {
+    "written": 36141,
+    "read": 2236704
+   },
+   "judgeUsd": 0.928,
+   "ended": "completed",
+   "score": 94,
+   "rank": 74,
+   "allPass": false,
+   "rubric": {
+    "pass": 33,
+    "fail": 7,
+    "unsure": 2,
+    "of": 42
+   },
+   "motion": "the render stays still in 1 of 9 spans where the clip moves",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 15.9,
+   "turns": 80,
+   "costUsd": 3.9599526000000003,
+   "tokens": {
+    "written": 41598,
+    "read": 4633934
+   },
+   "judgeUsd": 0.649,
+   "ended": "completed",
+   "score": 95,
+   "rank": 91,
+   "allPass": false,
+   "rubric": {
+    "pass": 37,
+    "fail": 3,
+    "unsure": 2,
+    "of": 42
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 7.2,
+   "turns": 31,
+   "costUsd": 1.043563,
+   "tokens": {
+    "written": 14373,
+    "read": 1090233
+   },
+   "judgeUsd": 0.668,
+   "ended": "completed",
+   "score": 95,
+   "rank": 94,
+   "allPass": false,
+   "rubric": {
+    "pass": 39,
+    "fail": 2,
+    "unsure": 1,
+    "of": 42
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 4,
+   "minutes": 76,
+   "turns": 40,
+   "costUsd": 1.2638642,
+   "tokens": {
+    "written": 17906,
+    "read": 1935328
+   },
+   "judgeUsd": 0.669,
+   "ended": "completed",
+   "score": 95,
+   "rank": 92,
+   "allPass": false,
+   "rubric": {
+    "pass": 38,
+    "fail": 1,
+    "unsure": 3,
+    "of": 42
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": false
+  }
+ ],
+ "minutes": 111.7,
+ "tokens": {
+  "written": 110018,
+  "read": 9896199
+ },
+ "cost": {
+  "codingUsd": 8.17,
+  "judgeUsd": 2.91,
+  "rubricUsd": 0.633,
+  "totalUsd": 11.72
+ },
+ "notes": true,
+ "at": "2026-10-23T21:29:13.909Z"
+}
