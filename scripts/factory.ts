@@ -178,7 +178,10 @@ for (const e of queue) {
   if (!existsSync(rubricPath)) { const r = bun("scripts/rubric.ts", [e.slug, "--model", RUBRIC_MODEL]); process.stdout.write(r.stdout); if (r.status !== 0) console.error(r.stderr.slice(-800)); }
   const rubric: Rubric | null = existsSync(rubricPath) ? (JSON.parse(readFileSync(rubricPath, "utf8")) as Rubric) : null;
   const licensed = isLicensed(dir);
-  const base = prompt(e, dir, rubric, licensed);
+  /* FOCUS.md, written by hand for a rerun, is what the person asked this pass to get right; it rides on every round */
+  const focusPath = path.join(dir, "FOCUS.md");
+  const focus = existsSync(focusPath) ? `\n\nThis pass has a focus, from the person who asked for the rerun. It outranks polish elsewhere:\n${readFileSync(focusPath, "utf8").trim()}` : "";
+  const base = prompt(e, dir, rubric, licensed) + focus;
   writeFileSync(path.join(dir, "PROMPT.md"), base);
   if (DRY) { console.log(`${e.slug}: brief, rubric and prompt written`); continue; }
 
