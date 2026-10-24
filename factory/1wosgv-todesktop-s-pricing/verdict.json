@@ -1,0 +1,1300 @@
+{
+ "slug": "1wosgv-todesktop-s-pricing",
+ "at": "2026-10-23T19:16:53.218Z",
+ "runs": 22,
+ "html": "factory/1wosgv-todesktop-s-pricing/index.html",
+ "pixel": {
+  "score": 90,
+  "stills": 90,
+  "motion": 90,
+  "moments": 4
+ },
+ "animations": 0,
+ "rank": 98,
+ "allPass": true,
+ "elements": [
+  {
+   "name": "Contact sales button",
+   "box": [
+    226,
+    902,
+    220,
+    37
+   ],
+   "deltaE": 1,
+   "delta": 22,
+   "shift": null,
+   "afterShift": 22,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "prices",
+   "box": [
+    226,
+    318,
+    710,
+    38
+   ],
+   "deltaE": 0.1,
+   "delta": 18,
+   "shift": [
+    2,
+    0
+   ],
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Sign up button",
+   "box": [
+    794,
+    27,
+    61,
+    27
+   ],
+   "deltaE": 3.8,
+   "delta": 17,
+   "shift": [
+    0,
+    2
+   ],
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "ToDesktop logo",
+   "box": [
+    388,
+    28,
+    24,
+    24
+   ],
+   "deltaE": 4.8,
+   "delta": 14,
+   "shift": null,
+   "afterShift": 14,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Performance Start free trial button",
+   "box": [
+    514,
+    373,
+    210,
+    36
+   ],
+   "deltaE": 2,
+   "delta": 14,
+   "shift": null,
+   "afterShift": 14,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Enterprise card",
+   "box": [
+    198,
+    810,
+    276,
+    158
+   ],
+   "deltaE": 0,
+   "delta": 13,
+   "shift": null,
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "nav links",
+   "box": [
+    442,
+    32,
+    225,
+    16
+   ],
+   "deltaE": 1.9,
+   "delta": 12,
+   "shift": [
+    -2,
+    0
+   ],
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "Log in button",
+   "box": [
+    735,
+    27,
+    52,
+    27
+   ],
+   "deltaE": 1.2,
+   "delta": 12,
+   "shift": null,
+   "afterShift": 12,
+   "read": "matches"
+  },
+  {
+   "name": "Essential Start free trial button",
+   "box": [
+    226,
+    373,
+    210,
+    36
+   ],
+   "deltaE": 0.1,
+   "delta": 11,
+   "shift": null,
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "nav bar pill",
+   "box": [
+    373,
+    18,
+    492,
+    45
+   ],
+   "deltaE": 1.3,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "Essential header card",
+   "box": [
+    199,
+    175,
+    264,
+    117
+   ],
+   "deltaE": 0.2,
+   "delta": 10,
+   "shift": [
+    4,
+    0
+   ],
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "Performance header card",
+   "box": [
+    489,
+    179,
+    261,
+    113
+   ],
+   "deltaE": 0,
+   "delta": 10,
+   "shift": [
+    2,
+    0
+   ],
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "Scale Start free trial button",
+   "box": [
+    802,
+    373,
+    210,
+    36
+   ],
+   "deltaE": 0.1,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "section labels",
+   "box": [
+    226,
+    457,
+    744,
+    10
+   ],
+   "deltaE": 0.4,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "Enterprise feature list",
+   "box": [
+    520,
+    838,
+    412,
+    102
+   ],
+   "deltaE": 0,
+   "delta": 10,
+   "shift": [
+    2,
+    0
+   ],
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "Scale header card",
+   "box": [
+    775,
+    175,
+    264,
+    117
+   ],
+   "deltaE": 0.1,
+   "delta": 9,
+   "shift": [
+    4,
+    0
+   ],
+   "afterShift": 7,
+   "read": "matches"
+  },
+  {
+   "name": "Enterprise band",
+   "box": [
+    197,
+    808,
+    845,
+    162
+   ],
+   "deltaE": 0,
+   "delta": 9,
+   "shift": [
+    2,
+    0
+   ],
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "billing toggle",
+   "box": [
+    497,
+    96,
+    242,
+    32
+   ],
+   "deltaE": 0,
+   "delta": 8,
+   "shift": null,
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "Essential column",
+   "box": [
+    197,
+    173,
+    268,
+    616
+   ],
+   "deltaE": 0,
+   "delta": 8,
+   "shift": null,
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "Performance column",
+   "box": [
+    485,
+    173,
+    268,
+    616
+   ],
+   "deltaE": 0,
+   "delta": 8,
+   "shift": null,
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "Scale column",
+   "box": [
+    773,
+    173,
+    268,
+    616
+   ],
+   "deltaE": 0,
+   "delta": 8,
+   "shift": [
+    2,
+    0
+   ],
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "feature lists",
+   "box": [
+    226,
+    487,
+    790,
+    272
+   ],
+   "deltaE": 0.2,
+   "delta": 8,
+   "shift": null,
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "feature glyphs",
+   "box": [
+    226,
+    487,
+    600,
+    272
+   ],
+   "deltaE": 0.3,
+   "delta": 8,
+   "shift": null,
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "dotted dividers",
+   "box": [
+    226,
+    433,
+    786,
+    2
+   ],
+   "deltaE": 0.4,
+   "delta": 7,
+   "shift": [
+    2,
+    -2
+   ],
+   "afterShift": 3,
+   "read": "matches"
+  },
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1244,
+    996
+   ],
+   "deltaE": 0.2,
+   "delta": 6,
+   "shift": null,
+   "afterShift": 6,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "the clip does not move between the scored moments",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "0.5s",
+    "clip": 0,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "0.5s",
+    "to": "kf1",
+    "clip": 0,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "kf1",
+    "to": "2.5s",
+    "clip": 0,
+    "render": 0,
+    "read": "both still"
+   }
+  ],
+  "trajectories": []
+ },
+ "scale": {
+  "ok": true,
+  "changed": 7.1,
+  "read": "scales: the half-size render matches the full one (difference 7.1)"
+ },
+ "rubric": {
+  "file": "factory/1wosgv-todesktop-s-pricing/rubric.json",
+  "total": 47,
+  "counted": 47,
+  "pass": 47,
+  "fail": 0,
+  "unsure": 0,
+  "unjudged": 0,
+  "passRate": 100,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "style",
+    "element": "page background",
+    "check": "Page background is a flat near-white (#fafafa) with no gradient or texture",
+    "box": [
+     0,
+     0,
+     1244,
+     996
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both pages show the same flat near-white background with no gradient or texture. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "motion",
+    "element": "whole page",
+    "check": "Nothing moves: the frame at 0.5s and the frame at 2.5s are identical (no fade, slide, hover or number change)",
+    "box": [
+     0,
+     0,
+     1244,
+     996
+    ],
+    "at": 0.5,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The rebuild is identical between 0.5s and 2.5s, matching the static clip. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "position",
+    "element": "nav bar pill",
+    "check": "A white, fully rounded nav pill is horizontally centred, spanning about x 373-865 and y 18-63",
+    "box": [
+     373,
+     18,
+     492,
+     45
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The white rounded nav pill spans about x128-497 in both, centred and at the same height. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "style",
+    "element": "nav bar pill",
+    "check": "Nav pill has a soft diffuse drop shadow, not a hard border line",
+    "box": [
+     365,
+     10,
+     510,
+     62
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The rebuild's pill has a soft diffuse shadow and no hard border, like the clip's, though its shadow is a little lighter. [votes: no/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "imagery",
+    "element": "ToDesktop logo",
+    "check": "Logo at the left of the nav is a blue rounded square (~24px) with a white rounded glyph inside, an original drawing with the same silhouette",
+    "box": [
+     386,
+     26,
+     28,
+     28
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both are a blue rounded square with a white rounded glyph of the same silhouette. [votes: yes/no/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "text",
+    "element": "nav links",
+    "check": "Nav links read 'Products' (followed by a small down chevron), 'Docs', 'Changelog', 'Blog' in dark ~14px type",
+    "box": [
+     440,
+     30,
+     230,
+     20
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Products with chevron, Docs, Changelog and Blog appear in the same dark ~14px type at the same positions. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "style",
+    "element": "Log in button",
+    "check": "'Log in' is a white pill with a thin light-grey outline and dark text",
+    "box": [
+     733,
+     25,
+     56,
+     31
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A white pill with a thin grey outline and dark 'Log in' text in both. [votes: yes/no/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "style",
+    "element": "Sign up button",
+    "check": "'Sign up' is a solid bright blue (#0147fe) pill with white text at the right end of the nav",
+    "box": [
+     792,
+     25,
+     65,
+     31
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A solid bright blue pill with white 'Sign up' text at the right end of the nav in both. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "position",
+    "element": "billing toggle",
+    "check": "Segmented toggle is centred under the nav at about x 497-739, y 96-128",
+    "box": [
+     497,
+     96,
+     242,
+     32
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The toggle sits centred at about x222-402 within the design box in both, at y≈99. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "style",
+    "element": "billing toggle",
+    "check": "'Yearly' is the selected segment: a white raised rectangle with a faint shadow on a light grey track, while 'Monthly' sits in grey text on the track",
+    "box": [
+     497,
+     96,
+     242,
+     32
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Yearly is a white raised segment on a light grey track with grey Monthly text in both. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "text",
+    "element": "billing toggle",
+    "check": "Right segment reads 'Yearly' followed by a small pale-blue rounded chip with blue text '-20%'",
+    "box": [
+     630,
+     100,
+     105,
+     24
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'Yearly' is followed by a pale-blue rounded chip with blue '-20%' in both. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "position",
+    "element": "plan columns",
+    "check": "Three plan columns of equal width (~268px) start at y≈173 and end at y≈789, at x≈197, 485 and 773",
+    "box": [
+     197,
+     173,
+     845,
+     616
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Three equal columns run from y≈145 to y≈607 at the same x positions as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "style",
+    "element": "Performance column",
+    "check": "Middle Performance column is a near-black (#121212) rounded panel, while Essential and Scale are light grey",
+    "box": [
+     485,
+     173,
+     268,
+     616
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The middle column is a near-black rounded panel and the other two are light grey, in both. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "style",
+    "element": "Performance header card",
+    "check": "Performance header area is a slightly lighter charcoal (#252525) rounded card inset ~4px inside the black panel, ending at y≈292",
+    "box": [
+     485,
+     173,
+     268,
+     125
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A lighter charcoal rounded card sits inset in the black panel and ends at the same height in both. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "style",
+    "element": "Essential header card",
+    "check": "Essential header is a white rounded card (radius ~16px) sitting on the grey column, with a soft shadow below it and no dark border",
+    "box": [
+     197,
+     173,
+     268,
+     125
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A white rounded card with a soft shadow and no dark border sits on the grey column in both. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "text",
+    "element": "plan titles",
+    "check": "Header titles read 'Essential', 'Performance', 'Scale' at ~19px medium weight; Performance in white, the others near-black",
+    "box": [
+     226,
+     200,
+     600,
+     24
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Essential, Performance and Scale titles have the same size and weight, with Performance in white and the others near-black. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "text",
+    "element": "Essential description",
+    "check": "Essential description reads 'For simple desktop apps and' / 'solo developers.' on two grey lines",
+    "box": [
+     226,
+     233,
+     160,
+     30
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Two grey lines, 'For simple desktop apps and' / 'solo developers.', at the same size in both. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "text",
+    "element": "Performance description",
+    "check": "Performance description reads 'For sophisticated desktop apps' / 'and small teams.' in light grey",
+    "box": [
+     514,
+     233,
+     170,
+     30
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The light grey two-line text matches the clip's in size and wording. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "text",
+    "element": "Scale description",
+    "check": "Scale description reads 'For advanced features and' / 'dedicated support.'",
+    "box": [
+     802,
+     233,
+     150,
+     30
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'For advanced features and' / 'dedicated support.' matches the clip's in wording and size. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "text",
+    "element": "prices",
+    "check": "Prices read '$100', '$300', '$1,200', each followed by a small grey '/ Month'",
+    "box": [
+     226,
+     318,
+     740,
+     40
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "$100, $300 and $1,200 each have a small grey '/ Month', with the same size and position as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "style",
+    "element": "prices",
+    "check": "Price numerals are ~38px tall in a geometric grotesk with slashed zeros (a diagonal stroke inside each 0)",
+    "box": [
+     226,
+     315,
+     120,
+     45
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild '$100' has slashed zeros and the same size and weight as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "style",
+    "element": "Performance price",
+    "check": "'$300' is white on the black panel",
+    "box": [
+     514,
+     315,
+     180,
+     45
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'$300' is near-white on black, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "position",
+    "element": "Start free trial buttons",
+    "check": "Each column has a 'Start free trial' pill about 210x36 at y≈373-409, inset ~29px from the column's left edge",
+    "box": [
+     197,
+     370,
+     845,
+     42
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Pills sit at the same y (~308 in the crop) and about 2px from the clip's inset, in all three columns. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "style",
+    "element": "Performance Start free trial button",
+    "check": "Performance button is a fully rounded bright blue (#0147fe) pill with white centred text",
+    "box": [
+     514,
+     373,
+     210,
+     36
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Bright blue fully rounded pill with white centred text, though the clip has a slight soft inner glow. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "style",
+    "element": "Essential Start free trial button",
+    "check": "Essential and Scale buttons are white fully rounded pills with near-black centred text and a faint shadow",
+    "box": [
+     226,
+     373,
+     210,
+     36
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White rounded pill with dark centred text and a faint shadow, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "style",
+    "element": "dotted dividers",
+    "check": "A faint dotted (not solid) horizontal line runs under each button at y≈433, the button's width",
+    "box": [
+     226,
+     428,
+     210,
+     10
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Faint dotted line at the same height and width as the clip's. [votes: yes/unsure/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "text",
+    "element": "Essential label",
+    "check": "Essential section label reads 'ESSENTIAL PLAN INCLUDES:' in small uppercase monospace grey",
+    "box": [
+     226,
+     457,
+     130,
+     12
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Reads 'ESSENTIAL PLAN INCLUDES:' in grey uppercase monospace at about the same width as the clip; the rebuild is a little lighter. [votes: yes/yes/no]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "text",
+    "element": "Performance label",
+    "check": "Performance label reads 'EVERYTHING IN ESSENTIAL, PLUS:' in monospace",
+    "box": [
+     514,
+     457,
+     160,
+     12
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Reads 'EVERYTHING IN ESSENTIAL, PLUS:' in monospace, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "text",
+    "element": "Scale label",
+    "check": "Scale label reads 'EVERYTHING IN PERFORMANCE, PLUS:' in monospace",
+    "box": [
+     802,
+     457,
+     170,
+     12
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Reads 'EVERYTHING IN PERFORMANCE, PLUS:' in monospace, matching the clip. [votes: yes/yes/no]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "present",
+    "element": "Essential feature list",
+    "check": "Essential lists exactly 10 feature rows, from y≈495 to y≈751",
+    "box": [
+     226,
+     485,
+     215,
+     275
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "10 rows, ending at 'Download links on your domain', same spacing as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "present",
+    "element": "Performance feature list",
+    "check": "Performance lists exactly 10 feature rows, from y≈495 to y≈751",
+    "box": [
+     514,
+     485,
+     200,
+     275
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "10 rows ending at 'Build analytics', aligned with the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "present",
+    "element": "Scale feature list",
+    "check": "Scale lists exactly 6 feature rows, ending at 'Integration assistance' (y≈637), with empty grey panel below",
+    "box": [
+     802,
+     485,
+     190,
+     275
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "6 rows ending at 'Integration assistance', with an empty panel below, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "position",
+    "element": "feature rows",
+    "check": "Feature rows are evenly spaced about 28.5px apart",
+    "box": [
+     226,
+     485,
+     215,
+     275
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rows are at the same y positions as the clip's, about 28.5px apart. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "text",
+    "element": "Essential first rows",
+    "check": "Essential rows begin '30 day build retention', '10,000 downloads/month', 'Unlimited App Updates', where '30 day', '10,000' and 'Unlimited' are bold and darker",
+    "box": [
+     226,
+     487,
+     160,
+     75
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same three rows, with bold dark '30 day', '10,000' and 'Unlimited'. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "text",
+    "element": "Essential later rows",
+    "check": "Essential continues 'Windows, Mac & Linux build servers', 'Code signing', 'Native app installers', 'Native module rebuilding', 'Automated Electron code analysis', 'CDN-backed downloads/updates', 'Download links on your domain'",
+    "box": [
+     226,
+     572,
+     215,
+     190
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "All seven rows are present with the same text and order as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "text",
+    "element": "Performance rows",
+    "check": "Performance rows read '60 day build retention', '30,000 downloads/month', 'Staging and dev apps', 'Auto-update smoke testing', 'Windows & Mac web installers', 'Private Slack-channel support', 'MSI and PKG installers', 'Microsoft and Mac app store', 'Download analytics', 'Build analytics'",
+    "box": [
+     514,
+     487,
+     190,
+     272
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "All 10 Performance rows have the same text and order as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "style",
+    "element": "Performance rows",
+    "check": "On the black panel, bold values ('60 day', '30,000') are white and the rest of the row text is mid grey",
+    "box": [
+     514,
+     487,
+     160,
+     45
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'60 day' and '30,000' are white bold and the rest is mid grey, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "text",
+    "element": "Scale rows",
+    "check": "Scale rows read '360 day build retention', '100,000 downloads/month', 'Support for staggered rollouts', 'Account manager', 'Priority support & onboarding', 'Integration assistance'",
+    "box": [
+     802,
+     487,
+     180,
+     160
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "All 6 Scale rows have the same text as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "imagery",
+    "element": "feature glyphs",
+    "check": "Each feature row starts with a small (~14px) grey monochrome glyph (an original approximation), such as a clock-on-box for retention and a cloud-download for downloads",
+    "box": [
+     226,
+     487,
+     20,
+     272
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Each row has a ~14px grey monochrome glyph that approximates the clip's (clock box, cloud download and so on). [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c39.png"
+   },
+   {
+    "id": "c40",
+    "axis": "style",
+    "element": "feature glyphs",
+    "check": "Glyphs are flat grey (not coloured), dimmer than the row text",
+    "box": [
+     226,
+     487,
+     20,
+     100
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The glyphs are flat grey and dimmer than the text, like the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c40.png"
+   },
+   {
+    "id": "c41",
+    "axis": "position",
+    "element": "Enterprise band",
+    "check": "A full-width light grey rounded Enterprise band spans x≈197-1041, y≈808-969, below the three columns",
+    "box": [
+     197,
+     808,
+     845,
+     162
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild's light grey rounded Enterprise band sits below the three columns at the same position and width as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c41.png"
+   },
+   {
+    "id": "c42",
+    "axis": "style",
+    "element": "Enterprise card",
+    "check": "Left part of the band is a white rounded card (~276px wide) with a soft shadow",
+    "box": [
+     197,
+     808,
+     280,
+     162
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White rounded card at left with soft shadow, about the same width as the clip's (~276px). [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c42.png"
+   },
+   {
+    "id": "c43",
+    "axis": "text",
+    "element": "Enterprise title",
+    "check": "Card reads 'Enterprise' (~19px) above grey 'Customised to suit your needs.'",
+    "box": [
+     226,
+     836,
+     170,
+     48
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'Enterprise' title and grey 'Customised to suit your needs.' match the clip in size, weight and colour. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c43.png"
+   },
+   {
+    "id": "c44",
+    "axis": "style",
+    "element": "Contact sales button",
+    "check": "'Contact sales' is a dark charcoal (#363636-#444) fully rounded pill about 220x37 with white text and a subtle top-to-bottom sheen",
+    "box": [
+     226,
+     902,
+     220,
+     37
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows a dark charcoal full-pill 'Contact sales' with white text and a faint vertical sheen, about the same size as the clip's. [votes: no/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c44.png"
+   },
+   {
+    "id": "c45",
+    "axis": "text",
+    "element": "Enterprise left list",
+    "check": "First Enterprise column (x≈520) reads 'Unlimited build retention', 'Custom billing', 'Optional self-host infra', 'Team training & Code reviews', with 'Unlimited' bold",
+    "box": [
+     518,
+     836,
+     180,
+     105
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "All four labels match the clip's text, with 'Unlimited' bold; only the icons differ slightly. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c45.png"
+   },
+   {
+    "id": "c46",
+    "axis": "text",
+    "element": "Enterprise right list",
+    "check": "Second Enterprise column (x≈768) reads 'Unlimited downloads/month', 'Custom features', 'Guaranteed response SLA'",
+    "box": [
+     766,
+     836,
+     170,
+     78
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Three labels match the clip's text, with 'Unlimited' bold, at the same column position. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c46.png"
+   },
+   {
+    "id": "c47",
+    "axis": "position",
+    "element": "layout",
+    "check": "The plan columns and the Enterprise band share the same left (x≈197) and right (x≈1041) edges and are centred in the 1244px frame",
+    "box": [
+     190,
+     170,
+     860,
+     800
+    ],
+    "at": 1.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Columns and band share the same left and right edges and are centred in the frame, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1wosgv-todesktop-s-pricing/judge/c47.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 0.577,
+  "calls": 9,
+  "images": "factory/1wosgv-todesktop-s-pricing/judge",
+  "votes": 3,
+  "spread": [
+   45,
+   44,
+   45
+  ]
+ }
+}

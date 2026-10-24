@@ -1,0 +1,194 @@
+{
+ "slug": "1wosgv-todesktop-s-pricing",
+ "title": "ToDesktop's Pricing",
+ "measured": false,
+ "recipe": null,
+ "what": "ToDesktop is your end-to-end Electron partner — offering effortless deployment, robust security and seamless auto-updates.",
+ "frame": {
+  "ratio": 1.25,
+  "shape": "landscape",
+  "media": "clip"
+ },
+ "tone": "light surface, dark type",
+ "traits": [
+  "Pricing",
+  "Page"
+ ],
+ "section": "Pricing",
+ "steps": [
+  "Call see_design for the frame and read the layout from it: regions, alignment, type scale, corner radii, spacing rhythm.",
+  "The media is a clip: name each state you can see (rest, hover, press, open) and the order they occur in.",
+  "Build with the project's own stack and tokens; match proportion and hierarchy before matching pixels.",
+  "A draft measurement is attached: its phases, moves and palette are measured from the clip; its boxes are a first pass to check against the keyframes."
+ ],
+ "draft": {
+  "frame": {
+   "w": 1244,
+   "h": 996
+  },
+  "duration": 3,
+  "phases": [],
+  "keyframes": [
+   {
+    "name": "kf1",
+    "at": 1.5,
+    "hold": [
+     0,
+     2.95
+    ]
+   }
+  ],
+  "moments": [
+   {
+    "at": 1.5,
+    "name": "kf1"
+   }
+  ],
+  "anchors": [],
+  "background": "#fafafa",
+  "palette": [
+   {
+    "hex": "#fafafa",
+    "share": 82.3
+   },
+   {
+    "hex": "#121212",
+    "share": 9.1
+   },
+   {
+    "hex": "#252525",
+    "share": 2.4
+   },
+   {
+    "hex": "#eaeaea",
+    "share": 1.3
+   },
+   {
+    "hex": "#363636",
+    "share": 0.8
+   },
+   {
+    "hex": "#0b0b0b",
+    "share": 0.5
+   },
+   {
+    "hex": "#d9d9d9",
+    "share": 0.4
+   },
+   {
+    "hex": "#0147fe",
+    "share": 0.4
+   }
+  ],
+  "elements": [
+   {
+    "box": [
+     485,
+     173,
+     268,
+     616
+    ],
+    "fill": "#121212"
+   },
+   {
+    "box": [
+     489,
+     179,
+     261,
+     113
+    ],
+    "fill": "#252525"
+   },
+   {
+    "box": [
+     232,
+     912,
+     209,
+     26
+    ],
+    "fill": "#363636"
+   },
+   {
+    "box": [
+     521,
+     386,
+     198,
+     22
+    ],
+    "fill": "#0046fe"
+   },
+   {
+    "box": [
+     514,
+     376,
+     210,
+     28
+    ],
+    "fill": "#0f52fd"
+   },
+   {
+    "box": [
+     227,
+     905,
+     219,
+     29
+    ],
+    "fill": "#444444"
+   },
+   {
+    "box": [
+     487,
+     175,
+     264,
+     109
+    ],
+    "fill": "#2d2d2d"
+   }
+  ],
+  "motion": [],
+  "coverage": "flat regions found; boxes and fills are usable as given",
+  "confidence": {
+   "phases": "measured: sampled every 50 ms",
+   "motion": "measured: moves of the first keyframe's big parts, edges read at full resolution; dTop and dLeft are the distance in source px",
+   "palette": "measured for areas; small things do not reach it",
+   "anchors": "measured where the content stands clear of its background (reliable true): the box of everything that is not background at a phase's start and end, and which edges moved; where the content fills the frame the field says so and look_at what=track is the way to read an edge",
+   "elements": "draft: flat regions at the first keyframe; nested parts split or merge, text and thin parts are missing; check each box against the keyframe (see_design with at) before trusting it"
+  }
+ },
+ "motion": {
+  "status": "draft measured: draft.phases say when things move, draft.anchors which edges, draft.motion how far; the presets below are only for states the clip never shows",
+  "enter": "fade up 12 px, 320 ms, cubic-bezier(0.2, 0.8, 0.2, 1)",
+  "hover": "colour or ring only, 150 ms",
+  "press": "scale 0.98, 120 ms",
+  "reducedMotion": "respect prefers-reduced-motion: no entrance, instant hover"
+ },
+ "text": null,
+ "notes": [
+  {
+   "slug": "motion-from-stills",
+   "title": "Giving motion to a still, honestly"
+  }
+ ],
+ "credit": {
+  "author": "ToDesktop",
+  "x": null,
+  "source": "https://www.todesktop.com/"
+ },
+ "method": [
+  "Fetch the clip; read size, fps and duration from the container.",
+  "Dump frames at 2 fps plus a contact sheet; pick the idle and active moments and dump those at full resolution.",
+  "Convert the chosen frames to raw RGB and measure: bounding boxes of every element, exact hex at flat regions, luminance profiles across edges for the lighting, a per-frame luma trace of the moving region for timing.",
+  "Build with one unit, --u, equal to one source pixel at the design size, and write every size as calc(N * var(--u)).",
+  "Light rounded objects with inset box-shadows on one overlay (rim, near glow, wide falloff); stacked linear gradients show a seam at the corner.",
+  "Render the build headless at --u: 1px, crop to the frame, put it beside the source frame, and look. Fix the three largest differences. Repeat."
+ ],
+ "build": null,
+ "oneShot": "No measured recipe, but a draft: build from draft.elements and draft.motion, look at each keyframe with see_design (at), then call check_rebuild with a screenshot; its regions are reliable, its element rows are as good as the draft boxes.",
+ "keyframeFiles": [
+  {
+   "name": "kf1",
+   "at": 1.5,
+   "file": "public/drafts/4vnmd1b/kf1.jpg"
+  }
+ ]
+}

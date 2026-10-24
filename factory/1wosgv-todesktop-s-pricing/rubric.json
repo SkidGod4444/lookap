@@ -1,0 +1,1047 @@
+{
+ "slug": "1wosgv-todesktop-s-pricing",
+ "frame": {
+  "w": 1244,
+  "h": 996
+ },
+ "at": "2026-10-23T17:27:20.044Z",
+ "model": "opus",
+ "costUsd": 0.533,
+ "summary": "A static ToDesktop pricing page on a #fafafa background, 1244x996. At the top, centred, is a white pill nav bar (about 373-865 x 18-63) with a soft shadow. It holds a blue rounded-square logo, the links \"Products ⌄ / Docs / Changelog / Blog\", a white outlined \"Log in\" pill and a solid blue (#0147fe) \"Sign up\" pill. Below it, centred, is a grey segmented toggle (497-739 x 96-128): \"Monthly\" sits unselected in grey, and \"Yearly\" is selected on a white raised segment with a pale-blue \"-20%\" chip. Three plan columns sit side by side, each about 268 px wide with ~20 px gaps, from y≈173 to 789. Essential (x 197-465) and Scale (x 773-1041) are light grey (#f3f3f3) panels, each topped by a white rounded header card with a soft shadow holding the title and a two-line grey description. Performance (x 485-753) is the featured column: a near-black (#121212) panel with a #252525 header card. Each column shows a large grotesk price with slashed zeros (\"$100\", \"$300\", \"$1,200\") followed by a small grey \"/ Month\". Under the price is a full-width pill button: white with dark text on the light cards, blue (#0147fe) with white text on Performance. Next comes a faint dotted divider and an uppercase monospace label, then a list of features, each with a small grey glyph and a bold lead value where relevant. The lists hold 10, 10 and 6 rows, spaced 28.5 px apart. At the bottom, a full-width grey Enterprise band (197-1041 x 808-969) holds a white left card (\"Enterprise\", \"Customised to suit your needs.\", a dark charcoal gradient pill \"Contact sales\") and two columns of features (4 + 3 rows). Corners are rounded throughout: the panels have about a 16-20 px radius, and the buttons and nav are fully rounded. Nothing moves: difference views at 0-0.5, 0.5-1, 1-1.5, 1.5-2, 2-2.5 and 2.5-2.95 s show no change beyond compression specks, so the rebuild should hold one still frame for the full 3 s.",
+ "elements": [
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1244,
+    996
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "flat #fafafa"
+  },
+  {
+   "name": "nav bar pill",
+   "box": [
+    373,
+    18,
+    492,
+    45
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "white, fully rounded, soft drop shadow"
+  },
+  {
+   "name": "ToDesktop logo",
+   "box": [
+    388,
+    28,
+    24,
+    24
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "blue rounded square with white 'b'-like glyph"
+  },
+  {
+   "name": "nav links",
+   "box": [
+    442,
+    32,
+    225,
+    16
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "Products (with chevron), Docs, Changelog, Blog; dark ~14px"
+  },
+  {
+   "name": "Log in button",
+   "box": [
+    735,
+    27,
+    52,
+    27
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "white pill with light grey hairline border"
+  },
+  {
+   "name": "Sign up button",
+   "box": [
+    794,
+    27,
+    61,
+    27
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "solid blue #0147fe pill, white text"
+  },
+  {
+   "name": "billing toggle",
+   "box": [
+    497,
+    96,
+    242,
+    32
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "light grey track; Yearly segment white and raised with -20% blue chip"
+  },
+  {
+   "name": "Essential column",
+   "box": [
+    197,
+    173,
+    268,
+    616
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "light grey panel #f3f3f3 rounded ~18px"
+  },
+  {
+   "name": "Essential header card",
+   "box": [
+    199,
+    175,
+    264,
+    117
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "white rounded card with soft shadow; 'Essential' + description"
+  },
+  {
+   "name": "Performance column",
+   "box": [
+    485,
+    173,
+    268,
+    616
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "near-black #121212 panel rounded ~18px"
+  },
+  {
+   "name": "Performance header card",
+   "box": [
+    489,
+    179,
+    261,
+    113
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "#252525 rounded card"
+  },
+  {
+   "name": "Scale column",
+   "box": [
+    773,
+    173,
+    268,
+    616
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "light grey panel like Essential"
+  },
+  {
+   "name": "Scale header card",
+   "box": [
+    775,
+    175,
+    264,
+    117
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "white card with soft shadow"
+  },
+  {
+   "name": "prices",
+   "box": [
+    226,
+    318,
+    710,
+    38
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "$100 / $300 / $1,200, ~38px grotesk with slashed zeros, plus small grey '/ Month'"
+  },
+  {
+   "name": "Essential Start free trial button",
+   "box": [
+    226,
+    373,
+    210,
+    36
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "white pill, dark text, faint shadow"
+  },
+  {
+   "name": "Performance Start free trial button",
+   "box": [
+    514,
+    373,
+    210,
+    36
+   ],
+   "kind": "control",
+   "class": "css",
+   "note": "blue #0147fe pill, slight vertical sheen, white text"
+  },
+  {
+   "name": "Scale Start free trial button",
+   "box": [
+    802,
+    373,
+    210,
+    36
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "white pill, dark text"
+  },
+  {
+   "name": "dotted dividers",
+   "box": [
+    226,
+    433,
+    786,
+    2
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "faint dotted line under each button"
+  },
+  {
+   "name": "section labels",
+   "box": [
+    226,
+    457,
+    744,
+    10
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "uppercase monospace grey labels"
+  },
+  {
+   "name": "feature lists",
+   "box": [
+    226,
+    487,
+    790,
+    272
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "10/10/6 rows, 28.5px pitch, grey glyph + text"
+  },
+  {
+   "name": "feature glyphs",
+   "box": [
+    226,
+    487,
+    600,
+    272
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "small grey ~14px monochrome icons, one per row"
+  },
+  {
+   "name": "Enterprise band",
+   "box": [
+    197,
+    808,
+    845,
+    162
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "light grey rounded band"
+  },
+  {
+   "name": "Enterprise card",
+   "box": [
+    198,
+    810,
+    276,
+    158
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "white card with soft shadow"
+  },
+  {
+   "name": "Contact sales button",
+   "box": [
+    226,
+    902,
+    220,
+    37
+   ],
+   "kind": "control",
+   "class": "css",
+   "note": "charcoal #363636-#444 pill with subtle gradient, white text"
+  },
+  {
+   "name": "Enterprise feature list",
+   "box": [
+    520,
+    838,
+    412,
+    102
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "two columns: 4 rows starting x=520 and 3 rows starting x=768"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "page background",
+   "axis": "style",
+   "check": "Page background is a flat near-white (#fafafa) with no gradient or texture",
+   "box": [
+    0,
+    0,
+    1244,
+    996
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "whole page",
+   "axis": "motion",
+   "check": "Nothing moves: the frame at 0.5s and the frame at 2.5s are identical (no fade, slide, hover or number change)",
+   "box": [
+    0,
+    0,
+    1244,
+    996
+   ],
+   "scope": "frame",
+   "at": 0.5,
+   "then": 2.5
+  },
+  {
+   "id": "c03",
+   "element": "nav bar pill",
+   "axis": "position",
+   "check": "A white, fully rounded nav pill is horizontally centred, spanning about x 373-865 and y 18-63",
+   "box": [
+    373,
+    18,
+    492,
+    45
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "nav bar pill",
+   "axis": "style",
+   "check": "Nav pill has a soft diffuse drop shadow, not a hard border line",
+   "box": [
+    365,
+    10,
+    510,
+    62
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "ToDesktop logo",
+   "axis": "imagery",
+   "check": "Logo at the left of the nav is a blue rounded square (~24px) with a white rounded glyph inside, an original drawing with the same silhouette",
+   "box": [
+    386,
+    26,
+    28,
+    28
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "nav links",
+   "axis": "text",
+   "check": "Nav links read 'Products' (followed by a small down chevron), 'Docs', 'Changelog', 'Blog' in dark ~14px type",
+   "box": [
+    440,
+    30,
+    230,
+    20
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "Log in button",
+   "axis": "style",
+   "check": "'Log in' is a white pill with a thin light-grey outline and dark text",
+   "box": [
+    733,
+    25,
+    56,
+    31
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "Sign up button",
+   "axis": "style",
+   "check": "'Sign up' is a solid bright blue (#0147fe) pill with white text at the right end of the nav",
+   "box": [
+    792,
+    25,
+    65,
+    31
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "billing toggle",
+   "axis": "position",
+   "check": "Segmented toggle is centred under the nav at about x 497-739, y 96-128",
+   "box": [
+    497,
+    96,
+    242,
+    32
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "billing toggle",
+   "axis": "style",
+   "check": "'Yearly' is the selected segment: a white raised rectangle with a faint shadow on a light grey track, while 'Monthly' sits in grey text on the track",
+   "box": [
+    497,
+    96,
+    242,
+    32
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "billing toggle",
+   "axis": "text",
+   "check": "Right segment reads 'Yearly' followed by a small pale-blue rounded chip with blue text '-20%'",
+   "box": [
+    630,
+    100,
+    105,
+    24
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "plan columns",
+   "axis": "position",
+   "check": "Three plan columns of equal width (~268px) start at y≈173 and end at y≈789, at x≈197, 485 and 773",
+   "box": [
+    197,
+    173,
+    845,
+    616
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "Performance column",
+   "axis": "style",
+   "check": "Middle Performance column is a near-black (#121212) rounded panel, while Essential and Scale are light grey",
+   "box": [
+    485,
+    173,
+    268,
+    616
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "Performance header card",
+   "axis": "style",
+   "check": "Performance header area is a slightly lighter charcoal (#252525) rounded card inset ~4px inside the black panel, ending at y≈292",
+   "box": [
+    485,
+    173,
+    268,
+    125
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "Essential header card",
+   "axis": "style",
+   "check": "Essential header is a white rounded card (radius ~16px) sitting on the grey column, with a soft shadow below it and no dark border",
+   "box": [
+    197,
+    173,
+    268,
+    125
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "plan titles",
+   "axis": "text",
+   "check": "Header titles read 'Essential', 'Performance', 'Scale' at ~19px medium weight; Performance in white, the others near-black",
+   "box": [
+    226,
+    200,
+    600,
+    24
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "Essential description",
+   "axis": "text",
+   "check": "Essential description reads 'For simple desktop apps and' / 'solo developers.' on two grey lines",
+   "box": [
+    226,
+    233,
+    160,
+    30
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "Performance description",
+   "axis": "text",
+   "check": "Performance description reads 'For sophisticated desktop apps' / 'and small teams.' in light grey",
+   "box": [
+    514,
+    233,
+    170,
+    30
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c19",
+   "element": "Scale description",
+   "axis": "text",
+   "check": "Scale description reads 'For advanced features and' / 'dedicated support.'",
+   "box": [
+    802,
+    233,
+    150,
+    30
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "prices",
+   "axis": "text",
+   "check": "Prices read '$100', '$300', '$1,200', each followed by a small grey '/ Month'",
+   "box": [
+    226,
+    318,
+    740,
+    40
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "prices",
+   "axis": "style",
+   "check": "Price numerals are ~38px tall in a geometric grotesk with slashed zeros (a diagonal stroke inside each 0)",
+   "box": [
+    226,
+    315,
+    120,
+    45
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "Performance price",
+   "axis": "style",
+   "check": "'$300' is white on the black panel",
+   "box": [
+    514,
+    315,
+    180,
+    45
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "Start free trial buttons",
+   "axis": "position",
+   "check": "Each column has a 'Start free trial' pill about 210x36 at y≈373-409, inset ~29px from the column's left edge",
+   "box": [
+    197,
+    370,
+    845,
+    42
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "Performance Start free trial button",
+   "axis": "style",
+   "check": "Performance button is a fully rounded bright blue (#0147fe) pill with white centred text",
+   "box": [
+    514,
+    373,
+    210,
+    36
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c25",
+   "element": "Essential Start free trial button",
+   "axis": "style",
+   "check": "Essential and Scale buttons are white fully rounded pills with near-black centred text and a faint shadow",
+   "box": [
+    226,
+    373,
+    210,
+    36
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c26",
+   "element": "dotted dividers",
+   "axis": "style",
+   "check": "A faint dotted (not solid) horizontal line runs under each button at y≈433, the button's width",
+   "box": [
+    226,
+    428,
+    210,
+    10
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c27",
+   "element": "Essential label",
+   "axis": "text",
+   "check": "Essential section label reads 'ESSENTIAL PLAN INCLUDES:' in small uppercase monospace grey",
+   "box": [
+    226,
+    457,
+    130,
+    12
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "Performance label",
+   "axis": "text",
+   "check": "Performance label reads 'EVERYTHING IN ESSENTIAL, PLUS:' in monospace",
+   "box": [
+    514,
+    457,
+    160,
+    12
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c29",
+   "element": "Scale label",
+   "axis": "text",
+   "check": "Scale label reads 'EVERYTHING IN PERFORMANCE, PLUS:' in monospace",
+   "box": [
+    802,
+    457,
+    170,
+    12
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c30",
+   "element": "Essential feature list",
+   "axis": "present",
+   "check": "Essential lists exactly 10 feature rows, from y≈495 to y≈751",
+   "box": [
+    226,
+    485,
+    215,
+    275
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c31",
+   "element": "Performance feature list",
+   "axis": "present",
+   "check": "Performance lists exactly 10 feature rows, from y≈495 to y≈751",
+   "box": [
+    514,
+    485,
+    200,
+    275
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c32",
+   "element": "Scale feature list",
+   "axis": "present",
+   "check": "Scale lists exactly 6 feature rows, ending at 'Integration assistance' (y≈637), with empty grey panel below",
+   "box": [
+    802,
+    485,
+    190,
+    275
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c33",
+   "element": "feature rows",
+   "axis": "position",
+   "check": "Feature rows are evenly spaced about 28.5px apart",
+   "box": [
+    226,
+    485,
+    215,
+    275
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c34",
+   "element": "Essential first rows",
+   "axis": "text",
+   "check": "Essential rows begin '30 day build retention', '10,000 downloads/month', 'Unlimited App Updates', where '30 day', '10,000' and 'Unlimited' are bold and darker",
+   "box": [
+    226,
+    487,
+    160,
+    75
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c35",
+   "element": "Essential later rows",
+   "axis": "text",
+   "check": "Essential continues 'Windows, Mac & Linux build servers', 'Code signing', 'Native app installers', 'Native module rebuilding', 'Automated Electron code analysis', 'CDN-backed downloads/updates', 'Download links on your domain'",
+   "box": [
+    226,
+    572,
+    215,
+    190
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c36",
+   "element": "Performance rows",
+   "axis": "text",
+   "check": "Performance rows read '60 day build retention', '30,000 downloads/month', 'Staging and dev apps', 'Auto-update smoke testing', 'Windows & Mac web installers', 'Private Slack-channel support', 'MSI and PKG installers', 'Microsoft and Mac app store', 'Download analytics', 'Build analytics'",
+   "box": [
+    514,
+    487,
+    190,
+    272
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c37",
+   "element": "Performance rows",
+   "axis": "style",
+   "check": "On the black panel, bold values ('60 day', '30,000') are white and the rest of the row text is mid grey",
+   "box": [
+    514,
+    487,
+    160,
+    45
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c38",
+   "element": "Scale rows",
+   "axis": "text",
+   "check": "Scale rows read '360 day build retention', '100,000 downloads/month', 'Support for staggered rollouts', 'Account manager', 'Priority support & onboarding', 'Integration assistance'",
+   "box": [
+    802,
+    487,
+    180,
+    160
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c39",
+   "element": "feature glyphs",
+   "axis": "imagery",
+   "check": "Each feature row starts with a small (~14px) grey monochrome glyph (an original approximation), such as a clock-on-box for retention and a cloud-download for downloads",
+   "box": [
+    226,
+    487,
+    20,
+    272
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c40",
+   "element": "feature glyphs",
+   "axis": "style",
+   "check": "Glyphs are flat grey (not coloured), dimmer than the row text",
+   "box": [
+    226,
+    487,
+    20,
+    100
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c41",
+   "element": "Enterprise band",
+   "axis": "position",
+   "check": "A full-width light grey rounded Enterprise band spans x≈197-1041, y≈808-969, below the three columns",
+   "box": [
+    197,
+    808,
+    845,
+    162
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c42",
+   "element": "Enterprise card",
+   "axis": "style",
+   "check": "Left part of the band is a white rounded card (~276px wide) with a soft shadow",
+   "box": [
+    197,
+    808,
+    280,
+    162
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c43",
+   "element": "Enterprise title",
+   "axis": "text",
+   "check": "Card reads 'Enterprise' (~19px) above grey 'Customised to suit your needs.'",
+   "box": [
+    226,
+    836,
+    170,
+    48
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c44",
+   "element": "Contact sales button",
+   "axis": "style",
+   "check": "'Contact sales' is a dark charcoal (#363636-#444) fully rounded pill about 220x37 with white text and a subtle top-to-bottom sheen",
+   "box": [
+    226,
+    902,
+    220,
+    37
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c45",
+   "element": "Enterprise left list",
+   "axis": "text",
+   "check": "First Enterprise column (x≈520) reads 'Unlimited build retention', 'Custom billing', 'Optional self-host infra', 'Team training & Code reviews', with 'Unlimited' bold",
+   "box": [
+    518,
+    836,
+    180,
+    105
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c46",
+   "element": "Enterprise right list",
+   "axis": "text",
+   "check": "Second Enterprise column (x≈768) reads 'Unlimited downloads/month', 'Custom features', 'Guaranteed response SLA'",
+   "box": [
+    766,
+    836,
+    170,
+    78
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": null
+  },
+  {
+   "id": "c47",
+   "element": "layout",
+   "axis": "position",
+   "check": "The plan columns and the Enterprise band share the same left (x≈197) and right (x≈1041) edges and are centred in the 1244px frame",
+   "box": [
+    190,
+    170,
+    860,
+    800
+   ],
+   "scope": "frame",
+   "at": 1.5,
+   "then": null
+  }
+ ],
+ "imagery": [
+  {
+   "name": "ToDesktop logo",
+   "box": [
+    388,
+    28,
+    24,
+    24
+   ],
+   "class": "structured",
+   "what": "blue rounded-square app mark with a white rounded 'b'-like glyph",
+   "at": 1.5
+  },
+  {
+   "name": "feature row glyphs",
+   "box": [
+    226,
+    487,
+    600,
+    454
+   ],
+   "class": "structured",
+   "what": "small grey monochrome UI icons (clock/box, cloud download, pencil, cloud, installer, slack hash, laptop, store, chart, user, lifebuoy, etc.) at the start of each feature row",
+   "at": 1.5
+  }
+ ],
+ "moves": []
+}

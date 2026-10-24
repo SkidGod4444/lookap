@@ -1,0 +1,160 @@
+{
+ "slug": "1wosgv-todesktop-s-pricing",
+ "title": "ToDesktop's Pricing",
+ "author": "ToDesktop",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "review",
+ "ended": "round limit",
+ "bestRound": 4,
+ "rank": 97,
+ "allPass": true,
+ "rubric": {
+  "pass": 47,
+  "fail": 0,
+  "unsure": 0,
+  "of": 47,
+  "failed": [],
+  "counted": 47
+ },
+ "score": 90,
+ "motion": "the clip does not move between the scored moments",
+ "imagery": [
+  {
+   "name": "ToDesktop logo",
+   "class": "structured",
+   "box": [
+    388,
+    28,
+    24,
+    24
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "feature row glyphs",
+   "class": "structured",
+   "box": [
+    226,
+    487,
+    600,
+    454
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 13.9,
+   "turns": 66,
+   "costUsd": 3.4680614000000003,
+   "tokens": {
+    "written": 46079,
+    "read": 2381895
+   },
+   "judgeUsd": 0.964,
+   "ended": "completed",
+   "score": 89,
+   "rank": 92,
+   "allPass": false,
+   "rubric": {
+    "pass": 43,
+    "fail": 4,
+    "unsure": 0,
+    "of": 47
+   },
+   "motion": "the clip does not move between the scored moments",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 8,
+   "turns": 39,
+   "costUsd": 1.0905142,
+   "tokens": {
+    "written": 13057,
+    "read": 1619227
+   },
+   "judgeUsd": 0.628,
+   "ended": "completed",
+   "score": 90,
+   "rank": 95,
+   "allPass": false,
+   "rubric": {
+    "pass": 45,
+    "fail": 2,
+    "unsure": 0,
+    "of": 47
+   },
+   "motion": "the clip does not move between the scored moments",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 6.9,
+   "turns": 26,
+   "costUsd": 0.7816374000000001,
+   "tokens": {
+    "written": 7572,
+    "read": 912675
+   },
+   "judgeUsd": 0.83,
+   "ended": "completed",
+   "score": 90,
+   "rank": 97,
+   "allPass": false,
+   "rubric": {
+    "pass": 46,
+    "fail": 1,
+    "unsure": 0,
+    "of": 47
+   },
+   "motion": "the clip does not move between the scored moments",
+   "kept": true
+  },
+  {
+   "round": 4,
+   "minutes": 10.4,
+   "turns": 34,
+   "costUsd": 1.9545101999999996,
+   "tokens": {
+    "written": 19202,
+    "read": 1459850
+   },
+   "judgeUsd": 1.224,
+   "ended": "completed",
+   "score": 90,
+   "rank": 97,
+   "allPass": false,
+   "rubric": {
+    "pass": 46,
+    "fail": 1,
+    "unsure": 0,
+    "of": 47
+   },
+   "motion": "the clip does not move between the scored moments",
+   "kept": true
+  }
+ ],
+ "minutes": 39.2,
+ "tokens": {
+  "written": 85910,
+  "read": 6373647
+ },
+ "cost": {
+  "codingUsd": 7.29,
+  "judgeUsd": 3.65,
+  "rubricUsd": 0.533,
+  "totalUsd": 11.47
+ },
+ "notes": true,
+ "at": "2026-10-23T18:06:31.113Z",
+ "handFix": {
+  "on": "2026-10-24",
+  "what": "the logo redrawn from the screenshot at 8x and checked at normal size",
+  "judge": "47/47 pass, 0 fail, 3 votes"
+ }
+}

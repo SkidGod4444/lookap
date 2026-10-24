@@ -1,0 +1,16 @@
+{
+ "model": "Claude Opus 5.5",
+ "modelId": "claude-opus-5-5",
+ "date": "2026-10-24",
+ "run": {
+  "model": "Claude Opus 5.5",
+  "turns": 165,
+  "outputTokens": 85910,
+  "totalTokens": 6459557,
+  "costUsd": 11.47,
+  "minutes": 39.2,
+  "score": 90
+ },
+ "hand": "fixed by hand after 4 judged rounds: the logo, redrawn from the screenshot at 8x; rubric 47 of 47 under a three-vote judge, checked against the screenshot by eye",
+ "hint": "A still page: three plans and the Enterprise row, with the dark Performance card in the middle."
+}
