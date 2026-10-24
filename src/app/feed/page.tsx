@@ -6,9 +6,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/feed" },
 };
 
-import { ENTRIES } from "@/lib/data";
+import { ENTRIES, bySlug } from "@/lib/data";
 import { FeedGrid } from "@/components/FeedGrid";
+import { shuffledSlugs } from "@/lib/shuffle";
 
-export default function Page() {
-  return <FeedGrid entries={ENTRIES} title="Interfaces worth rebuilding" blurb="Hand-picked clips and stills. Every entry is in the registry your agent can call." />;
+/* shuffled every few minutes; FeedGrid then puts the rebuilt entries first, keeping this order within each group */
+export default async function Page() {
+  const order = await shuffledSlugs("feed", ENTRIES.map((e) => e.slug));
+  const entries = order.map((s) => bySlug(s)!).filter(Boolean);
+  return <FeedGrid entries={entries} title="Interfaces worth rebuilding" blurb="Hand-picked clips and stills. Every entry is in the registry your agent can call." />;
 }

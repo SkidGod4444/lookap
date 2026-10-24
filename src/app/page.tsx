@@ -4,7 +4,8 @@ import { FeedGrid } from "@/components/FeedGrid";
 import { CardSleeve } from "@/components/demo/CardSleeve";
 import { TOOLS } from "@/lib/registry";
 import { RUBRICS } from "@/lib/rubrics";
-import { FACTORY, REBUILD_SLUGS } from "@/lib/rebuilds";
+import { FACTORY, REBUILD_SLUGS, hasLive } from "@/lib/rebuilds";
+import { shuffledSlugs } from "@/lib/shuffle";
 import { button } from "@/components/button";
 import { RebuildShowcase, type Showcase } from "@/components/RebuildShowcase";
 import { HeroCarousel } from "@/components/HeroCarousel";
@@ -20,9 +21,10 @@ function showcase(): Showcase[] {
   });
 }
 
-export default function Home() {
+export default async function Home() {
   /* the home feed is a taste: two dozen cards, clips first; the full catalog is one click away at /feed */
-  const feed = [...ENTRIES].sort((a, b) => Number(Boolean(b.video)) - Number(Boolean(a.video))).slice(0, 24);
+  /* the home section shows only the entries with a live rebuild, in a fresh order every few minutes */
+  const feed = (await shuffledSlugs("home", ENTRIES.filter(hasLive).map((e) => e.slug))).map((slug) => bySlug(slug)!).filter(Boolean);
   const items = showcase();
   return (
     <div className="flex flex-col gap-20 pb-10">
@@ -68,7 +70,7 @@ export default function Home() {
         <div className="flex items-end justify-between gap-4">
           <div>
             <h2 className="text-[20px] leading-[1.2] font-medium tracking-[-0.02em] text-foreground">Interfaces worth rebuilding</h2>
-            <p className="mt-1 text-[14px] text-subtle">Everything here is in the registry. The ones marked Rebuilt you can play with.</p>
+            <p className="mt-1 text-[14px] text-subtle">Every one is rebuilt: open it and flip the switch to play with the rebuild. The feed has the rest.</p>
           </div>
           <Link href="/feed" className="shrink-0 text-[13px] font-medium text-subtle transition-colors hover:text-foreground">Open the feed →</Link>
         </div>

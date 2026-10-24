@@ -3,6 +3,7 @@ import type { Entry } from "@/lib/data";
 import { Media } from "./Media";
 import { badge } from "./button";
 import { SaveButton } from "./SaveButton";
+import { avatarUrl, hasLocalAvatar } from "@/lib/avatar";
 
 export const hrefFor = (e: Entry) => (e.kind === "website" ? `/website/${e.slug}` : `/feed/${e.slug}`);
 
@@ -21,8 +22,14 @@ export function FeedCard({ entry, eager = false, live = false }: { entry: Entry;
       </Link>
       {/* the bookmark sits beside the link, not inside it: it is its own control. Hidden until hover on fine pointers, always there on touch and once saved. */}
       <SaveButton slug={entry.slug} className="absolute top-2 right-2 z-[2] opacity-0 transition-opacity duration-150 group-hover:opacity-100 focus-within:opacity-100 has-[[aria-pressed=true]]:opacity-100 [@media(pointer:coarse)]:opacity-100" />
-      <span className={badge("dark", "pointer-events-none absolute bottom-2 left-2 size-5 text-[9px] font-semibold uppercase")}>
-        {entry.author.slice(0, 2)}
+      {/* the designer: their profile picture where we keep one, their initials otherwise */}
+      <span className={badge("dark", "pointer-events-none absolute bottom-2 left-2 size-5 overflow-hidden text-[9px] font-semibold uppercase")}>
+        {entry.x && hasLocalAvatar(entry.x) ? (
+          /* eslint-disable-next-line @next/next/no-img-element -- a 64 px file served as is; next/image would add a request per card */
+          <img src={avatarUrl(entry.x)} alt="" width={20} height={20} loading="lazy" decoding="async" className="size-full rounded-full object-cover" />
+        ) : (
+          entry.author.slice(0, 2)
+        )}
       </span>
     </article>
   );
