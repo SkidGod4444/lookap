@@ -47,3 +47,6 @@ factory/*/sheets/
 factory/*/zoom/
 factory/*/drive/
 stress/
+
+# downloaded media for the R2 move (scripts/mirror-media.ts)
+/media/
