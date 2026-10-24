@@ -1,0 +1,260 @@
+<!doctype html>
+<!--
+  "AI Node-Based Workflow Canvas" by Omerico (@omer_assa)
+  Source: https://x.com/omer_assa/status/2106758938926391416
+  Rebuilt as one self-contained file. Nothing sampled from the clip: cards, cables, sparks,
+  rings, edge glows, icons, cursor and dot grid are all drawn (CSS + inline SVG).
+  ?demo=1 replays the clip's 9.97 s wiring sequence; without it, drag from any output port.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AI Node-Based Workflow Canvas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;overflow:hidden;background:#131516}
+#stage{--u:1px;position:relative;width:calc(1006*var(--u));height:calc(720*var(--u));overflow:hidden;background:#131516;
+  font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;user-select:none;touch-action:none}
+#world{position:absolute;inset:0;transform-origin:0 0;
+  background-image:radial-gradient(circle,#1a1c1e calc(.7*var(--u)),transparent calc(1.2*var(--u)));
+  background-size:calc(24.85*var(--u)) calc(24.85*var(--u));background-position:calc(-12.4*var(--u)) calc(-6.4*var(--u))}
+.card{position:absolute;left:calc(var(--x)*var(--u));top:calc(var(--y)*var(--u));width:calc(var(--w)*var(--u));height:calc(var(--h)*var(--u));
+  box-sizing:border-box;background:#181a1b;border:calc(1*var(--u)) solid #222426;border-radius:calc(16*var(--u));
+  box-shadow:0 calc(10*var(--u)) calc(28*var(--u)) rgba(0,0,0,.42),0 calc(2*var(--u)) calc(6*var(--u)) rgba(0,0,0,.3)}
+.inset{position:absolute;left:calc(112*var(--u));top:calc(181*var(--u));width:calc(263*var(--u));height:calc(92*var(--u));box-sizing:border-box;
+  background:#161618;border:calc(1*var(--u)) solid #232326;border-radius:calc(8*var(--u))}
+.t{position:absolute;left:calc(var(--x)*var(--u));top:calc(var(--y)*var(--u));transform:translateY(-50%);line-height:1;white-space:nowrap;
+  font-size:calc(13.7*var(--u));color:#a0a0a0;letter-spacing:0}
+.r{transform:translate(-100%,-50%)}
+.h{font-size:calc(15.6*var(--u));font-weight:600;color:#f3f3f3;letter-spacing:calc(-.1*var(--u))}
+.p{font-size:calc(13.6*var(--u));color:#dadada;line-height:calc(22.5*var(--u));transform:none;white-space:pre}
+.st{font-size:calc(12*var(--u));color:#6e7073}
+#stB{color:#8e8f91;opacity:0}
+svg{position:absolute;left:0;top:0;width:calc(1006*var(--u));height:calc(720*var(--u));overflow:visible}
+#ui{pointer-events:none}
+.port{fill:#f4f4f4}
+.ico{fill:none;stroke:#9a9da1;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.hd{fill:#4e5154}
+.cab{color:#f4f4f4;opacity:0}
+.cab .core{fill:none;stroke:currentColor;stroke-width:4.8;stroke-linecap:round}
+.cab .halo{fill:none;stroke:currentColor;stroke-width:7;opacity:0;filter:url(#b5)}
+.cab .dot{fill:currentColor}
+.sring{fill:none;stroke:#8a8a8d;stroke-width:2;opacity:0}
+.chk{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;opacity:0}
+#spark{fill:none;stroke:currentColor;stroke-width:1.3;stroke-linejoin:round;opacity:0}
+#hring,.snap{fill:none;stroke:currentColor;opacity:0}
+#hring{stroke-width:1.6}
+.snap{stroke-width:1.2}
+#glow{opacity:0;mix-blend-mode:screen}
+#glow path{fill:none;stroke:currentColor;stroke-linecap:round}
+#glow .gc{stroke-width:3.2;filter:url(#b1)}
+#glow .gh{stroke-width:44;filter:url(#b12);opacity:.5}
+#cur{position:absolute;left:0;top:0;width:calc(19.5*var(--u));height:calc(27.5*var(--u));opacity:0;pointer-events:none}
+</style>
+</head>
+<body>
+<div id="stage">
+ <div id="world">
+  <div class="card" style="--x:89;--y:119;--w:310;--h:236"></div>
+  <div class="card" style="--x:-60;--y:318;--w:309;--h:140"></div>
+  <div class="card" style="--x:161;--y:451;--w:309;--h:139"></div>
+  <div class="card" style="--x:609;--y:105;--w:322;--h:300"></div>
+  <div class="inset"></div>
+  <span class="t h" style="--x:141;--y:151">Prompt</span>
+  <span class="t p" style="--x:127;--y:195">A quiet world,
+in vivid color. Soft light, subtle
+textures, a little unexpected magic.</span>
+  <span class="t r" style="--x:373;--y:321">conditioning</span>
+  <span class="t h" style="--x:-9;--y:351">Random noise</span>
+  <span class="t" style="--x:5;--y:391">432512</span>
+  <span class="t r" style="--x:223;--y:423">noise</span>
+  <span class="t h" style="--x:212;--y:483">Sampler</span>
+  <span class="t" style="--x:183;--y:525">euler · 24 steps</span>
+  <span class="t r" style="--x:446;--y:557">sampler</span>
+  <span class="t h" style="--x:661;--y:137">Processing</span>
+  <span class="t" style="--x:634;--y:200">conditioning</span>
+  <span class="t" style="--x:634;--y:258">noise</span>
+  <span class="t" style="--x:634;--y:315">sampler</span>
+  <span class="t st" id="stA" style="--x:648;--y:373">Awaiting inputs</span>
+  <span class="t st" id="stB" style="--x:648;--y:373">All inputs ready</span>
+  <svg id="ui" viewBox="0 0 1006 720">
+   <defs>
+    <filter id="b1" filterUnits="userSpaceOnUse" x="-200" y="-200" width="1400" height="1100"><feGaussianBlur stdDeviation="1.1"/></filter>
+    <filter id="b3"filterUnits="userSpaceOnUse" x="-200" y="-200" width="1400" height="1100"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="b5" filterUnits="userSpaceOnUse" x="-200" y="-200" width="1400" height="1100"><feGaussianBlur stdDeviation="4.5"/></filter>
+    <filter id="b12" filterUnits="userSpaceOnUse" x="-200" y="-200" width="1400" height="1100"><feGaussianBlur stdDeviation="11"/></filter>
+    <filter id="sg" filterUnits="userSpaceOnUse" x="-200" y="-200" width="1400" height="1100">
+     <feGaussianBlur in="SourceGraphic" stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+   </defs>
+   <!-- icons -->
+   <path class="ico" d="M119.5 147.5h4.5a2.5 2.5 0 0 1 2.5 2.5v2a2.5 2.5 0 0 1-2.5 2.5h-4.5M114.8 147.5a2.5 2.5 0 0 0-2.5 2.5v2a2.5 2.5 0 0 0 2.5 2.5M117.2 145.5v11M115.6 145.5h3.2M115.6 156.5h3.2"/>
+   <path class="ico" d="M184.5 478.5H198M184.5 483H198M184.5 487.5H198M194 476.5V480.5M188.5 481V485M195 485.5V489.5"/>
+   <path class="ico" d="M636.5 132.5h7a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2zM638.3 136.3h3.4v3.4h-3.4zM638 132.5v-2M642 132.5v-2M638 143.5v2M642 143.5v2M634.5 136h-2M634.5 140h-2M645.5 136h2M645.5 140h2"/>
+   <!-- drag handles -->
+   <g class="hd" id="hds"></g>
+   <!-- ports -->
+   <circle class="port" cx="398" cy="321" r="6"/><circle class="port" cx="248" cy="423" r="6"/><circle class="port" cx="469" cy="556" r="6"/>
+   <circle class="port" cx="608" cy="200" r="6"/><circle class="port" cx="608" cy="258" r="6"/><circle class="port" cx="608" cy="315" r="6"/>
+   <circle id="stDot" cx="637.5" cy="373" r="2" fill="#5c5e61"/>
+   <path class="chk" id="chk0" d="M894 200.5l3.6 3.6 7-7.6"/><path class="chk" id="chk1" d="M894 258.5l3.6 3.6 7-7.6"/><path class="chk" id="chk2" d="M894 315.5l3.6 3.6 7-7.6"/>
+   <!-- edge glow sweep around Processing -->
+   <clipPath id="pc"><rect x="609" y="105" width="322" height="300" rx="16"/></clipPath>
+   <g id="glow" clip-path="url(#pc)">
+    <g id="gT"><path class="gh" d="M609 255V121A16 16 0 0 1 625 105H915A16 16 0 0 1 931 121V255"/><path class="gc" d="M609 255V121A16 16 0 0 1 625 105H915A16 16 0 0 1 931 121V255"/></g>
+    <g id="gB"><path class="gh" d="M609 255V389A16 16 0 0 0 625 405H915A16 16 0 0 0 931 389V255"/><path class="gc" d="M609 255V389A16 16 0 0 0 625 405H915A16 16 0 0 0 931 389V255"/></g>
+   </g>
+   <!-- cables -->
+   <g id="cabs"></g>
+   <circle class="snap" id="snapA" r="10"/><circle class="snap" id="snapB" r="16"/>
+   <circle id="hring" r="12.5" filter="url(#sg)"/>
+   <path id="spark" filter="url(#sg)"/>
+  </svg>
+ </div>
+ <svg id="cur" viewBox="0 0 17 24"><path d="M1.5 1.5V19.2l4.3-4.2 2.9 6.7 3.1-1.3-2.8-6.6h6.1z" fill="#fff" stroke="#111" stroke-width="1.2" stroke-linejoin="round"/></svg>
+</div>
+<script>
+const D = 9.97, W = '#f4f4f4', Y = '#f2dc4a', P = '#ec4fa0', V = '#a65ff0', O = '#f2785a', C = '#4fe3ee', M = '#e04fd0';
+const SRC = [[398, 321], [248, 423], [469, 556]], TGT = [[608, 200], [608, 258], [608, 315]];
+const S = 1.714, TX = -391, TY = -80; // close-up camera: screen = world * S + T
+const $ = id => document.getElementById(id), NS = 'http://www.w3.org/2000/svg';
+const mk = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); parent.appendChild(e); return e; };
+
+// drag handles: 2 x 3 dots at each header's right
+for (const [x, y] of [[366, 151], [897, 137], [217, 351], [437, 483]])
+  for (const dx of [-2.6, 2.6]) for (const dy of [-5, 0, 5]) mk('circle', { cx: x + dx, cy: y + dy, r: 1.3 }, $('hds'));
+// cables: halo + core path, source ring, coloured source dot, tip dot
+const cab = SRC.map(([x, y], i) => {
+  const g = mk('g', { class: 'cab', id: 'cab' + i }, $('cabs'));
+  mk('circle', { class: 'sring', id: 'sr' + i, cx: x, cy: y, r: 11.5 }, g);
+  mk('path', { class: 'halo', id: 'ha' + i }, g); mk('path', { class: 'core', id: 'co' + i }, g);
+  mk('circle', { class: 'dot', cx: x, cy: y, r: 6 }, g); mk('circle', { class: 'dot', id: 'tp' + i, r: 6.2 }, g);
+  return g;
+});
+
+const ease = x => x * x * (3 - 2 * x);
+function track(pts, t) { // eased interpolation through [t, x, y] points
+  if (t <= pts[0][0]) return pts[0].slice(1);
+  for (let k = 1; k < pts.length; k++) if (t <= pts[k][0]) {
+    const a = pts[k - 1], b = pts[k], f = ease((t - a[0]) / (b[0] - a[0] || 1));
+    return [a[1] + (b[1] - a[1]) * f, a[2] + (b[2] - a[2]) * f];
+  }
+  return pts[pts.length - 1].slice(1);
+}
+const seg = (list, t) => { let v = list[0]; for (const e of list) if (e[0] <= t) v = e; return v; };
+const bez = ([x1, y1], [x2, y2], drag) => { const dx = Math.max(30, Math.abs(x2 - x1) * 0.5);
+  if (drag) { // held cable: short (clip 0.2s) hooks ~11 below the port within ~30 px then runs straight into the tip;
+    // long (clip 2.65s) leaves flat and bends smoothly along the chord. Same M C L shape, blended by length.
+    const L = Math.hypot(x2 - x1, y2 - y1), ax = Math.abs(x2 - x1), k = Math.min(1, L / 110), cs = ax / (L || 1);
+    const lx = 30 * k, dp = 12 * k * cs, kx = x1 + lx, ky = y1 + .75 * dp, Lk = Math.hypot(x2 - kx, y2 - ky) || 1, c = Math.min(12, Lk / 3);
+    const A = [x1 + .5 * lx, y1 + dp, kx - (x2 - kx) / Lk * c, ky - (y2 - ky) / Lk * c, kx, ky];
+    const B = [x1 + .3 * ax + 6, y1 + 4 * cs, x2 - .45 * (x2 - x1), y2 - .45 * (y2 - y1), x2, y2];
+    const w = Math.min(1, Math.max(0, (L - 130) / 90)), q = A.map((a, j) => f1(a + (B[j] - a) * w));
+    return `path("M${x1} ${y1}C${q[0]} ${q[1]} ${q[2]} ${q[3]} ${q[4]} ${q[5]}L${x2} ${y2}")`; }
+  return `path("M${x1} ${y1}C${x1 + dx} ${y1} ${x2 - dx} ${y2} ${x2} ${y2}L${x2} ${y2}")`; };
+const f1 = n => Math.round(n * 10) / 10;
+
+// The clip, measured from the contact sheets (10 fps) and keyframes.
+const CUR = [[0, 402, 322], [.2, 500, 267], [.35, 548, 214], [.97, 548, 214], [1.5, 520, 330], [1.85, 250, 424], [2, 250, 424], [2.2, 520, 300],
+  [2.3, 548, 272], [2.7, 548, 272], [3, 560, 320], [3.35, 470, 557], [3.45, 470, 557], [3.6, 515, 413], [3.8, 555, 330], [4.25, 555, 330],
+  [4.85, 606, 201], [4.93, 606, 201], [5.25, 548, 214], [5.7, 548, 214], [6, 580, 250], [6.3, 606, 259], [6.4, 604, 260], [6.55, 590, 256],
+  [7.3, 590, 256], [7.5, 598, 262], [7.85, 606, 259], [7.9, 606, 259], [8, 593, 267], [8.85, 593, 267], [9.2, 580, 300], [9.55, 606, 316],
+  [9.6, 606, 316], [9.75, 560, 345], [D, 560, 345]];
+const DEMO = {
+  cam: [[0, 0], [.4, 1], [1.57, 0], [4.9, 1]],
+  cab: [[[0, 'd'], [.97, Y], [4.93, 'd'], [5.7, O]],
+        [[0, null], [2, 'd'], [2.7, P], [6.4, 'd'], [7.3, C], [7.9, 'd'], [8.85, Y]],
+        [[0, null], [3.45, 'd'], [4.25, V], [9.6, 'd']]],
+  hov: [[.3, .97, 0, Y], [2.2, 2.7, 1, P], [3.7, 4.25, 2, V], [5.15, 5.7, 0, O], [6.55, 7.3, 1, C], [8, 8.85, 1, Y], [9.7, 99, 2, M]],
+  cursor: t => track(CUR, t), showCursor: true,
+};
+DEMO.hover = t => { const h = DEMO.hov.find(h => t >= h[0] && t < h[1]); return h ? [h[2], h[3]] : null; };
+
+// full visual state at time t for a scene -> { id: { cssProp: value } }
+function stateAt(t, sc) {
+  const out = {}, set = (id, p, v) => ((out[id] ||= {})[p] = v);
+  const close = seg(sc.cam, t)[1], cur = sc.cursor(t);
+  set('world', 'transform', close ? `translate(${(TX / 10.06).toFixed(3)}%,${(TY / 7.2).toFixed(3)}%) scale(${S})` : 'translate(0%,0%) scale(1)');
+  const sx = close ? cur[0] * S + TX : cur[0], sy = close ? cur[1] * S + TY : cur[1];
+  set('cur', 'left', f1(sx / 10.06) + '%'); set('cur', 'top', f1(sy / 7.2) + '%'); set('cur', 'opacity', sc.showCursor ? 1 : 0);
+  let snaps = [], ready = true;
+  sc.cab.forEach((list, i) => {
+    const e = seg(list, t), m = e[1], drag = m === 'd', on = m && !drag;
+    for (const s of list) if (s[1] && s[1] !== 'd' && s[0] <= t) snaps.push([s[0], s[1], i]);
+    if (!on) ready = false;
+    const tip = drag ? cur : on ? TGT[i] : SRC[i], d = bez(SRC[i], [f1(tip[0]), f1(tip[1])], drag);
+    set('cab' + i, 'opacity', m ? 1 : 0); set('cab' + i, 'color', on ? m : W);
+    set('co' + i, 'd', d); set('co' + i, 'strokeWidth', drag ? '5.4px' : '4.8px'); set('ha' + i, 'd', d); set('ha' + i, 'opacity', on ? .38 : drag ? .2 : 0);
+    set('tp' + i, 'transform', `translate(${f1(tip[0])}px,${f1(tip[1])}px)`);
+    set('sr' + i, 'opacity', drag ? .7 : 0);
+    set('chk' + i, 'opacity', on ? 1 : 0); set('chk' + i, 'color', on ? m : W);
+  });
+  set('stA', 'opacity', ready ? 0 : 1); set('stB', 'opacity', ready ? 1 : 0); set('stDot', 'fill', ready ? '#e8e8e8' : '#5c5e61');
+  // lightning spark + target ring while hovering a dragged tip near its port
+  const h = sc.hover(t);
+  if (h) {
+    const [i, col] = h, [x2, y2] = TGT[i], [x1, y1] = cur, L = Math.hypot(x2 - x1, y2 - y1) || 1;
+    const ux = (x2 - x1) / L, uy = (y2 - y1) / L, end = Math.max(4, L - 12), n = Math.max(3, Math.min(7, Math.round(end / 7.5))), amp = Math.min(1, end / 24), seed = Math.floor(t * 30);
+    let p = `M${f1(x1)} ${f1(y1)}`;
+    for (let k = 1; k <= n; k++) {
+      const s = end * (k + (k < n ? .35 * Math.sin(seed * 5.1 + k * 2.3) : 0)) / n, a = k === n ? 0 : (k % 2 ? 1 : -1) * amp * (1.2 + 3.3 * Math.abs(Math.sin(seed * 7.3 + k * 3.1)));
+      p += `L${f1(x1 + ux * s - uy * a)} ${f1(y1 + uy * s + ux * a)}`;
+    }
+    set('spark', 'd', `path("${p}")`); set('spark', 'color', col); set('spark', 'opacity', .85);
+    set('hring', 'transform', `translate(${x2}px,${y2}px)`); set('hring', 'color', col); set('hring', 'opacity', 1);
+  } else { set('spark', 'opacity', 0); set('hring', 'opacity', 0); }
+  // snap: double ring at the port, then a glow sweeping out from the left edge
+  const last = snaps.sort((a, b) => a[0] - b[0]).pop(), age = last ? t - last[0] : 9;
+  const [tx, ty] = last ? TGT[last[2]] : [0, 0], col = last ? last[1] : W;
+  for (const [id, r0, gr] of [['snapA', 15, 10], ['snapB', 21, 12]]) {
+    set(id, 'transform', `translate(${tx}px,${ty}px)`); set(id, 'color', col);
+    set(id, 'r', f1(r0 + gr * Math.min(age, .8)) + 'px'); set(id, 'opacity', age < .8 ? f1((1 - age / .8) * .55 * 100) / 100 : 0);
+  }
+  const s = age < .15 ? 0 : age < .75 ? ease((age - .15) / .6) * 470 : 470, len = age < .15 ? 134 : 134 - 44 * Math.min(1, (age - .15) / .6);
+  const gop = age < .12 ? age / .12 : age < .7 ? 1 : age < .95 ? 1 - (age - .7) / .25 : 0;
+  set('glow', 'opacity', f1(gop * 100) / 100); set('glow', 'color', col);
+  for (const id of ['gT', 'gB']) { set(id, 'strokeDasharray', `${f1(len)} 1200`); set(id, 'strokeDashoffset', f1(-s)); }
+  return out;
+}
+const apply = st => { for (const id in st) { const e = $(id); for (const p in st[id]) e.style[p] = st[id][p]; } };
+
+const demo = new URLSearchParams(location.search).has('demo');
+const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (demo && still) apply(stateAt(4.6, DEMO));
+else if (demo) {
+  // sample the timeline at 30 fps plus both sides of every cut/snap; one WAAPI animation per element
+  const ts = new Set();
+  for (let k = 0; k <= D * 30; k++) ts.add(Math.min(D, k / 30));
+  const ev = [...DEMO.cam.map(c => c[0]), ...DEMO.cab.flat().map(c => c[0]), ...DEMO.hov.flatMap(h => [h[0], h[1]])];
+  for (const e of ev) if (e > 0 && e < D) { ts.add(e - .0005); ts.add(e); }
+  const frames = {};
+  for (const t of [...ts].sort((a, b) => a - b)) {
+    const st = stateAt(t, DEMO);
+    for (const id in st) (frames[id] ||= []).push({ offset: t / D, ...st[id] });
+  }
+  for (const id in frames) $(id).animate(frames[id], { duration: D * 1000, iterations: Infinity, fill: 'both', easing: 'linear' });
+} else {
+  // live: drag from an output port (or pull a connected cable off its input) onto its input port
+  const PAL = [Y, P, V, O, C, M], next = [0, 1, 2];
+  const live = { cam: [[0, 0]], cab: [[[0, null]], [[0, null]], [[0, null]]], ptr: [0, 0], drag: -1, showCursor: false,
+    cursor: () => live.ptr, hover: () => live.drag >= 0 && near(live.ptr, TGT[live.drag], 60) ? [live.drag, PAL[next[live.drag] % PAL.length]] : null };
+  const near = (a, b, r) => Math.hypot(a[0] - b[0], a[1] - b[1]) < r;
+  const now = () => performance.now() / 1000;
+  const toWorld = e => { const b = $('stage').getBoundingClientRect(); return [(e.clientX - b.left) * 1006 / b.width, (e.clientY - b.top) * 720 / b.height]; };
+  $('stage').addEventListener('pointerdown', e => {
+    const p = toWorld(e);
+    const i = SRC.findIndex(s => near(p, s, 16)), j = TGT.findIndex((s, k) => near(p, s, 16) && seg(live.cab[k], now())[1]);
+    const k = i >= 0 ? i : j; if (k < 0) return;
+    live.ptr = p; live.drag = k; live.prev = seg(live.cab[k], now())[1]; live.cab[k].push([now(), 'd']);
+    $('stage').setPointerCapture(e.pointerId);
+  });
+  $('stage').addEventListener('pointermove', e => { live.ptr = toWorld(e); });
+  const end = () => { const k = live.drag; if (k < 0) return; live.drag = -1;
+    if (near(live.ptr, TGT[k], 60)) live.cab[k].push([now(), PAL[next[k]++ % PAL.length]]); else live.cab[k].push([now(), null]); };
+  $('stage').addEventListener('pointerup', end); $('stage').addEventListener('pointercancel', end);
+  const loop = () => { apply(stateAt(now(), live)); requestAnimationFrame(loop); };
+  loop();
+}
+</script>
+</body>
+</html>

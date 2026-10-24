@@ -1,0 +1,180 @@
+{
+ "slug": "reylig-prism-peel-sticker-effect",
+ "title": "Prism Peel Sticker Effect",
+ "author": "sucodee",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "review",
+ "ended": "round limit",
+ "bestRound": 4,
+ "rank": 85,
+ "allPass": false,
+ "rubric": {
+  "pass": 44,
+  "fail": 1,
+  "unsure": 0,
+  "of": 45,
+  "failed": [
+   "c03 Top-left reads 'PEEL STICKER' in small uppercase letter-spaced mid-grey type"
+  ]
+ },
+ "score": 82,
+ "motion": "the render stays still in 2 of 22 spans where the clip moves",
+ "imagery": [
+  {
+   "name": "X logo sticker",
+   "class": "structured",
+   "box": [
+    332,
+    252,
+    600,
+    612
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "MetalForge backing",
+   "class": "css",
+   "box": [
+    520,
+    450,
+    320,
+    380
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "Google G sticker",
+   "class": "structured",
+   "box": [
+    326,
+    250,
+    614,
+    624
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "canvas dot grid",
+   "class": "css",
+   "box": [
+    0,
+    0,
+    1248,
+    1080
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 43.9,
+   "turns": 1,
+   "costUsd": 4.3724984,
+   "tokens": {
+    "written": 60306,
+    "read": 2878585
+   },
+   "judgeUsd": 1.182,
+   "ended": "budget_exhausted",
+   "score": 80,
+   "rank": 58,
+   "allPass": false,
+   "rubric": {
+    "pass": 27,
+    "fail": 17,
+    "unsure": 1,
+    "of": 45
+   },
+   "motion": "the render stays still in 2 of 22 spans where the clip moves",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 40.3,
+   "turns": 65,
+   "costUsd": 2.139817,
+   "tokens": {
+    "written": 35883,
+    "read": 2398049
+   },
+   "judgeUsd": 1.235,
+   "ended": "completed",
+   "score": 81,
+   "rank": 74,
+   "allPass": false,
+   "rubric": {
+    "pass": 37,
+    "fail": 8,
+    "unsure": 0,
+    "of": 45
+   },
+   "motion": "the render stays still in 1 of 22 spans where the clip moves",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 35,
+   "turns": 74,
+   "costUsd": 4.3767754000000005,
+   "tokens": {
+    "written": 56455,
+    "read": 3585915
+   },
+   "judgeUsd": 0.752,
+   "ended": "budget_exhausted",
+   "score": 82,
+   "rank": 85,
+   "allPass": false,
+   "rubric": {
+    "pass": 44,
+    "fail": 1,
+    "unsure": 0,
+    "of": 45
+   },
+   "motion": "the render stays still in 2 of 22 spans where the clip moves",
+   "kept": true
+  },
+  {
+   "round": 4,
+   "minutes": 475.1,
+   "turns": 19,
+   "costUsd": 0.7374145999999999,
+   "tokens": {
+    "written": 5969,
+    "read": 910322
+   },
+   "judgeUsd": 1.284,
+   "ended": "completed",
+   "score": 82,
+   "rank": 85,
+   "allPass": false,
+   "rubric": {
+    "pass": 44,
+    "fail": 1,
+    "unsure": 0,
+    "of": 45
+   },
+   "motion": "the render stays still in 2 of 22 spans where the clip moves",
+   "kept": true
+  }
+ ],
+ "minutes": 594.3,
+ "tokens": {
+  "written": 158613,
+  "read": 9772871
+ },
+ "cost": {
+  "codingUsd": 11.63,
+  "judgeUsd": 4.45,
+  "rubricUsd": 0.833,
+  "totalUsd": 16.91
+ },
+ "notes": true,
+ "at": "2026-10-24T04:02:02.378Z"
+}

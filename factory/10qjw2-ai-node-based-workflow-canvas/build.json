@@ -1,0 +1,16 @@
+{
+ "model": "Claude Opus 5.5",
+ "modelId": "claude-opus-5-5",
+ "date": "2026-10-24",
+ "run": {
+  "model": "Claude Opus 5.5",
+  "turns": 151,
+  "outputTokens": 93488,
+  "totalTokens": 6397773,
+  "costUsd": 9.5,
+  "minutes": 32.2,
+  "score": 81
+ },
+ "hand": "none: the factory alone, 3 judged rounds, best round 3 kept; rubric 43 of 44 with none failing under a three-vote judge, reviewed by eye",
+ "hint": "Drag a cable from an output port onto its input: it snaps and the card glows in its colour."
+}

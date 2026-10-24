@@ -1,0 +1,16 @@
+{
+ "model": "Claude Opus 5.5",
+ "modelId": "claude-opus-5-5",
+ "date": "2026-10-24",
+ "run": {
+  "model": "Claude Opus 5.5",
+  "turns": 159,
+  "outputTokens": 158613,
+  "totalTokens": 9931484,
+  "costUsd": 16.91,
+  "minutes": 594.3,
+  "score": 82
+ },
+ "hand": "none: the factory alone, 4 judged rounds, best round 4 kept; rubric 44 of 45 under a three-vote judge, reviewed by eye; the peels' extent differs from the clip at some moments",
+ "hint": "Drag an edge of the sticker to peel it, and switch the material below."
+}

@@ -1,0 +1,179 @@
+{
+ "slug": "10qjw2-ai-node-based-workflow-canvas",
+ "title": "AI Node-Based Workflow Canvas",
+ "author": "Omerico",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "pass",
+ "ended": "all criteria pass",
+ "bestRound": 3,
+ "rank": 95,
+ "allPass": true,
+ "rubric": {
+  "pass": 43,
+  "fail": 0,
+  "unsure": 1,
+  "of": 44,
+  "failed": []
+ },
+ "score": 81,
+ "motion": "the render changes where the clip changes",
+ "imagery": [
+  {
+   "name": "node icons (prompt, sliders, chip)",
+   "class": "structured",
+   "box": [
+    111,
+    129,
+    540,
+    370
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "cables with glow",
+   "class": "css",
+   "box": [
+    248,
+    198,
+    362,
+    360
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "lightning spark",
+   "class": "css",
+   "box": [
+    545,
+    240,
+    110,
+    60
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "edge glow sweep",
+   "class": "css",
+   "box": [
+    640,
+    85,
+    120,
+    420
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "dot grid",
+   "class": "css",
+   "box": [
+    0,
+    0,
+    1006,
+    720
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "cursor",
+   "class": "structured",
+   "box": [
+    520,
+    395,
+    16,
+    22
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 16.4,
+   "turns": 51,
+   "costUsd": 3.9417058000000003,
+   "tokens": {
+    "written": 58191,
+    "read": 2475170
+   },
+   "judgeUsd": 0.932,
+   "ended": "completed",
+   "score": 80,
+   "rank": 90,
+   "allPass": false,
+   "rubric": {
+    "pass": 40,
+    "fail": 4,
+    "unsure": 0,
+    "of": 44
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 8.1,
+   "turns": 59,
+   "costUsd": 1.5077154000000001,
+   "tokens": {
+    "written": 19789,
+    "read": 2205745
+   },
+   "judgeUsd": 0.632,
+   "ended": "completed",
+   "score": 82,
+   "rank": 95,
+   "allPass": false,
+   "rubric": {
+    "pass": 43,
+    "fail": 1,
+    "unsure": 0,
+    "of": 44
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 7.8,
+   "turns": 41,
+   "costUsd": 1.2064756,
+   "tokens": {
+    "written": 15508,
+    "read": 1623370
+   },
+   "judgeUsd": 0.628,
+   "ended": "completed",
+   "score": 81,
+   "rank": 95,
+   "allPass": true,
+   "rubric": {
+    "pass": 43,
+    "fail": 0,
+    "unsure": 1,
+    "of": 44
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  }
+ ],
+ "minutes": 32.2,
+ "tokens": {
+  "written": 93488,
+  "read": 6304285
+ },
+ "cost": {
+  "codingUsd": 6.66,
+  "judgeUsd": 2.19,
+  "rubricUsd": 0.649,
+  "totalUsd": 9.5
+ },
+ "notes": true,
+ "at": "2026-10-24T05:09:41.744Z"
+}

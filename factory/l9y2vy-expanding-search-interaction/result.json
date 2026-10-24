@@ -1,0 +1,192 @@
+{
+ "slug": "l9y2vy-expanding-search-interaction",
+ "title": "Expanding Search Interaction",
+ "author": "sucodee",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "review",
+ "ended": "round limit",
+ "bestRound": 4,
+ "rank": 97,
+ "allPass": false,
+ "rubric": {
+  "pass": 44,
+  "fail": 1,
+  "unsure": 0,
+  "of": 45,
+  "failed": [
+   "c15 The panel lifts off the page with a soft, wide, low-contrast shadow mostly below it, with no hard dark border"
+  ]
+ },
+ "score": 94,
+ "motion": "the render changes where the clip changes",
+ "imagery": [
+  {
+   "name": "collapsed button",
+   "class": "css",
+   "box": [
+    453,
+    137,
+    112,
+    112
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "magnifier icon",
+   "class": "structured",
+   "box": [
+    493,
+    180,
+    28,
+    28
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "clear × icon",
+   "class": "structured",
+   "box": [
+    713,
+    183,
+    21,
+    21
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "search bar shell",
+   "class": "css",
+   "box": [
+    237,
+    137,
+    542,
+    112
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "results panel",
+   "class": "css",
+   "box": [
+    237,
+    263,
+    542,
+    347
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 13.3,
+   "turns": 70,
+   "costUsd": 2.4907416000000007,
+   "tokens": {
+    "written": 40850,
+    "read": 3650724
+   },
+   "judgeUsd": 1.134,
+   "ended": "completed",
+   "score": 93,
+   "rank": 88,
+   "allPass": false,
+   "rubric": {
+    "pass": 38,
+    "fail": 7,
+    "unsure": 0,
+    "of": 45
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 10.6,
+   "turns": 72,
+   "costUsd": 1.9922818000000004,
+   "tokens": {
+    "written": 31284,
+    "read": 2757500
+   },
+   "judgeUsd": 0.676,
+   "ended": "completed",
+   "score": 94,
+   "rank": 97,
+   "allPass": false,
+   "rubric": {
+    "pass": 44,
+    "fail": 1,
+    "unsure": 0,
+    "of": 45
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 6,
+   "turns": 24,
+   "costUsd": 0.7465492,
+   "tokens": {
+    "written": 7167,
+    "read": 930616
+   },
+   "judgeUsd": 0.751,
+   "ended": "completed",
+   "score": 94,
+   "rank": 96,
+   "allPass": false,
+   "rubric": {
+    "pass": 43,
+    "fail": 2,
+    "unsure": 0,
+    "of": 45
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": false
+  },
+  {
+   "round": 4,
+   "minutes": 5.6,
+   "turns": 21,
+   "costUsd": 0.7077856000000001,
+   "tokens": {
+    "written": 5780,
+    "read": 924833
+   },
+   "judgeUsd": 0.639,
+   "ended": "completed",
+   "score": 94,
+   "rank": 97,
+   "allPass": false,
+   "rubric": {
+    "pass": 44,
+    "fail": 1,
+    "unsure": 0,
+    "of": 45
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  }
+ ],
+ "minutes": 35.4,
+ "tokens": {
+  "written": 85081,
+  "read": 8263673
+ },
+ "cost": {
+  "codingUsd": 5.94,
+  "judgeUsd": 3.2,
+  "rubricUsd": 0.748,
+  "totalUsd": 9.89
+ },
+ "notes": true,
+ "at": "2026-10-24T04:37:27.890Z"
+}

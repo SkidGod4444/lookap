@@ -1,0 +1,202 @@
+<!doctype html>
+<!--
+  Prism Peel Sticker Effect, after sucodee: https://x.com/sucodeee/status/2104873657885438135
+  Rebuilt as one file. Nothing sampled from the clip: the X and G stickers, the MetalForge backing,
+  the dot grid, the prism fringe, ripple and halftone are all drawn (inline SVG + CSS).
+  The peel is a fold: the part of the sticker between the grabbed corner C and the fold line
+  (perpendicular bisector of C and the pointer) is hidden on the flat layer and drawn mirrored
+  across the fold as the backing flap. ?demo=1 replays the clip's timeline with element.animate.
+-->
+<html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+@property --f{syntax:'<number>';inherits:true;initial-value:0}
+@property --a{syntax:'<number>';inherits:true;initial-value:35}
+@property --cx{syntax:'<number>';inherits:true;initial-value:345}
+@property --cy{syntax:'<number>';inherits:true;initial-value:262}
+@property --mx{syntax:'<number>';inherits:true;initial-value:560}
+@property --my{syntax:'<number>';inherits:true;initial-value:500}
+@property --ox{syntax:'<number>';inherits:true;initial-value:3}
+@property --oy{syntax:'<number>';inherits:true;initial-value:-2}
+@property --m1{syntax:'<number>';inherits:true;initial-value:0}
+@property --m2{syntax:'<number>';inherits:true;initial-value:0}
+@property --m3{syntax:'<number>';inherits:true;initial-value:1}
+@property --m4{syntax:'<number>';inherits:true;initial-value:0}
+@property --m5{syntax:'<number>';inherits:true;initial-value:0}
+@property --r{syntax:'<number>';inherits:true;initial-value:0}
+@property --sa{syntax:'<number>';inherits:true;initial-value:0}
+@property --st{syntax:'<number>';inherits:true;initial-value:0}
+@property --g{syntax:'<number>';inherits:true;initial-value:0}
+html,body{margin:0;overflow:hidden;background:#f4f4f5}
+#stage{--u:1px;position:relative;width:calc(1248*var(--u));height:calc(1080*var(--u));overflow:hidden;background:#f4f4f5;
+  font-family:Inter,system-ui,sans-serif;color:#18181b;user-select:none;-webkit-user-select:none}
+#grid{position:absolute;inset:0;background-image:radial-gradient(circle,#d7d7db calc(1.1*var(--u)),transparent calc(1.7*var(--u)));
+  background-size:calc(22*var(--u)) calc(22*var(--u));background-position:calc(1*var(--u)) calc(-5*var(--u))}
+.lab{position:absolute;left:calc(23*var(--u));top:calc(34*var(--u));font-size:calc(12.6*var(--u));font-weight:600;letter-spacing:.17em;color:#6f6f75;line-height:1}
+.ttl{position:absolute;left:calc(22*var(--u));top:calc(64*var(--u));font-size:calc(29.8*var(--u));font-weight:600;letter-spacing:-.01em;line-height:1;white-space:nowrap}
+.ttl span{position:absolute;left:0;top:0}.ttl b{font-weight:600;color:#a1a1a7}
+.cap{position:absolute;right:calc(13*var(--u));top:calc(84*var(--u));font-family:'JetBrains Mono',monospace;font-size:calc(14.6*var(--u));color:#a9a9ae;line-height:1;white-space:nowrap}
+.hint{position:absolute;left:0;width:100%;top:calc(945*var(--u));text-align:center;font-size:calc(16.4*var(--u));color:#a6a6ac;line-height:1}
+#ctl{position:absolute;left:calc(335*var(--u));top:calc(1005*var(--u));width:calc(588*var(--u));height:calc(56*var(--u));border-radius:calc(28*var(--u));
+  background:#fff;box-shadow:0 calc(1*var(--u)) calc(3*var(--u)) rgba(0,0,0,.05)}
+#pill{position:absolute;top:calc(7*var(--u));height:calc(42*var(--u));border-radius:calc(21*var(--u));background:#18181b;
+  left:calc((20*var(--m1) + 117*var(--m2) + 233*var(--m3) + 345*var(--m4) + 455*var(--m5))*var(--u));
+  width:calc((72*var(--m1) + 98*var(--m2) + 106*var(--m3) + 106*var(--m4) + 128*var(--m5))*var(--u))}
+#ctl button{position:absolute;top:0;height:100%;border:0;background:none;padding:0;font:500 calc(15*var(--u))/1 Inter,sans-serif;cursor:pointer;transform:translateX(-50%);white-space:nowrap}
+#ctl button i{font-style:normal;color:#9a9aa0;font-weight:400;margin-right:calc(5*var(--u))}
+.layer{position:absolute;left:0;top:0;width:calc(1248*var(--u));height:calc(1080*var(--u));pointer-events:none}
+#flatS{filter:drop-shadow(calc(7*var(--u)) calc(15*var(--u)) calc(17*var(--u)) rgba(30,30,40,.3))}
+#flapS{filter:drop-shadow(calc(10*var(--u)) calc(16*var(--u)) calc(20*var(--u)) rgba(30,30,40,.26))}
+.rot{position:absolute;left:0;top:0;width:0;height:0;transform-origin:0 0;
+  transform:translate(calc(var(--cx)*var(--u)),calc(var(--cy)*var(--u))) rotate(calc(var(--a)*1deg))}
+.keep,.peel{position:absolute;top:calc(-2000*var(--u));width:calc(4000*var(--u));height:calc(4000*var(--u));overflow:hidden}
+.keep{left:calc(var(--f)*var(--u))}
+.peel{--w:max(0,var(--f));left:calc((var(--f) - var(--w))*var(--u));width:calc(var(--w)*var(--u));transform-origin:100% 50%;transform:scaleX(-1)}
+.back{position:absolute;top:calc(2000*var(--u));transform-origin:0 0;transform:rotate(calc(var(--a)*-1deg)) translate(calc(var(--cx)*-1*var(--u)),calc(var(--cy)*-1*var(--u)))}
+.keep .back{left:calc(var(--f)*-1*var(--u))}.peel .back{left:calc((var(--w) - var(--f))*var(--u))}
+.art{display:block;width:calc(1248*var(--u));height:calc(1080*var(--u))}
+.bk{position:absolute;left:0;top:0;width:calc(1248*var(--u));height:calc(1080*var(--u));-webkit-mask-size:100% 100%;mask-size:100% 100%;
+  background-color:#e4e4e6;background-size:100% 100%,calc(230*var(--u)) calc(230*var(--u))}
+.bk.x{opacity:calc((1 - var(--g))*(1 - var(--r)))}.bk.xm{opacity:calc((1 - var(--g))*var(--r))}
+#stA{opacity:var(--sa);filter:drop-shadow(calc(7*var(--u)) calc(15*var(--u)) calc(17*var(--u)) rgba(30,30,40,.3));
+  clip-path:polygon(calc(810*var(--u)) calc(240*var(--u)),calc(925*var(--u)) calc(240*var(--u)),calc(436*var(--u)) calc(880*var(--u)),calc(318*var(--u)) calc(880*var(--u)))}
+#stB{opacity:var(--st);filter:drop-shadow(calc(7*var(--u)) calc(15*var(--u)) calc(17*var(--u)) rgba(30,30,40,.3));
+  clip-path:polygon(calc(588*var(--u)) calc(652*var(--u)),calc(800*var(--u)) calc(585*var(--u)),calc(975*var(--u)) calc(860*var(--u)),calc(940*var(--u)) calc(900*var(--u)),calc(720*var(--u)) calc(900*var(--u)))}.bk.gg{opacity:var(--g)}
+.shade{position:absolute;left:0;top:0;width:calc(150*var(--u));height:calc(3000*var(--u));transform-origin:0 0;
+  transform:translate(calc(var(--cx)*var(--u)),calc(var(--cy)*var(--u))) rotate(calc(var(--a)*1deg)) translate(calc((var(--f) - 150)*var(--u)),calc(-1500*var(--u)));
+  background:linear-gradient(90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.03) 55%,rgba(255,255,255,.6) 82%,rgba(255,255,255,.75) 88%,rgba(110,110,120,.32) 100%)}
+.ca{transform-origin:0 0;transform:translate(calc(var(--mx)*1px),calc(var(--my)*1px)) scale(var(--k)) translate(calc(var(--mx)*-1px),calc(var(--my)*-1px))}
+#hit{position:absolute;left:calc(300*var(--u));top:calc(230*var(--u));width:calc(660*var(--u));height:calc(660*var(--u));cursor:grab}
+</style><style id="patches"></style></head>
+<body><div id="stage">
+<div id="grid"></div>
+<div class="lab">PEEL STICKER</div>
+<div class="ttl"><span style="opacity:var(--m1)"><b>1</b> White</span><span style="opacity:var(--m2)"><b>2</b> Sparkle</span><span style="opacity:var(--m3)"><b>3</b> Prism</span><span style="opacity:var(--m4)"><b>4</b> Ripple</span><span style="opacity:var(--m5)"><b>5</b> Halftone</span></div>
+<div class="cap">Your picture · WebGL 2</div>
+<svg width="0" height="0" style="position:absolute"><defs>
+  <path id="xo" d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.163 519.284Z"/>
+  <path id="xp" d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.163 519.284ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.828Z"/>
+  <radialGradient id="soft"><stop offset=".55" stop-color="#fff"/><stop offset="1" stop-color="#000"/></radialGradient>
+  <radialGradient id="hsoft"><stop offset=".72" stop-color="#fff"/><stop offset=".86" stop-color="#000"/></radialGradient>
+  <radialGradient id="crest" gradientUnits="userSpaceOnUse" cx="740" cy="508" r="300"></radialGradient>
+  <mask id="mcur" maskUnits="userSpaceOnUse" x="0" y="0" width="1248" height="1080"><circle r="270" fill="url(#soft)" style="transform:translate(calc(var(--mx)*1px),calc(var(--my)*1px))"/></mask>
+  <mask id="mhal" maskUnits="userSpaceOnUse" x="0" y="0" width="1248" height="1080"><circle r="260" fill="url(#hsoft)" style="transform:translate(calc(var(--mx)*1px),calc(var(--my)*1px))"/></mask>
+  <mask id="msil" maskUnits="userSpaceOnUse" x="0" y="0" width="1248" height="1080"><use href="#gart" filter="url(#dil)"/></mask>
+  <mask id="mg"maskUnits="userSpaceOnUse" x="0" y="0" width="1248" height="1080"><use href="#gart" style="filter:brightness(0) invert(1)"/></mask>
+  <pattern id="dots" patternUnits="userSpaceOnUse" width="13.6" height="13.6"><path fill="#fff" fill-rule="evenodd" d="M0 0h13.6v13.6H0zM-4.75 0a4.75 4.75 0 1 0 9.5 0a4.75 4.75 0 1 0-9.5 0zM8.85 0a4.75 4.75 0 1 0 9.5 0a4.75 4.75 0 1 0-9.5 0zM-4.75 13.6a4.75 4.75 0 1 0 9.5 0a4.75 4.75 0 1 0-9.5 0zM8.85 13.6a4.75 4.75 0 1 0 9.5 0a4.75 4.75 0 1 0-9.5 0zM2.05 6.8a4.75 4.75 0 1 0 9.5 0a4.75 4.75 0 1 0-9.5 0z"/></pattern>
+  <filter id="hsf"><feGaussianBlur stdDeviation=".7"/></filter>
+  <filter id="rip" x="0" y="0" width="1248" height="1080" filterUnits="userSpaceOnUse"><feImage id="ripmap" x="-508" y="-572" width="2496" height="2160" result="m0" preserveAspectRatio="none"/><feGaussianBlur in="m0" stdDeviation="4" result="m"/>
+    <feDisplacementMap in="SourceGraphic" in2="m" scale="6" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <clipPath id="gdisc"><circle cx="626" cy="551" r="279"/></clipPath>
+  <g id="gart"><g fill="none" stroke-width="119">
+    <circle cx="626" cy="551" r="219.5" stroke="#e8313a" stroke-dasharray="103.4 2000" pathLength="360" transform="rotate(206 626 551)"/>
+    <circle cx="626" cy="551" r="219.5" stroke="#f4b70a" stroke-dasharray="55 2000" pathLength="360" transform="rotate(151 626 551)"/>
+    <circle cx="626" cy="551" r="219.5" stroke="#31c048" stroke-dasharray="94 2000" pathLength="360" transform="rotate(57 626 551)"/>
+    <circle cx="626" cy="551" r="219.5" stroke="#4d86f0" stroke-dasharray="67 2000" pathLength="360" transform="rotate(-10 626 551)"/></g>
+    <rect x="633" y="503" width="268" height="110" fill="#4d86f0"/></g>
+  <filter id="dil" filterUnits="userSpaceOnUse" x="0" y="0" width="1248" height="1080"><feGaussianBlur in="SourceAlpha" stdDeviation="17"/>
+    <feComponentTransfer><feFuncA type="linear" slope="30" intercept="-2.5"/></feComponentTransfer><feComposite in="SourceAlpha" operator="over"/>
+    <feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/></filter>
+</defs></svg>
+<div id="hit"></div>
+<div class="layer" id="flatS"><div class="rot"><div class="keep"><div class="back">
+<svg class="art" viewBox="0 0 1248 1080">
+  <g style="opacity:calc(1 - var(--g))">
+    <g filter="url(#dil)"><use href="#xo" transform="translate(355 277) scale(.4583)"/></g>
+    <g mask="url(#mcur)" style="opacity:var(--m3)"><g style="mix-blend-mode:multiply">
+      <g class="ca" style="--k:1.09"><use href="#xp" transform="translate(355 277) scale(.4583)" fill="#ffe600"/></g>
+      <g class="ca" style="--k:1.045"><use href="#xp" transform="translate(355 277) scale(.4583)" fill="#ff1a1a"/></g>
+      <g class="ca" style="--k:.91"><use href="#xp" transform="translate(355 277) scale(.4583)" fill="#00e0ff"/></g>
+      <g class="ca" style="--k:.955"><use href="#xp" transform="translate(355 277) scale(.4583)" fill="#1030ff"/></g></g></g>
+    <use href="#xp" transform="translate(355 277) scale(.4583)" fill="#050505"/>
+  </g>
+  <g style="opacity:var(--g)">
+    <use href="#gart" filter="url(#dil)"/>
+    <use href="#gart" style="opacity:calc(1 - var(--m4))"/>
+    <g style="opacity:var(--m4)"><use href="#gart" filter="url(#rip)"/>
+      <rect width="1248" height="1080" fill="url(#crest)" mask="url(#msil)"/></g>
+    <g mask="url(#mhal)" style="opacity:var(--m5)"><rect width="1248" height="1080" fill="url(#dots)" mask="url(#mg)" filter="url(#hsf)"/></g>
+  </g>
+</svg></div></div></div></div>
+<div class="layer" id="stA"></div>
+<div class="layer" id="flapS"><div class="rot"><div class="peel"><div class="back">
+  <div class="bk x" id="bkx"></div><div class="bk xm" id="bkxm"></div><div class="bk gg" id="bkg"></div>
+</div></div></div></div>
+<div class="layer" id="stB"></div>
+<div class="hint">Drag an edge to peel · move over it for the shine</div>
+<div id="ctl"><div id="pill"></div>
+  <button data-m="1" style="left:calc(56*var(--u))"><i>1</i>White</button>
+  <button data-m="2" style="left:calc(166*var(--u))"><i>2</i>Sparkle</button>
+  <button data-m="3" style="left:calc(286*var(--u))"><i>3</i>Prism</button>
+  <button data-m="4" style="left:calc(398*var(--u))"><i>4</i>Ripple</button>
+  <button data-m="5" style="left:calc(519*var(--u))"><i>5</i>Halftone</button>
+</div>
+</div>
+<script>
+const S=document.getElementById('stage'),NS='http://www.w3.org/2000/svg';
+const btns=[...document.querySelectorAll('#ctl button')];
+btns.forEach(b=>b.style.color=`color-mix(in srgb,#fff calc(var(--m${b.dataset.m})*100%),#18181b)`);
+// ripple displacement map + faint crests: soft rings around the ripple centre, amplitude fading outward
+const cr=document.getElementById('crest');let mapStops='';
+for(let i=0;i<=240;i++){const o=i/240,amp=Math.max(0,1-o)**1.4,s=Math.sin(o*2*Math.PI*8.5);
+  const v=Math.round(128+110*amp*s);mapStops+=`<stop offset="${o}" stop-color="rgb(${v},${v},128)"/>`;
+  const st=document.createElementNS(NS,'stop');st.setAttribute('offset',o);st.setAttribute('stop-color',s>0?'#fff':'#000');st.setAttribute('stop-opacity',((s>0?.5:.12)*amp*s*s).toFixed(3));cr.appendChild(st);}
+const map=`<svg xmlns="${NS}" width="2496" height="2160"><radialGradient id="r" gradientUnits="userSpaceOnUse" cx="1248" cy="1080" r="300">${mapStops}</radialGradient><rect width="2496" height="2160" fill="url(#r)"/></svg>`;
+document.getElementById('ripmap').setAttribute('href','data:image/svg+xml,'+encodeURIComponent(map));
+// backing: light grey vinyl liner tiled with angled MetalForge wordmarks, cut to each sticker's silhouette
+const tile=`<svg xmlns="${NS}" width="230" height="230"><g fill="#c0c0c4" font-family="Inter,Helvetica,Arial,sans-serif" font-weight="600" font-size="33" transform="translate(230 0) scale(-1 1) rotate(-2 115 115)"><text x="20" y="70">MetalForge</text><text x="-95" y="185">MetalForge</text><text x="135" y="185">MetalForge</text><text x="250" y="70">MetalForge</text><text x="-210" y="70">MetalForge</text></g></svg>`;
+const xd=document.getElementById('xo').getAttribute('d');
+const dil=document.getElementById('dil').outerHTML;
+const sil={x:`<g transform="translate(355 277) scale(.4583)"><path d="${xd}"/></g>`,g:document.getElementById('gart').innerHTML};
+[['bkx','x'],['bkxm','x'],['bkg','g']].forEach(([id,k])=>{const el=document.getElementById(id);
+  const m=`url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns="${NS}" viewBox="0 0 1248 1080" width="1248" height="1080">${dil}<g filter="url(#dil)">${sil[k]}</g></svg>`)}")`;
+  el.style.webkitMaskImage=m;el.style.maskImage=m;
+  el.style.backgroundImage=`linear-gradient(120deg,rgba(255,255,255,.12),rgba(0,0,0,.03) 60%,rgba(255,255,255,.08)),url("data:image/svg+xml,${encodeURIComponent(id=='bkxm'?tile.replace('translate(230 0) scale(-1 1) ',''):tile)}")`;
+  const sh=document.createElement('div');sh.className='shade';el.appendChild(sh);});
+// the bottom-right leg stays stuck while the top-right arm is dragged out to the left: a flat copy over the flap
+// (and the / stroke stays down under the first top-left peel)
+['stA','stB'].forEach(id=>document.getElementById(id).appendChild(document.querySelector('#flatS .art').cloneNode(true)));
+const T=18833,demo=new URLSearchParams(location.search).has('demo');
+if(demo){
+  const C={TL:[345,262],TR:[920,262],BR:[918,846],GR:[930,505]};
+  // [t, corner, angle (deg, direction corner->pointer), f (half the corner-pointer distance)]
+  const P=[[0,'TL',45,0],[1.6,'TL',45,0],[1.7,'TL',45,40],[1.8,'TL',45,210],[1.93,'TL',46,340],[2,'TL',43,500],[2.1,'TL',40,620],[2.2,'TL',39,660],
+    [2.9,'TL',39,660],[3,'TL',42,560],[3.08,'TL',46,380],[3.2,'TL',45,60],[3.35,'TL',45,40],[4.4,'TL',45,25],[4.48,'TL',45,0],[4.48,'TR',135,0],
+    [4.55,'TR',135,50],[4.6,'TR',135,55],[4.7,'TR',135,110],[4.8,'TR',135,220],[4.9,'TR',135,370],[5,'TR',136,405],[5.2,'TR',147,470],[5.42,'TR',155,465],
+    [5.5,'TR',150,250],[5.6,'TR',138,120],[5.8,'TR',135,110],[5.86,'TR',135,0],[5.86,'BR',225,0],[5.95,'BR',232,110],[6.1,'BR',235,265],[6.2,'BR',230,280],
+    [6.22,'BR',220,0],[6.22,'TR',82,290],[6.3,'TR',82,300],
+    [6.9,'TR',82,300],[7,'TR',105,290],[7.1,'TR',120,190],[7.2,'TR',130,80],[7.3,'TR',120,44],[8.6,'TR',120,44],[8.85,'TR',120,0],
+    [9.65,'GR',150,0],[13.85,'GR',150,0],[13.95,'GR',150,60],[14.02,'GR',150,200],[14.12,'GR',152,360],[14.6,'GR',165,380],[15.2,'GR',195,380],
+    [15.95,'GR',200,380],[16.05,'GR',195,250],[16.15,'GR',180,120],[16.3,'GR',165,60],[18.83,'GR',165,60]];
+  S.animate(P.map(([t,c,a,f])=>({offset:t*1000/T,'--cx':C[c][0],'--cy':C[c][1],'--a':a,'--f':f})),{duration:T,fill:'both'});
+  // cursor: [t, x, y, fringe dx, fringe dy]
+  const M=[[0,560,500,2,-3],[.5,540,480,3,-1.5],[.9,528,465,4,-3],[1.4,450,300,5,-1],[1.6,380,275,5,0],[3.4,420,320,4,-2],[3.8,790,780,-3,3],
+    [3.93,813,753,-3,3],[4.02,786,262,4,4],[4.1,785,262,4,4],[4.5,900,275,4,4],[9.6,900,280,4,4],[10.8,700,520,0,0],[11.45,760,560,0,0],[11.9,832,645,0,0],
+    [12.4,770,610,0,0],[12.7,600,825,0,0],[13,760,720,0,0],[13.6,905,510,0,0],[14.2,420,800,0,0],[18.83,420,800,0,0]];
+  S.animate(M.map(([t,x,y,ox,oy])=>({offset:t*1000/T,'--mx':x,'--my':y,'--ox':ox,'--oy':oy})),{duration:T,fill:'both'});
+  // material + picture: Prism until 10.85s, Ripple to 11.45s, then Halftone; X swapped for G at 9.7s
+  const K=[[0,3,0],[9.7,3,0],[9.7,3,1],[10.85,3,1],[11,4,1],[11.45,4,1],[11.6,5,1],[18.83,5,1]];
+  // stuck bottom-right leg during the bottom-left drag; mirrored wordmarks on the bottom-right peel
+  S.animate([[0,0,0,0],[1.75,0,0,0],[1.75,0,0,1],[1.98,0,0,1],[1.98,0,0,0],[4.88,0,0,0],[4.88,1,0,0],[5.6,1,0,0],[5.6,0,0,0],[5.86,0,0,0],[5.86,0,1,0],[6.22,0,1,0],[6.22,0,0,0],[18.83,0,0,0]]
+    .map(([t,st,r,sa])=>({offset:t*1000/T,'--st':st,'--r':r,'--sa':sa})),{duration:T,fill:'both'});
+  S.animate(K.map(([t,m,g])=>{const o={offset:t*1000/T,'--g':g};for(let i=1;i<6;i++)o['--m'+i]=+(i===m);return o}),{duration:T,fill:'both'});
+}else{
+  let mode=3,drag=null;const set=(k,v)=>S.style.setProperty(k,v);
+  const pt=e=>{const r=S.getBoundingClientRect(),k=1248/r.width;return[(e.clientX-r.left)*k,(e.clientY-r.top)*k]};
+  let spring=null;const rm=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
+  btns.forEach(b=>b.onclick=()=>{mode=+b.dataset.m;for(let i=1;i<6;i++){const v=+(i===mode),an=S.animate([{['--m'+i]:v}],{duration:rm()?1:180,fill:'forwards',easing:'ease-out'});
+    an.onfinish=()=>{set('--m'+i,v);an.cancel()}}});
+  const rm2=document.getElementById('ripmap');
+  S.addEventListener('pointermove',e=>{const[x,y]=pt(e);set('--mx',x);set('--my',y);
+    rm2.setAttribute('x',x-1248);rm2.setAttribute('y',y-1080);cr.setAttribute('cx',x);cr.setAttribute('cy',y);
+    set('--ox',Math.max(-5,Math.min(5,(x-632)/45)));set('--oy',Math.max(-5,Math.min(5,(y-556)/45)));
+    if(drag){const dx=x-drag[0],dy=y-drag[1];set('--a',Math.atan2(dy,dx)*180/Math.PI);set('--f',Math.hypot(dx,dy)/2)}});
+  document.getElementById('hit').addEventListener('pointerdown',e=>{const[x,y]=pt(e);if(spring)spring.cancel();
+    const vx=x-632,vy=y-556,l=Math.hypot(vx,vy)||1;drag=[x+vx/l*24,y+vy/l*24];set('--cx',drag[0]);set('--cy',drag[1]);set('--f',0);
+    S.setPointerCapture(e.pointerId)});
+  S.addEventListener('pointerup',()=>{if(!drag)return;drag=null;const f=parseFloat(getComputedStyle(S).getPropertyValue('--f'))||0;
+    spring=S.animate([{'--f':f},{'--f':-6,offset:.7},{'--f':0}],{duration:rm()?1:650,easing:'cubic-bezier(.2,.8,.3,1)'});set('--f',0)});
+  document.querySelector('.cap').onclick=()=>set('--g',S.style.getPropertyValue('--g')==='1'?0:1);
+}
+</script></body></html>

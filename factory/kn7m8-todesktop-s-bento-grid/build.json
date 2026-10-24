@@ -1,0 +1,16 @@
+{
+ "model": "Claude Opus 5.5",
+ "modelId": "claude-opus-5-5",
+ "date": "2026-10-24",
+ "run": {
+  "model": "Claude Opus 5.5",
+  "turns": 189,
+  "outputTokens": 91136,
+  "totalTokens": 6819223,
+  "costUsd": 10.61,
+  "minutes": 46.9,
+  "score": 89
+ },
+ "hand": "fixed by hand after 4 judged rounds (round 2 kept): the logo redrawn from the clip at 8x; rubric 39 of 45 on the last three-vote judge, 44 of 45 on the factory's (the judge was unsteady on this file), reviewed by eye",
+ "hint": "Watch the four cards play: the signature, the downloads chart, the laptop and the gauge."
+}

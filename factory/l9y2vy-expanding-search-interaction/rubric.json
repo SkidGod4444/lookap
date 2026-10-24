@@ -1,0 +1,1059 @@
+{
+ "slug": "l9y2vy-expanding-search-interaction",
+ "frame": {
+  "w": 1020,
+  "h": 720
+ },
+ "at": "2026-10-22T21:34:29.902Z",
+ "model": "opus",
+ "costUsd": 0.748,
+ "summary": "A single control sits alone on a flat warm off-white page (#f4f3ef), centred horizontally near the top third. At rest it is a 112 px circular search button: a white rim with a hairline grey edge and a soft diffuse drop shadow, holding a 90 px warm-grey disc (#ebe9e4) with a dark magnifier glyph. On click (0.45–1.0 s) the circle stretches symmetrically left and right into a 542 px pill search bar (x 237–779, top fixed at y 137) whose inner grey field shows the magnifier at left, a blue text caret, placeholder 'Search components' in light grey and a grey × at right; at the same time a white results panel (radius ~40 px, same width, soft shadow) drops from a thin pill under the bar down to y 610, and its four rows ('Action Button', 'Toast', 'Code Input', 'Segmented Control', ~27 px dark sans, 81 px pitch) slide/blur into place in a stagger, the first row covered by a fully rounded warm-grey highlight pill. From 1.6 to 3.2 s the cursor hovers down the list and the highlight pill glides (not jumps) between rows: Toast, Code Input, Segmented Control, then back to Action Button. At ~4.2 s typing 't' re-filters the list with a blurred cross-fade: matching letters turn bold black while the rest of each name goes mid-grey, and the panel grows to five rows (Toast, Tab Bar, Action Button, Quantity Stepper, Invite Field, bottom ~698); typing 'o' (~4.5 s) narrows it to three rows (Toast, Hold to Confirm, Action Button) and the panel shrinks to y ~528. Hovering the × shows a small round grey hover disc; clicking it (~6.0 s) clears the field and the original four rows blur back in (panel bottom back to 610). At ~7.05–7.25 s the panel retracts upward into the bar and the bar contracts back into the 112 px circle, ending where it began.",
+ "elements": [
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1020,
+    720
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "flat warm off-white #f4f3ef, no texture or gradient"
+  },
+  {
+   "name": "collapsed search button (outer white rim)",
+   "box": [
+    453,
+    137,
+    112,
+    112
+   ],
+   "kind": "control",
+   "class": "css",
+   "note": "white circle with a 1px light-grey hairline edge and soft diffuse shadow below; rest at 0–0.4 s and from ~7.3 s"
+  },
+  {
+   "name": "collapsed button inner disc",
+   "box": [
+    463,
+    148,
+    90,
+    90
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "warm grey #ebe9e4 disc concentric in the white rim"
+  },
+  {
+   "name": "magnifier icon",
+   "box": [
+    493,
+    180,
+    28,
+    28
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "dark (#1c1c1c) stroked circle with short handle to lower-right; at x≈280–306 once expanded"
+  },
+  {
+   "name": "expanded search bar (outer white shell)",
+   "box": [
+    237,
+    137,
+    542,
+    112
+   ],
+   "kind": "control",
+   "class": "css",
+   "note": "full pill, white rim ~11 px, hairline grey edge, soft shadow; rest 1.05–7.0 s"
+  },
+  {
+   "name": "search field inner pill",
+   "box": [
+    248,
+    148,
+    520,
+    90
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "warm grey #ebe9e4 fully rounded field inside the shell"
+  },
+  {
+   "name": "text caret",
+   "box": [
+    332,
+    176,
+    3,
+    34
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "blue-violet (#4a3cf0-ish) vertical caret before the placeholder / after typed text"
+  },
+  {
+   "name": "placeholder text 'Search components'",
+   "box": [
+    334,
+    178,
+    272,
+    32
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "light grey (#a8a7a3) ~27 px regular sans"
+  },
+  {
+   "name": "typed query text",
+   "box": [
+    333,
+    178,
+    30,
+    32
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'t' then 'to', dark #1c1c1c same size as placeholder"
+  },
+  {
+   "name": "clear × icon",
+   "box": [
+    713,
+    183,
+    21,
+    21
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "mid-grey (#6b6b6b) × of two strokes; hover shows a round grey disc ~64 px behind it"
+  },
+  {
+   "name": "results panel",
+   "box": [
+    237,
+    263,
+    542,
+    347
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "near-white #fdfdfd card, radius ~40 px, hairline edge and soft wide shadow; 15 px gap below the bar"
+  },
+  {
+   "name": "row highlight pill",
+   "box": [
+    248,
+    275,
+    520,
+    80
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "warm grey #ebe9e4 fully rounded pill behind the active row, inset 11 px from the panel"
+  },
+  {
+   "name": "row label 'Action Button'",
+   "box": [
+    276,
+    302,
+    175,
+    30
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "~27 px medium-weight dark sans"
+  },
+  {
+   "name": "row label 'Toast'",
+   "box": [
+    276,
+    383,
+    70,
+    30
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "dark sans, row 2 centre y≈397"
+  },
+  {
+   "name": "row label 'Code Input'",
+   "box": [
+    276,
+    464,
+    141,
+    30
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "row 3 centre y≈478"
+  },
+  {
+   "name": "row label 'Segmented Control'",
+   "box": [
+    276,
+    545,
+    249,
+    30
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "row 4 centre y≈560"
+  },
+  {
+   "name": "filtered rows for 't'",
+   "box": [
+    264,
+    296,
+    230,
+    360
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "Toast, Tab Bar, Action Button, Quantity Stepper, Invite Field; matched 't' bold black, rest mid-grey"
+  },
+  {
+   "name": "filtered rows for 'to'",
+   "box": [
+    276,
+    300,
+    202,
+    195
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "Toast, Hold to Confirm, Action Button with 'To'/'to' bold black, rest grey #7d7d7a; panel bottom ~528"
+  },
+  {
+   "name": "mouse cursor",
+   "box": [
+    530,
+    225,
+    22,
+    30
+   ],
+   "kind": "chrome",
+   "class": null,
+   "note": "system arrow / I-beam / hand cursor recorded in the clip"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "page background",
+   "axis": "style",
+   "check": "The page is a flat warm off-white (about #f4f3ef) with no gradient, texture or vignette",
+   "box": [
+    0,
+    0,
+    1020,
+    720
+   ],
+   "scope": "frame",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "collapsed search button",
+   "axis": "present",
+   "check": "At rest a single circular search button is the only object on the page, centred horizontally (centre x≈509) with its top near y=137",
+   "box": [
+    440,
+    125,
+    140,
+    140
+   ],
+   "scope": "frame",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "collapsed search button",
+   "axis": "position",
+   "check": "The button is a circle about 112 px across (x≈453–565, y≈137–249)",
+   "box": [
+    440,
+    125,
+    140,
+    140
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "collapsed search button",
+   "axis": "style",
+   "check": "The button is two-layer: a white outer ring about 10–11 px thick around a warm-grey (#ebe9e4) inner disc about 90 px across",
+   "box": [
+    440,
+    125,
+    140,
+    140
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "collapsed search button",
+   "axis": "style",
+   "check": "The white ring has only a faint 1 px light-grey hairline edge and a soft diffuse shadow below it, not a dark or thick outline",
+   "box": [
+    440,
+    125,
+    140,
+    150
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "magnifier icon",
+   "axis": "imagery",
+   "check": "A dark stroked magnifier (open circle with a short handle to the lower right, about 28 px) sits centred in the grey disc",
+   "box": [
+    490,
+    177,
+    36,
+    36
+   ],
+   "scope": "crop",
+   "at": 0.2,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "expanded search bar",
+   "axis": "position",
+   "check": "The expanded bar spans about x 237–779 and y 137–249 (542 × 112 px), horizontally centred on the same axis as the circle",
+   "box": [
+    225,
+    125,
+    570,
+    140
+   ],
+   "scope": "frame",
+   "at": 1.3,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "expanded search bar",
+   "axis": "style",
+   "check": "The bar is a fully rounded pill: a white shell with a hairline edge enclosing a warm-grey (#ebe9e4) pill field inset about 11 px on every side",
+   "box": [
+    237,
+    137,
+    542,
+    112
+   ],
+   "scope": "crop",
+   "at": 1.3,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "magnifier icon",
+   "axis": "position",
+   "check": "Once expanded, the magnifier sits at the left of the field, centred near x≈292, y≈193",
+   "box": [
+    270,
+    170,
+    45,
+    45
+   ],
+   "scope": "crop",
+   "at": 1.3,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "placeholder text",
+   "axis": "text",
+   "check": "The field reads exactly 'Search components' in light grey (about #a8a7a3), roughly 27 px regular weight, starting near x≈334",
+   "box": [
+    325,
+    170,
+    300,
+    46
+   ],
+   "scope": "crop",
+   "at": 1.3,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "text caret",
+   "axis": "style",
+   "check": "A blue/violet vertical caret about 34 px tall sits just left of the placeholder's first letter",
+   "box": [
+    325,
+    170,
+    30,
+    46
+   ],
+   "scope": "crop",
+   "at": 1.3,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "clear × icon",
+   "axis": "style",
+   "check": "A mid-grey × (two thin strokes, about 21 px) sits at the right of the field near x≈723, y≈193",
+   "box": [
+    700,
+    170,
+    46,
+    46
+   ],
+   "scope": "crop",
+   "at": 1.3,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "results panel",
+   "axis": "position",
+   "check": "A results panel sits 15 px below the bar, spanning x 237–779 and y 263–610",
+   "box": [
+    225,
+    255,
+    570,
+    370
+   ],
+   "scope": "frame",
+   "at": 1.3,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "results panel",
+   "axis": "style",
+   "check": "The panel is near-white (#fdfdfd), lighter than the page, with corner radius about 40 px",
+   "box": [
+    237,
+    263,
+    542,
+    347
+   ],
+   "scope": "crop",
+   "at": 1.3,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "results panel",
+   "axis": "style",
+   "check": "The panel lifts off the page with a soft, wide, low-contrast shadow mostly below it, with no hard dark border",
+   "box": [
+    220,
+    560,
+    580,
+    120
+   ],
+   "scope": "crop",
+   "at": 1.3,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "row labels",
+   "axis": "present",
+   "check": "The panel lists exactly 4 rows",
+   "box": [
+    237,
+    263,
+    542,
+    347
+   ],
+   "scope": "crop",
+   "at": 1.3,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "row labels",
+   "axis": "text",
+   "check": "The rows read top to bottom 'Action Button', 'Toast', 'Code Input', 'Segmented Control'",
+   "box": [
+    260,
+    290,
+    300,
+    290
+   ],
+   "scope": "crop",
+   "at": 1.3,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "row labels",
+   "axis": "style",
+   "check": "Row labels are dark near-black (#1c1c1c) sans at about 27 px, left-aligned at x≈276",
+   "box": [
+    260,
+    290,
+    300,
+    290
+   ],
+   "scope": "crop",
+   "at": 1.3,
+   "then": null
+  },
+  {
+   "id": "c19",
+   "element": "row labels",
+   "axis": "position",
+   "check": "Rows are evenly pitched about 81 px apart (centres near y 316, 397, 478, 560)",
+   "box": [
+    260,
+    290,
+    300,
+    290
+   ],
+   "scope": "crop",
+   "at": 1.3,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "row highlight pill",
+   "axis": "style",
+   "check": "The first row sits on a fully rounded warm-grey (#ebe9e4) pill about 520 × 80 px (x 248–768, y 275–355), inset ~11 px from the panel edge",
+   "box": [
+    240,
+    268,
+    535,
+    95
+   ],
+   "scope": "crop",
+   "at": 1.3,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "collapsed search button",
+   "axis": "motion",
+   "check": "Between 0.2 s and 1.3 s the circle widens symmetrically left and right into the pill bar (left edge moves ~216 px left, right edge ~214 px right) while its top stays at y≈137",
+   "box": [
+    225,
+    125,
+    570,
+    140
+   ],
+   "scope": "frame",
+   "at": 0.2,
+   "then": 1.3
+  },
+  {
+   "id": "c22",
+   "element": "expanded search bar",
+   "axis": "motion",
+   "check": "Mid-expansion at 0.5 s the bar is an intermediate pill about 405 px wide (x≈305–711) with the placeholder clipped ('Search compor')",
+   "box": [
+    295,
+    130,
+    430,
+    130
+   ],
+   "scope": "crop",
+   "at": 0.5,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "results panel",
+   "axis": "motion",
+   "check": "At 0.5 s the panel is only a thin white pill (~40 px tall, y≈263–303) under the bar and it grows downward to y≈610 by 1.0 s",
+   "box": [
+    225,
+    255,
+    570,
+    370
+   ],
+   "scope": "frame",
+   "at": 0.5,
+   "then": 1
+  },
+  {
+   "id": "c24",
+   "element": "row labels",
+   "axis": "motion",
+   "check": "Rows enter staggered: at 0.72 s the upper rows are nearly settled while 'Segmented Control' is still blurred and offset right, settling sharp by 1.3 s",
+   "box": [
+    240,
+    280,
+    540,
+    320
+   ],
+   "scope": "crop",
+   "at": 0.72,
+   "then": 1.3
+  },
+  {
+   "id": "c25",
+   "element": "row labels",
+   "axis": "style",
+   "check": "Entering rows show a real Gaussian blur on the text (soft smeared glyphs), not just reduced opacity",
+   "box": [
+    270,
+    535,
+    280,
+    50
+   ],
+   "scope": "crop",
+   "at": 0.72,
+   "then": null
+  },
+  {
+   "id": "c26",
+   "element": "row highlight pill",
+   "axis": "motion",
+   "check": "The highlight pill moves from row 1 (Action Button) to row 2 (Toast) between 1.3 s and 1.9 s while the row labels stay still",
+   "box": [
+    237,
+    263,
+    542,
+    347
+   ],
+   "scope": "frame",
+   "at": 1.3,
+   "then": 1.9
+  },
+  {
+   "id": "c27",
+   "element": "row highlight pill",
+   "axis": "motion",
+   "check": "The highlight glides continuously: at 2.15 s it sits between 'Toast' and 'Code Input' (y≈393–473), not snapping row to row",
+   "box": [
+    237,
+    263,
+    542,
+    347
+   ],
+   "scope": "crop",
+   "at": 2.15,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "row highlight pill",
+   "axis": "motion",
+   "check": "At 2.4 s the highlight sits on 'Code Input' (y≈440–520)",
+   "box": [
+    237,
+    263,
+    542,
+    347
+   ],
+   "scope": "crop",
+   "at": 2.4,
+   "then": null
+  },
+  {
+   "id": "c29",
+   "element": "row highlight pill",
+   "axis": "motion",
+   "check": "By 3.7 s the highlight has travelled back up to 'Action Button' (y≈275–355), passing over the rows between ~2.95 and 3.2 s",
+   "box": [
+    237,
+    263,
+    542,
+    347
+   ],
+   "scope": "frame",
+   "at": 3.08,
+   "then": 3.7
+  },
+  {
+   "id": "c30",
+   "element": "search bar and panel",
+   "axis": "motion",
+   "check": "During the hover phase (1.3 s to 3.7 s) the bar and panel outlines do not move or resize",
+   "box": [
+    225,
+    125,
+    570,
+    500
+   ],
+   "scope": "frame",
+   "at": 1.3,
+   "then": 3.7
+  },
+  {
+   "id": "c31",
+   "element": "typed query text",
+   "axis": "text",
+   "check": "At 4.43 s the field shows the typed letter 't' in dark text with the caret after it, and the placeholder is gone",
+   "box": [
+    320,
+    170,
+    100,
+    46
+   ],
+   "scope": "crop",
+   "at": 4.43,
+   "then": null
+  },
+  {
+   "id": "c32",
+   "element": "filtered rows for 't'",
+   "axis": "text",
+   "check": "With 't' typed the rows read 'Toast', 'Tab Bar', 'Action Button', 'Quantity Stepper', 'Invite Field' (5 rows)",
+   "box": [
+    250,
+    280,
+    300,
+    390
+   ],
+   "scope": "crop",
+   "at": 4.43,
+   "then": null
+  },
+  {
+   "id": "c33",
+   "element": "filtered rows for 't'",
+   "axis": "style",
+   "check": "In each result only the matched 't'/'T' letter is bold black; the rest of the name is mid-grey",
+   "box": [
+    250,
+    280,
+    300,
+    390
+   ],
+   "scope": "crop",
+   "at": 4.43,
+   "then": null
+  },
+  {
+   "id": "c34",
+   "element": "results panel",
+   "axis": "motion",
+   "check": "Typing 't' makes the panel grow downward from bottom y≈610 to y≈698 to fit five rows, top edge fixed",
+   "box": [
+    225,
+    255,
+    570,
+    460
+   ],
+   "scope": "frame",
+   "at": 3.7,
+   "then": 4.43
+  },
+  {
+   "id": "c35",
+   "element": "filtered rows",
+   "axis": "motion",
+   "check": "While re-filtering (4.2 s) the rows cross-fade: old names fade grey and blur/shift as new names move into place, no instant swap",
+   "box": [
+    240,
+    280,
+    540,
+    340
+   ],
+   "scope": "crop",
+   "at": 4.2,
+   "then": 4.43
+  },
+  {
+   "id": "c36",
+   "element": "typed query text",
+   "axis": "text",
+   "check": "By 5.5 s the field reads 'to'",
+   "box": [
+    320,
+    170,
+    100,
+    46
+   ],
+   "scope": "crop",
+   "at": 5.5,
+   "then": null
+  },
+  {
+   "id": "c37",
+   "element": "filtered rows for 'to'",
+   "axis": "text",
+   "check": "With 'to' typed there are exactly 3 rows: 'Toast', 'Hold to Confirm', 'Action Button'",
+   "box": [
+    260,
+    290,
+    300,
+    210
+   ],
+   "scope": "crop",
+   "at": 5.5,
+   "then": null
+  },
+  {
+   "id": "c38",
+   "element": "filtered rows for 'to'",
+   "axis": "style",
+   "check": "The matched 'To' in Toast, the word 'to' in Hold to Confirm and 'to' in Button are bold black; other letters are grey (~#7d7d7a)",
+   "box": [
+    260,
+    290,
+    300,
+    210
+   ],
+   "scope": "crop",
+   "at": 5.5,
+   "then": null
+  },
+  {
+   "id": "c39",
+   "element": "results panel",
+   "axis": "position",
+   "check": "With 'to' the panel bottom sits near y≈528, with the highlight pill still on row 1 ('Toast')",
+   "box": [
+    225,
+    255,
+    570,
+    300
+   ],
+   "scope": "frame",
+   "at": 5.5,
+   "then": null
+  },
+  {
+   "id": "c40",
+   "element": "clear × icon",
+   "axis": "style",
+   "check": "When hovered the × gains a round warm-grey hover disc (~64 px, slightly darker than the field) behind it",
+   "box": [
+    685,
+    155,
+    80,
+    80
+   ],
+   "scope": "crop",
+   "at": 6.6,
+   "then": null
+  },
+  {
+   "id": "c41",
+   "element": "search field",
+   "axis": "motion",
+   "check": "Clicking × clears the query: between 5.5 s and 6.6 s the field returns to the grey 'Search components' placeholder and the list returns to the original 4 rows with panel bottom back at y≈610",
+   "box": [
+    225,
+    125,
+    570,
+    500
+   ],
+   "scope": "frame",
+   "at": 5.5,
+   "then": 6.6
+  },
+  {
+   "id": "c42",
+   "element": "results panel",
+   "axis": "motion",
+   "check": "At 7.1 s the panel is retracting upward (only ~120 px tall, y≈263–384) with its remaining row label blurred",
+   "box": [
+    225,
+    255,
+    570,
+    240
+   ],
+   "scope": "crop",
+   "at": 7.1,
+   "then": null
+  },
+  {
+   "id": "c43",
+   "element": "expanded search bar",
+   "axis": "motion",
+   "check": "Between 7.1 s and 7.4 s the pill bar contracts back into a ~108–112 px circle centred near x≈509 and the panel is gone entirely",
+   "box": [
+    225,
+    125,
+    570,
+    500
+   ],
+   "scope": "frame",
+   "at": 7.1,
+   "then": 7.4
+  },
+  {
+   "id": "c44",
+   "element": "collapsed search button",
+   "axis": "motion",
+   "check": "The loop ends where it began: the 7.4 s frame matches the 0.2 s frame (single circle button, magnifier only, no panel)",
+   "box": [
+    0,
+    0,
+    1020,
+    720
+   ],
+   "scope": "frame",
+   "at": 0.2,
+   "then": 7.4
+  },
+  {
+   "id": "c45",
+   "element": "motion order",
+   "axis": "motion",
+   "check": "The bar's widening and the panel's downward drop happen together in one ~0.55 s move (0.45–1.0 s), not one after the other",
+   "box": [
+    225,
+    125,
+    570,
+    500
+   ],
+   "scope": "frame",
+   "at": 0.5,
+   "then": 0.72
+  }
+ ],
+ "imagery": [
+  {
+   "name": "collapsed button",
+   "box": [
+    453,
+    137,
+    112,
+    112
+   ],
+   "class": "css",
+   "what": "white ring with hairline edge and soft shadow around a warm-grey disc",
+   "at": 0.2
+  },
+  {
+   "name": "magnifier icon",
+   "box": [
+    493,
+    180,
+    28,
+    28
+   ],
+   "class": "structured",
+   "what": "dark stroked search magnifier glyph",
+   "at": 0.2
+  },
+  {
+   "name": "clear × icon",
+   "box": [
+    713,
+    183,
+    21,
+    21
+   ],
+   "class": "structured",
+   "what": "thin mid-grey close cross",
+   "at": 1.3
+  },
+  {
+   "name": "search bar shell",
+   "box": [
+    237,
+    137,
+    542,
+    112
+   ],
+   "class": "css",
+   "what": "white pill shell with inset warm-grey pill field and soft shadow",
+   "at": 1.3
+  },
+  {
+   "name": "results panel",
+   "box": [
+    237,
+    263,
+    542,
+    347
+   ],
+   "class": "css",
+   "what": "near-white rounded card with soft wide shadow and a warm-grey rounded highlight pill",
+   "at": 1.3
+  }
+ ],
+ "moves": [
+  {
+   "element": "search button → bar",
+   "what": "circle widens symmetrically into the 542 px pill; top fixed at y 137",
+   "from": 0.45,
+   "to": 1,
+   "px": 216
+  },
+  {
+   "element": "results panel",
+   "what": "drops from a thin pill under the bar down to bottom y 610; rows slide in staggered with blur",
+   "from": 0.45,
+   "to": 1,
+   "px": 336
+  },
+  {
+   "element": "row highlight pill",
+   "what": "glides Action Button → Toast",
+   "from": 1.55,
+   "to": 1.7,
+   "px": 81
+  },
+  {
+   "element": "row highlight pill",
+   "what": "glides Toast → Code Input",
+   "from": 2.1,
+   "to": 2.25,
+   "px": 81
+  },
+  {
+   "element": "row highlight pill",
+   "what": "glides Code Input → Segmented Control",
+   "from": 2.6,
+   "to": 2.7,
+   "px": 81
+  },
+  {
+   "element": "row highlight pill",
+   "what": "glides Segmented Control back up to Action Button",
+   "from": 2.95,
+   "to": 3.2,
+   "px": 244
+  },
+  {
+   "element": "results panel / rows",
+   "what": "typing 't': list re-filters with blur cross-fade to 5 rows; panel bottom grows 610 → 698",
+   "from": 4.15,
+   "to": 4.4,
+   "px": 88
+  },
+  {
+   "element": "results panel / rows",
+   "what": "typing 'o': list narrows to 3 rows; panel bottom shrinks 698 → 528",
+   "from": 4.4,
+   "to": 4.65,
+   "px": 170
+  },
+  {
+   "element": "results panel / rows",
+   "what": "× clicked: field cleared, original 4 rows blur back in; panel bottom 528 → 610",
+   "from": 5.95,
+   "to": 6.4,
+   "px": 82
+  },
+  {
+   "element": "results panel",
+   "what": "retracts upward into the bar with content blurring out",
+   "from": 7,
+   "to": 7.2,
+   "px": 347
+  },
+  {
+   "element": "search bar → button",
+   "what": "pill contracts symmetrically back into the 112 px circle",
+   "from": 7.05,
+   "to": 7.25,
+   "px": 216
+  }
+ ]
+}

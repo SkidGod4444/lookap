@@ -1,0 +1,293 @@
+{
+ "slug": "kn7m8-todesktop-s-bento-grid",
+ "title": "ToDesktop's Bento Grid",
+ "measured": false,
+ "recipe": null,
+ "what": "A bento grid brimming with delightful microinteractions, where every tile responds with thoughtful, fluid animations that make exploring the layout feel alive.",
+ "frame": {
+  "ratio": 1.501,
+  "shape": "landscape",
+  "media": "clip"
+ },
+ "tone": "light surface, dark type",
+ "traits": [
+  "Bento",
+  "Clean",
+  "Dynamic"
+ ],
+ "section": "Bento",
+ "steps": [
+  "Call see_design for the frame and read the layout from it: regions, alignment, type scale, corner radii, spacing rhythm.",
+  "The media is a clip: name each state you can see (rest, hover, press, open) and the order they occur in.",
+  "Build with the project's own stack and tokens; match proportion and hierarchy before matching pixels.",
+  "A draft measurement is attached: its phases, moves and palette are measured from the clip; its boxes are a first pass to check against the keyframes."
+ ],
+ "draft": {
+  "frame": {
+   "w": 1620,
+   "h": 1080
+  },
+  "duration": 5.52,
+  "phases": [],
+  "keyframes": [
+   {
+    "name": "kf1",
+    "at": 2.75,
+    "hold": [
+     0,
+     5.45
+    ]
+   }
+  ],
+  "moments": [
+   {
+    "at": 2.75,
+    "name": "kf1"
+   }
+  ],
+  "anchors": [],
+  "background": "#f9f9f9",
+  "palette": [
+   {
+    "hex": "#f9f9f9",
+    "share": 91.8
+   },
+   {
+    "hex": "#eaeaea",
+    "share": 4
+   },
+   {
+    "hex": "#d8d8d8",
+    "share": 1.1
+   },
+   {
+    "hex": "#c9c9c9",
+    "share": 0.5
+   },
+   {
+    "hex": "#979797",
+    "share": 0.4
+   },
+   {
+    "hex": "#b7b7b7",
+    "share": 0.3
+   },
+   {
+    "hex": "#686868",
+    "share": 0.2
+   },
+   {
+    "hex": "#a8a8a8",
+    "share": 0.2
+   }
+  ],
+  "elements": [
+   {
+    "box": [
+     1004,
+     698,
+     123,
+     77
+    ],
+    "fill": "#cfcfd0"
+   },
+   {
+    "box": [
+     949,
+     250,
+     29,
+     58
+    ],
+    "fill": "#969696"
+   }
+  ],
+  "motion": [
+   {
+    "element": "#ebebeb",
+    "box": [
+     447,
+     48,
+     716,
+     80
+    ],
+    "moves": [
+     {
+      "from": 1.45,
+      "to": 1.5,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 3.95,
+      "to": 4,
+      "dTop": 0,
+      "dLeft": 5,
+      "ms": 50
+     }
+    ]
+   },
+   {
+    "element": "#e0e0e0",
+    "box": [
+     394,
+     680,
+     306,
+     117
+    ],
+    "moves": [
+     {
+      "from": 0,
+      "to": 0.15,
+      "dTop": 15,
+      "dLeft": 0,
+      "ms": 150
+     },
+     {
+      "from": 0.2,
+      "to": 0.25,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 0.45,
+      "to": 0.55,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 0.65,
+      "to": 0.85,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 200
+     }
+    ]
+   },
+   {
+    "element": "#f5f5f5",
+    "box": [
+     503,
+     688,
+     80,
+     80
+    ],
+    "moves": [
+     {
+      "from": 0.95,
+      "to": 1.05,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 1.1,
+      "to": 1.2,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 1.25,
+      "to": 1.3,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 1.85,
+      "to": 1.9,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     }
+    ]
+   },
+   {
+    "element": "#cfcfd0",
+    "box": [
+     1004,
+     698,
+     123,
+     77
+    ],
+    "moves": [
+     {
+      "from": 0.75,
+      "to": 0.9,
+      "dTop": 0,
+      "dLeft": 5,
+      "ms": 150
+     },
+     {
+      "from": 1.35,
+      "to": 1.4,
+      "dTop": 0,
+      "dLeft": -5,
+      "ms": 50
+     },
+     {
+      "from": 2.5,
+      "to": 2.55,
+      "dTop": 0,
+      "dLeft": 5,
+      "ms": 50
+     },
+     {
+      "from": 3.2,
+      "to": 3.25,
+      "dTop": 0,
+      "dLeft": -5,
+      "ms": 50
+     }
+    ]
+   }
+  ],
+  "coverage": "flat regions found; boxes and fills are usable as given",
+  "confidence": {
+   "phases": "measured: sampled every 50 ms",
+   "motion": "measured: moves of the first keyframe's big parts, edges read at full resolution; dTop and dLeft are the distance in source px",
+   "palette": "measured for areas; small things do not reach it",
+   "anchors": "measured where the content stands clear of its background (reliable true): the box of everything that is not background at a phase's start and end, and which edges moved; where the content fills the frame the field says so and look_at what=track is the way to read an edge",
+   "elements": "draft: flat regions at the first keyframe; nested parts split or merge, text and thin parts are missing; check each box against the keyframe (see_design with at) before trusting it"
+  }
+ },
+ "motion": {
+  "status": "draft measured: draft.phases say when things move, draft.anchors which edges, draft.motion how far; the presets below are only for states the clip never shows",
+  "enter": "fade up 12 px, 320 ms, cubic-bezier(0.2, 0.8, 0.2, 1)",
+  "hover": "colour or ring only, 150 ms",
+  "press": "scale 0.98, 120 ms",
+  "reducedMotion": "respect prefers-reduced-motion: no entrance, instant hover"
+ },
+ "text": null,
+ "notes": [
+  {
+   "slug": "motion-from-stills",
+   "title": "Giving motion to a still, honestly"
+  }
+ ],
+ "credit": {
+  "author": "ToDesktop",
+  "x": null,
+  "source": "https://www.todesktop.com/"
+ },
+ "method": [
+  "Fetch the clip; read size, fps and duration from the container.",
+  "Dump frames at 2 fps plus a contact sheet; pick the idle and active moments and dump those at full resolution.",
+  "Convert the chosen frames to raw RGB and measure: bounding boxes of every element, exact hex at flat regions, luminance profiles across edges for the lighting, a per-frame luma trace of the moving region for timing.",
+  "Build with one unit, --u, equal to one source pixel at the design size, and write every size as calc(N * var(--u)).",
+  "Light rounded objects with inset box-shadows on one overlay (rim, near glow, wide falloff); stacked linear gradients show a seam at the corner.",
+  "Render the build headless at --u: 1px, crop to the frame, put it beside the source frame, and look. Fix the three largest differences. Repeat."
+ ],
+ "build": null,
+ "oneShot": "No measured recipe, but a draft: build from draft.elements and draft.motion, look at each keyframe with see_design (at), then call check_rebuild with a screenshot; its regions are reliable, its element rows are as good as the draft boxes.",
+ "keyframeFiles": [
+  {
+   "name": "kf1",
+   "at": 2.75,
+   "file": "public/drafts/79l0nkj/kf1.jpg"
+  }
+ ]
+}

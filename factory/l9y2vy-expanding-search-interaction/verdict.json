@@ -1,0 +1,1255 @@
+{
+ "slug": "l9y2vy-expanding-search-interaction",
+ "at": "2026-10-24T04:37:27.878Z",
+ "runs": 16,
+ "html": "factory/l9y2vy-expanding-search-interaction/index.html",
+ "pixel": {
+  "score": 94,
+  "stills": 95,
+  "motion": 94,
+  "moments": 19
+ },
+ "animations": 23,
+ "rank": 97,
+ "allPass": false,
+ "elements": [
+  {
+   "name": "magnifier icon",
+   "box": [
+    493,
+    180,
+    28,
+    28
+   ],
+   "deltaE": 1.5,
+   "delta": 16,
+   "shift": null,
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "collapsed search button (outer white rim)",
+   "box": [
+    453,
+    137,
+    112,
+    112
+   ],
+   "deltaE": 0.5,
+   "delta": 8,
+   "shift": null,
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "collapsed button inner disc",
+   "box": [
+    463,
+    148,
+    90,
+    90
+   ],
+   "deltaE": 0.2,
+   "delta": 6,
+   "shift": null,
+   "afterShift": 6,
+   "read": "matches"
+  },
+  {
+   "name": "placeholder text 'Search components'",
+   "box": [
+    334,
+    178,
+    272,
+    32
+   ],
+   "deltaE": 0.1,
+   "delta": 6,
+   "shift": null,
+   "afterShift": 6,
+   "read": "matches"
+  },
+  {
+   "name": "mouse cursor",
+   "box": [
+    530,
+    225,
+    22,
+    30
+   ],
+   "deltaE": 0.7,
+   "delta": 5,
+   "shift": null,
+   "afterShift": 5,
+   "read": "matches"
+  },
+  {
+   "name": "expanded search bar (outer white shell)",
+   "box": [
+    237,
+    137,
+    542,
+    112
+   ],
+   "deltaE": 0.1,
+   "delta": 3,
+   "shift": null,
+   "afterShift": 3,
+   "read": "matches"
+  },
+  {
+   "name": "search field inner pill",
+   "box": [
+    248,
+    148,
+    520,
+    90
+   ],
+   "deltaE": 0.1,
+   "delta": 2,
+   "shift": null,
+   "afterShift": 2,
+   "read": "matches"
+  },
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1020,
+    720
+   ],
+   "deltaE": 0,
+   "delta": 1,
+   "shift": null,
+   "afterShift": 1,
+   "read": "matches"
+  },
+  {
+   "name": "text caret",
+   "box": [
+    332,
+    176,
+    3,
+    34
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "typed query text",
+   "box": [
+    333,
+    178,
+    30,
+    32
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "clear × icon",
+   "box": [
+    713,
+    183,
+    21,
+    21
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "results panel",
+   "box": [
+    237,
+    263,
+    542,
+    347
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "row highlight pill",
+   "box": [
+    248,
+    275,
+    520,
+    80
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "row label 'Action Button'",
+   "box": [
+    276,
+    302,
+    175,
+    30
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "row label 'Toast'",
+   "box": [
+    276,
+    383,
+    70,
+    30
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "row label 'Code Input'",
+   "box": [
+    276,
+    464,
+    141,
+    30
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "row label 'Segmented Control'",
+   "box": [
+    276,
+    545,
+    249,
+    30
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "filtered rows for 't'",
+   "box": [
+    264,
+    296,
+    230,
+    360
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  },
+  {
+   "name": "filtered rows for 'to'",
+   "box": [
+    276,
+    300,
+    202,
+    195
+   ],
+   "deltaE": 0,
+   "delta": 0,
+   "shift": null,
+   "afterShift": 0,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "the render changes where the clip changes",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "kf1",
+    "clip": 0.1,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "kf1",
+    "to": "0.5s",
+    "clip": 0.9,
+    "render": 0.7,
+    "read": "both move"
+   },
+   {
+    "from": "0.5s",
+    "to": "0.72s",
+    "clip": 2.9,
+    "render": 3.4,
+    "read": "both move"
+   },
+   {
+    "from": "0.72s",
+    "to": "1s",
+    "clip": 3.9,
+    "render": 3.4,
+    "read": "both move"
+   },
+   {
+    "from": "1s",
+    "to": "kf2",
+    "clip": 1,
+    "render": 0.2,
+    "read": "both move"
+   },
+   {
+    "from": "kf2",
+    "to": "kf3",
+    "clip": 9.5,
+    "render": 10.6,
+    "read": "both move"
+   },
+   {
+    "from": "kf3",
+    "to": "2.15s",
+    "clip": 4.3,
+    "render": 4.5,
+    "read": "both move"
+   },
+   {
+    "from": "2.15s",
+    "to": "2.4s",
+    "clip": 5.6,
+    "render": 6.7,
+    "read": "both move"
+   },
+   {
+    "from": "2.4s",
+    "to": "3.08s",
+    "clip": 7.2,
+    "render": 5.5,
+    "read": "both move"
+   },
+   {
+    "from": "3.08s",
+    "to": "kf4",
+    "clip": 9.8,
+    "render": 10.6,
+    "read": "both move"
+   },
+   {
+    "from": "kf4",
+    "to": "4.2s",
+    "clip": 2,
+    "render": 1.1,
+    "read": "both move"
+   },
+   {
+    "from": "4.2s",
+    "to": "4.43s",
+    "clip": 3.6,
+    "render": 2.6,
+    "read": "both move"
+   },
+   {
+    "from": "4.43s",
+    "to": "5.5s",
+    "clip": 3.6,
+    "render": 2.5,
+    "read": "both move"
+   },
+   {
+    "from": "5.5s",
+    "to": "6.18s",
+    "clip": 4,
+    "render": 2.8,
+    "read": "both move"
+   },
+   {
+    "from": "6.18s",
+    "to": "6.6s",
+    "clip": 1.8,
+    "render": 1.8,
+    "read": "both move"
+   },
+   {
+    "from": "6.6s",
+    "to": "7.1s",
+    "clip": 2.6,
+    "render": 2.4,
+    "read": "both move"
+   },
+   {
+    "from": "7.1s",
+    "to": "7.13s",
+    "clip": 1.1,
+    "render": 1.4,
+    "read": "both move"
+   },
+   {
+    "from": "7.13s",
+    "to": "7.4s",
+    "clip": 1,
+    "render": 0.7,
+    "read": "both move"
+   }
+  ],
+  "trajectories": []
+ },
+ "scale": {
+  "ok": true,
+  "changed": 0.2,
+  "read": "scales: the half-size render matches the full one (difference 0.2)"
+ },
+ "rubric": {
+  "file": "factory/l9y2vy-expanding-search-interaction/rubric.json",
+  "total": 45,
+  "counted": 45,
+  "pass": 44,
+  "fail": 1,
+  "unsure": 0,
+  "unjudged": 0,
+  "passRate": 98,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "style",
+    "element": "page background",
+    "check": "The page is a flat warm off-white (about #f4f3ef) with no gradient, texture or vignette",
+    "box": [
+     0,
+     0,
+     1020,
+     720
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Flat warm off-white page matches the clip, no gradient. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "present",
+    "element": "collapsed search button",
+    "check": "At rest a single circular search button is the only object on the page, centred horizontally (centre x≈509) with its top near y=137",
+    "box": [
+     440,
+     125,
+     140,
+     140
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Single circular button at the same centred top position as the clip. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "position",
+    "element": "collapsed search button",
+    "check": "The button is a circle about 112 px across (x≈453–565, y≈137–249)",
+    "box": [
+     440,
+     125,
+     140,
+     140
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Circle is about 112 px across, same size and place as the clip. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "style",
+    "element": "collapsed search button",
+    "check": "The button is two-layer: a white outer ring about 10–11 px thick around a warm-grey (#ebe9e4) inner disc about 90 px across",
+    "box": [
+     440,
+     125,
+     140,
+     140
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White ring about 10 px around a grey disc about 90 px, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "style",
+    "element": "collapsed search button",
+    "check": "The white ring has only a faint 1 px light-grey hairline edge and a soft diffuse shadow below it, not a dark or thick outline",
+    "box": [
+     440,
+     125,
+     140,
+     150
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Faint hairline edge and soft diffuse shadow below, similar to the clip. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "imagery",
+    "element": "magnifier icon",
+    "check": "A dark stroked magnifier (open circle with a short handle to the lower right, about 28 px) sits centred in the grey disc",
+    "box": [
+     490,
+     177,
+     36,
+     36
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Dark stroked magnifier about 28 px centred in the disc; stroke is marginally heavier than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "position",
+    "element": "expanded search bar",
+    "check": "The expanded bar spans about x 237–779 and y 137–249 (542 × 112 px), horizontally centred on the same axis as the circle",
+    "box": [
+     225,
+     125,
+     570,
+     140
+    ],
+    "at": 1.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Bar spans the same x range and height as the clip, about 542 px wide, on the same axis. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "style",
+    "element": "expanded search bar",
+    "check": "The bar is a fully rounded pill: a white shell with a hairline edge enclosing a warm-grey (#ebe9e4) pill field inset about 11 px on every side",
+    "box": [
+     237,
+     137,
+     542,
+     112
+    ],
+    "at": 1.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White pill shell with a hairline edge and a grey field inset about 11 px, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "position",
+    "element": "magnifier icon",
+    "check": "Once expanded, the magnifier sits at the left of the field, centred near x≈292, y≈193",
+    "box": [
+     270,
+     170,
+     45,
+     45
+    ],
+    "at": 1.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Magnifier sits at the left of the field at the same x and y as the clip. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "text",
+    "element": "placeholder text",
+    "check": "The field reads exactly 'Search components' in light grey (about #a8a7a3), roughly 27 px regular weight, starting near x≈334",
+    "box": [
+     325,
+     170,
+     300,
+     46
+    ],
+    "at": 1.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'Search components' in light grey regular weight; about 6% narrower than the clip, starting a few px later. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "style",
+    "element": "text caret",
+    "check": "A blue/violet vertical caret about 34 px tall sits just left of the placeholder's first letter",
+    "box": [
+     325,
+     170,
+     30,
+     46
+    ],
+    "at": 1.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Blue vertical caret of similar height just left of the 'S', as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "style",
+    "element": "clear × icon",
+    "check": "A mid-grey × (two thin strokes, about 21 px) sits at the right of the field near x≈723, y≈193",
+    "box": [
+     700,
+     170,
+     46,
+     46
+    ],
+    "at": 1.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Mid-grey thin-stroke × of about the same size and position as the clip. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "position",
+    "element": "results panel",
+    "check": "A results panel sits 15 px below the bar, spanning x 237–779 and y 263–610",
+    "box": [
+     225,
+     255,
+     570,
+     370
+    ],
+    "at": 1.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Panel sits just below the bar with the same x range and bottom edge (about y 477 in the tile) as the clip. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "style",
+    "element": "results panel",
+    "check": "The panel is near-white (#fdfdfd), lighter than the page, with corner radius about 40 px",
+    "box": [
+     237,
+     263,
+     542,
+     347
+    ],
+    "at": 1.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Near-white panel with a large corner radius that matches the clip. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "style",
+    "element": "results panel",
+    "check": "The panel lifts off the page with a soft, wide, low-contrast shadow mostly below it, with no hard dark border",
+    "box": [
+     220,
+     560,
+     580,
+     120
+    ],
+    "at": 1.3,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "Rebuild's shadow below the panel is visibly fainter and shorter than the clip's wider, darker shadow. [votes: no/no/no]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "present",
+    "element": "row labels",
+    "check": "The panel lists exactly 4 rows",
+    "box": [
+     237,
+     263,
+     542,
+     347
+    ],
+    "at": 1.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Four rows listed, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "text",
+    "element": "row labels",
+    "check": "The rows read top to bottom 'Action Button', 'Toast', 'Code Input', 'Segmented Control'",
+    "box": [
+     260,
+     290,
+     300,
+     290
+    ],
+    "at": 1.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rows read Action Button, Toast, Code Input, Segmented Control, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "style",
+    "element": "row labels",
+    "check": "Row labels are dark near-black (#1c1c1c) sans at about 27 px, left-aligned at x≈276",
+    "box": [
+     260,
+     290,
+     300,
+     290
+    ],
+    "at": 1.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Dark sans labels at the same size and left alignment; 'Segmented Control' is 428 px against the clip's 435 px in the tile. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "position",
+    "element": "row labels",
+    "check": "Rows are evenly pitched about 81 px apart (centres near y 316, 397, 478, 560)",
+    "box": [
+     260,
+     290,
+     300,
+     290
+    ],
+    "at": 1.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Row centres match the clip within about 3 px, with the same pitch. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "style",
+    "element": "row highlight pill",
+    "check": "The first row sits on a fully rounded warm-grey (#ebe9e4) pill about 520 × 80 px (x 248–768, y 275–355), inset ~11 px from the panel edge",
+    "box": [
+     240,
+     268,
+     535,
+     95
+    ],
+    "at": 1.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Warm-grey fully rounded pill of about 520×80 px with the same inset, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "motion",
+    "element": "collapsed search button",
+    "check": "Between 0.2 s and 1.3 s the circle widens symmetrically left and right into the pill bar (left edge moves ~216 px left, right edge ~214 px right) while its top stays at y≈137",
+    "box": [
+     225,
+     125,
+     570,
+     140
+    ],
+    "at": 0.2,
+    "then": 1.3,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Circle at the same top position at 0.2s and a full-width pill at 1.3s in both. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "motion",
+    "element": "expanded search bar",
+    "check": "Mid-expansion at 0.5 s the bar is an intermediate pill about 405 px wide (x≈305–711) with the placeholder clipped ('Search compor')",
+    "box": [
+     295,
+     130,
+     430,
+     130
+    ],
+    "at": 0.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Intermediate pill of similar width with placeholder clipped ('compon' vs clip's 'compor'). [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "motion",
+    "element": "results panel",
+    "check": "At 0.5 s the panel is only a thin white pill (~40 px tall, y≈263–303) under the bar and it grows downward to y≈610 by 1.0 s",
+    "box": [
+     225,
+     255,
+     570,
+     370
+    ],
+    "at": 0.5,
+    "then": 1,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Thin white pill under the bar at 0.5s (~40px) and full panel by 1s in both. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "motion",
+    "element": "row labels",
+    "check": "Rows enter staggered: at 0.72 s the upper rows are nearly settled while 'Segmented Control' is still blurred and offset right, settling sharp by 1.3 s",
+    "box": [
+     240,
+     280,
+     540,
+     320
+    ],
+    "at": 0.72,
+    "then": 1.3,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Segmented Control blurred and offset right at 0.72s while upper rows are nearly settled; sharp by 1.3s. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "style",
+    "element": "row labels",
+    "check": "Entering rows show a real Gaussian blur on the text (soft smeared glyphs), not just reduced opacity",
+    "box": [
+     270,
+     535,
+     280,
+     50
+    ],
+    "at": 0.72,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Real Gaussian blur on the text, though somewhat heavier than the clip's. [votes: yes/yes/no]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "motion",
+    "element": "row highlight pill",
+    "check": "The highlight pill moves from row 1 (Action Button) to row 2 (Toast) between 1.3 s and 1.9 s while the row labels stay still",
+    "box": [
+     237,
+     263,
+     542,
+     347
+    ],
+    "at": 1.3,
+    "then": 1.9,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Pill sits on Action Button at 1.3s and on Toast at 1.9s, labels unmoved. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "motion",
+    "element": "row highlight pill",
+    "check": "The highlight glides continuously: at 2.15 s it sits between 'Toast' and 'Code Input' (y≈393–473), not snapping row to row",
+    "box": [
+     237,
+     263,
+     542,
+     347
+    ],
+    "at": 2.15,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Pill straddles Toast and Code Input, about 5px higher than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "motion",
+    "element": "row highlight pill",
+    "check": "At 2.4 s the highlight sits on 'Code Input' (y≈440–520)",
+    "box": [
+     237,
+     263,
+     542,
+     347
+    ],
+    "at": 2.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Pill sits on Code Input, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "motion",
+    "element": "row highlight pill",
+    "check": "By 3.7 s the highlight has travelled back up to 'Action Button' (y≈275–355), passing over the rows between ~2.95 and 3.2 s",
+    "box": [
+     237,
+     263,
+     542,
+     347
+    ],
+    "at": 3.08,
+    "then": 3.7,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Pill mid-travel at 3.08s (slightly lower than clip's) and back on Action Button at 3.7s. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "motion",
+    "element": "search bar and panel",
+    "check": "During the hover phase (1.3 s to 3.7 s) the bar and panel outlines do not move or resize",
+    "box": [
+     225,
+     125,
+     570,
+     500
+    ],
+    "at": 1.3,
+    "then": 3.7,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Bar and panel outlines are identical between 1.3s and 3.7s. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "text",
+    "element": "typed query text",
+    "check": "At 4.43 s the field shows the typed letter 't' in dark text with the caret after it, and the placeholder is gone",
+    "box": [
+     320,
+     170,
+     100,
+     46
+    ],
+    "at": 4.43,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Dark 't' with blue caret after it, placeholder gone. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "text",
+    "element": "filtered rows for 't'",
+    "check": "With 't' typed the rows read 'Toast', 'Tab Bar', 'Action Button', 'Quantity Stepper', 'Invite Field' (5 rows)",
+    "box": [
+     250,
+     280,
+     300,
+     390
+    ],
+    "at": 4.43,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same five rows, Toast, Tab Bar, Action Button, Quantity Stepper, Invite Field, though the last two are more blurred than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "style",
+    "element": "filtered rows for 't'",
+    "check": "In each result only the matched 't'/'T' letter is bold black; the rest of the name is mid-grey",
+    "box": [
+     250,
+     280,
+     300,
+     390
+    ],
+    "at": 4.43,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Only the matched t/T is bold black and the rest is mid-grey, same as the clip. [votes: no/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "motion",
+    "element": "results panel",
+    "check": "Typing 't' makes the panel grow downward from bottom y≈610 to y≈698 to fit five rows, top edge fixed",
+    "box": [
+     225,
+     255,
+     570,
+     460
+    ],
+    "at": 3.7,
+    "then": 4.43,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Panel bottom grows from about 477 to 1140 in tile coordinates, as in the clip, top fixed. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "motion",
+    "element": "filtered rows",
+    "check": "While re-filtering (4.2 s) the rows cross-fade: old names fade grey and blur/shift as new names move into place, no instant swap",
+    "box": [
+     240,
+     280,
+     540,
+     340
+    ],
+    "at": 4.2,
+    "then": 4.43,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Old names greying and blurring while new rows move in at 4.2s and 4.43s, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "text",
+    "element": "typed query text",
+    "check": "By 5.5 s the field reads 'to'",
+    "box": [
+     320,
+     170,
+     100,
+     46
+    ],
+    "at": 5.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Field reads 'to' with the caret after it. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "text",
+    "element": "filtered rows for 'to'",
+    "check": "With 'to' typed there are exactly 3 rows: 'Toast', 'Hold to Confirm', 'Action Button'",
+    "box": [
+     260,
+     290,
+     300,
+     210
+    ],
+    "at": 5.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Exactly three rows: Toast, Hold to Confirm, Action Button. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "style",
+    "element": "filtered rows for 'to'",
+    "check": "The matched 'To' in Toast, the word 'to' in Hold to Confirm and 'to' in Button are bold black; other letters are grey (~#7d7d7a)",
+    "box": [
+     260,
+     290,
+     300,
+     210
+    ],
+    "at": 5.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'To', 'to' and 'to' are bold black and the rest is mid-grey, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "position",
+    "element": "results panel",
+    "check": "With 'to' the panel bottom sits near y≈528, with the highlight pill still on row 1 ('Toast')",
+    "box": [
+     225,
+     255,
+     570,
+     300
+    ],
+    "at": 5.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Panel bottom at about 395 in both, highlight on Toast. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c39.png"
+   },
+   {
+    "id": "c40",
+    "axis": "style",
+    "element": "clear × icon",
+    "check": "When hovered the × gains a round warm-grey hover disc (~64 px, slightly darker than the field) behind it",
+    "box": [
+     685,
+     155,
+     80,
+     80
+    ],
+    "at": 6.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Round warm-grey hover disc of about 64px behind the ×, slightly darker than the field. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c40.png"
+   },
+   {
+    "id": "c41",
+    "axis": "motion",
+    "element": "search field",
+    "check": "Clicking × clears the query: between 5.5 s and 6.6 s the field returns to the grey 'Search components' placeholder and the list returns to the original 4 rows with panel bottom back at y≈610",
+    "box": [
+     225,
+     125,
+     570,
+     500
+    ],
+    "at": 5.5,
+    "then": 6.6,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 6.6s the rebuild shows the grey 'Search components' placeholder and the same 4 rows, with the panel bottom at about the same height as the clip (~1053 in the tile). [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c41.png"
+   },
+   {
+    "id": "c42",
+    "axis": "motion",
+    "element": "results panel",
+    "check": "At 7.1 s the panel is retracting upward (only ~120 px tall, y≈263–384) with its remaining row label blurred",
+    "box": [
+     225,
+     255,
+     570,
+     240
+    ],
+    "at": 7.1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 7.1s the rebuild panel is a short, retracted pill about 120 px tall with a blurred 'Action Button' label, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c42.png"
+   },
+   {
+    "id": "c43",
+    "axis": "motion",
+    "element": "expanded search bar",
+    "check": "Between 7.1 s and 7.4 s the pill bar contracts back into a ~108–112 px circle centred near x≈509 and the panel is gone entirely",
+    "box": [
+     225,
+     125,
+     570,
+     500
+    ],
+    "at": 7.1,
+    "then": 7.4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 7.1s the panel is a thin blurred stub in both; at 7.4s the rebuild is a ~110 px circle at the same x (~285 in the tile) with no panel. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c43.png"
+   },
+   {
+    "id": "c44",
+    "axis": "motion",
+    "element": "collapsed search button",
+    "check": "The loop ends where it began: the 7.4 s frame matches the 0.2 s frame (single circle button, magnifier only, no panel)",
+    "box": [
+     0,
+     0,
+     1020,
+     720
+    ],
+    "at": 0.2,
+    "then": 7.4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The rebuild's 7.4s frame is a single circle with only a magnifier and no panel, matching its 0.2s frame and the clip's. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c44.png"
+   },
+   {
+    "id": "c45",
+    "axis": "motion",
+    "element": "motion order",
+    "check": "The bar's widening and the panel's downward drop happen together in one ~0.55 s move (0.45–1.0 s), not one after the other",
+    "box": [
+     225,
+     125,
+     570,
+     500
+    ],
+    "at": 0.5,
+    "then": 0.72,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 0.5s the rebuild bar is already wide (~403 px vs 405 in the clip) with a short panel stub below; at 0.72s the panel is nearly fully dropped in both, so the two moves overlap. [votes: yes/yes/yes]",
+    "image": "factory/l9y2vy-expanding-search-interaction/judge/c45.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 0.639,
+  "calls": 9,
+  "images": "factory/l9y2vy-expanding-search-interaction/judge",
+  "votes": 3,
+  "spread": [
+   43,
+   44,
+   43
+  ]
+ }
+}

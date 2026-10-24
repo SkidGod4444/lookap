@@ -1,0 +1,1517 @@
+{
+ "slug": "10qjw2-ai-node-based-workflow-canvas",
+ "measured": "draft",
+ "frame": {
+  "w": 1006,
+  "h": 720
+ },
+ "animations": 30,
+ "score": 81,
+ "stills": 87,
+ "motion": 78,
+ "keyframes": [
+  {
+   "keyframe": "0s",
+   "at": 0,
+   "still": false,
+   "score": 92,
+   "overall": 5,
+   "elements": [
+    {
+     "name": "draft 1 #202323",
+     "box": [
+      0,
+      132,
+      240,
+      187
+     ],
+     "reference": "#1b1b1c",
+     "yours": "#1a1c1d",
+     "delta": 9,
+     "colour": 1,
+     "deltaE": 0.7,
+     "shift": null,
+     "afterShift": 9,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 3 #222325",
+     "box": [
+      167,
+      450,
+      295,
+      4
+     ],
+     "reference": "#1e1e21",
+     "yours": "#151617",
+     "delta": 8,
+     "colour": 9,
+     "deltaE": 4.5,
+     "shift": null,
+     "afterShift": 8,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 5 #212325",
+     "box": [
+      100,
+      118,
+      288,
+      2
+     ],
+     "reference": "#222222",
+     "yours": "#101213",
+     "delta": 8,
+     "colour": 16,
+     "deltaE": 7.8,
+     "shift": null,
+     "afterShift": 8,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "B2",
+     "box": [
+      168,
+      120,
+      168,
+      120
+     ],
+     "delta": 12,
+     "over": [
+      "draft 1 #202323",
+      "draft 2 #212124"
+     ]
+    },
+    {
+     "cell": "C3",
+     "box": [
+      335,
+      240,
+      168,
+      120
+     ],
+     "delta": 11,
+     "over": []
+    },
+    {
+     "cell": "E2",
+     "box": [
+      168,
+      480,
+      168,
+      120
+     ],
+     "delta": 11,
+     "over": [
+      "draft 6 #232627"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "kf1",
+   "at": 0.2,
+   "still": true,
+   "score": 92,
+   "overall": 5,
+   "elements": [
+    {
+     "name": "draft 1 #202323",
+     "box": [
+      0,
+      132,
+      240,
+      187
+     ],
+     "reference": "#1b1c1d",
+     "yours": "#1a1c1d",
+     "delta": 9,
+     "colour": 0,
+     "deltaE": 0.1,
+     "shift": null,
+     "afterShift": 9,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 3 #222325",
+     "box": [
+      167,
+      450,
+      295,
+      4
+     ],
+     "reference": "#1e1e20",
+     "yours": "#151617",
+     "delta": 7,
+     "colour": 9,
+     "deltaE": 4.3,
+     "shift": null,
+     "afterShift": 7,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 2 #212124",
+     "box": [
+      121,
+      180,
+      251,
+      3
+     ],
+     "reference": "#1e1e20",
+     "yours": "#17181a",
+     "delta": 6,
+     "colour": 6,
+     "deltaE": 3.2,
+     "shift": null,
+     "afterShift": 6,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "B2",
+     "box": [
+      168,
+      120,
+      168,
+      120
+     ],
+     "delta": 11,
+     "over": [
+      "draft 1 #202323",
+      "draft 2 #212124"
+     ]
+    },
+    {
+     "cell": "C4",
+     "box": [
+      503,
+      240,
+      168,
+      120
+     ],
+     "delta": 11,
+     "over": []
+    },
+    {
+     "cell": "E2",
+     "box": [
+      168,
+      480,
+      168,
+      120
+     ],
+     "delta": 11,
+     "over": [
+      "draft 6 #232627"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "kf2",
+   "at": 0.7,
+   "still": true,
+   "score": 82,
+   "overall": 11,
+   "elements": [
+    {
+     "name": "draft 3 #222325",
+     "box": [
+      167,
+      450,
+      295,
+      4
+     ],
+     "reference": "#212324",
+     "yours": "#292a2b",
+     "delta": 40,
+     "colour": 8,
+     "deltaE": 3.8,
+     "shift": [
+      -6,
+      -8
+     ],
+     "afterShift": 8,
+     "cause": "misplaced: yours sits 6 px right and 8 px below the reference"
+    },
+    {
+     "name": "draft 1 #202323",
+     "box": [
+      0,
+      132,
+      240,
+      187
+     ],
+     "reference": "#1b1c1d",
+     "yours": "#1a1b1c",
+     "delta": 10,
+     "colour": 1,
+     "deltaE": 0.5,
+     "shift": null,
+     "afterShift": 10,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 2 #212124",
+     "box": [
+      121,
+      180,
+      251,
+      3
+     ],
+     "reference": "#17191a",
+     "yours": "#17191a",
+     "delta": 2,
+     "colour": 0,
+     "deltaE": 0.1,
+     "shift": null,
+     "afterShift": 2,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "D3",
+     "box": [
+      335,
+      360,
+      168,
+      120
+     ],
+     "delta": 60,
+     "over": [
+      "draft 3 #222325"
+     ]
+    },
+    {
+     "cell": "C4",
+     "box": [
+      503,
+      240,
+      168,
+      120
+     ],
+     "delta": 26,
+     "over": []
+    },
+    {
+     "cell": "D2",
+     "box": [
+      168,
+      360,
+      168,
+      120
+     ],
+     "delta": 23,
+     "over": [
+      "draft 3 #222325"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "1.23s",
+   "at": 1.23,
+   "still": false,
+   "score": 76,
+   "overall": 15,
+   "elements": [
+    {
+     "name": "draft 4 #202223",
+     "box": [
+      631,
+      104,
+      283,
+      2
+     ],
+     "reference": "#414027",
+     "yours": "#333223",
+     "delta": 14,
+     "colour": 10,
+     "deltaE": 8.2,
+     "shift": [
+      0,
+      -2
+     ],
+     "afterShift": 14,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #202323",
+     "box": [
+      0,
+      132,
+      240,
+      187
+     ],
+     "reference": "#1b1c1d",
+     "yours": "#1a1b1c",
+     "delta": 10,
+     "colour": 1,
+     "deltaE": 0.5,
+     "shift": null,
+     "afterShift": 10,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 3 #222325",
+     "box": [
+      167,
+      450,
+      295,
+      4
+     ],
+     "reference": "#26251d",
+     "yours": "#29281c",
+     "delta": 8,
+     "colour": 2,
+     "deltaE": 2.9,
+     "shift": null,
+     "afterShift": 8,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "C4",
+     "box": [
+      503,
+      240,
+      168,
+      120
+     ],
+     "delta": 42,
+     "over": []
+    },
+    {
+     "cell": "D4",
+     "box": [
+      503,
+      360,
+      168,
+      120
+     ],
+     "delta": 35,
+     "over": []
+    },
+    {
+     "cell": "B5",
+     "box": [
+      671,
+      120,
+      168,
+      120
+     ],
+     "delta": 27,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "kf3",
+   "at": 2.15,
+   "still": true,
+   "score": 87,
+   "overall": 8,
+   "elements": [
+    {
+     "name": "draft 1 #202323",
+     "box": [
+      0,
+      132,
+      240,
+      187
+     ],
+     "reference": "#1a1c1d",
+     "yours": "#1a1c1d",
+     "delta": 9,
+     "colour": 0,
+     "deltaE": 0.2,
+     "shift": null,
+     "afterShift": 9,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 2 #212124",
+     "box": [
+      121,
+      180,
+      251,
+      3
+     ],
+     "reference": "#1d1d20",
+     "yours": "#17181a",
+     "delta": 8,
+     "colour": 6,
+     "deltaE": 2.8,
+     "shift": null,
+     "afterShift": 8,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 5 #212325",
+     "box": [
+      100,
+      118,
+      288,
+      2
+     ],
+     "reference": "#202223",
+     "yours": "#101213",
+     "delta": 8,
+     "colour": 16,
+     "deltaE": 7.7,
+     "shift": null,
+     "afterShift": 8,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "D2",
+     "box": [
+      168,
+      360,
+      168,
+      120
+     ],
+     "delta": 31,
+     "over": [
+      "draft 3 #222325"
+     ]
+    },
+    {
+     "cell": "C4",
+     "box": [
+      503,
+      240,
+      168,
+      120
+     ],
+     "delta": 26,
+     "over": []
+    },
+    {
+     "cell": "D3",
+     "box": [
+      335,
+      360,
+      168,
+      120
+     ],
+     "delta": 23,
+     "over": [
+      "draft 3 #222325"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "2.65s",
+   "at": 2.65,
+   "still": false,
+   "score": 84,
+   "overall": 10,
+   "elements": [
+    {
+     "name": "draft 1 #202323",
+     "box": [
+      0,
+      132,
+      240,
+      187
+     ],
+     "reference": "#1a1c1d",
+     "yours": "#1a1c1d",
+     "delta": 9,
+     "colour": 0,
+     "deltaE": 0.1,
+     "shift": null,
+     "afterShift": 9,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 5 #212325",
+     "box": [
+      100,
+      118,
+      288,
+      2
+     ],
+     "reference": "#202223",
+     "yours": "#101213",
+     "delta": 8,
+     "colour": 16,
+     "deltaE": 7.9,
+     "shift": null,
+     "afterShift": 8,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 2 #212124",
+     "box": [
+      121,
+      180,
+      251,
+      3
+     ],
+     "reference": "#1c1d1f",
+     "yours": "#17181a",
+     "delta": 7,
+     "colour": 5,
+     "deltaE": 2.4,
+     "shift": null,
+     "afterShift": 7,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "D3",
+     "box": [
+      335,
+      360,
+      168,
+      120
+     ],
+     "delta": 46,
+     "over": [
+      "draft 3 #222325"
+     ]
+    },
+    {
+     "cell": "C3",
+     "box": [
+      335,
+      240,
+      168,
+      120
+     ],
+     "delta": 32,
+     "over": []
+    },
+    {
+     "cell": "D2",
+     "box": [
+      168,
+      360,
+      168,
+      120
+     ],
+     "delta": 30,
+     "over": [
+      "draft 3 #222325"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "kf4",
+   "at": 3.6,
+   "still": true,
+   "score": 88,
+   "overall": 7,
+   "elements": [
+    {
+     "name": "draft 1 #202323",
+     "box": [
+      0,
+      132,
+      240,
+      187
+     ],
+     "reference": "#1a1c1d",
+     "yours": "#1a1c1d",
+     "delta": 9,
+     "colour": 0,
+     "deltaE": 0.1,
+     "shift": null,
+     "afterShift": 9,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 2 #212124",
+     "box": [
+      121,
+      180,
+      251,
+      3
+     ],
+     "reference": "#1d1e20",
+     "yours": "#17181a",
+     "delta": 9,
+     "colour": 6,
+     "deltaE": 3,
+     "shift": null,
+     "afterShift": 9,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 3 #222325",
+     "box": [
+      167,
+      450,
+      295,
+      4
+     ],
+     "reference": "#1e2122",
+     "yours": "#151617",
+     "delta": 9,
+     "colour": 10,
+     "deltaE": 5.1,
+     "shift": null,
+     "afterShift": 9,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "D4",
+     "box": [
+      503,
+      360,
+      168,
+      120
+     ],
+     "delta": 26,
+     "over": []
+    },
+    {
+     "cell": "E3",
+     "box": [
+      335,
+      480,
+      168,
+      120
+     ],
+     "delta": 26,
+     "over": [
+      "draft 6 #232627"
+     ]
+    },
+    {
+     "cell": "E4",
+     "box": [
+      503,
+      480,
+      168,
+      120
+     ],
+     "delta": 17,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "4.1s",
+   "at": 4.1,
+   "still": false,
+   "score": 86,
+   "overall": 8,
+   "elements": [
+    {
+     "name": "draft 1 #202323",
+     "box": [
+      0,
+      132,
+      240,
+      187
+     ],
+     "reference": "#1a1c1d",
+     "yours": "#1a1c1d",
+     "delta": 9,
+     "colour": 0,
+     "deltaE": 0.1,
+     "shift": null,
+     "afterShift": 9,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 2 #212124",
+     "box": [
+      121,
+      180,
+      251,
+      3
+     ],
+     "reference": "#1d1e20",
+     "yours": "#17181a",
+     "delta": 9,
+     "colour": 6,
+     "deltaE": 3,
+     "shift": null,
+     "afterShift": 9,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 3 #222325",
+     "box": [
+      167,
+      450,
+      295,
+      4
+     ],
+     "reference": "#1e2122",
+     "yours": "#151617",
+     "delta": 9,
+     "colour": 10,
+     "deltaE": 5.1,
+     "shift": null,
+     "afterShift": 9,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "D4",
+     "box": [
+      503,
+      360,
+      168,
+      120
+     ],
+     "delta": 49,
+     "over": []
+    },
+    {
+     "cell": "C4",
+     "box": [
+      503,
+      240,
+      168,
+      120
+     ],
+     "delta": 21,
+     "over": []
+    },
+    {
+     "cell": "E4",
+     "box": [
+      503,
+      480,
+      168,
+      120
+     ],
+     "delta": 21,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "4.6s",
+   "at": 4.6,
+   "still": false,
+   "score": 89,
+   "overall": 7,
+   "elements": [
+    {
+     "name": "draft 1 #202323",
+     "box": [
+      0,
+      132,
+      240,
+      187
+     ],
+     "reference": "#1a1c1d",
+     "yours": "#1a1c1d",
+     "delta": 9,
+     "colour": 0,
+     "deltaE": 0.1,
+     "shift": null,
+     "afterShift": 9,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 2 #212124",
+     "box": [
+      121,
+      180,
+      251,
+      3
+     ],
+     "reference": "#1d1e20",
+     "yours": "#17181a",
+     "delta": 9,
+     "colour": 6,
+     "deltaE": 3,
+     "shift": null,
+     "afterShift": 9,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 3 #222325",
+     "box": [
+      167,
+      450,
+      295,
+      4
+     ],
+     "reference": "#1e2122",
+     "yours": "#151617",
+     "delta": 9,
+     "colour": 10,
+     "deltaE": 5.1,
+     "shift": null,
+     "afterShift": 9,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "D4",
+     "box": [
+      503,
+      360,
+      168,
+      120
+     ],
+     "delta": 17,
+     "over": []
+    },
+    {
+     "cell": "D5",
+     "box": [
+      671,
+      360,
+      168,
+      120
+     ],
+     "delta": 15,
+     "over": []
+    },
+    {
+     "cell": "B4",
+     "box": [
+      503,
+      120,
+      168,
+      120
+     ],
+     "delta": 14,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "4.97s",
+   "at": 4.97,
+   "still": false,
+   "score": 78,
+   "overall": 14,
+   "elements": [
+    {
+     "name": "draft 3 #222325",
+     "box": [
+      167,
+      450,
+      295,
+      4
+     ],
+     "reference": "#2f272e",
+     "yours": "#393137",
+     "delta": 21,
+     "colour": 9,
+     "deltaE": 4.5,
+     "shift": [
+      2,
+      -4
+     ],
+     "afterShift": 11,
+     "cause": "misplaced: yours sits 2 px left and 4 px below the reference"
+    },
+    {
+     "name": "draft 1 #202323",
+     "box": [
+      0,
+      132,
+      240,
+      187
+     ],
+     "reference": "#1b1c1d",
+     "yours": "#1a1b1c",
+     "delta": 10,
+     "colour": 1,
+     "deltaE": 0.5,
+     "shift": null,
+     "afterShift": 10,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 6 #232627",
+     "box": [
+      176,
+      589,
+      280,
+      2
+     ],
+     "reference": "#20171e",
+     "yours": "#231920",
+     "delta": 6,
+     "colour": 2,
+     "deltaE": 1.4,
+     "shift": null,
+     "afterShift": 6,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "C4",
+     "box": [
+      503,
+      240,
+      168,
+      120
+     ],
+     "delta": 62,
+     "over": []
+    },
+    {
+     "cell": "D3",
+     "box": [
+      335,
+      360,
+      168,
+      120
+     ],
+     "delta": 40,
+     "over": [
+      "draft 3 #222325"
+     ]
+    },
+    {
+     "cell": "E4",
+     "box": [
+      503,
+      480,
+      168,
+      120
+     ],
+     "delta": 23,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "5.95s",
+   "at": 5.95,
+   "still": false,
+   "score": 72,
+   "overall": 17,
+   "elements": [
+    {
+     "name": "draft 3 #222325",
+     "box": [
+      167,
+      450,
+      295,
+      4
+     ],
+     "reference": "#322126",
+     "yours": "#342225",
+     "delta": 21,
+     "colour": 2,
+     "deltaE": 1.9,
+     "shift": [
+      -8,
+      0
+     ],
+     "afterShift": 10,
+     "cause": "misplaced: yours sits 8 px right the reference"
+    },
+    {
+     "name": "draft 4 #202223",
+     "box": [
+      631,
+      104,
+      283,
+      2
+     ],
+     "reference": "#3f2d28",
+     "yours": "#2f2523",
+     "delta": 19,
+     "colour": 10,
+     "deltaE": 6.8,
+     "shift": [
+      4,
+      -4
+     ],
+     "afterShift": 14,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #202323",
+     "box": [
+      0,
+      132,
+      240,
+      187
+     ],
+     "reference": "#1b1c1d",
+     "yours": "#1a1b1c",
+     "delta": 10,
+     "colour": 1,
+     "deltaE": 0.5,
+     "shift": null,
+     "afterShift": 10,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E4",
+     "box": [
+      503,
+      480,
+      168,
+      120
+     ],
+     "delta": 45,
+     "over": []
+    },
+    {
+     "cell": "C4",
+     "box": [
+      503,
+      240,
+      168,
+      120
+     ],
+     "delta": 40,
+     "over": []
+    },
+    {
+     "cell": "D4",
+     "box": [
+      503,
+      360,
+      168,
+      120
+     ],
+     "delta": 34,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "6.55s",
+   "at": 6.55,
+   "still": false,
+   "score": 71,
+   "overall": 18,
+   "elements": [
+    {
+     "name": "draft 6 #232627",
+     "box": [
+      176,
+      589,
+      280,
+      2
+     ],
+     "reference": "#1e2021",
+     "yours": "#252728",
+     "delta": 68,
+     "colour": 7,
+     "deltaE": 3.4,
+     "shift": [
+      4,
+      -4
+     ],
+     "afterShift": 66,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 3 #222325",
+     "box": [
+      167,
+      450,
+      295,
+      4
+     ],
+     "reference": "#251e1d",
+     "yours": "#362c2b",
+     "delta": 24,
+     "colour": 15,
+     "deltaE": 7.2,
+     "shift": [
+      -2,
+      -2
+     ],
+     "afterShift": 15,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #202323",
+     "box": [
+      0,
+      132,
+      240,
+      187
+     ],
+     "reference": "#1b1c1d",
+     "yours": "#1a1b1c",
+     "delta": 10,
+     "colour": 1,
+     "deltaE": 0.5,
+     "shift": null,
+     "afterShift": 10,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      335,
+      480,
+      168,
+      120
+     ],
+     "delta": 63,
+     "over": [
+      "draft 6 #232627"
+     ]
+    },
+    {
+     "cell": "F1",
+     "box": [
+      0,
+      600,
+      168,
+      120
+     ],
+     "delta": 53,
+     "over": []
+    },
+    {
+     "cell": "F2",
+     "box": [
+      168,
+      600,
+      168,
+      120
+     ],
+     "delta": 50,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "7.53s",
+   "at": 7.53,
+   "still": false,
+   "score": 73,
+   "overall": 17,
+   "elements": [
+    {
+     "name": "draft 3 #222325",
+     "box": [
+      167,
+      450,
+      295,
+      4
+     ],
+     "reference": "#292c2b",
+     "yours": "#2b2b2a",
+     "delta": 24,
+     "colour": 1,
+     "deltaE": 1.1,
+     "shift": [
+      -8,
+      0
+     ],
+     "afterShift": 17,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 4 #202223",
+     "box": [
+      631,
+      104,
+      283,
+      2
+     ],
+     "reference": "#1f3435",
+     "yours": "#1c2729",
+     "delta": 22,
+     "colour": 10,
+     "deltaE": 6.7,
+     "shift": [
+      -2,
+      6
+     ],
+     "afterShift": 14,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #202323",
+     "box": [
+      0,
+      132,
+      240,
+      187
+     ],
+     "reference": "#1b1c1d",
+     "yours": "#1a1b1c",
+     "delta": 10,
+     "colour": 1,
+     "deltaE": 0.4,
+     "shift": null,
+     "afterShift": 10,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "D4",
+     "box": [
+      503,
+      360,
+      168,
+      120
+     ],
+     "delta": 35,
+     "over": []
+    },
+    {
+     "cell": "F4",
+     "box": [
+      503,
+      600,
+      168,
+      120
+     ],
+     "delta": 34,
+     "over": []
+    },
+    {
+     "cell": "F1",
+     "box": [
+      0,
+      600,
+      168,
+      120
+     ],
+     "delta": 33,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "8s",
+   "at": 8,
+   "still": false,
+   "score": 70,
+   "overall": 18,
+   "elements": [
+    {
+     "name": "draft 6 #232627",
+     "box": [
+      176,
+      589,
+      280,
+      2
+     ],
+     "reference": "#1e2021",
+     "yours": "#262829",
+     "delta": 71,
+     "colour": 8,
+     "deltaE": 3.8,
+     "shift": [
+      -8,
+      -8
+     ],
+     "afterShift": 70,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #202323",
+     "box": [
+      0,
+      132,
+      240,
+      187
+     ],
+     "reference": "#1b1c1d",
+     "yours": "#1a1b1c",
+     "delta": 10,
+     "colour": 1,
+     "deltaE": 0.4,
+     "shift": null,
+     "afterShift": 10,
+     "cause": "matches"
+    },
+    {
+     "name": "draft 3 #222325",
+     "box": [
+      167,
+      450,
+      295,
+      4
+     ],
+     "reference": "#251e1d",
+     "yours": "#29201e",
+     "delta": 5,
+     "colour": 2,
+     "deltaE": 1.8,
+     "shift": null,
+     "afterShift": 5,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      335,
+      480,
+      168,
+      120
+     ],
+     "delta": 69,
+     "over": [
+      "draft 6 #232627"
+     ]
+    },
+    {
+     "cell": "F1",
+     "box": [
+      0,
+      600,
+      168,
+      120
+     ],
+     "delta": 55,
+     "over": []
+    },
+    {
+     "cell": "F2",
+     "box": [
+      168,
+      600,
+      168,
+      120
+     ],
+     "delta": 55,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "9s",
+   "at": 9,
+   "still": false,
+   "score": 71,
+   "overall": 18,
+   "elements": [
+    {
+     "name": "draft 3 #222325",
+     "box": [
+      167,
+      450,
+      295,
+      4
+     ],
+     "reference": "#332b22",
+     "yours": "#352b20",
+     "delta": 33,
+     "colour": 1,
+     "deltaE": 1.3,
+     "shift": [
+      -8,
+      0
+     ],
+     "afterShift": 26,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 6 #232627",
+     "box": [
+      176,
+      589,
+      280,
+      2
+     ],
+     "reference": "#212119",
+     "yours": "#23231a",
+     "delta": 21,
+     "colour": 2,
+     "deltaE": 1.4,
+     "shift": [
+      4,
+      -8
+     ],
+     "afterShift": 7,
+     "cause": "misplaced: yours sits 4 px left and 8 px below the reference"
+    },
+    {
+     "name": "draft 1 #202323",
+     "box": [
+      0,
+      132,
+      240,
+      187
+     ],
+     "reference": "#1b1c1d",
+     "yours": "#1a1b1c",
+     "delta": 10,
+     "colour": 1,
+     "deltaE": 0.5,
+     "shift": null,
+     "afterShift": 10,
+     "cause": "matches"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "D4",
+     "box": [
+      503,
+      360,
+      168,
+      120
+     ],
+     "delta": 45,
+     "over": []
+    },
+    {
+     "cell": "D3",
+     "box": [
+      335,
+      360,
+      168,
+      120
+     ],
+     "delta": 39,
+     "over": [
+      "draft 3 #222325"
+     ]
+    },
+    {
+     "cell": "F1",
+     "box": [
+      0,
+      600,
+      168,
+      120
+     ],
+     "delta": 38,
+     "over": []
+    }
+   ]
+  }
+ ],
+ "runs": 15,
+ "at": "2026-10-24T05:09:41.703Z",
+ "rank": 95,
+ "allPass": true,
+ "rubric": {
+  "pass": 43,
+  "fail": 0,
+  "unsure": 1,
+  "of": 44
+ }
+}

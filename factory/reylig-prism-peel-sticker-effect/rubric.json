@@ -1,0 +1,975 @@
+{
+ "slug": "reylig-prism-peel-sticker-effect",
+ "frame": {
+  "w": 1248,
+  "h": 1080
+ },
+ "at": "2026-10-23T18:07:42.956Z",
+ "model": "opus",
+ "costUsd": 0.833,
+ "summary": "A light #f4f4f5 canvas with a faint grey dot grid (~22 px pitch). Top-left: a small tracked uppercase grey label \"PEEL STICKER\" (x 23, y 36) over a large semibold title \"3 Prism\", where the numeral is light grey and the word near-black. Top-right: a monospace grey caption \"Your picture · WebGL 2\" (right edge ~1235, y 92). In the centre sits one die-cut vinyl sticker, about 600x612 px at [332,252]: a black outlined X logo (white inner diagonal) with a ~22 px white die-cut border that follows the glyph with rounded corners, and a soft grey drop shadow below and to the right. Under it a centred light-grey hint, \"Drag an edge to peel · move over it for the shine\" (y 954), and a white pill segmented control at the bottom [335,1005,588,56] with five items, \"1 White\", \"2 Sparkle\", \"3 Prism\", \"4 Ripple\", \"5 Halftone\". The active item is a near-black pill with white text, and the numerals are grey. Motion: from 0 to 1.5s the Prism material shows a chromatic fringe (red, yellow, blue, cyan offset copies of the black strokes, a few px apart) that shifts with the cursor. From about 1.6s the sticker is dragged off by an edge. It curls back in 3D and shows a light-grey backing tiled with diagonal grey \"MetalForge\" text, the curl casts a soft shadow, and by 2.5s it is almost entirely pulled off toward the bottom-right. It springs back flat by about 3.2s, with only a small corner curl at top-left. More peels follow from the top-right (4.55s), the top-left and bottom-left (4.9 to 5.5s) and the bottom-right (6.1s), and each springs back to flat. At about 9.7s the picture is swapped for a full-colour Google \"G\" sticker in the same box. At about 10.5s \"4 Ripple\" is selected: concentric refractive ripples bend the blue panel and the red arm around the cursor. At about 11.3s \"5 Halftone\" is selected: the region near the cursor turns into a grid of round colour dots. From 14 to 16.2s the G is peeled the same way, then it settles flat until the end.",
+ "elements": [
+  {
+   "name": "canvas background with dot grid",
+   "box": [
+    0,
+    0,
+    1248,
+    1080
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "#f4f4f5 with faint grey dots ~22px pitch"
+  },
+  {
+   "name": "eyebrow label PEEL STICKER",
+   "box": [
+    23,
+    35,
+    127,
+    14
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "uppercase, letter-spaced, grey #6b6b70, ~14px"
+  },
+  {
+   "name": "title numeral + style name",
+   "box": [
+    23,
+    64,
+    108,
+    34
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'3 Prism': numeral light grey, word near-black semibold ~32px; updates with style"
+  },
+  {
+   "name": "top-right caption",
+   "box": [
+    1035,
+    84,
+    200,
+    16
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Your picture · WebGL 2' monospace light grey ~14px"
+  },
+  {
+   "name": "X sticker (die-cut)",
+   "box": [
+    332,
+    252,
+    600,
+    612
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "black outlined X with white inner bar, white die-cut border ~22px, rounded corners, soft drop shadow"
+  },
+  {
+   "name": "sticker drop shadow",
+   "box": [
+    340,
+    270,
+    610,
+    620
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "soft grey blur offset down-right"
+  },
+  {
+   "name": "peel backing with MetalForge pattern",
+   "box": [
+    520,
+    450,
+    320,
+    380
+   ],
+   "kind": "image",
+   "class": "css",
+   "note": "back side of the curled sticker: light grey #dcdcde with repeated rotated grey 'MetalForge' text, shaded across the curl"
+  },
+  {
+   "name": "prism chromatic fringe",
+   "box": [
+    355,
+    270,
+    550,
+    570
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "red/yellow/blue/cyan offset edges along black strokes, shift with cursor"
+  },
+  {
+   "name": "hint line",
+   "box": [
+    441,
+    945,
+    375,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Drag an edge to peel · move over it for the shine', light grey ~16px, centred"
+  },
+  {
+   "name": "style segmented control",
+   "box": [
+    335,
+    1005,
+    588,
+    56
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "white pill with light border/shadow, 5 items"
+  },
+  {
+   "name": "active style pill",
+   "box": [
+    569,
+    1011,
+    105,
+    44
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "near-black #1a191c fully rounded, white label '3 Prism' with grey numeral"
+  },
+  {
+   "name": "Google G sticker",
+   "box": [
+    326,
+    250,
+    614,
+    624
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "after 9.7s: red/yellow/green/blue G with white die-cut border and shadow"
+  },
+  {
+   "name": "cursor",
+   "box": [
+    525,
+    455,
+    20,
+    30
+   ],
+   "kind": "chrome",
+   "class": null,
+   "note": "system arrow / grab hand, part of recording"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "canvas background with dot grid",
+   "axis": "style",
+   "check": "Background is a very light cool grey (~#f4f4f5), not pure white",
+   "box": [
+    0,
+    0,
+    1248,
+    1080
+   ],
+   "scope": "frame",
+   "at": 0.9,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "canvas background with dot grid",
+   "axis": "present",
+   "check": "A faint grid of small grey dots (~22 px pitch) covers the background, visible near the top-left corner",
+   "box": [
+    0,
+    0,
+    320,
+    140
+   ],
+   "scope": "crop",
+   "at": 0.9,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "eyebrow label PEEL STICKER",
+   "axis": "text",
+   "check": "Top-left reads 'PEEL STICKER' in small uppercase letter-spaced mid-grey type",
+   "box": [
+    15,
+    30,
+    150,
+    25
+   ],
+   "scope": "crop",
+   "at": 0.9,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "title numeral + style name",
+   "axis": "text",
+   "check": "Under the label, a large title reads '3 Prism' (~32 px, semibold)",
+   "box": [
+    15,
+    60,
+    130,
+    45
+   ],
+   "scope": "crop",
+   "at": 0.9,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "title numeral + style name",
+   "axis": "style",
+   "check": "In the title the numeral '3' is light grey and the word 'Prism' is near-black",
+   "box": [
+    15,
+    60,
+    130,
+    45
+   ],
+   "scope": "crop",
+   "at": 0.9,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "top-right caption",
+   "axis": "text",
+   "check": "Top-right reads 'Your picture · WebGL 2' in light-grey monospace type, right-aligned near x 1235, y ~92",
+   "box": [
+    1020,
+    80,
+    228,
+    25
+   ],
+   "scope": "crop",
+   "at": 0.9,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "X sticker (die-cut)",
+   "axis": "position",
+   "check": "The sticker sits centred horizontally, spanning about x 332-932 and y 252-864",
+   "box": [
+    300,
+    230,
+    660,
+    660
+   ],
+   "scope": "frame",
+   "at": 8.5,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "X sticker (die-cut)",
+   "axis": "imagery",
+   "check": "The sticker art is an X logo: two black diagonal strokes where the top-left-to-bottom-right stroke is an outlined bar with a white interior",
+   "box": [
+    332,
+    252,
+    600,
+    612
+   ],
+   "scope": "crop",
+   "at": 8.5,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "X sticker (die-cut)",
+   "axis": "style",
+   "check": "A solid white die-cut border about 20-24 px wide follows the X outline with rounded outer corners and rounded inner notches",
+   "box": [
+    332,
+    252,
+    600,
+    612
+   ],
+   "scope": "crop",
+   "at": 8.5,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "sticker drop shadow",
+   "axis": "style",
+   "check": "The sticker casts a soft blurred grey shadow, strongest along the bottom and right edges, with no hard outline",
+   "box": [
+    320,
+    800,
+    640,
+    90
+   ],
+   "scope": "crop",
+   "at": 8.5,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "prism chromatic fringe",
+   "axis": "present",
+   "check": "At rest under the cursor, the black strokes carry thin coloured fringes (red, yellow, blue, cyan) offset a few px along their edges",
+   "box": [
+    355,
+    270,
+    320,
+    350
+   ],
+   "scope": "crop",
+   "at": 0.9,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "prism chromatic fringe",
+   "axis": "style",
+   "check": "The prism effect shows as discrete offset coloured copies of the edges (a split-channel look), not as a smooth rainbow gradient fill over the sticker",
+   "box": [
+    355,
+    270,
+    320,
+    350
+   ],
+   "scope": "crop",
+   "at": 0.5,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "prism chromatic fringe",
+   "axis": "motion",
+   "check": "The fringe colours move with the cursor: between the two moments the red/yellow bands along the top-left stroke change width and position",
+   "box": [
+    340,
+    260,
+    350,
+    350
+   ],
+   "scope": "crop",
+   "at": 0.5,
+   "then": 1.4
+  },
+  {
+   "id": "c14",
+   "element": "prism chromatic fringe",
+   "axis": "position",
+   "check": "When the cursor is near the top-right arm, the strongest cyan/blue/red/yellow fringe sits on that arm's right edge (x ~780-890, y ~275-420)",
+   "box": [
+    740,
+    250,
+    180,
+    200
+   ],
+   "scope": "crop",
+   "at": 4.05,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "hint line",
+   "axis": "text",
+   "check": "Below the sticker, centred, reads 'Drag an edge to peel · move over it for the shine' in light-grey ~16 px type",
+   "box": [
+    430,
+    940,
+    400,
+    30
+   ],
+   "scope": "crop",
+   "at": 0.9,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "style segmented control",
+   "axis": "present",
+   "check": "A white rounded pill control is centred at the bottom (about x 335-923, y 1005-1061)",
+   "box": [
+    320,
+    995,
+    620,
+    75
+   ],
+   "scope": "frame",
+   "at": 0.9,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "style segmented control",
+   "axis": "text",
+   "check": "The control lists exactly five items in order: '1 White', '2 Sparkle', '3 Prism', '4 Ripple', '5 Halftone'",
+   "box": [
+    335,
+    1005,
+    588,
+    56
+   ],
+   "scope": "crop",
+   "at": 0.9,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "style segmented control",
+   "axis": "style",
+   "check": "In each item the numeral is grey and the word is near-black",
+   "box": [
+    335,
+    1005,
+    588,
+    56
+   ],
+   "scope": "crop",
+   "at": 0.9,
+   "then": null
+  },
+  {
+   "id": "c19",
+   "element": "active style pill",
+   "axis": "style",
+   "check": "The active item '3 Prism' sits on a near-black fully rounded pill with white text",
+   "box": [
+    565,
+    1008,
+    112,
+    50
+   ],
+   "scope": "crop",
+   "at": 0.9,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "X sticker (die-cut)",
+   "axis": "motion",
+   "check": "The sticker is being peeled: most of the top-left arm and the centre are lifted and curled, leaving only the top-right arm, the bottom-left arm and the bottom-right corner flat",
+   "box": [
+    320,
+    240,
+    620,
+    640
+   ],
+   "scope": "frame",
+   "at": 1.4,
+   "then": 1.93
+  },
+  {
+   "id": "c21",
+   "element": "peel backing with MetalForge pattern",
+   "axis": "imagery",
+   "check": "The underside of the curled sticker is light grey and tiled with repeated grey 'MetalForge' wordmarks set at an angle",
+   "box": [
+    520,
+    450,
+    320,
+    380
+   ],
+   "scope": "crop",
+   "at": 1.93,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "peel backing with MetalForge pattern",
+   "axis": "style",
+   "check": "The curled flap reads as bent paper/vinyl: shading varies across the roll and the wordmarks distort with the curve, instead of a flat grey shape",
+   "box": [
+    520,
+    450,
+    320,
+    380
+   ],
+   "scope": "crop",
+   "at": 1.93,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "peel backing with MetalForge pattern",
+   "axis": "style",
+   "check": "The lifted flap casts a soft diffuse shadow onto the canvas beside it, with no hard edge",
+   "box": [
+    700,
+    600,
+    300,
+    320
+   ],
+   "scope": "crop",
+   "at": 1.93,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "X sticker (die-cut)",
+   "axis": "style",
+   "check": "Where the sticker is peeled away the canvas shows plain background (no hole, no residue outline)",
+   "box": [
+    330,
+    250,
+    330,
+    330
+   ],
+   "scope": "crop",
+   "at": 1.93,
+   "then": null
+  },
+  {
+   "id": "c25",
+   "element": "X sticker (die-cut)",
+   "axis": "motion",
+   "check": "The sticker is dragged almost completely off its spot toward the bottom-right: the centre area is empty and only a large curled backing flap shows at the bottom-right of the frame",
+   "box": [
+    0,
+    0,
+    1248,
+    1080
+   ],
+   "scope": "frame",
+   "at": 1.93,
+   "then": 2.5
+  },
+  {
+   "id": "c26",
+   "element": "X sticker (die-cut)",
+   "axis": "motion",
+   "check": "After release the sticker springs back from the half-peeled state at 3.08s to fully flat at 4.05s, in the same box as before",
+   "box": [
+    320,
+    240,
+    620,
+    640
+   ],
+   "scope": "frame",
+   "at": 3.08,
+   "then": 4.05
+  },
+  {
+   "id": "c27",
+   "element": "X sticker (die-cut)",
+   "axis": "present",
+   "check": "After settling, a small curled corner (~50 px) stays lifted at the sticker's top-left tip, showing grey backing",
+   "box": [
+    345,
+    245,
+    90,
+    90
+   ],
+   "scope": "crop",
+   "at": 4.05,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "X sticker (die-cut)",
+   "axis": "motion",
+   "check": "Grabbing the top-right tip lifts a small corner flap there with a soft shadow, while the rest of the sticker stays flat",
+   "box": [
+    800,
+    250,
+    150,
+    120
+   ],
+   "scope": "crop",
+   "at": 4.05,
+   "then": 4.55
+  },
+  {
+   "id": "c29",
+   "element": "X sticker (die-cut)",
+   "axis": "motion",
+   "check": "A peel from the bottom-left drags a long curled flap out to the left, past x ~250, while the bottom-right leg stays stuck",
+   "box": [
+    200,
+    240,
+    750,
+    640
+   ],
+   "scope": "frame",
+   "at": 4.97,
+   "then": 5.4
+  },
+  {
+   "id": "c30",
+   "element": "X sticker (die-cut)",
+   "axis": "motion",
+   "check": "A peel from the bottom-right rolls a flap up and over the centre, showing mirrored 'MetalForge' text on its back",
+   "box": [
+    600,
+    400,
+    200,
+    380
+   ],
+   "scope": "crop",
+   "at": 6.1,
+   "then": null
+  },
+  {
+   "id": "c31",
+   "element": "X sticker (die-cut)",
+   "axis": "present",
+   "check": "While the sticker is curled, the flat part still shows the black X strokes and the white border correctly clipped along the curl line",
+   "box": [
+    600,
+    600,
+    330,
+    260
+   ],
+   "scope": "crop",
+   "at": 1.93,
+   "then": null
+  },
+  {
+   "id": "c32",
+   "element": "X sticker (die-cut)",
+   "axis": "motion",
+   "check": "Between these moments the sticker is fully flat and still; only a tiny curl at the top-right corner changes",
+   "box": [
+    320,
+    240,
+    620,
+    640
+   ],
+   "scope": "frame",
+   "at": 8.5,
+   "then": 9
+  },
+  {
+   "id": "c33",
+   "element": "Google G sticker",
+   "axis": "motion",
+   "check": "The X sticker is replaced by a Google 'G' sticker in the same central box (about x 326-940, y 250-874)",
+   "box": [
+    300,
+    230,
+    660,
+    660
+   ],
+   "scope": "frame",
+   "at": 9.6,
+   "then": 9.9
+  },
+  {
+   "id": "c34",
+   "element": "Google G sticker",
+   "axis": "imagery",
+   "check": "The G is drawn in four flat colour segments: red top arc, yellow left, green bottom, blue crossbar and lower right, with a white die-cut border and soft shadow",
+   "box": [
+    326,
+    250,
+    614,
+    624
+   ],
+   "scope": "crop",
+   "at": 9.9,
+   "then": null
+  },
+  {
+   "id": "c35",
+   "element": "title numeral + style name",
+   "axis": "motion",
+   "check": "The title changes from '3 Prism' to '4 Ripple' when the Ripple item is selected",
+   "box": [
+    15,
+    60,
+    160,
+    45
+   ],
+   "scope": "crop",
+   "at": 10.2,
+   "then": 11
+  },
+  {
+   "id": "c36",
+   "element": "active style pill",
+   "axis": "motion",
+   "check": "The dark active pill moves from '3 Prism' to '4 Ripple' in the bottom control",
+   "box": [
+    335,
+    1005,
+    588,
+    56
+   ],
+   "scope": "crop",
+   "at": 10.2,
+   "then": 11
+  },
+  {
+   "id": "c37",
+   "element": "Google G sticker",
+   "axis": "style",
+   "check": "Ripple: concentric ripples centred near the top of the blue crossbar bend the blue colour into lighter and darker bands, and the red arm's edge wobbles",
+   "box": [
+    560,
+    450,
+    380,
+    300
+   ],
+   "scope": "crop",
+   "at": 11,
+   "then": null
+  },
+  {
+   "id": "c38",
+   "element": "Google G sticker",
+   "axis": "style",
+   "check": "The ripple reads as a soft refractive displacement of the picture with faint bright crests, not as drawn concentric stroked circles or hard rings",
+   "box": [
+    560,
+    450,
+    380,
+    300
+   ],
+   "scope": "crop",
+   "at": 11,
+   "then": null
+  },
+  {
+   "id": "c39",
+   "element": "title numeral + style name",
+   "axis": "text",
+   "check": "Title reads '5 Halftone' with a grey '5'",
+   "box": [
+    15,
+    60,
+    180,
+    45
+   ],
+   "scope": "crop",
+   "at": 11.9,
+   "then": null
+  },
+  {
+   "id": "c40",
+   "element": "Google G sticker",
+   "axis": "style",
+   "check": "Halftone: near the cursor the blue (and nearby green) area is made of a regular grid of round dots about 12-14 px pitch, with white showing between the dots",
+   "box": [
+    600,
+    450,
+    250,
+    200
+   ],
+   "scope": "crop",
+   "at": 12.4,
+   "then": null
+  },
+  {
+   "id": "c41",
+   "element": "Google G sticker",
+   "axis": "style",
+   "check": "The halftone is local: the red and yellow segments far from the cursor stay solid flat colour",
+   "box": [
+    326,
+    250,
+    614,
+    624
+   ],
+   "scope": "crop",
+   "at": 11.9,
+   "then": null
+  },
+  {
+   "id": "c42",
+   "element": "Google G sticker",
+   "axis": "motion",
+   "check": "The halftone dot region follows the cursor: the dotted area shifts between the two moments while the G stays put",
+   "box": [
+    326,
+    250,
+    614,
+    624
+   ],
+   "scope": "crop",
+   "at": 11.9,
+   "then": 12.4
+  },
+  {
+   "id": "c43",
+   "element": "Google G sticker",
+   "axis": "motion",
+   "check": "The G sticker is peeled with the same curled 'MetalForge' backing, and by the later moment it is flat again",
+   "box": [
+    300,
+    230,
+    660,
+    660
+   ],
+   "scope": "frame",
+   "at": 14.13,
+   "then": 17
+  },
+  {
+   "id": "c44",
+   "element": "hint line",
+   "axis": "motion",
+   "check": "The hint line, header texts and bottom control stay fixed in place through the peel",
+   "box": [
+    0,
+    0,
+    1248,
+    1080
+   ],
+   "scope": "frame",
+   "at": 0.9,
+   "then": 1.93
+  },
+  {
+   "id": "c45",
+   "element": "X sticker (die-cut)",
+   "axis": "style",
+   "check": "The sticker face is flat matte: no gloss band or gradient across the white areas when the cursor is off it",
+   "box": [
+    332,
+    252,
+    600,
+    612
+   ],
+   "scope": "crop",
+   "at": 8.5,
+   "then": null
+  }
+ ],
+ "imagery": [
+  {
+   "name": "X logo sticker",
+   "box": [
+    332,
+    252,
+    600,
+    612
+   ],
+   "class": "structured",
+   "what": "Outlined black X logo with a white inner bar on a white die-cut vinyl sticker with soft drop shadow",
+   "at": 8.5
+  },
+  {
+   "name": "MetalForge backing",
+   "box": [
+    520,
+    450,
+    320,
+    380
+   ],
+   "class": "css",
+   "what": "Light grey sticker backing with repeated angled grey 'MetalForge' wordmarks, shaded across the peel curl",
+   "at": 1.93
+  },
+  {
+   "name": "Google G sticker",
+   "box": [
+    326,
+    250,
+    614,
+    624
+   ],
+   "class": "structured",
+   "what": "Four-colour Google 'G' (red, yellow, green, blue) on a white die-cut sticker with shadow",
+   "at": 9.9
+  },
+  {
+   "name": "canvas dot grid",
+   "box": [
+    0,
+    0,
+    1248,
+    1080
+   ],
+   "class": "css",
+   "what": "Faint grey dot grid on #f4f4f5 at ~22px pitch",
+   "at": 0.9
+  }
+ ],
+ "moves": [
+  {
+   "element": "prism chromatic fringe",
+   "what": "RGB-offset edge fringes shift with cursor over X strokes",
+   "from": 0,
+   "to": 1.5,
+   "px": null
+  },
+  {
+   "element": "X sticker (die-cut)",
+   "what": "peeled from top-left, curls and is dragged almost fully off to the bottom-right",
+   "from": 1.6,
+   "to": 2.5,
+   "px": null
+  },
+  {
+   "element": "X sticker (die-cut)",
+   "what": "springs back flat into original box, small top-left corner curl left",
+   "from": 2.9,
+   "to": 3.2,
+   "px": null
+  },
+  {
+   "element": "X sticker (die-cut)",
+   "what": "top-right corner lifted then released",
+   "from": 4.4,
+   "to": 4.85,
+   "px": null
+  },
+  {
+   "element": "X sticker (die-cut)",
+   "what": "peeled from bottom-left and dragged left, then springs back",
+   "from": 4.9,
+   "to": 5.5,
+   "px": null
+  },
+  {
+   "element": "X sticker (die-cut)",
+   "what": "peeled from bottom-right over the centre, then springs back flat",
+   "from": 5.9,
+   "to": 7.3,
+   "px": null
+  },
+  {
+   "element": "Google G sticker",
+   "what": "picture swaps from X to Google G in same box",
+   "from": 9.65,
+   "to": 9.8,
+   "px": 0
+  },
+  {
+   "element": "active style pill",
+   "what": "selection moves Prism → Ripple; title becomes '4 Ripple'",
+   "from": 10.3,
+   "to": 10.6,
+   "px": null
+  },
+  {
+   "element": "active style pill",
+   "what": "selection moves Ripple → Halftone; title becomes '5 Halftone'",
+   "from": 11.1,
+   "to": 11.4,
+   "px": null
+  },
+  {
+   "element": "Google G sticker",
+   "what": "halftone dot region follows cursor across the G",
+   "from": 11.4,
+   "to": 13.95,
+   "px": null
+  },
+  {
+   "element": "Google G sticker",
+   "what": "G peeled with curled MetalForge backing, then settles flat",
+   "from": 14,
+   "to": 16.2,
+   "px": null
+  }
+ ]
+}

@@ -1,0 +1,1633 @@
+{
+ "slug": "10qjw2-ai-node-based-workflow-canvas",
+ "at": "2026-10-24T05:09:41.703Z",
+ "runs": 15,
+ "html": "factory/10qjw2-ai-node-based-workflow-canvas/index.html",
+ "pixel": {
+  "score": 81,
+  "stills": 87,
+  "motion": 78,
+  "moments": 15
+ },
+ "animations": 30,
+ "rank": 95,
+ "allPass": true,
+ "elements": [
+  {
+   "name": "Prompt title",
+   "box": [
+    141,
+    143,
+    57,
+    18
+   ],
+   "deltaE": 0.8,
+   "delta": 23,
+   "shift": [
+    0,
+    -2
+   ],
+   "afterShift": 21,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Prompt icon",
+   "box": [
+    111,
+    143,
+    20,
+    16
+   ],
+   "deltaE": 2.8,
+   "delta": 17,
+   "shift": null,
+   "afterShift": 17,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Prompt text",
+   "box": [
+    127,
+    197,
+    228,
+    62
+   ],
+   "deltaE": 1.2,
+   "delta": 15,
+   "shift": [
+    0,
+    2
+   ],
+   "afterShift": 15,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Prompt output label + port",
+   "box": [
+    294,
+    313,
+    110,
+    16
+   ],
+   "deltaE": 2.1,
+   "delta": 15,
+   "shift": [
+    0,
+    -2
+   ],
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Processing chip icon",
+   "box": [
+    632,
+    129,
+    17,
+    17
+   ],
+   "deltaE": 1.3,
+   "delta": 15,
+   "shift": null,
+   "afterShift": 15,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Prompt text box",
+   "box": [
+    112,
+    181,
+    263,
+    92
+   ],
+   "deltaE": 0.4,
+   "delta": 13,
+   "shift": null,
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Processing input ports",
+   "box": [
+    601,
+    193,
+    14,
+    129
+   ],
+   "deltaE": 1.8,
+   "delta": 13,
+   "shift": null,
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Status line",
+   "box": [
+    634,
+    365,
+    110,
+    16
+   ],
+   "deltaE": 4.6,
+   "delta": 12,
+   "shift": [
+    -2,
+    0
+   ],
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "Prompt node card",
+   "box": [
+    89,
+    119,
+    310,
+    236
+   ],
+   "deltaE": 0.7,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "Processing input labels",
+   "box": [
+    634,
+    192,
+    80,
+    132
+   ],
+   "deltaE": 1.5,
+   "delta": 10,
+   "shift": [
+    2,
+    -2
+   ],
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "Port ring halo",
+   "box": [
+    593,
+    300,
+    30,
+    30
+   ],
+   "deltaE": 1.3,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "Random noise node card",
+   "box": [
+    0,
+    318,
+    249,
+    140
+   ],
+   "deltaE": 1.1,
+   "delta": 9,
+   "shift": null,
+   "afterShift": 9,
+   "read": "matches"
+  },
+  {
+   "name": "Prompt drag handle",
+   "box": [
+    361,
+    144,
+    10,
+    15
+   ],
+   "deltaE": 1.4,
+   "delta": 8,
+   "shift": null,
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "Cables",
+   "box": [
+    248,
+    198,
+    362,
+    360
+   ],
+   "deltaE": 1.4,
+   "delta": 7,
+   "shift": null,
+   "afterShift": 7,
+   "read": "matches"
+  },
+  {
+   "name": "Sampler node card",
+   "box": [
+    161,
+    451,
+    309,
+    139
+   ],
+   "deltaE": 1.3,
+   "delta": 6,
+   "shift": null,
+   "afterShift": 6,
+   "read": "matches"
+  },
+  {
+   "name": "Processing node card",
+   "box": [
+    609,
+    105,
+    322,
+    300
+   ],
+   "deltaE": 1.2,
+   "delta": 6,
+   "shift": null,
+   "afterShift": 6,
+   "read": "matches"
+  },
+  {
+   "name": "canvas background with dot grid",
+   "box": [
+    0,
+    0,
+    1006,
+    720
+   ],
+   "deltaE": 1.2,
+   "delta": 5,
+   "shift": null,
+   "afterShift": 5,
+   "read": "matches"
+  },
+  {
+   "name": "Cursor",
+   "box": [
+    520,
+    395,
+    16,
+    22
+   ],
+   "deltaE": 1.6,
+   "delta": 2,
+   "shift": null,
+   "afterShift": 2,
+   "read": "matches"
+  },
+  {
+   "name": "Row checkmarks",
+   "box": [
+    892,
+    192,
+    16,
+    72
+   ],
+   "deltaE": 1.3,
+   "delta": 1,
+   "shift": null,
+   "afterShift": 1,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "the render changes where the clip changes",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "kf1",
+    "clip": 0.2,
+    "render": 0.2,
+    "read": "both still"
+   },
+   {
+    "from": "kf1",
+    "to": "kf2",
+    "clip": 4.5,
+    "render": 3.4,
+    "read": "both move"
+   },
+   {
+    "from": "kf2",
+    "to": "1.23s",
+    "clip": 5.7,
+    "render": 4.4,
+    "read": "both move"
+   },
+   {
+    "from": "1.23s",
+    "to": "kf3",
+    "clip": 8.3,
+    "render": 7.2,
+    "read": "both move"
+   },
+   {
+    "from": "kf3",
+    "to": "2.65s",
+    "clip": 0.7,
+    "render": 0.4,
+    "read": "both move"
+   },
+   {
+    "from": "2.65s",
+    "to": "kf4",
+    "clip": 1.1,
+    "render": 0.9,
+    "read": "both move"
+   },
+   {
+    "from": "kf4",
+    "to": "4.1s",
+    "clip": 0.5,
+    "render": 0.5,
+    "read": "both move"
+   },
+   {
+    "from": "4.1s",
+    "to": "4.6s",
+    "clip": 1.8,
+    "render": 1.9,
+    "read": "both move"
+   },
+   {
+    "from": "4.6s",
+    "to": "4.97s",
+    "clip": 7.9,
+    "render": 7.2,
+    "read": "both move"
+   },
+   {
+    "from": "4.97s",
+    "to": "5.95s",
+    "clip": 6.3,
+    "render": 4.5,
+    "read": "both move"
+   },
+   {
+    "from": "5.95s",
+    "to": "6.55s",
+    "clip": 7.6,
+    "render": 5.3,
+    "read": "both move"
+   },
+   {
+    "from": "6.55s",
+    "to": "7.53s",
+    "clip": 6.9,
+    "render": 5.6,
+    "read": "both move"
+   },
+   {
+    "from": "7.53s",
+    "to": "8s",
+    "clip": 7,
+    "render": 5.9,
+    "read": "both move"
+   },
+   {
+    "from": "8s",
+    "to": "9s",
+    "clip": 7.5,
+    "render": 5.8,
+    "read": "both move"
+   }
+  ],
+  "trajectories": [
+   {
+    "element": "#212124",
+    "box": [
+     121,
+     180,
+     251,
+     3
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 6
+     },
+     {
+      "at": 0.2,
+      "dx": 0,
+      "dy": 0,
+      "delta": 6
+     },
+     {
+      "at": 0.7,
+      "dx": 0,
+      "dy": 0,
+      "delta": 2
+     },
+     {
+      "at": 1.23,
+      "dx": 0,
+      "dy": 0,
+      "delta": 2
+     },
+     {
+      "at": 2.15,
+      "dx": 0,
+      "dy": 0,
+      "delta": 8
+     },
+     {
+      "at": 2.65,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 3.6,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 4.1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 4.6,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 4.97,
+      "dx": 0,
+      "dy": 0,
+      "delta": 2
+     },
+     {
+      "at": 5.95,
+      "dx": 0,
+      "dy": 0,
+      "delta": 2
+     },
+     {
+      "at": 6.55,
+      "dx": 0,
+      "dy": 0,
+      "delta": 2
+     },
+     {
+      "at": 7.53,
+      "dx": 2,
+      "dy": 0,
+      "delta": 2
+     },
+     {
+      "at": 8,
+      "dx": 2,
+      "dy": 0,
+      "delta": 2
+     },
+     {
+      "at": 9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 2
+     }
+    ],
+    "read": "in step"
+   },
+   {
+    "element": "#222325",
+    "box": [
+     167,
+     450,
+     295,
+     4
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 8
+     },
+     {
+      "at": 0.2,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 0.7,
+      "dx": -4,
+      "dy": -12,
+      "delta": 6
+     },
+     {
+      "at": 1.23,
+      "dx": 12,
+      "dy": -10,
+      "delta": 7
+     },
+     {
+      "at": 2.15,
+      "dx": 0,
+      "dy": 0,
+      "delta": 6
+     },
+     {
+      "at": 2.65,
+      "dx": 0,
+      "dy": 0,
+      "delta": 6
+     },
+     {
+      "at": 3.6,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 4.1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 4.6,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 4.97,
+      "dx": 2,
+      "dy": -4,
+      "delta": 11
+     },
+     {
+      "at": 5.95,
+      "dx": -12,
+      "dy": 2,
+      "delta": 9
+     },
+     {
+      "at": 6.55,
+      "dx": -2,
+      "dy": -2,
+      "delta": 15
+     },
+     {
+      "at": 7.53,
+      "dx": -12,
+      "dy": 2,
+      "delta": 13
+     },
+     {
+      "at": 8,
+      "dx": 0,
+      "dy": 0,
+      "delta": 5
+     },
+     {
+      "at": 9,
+      "dx": -12,
+      "dy": -4,
+      "delta": 26
+     }
+    ],
+    "read": "drifts: the gap grows over time (wrong speed or start)"
+   },
+   {
+    "element": "#202223",
+    "box": [
+     631,
+     104,
+     283,
+     2
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 2
+     },
+     {
+      "at": 0.2,
+      "dx": 0,
+      "dy": 0,
+      "delta": 6
+     },
+     {
+      "at": 0.7,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 1.23,
+      "dx": 0,
+      "dy": -2,
+      "delta": 14
+     },
+     {
+      "at": 2.15,
+      "dx": 0,
+      "dy": 0,
+      "delta": 6
+     },
+     {
+      "at": 2.65,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 3.6,
+      "dx": 0,
+      "dy": 0,
+      "delta": 6
+     },
+     {
+      "at": 4.1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 6
+     },
+     {
+      "at": 4.6,
+      "dx": 0,
+      "dy": 0,
+      "delta": 3
+     },
+     {
+      "at": 4.97,
+      "dx": 0,
+      "dy": 0,
+      "delta": 0
+     },
+     {
+      "at": 5.95,
+      "dx": 4,
+      "dy": -4,
+      "delta": 14
+     },
+     {
+      "at": 6.55,
+      "dx": 0,
+      "dy": 0,
+      "delta": 1
+     },
+     {
+      "at": 7.53,
+      "dx": -2,
+      "dy": 6,
+      "delta": 14
+     },
+     {
+      "at": 8,
+      "dx": 0,
+      "dy": 0,
+      "delta": 1
+     },
+     {
+      "at": 9,
+      "dx": -12,
+      "dy": 6,
+      "delta": 5
+     }
+    ],
+    "read": "drifts: the gap grows over time (wrong speed or start)"
+   },
+   {
+    "element": "#212325",
+    "box": [
+     100,
+     118,
+     288,
+     2
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 8
+     },
+     {
+      "at": 0.2,
+      "dx": 0,
+      "dy": 0,
+      "delta": 6
+     },
+     {
+      "at": 0.7,
+      "dx": -12,
+      "dy": 4,
+      "delta": 0
+     },
+     {
+      "at": 1.23,
+      "dx": -12,
+      "dy": 4,
+      "delta": 0
+     },
+     {
+      "at": 2.15,
+      "dx": 0,
+      "dy": 0,
+      "delta": 8
+     },
+     {
+      "at": 2.65,
+      "dx": 0,
+      "dy": 0,
+      "delta": 8
+     },
+     {
+      "at": 3.6,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 4.1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 4.6,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 4.97,
+      "dx": -12,
+      "dy": 4,
+      "delta": 0
+     },
+     {
+      "at": 5.95,
+      "dx": -12,
+      "dy": 4,
+      "delta": 0
+     },
+     {
+      "at": 6.55,
+      "dx": -12,
+      "dy": 4,
+      "delta": 0
+     },
+     {
+      "at": 7.53,
+      "dx": -12,
+      "dy": 4,
+      "delta": 0
+     },
+     {
+      "at": 8,
+      "dx": -12,
+      "dy": 4,
+      "delta": 0
+     },
+     {
+      "at": 9,
+      "dx": -12,
+      "dy": 4,
+      "delta": 0
+     }
+    ],
+    "read": "drifts: the gap grows over time (wrong speed or start)"
+   }
+  ]
+ },
+ "scale": {
+  "ok": true,
+  "changed": 2.2,
+  "read": "scales: the half-size render matches the full one (difference 2.2)"
+ },
+ "rubric": {
+  "file": "factory/10qjw2-ai-node-based-workflow-canvas/rubric.json",
+  "total": 44,
+  "counted": 44,
+  "pass": 43,
+  "fail": 0,
+  "unsure": 1,
+  "unjudged": 0,
+  "passRate": 98,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "style",
+    "element": "canvas background",
+    "check": "Background is a flat near-black charcoal (~#131516), not pure black and not blue-tinted",
+    "box": [
+     0,
+     0,
+     1006,
+     720
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Flat near-black charcoal in both, same tone. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "style",
+    "element": "canvas dot grid",
+    "check": "A very faint dot grid (dots about 37 px apart, barely brighter than the background) covers the canvas; no solid grid lines",
+    "box": [
+     480,
+     0,
+     200,
+     120
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Faint dot grid at similar spacing in both, no grid lines. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "position",
+    "element": "Prompt node card",
+    "check": "Prompt card spans roughly x 89–399, y 119–355 in the wide view",
+    "box": [
+     89,
+     119,
+     310,
+     236
+    ],
+    "at": 3.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Prompt card sits at the same place, about x 44–200 in the tile. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "style",
+    "element": "node cards",
+    "check": "Cards are a slightly lighter dark grey than the canvas, with corner radius ~16 px, a 1 px faint lighter border and a soft dark shadow",
+    "box": [
+     89,
+     119,
+     310,
+     236
+    ],
+    "at": 3.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same lighter grey card, radius, faint border and shadow. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "text",
+    "element": "Prompt title",
+    "check": "Header reads 'Prompt' in white semibold ~15 px, with a small grey prompt icon to its left",
+    "box": [
+     105,
+     138,
+     100,
+     26
+    ],
+    "at": 3.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White semibold 'Prompt' with a grey icon at left, same size. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "style",
+    "element": "Prompt text box",
+    "check": "An inset box darker than the card (radius ~8, thin border) sits at about x 112–375, y 181–273",
+    "box": [
+     112,
+     181,
+     263,
+     92
+    ],
+    "at": 3.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Darker inset box with thin border and radius at the same place. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "text",
+    "element": "Prompt text",
+    "check": "Inset text reads exactly 'A quiet world,' / 'in vivid color. Soft light, subtle' / 'textures, a little unexpected magic.' on three lines in light grey",
+    "box": [
+     112,
+     181,
+     263,
+     92
+    ],
+    "at": 3.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same three lines of text, light grey, same wrapping. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "present",
+    "element": "drag handles",
+    "check": "Each card header has a 2x3 grid of six grey dots at its right (Prompt at x≈366, Processing at x≈898)",
+    "box": [
+     355,
+     138,
+     22,
+     26
+    ],
+    "at": 3.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "2x3 grey dot grid at the header's right in both. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "position",
+    "element": "Random noise node",
+    "check": "The Random noise card is cut off by the left frame edge so its title reads 'andom noise', at y≈318–458, overlapping the bottom of the Prompt card",
+    "box": [
+     0,
+     318,
+     249,
+     140
+    ],
+    "at": 3.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Random noise card is cut at the left edge, reads 'andom noise', overlaps Prompt at the same y. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "text",
+    "element": "Random noise value",
+    "check": "The noise card shows '432512' in grey and an output labelled 'noise' at its right edge",
+    "box": [
+     0,
+     380,
+     255,
+     55
+    ],
+    "at": 3.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'432512' in grey and a 'noise' output with a pink port, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "position",
+    "element": "Sampler node",
+    "check": "Sampler card spans roughly x 161–470, y 451–590, overlapping the Random noise card's lower right",
+    "box": [
+     161,
+     451,
+     309,
+     139
+    ],
+    "at": 3.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Sampler card sits at the same place and overlaps the noise card's lower right. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "text",
+    "element": "Sampler text",
+    "check": "Sampler card reads 'Sampler' (white, with a sliders icon), 'euler · 24 steps' (grey) and output 'sampler'",
+    "box": [
+     161,
+     451,
+     309,
+     139
+    ],
+    "at": 3.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'Sampler' in white with a sliders icon, grey 'euler · 24 steps', and 'sampler' output. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "position",
+    "element": "Processing node",
+    "check": "Processing card spans roughly x 609–931, y 105–405 in the wide view",
+    "box": [
+     609,
+     105,
+     322,
+     300
+    ],
+    "at": 3.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Processing card spans the same box, about x 305–465 in the tile. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "text",
+    "element": "Processing header",
+    "check": "Header reads 'Processing' in white semibold, with a CPU-chip outline icon to its left",
+    "box": [
+     625,
+     122,
+     130,
+     30
+    ],
+    "at": 3.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White semibold 'Processing' with a chip outline icon, same. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "text",
+    "element": "Processing inputs",
+    "check": "Three input rows read 'conditioning', 'noise', 'sampler' top to bottom, about 58 px apart, in grey ~13 px",
+    "box": [
+     600,
+     185,
+     130,
+     145
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same three grey labels at the same spacing, about 58 px apart. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "position",
+    "element": "Processing input ports",
+    "check": "The three input port dots sit on the card's left border at x≈608, y≈200, 258 and 315",
+    "box": [
+     595,
+     185,
+     30,
+     145
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Three port dots on the card's left border at the same y positions. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "style",
+    "element": "ports",
+    "check": "Unconnected ports are solid white circles about 12 px across, not hollow rings",
+    "box": [
+     460,
+     546,
+     20,
+     20
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Solid white circles of the same size, not rings. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "text",
+    "element": "status line",
+    "check": "Below the inputs a small grey dot and the dim grey text 'Awaiting inputs' appear",
+    "box": [
+     628,
+     362,
+     120,
+     20
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Small grey dot and dim 'Awaiting inputs' text, though slightly dimmer than the clip. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "present",
+    "element": "cursor",
+    "check": "A white arrow mouse pointer is visible on the canvas, dragging a cable tip",
+    "box": [
+     490,
+     255,
+     30,
+     30
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White arrow pointer at the cable tip in both. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "style",
+    "element": "dragged cable",
+    "check": "While being dragged, a cable is white, ~4 px thick, a smooth bezier curve, and its source port gets a thin ring",
+    "box": [
+     390,
+     260,
+     125,
+     75
+    ],
+    "at": 0.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White cable of similar thickness with a smooth curve and a thin ring on the source port. [votes: yes/yes/no]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "motion",
+    "element": "camera zoom in",
+    "check": "Between 0.2s and 0.7s the view jumps to a ~1.7x close-up: Processing's left edge moves from x≈609 to x≈653 and its title grows from ~15 px to ~26 px",
+    "box": [
+     0,
+     0,
+     1006,
+     720
+    ],
+    "at": 0.2,
+    "then": 0.7,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Processing left edge sits at x≈328 in the close-up vs the clip's 327, with a title of matching size. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "style",
+    "element": "lightning spark",
+    "check": "A thin glowing yellow zig-zag (lightning), not a straight line or dotted line, joins the dragged cable tip to the conditioning port",
+    "box": [
+     545,
+     240,
+     110,
+     60
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Thin yellow zig-zag with a slight glow joins the tip to the port; the clip's glow is a bit fatter. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "style",
+    "element": "target port ring",
+    "check": "While hovering, the target conditioning port has a thin yellow ring (~45 px across in close-up) with a soft yellow glow",
+    "box": [
+     620,
+     235,
+     65,
+     60
+    ],
+    "at": 0.7,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild has a thin yellow ring ~43 px with soft glow around the port, slightly bolder than the clip's ~50 px ring. [votes: no/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "motion",
+    "element": "conditioning snap colour",
+    "check": "When the cable connects, it turns from white to yellow (#f2dc4a-ish) along with both of its end dots",
+    "box": [
+     280,
+     240,
+     400,
+     250
+    ],
+    "at": 0.7,
+    "then": 1.23,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The cable goes from white at 0.7s to yellow at 1.23s with yellow end dots, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "style",
+    "element": "connected cable glow",
+    "check": "A connected cable has a soft outer glow in its own colour, with no dark outline",
+    "box": [
+     300,
+     260,
+     350,
+     220
+    ],
+    "at": 1.23,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Yellow cable has a soft yellow outer glow and no dark outline, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "style",
+    "element": "snap double ring",
+    "check": "On connect, the target port shows two concentric thin rings in a muted version of the cable colour",
+    "box": [
+     615,
+     215,
+     90,
+     90
+    ],
+    "at": 1.23,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild port shows two concentric thin muted rings, matching the clip's double ring. [votes: no/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "style",
+    "element": "edge glow sweep",
+    "check": "After connecting, a soft blurred yellow glow runs down Processing's left border and wraps the top-left corner; it is a diffuse light, not a hard stroke",
+    "box": [
+     640,
+     85,
+     120,
+     420
+    ],
+    "at": 1.23,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A blurred yellow glow runs down Processing's left border and wraps the top-left corner, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "motion",
+    "element": "camera zoom out",
+    "check": "By 2.15s the view is back to the wide framing, with all four cards visible as at 0.2s",
+    "box": [
+     0,
+     0,
+     1006,
+     720
+    ],
+    "at": 1.23,
+    "then": 2.15,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 2.15s the view is back to wide framing with all four cards visible, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "present",
+    "element": "conditioning checkmark",
+    "check": "A thin yellow check mark appears at the right end of the conditioning row (x≈900, y≈200)",
+    "box": [
+     885,
+     188,
+     30,
+     25
+    ],
+    "at": 2.15,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A thin yellow check mark sits at the right end of the conditioning row; it is slightly bolder and more saturated than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "style",
+    "element": "noise spark",
+    "check": "While the noise cable is dragged, the zig-zag spark and the target ring are pink/magenta",
+    "box": [
+     540,
+     240,
+     85,
+     55
+    ],
+    "at": 2.65,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Pink zig-zag spark and a pink target ring, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "motion",
+    "element": "noise cable",
+    "check": "The noise cable from (248,423) to (608,258) is white at 2.65s and solid pink with pink end dots by 3.6s",
+    "box": [
+     240,
+     250,
+     380,
+     185
+    ],
+    "at": 2.65,
+    "then": 3.6,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The noise cable is white at 2.65s and solid pink with pink end dots at 3.6s, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "style",
+    "element": "noise checkmark",
+    "check": "The noise row gets a pink check mark at x≈900, y≈258",
+    "box": [
+     885,
+     246,
+     30,
+     25
+    ],
+    "at": 3.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A pink check mark appears on the noise row; it is brighter than the clip's dimmer pink one. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "present",
+    "element": "sampler drag",
+    "check": "A white cable is being dragged up from the Sampler port (469,556) toward the canvas, with the cursor at its tip",
+    "box": [
+     460,
+     395,
+     80,
+     170
+    ],
+    "at": 3.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A white cable rises from the Sampler port to the cursor tip; its curve is steeper at the bottom than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "style",
+    "element": "sampler spark",
+    "check": "Near the sampler input the spark and the ring are violet/purple",
+    "box": [
+     555,
+     295,
+     70,
+     65
+    ],
+    "at": 4.1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Violet zig-zag spark and violet ring at the sampler port, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "style",
+    "element": "cable colours",
+    "check": "Each input has its own colour: conditioning yellow, noise pink, sampler purple",
+    "box": [
+     240,
+     190,
+     380,
+     380
+    ],
+    "at": 4.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Conditioning is yellow, noise pink and sampler purple, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "text",
+    "element": "status ready",
+    "check": "Once all three are connected, the status changes to a white dot and 'All inputs ready' in lighter text",
+    "box": [
+     690,
+     545,
+     220,
+     35
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A white dot and lighter 'All inputs ready' text; the text is about 7% narrower than the clip's and the dot is a bit smaller. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "motion",
+    "element": "second zoom in",
+    "check": "Between 4.1s and 4.97s the view cuts again to the ~1.7x close-up, framing the Processing inputs at x≈653",
+    "box": [
+     0,
+     0,
+     1006,
+     720
+    ],
+    "at": 4.1,
+    "then": 4.97,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 4.97s the view is in the ~1.7x close-up with Processing's left edge at x≈328, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "style",
+    "element": "re-drag reverts",
+    "check": "While the conditioning cable is re-dragged, it is white again with a white target port, and the status reads 'Awaiting inputs'",
+    "box": [
+     280,
+     240,
+     620,
+     340
+    ],
+    "at": 4.97,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The conditioning cable is white with a white port and the status reads 'Awaiting inputs', matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "motion",
+    "element": "orange recolour",
+    "check": "The conditioning cable changes from white (4.97s) to orange/coral (5.95s), with an orange glow sweep on Processing's left edge",
+    "box": [
+     280,
+     90,
+     450,
+     400
+    ],
+    "at": 4.97,
+    "then": 5.95,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The conditioning cable goes from white to orange/coral, with an orange glow sweep on Processing's left edge, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c39.png"
+   },
+   {
+    "id": "c40",
+    "axis": "style",
+    "element": "cyan recolour",
+    "check": "The re-dragged noise cable shows a cyan ring and spark at the noise port at 6.55s, and it is solid cyan with a cyan edge glow by about 7.5s",
+    "box": [
+     600,
+     330,
+     90,
+     70
+    ],
+    "at": 6.55,
+    "then": 7.53,
+    "policy": null,
+    "pass": "unsure",
+    "seen": "Rebuild has a cyan ring and solid cyan cable at 7.53s, but its edge glow is a strong hard-edged band that the clip's crop does not show, so the glow can't be compared. [votes: no/unsure/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c40.png"
+   },
+   {
+    "id": "c41",
+    "axis": "motion",
+    "element": "yellow noise recolour",
+    "check": "The noise cable is re-dragged again and snaps yellow, so by about 9s the conditioning cable is orange, noise yellow and sampler purple",
+    "box": [
+     0,
+     240,
+     700,
+     480
+    ],
+    "at": 8,
+    "then": 9,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 9s the rebuild shows an orange conditioning cable, a yellow noise cable and a purple sampler cable, the same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c41.png"
+   },
+   {
+    "id": "c42",
+    "axis": "position",
+    "element": "purple sampler cable in close-up",
+    "check": "In the close-up, the purple sampler cable enters from the bottom edge at x≈520 and curves up into the sampler port at (652,463)",
+    "box": [
+     500,
+     450,
+     170,
+     270
+    ],
+    "at": 4.97,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The purple cable enters the bottom edge near x≈35 in the crop, the same as the clip, and curves up into the sampler port. The rebuild's line is slightly thicker and meets the port, where the clip stops just short. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c42.png"
+   },
+   {
+    "id": "c43",
+    "axis": "style",
+    "element": "glow material",
+    "check": "Every glow (cable, ring, edge sweep) is a soft additive blur of the cable colour; there is no flat coloured band or hard-edged outline around the card",
+    "box": [
+     640,
+     85,
+     120,
+     420
+    ],
+    "at": 5.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The rebuild's glows and edge sweep are soft, blurred cable-colour gradients, with no flat band or hard outline. [votes: no/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c43.png"
+   },
+   {
+    "id": "c44",
+    "axis": "style",
+    "element": "type brightness",
+    "check": "Titles are near-white, port labels mid grey (~#a0a0a0) and the status text dimmer grey, so there are three distinct brightness levels",
+    "box": [
+     609,
+     105,
+     322,
+     300
+    ],
+    "at": 3.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The rebuild has three brightness levels like the clip: near-white title, mid-grey port labels, and a dimmer grey 'Awaiting inputs'. The status text is a little dimmer than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/10qjw2-ai-node-based-workflow-canvas/judge/c44.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 0.628,
+  "calls": 9,
+  "images": "factory/10qjw2-ai-node-based-workflow-canvas/judge",
+  "votes": 3,
+  "spread": [
+   40,
+   43,
+   43
+  ]
+ }
+}

@@ -1,0 +1,245 @@
+{
+ "slug": "kn7m8-todesktop-s-bento-grid",
+ "title": "ToDesktop's Bento Grid",
+ "author": "ToDesktop",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "review",
+ "ended": "round limit",
+ "bestRound": 2,
+ "rank": 96,
+ "allPass": false,
+ "rubric": {
+  "pass": 44,
+  "fail": 1,
+  "unsure": 0,
+  "of": 45,
+  "failed": [
+   "c07 Logo is a \u224835px blue rounded square with a white 'b'-shaped mark, an original drawing with the same silhouette and colour"
+  ]
+ },
+ "score": 89,
+ "motion": "the render changes where the clip changes",
+ "imagery": [
+  {
+   "name": "ToDesktop logo",
+   "class": "structured",
+   "box": [
+    472,
+    41,
+    35,
+    35
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "rosette badge",
+   "class": "structured",
+   "box": [
+    444,
+    233,
+    66,
+    85
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "pen",
+   "class": "structured",
+   "box": [
+    540,
+    160,
+    155,
+    85
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "signature squiggle",
+   "class": "structured",
+   "box": [
+    530,
+    220,
+    45,
+    35
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "OS logos",
+   "class": "structured",
+   "box": [
+    397,
+    690,
+    302,
+    80
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "laptop wallpaper",
+   "class": "photo",
+   "box": [
+    445,
+    688,
+    195,
+    95
+   ],
+   "reproduced": true,
+   "how": "sampled under licence"
+  },
+  {
+   "name": "speedometer",
+   "class": "css",
+   "box": [
+    980,
+    628,
+    170,
+    170
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "binary digit grid",
+   "class": "css",
+   "box": [
+    340,
+    140,
+    410,
+    225
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "latency labels",
+   "class": "css",
+   "box": [
+    819,
+    585,
+    494,
+    200
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 15.4,
+   "turns": 82,
+   "costUsd": 2.3247879999999994,
+   "tokens": {
+    "written": 45160,
+    "read": 2699568
+   },
+   "judgeUsd": 1.137,
+   "ended": "completed",
+   "score": 87,
+   "rank": 70,
+   "allPass": false,
+   "rubric": {
+    "pass": 34,
+    "fail": 11,
+    "unsure": 0,
+    "of": 45
+   },
+   "motion": "the render stays still in 1 of 8 spans where the clip moves",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 13.7,
+   "turns": 66,
+   "costUsd": 1.9267347999999993,
+   "tokens": {
+    "written": 30940,
+    "read": 2504995
+   },
+   "judgeUsd": 0.7,
+   "ended": "completed",
+   "score": 89,
+   "rank": 96,
+   "allPass": false,
+   "rubric": {
+    "pass": 44,
+    "fail": 1,
+    "unsure": 0,
+    "of": 45
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 7.7,
+   "turns": 24,
+   "costUsd": 0.7407436000000002,
+   "tokens": {
+    "written": 8750,
+    "read": 922844
+   },
+   "judgeUsd": 0.694,
+   "ended": "completed",
+   "score": 57,
+   "rank": 11,
+   "allPass": false,
+   "rubric": {
+    "pass": 0,
+    "fail": 45,
+    "unsure": 0,
+    "of": 45
+   },
+   "motion": "the render stays still in 7 of 8 spans where the clip moves",
+   "kept": false
+  },
+  {
+   "round": 4,
+   "minutes": 10.1,
+   "turns": 17,
+   "costUsd": 0.5705598,
+   "tokens": {
+    "written": 6286,
+    "read": 600680
+   },
+   "judgeUsd": 1.719,
+   "ended": "completed",
+   "score": 89,
+   "rank": 93,
+   "allPass": false,
+   "rubric": {
+    "pass": 42,
+    "fail": 3,
+    "unsure": 0,
+    "of": 45
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": false
+  }
+ ],
+ "minutes": 46.9,
+ "tokens": {
+  "written": 91136,
+  "read": 6728087
+ },
+ "cost": {
+  "codingUsd": 5.56,
+  "judgeUsd": 4.25,
+  "rubricUsd": 0.798,
+  "totalUsd": 10.61
+ },
+ "notes": true,
+ "at": "2026-10-23T18:05:16.807Z",
+ "handFix": {
+  "on": "2026-10-24",
+  "what": "the logo redrawn from the clip at 8x",
+  "judge": "39/45 pass, 6 fail, 3 votes (the factory's own judge: 44/45)"
+ }
+}

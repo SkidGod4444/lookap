@@ -1,0 +1,981 @@
+{
+ "slug": "kn7m8-todesktop-s-bento-grid",
+ "measured": "draft",
+ "frame": {
+  "w": 1620,
+  "h": 1080
+ },
+ "animations": 201,
+ "score": 89,
+ "stills": 88,
+ "motion": 89,
+ "keyframes": [
+  {
+   "keyframe": "0s",
+   "at": 0,
+   "still": false,
+   "score": 90,
+   "overall": 6,
+   "elements": [
+    {
+     "name": "draft 6 #cfcfd0",
+     "box": [
+      1004,
+      698,
+      123,
+      77
+     ],
+     "reference": "#c7cad1",
+     "yours": "#d9dce7",
+     "delta": 24,
+     "colour": 19,
+     "deltaE": 6.8,
+     "shift": [
+      0,
+      -2
+     ],
+     "afterShift": 24,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 4 #e6e6e6",
+     "box": [
+      1005,
+      649,
+      123,
+      85
+     ],
+     "reference": "#c9d1df",
+     "yours": "#d3d8ec",
+     "delta": 18,
+     "colour": 10,
+     "deltaE": 4,
+     "shift": null,
+     "afterShift": 18,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 3 #eaeaea",
+     "box": [
+      911,
+      624,
+      331,
+      200
+     ],
+     "reference": "#e8e9ec",
+     "yours": "#eef0f4",
+     "delta": 15,
+     "colour": 7,
+     "deltaE": 2.3,
+     "shift": null,
+     "afterShift": 15,
+     "cause": "different drawing: size, shape or texture"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E4",
+     "box": [
+      810,
+      720,
+      270,
+      180
+     ],
+     "delta": 14,
+     "over": [
+      "draft 3 #eaeaea",
+      "draft 4 #e6e6e6",
+      "draft 6 #cfcfd0"
+     ]
+    },
+    {
+     "cell": "E5",
+     "box": [
+      1080,
+      720,
+      270,
+      180
+     ],
+     "delta": 12,
+     "over": [
+      "draft 3 #eaeaea",
+      "draft 4 #e6e6e6",
+      "draft 6 #cfcfd0"
+     ]
+    },
+    {
+     "cell": "B2",
+     "box": [
+      270,
+      180,
+      270,
+      180
+     ],
+     "delta": 11,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "0.5s",
+   "at": 0.5,
+   "still": false,
+   "score": 89,
+   "overall": 7,
+   "elements": [
+    {
+     "name": "draft 6 #cfcfd0",
+     "box": [
+      1004,
+      698,
+      123,
+      77
+     ],
+     "reference": "#c9cbd1",
+     "yours": "#dadde7",
+     "delta": 24,
+     "colour": 19,
+     "deltaE": 6.8,
+     "shift": [
+      2,
+      -2
+     ],
+     "afterShift": 23,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 4 #e6e6e6",
+     "box": [
+      1005,
+      649,
+      123,
+      85
+     ],
+     "reference": "#cbd1df",
+     "yours": "#d6daeb",
+     "delta": 18,
+     "colour": 11,
+     "deltaE": 3.8,
+     "shift": [
+      2,
+      2
+     ],
+     "afterShift": 17,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 3 #eaeaea",
+     "box": [
+      911,
+      624,
+      331,
+      200
+     ],
+     "reference": "#e8eaec",
+     "yours": "#eff0f4",
+     "delta": 15,
+     "colour": 7,
+     "deltaE": 2.3,
+     "shift": null,
+     "afterShift": 15,
+     "cause": "different drawing: size, shape or texture"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E4",
+     "box": [
+      810,
+      720,
+      270,
+      180
+     ],
+     "delta": 14,
+     "over": [
+      "draft 3 #eaeaea",
+      "draft 4 #e6e6e6",
+      "draft 6 #cfcfd0"
+     ]
+    },
+    {
+     "cell": "B2",
+     "box": [
+      270,
+      180,
+      270,
+      180
+     ],
+     "delta": 11,
+     "over": []
+    },
+    {
+     "cell": "B3",
+     "box": [
+      540,
+      180,
+      270,
+      180
+     ],
+     "delta": 11,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "1s",
+   "at": 1,
+   "still": false,
+   "score": 89,
+   "overall": 7,
+   "elements": [
+    {
+     "name": "draft 6 #cfcfd0",
+     "box": [
+      1004,
+      698,
+      123,
+      77
+     ],
+     "reference": "#c7cad0",
+     "yours": "#dadde7",
+     "delta": 23,
+     "colour": 20,
+     "deltaE": 7.1,
+     "shift": null,
+     "afterShift": 23,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 5 #f5f5f5",
+     "box": [
+      503,
+      688,
+      80,
+      80
+     ],
+     "reference": "#efefef",
+     "yours": "#dbdbdb",
+     "delta": 19,
+     "colour": 20,
+     "deltaE": 6.9,
+     "shift": [
+      -8,
+      -8
+     ],
+     "afterShift": 17,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 4 #e6e6e6",
+     "box": [
+      1005,
+      649,
+      123,
+      85
+     ],
+     "reference": "#cfd5df",
+     "yours": "#dcdfea",
+     "delta": 15,
+     "colour": 11,
+     "deltaE": 3.9,
+     "shift": null,
+     "afterShift": 15,
+     "cause": "different drawing: size, shape or texture"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "B3",
+     "box": [
+      540,
+      180,
+      270,
+      180
+     ],
+     "delta": 16,
+     "over": []
+    },
+    {
+     "cell": "E4",
+     "box": [
+      810,
+      720,
+      270,
+      180
+     ],
+     "delta": 14,
+     "over": [
+      "draft 3 #eaeaea",
+      "draft 4 #e6e6e6",
+      "draft 6 #cfcfd0"
+     ]
+    },
+    {
+     "cell": "A3",
+     "box": [
+      540,
+      0,
+      270,
+      180
+     ],
+     "delta": 11,
+     "over": [
+      "draft 1 #ebebeb"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "1.2s",
+   "at": 1.2,
+   "still": false,
+   "score": 90,
+   "overall": 6,
+   "elements": [
+    {
+     "name": "draft 6 #cfcfd0",
+     "box": [
+      1004,
+      698,
+      123,
+      77
+     ],
+     "reference": "#c5c9d0",
+     "yours": "#d9dce7",
+     "delta": 23,
+     "colour": 21,
+     "deltaE": 7.3,
+     "shift": null,
+     "afterShift": 23,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 3 #eaeaea",
+     "box": [
+      911,
+      624,
+      331,
+      200
+     ],
+     "reference": "#e9eaec",
+     "yours": "#f0f1f4",
+     "delta": 13,
+     "colour": 7,
+     "deltaE": 2.4,
+     "shift": null,
+     "afterShift": 13,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 4 #e6e6e6",
+     "box": [
+      1005,
+      649,
+      123,
+      85
+     ],
+     "reference": "#d2d6df",
+     "yours": "#dddfea",
+     "delta": 13,
+     "colour": 10,
+     "deltaE": 3.6,
+     "shift": null,
+     "afterShift": 13,
+     "cause": "different drawing: size, shape or texture"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E4",
+     "box": [
+      810,
+      720,
+      270,
+      180
+     ],
+     "delta": 13,
+     "over": [
+      "draft 3 #eaeaea",
+      "draft 4 #e6e6e6",
+      "draft 6 #cfcfd0"
+     ]
+    },
+    {
+     "cell": "B3",
+     "box": [
+      540,
+      180,
+      270,
+      180
+     ],
+     "delta": 12,
+     "over": []
+    },
+    {
+     "cell": "B2",
+     "box": [
+      270,
+      180,
+      270,
+      180
+     ],
+     "delta": 11,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "1.5s",
+   "at": 1.5,
+   "still": false,
+   "score": 89,
+   "overall": 7,
+   "elements": [
+    {
+     "name": "draft 6 #cfcfd0",
+     "box": [
+      1004,
+      698,
+      123,
+      77
+     ],
+     "reference": "#c3c7d0",
+     "yours": "#d7dbe7",
+     "delta": 23,
+     "colour": 21,
+     "deltaE": 7.4,
+     "shift": null,
+     "afterShift": 23,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 4 #e6e6e6",
+     "box": [
+      1005,
+      649,
+      123,
+      85
+     ],
+     "reference": "#d3d7df",
+     "yours": "#dee1ea",
+     "delta": 13,
+     "colour": 11,
+     "deltaE": 3.7,
+     "shift": null,
+     "afterShift": 13,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 7 #ececec",
+     "box": [
+      856,
+      135,
+      420,
+      151
+     ],
+     "reference": "#f0efef",
+     "yours": "#f0f0f1",
+     "delta": 13,
+     "colour": 1,
+     "deltaE": 0.6,
+     "shift": [
+      0,
+      -4
+     ],
+     "afterShift": 12,
+     "cause": "different drawing: size, shape or texture"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "A4",
+     "box": [
+      810,
+      0,
+      270,
+      180
+     ],
+     "delta": 16,
+     "over": [
+      "draft 1 #ebebeb",
+      "draft 7 #ececec"
+     ]
+    },
+    {
+     "cell": "E4",
+     "box": [
+      810,
+      720,
+      270,
+      180
+     ],
+     "delta": 13,
+     "over": [
+      "draft 3 #eaeaea",
+      "draft 4 #e6e6e6",
+      "draft 6 #cfcfd0"
+     ]
+    },
+    {
+     "cell": "B2",
+     "box": [
+      270,
+      180,
+      270,
+      180
+     ],
+     "delta": 11,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "2.5s",
+   "at": 2.5,
+   "still": false,
+   "score": 88,
+   "overall": 7,
+   "elements": [
+    {
+     "name": "draft 6 #cfcfd0",
+     "box": [
+      1004,
+      698,
+      123,
+      77
+     ],
+     "reference": "#c3c8d1",
+     "yours": "#d8dbe7",
+     "delta": 25,
+     "colour": 21,
+     "deltaE": 7.4,
+     "shift": null,
+     "afterShift": 25,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 2 #e0e0e0",
+     "box": [
+      394,
+      680,
+      306,
+      117
+     ],
+     "reference": "#dfdfdf",
+     "yours": "#e0e0e0",
+     "delta": 23,
+     "colour": 0,
+     "deltaE": 0.1,
+     "shift": [
+      -2,
+      0
+     ],
+     "afterShift": 23,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 5 #f5f5f5",
+     "box": [
+      503,
+      688,
+      80,
+      80
+     ],
+     "reference": "#dadada",
+     "yours": "#d6d6d6",
+     "delta": 20,
+     "colour": 4,
+     "deltaE": 1.4,
+     "shift": null,
+     "afterShift": 20,
+     "cause": "different drawing: size, shape or texture"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      540,
+      720,
+      270,
+      180
+     ],
+     "delta": 16,
+     "over": [
+      "draft 2 #e0e0e0",
+      "draft 5 #f5f5f5",
+      "draft 11 #efefef"
+     ]
+    },
+    {
+     "cell": "B3",
+     "box": [
+      540,
+      180,
+      270,
+      180
+     ],
+     "delta": 15,
+     "over": []
+    },
+    {
+     "cell": "E2",
+     "box": [
+      270,
+      720,
+      270,
+      180
+     ],
+     "delta": 15,
+     "over": [
+      "draft 2 #e0e0e0",
+      "draft 5 #f5f5f5",
+      "draft 12 #efefef"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "kf1",
+   "at": 2.75,
+   "still": true,
+   "score": 88,
+   "overall": 7,
+   "elements": [
+    {
+     "name": "draft 5 #f5f5f5",
+     "box": [
+      503,
+      688,
+      80,
+      80
+     ],
+     "reference": "#d9d9d9",
+     "yours": "#d6d6d6",
+     "delta": 42,
+     "colour": 3,
+     "deltaE": 1.2,
+     "shift": [
+      0,
+      6
+     ],
+     "afterShift": 14,
+     "cause": "misplaced: yours sits 6 px above the reference"
+    },
+    {
+     "name": "draft 2 #e0e0e0",
+     "box": [
+      394,
+      680,
+      306,
+      117
+     ],
+     "reference": "#e0e0e0",
+     "yours": "#e0e0e0",
+     "delta": 27,
+     "colour": 0,
+     "deltaE": 0.1,
+     "shift": [
+      0,
+      6
+     ],
+     "afterShift": 19,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 6 #cfcfd0",
+     "box": [
+      1004,
+      698,
+      123,
+      77
+     ],
+     "reference": "#c3c8d1",
+     "yours": "#d8dbe7",
+     "delta": 27,
+     "colour": 21,
+     "deltaE": 7.4,
+     "shift": null,
+     "afterShift": 27,
+     "cause": "different drawing: size, shape or texture"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E3",
+     "box": [
+      540,
+      720,
+      270,
+      180
+     ],
+     "delta": 20,
+     "over": [
+      "draft 2 #e0e0e0",
+      "draft 5 #f5f5f5",
+      "draft 11 #efefef"
+     ]
+    },
+    {
+     "cell": "E2",
+     "box": [
+      270,
+      720,
+      270,
+      180
+     ],
+     "delta": 14,
+     "over": [
+      "draft 2 #e0e0e0",
+      "draft 5 #f5f5f5",
+      "draft 12 #efefef"
+     ]
+    },
+    {
+     "cell": "E4",
+     "box": [
+      810,
+      720,
+      270,
+      180
+     ],
+     "delta": 13,
+     "over": [
+      "draft 3 #eaeaea",
+      "draft 4 #e6e6e6",
+      "draft 6 #cfcfd0"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "3.25s",
+   "at": 3.25,
+   "still": false,
+   "score": 89,
+   "overall": 7,
+   "elements": [
+    {
+     "name": "draft 6 #cfcfd0",
+     "box": [
+      1004,
+      698,
+      123,
+      77
+     ],
+     "reference": "#c9cbd1",
+     "yours": "#dbdde7",
+     "delta": 23,
+     "colour": 20,
+     "deltaE": 7,
+     "shift": null,
+     "afterShift": 23,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 10 #ebebeb",
+     "box": [
+      468,
+      637,
+      155,
+      17
+     ],
+     "reference": "#ebebeb",
+     "yours": "#f6f6f6",
+     "delta": 23,
+     "colour": 11,
+     "deltaE": 3.8,
+     "shift": [
+      -8,
+      -2
+     ],
+     "afterShift": 20,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 5 #f5f5f5",
+     "box": [
+      503,
+      688,
+      80,
+      80
+     ],
+     "reference": "#dadada",
+     "yours": "#d6d6d6",
+     "delta": 20,
+     "colour": 4,
+     "deltaE": 1.3,
+     "shift": null,
+     "afterShift": 20,
+     "cause": "different drawing: size, shape or texture"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E4",
+     "box": [
+      810,
+      720,
+      270,
+      180
+     ],
+     "delta": 13,
+     "over": [
+      "draft 3 #eaeaea",
+      "draft 4 #e6e6e6",
+      "draft 6 #cfcfd0"
+     ]
+    },
+    {
+     "cell": "B3",
+     "box": [
+      540,
+      180,
+      270,
+      180
+     ],
+     "delta": 12,
+     "over": []
+    },
+    {
+     "cell": "D4",
+     "box": [
+      810,
+      540,
+      270,
+      180
+     ],
+     "delta": 12,
+     "over": [
+      "draft 3 #eaeaea",
+      "draft 4 #e6e6e6",
+      "draft 6 #cfcfd0"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "5.4s",
+   "at": 5.4,
+   "still": false,
+   "score": 88,
+   "overall": 8,
+   "elements": [
+    {
+     "name": "draft 5 #f5f5f5",
+     "box": [
+      503,
+      688,
+      80,
+      80
+     ],
+     "reference": "#d8d8d8",
+     "yours": "#d6d6d6",
+     "delta": 34,
+     "colour": 2,
+     "deltaE": 0.6,
+     "shift": [
+      -2,
+      -2
+     ],
+     "afterShift": 22,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 6 #cfcfd0",
+     "box": [
+      1004,
+      698,
+      123,
+      77
+     ],
+     "reference": "#c8cad0",
+     "yours": "#dadde7",
+     "delta": 23,
+     "colour": 20,
+     "deltaE": 7.1,
+     "shift": null,
+     "afterShift": 23,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 2 #e0e0e0",
+     "box": [
+      394,
+      680,
+      306,
+      117
+     ],
+     "reference": "#e0e0e0",
+     "yours": "#e0e0e0",
+     "delta": 21,
+     "colour": 0,
+     "deltaE": 0,
+     "shift": [
+      -2,
+      -2
+     ],
+     "afterShift": 20,
+     "cause": "different drawing: size, shape or texture"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "E2",
+     "box": [
+      270,
+      720,
+      270,
+      180
+     ],
+     "delta": 15,
+     "over": [
+      "draft 2 #e0e0e0",
+      "draft 5 #f5f5f5",
+      "draft 12 #efefef"
+     ]
+    },
+    {
+     "cell": "E3",
+     "box": [
+      540,
+      720,
+      270,
+      180
+     ],
+     "delta": 13,
+     "over": [
+      "draft 2 #e0e0e0",
+      "draft 5 #f5f5f5",
+      "draft 11 #efefef"
+     ]
+    },
+    {
+     "cell": "E4",
+     "box": [
+      810,
+      720,
+      270,
+      180
+     ],
+     "delta": 13,
+     "over": [
+      "draft 3 #eaeaea",
+      "draft 4 #e6e6e6",
+      "draft 6 #cfcfd0"
+     ]
+    }
+   ]
+  }
+ ],
+ "runs": 23,
+ "at": "2026-10-23T19:12:29.410Z",
+ "rank": 88,
+ "allPass": false,
+ "rubric": {
+  "pass": 39,
+  "fail": 6,
+  "unsure": 0,
+  "of": 45
+ }
+}

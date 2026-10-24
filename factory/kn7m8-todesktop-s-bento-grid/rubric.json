@@ -1,0 +1,1287 @@
+{
+ "slug": "kn7m8-todesktop-s-bento-grid",
+ "frame": {
+  "w": 1620,
+  "h": 1080
+ },
+ "at": "2026-10-23T17:18:20.100Z",
+ "model": "opus",
+ "costUsd": 0.798,
+ "summary": "A light product-feature section on a near-white page (#fdfdfd): a floating white pill nav bar centred at the top (x 450–1160, y 26–91) with a blue rounded-square ToDesktop logo, \"Products ⌄ / Docs / Changelog / Blog\" in dark 16px type, an outlined \"Log in\" pill and a solid blue (#1754ff) \"Sign up\" pill. Below sit four equal bento cards in a 2×2 grid (each ≈494×455, radius ≈28, fill #f5f5f5, 26px gutter; columns x 298 and 819, rows y 98 and 580). Each card has an illustration in its upper half, a centred dark 18px title (\"Code signing made easy\", \"Measure app success\", \"Distribution. Sorted!\", \"Performance. Benchmarked!\"), a thin grey 1px divider ~294px wide, and three centred lines of grey 16px body copy. Every illustration is live: top-left, a 14×8 grid of grey monospace 0/1 digits fading toward the bottom flickers in brightness while a white/blue pen signs a grey squiggle signature on a small white window card beside an orange rosette badge with a checkmark; top-right, a bar chart on a gridded white panel builds up from one bar to four grey stacked bars (0–1s), then a white \"MacOS | Windows | Linux\" pill fades in above (~1.4s) and the second bar turns orange/blue/charcoal inside a raised white capsule (~1.5s); bottom-left, under a \"builder.acme.com\" download pill, a grey laptop opens from a flat closed base to show a soft greyscale dune wallpaper (~0.5–1.2s), then three white rounded app tiles (Apple, Windows, Linux penguin) pop up over it (~2.3s) and keep floating with small tilts; bottom-right, a skeuomorphic white speedometer with 11 tick marks and a blue needle and blue progress arc swings back and forth continuously over a faded browser window, while blurred monospace grey \"NNMS\" latency labels drift and streak around it. Nav, cards, titles and body text never move.",
+ "elements": [
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1620,
+    1080
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "near-white #fdfdfd"
+  },
+  {
+   "name": "nav pill bar",
+   "box": [
+    450,
+    26,
+    710,
+    65
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "white fully rounded pill with soft wide shadow"
+  },
+  {
+   "name": "ToDesktop logo",
+   "box": [
+    472,
+    41,
+    35,
+    35
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "blue gradient rounded square with white 'b'-like mark"
+  },
+  {
+   "name": "nav links",
+   "box": [
+    550,
+    48,
+    325,
+    22
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "Products (with chevron), Docs, Changelog, Blog; dark 16px"
+  },
+  {
+   "name": "Log in button",
+   "box": [
+    974,
+    40,
+    75,
+    37
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "white pill with light grey outline, dark text"
+  },
+  {
+   "name": "Sign up button",
+   "box": [
+    1060,
+    40,
+    87,
+    37
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "solid #1754ff pill, white text"
+  },
+  {
+   "name": "card code signing",
+   "box": [
+    298,
+    98,
+    494,
+    455
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "#f5f5f5, radius ~28"
+  },
+  {
+   "name": "card measure",
+   "box": [
+    819,
+    98,
+    494,
+    455
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "#f5f5f5, radius ~28"
+  },
+  {
+   "name": "card distribution",
+   "box": [
+    298,
+    580,
+    494,
+    455
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "#f5f5f5, radius ~28"
+  },
+  {
+   "name": "card performance",
+   "box": [
+    819,
+    580,
+    494,
+    455
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "#f5f5f5, radius ~28"
+  },
+  {
+   "name": "binary digit grid",
+   "box": [
+    340,
+    140,
+    410,
+    225
+   ],
+   "kind": "text",
+   "class": "css",
+   "note": "14 cols × 8 rows of monospace 0/1, ~30px pitch, flickering grey levels, fading toward bottom"
+  },
+  {
+   "name": "signature window card",
+   "box": [
+    458,
+    171,
+    174,
+    104
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "white rounded card with three grey dots, × mark and baseline"
+  },
+  {
+   "name": "signature squiggle",
+   "box": [
+    530,
+    220,
+    45,
+    35
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "grey handwritten stroke drawn by the pen"
+  },
+  {
+   "name": "pen",
+   "box": [
+    540,
+    160,
+    155,
+    85
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "white/silver pen with blue grip band and logo, soft shadow"
+  },
+  {
+   "name": "rosette badge",
+   "box": [
+    444,
+    233,
+    66,
+    85
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "orange rosette with white check and two ribbon tails"
+  },
+  {
+   "name": "chart grid backdrop",
+   "box": [
+    857,
+    135,
+    418,
+    190
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "faint grid lines on light panel"
+  },
+  {
+   "name": "OS pill",
+   "box": [
+    930,
+    136,
+    272,
+    38
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "white pill: MacOS (black apple), Windows (blue), Linux (orange)"
+  },
+  {
+   "name": "chart panel",
+   "box": [
+    895,
+    193,
+    342,
+    135
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "white rounded panel with fine grid"
+  },
+  {
+   "name": "bar 1",
+   "box": [
+    948,
+    218,
+    30,
+    90
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "grey stacked bar, 3 segments"
+  },
+  {
+   "name": "bar 2 highlighted",
+   "box": [
+    1008,
+    240,
+    46,
+    76
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "white capsule holding orange, blue, charcoal segments"
+  },
+  {
+   "name": "bar 3",
+   "box": [
+    1085,
+    213,
+    30,
+    95
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "tallest grey bar"
+  },
+  {
+   "name": "bar 4",
+   "box": [
+    1153,
+    230,
+    30,
+    78
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "grey stacked bar, lighter top"
+  },
+  {
+   "name": "download link pill",
+   "box": [
+    467,
+    615,
+    157,
+    28
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "white pill, sky-blue download icon and 'builder.acme.com'"
+  },
+  {
+   "name": "laptop",
+   "box": [
+    436,
+    680,
+    218,
+    117
+   ],
+   "kind": "image",
+   "class": "photo",
+   "note": "grey laptop with greyscale dune wallpaper"
+  },
+  {
+   "name": "apple tile",
+   "box": [
+    397,
+    690,
+    78,
+    78
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "white rounded square, black apple logo, soft shadow"
+  },
+  {
+   "name": "windows tile",
+   "box": [
+    504,
+    690,
+    78,
+    78
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "white rounded square, black 4-pane logo"
+  },
+  {
+   "name": "linux tile",
+   "box": [
+    621,
+    692,
+    78,
+    78
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "white rounded square, black penguin"
+  },
+  {
+   "name": "faded browser window",
+   "box": [
+    874,
+    705,
+    384,
+    125
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "white window with three grey dots, fades out downward"
+  },
+  {
+   "name": "speedometer",
+   "box": [
+    980,
+    628,
+    170,
+    170
+   ],
+   "kind": "image",
+   "class": "css",
+   "note": "white bezel, grey dial, 11 ticks, blue needle, blue arc, logo"
+  },
+  {
+   "name": "latency labels",
+   "box": [
+    819,
+    585,
+    494,
+    200
+   ],
+   "kind": "text",
+   "class": "css",
+   "note": "grey monospace 'NNMS' labels, blurred, drifting"
+  },
+  {
+   "name": "card titles",
+   "box": [
+    445,
+    362,
+    738,
+    502
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "four dark 18px centred titles"
+  },
+  {
+   "name": "dividers",
+   "box": [
+    398,
+    407,
+    816,
+    484
+   ],
+   "kind": "decoration",
+   "class": null,
+   "note": "1px light grey lines ~294px wide under each title"
+  },
+  {
+   "name": "body copy",
+   "box": [
+    346,
+    432,
+    922,
+    552
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "three-line centred grey 16px paragraphs"
+  },
+  {
+   "name": "mouse cursor",
+   "box": [
+    640,
+    255,
+    14,
+    18
+   ],
+   "kind": "chrome",
+   "class": null,
+   "note": "recording cursor, not part of the design"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "bento grid",
+   "axis": "position",
+   "check": "Four equal cards sit in a 2×2 grid: columns starting x≈298 and x≈819, rows starting y≈98 and y≈580, each ≈494×455 px, with a ≈26px gap",
+   "box": [
+    298,
+    98,
+    1015,
+    937
+   ],
+   "scope": "frame",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "cards",
+   "axis": "style",
+   "check": "Cards are a flat light grey (#f5f5f5) on a lighter near-white page (#fdfdfd), with no border line and corner radius ≈28px",
+   "box": [
+    298,
+    98,
+    494,
+    455
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "nav pill bar",
+   "axis": "position",
+   "check": "A white fully rounded nav pill spans x≈450–1160, y≈26–91, centred above the grid, with a soft wide shadow",
+   "box": [
+    440,
+    20,
+    730,
+    80
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "nav links",
+   "axis": "text",
+   "check": "Nav reads, left to right: logo, 'Products' with a down chevron, 'Docs', 'Changelog', 'Blog', in dark ~16px type",
+   "box": [
+    470,
+    40,
+    410,
+    40
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "Sign up button",
+   "axis": "style",
+   "check": "'Sign up' is a solid vivid blue (#1754ff) pill with white text at x≈1060–1147",
+   "box": [
+    1055,
+    36,
+    96,
+    45
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "Log in button",
+   "axis": "style",
+   "check": "'Log in' is a white pill with a thin light grey outline and dark text, left of Sign up",
+   "box": [
+    970,
+    36,
+    84,
+    45
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "ToDesktop logo",
+   "axis": "imagery",
+   "check": "Logo is a ≈35px blue rounded square with a white 'b'-shaped mark, an original drawing with the same silhouette and colour",
+   "box": [
+    468,
+    38,
+    42,
+    42
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "card titles",
+   "axis": "text",
+   "check": "Titles read exactly 'Code signing made easy', 'Measure app success', 'Distribution. Sorted!', 'Performance. Benchmarked!' in near-black ~18px medium, centred in their cards at y≈371 and y≈854",
+   "box": [
+    298,
+    355,
+    1015,
+    515
+   ],
+   "scope": "frame",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "body copy",
+   "axis": "text",
+   "check": "Top-left card body reads 'Our guided process makes purchasing and using / certificates a breeze. Our secure hardware storage and / expiry notifications give you peace of mind.' in three centred lines",
+   "box": [
+    340,
+    430,
+    410,
+    70
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "body copy",
+   "axis": "text",
+   "check": "Bottom-right body reads 'Measure launch time, memory, and CPU usage. / Compare across versions and other industry-standard / Electron apps.'",
+   "box": [
+    865,
+    912,
+    400,
+    72
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "body copy",
+   "axis": "style",
+   "check": "Body copy is mid grey (~#666), clearly lighter than the near-black titles, ~16px with ~24px line spacing",
+   "box": [
+    340,
+    430,
+    930,
+    555
+   ],
+   "scope": "frame",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "dividers",
+   "axis": "present",
+   "check": "Each card has a thin 1px light grey horizontal divider ≈294px wide centred between title and body (y≈408 top row, y≈890 bottom row)",
+   "box": [
+    390,
+    400,
+    830,
+    500
+   ],
+   "scope": "frame",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "binary digit grid",
+   "axis": "present",
+   "check": "The top-left card shows a grid of monospace 0 and 1 digits, 14 columns by 8 rows at ~30px pitch spanning x≈348–742, y≈147–359",
+   "box": [
+    340,
+    140,
+    410,
+    225
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "binary digit grid",
+   "axis": "style",
+   "check": "Digits are mixed grey shades (some dark, many pale) and the bottom two rows fade to nearly invisible; no digits are black or coloured",
+   "box": [
+    340,
+    140,
+    410,
+    225
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "binary digit grid",
+   "axis": "motion",
+   "check": "Individual digits change brightness (and some flip value) between the two moments while the grid positions stay fixed",
+   "box": [
+    340,
+    140,
+    410,
+    225
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": 3.25
+  },
+  {
+   "id": "c16",
+   "element": "signature window card",
+   "axis": "present",
+   "check": "A white rounded window card (≈174×104 at x≈458, y≈171) with three grey dots top-left and a small '×' plus baseline sits in the middle of the digit grid, hiding the digits behind it",
+   "box": [
+    450,
+    165,
+    190,
+    115
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "rosette badge",
+   "axis": "imagery",
+   "check": "An orange rosette badge with a white-ringed checkmark and two orange ribbon tails overlaps the card's lower-left corner at x≈444–510, y≈233–318",
+   "box": [
+    440,
+    228,
+    75,
+    95
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "pen",
+   "axis": "imagery",
+   "check": "A white/silver pen with a blue grip band lies diagonally (tip lower-left, cap upper-right) with its tip on the signature line, casting a soft grey shadow on the card",
+   "box": [
+    530,
+    155,
+    170,
+    95
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c19",
+   "element": "pen",
+   "axis": "motion",
+   "check": "At 0s no pen and no signature are visible on the window card; by 0.5s the pen has appeared with its tip at the baseline's left",
+   "box": [
+    450,
+    150,
+    260,
+    130
+   ],
+   "scope": "crop",
+   "at": 0,
+   "then": 0.5
+  },
+  {
+   "id": "c20",
+   "element": "signature squiggle",
+   "axis": "motion",
+   "check": "Between 0.5s and 2.5s a grey handwritten squiggle signature appears on the line, drawn left-to-right behind the moving pen tip",
+   "box": [
+    515,
+    210,
+    80,
+    50
+   ],
+   "scope": "crop",
+   "at": 0.5,
+   "then": 2.5
+  },
+  {
+   "id": "c21",
+   "element": "chart panel",
+   "axis": "present",
+   "check": "A white rounded panel (≈342×135 at x≈895, y≈193) with a fine light grey grid sits on a larger faint gridded backdrop in the top-right card",
+   "box": [
+    855,
+    130,
+    425,
+    200
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "chart bars",
+   "axis": "present",
+   "check": "The chart shows exactly 4 vertical stacked bars, each ~30px wide, made of 2–3 rounded segments, standing on a common baseline at y≈308",
+   "box": [
+    940,
+    205,
+    250,
+    115
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "bar 2 highlighted",
+   "axis": "style",
+   "check": "The second bar is coloured top to bottom orange (#f6a623-ish), thin blue, then charcoal, inside a raised white rounded capsule; the other three bars stay grey",
+   "box": [
+    1004,
+    236,
+    54,
+    84
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "chart bars",
+   "axis": "motion",
+   "check": "At 0s only one tall grey bar and a small pale square are present; by 1s all four grey bars have grown in",
+   "box": [
+    940,
+    200,
+    250,
+    120
+   ],
+   "scope": "crop",
+   "at": 0,
+   "then": 1
+  },
+  {
+   "id": "c25",
+   "element": "bar 2 highlighted",
+   "axis": "motion",
+   "check": "Bar 2 is plain grey at 1s and has turned orange/blue/charcoal inside its white capsule by 2.5s",
+   "box": [
+    1004,
+    236,
+    54,
+    84
+   ],
+   "scope": "crop",
+   "at": 1,
+   "then": 2.5
+  },
+  {
+   "id": "c26",
+   "element": "OS pill",
+   "axis": "text",
+   "check": "A white pill above the chart reads '[apple] MacOS | [windows] Windows | [flame/penguin] Linux' with MacOS black, Windows blue, Linux orange, separated by thin grey dividers",
+   "box": [
+    928,
+    134,
+    276,
+    42
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c27",
+   "element": "OS pill",
+   "axis": "motion",
+   "check": "The OS pill is absent at 1s and fully visible at 2.5s (it fades in around 1.4s)",
+   "box": [
+    928,
+    134,
+    276,
+    42
+   ],
+   "scope": "crop",
+   "at": 1,
+   "then": 2.5
+  },
+  {
+   "id": "c28",
+   "element": "download link pill",
+   "axis": "text",
+   "check": "A white pill at x≈467–624, y≈615–643 shows a sky-blue download-arrow icon and the text 'builder.acme.com' in sky blue (~#0a8ad8)",
+   "box": [
+    462,
+    610,
+    167,
+    38
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c29",
+   "element": "laptop",
+   "axis": "motion",
+   "check": "At 0.5s the laptop is only a flat closed grey base bar at y≈790; by 1.0s its lid has risen to show a screen",
+   "box": [
+    430,
+    670,
+    230,
+    135
+   ],
+   "scope": "crop",
+   "at": 0.5,
+   "then": 1
+  },
+  {
+   "id": "c30",
+   "element": "laptop",
+   "axis": "imagery",
+   "check": "The open laptop screen shows a soft greyscale dune/mountain wallpaper (photo-like, no colour), framed by a light grey bezel and a thin base",
+   "box": [
+    436,
+    680,
+    218,
+    117
+   ],
+   "scope": "crop",
+   "at": 1.2,
+   "then": null
+  },
+  {
+   "id": "c31",
+   "element": "OS tiles",
+   "axis": "present",
+   "check": "Exactly 3 white rounded-square tiles (~78px) with soft drop shadows float in front of the laptop: Apple (left), Windows 4-pane (centre), Linux penguin (right), each icon black",
+   "box": [
+    385,
+    680,
+    325,
+    100
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c32",
+   "element": "OS tiles",
+   "axis": "motion",
+   "check": "No app tiles are visible at 1.5s; all three are visible over the laptop by 2.5s",
+   "box": [
+    385,
+    680,
+    325,
+    100
+   ],
+   "scope": "crop",
+   "at": 1.5,
+   "then": 2.5
+  },
+  {
+   "id": "c33",
+   "element": "OS tiles",
+   "axis": "motion",
+   "check": "After appearing the tiles keep drifting: between 2.75s and 3.25s each tile shifts a few px and/or tilts slightly (Apple tile visibly rotated at 2.5s)",
+   "box": [
+    385,
+    680,
+    325,
+    100
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": 3.25
+  },
+  {
+   "id": "c34",
+   "element": "speedometer",
+   "axis": "position",
+   "check": "A circular gauge ≈170px across is centred near (1066,712) in the bottom-right card, overlapping a faded white browser window",
+   "box": [
+    975,
+    622,
+    182,
+    182
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c35",
+   "element": "speedometer",
+   "axis": "style",
+   "check": "The gauge reads as a raised skeuomorphic dial: thick white outer bezel with soft shadow, a darker grey inner ring, a light grey radial face; not a flat outlined circle",
+   "box": [
+    975,
+    622,
+    182,
+    182
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c36",
+   "element": "speedometer",
+   "axis": "style",
+   "check": "The dial face carries exactly 11 short grey tick marks around its upper ~270°, a faint inner circle, a grey hub, and a faint grey ToDesktop logo below the hub",
+   "box": [
+    990,
+    640,
+    150,
+    150
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c37",
+   "element": "speedometer needle",
+   "axis": "style",
+   "check": "The needle is a vivid blue tapered spike from a blue hub dot, and a blue arc runs along the inner rim from the lower-left up to the needle's angle",
+   "box": [
+    990,
+    640,
+    150,
+    150
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c38",
+   "element": "speedometer needle",
+   "axis": "motion",
+   "check": "The needle swings: it points to about 1 o'clock at 0.5s and to about 10–11 o'clock at 1s, with the blue arc shrinking to follow it",
+   "box": [
+    990,
+    640,
+    150,
+    150
+   ],
+   "scope": "crop",
+   "at": 0.5,
+   "then": 1
+  },
+  {
+   "id": "c39",
+   "element": "speedometer needle",
+   "axis": "motion",
+   "check": "The needle points to ~9 o'clock at 2.75s and has swung up to ~12 o'clock at 3.25s",
+   "box": [
+    990,
+    640,
+    150,
+    150
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": 3.25
+  },
+  {
+   "id": "c40",
+   "element": "latency labels",
+   "axis": "text",
+   "check": "Scattered grey monospace labels in the form two digits + 'MS' (e.g. '94MS', '43MS', '89MS') appear around the gauge across the card's upper half",
+   "box": [
+    819,
+    585,
+    494,
+    200
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c41",
+   "element": "latency labels",
+   "axis": "style",
+   "check": "Latency labels are pale grey, several are blurred or horizontally smeared, and they sit behind the gauge; none are dark or coloured",
+   "box": [
+    819,
+    585,
+    494,
+    200
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c42",
+   "element": "latency labels",
+   "axis": "motion",
+   "check": "The set and positions of MS labels differ between the two moments (labels drift and new ones appear), while the card itself is still",
+   "box": [
+    819,
+    585,
+    494,
+    200
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": 3.25
+  },
+  {
+   "id": "c43",
+   "element": "faded browser window",
+   "axis": "style",
+   "check": "Behind the gauge sits a white window (x≈874–1258, from y≈705) with three grey dots top-left whose lower part fades into the card with no bottom edge",
+   "box": [
+    870,
+    700,
+    392,
+    135
+   ],
+   "scope": "crop",
+   "at": 2.75,
+   "then": null
+  },
+  {
+   "id": "c44",
+   "element": "static chrome",
+   "axis": "motion",
+   "check": "Nav bar, card outlines, titles, dividers and body copy do not move or change between 0.5s and 5.4s",
+   "box": [
+    0,
+    0,
+    1620,
+    1080
+   ],
+   "scope": "frame",
+   "at": 0.5,
+   "then": 5.4
+  },
+  {
+   "id": "c45",
+   "element": "illustrations",
+   "axis": "motion",
+   "check": "All four illustrations animate simultaneously from 0s (not one-at-a-time on hover): pen, bars, laptop and needle all change between 0s and 1s",
+   "box": [
+    298,
+    98,
+    1015,
+    730
+   ],
+   "scope": "frame",
+   "at": 0,
+   "then": 1
+  }
+ ],
+ "imagery": [
+  {
+   "name": "ToDesktop logo",
+   "box": [
+    472,
+    41,
+    35,
+    35
+   ],
+   "class": "structured",
+   "what": "blue gradient rounded square with white b-shaped mark",
+   "at": 2.75
+  },
+  {
+   "name": "rosette badge",
+   "box": [
+    444,
+    233,
+    66,
+    85
+   ],
+   "class": "structured",
+   "what": "orange award rosette with white check and two ribbon tails",
+   "at": 2.75
+  },
+  {
+   "name": "pen",
+   "box": [
+    540,
+    160,
+    155,
+    85
+   ],
+   "class": "structured",
+   "what": "silver/white pen with blue grip and logo, with shadow",
+   "at": 2.75
+  },
+  {
+   "name": "signature squiggle",
+   "box": [
+    530,
+    220,
+    45,
+    35
+   ],
+   "class": "structured",
+   "what": "grey handwritten signature stroke",
+   "at": 2.75
+  },
+  {
+   "name": "OS logos",
+   "box": [
+    397,
+    690,
+    302,
+    80
+   ],
+   "class": "structured",
+   "what": "black Apple, Windows and Linux penguin glyphs on white tiles",
+   "at": 2.75
+  },
+  {
+   "name": "laptop wallpaper",
+   "box": [
+    445,
+    688,
+    195,
+    95
+   ],
+   "class": "photo",
+   "what": "greyscale soft dunes/mountains wallpaper on a grey laptop",
+   "at": 1.2
+  },
+  {
+   "name": "speedometer",
+   "box": [
+    980,
+    628,
+    170,
+    170
+   ],
+   "class": "css",
+   "what": "skeuomorphic white gauge with 11 ticks, blue needle and blue arc",
+   "at": 2.75
+  },
+  {
+   "name": "binary digit grid",
+   "box": [
+    340,
+    140,
+    410,
+    225
+   ],
+   "class": "css",
+   "what": "14×8 monospace 0/1 digits in flickering grey",
+   "at": 2.75
+  },
+  {
+   "name": "latency labels",
+   "box": [
+    819,
+    585,
+    494,
+    200
+   ],
+   "class": "css",
+   "what": "blurred grey monospace NNMS labels",
+   "at": 2.75
+  }
+ ],
+ "moves": [
+  {
+   "element": "pen",
+   "what": "appears on the window card",
+   "from": 0,
+   "to": 0.5,
+   "px": null
+  },
+  {
+   "element": "chart bars",
+   "what": "grow from one bar to four grey stacked bars",
+   "from": 0,
+   "to": 1,
+   "px": null
+  },
+  {
+   "element": "laptop",
+   "what": "lid opens from closed base to show wallpaper",
+   "from": 0.5,
+   "to": 1.2,
+   "px": null
+  },
+  {
+   "element": "OS pill",
+   "what": "fades in above the chart",
+   "from": 1.3,
+   "to": 1.5,
+   "px": null
+  },
+  {
+   "element": "bar 2",
+   "what": "turns orange/blue/charcoal in a white capsule",
+   "from": 1.4,
+   "to": 1.6,
+   "px": null
+  },
+  {
+   "element": "OS tiles",
+   "what": "three app tiles pop in over the laptop",
+   "from": 2.2,
+   "to": 2.5,
+   "px": null
+  },
+  {
+   "element": "OS tiles",
+   "what": "float and tilt slightly",
+   "from": 2.5,
+   "to": 5.52,
+   "px": 5
+  },
+  {
+   "element": "pen + signature",
+   "what": "pen signs a squiggle left to right, looping",
+   "from": 0.5,
+   "to": 5.52,
+   "px": 40
+  },
+  {
+   "element": "speedometer needle",
+   "what": "swings back and forth (1 o'clock to 9 o'clock to 12) with blue arc following",
+   "from": 0,
+   "to": 5.52,
+   "px": null
+  },
+  {
+   "element": "binary digits",
+   "what": "flicker brightness/value",
+   "from": 0,
+   "to": 5.52,
+   "px": null
+  },
+  {
+   "element": "latency labels",
+   "what": "drift and streak around the gauge",
+   "from": 0,
+   "to": 5.52,
+   "px": null
+  }
+ ]
+}

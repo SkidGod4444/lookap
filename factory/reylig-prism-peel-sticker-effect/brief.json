@@ -1,0 +1,555 @@
+{
+ "slug": "reylig-prism-peel-sticker-effect",
+ "title": "Prism Peel Sticker Effect",
+ "measured": false,
+ "recipe": null,
+ "what": "Interactive peelable X sticker with a prismatic rainbow shine following the cursor, offering White, Sparkle, Prism, Ripple, and Halftone material styles.",
+ "frame": {
+  "ratio": 1.155,
+  "shape": "square",
+  "media": "clip"
+ },
+ "tone": "light surface, dark type",
+ "traits": [
+  "Motion",
+  "Monochrome",
+  "Sticker"
+ ],
+ "section": "Motion",
+ "steps": [
+  "Call see_design for the frame and read the layout from it: regions, alignment, type scale, corner radii, spacing rhythm.",
+  "The media is a clip: name each state you can see (rest, hover, press, open) and the order they occur in.",
+  "Build with the project's own stack and tokens; match proportion and hierarchy before matching pixels.",
+  "A draft measurement is attached: its phases, moves and palette are measured from the clip; its boxes are a first pass to check against the keyframes."
+ ],
+ "draft": {
+  "frame": {
+   "w": 1248,
+   "h": 1080
+  },
+  "duration": 18.83,
+  "phases": [
+   [
+    1.85,
+    2
+   ],
+   [
+    3,
+    3.15
+   ],
+   [
+    4.9,
+    5.05
+   ],
+   [
+    5.3,
+    5.5
+   ],
+   [
+    6.05,
+    6.15
+   ],
+   [
+    6.3,
+    6.35
+   ],
+   [
+    6.9,
+    7
+   ],
+   [
+    7.2,
+    7.3
+   ],
+   [
+    9.7,
+    9.75
+   ],
+   [
+    14,
+    14.25
+   ],
+   [
+    15.9,
+    16.15
+   ],
+   [
+    17.5,
+    17.5
+   ]
+  ],
+  "keyframes": [
+   {
+    "name": "kf1",
+    "at": 0.9,
+    "hold": [
+     0,
+     1.8
+    ]
+   },
+   {
+    "name": "kf2",
+    "at": 4.05,
+    "hold": [
+     3.2,
+     4.85
+    ]
+   },
+   {
+    "name": "kf3",
+    "at": 8.5,
+    "hold": [
+     7.35,
+     9.65
+    ]
+   },
+   {
+    "name": "kf4",
+    "at": 11.9,
+    "hold": [
+     9.8,
+     13.95
+    ]
+   }
+  ],
+  "moments": [
+   {
+    "at": 0.9,
+    "name": "kf1"
+   },
+   {
+    "at": 1.93,
+    "name": "mid-phase"
+   },
+   {
+    "at": 3.08,
+    "name": "mid-phase"
+   },
+   {
+    "at": 4.05,
+    "name": "kf2"
+   },
+   {
+    "at": 4.97,
+    "name": "mid-phase"
+   },
+   {
+    "at": 5.4,
+    "name": "mid-phase"
+   },
+   {
+    "at": 6.1,
+    "name": "mid-phase"
+   },
+   {
+    "at": 8.5,
+    "name": "kf3"
+   },
+   {
+    "at": 11.9,
+    "name": "kf4"
+   },
+   {
+    "at": 14.13,
+    "name": "mid-phase"
+   },
+   {
+    "at": 16.02,
+    "name": "mid-phase"
+   }
+  ],
+  "anchors": [
+   {
+    "phase": [
+     1.85,
+     2
+    ],
+    "read": "the content fills the frame (a gradient, photo or window behind it), so its edges cannot be read against the background: use look_at what=track on a column through the moving part",
+    "reliable": false
+   },
+   {
+    "phase": [
+     3,
+     3.15
+    ],
+    "read": "the content fills the frame (a gradient, photo or window behind it), so its edges cannot be read against the background: use look_at what=track on a column through the moving part",
+    "reliable": false
+   },
+   {
+    "phase": [
+     4.9,
+     5.05
+    ],
+    "read": "the content fills the frame (a gradient, photo or window behind it), so its edges cannot be read against the background: use look_at what=track on a column through the moving part",
+    "reliable": false
+   },
+   {
+    "phase": [
+     5.3,
+     5.5
+    ],
+    "read": "the content fills the frame (a gradient, photo or window behind it), so its edges cannot be read against the background: use look_at what=track on a column through the moving part",
+    "reliable": false
+   },
+   {
+    "phase": [
+     6.05,
+     6.15
+    ],
+    "read": "the content fills the frame (a gradient, photo or window behind it), so its edges cannot be read against the background: use look_at what=track on a column through the moving part",
+    "reliable": false
+   },
+   {
+    "phase": [
+     14,
+     14.25
+    ],
+    "read": "the content fills the frame (a gradient, photo or window behind it), so its edges cannot be read against the background: use look_at what=track on a column through the moving part",
+    "reliable": false
+   },
+   {
+    "phase": [
+     15.9,
+     16.15
+    ],
+    "read": "the content fills the frame (a gradient, photo or window behind it), so its edges cannot be read against the background: use look_at what=track on a column through the moving part",
+    "reliable": false
+   }
+  ],
+  "background": "#f4f4f5",
+  "palette": [
+   {
+    "hex": "#f4f4f6",
+    "share": 88.5
+   },
+   {
+    "hex": "#040404",
+    "share": 3.5
+   },
+   {
+    "hex": "#e8e7ea",
+    "share": 1.7
+   },
+   {
+    "hex": "#171618",
+    "share": 1.4
+   },
+   {
+    "hex": "#d8d7da",
+    "share": 0.7
+   },
+   {
+    "hex": "#eeedf1",
+    "share": 0.6
+   },
+   {
+    "hex": "#c7c7c9",
+    "share": 0.4
+   },
+   {
+    "hex": "#f0eff2",
+    "share": 0.4
+   }
+  ],
+  "elements": [
+   {
+    "box": [
+     363,
+     277,
+     518,
+     432
+    ],
+    "fill": "#100f10"
+   },
+   {
+    "box": [
+     606,
+     560,
+     300,
+     280
+    ],
+    "fill": "#010101"
+   },
+   {
+    "box": [
+     356,
+     656,
+     189,
+     181
+    ],
+    "fill": "#010101"
+   },
+   {
+    "box": [
+     332,
+     263,
+     604,
+     610
+    ],
+    "fill": "#ceced0"
+   },
+   {
+    "box": [
+     570,
+     1012,
+     104,
+     43
+    ],
+    "fill": "#1a191c"
+   },
+   {
+    "box": [
+     341,
+     675,
+     270,
+     191
+    ],
+    "fill": "#bababc"
+   },
+   {
+    "box": [
+     338,
+     291,
+     196,
+     305
+    ],
+    "fill": "#ceced0"
+   },
+   {
+    "box": [
+     717,
+     279,
+     192,
+     253
+    ],
+    "fill": "#bdbcbf"
+   },
+   {
+    "box": [
+     570,
+     349,
+     88,
+     125
+    ],
+    "fill": "#fdfe2d"
+   }
+  ],
+  "motion": [
+   {
+    "element": "#100f10",
+    "box": [
+     363,
+     277,
+     518,
+     432
+    ],
+    "moves": [
+     {
+      "from": 0.05,
+      "to": 0.1,
+      "dTop": 0,
+      "dLeft": 4,
+      "ms": 50
+     },
+     {
+      "from": 0.2,
+      "to": 0.55,
+      "dTop": 4,
+      "dLeft": 4,
+      "ms": 350
+     },
+     {
+      "from": 0.7,
+      "to": 0.9,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 200
+     },
+     {
+      "from": 0.95,
+      "to": 1.15,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 200
+     }
+    ]
+   },
+   {
+    "element": "#feffff",
+    "box": [
+     429,
+     322,
+     408,
+     481
+    ],
+    "moves": [
+     {
+      "from": 1.75,
+      "to": 2.5,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 750
+     },
+     {
+      "from": 2.9,
+      "to": 3.2,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 300
+     },
+     {
+      "from": 5.9,
+      "to": 6.05,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 150
+     },
+     {
+      "from": 6.1,
+      "to": 6.45,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 350
+     }
+    ]
+   },
+   {
+    "element": "#010101",
+    "box": [
+     606,
+     560,
+     300,
+     280
+    ],
+    "moves": [
+     {
+      "from": 0.1,
+      "to": 0.7,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 600
+     },
+     {
+      "from": 0.75,
+      "to": 1,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 250
+     },
+     {
+      "from": 1.05,
+      "to": 1.35,
+      "dTop": 1,
+      "dLeft": 0,
+      "ms": 300
+     },
+     {
+      "from": 1.65,
+      "to": 3.3,
+      "dTop": -2,
+      "dLeft": -6,
+      "ms": 1650
+     }
+    ]
+   },
+   {
+    "element": "#dedee0",
+    "box": [
+     329,
+     250,
+     611,
+     627
+    ],
+    "moves": [
+     {
+      "from": 0.2,
+      "to": 0.4,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 200
+     },
+     {
+      "from": 0.45,
+      "to": 0.55,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 1.1,
+      "to": 1.15,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 1.6,
+      "to": 2.5,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 900
+     }
+    ]
+   }
+  ],
+  "coverage": "flat regions found; boxes and fills are usable as given",
+  "confidence": {
+   "phases": "measured: sampled every 50 ms",
+   "motion": "measured: moves of the first keyframe's big parts, edges read at full resolution; dTop and dLeft are the distance in source px",
+   "palette": "measured for areas; small things do not reach it",
+   "anchors": "measured where the content stands clear of its background (reliable true): the box of everything that is not background at a phase's start and end, and which edges moved; where the content fills the frame the field says so and look_at what=track is the way to read an edge",
+   "elements": "draft: flat regions at the first keyframe; nested parts split or merge, text and thin parts are missing; check each box against the keyframe (see_design with at) before trusting it"
+  }
+ },
+ "motion": {
+  "status": "draft measured: draft.phases say when things move, draft.anchors which edges, draft.motion how far; the presets below are only for states the clip never shows",
+  "enter": "fade up 12 px, 320 ms, cubic-bezier(0.2, 0.8, 0.2, 1)",
+  "hover": "colour or ring only, 150 ms",
+  "press": "scale 0.98, 120 ms",
+  "reducedMotion": "respect prefers-reduced-motion: no entrance, instant hover"
+ },
+ "text": null,
+ "notes": [
+  {
+   "slug": "motion-from-stills",
+   "title": "Giving motion to a still, honestly"
+  }
+ ],
+ "credit": {
+  "author": "sucodee",
+  "x": "sucodeee",
+  "source": "https://x.com/sucodeee/status/2104873657885438135"
+ },
+ "method": [
+  "Fetch the clip; read size, fps and duration from the container.",
+  "Dump frames at 2 fps plus a contact sheet; pick the idle and active moments and dump those at full resolution.",
+  "Convert the chosen frames to raw RGB and measure: bounding boxes of every element, exact hex at flat regions, luminance profiles across edges for the lighting, a per-frame luma trace of the moving region for timing.",
+  "Build with one unit, --u, equal to one source pixel at the design size, and write every size as calc(N * var(--u)).",
+  "Light rounded objects with inset box-shadows on one overlay (rim, near glow, wide falloff); stacked linear gradients show a seam at the corner.",
+  "Render the build headless at --u: 1px, crop to the frame, put it beside the source frame, and look. Fix the three largest differences. Repeat."
+ ],
+ "build": null,
+ "oneShot": "No measured recipe, but a draft: build from draft.elements and draft.motion, look at each keyframe with see_design (at), then call check_rebuild with a screenshot; its regions are reliable, its element rows are as good as the draft boxes.",
+ "keyframeFiles": [
+  {
+   "name": "kf1",
+   "at": 0.9,
+   "file": "public/drafts/8v5jq03/kf1.jpg"
+  },
+  {
+   "name": "kf2",
+   "at": 4.05,
+   "file": "public/drafts/8v5jq03/kf2.jpg"
+  },
+  {
+   "name": "kf3",
+   "at": 8.5,
+   "file": "public/drafts/8v5jq03/kf3.jpg"
+  },
+  {
+   "name": "kf4",
+   "at": 11.9,
+   "file": "public/drafts/8v5jq03/kf4.jpg"
+  }
+ ]
+}

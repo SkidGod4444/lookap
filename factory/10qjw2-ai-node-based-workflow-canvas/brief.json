@@ -1,0 +1,503 @@
+{
+ "slug": "10qjw2-ai-node-based-workflow-canvas",
+ "title": "AI Node-Based Workflow Canvas",
+ "measured": false,
+ "recipe": null,
+ "what": "A dark node-graph interface connecting prompt, noise, sampler, and processing nodes for building AI pipelines with draggable ports.",
+ "frame": {
+  "ratio": 1.397,
+  "shape": "landscape",
+  "media": "clip"
+ },
+ "tone": "dark surface, light type",
+ "traits": [
+  "Nodes",
+  "Canvas",
+  "Dark"
+ ],
+ "section": "Interface",
+ "steps": [
+  "Call see_design for the frame and read the layout from it: regions, alignment, type scale, corner radii, spacing rhythm.",
+  "The media is a clip: name each state you can see (rest, hover, press, open) and the order they occur in.",
+  "Build with the project's own stack and tokens; match proportion and hierarchy before matching pixels.",
+  "A draft measurement is attached: its phases, moves and palette are measured from the clip; its boxes are a first pass to check against the keyframes."
+ ],
+ "draft": {
+  "frame": {
+   "w": 1006,
+   "h": 720
+  },
+  "duration": 9.97,
+  "phases": [
+   [
+    0.4,
+    0.4
+   ],
+   [
+    1,
+    1.45
+   ],
+   [
+    1.55,
+    1.6
+   ],
+   [
+    2.65,
+    2.65
+   ],
+   [
+    2.75,
+    2.75
+   ],
+   [
+    2.85,
+    2.85
+   ],
+   [
+    2.95,
+    2.95
+   ],
+   [
+    4.25,
+    4.25
+   ],
+   [
+    4.9,
+    5.05
+   ],
+   [
+    5.25,
+    5.25
+   ],
+   [
+    5.35,
+    5.35
+   ],
+   [
+    5.75,
+    6.15
+   ],
+   [
+    6.45,
+    6.65
+   ],
+   [
+    6.75,
+    6.75
+   ],
+   [
+    6.85,
+    6.85
+   ],
+   [
+    7.3,
+    7.75
+   ],
+   [
+    7.95,
+    8.05
+   ],
+   [
+    8.15,
+    8.25
+   ],
+   [
+    8.35,
+    8.35
+   ],
+   [
+    8.75,
+    9.25
+   ],
+   [
+    9.65,
+    9.65
+   ],
+   [
+    9.85,
+    9.85
+   ]
+  ],
+  "keyframes": [
+   {
+    "name": "kf1",
+    "at": 0.2,
+    "hold": [
+     0,
+     0.35
+    ]
+   },
+   {
+    "name": "kf2",
+    "at": 0.7,
+    "hold": [
+     0.45,
+     0.95
+    ]
+   },
+   {
+    "name": "kf3",
+    "at": 2.15,
+    "hold": [
+     1.65,
+     2.6
+    ]
+   },
+   {
+    "name": "kf4",
+    "at": 3.6,
+    "hold": [
+     3,
+     4.2
+    ]
+   }
+  ],
+  "moments": [
+   {
+    "at": 0.2,
+    "name": "kf1"
+   },
+   {
+    "at": 0.7,
+    "name": "kf2"
+   },
+   {
+    "at": 1.23,
+    "name": "mid-phase"
+   },
+   {
+    "at": 2.15,
+    "name": "kf3"
+   },
+   {
+    "at": 3.6,
+    "name": "kf4"
+   },
+   {
+    "at": 4.97,
+    "name": "mid-phase"
+   },
+   {
+    "at": 5.95,
+    "name": "mid-phase"
+   },
+   {
+    "at": 6.55,
+    "name": "mid-phase"
+   },
+   {
+    "at": 7.53,
+    "name": "mid-phase"
+   },
+   {
+    "at": 8,
+    "name": "mid-phase"
+   },
+   {
+    "at": 9,
+    "name": "mid-phase"
+   }
+  ],
+  "anchors": [
+   {
+    "phase": [
+     1,
+     1.45
+    ],
+    "read": "bottom and left fixed, top -48, right +80",
+    "moved": {
+     "top": -48,
+     "bottom": 0,
+     "left": 0,
+     "right": 80
+    },
+    "reliable": true
+   },
+   {
+    "phase": [
+     4.9,
+     5.05
+    ],
+    "read": "bottom and left fixed, top +44, right -96",
+    "moved": {
+     "top": 44,
+     "bottom": 0,
+     "left": 0,
+     "right": -96
+    },
+    "reliable": true
+   },
+   {
+    "phase": [
+     5.75,
+     6.15
+    ],
+    "read": "bottom and left fixed, top -48, right +68",
+    "moved": {
+     "top": -48,
+     "bottom": 0,
+     "left": 0,
+     "right": 68
+    },
+    "reliable": true
+   }
+  ],
+  "background": "#131516",
+  "palette": [
+   {
+    "hex": "#131516",
+    "share": 95
+   },
+   {
+    "hex": "#0f1112",
+    "share": 1.3
+   },
+   {
+    "hex": "#232426",
+    "share": 1
+   },
+   {
+    "hex": "#1e1e20",
+    "share": 0.5
+   },
+   {
+    "hex": "#0e0f11",
+    "share": 0.3
+   },
+   {
+    "hex": "#363739",
+    "share": 0.2
+   },
+   {
+    "hex": "#1e2021",
+    "share": 0.2
+   },
+   {
+    "hex": "#464648",
+    "share": 0.1
+   }
+  ],
+  "elements": [],
+  "motion": [
+   {
+    "element": "#212124",
+    "box": [
+     121,
+     180,
+     251,
+     3
+    ],
+    "moves": [
+     {
+      "from": 0.35,
+      "to": 0.4,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 0.6,
+      "to": 0.65,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 1.55,
+      "to": 1.6,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 3,
+      "to": 3.05,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     }
+    ]
+   },
+   {
+    "element": "#222325",
+    "box": [
+     167,
+     450,
+     295,
+     4
+    ],
+    "moves": [
+     {
+      "from": 0.35,
+      "to": 0.4,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 0.45,
+      "to": 0.5,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 0.75,
+      "to": 0.8,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 0.95,
+      "to": 1,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     }
+    ]
+   },
+   {
+    "element": "#202223",
+    "box": [
+     631,
+     104,
+     283,
+     2
+    ],
+    "moves": [
+     {
+      "from": 1.2,
+      "to": 1.6,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 400
+     },
+     {
+      "from": 1.65,
+      "to": 1.75,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 2.9,
+      "to": 3.25,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 350
+     },
+     {
+      "from": 3.35,
+      "to": 3.45,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     }
+    ]
+   },
+   {
+    "element": "#212325",
+    "box": [
+     100,
+     118,
+     288,
+     2
+    ],
+    "moves": [
+     {
+      "from": 0.35,
+      "to": 1.6,
+      "dTop": 0,
+      "dLeft": 3,
+      "ms": 1250
+     },
+     {
+      "from": 2.6,
+      "to": 2.7,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 2.75,
+      "to": 2.85,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 2.95,
+      "to": 3.05,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     }
+    ]
+   }
+  ],
+  "coverage": "flat regions found; boxes and fills are usable as given",
+  "confidence": {
+   "phases": "measured: sampled every 50 ms",
+   "motion": "measured: moves of the first keyframe's big parts, edges read at full resolution; dTop and dLeft are the distance in source px",
+   "palette": "measured for areas; small things do not reach it",
+   "anchors": "measured where the content stands clear of its background (reliable true): the box of everything that is not background at a phase's start and end, and which edges moved; where the content fills the frame the field says so and look_at what=track is the way to read an edge",
+   "elements": "draft: flat regions at the first keyframe; nested parts split or merge, text and thin parts are missing; check each box against the keyframe (see_design with at) before trusting it"
+  }
+ },
+ "motion": {
+  "status": "draft measured: draft.phases say when things move, draft.anchors which edges, draft.motion how far; the presets below are only for states the clip never shows",
+  "enter": "fade up 12 px, 320 ms, cubic-bezier(0.2, 0.8, 0.2, 1)",
+  "hover": "colour or ring only, 150 ms",
+  "press": "scale 0.98, 120 ms",
+  "reducedMotion": "respect prefers-reduced-motion: no entrance, instant hover"
+ },
+ "text": null,
+ "notes": [
+  {
+   "slug": "dark-silver-tokens",
+   "title": "A dark, silver, single-accent system"
+  },
+  {
+   "slug": "motion-from-stills",
+   "title": "Giving motion to a still, honestly"
+  }
+ ],
+ "credit": {
+  "author": "Omerico",
+  "x": "omer_assa",
+  "source": "https://x.com/omer_assa/status/2106758938926391416"
+ },
+ "method": [
+  "Fetch the clip; read size, fps and duration from the container.",
+  "Dump frames at 2 fps plus a contact sheet; pick the idle and active moments and dump those at full resolution.",
+  "Convert the chosen frames to raw RGB and measure: bounding boxes of every element, exact hex at flat regions, luminance profiles across edges for the lighting, a per-frame luma trace of the moving region for timing.",
+  "Build with one unit, --u, equal to one source pixel at the design size, and write every size as calc(N * var(--u)).",
+  "Light rounded objects with inset box-shadows on one overlay (rim, near glow, wide falloff); stacked linear gradients show a seam at the corner.",
+  "Render the build headless at --u: 1px, crop to the frame, put it beside the source frame, and look. Fix the three largest differences. Repeat."
+ ],
+ "build": null,
+ "oneShot": "No measured recipe, but a draft: build from draft.elements and draft.motion, look at each keyframe with see_design (at), then call check_rebuild with a screenshot; its regions are reliable, its element rows are as good as the draft boxes.",
+ "keyframeFiles": [
+  {
+   "name": "kf1",
+   "at": 0.2,
+   "file": "public/drafts/qxv4s4x/kf1.jpg"
+  },
+  {
+   "name": "kf2",
+   "at": 0.7,
+   "file": "public/drafts/qxv4s4x/kf2.jpg"
+  },
+  {
+   "name": "kf3",
+   "at": 2.15,
+   "file": "public/drafts/qxv4s4x/kf3.jpg"
+  },
+  {
+   "name": "kf4",
+   "at": 3.6,
+   "file": "public/drafts/qxv4s4x/kf4.jpg"
+  }
+ ]
+}

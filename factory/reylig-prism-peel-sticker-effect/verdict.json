@@ -1,0 +1,1830 @@
+{
+ "slug": "reylig-prism-peel-sticker-effect",
+ "at": "2026-10-24T04:02:02.283Z",
+ "runs": 19,
+ "html": "factory/reylig-prism-peel-sticker-effect/index.html",
+ "pixel": {
+  "score": 82,
+  "stills": 85,
+  "motion": 81,
+  "moments": 23
+ },
+ "animations": 4,
+ "rank": 85,
+ "allPass": false,
+ "elements": [
+  {
+   "name": "peel backing with MetalForge pattern",
+   "box": [
+    520,
+    450,
+    320,
+    380
+   ],
+   "deltaE": 2.1,
+   "delta": 32,
+   "shift": [
+    0,
+    2
+   ],
+   "afterShift": 30,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "prism chromatic fringe",
+   "box": [
+    355,
+    270,
+    550,
+    570
+   ],
+   "deltaE": 1.8,
+   "delta": 28,
+   "shift": [
+    2,
+    4
+   ],
+   "afterShift": 24,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "X sticker (die-cut)",
+   "box": [
+    332,
+    252,
+    600,
+    612
+   ],
+   "deltaE": 1.4,
+   "delta": 27,
+   "shift": [
+    2,
+    4
+   ],
+   "afterShift": 23,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "sticker drop shadow",
+   "box": [
+    340,
+    270,
+    610,
+    620
+   ],
+   "deltaE": 1.5,
+   "delta": 26,
+   "shift": [
+    2,
+    4
+   ],
+   "afterShift": 23,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Google G sticker",
+   "box": [
+    326,
+    250,
+    614,
+    624
+   ],
+   "deltaE": 1.4,
+   "delta": 26,
+   "shift": [
+    2,
+    4
+   ],
+   "afterShift": 23,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "eyebrow label PEEL STICKER",
+   "box": [
+    23,
+    35,
+    127,
+    14
+   ],
+   "deltaE": 0.2,
+   "delta": 21,
+   "shift": [
+    0,
+    -4
+   ],
+   "afterShift": 19,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "style segmented control",
+   "box": [
+    335,
+    1005,
+    588,
+    56
+   ],
+   "deltaE": 2.3,
+   "delta": 18,
+   "shift": null,
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "active style pill",
+   "box": [
+    569,
+    1011,
+    105,
+    44
+   ],
+   "deltaE": 2.4,
+   "delta": 18,
+   "shift": null,
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "cursor",
+   "box": [
+    525,
+    455,
+    20,
+    30
+   ],
+   "deltaE": 3,
+   "delta": 18,
+   "shift": [
+    2,
+    2
+   ],
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "title numeral + style name",
+   "box": [
+    23,
+    64,
+    108,
+    34
+   ],
+   "deltaE": 0.6,
+   "delta": 14,
+   "shift": [
+    -2,
+    -2
+   ],
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "canvas background with dot grid",
+   "box": [
+    0,
+    0,
+    1248,
+    1080
+   ],
+   "deltaE": 0.5,
+   "delta": 13,
+   "shift": null,
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "hint line",
+   "box": [
+    441,
+    945,
+    375,
+    18
+   ],
+   "deltaE": 0.3,
+   "delta": 11,
+   "shift": [
+    -6,
+    -2
+   ],
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "top-right caption",
+   "box": [
+    1035,
+    84,
+    200,
+    16
+   ],
+   "deltaE": 0.6,
+   "delta": 10,
+   "shift": [
+    4,
+    -2
+   ],
+   "afterShift": 8,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "the render stays still in 2 of 22 spans where the clip moves",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "0.5s",
+    "clip": 2.9,
+    "render": 0.7,
+    "read": "both move"
+   },
+   {
+    "from": "0.5s",
+    "to": "kf1",
+    "clip": 1.6,
+    "render": 0.4,
+    "read": "both move"
+   },
+   {
+    "from": "kf1",
+    "to": "1.4s",
+    "clip": 1.7,
+    "render": 1.3,
+    "read": "both move"
+   },
+   {
+    "from": "1.4s",
+    "to": "1.93s",
+    "clip": 8,
+    "render": 6.2,
+    "read": "both move"
+   },
+   {
+    "from": "1.93s",
+    "to": "2.5s",
+    "clip": 11.2,
+    "render": 13.1,
+    "read": "both move"
+   },
+   {
+    "from": "2.5s",
+    "to": "3.08s",
+    "clip": 14.7,
+    "render": 12.3,
+    "read": "both move"
+   },
+   {
+    "from": "3.08s",
+    "to": "kf2",
+    "clip": 8.2,
+    "render": 7.8,
+    "read": "both move"
+   },
+   {
+    "from": "kf2",
+    "to": "4.55s",
+    "clip": 1.5,
+    "render": 0.8,
+    "read": "both move"
+   },
+   {
+    "from": "4.55s",
+    "to": "4.97s",
+    "clip": 8.3,
+    "render": 7.6,
+    "read": "both move"
+   },
+   {
+    "from": "4.97s",
+    "to": "5.4s",
+    "clip": 4.6,
+    "render": 8.2,
+    "read": "both move"
+   },
+   {
+    "from": "5.4s",
+    "to": "6.1s",
+    "clip": 5.8,
+    "render": 15.4,
+    "read": "both move"
+   },
+   {
+    "from": "6.1s",
+    "to": "kf3",
+    "clip": 5.9,
+    "render": 5.1,
+    "read": "both move"
+   },
+   {
+    "from": "kf3",
+    "to": "9s",
+    "clip": 0.1,
+    "render": 0.1,
+    "read": "both still"
+   },
+   {
+    "from": "9s",
+    "to": "9.6s",
+    "clip": 0,
+    "render": 0.3,
+    "read": "both still"
+   },
+   {
+    "from": "9.6s",
+    "to": "9.9s",
+    "clip": 18.4,
+    "render": 18.9,
+    "read": "both move"
+   },
+   {
+    "from": "9.9s",
+    "to": "10.2s",
+    "clip": 2,
+    "render": 0,
+    "read": "render still where the clip moves"
+   },
+   {
+    "from": "10.2s",
+    "to": "11s",
+    "clip": 3.3,
+    "render": 1.7,
+    "read": "both move"
+   },
+   {
+    "from": "11s",
+    "to": "kf4",
+    "clip": 4.8,
+    "render": 3.1,
+    "read": "both move"
+   },
+   {
+    "from": "kf4",
+    "to": "12.4s",
+    "clip": 2.4,
+    "render": 0.2,
+    "read": "render still where the clip moves"
+   },
+   {
+    "from": "12.4s",
+    "to": "14.13s",
+    "clip": 13.2,
+    "render": 17.7,
+    "read": "both move"
+   },
+   {
+    "from": "14.13s",
+    "to": "16.02s",
+    "clip": 11.2,
+    "render": 9.9,
+    "read": "both move"
+   },
+   {
+    "from": "16.02s",
+    "to": "17s",
+    "clip": 14.6,
+    "render": 15.2,
+    "read": "both move"
+   }
+  ],
+  "trajectories": [
+   {
+    "element": "#100f10",
+    "box": [
+     363,
+     277,
+     518,
+     432
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 2,
+      "dy": 2,
+      "delta": 22
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": 2,
+      "delta": 22
+     },
+     {
+      "at": 0.9,
+      "dx": 0,
+      "dy": 2,
+      "delta": 22
+     },
+     {
+      "at": 1.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 21
+     },
+     {
+      "at": 1.93,
+      "dx": 10,
+      "dy": -12,
+      "delta": 23
+     },
+     {
+      "at": 2.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 3
+     },
+     {
+      "at": 3.08,
+      "dx": 0,
+      "dy": 0,
+      "delta": 26
+     },
+     {
+      "at": 4.05,
+      "dx": 0,
+      "dy": 0,
+      "delta": 15
+     },
+     {
+      "at": 4.55,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 4.97,
+      "dx": -12,
+      "dy": -12,
+      "delta": 20
+     },
+     {
+      "at": 5.4,
+      "dx": -12,
+      "dy": -12,
+      "delta": 25
+     },
+     {
+      "at": 6.1,
+      "dx": 0,
+      "dy": 4,
+      "delta": 49
+     },
+     {
+      "at": 8.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 9.6,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 9.9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 16
+     },
+     {
+      "at": 10.2,
+      "dx": 0,
+      "dy": 0,
+      "delta": 16
+     },
+     {
+      "at": 11,
+      "dx": 0,
+      "dy": 0,
+      "delta": 17
+     },
+     {
+      "at": 11.9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 18
+     },
+     {
+      "at": 12.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 19
+     },
+     {
+      "at": 14.13,
+      "dx": -6,
+      "dy": -12,
+      "delta": 33
+     },
+     {
+      "at": 16.02,
+      "dx": -12,
+      "dy": -12,
+      "delta": 26
+     },
+     {
+      "at": 17,
+      "dx": 0,
+      "dy": -2,
+      "delta": 25
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   },
+   {
+    "element": "#feffff",
+    "box": [
+     429,
+     322,
+     408,
+     481
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 2,
+      "delta": 27
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": 2,
+      "delta": 21
+     },
+     {
+      "at": 0.9,
+      "dx": 0,
+      "dy": 2,
+      "delta": 20
+     },
+     {
+      "at": 1.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 16
+     },
+     {
+      "at": 1.93,
+      "dx": 0,
+      "dy": 0,
+      "delta": 33
+     },
+     {
+      "at": 2.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 4
+     },
+     {
+      "at": 3.08,
+      "dx": 2,
+      "dy": 0,
+      "delta": 27
+     },
+     {
+      "at": 4.05,
+      "dx": 2,
+      "dy": 2,
+      "delta": 13
+     },
+     {
+      "at": 4.55,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 4.97,
+      "dx": 4,
+      "dy": 2,
+      "delta": 27
+     },
+     {
+      "at": 5.4,
+      "dx": -10,
+      "dy": -12,
+      "delta": 34
+     },
+     {
+      "at": 6.1,
+      "dx": 0,
+      "dy": 6,
+      "delta": 53
+     },
+     {
+      "at": 8.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 9.6,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 9.9,
+      "dx": 2,
+      "dy": -2,
+      "delta": 21
+     },
+     {
+      "at": 10.2,
+      "dx": 4,
+      "dy": -2,
+      "delta": 19
+     },
+     {
+      "at": 11,
+      "dx": 4,
+      "dy": -2,
+      "delta": 20
+     },
+     {
+      "at": 11.9,
+      "dx": 2,
+      "dy": 0,
+      "delta": 20
+     },
+     {
+      "at": 12.4,
+      "dx": 2,
+      "dy": 0,
+      "delta": 22
+     },
+     {
+      "at": 14.13,
+      "dx": 2,
+      "dy": -12,
+      "delta": 41
+     },
+     {
+      "at": 16.02,
+      "dx": 0,
+      "dy": 0,
+      "delta": 27
+     },
+     {
+      "at": 17,
+      "dx": 2,
+      "dy": -2,
+      "delta": 33
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   },
+   {
+    "element": "#010101",
+    "box": [
+     606,
+     560,
+     300,
+     280
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 6,
+      "dy": 10,
+      "delta": 27
+     },
+     {
+      "at": 0.5,
+      "dx": 2,
+      "dy": 4,
+      "delta": 9
+     },
+     {
+      "at": 0.9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 1.4,
+      "dx": -2,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 1.93,
+      "dx": 2,
+      "dy": 2,
+      "delta": 43
+     },
+     {
+      "at": 2.5,
+      "dx": -12,
+      "dy": -12,
+      "delta": 7
+     },
+     {
+      "at": 3.08,
+      "dx": 6,
+      "dy": 8,
+      "delta": 27
+     },
+     {
+      "at": 4.05,
+      "dx": 2,
+      "dy": 4,
+      "delta": 9
+     },
+     {
+      "at": 4.55,
+      "dx": 0,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 4.97,
+      "dx": 4,
+      "dy": 2,
+      "delta": 31
+     },
+     {
+      "at": 5.4,
+      "dx": -8,
+      "dy": -8,
+      "delta": 51
+     },
+     {
+      "at": 6.1,
+      "dx": -12,
+      "dy": -12,
+      "delta": 73
+     },
+     {
+      "at": 8.5,
+      "dx": 2,
+      "dy": 4,
+      "delta": 9
+     },
+     {
+      "at": 9,
+      "dx": 2,
+      "dy": 4,
+      "delta": 9
+     },
+     {
+      "at": 9.6,
+      "dx": 2,
+      "dy": 4,
+      "delta": 9
+     },
+     {
+      "at": 9.9,
+      "dx": -4,
+      "dy": -10,
+      "delta": 18
+     },
+     {
+      "at": 10.2,
+      "dx": 0,
+      "dy": 0,
+      "delta": 18
+     },
+     {
+      "at": 11,
+      "dx": -4,
+      "dy": -6,
+      "delta": 14
+     },
+     {
+      "at": 11.9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 21
+     },
+     {
+      "at": 12.4,
+      "dx": -4,
+      "dy": -8,
+      "delta": 21
+     },
+     {
+      "at": 14.13,
+      "dx": -12,
+      "dy": 0,
+      "delta": 22
+     },
+     {
+      "at": 16.02,
+      "dx": 0,
+      "dy": 0,
+      "delta": 3
+     },
+     {
+      "at": 17,
+      "dx": 0,
+      "dy": -10,
+      "delta": 40
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   },
+   {
+    "element": "#dedee0",
+    "box": [
+     329,
+     250,
+     611,
+     627
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 2,
+      "dy": 4,
+      "delta": 22
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 19
+     },
+     {
+      "at": 0.9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 19
+     },
+     {
+      "at": 1.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 18
+     },
+     {
+      "at": 1.93,
+      "dx": 0,
+      "dy": 0,
+      "delta": 25
+     },
+     {
+      "at": 2.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 5
+     },
+     {
+      "at": 3.08,
+      "dx": 0,
+      "dy": 6,
+      "delta": 24
+     },
+     {
+      "at": 4.05,
+      "dx": 0,
+      "dy": 2,
+      "delta": 13
+     },
+     {
+      "at": 4.55,
+      "dx": 0,
+      "dy": 0,
+      "delta": 11
+     },
+     {
+      "at": 4.97,
+      "dx": 2,
+      "dy": 2,
+      "delta": 22
+     },
+     {
+      "at": 5.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 29
+     },
+     {
+      "at": 6.1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 47
+     },
+     {
+      "at": 8.5,
+      "dx": 0,
+      "dy": 2,
+      "delta": 11
+     },
+     {
+      "at": 9,
+      "dx": 0,
+      "dy": 2,
+      "delta": 10
+     },
+     {
+      "at": 9.6,
+      "dx": 0,
+      "dy": 2,
+      "delta": 12
+     },
+     {
+      "at": 9.9,
+      "dx": 2,
+      "dy": -4,
+      "delta": 18
+     },
+     {
+      "at": 10.2,
+      "dx": 2,
+      "dy": 0,
+      "delta": 14
+     },
+     {
+      "at": 11,
+      "dx": 0,
+      "dy": -4,
+      "delta": 17
+     },
+     {
+      "at": 11.9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 17
+     },
+     {
+      "at": 12.4,
+      "dx": 2,
+      "dy": -2,
+      "delta": 19
+     },
+     {
+      "at": 14.13,
+      "dx": 0,
+      "dy": 0,
+      "delta": 37
+     },
+     {
+      "at": 16.02,
+      "dx": 0,
+      "dy": 0,
+      "delta": 21
+     },
+     {
+      "at": 17,
+      "dx": 0,
+      "dy": -4,
+      "delta": 28
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   }
+  ]
+ },
+ "scale": {
+  "ok": true,
+  "changed": 1.9,
+  "read": "scales: the half-size render matches the full one (difference 1.9)"
+ },
+ "rubric": {
+  "file": "factory/reylig-prism-peel-sticker-effect/rubric.json",
+  "total": 45,
+  "counted": 45,
+  "pass": 44,
+  "fail": 1,
+  "unsure": 0,
+  "unjudged": 0,
+  "passRate": 98,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "style",
+    "element": "canvas background with dot grid",
+    "check": "Background is a very light cool grey (~#f4f4f5), not pure white",
+    "box": [
+     0,
+     0,
+     1248,
+     1080
+    ],
+    "at": 0.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both backgrounds are the same very light cool grey, not white. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "present",
+    "element": "canvas background with dot grid",
+    "check": "A faint grid of small grey dots (~22 px pitch) covers the background, visible near the top-left corner",
+    "box": [
+     0,
+     0,
+     320,
+     140
+    ],
+    "at": 0.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild has a faint grey dot grid at about the same pitch as the clip. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "text",
+    "element": "eyebrow label PEEL STICKER",
+    "check": "Top-left reads 'PEEL STICKER' in small uppercase letter-spaced mid-grey type",
+    "box": [
+     15,
+     30,
+     150,
+     25
+    ],
+    "at": 0.9,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "Rebuild label is thinner and smaller, about 332 px wide at 3x against the clip's 375 px. [votes: no/no/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "text",
+    "element": "title numeral + style name",
+    "check": "Under the label, a large title reads '3 Prism' (~32 px, semibold)",
+    "box": [
+     15,
+     60,
+     130,
+     45
+    ],
+    "at": 0.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Title '3 Prism' is about 310 px wide at 3x against 317 in the clip, semibold in both. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "style",
+    "element": "title numeral + style name",
+    "check": "In the title the numeral '3' is light grey and the word 'Prism' is near-black",
+    "box": [
+     15,
+     60,
+     130,
+     45
+    ],
+    "at": 0.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The 3 is light grey and Prism is near-black in both. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "text",
+    "element": "top-right caption",
+    "check": "Top-right reads 'Your picture · WebGL 2' in light-grey monospace type, right-aligned near x 1235, y ~92",
+    "box": [
+     1020,
+     80,
+     228,
+     25
+    ],
+    "at": 0.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Light-grey monospace caption, about 480 px wide at 2.5x against 500 in the clip, right-aligned. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "position",
+    "element": "X sticker (die-cut)",
+    "check": "The sticker sits centred horizontally, spanning about x 332-932 and y 252-864",
+    "box": [
+     300,
+     230,
+     660,
+     660
+    ],
+    "at": 8.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Sticker is centred and about 285 px wide against the clip's 300, within 10%. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "imagery",
+    "element": "X sticker (die-cut)",
+    "check": "The sticker art is an X logo: two black diagonal strokes where the top-left-to-bottom-right stroke is an outlined bar with a white interior",
+    "box": [
+     332,
+     252,
+     600,
+     612
+    ],
+    "at": 8.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Black X with an outlined white-interior bar on the same diagonal, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "style",
+    "element": "X sticker (die-cut)",
+    "check": "A solid white die-cut border about 20-24 px wide follows the X outline with rounded outer corners and rounded inner notches",
+    "box": [
+     332,
+     252,
+     600,
+     612
+    ],
+    "at": 8.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White die-cut border of about 22 px with rounded corners and notches, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "style",
+    "element": "sticker drop shadow",
+    "check": "The sticker casts a soft blurred grey shadow, strongest along the bottom and right edges, with no hard outline",
+    "box": [
+     320,
+     800,
+     640,
+     90
+    ],
+    "at": 8.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Soft blurred grey shadow, heavier along the bottom and right, with no hard outline. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "present",
+    "element": "prism chromatic fringe",
+    "check": "At rest under the cursor, the black strokes carry thin coloured fringes (red, yellow, blue, cyan) offset a few px along their edges",
+    "box": [
+     355,
+     270,
+     320,
+     350
+    ],
+    "at": 0.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Red, yellow, blue and cyan fringes sit along the stroke edges, though thinner than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "style",
+    "element": "prism chromatic fringe",
+    "check": "The prism effect shows as discrete offset coloured copies of the edges (a split-channel look), not as a smooth rainbow gradient fill over the sticker",
+    "box": [
+     355,
+     270,
+     320,
+     350
+    ],
+    "at": 0.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Fringes are discrete offset coloured copies of the edges, with no rainbow fill. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "motion",
+    "element": "prism chromatic fringe",
+    "check": "The fringe colours move with the cursor: between the two moments the red/yellow bands along the top-left stroke change width and position",
+    "box": [
+     340,
+     260,
+     350,
+     350
+    ],
+    "at": 0.5,
+    "then": 1.4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Top-left red/yellow bands change width and position between 0.5s and 1.4s, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "position",
+    "element": "prism chromatic fringe",
+    "check": "When the cursor is near the top-right arm, the strongest cyan/blue/red/yellow fringe sits on that arm's right edge (x ~780-890, y ~275-420)",
+    "box": [
+     740,
+     250,
+     180,
+     200
+    ],
+    "at": 4.05,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Cyan and blue on the left edge and red and yellow on the right edge of the top-right arm, thinner than the clip's but in the same place. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "text",
+    "element": "hint line",
+    "check": "Below the sticker, centred, reads 'Drag an edge to peel · move over it for the shine' in light-grey ~16 px type",
+    "box": [
+     430,
+     940,
+     400,
+     30
+    ],
+    "at": 0.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Centred light-grey hint with the same text and about the same width (560 px against 562 at 1.5x). [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "present",
+    "element": "style segmented control",
+    "check": "A white rounded pill control is centred at the bottom (about x 335-923, y 1005-1061)",
+    "box": [
+     320,
+     995,
+     620,
+     75
+    ],
+    "at": 0.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White rounded pill is centred at the bottom at the same position as the clip's. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "text",
+    "element": "style segmented control",
+    "check": "The control lists exactly five items in order: '1 White', '2 Sparkle', '3 Prism', '4 Ripple', '5 Halftone'",
+    "box": [
+     335,
+     1005,
+     588,
+     56
+    ],
+    "at": 0.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The same five items in the same order, though the rebuild's type is smaller. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "style",
+    "element": "style segmented control",
+    "check": "In each item the numeral is grey and the word is near-black",
+    "box": [
+     335,
+     1005,
+     588,
+     56
+    ],
+    "at": 0.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Grey numerals and near-black words in both. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "style",
+    "element": "active style pill",
+    "check": "The active item '3 Prism' sits on a near-black fully rounded pill with white text",
+    "box": [
+     565,
+     1008,
+     112,
+     50
+    ],
+    "at": 0.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Near-black fully rounded pill with a grey 3 and white Prism, the same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "motion",
+    "element": "X sticker (die-cut)",
+    "check": "The sticker is being peeled: most of the top-left arm and the centre are lifted and curled, leaving only the top-right arm, the bottom-left arm and the bottom-right corner flat",
+    "box": [
+     320,
+     240,
+     620,
+     640
+    ],
+    "at": 1.4,
+    "then": 1.93,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 1.93s the top-left arm and the centre are lifted and curled, and the top-right arm, bottom-left arm and bottom-right corner stay flat; the curl is smaller than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "imagery",
+    "element": "peel backing with MetalForge pattern",
+    "check": "The underside of the curled sticker is light grey and tiled with repeated grey 'MetalForge' wordmarks set at an angle",
+    "box": [
+     520,
+     450,
+     320,
+     380
+    ],
+    "at": 1.93,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild's flap is light grey with angled grey MetalForge wordmarks, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "style",
+    "element": "peel backing with MetalForge pattern",
+    "check": "The curled flap reads as bent paper/vinyl: shading varies across the roll and the wordmarks distort with the curve, instead of a flat grey shape",
+    "box": [
+     520,
+     450,
+     320,
+     380
+    ],
+    "at": 1.93,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild flap has a gradient fold and wordmarks cut by the curve, though less curled than the clip. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "style",
+    "element": "peel backing with MetalForge pattern",
+    "check": "The lifted flap casts a soft diffuse shadow onto the canvas beside it, with no hard edge",
+    "box": [
+     700,
+     600,
+     300,
+     320
+    ],
+    "at": 1.93,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Soft diffuse shadow beside the sticker and flap with no hard edge, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "style",
+    "element": "X sticker (die-cut)",
+    "check": "Where the sticker is peeled away the canvas shows plain background (no hole, no residue outline)",
+    "box": [
+     330,
+     250,
+     330,
+     330
+    ],
+    "at": 1.93,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Peeled area is plain canvas with no hole or outline; the dot grid is a little more visible than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "motion",
+    "element": "X sticker (die-cut)",
+    "check": "The sticker is dragged almost completely off its spot toward the bottom-right: the centre area is empty and only a large curled backing flap shows at the bottom-right of the frame",
+    "box": [
+     0,
+     0,
+     1248,
+     1080
+    ],
+    "at": 1.93,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 2.5s the centre is empty and a large curled backing flap sits at the bottom-right, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "motion",
+    "element": "X sticker (die-cut)",
+    "check": "After release the sticker springs back from the half-peeled state at 3.08s to fully flat at 4.05s, in the same box as before",
+    "box": [
+     320,
+     240,
+     620,
+     640
+    ],
+    "at": 3.08,
+    "then": 4.05,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild is half-peeled at 3.08s and fully flat in the same box at 4.05s. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "present",
+    "element": "X sticker (die-cut)",
+    "check": "After settling, a small curled corner (~50 px) stays lifted at the sticker's top-left tip, showing grey backing",
+    "box": [
+     345,
+     245,
+     90,
+     90
+    ],
+    "at": 4.05,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A small lifted corner with a diagonal fold sits at the top-left tip, with fainter grey than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "motion",
+    "element": "X sticker (die-cut)",
+    "check": "Grabbing the top-right tip lifts a small corner flap there with a soft shadow, while the rest of the sticker stays flat",
+    "box": [
+     800,
+     250,
+     150,
+     120
+    ],
+    "at": 4.05,
+    "then": 4.55,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 4.55s the rebuild lifts a small curled corner at the top-right tip with a soft shadow, rest flat. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "motion",
+    "element": "X sticker (die-cut)",
+    "check": "A peel from the bottom-left drags a long curled flap out to the left, past x ~250, while the bottom-right leg stays stuck",
+    "box": [
+     200,
+     240,
+     750,
+     640
+    ],
+    "at": 4.97,
+    "then": 5.4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild's flap extends left to about x≈115 (past 250) while the bottom-right leg stays stuck. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "motion",
+    "element": "X sticker (die-cut)",
+    "check": "A peel from the bottom-right rolls a flap up and over the centre, showing mirrored 'MetalForge' text on its back",
+    "box": [
+     600,
+     400,
+     200,
+     380
+    ],
+    "at": 6.1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rolled flap shows mirrored MetalForge text on its back, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "present",
+    "element": "X sticker (die-cut)",
+    "check": "While the sticker is curled, the flat part still shows the black X strokes and the white border correctly clipped along the curl line",
+    "box": [
+     600,
+     600,
+     330,
+     260
+    ],
+    "at": 1.93,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Black X strokes and white border are cleanly clipped along the curl edge, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "motion",
+    "element": "X sticker (die-cut)",
+    "check": "Between these moments the sticker is fully flat and still; only a tiny curl at the top-right corner changes",
+    "box": [
+     320,
+     240,
+     620,
+     640
+    ],
+    "at": 8.5,
+    "then": 9,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Sticker is flat and still with only a tiny top-right curl that changes. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "motion",
+    "element": "Google G sticker",
+    "check": "The X sticker is replaced by a Google 'G' sticker in the same central box (about x 326-940, y 250-874)",
+    "box": [
+     300,
+     230,
+     660,
+     660
+    ],
+    "at": 9.6,
+    "then": 9.9,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Google G replaces the X in the same central box. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "imagery",
+    "element": "Google G sticker",
+    "check": "The G is drawn in four flat colour segments: red top arc, yellow left, green bottom, blue crossbar and lower right, with a white die-cut border and soft shadow",
+    "box": [
+     326,
+     250,
+     614,
+     624
+    ],
+    "at": 9.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "G has flat red, yellow, green and blue segments with a white border and soft shadow. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "motion",
+    "element": "title numeral + style name",
+    "check": "The title changes from '3 Prism' to '4 Ripple' when the Ripple item is selected",
+    "box": [
+     15,
+     60,
+     160,
+     45
+    ],
+    "at": 10.2,
+    "then": 11,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Title changes from 3 Prism to 4 Ripple with a grey numeral. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "motion",
+    "element": "active style pill",
+    "check": "The dark active pill moves from '3 Prism' to '4 Ripple' in the bottom control",
+    "box": [
+     335,
+     1005,
+     588,
+     56
+    ],
+    "at": 10.2,
+    "then": 11,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Dark pill moves from 3 Prism to 4 Ripple; the clip is mid-fade at 11s. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "style",
+    "element": "Google G sticker",
+    "check": "Ripple: concentric ripples centred near the top of the blue crossbar bend the blue colour into lighter and darker bands, and the red arm's edge wobbles",
+    "box": [
+     560,
+     450,
+     380,
+     300
+    ],
+    "at": 11,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Concentric lighter and darker ripple bands are centred at the top of the blue crossbar, whose top edge wobbles. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "style",
+    "element": "Google G sticker",
+    "check": "The ripple reads as a soft refractive displacement of the picture with faint bright crests, not as drawn concentric stroked circles or hard rings",
+    "box": [
+     560,
+     450,
+     380,
+     300
+    ],
+    "at": 11,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Ripple reads as soft light bands bending the blue, similar to the clip, though slightly cleaner. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "text",
+    "element": "title numeral + style name",
+    "check": "Title reads '5 Halftone' with a grey '5'",
+    "box": [
+     15,
+     60,
+     180,
+     45
+    ],
+    "at": 11.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Title reads 5 Halftone with a grey 5. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c39.png"
+   },
+   {
+    "id": "c40",
+    "axis": "style",
+    "element": "Google G sticker",
+    "check": "Halftone: near the cursor the blue (and nearby green) area is made of a regular grid of round dots about 12-14 px pitch, with white showing between the dots",
+    "box": [
+     600,
+     450,
+     250,
+     200
+    ],
+    "at": 12.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Regular grid of round blue dots at about 12–13 px pitch with white between them, as in the clip. [votes: yes/no/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c40.png"
+   },
+   {
+    "id": "c41",
+    "axis": "style",
+    "element": "Google G sticker",
+    "check": "The halftone is local: the red and yellow segments far from the cursor stay solid flat colour",
+    "box": [
+     326,
+     250,
+     614,
+     624
+    ],
+    "at": 11.9,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Red and yellow stay solid flat in the rebuild, with dots only near the blue/green region, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c41.png"
+   },
+   {
+    "id": "c42",
+    "axis": "motion",
+    "element": "Google G sticker",
+    "check": "The halftone dot region follows the cursor: the dotted area shifts between the two moments while the G stays put",
+    "box": [
+     326,
+     250,
+     614,
+     624
+    ],
+    "at": 11.9,
+    "then": 12.4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The rebuild's dotted area moves between 11.9s and 12.4s while the G stays put, but it covers a different area than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c42.png"
+   },
+   {
+    "id": "c43",
+    "axis": "motion",
+    "element": "Google G sticker",
+    "check": "The G sticker is peeled with the same curled 'MetalForge' backing, and by the later moment it is flat again",
+    "box": [
+     300,
+     230,
+     660,
+     660
+    ],
+    "at": 14.13,
+    "then": 17,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The rebuild shows a curled grey 'MetalForge' backing at 14.13s and only a small corner curl left at 17s, close to the clip's state at those moments. [votes: no/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c43.png"
+   },
+   {
+    "id": "c44",
+    "axis": "motion",
+    "element": "hint line",
+    "check": "The hint line, header texts and bottom control stay fixed in place through the peel",
+    "box": [
+     0,
+     0,
+     1248,
+     1080
+    ],
+    "at": 0.9,
+    "then": 1.93,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The header, hint line and bottom pill control sit in the same spots in both frames of the rebuild. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c44.png"
+   },
+   {
+    "id": "c45",
+    "axis": "style",
+    "element": "X sticker (die-cut)",
+    "check": "The sticker face is flat matte: no gloss band or gradient across the white areas when the cursor is off it",
+    "box": [
+     332,
+     252,
+     600,
+     612
+    ],
+    "at": 8.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The rebuild's white areas are flat matte with no gloss band, like the clip's, apart from a small curl at the top-right corner. [votes: yes/yes/yes]",
+    "image": "factory/reylig-prism-peel-sticker-effect/judge/c45.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 1.284,
+  "calls": 9,
+  "images": "factory/reylig-prism-peel-sticker-effect/judge",
+  "votes": 3,
+  "spread": [
+   43,
+   43,
+   45
+  ]
+ }
+}

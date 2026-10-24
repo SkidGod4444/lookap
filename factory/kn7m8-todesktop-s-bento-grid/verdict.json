@@ -1,0 +1,1672 @@
+{
+ "slug": "kn7m8-todesktop-s-bento-grid",
+ "at": "2026-10-23T19:12:29.410Z",
+ "runs": 23,
+ "html": "factory/kn7m8-todesktop-s-bento-grid/index.html",
+ "pixel": {
+  "score": 89,
+  "stills": 88,
+  "motion": 89,
+  "moments": 9
+ },
+ "animations": 201,
+ "rank": 88,
+ "allPass": false,
+ "elements": [
+  {
+   "name": "rosette badge",
+   "box": [
+    444,
+    233,
+    66,
+    85
+   ],
+   "deltaE": 1.8,
+   "delta": 26,
+   "shift": null,
+   "afterShift": 26,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "nav links",
+   "box": [
+    550,
+    48,
+    325,
+    22
+   ],
+   "deltaE": 0.9,
+   "delta": 21,
+   "shift": [
+    2,
+    0
+   ],
+   "afterShift": 20,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "ToDesktop logo",
+   "box": [
+    472,
+    41,
+    35,
+    35
+   ],
+   "deltaE": 4.7,
+   "delta": 20,
+   "shift": null,
+   "afterShift": 20,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "speedometer",
+   "box": [
+    980,
+    628,
+    170,
+    170
+   ],
+   "deltaE": 4.8,
+   "delta": 20,
+   "shift": null,
+   "afterShift": 20,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Log in button",
+   "box": [
+    974,
+    40,
+    75,
+    37
+   ],
+   "deltaE": 0.7,
+   "delta": 16,
+   "shift": null,
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Sign up button",
+   "box": [
+    1060,
+    40,
+    87,
+    37
+   ],
+   "deltaE": 5.6,
+   "delta": 16,
+   "shift": null,
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "download link pill",
+   "box": [
+    467,
+    615,
+    157,
+    28
+   ],
+   "deltaE": 2.1,
+   "delta": 16,
+   "shift": null,
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "faded browser window",
+   "box": [
+    874,
+    705,
+    384,
+    125
+   ],
+   "deltaE": 2.7,
+   "delta": 14,
+   "shift": [
+    0,
+    -2
+   ],
+   "afterShift": 13,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "nav pill bar",
+   "box": [
+    450,
+    26,
+    710,
+    65
+   ],
+   "deltaE": 0.8,
+   "delta": 12,
+   "shift": null,
+   "afterShift": 12,
+   "read": "matches"
+  },
+  {
+   "name": "signature window card",
+   "box": [
+    458,
+    171,
+    174,
+    104
+   ],
+   "deltaE": 0.8,
+   "delta": 12,
+   "shift": null,
+   "afterShift": 12,
+   "read": "matches"
+  },
+  {
+   "name": "latency labels",
+   "box": [
+    819,
+    585,
+    494,
+    200
+   ],
+   "deltaE": 1.3,
+   "delta": 12,
+   "shift": null,
+   "afterShift": 12,
+   "read": "matches"
+  },
+  {
+   "name": "card performance",
+   "box": [
+    819,
+    580,
+    494,
+    455
+   ],
+   "deltaE": 0.6,
+   "delta": 11,
+   "shift": null,
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "card titles",
+   "box": [
+    445,
+    362,
+    738,
+    502
+   ],
+   "deltaE": 0.4,
+   "delta": 11,
+   "shift": null,
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "bar 1",
+   "box": [
+    948,
+    218,
+    30,
+    90
+   ],
+   "deltaE": 0.8,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "body copy",
+   "box": [
+    346,
+    432,
+    922,
+    552
+   ],
+   "deltaE": 0.4,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "card code signing",
+   "box": [
+    298,
+    98,
+    494,
+    455
+   ],
+   "deltaE": 0.2,
+   "delta": 9,
+   "shift": null,
+   "afterShift": 9,
+   "read": "matches"
+  },
+  {
+   "name": "dividers",
+   "box": [
+    398,
+    407,
+    816,
+    484
+   ],
+   "deltaE": 0.4,
+   "delta": 9,
+   "shift": null,
+   "afterShift": 9,
+   "read": "matches"
+  },
+  {
+   "name": "binary digit grid",
+   "box": [
+    340,
+    140,
+    410,
+    225
+   ],
+   "deltaE": 0.2,
+   "delta": 8,
+   "shift": null,
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "card measure",
+   "box": [
+    819,
+    98,
+    494,
+    455
+   ],
+   "deltaE": 0.1,
+   "delta": 7,
+   "shift": null,
+   "afterShift": 7,
+   "read": "matches"
+  },
+  {
+   "name": "card distribution",
+   "box": [
+    298,
+    580,
+    494,
+    455
+   ],
+   "deltaE": 0.3,
+   "delta": 7,
+   "shift": null,
+   "afterShift": 7,
+   "read": "matches"
+  },
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1620,
+    1080
+   ],
+   "deltaE": 0.2,
+   "delta": 6,
+   "shift": null,
+   "afterShift": 6,
+   "read": "matches"
+  },
+  {
+   "name": "signature squiggle",
+   "box": [
+    530,
+    220,
+    45,
+    35
+   ],
+   "deltaE": 0.9,
+   "delta": 5,
+   "shift": null,
+   "afterShift": 5,
+   "read": "matches"
+  },
+  {
+   "name": "chart panel",
+   "box": [
+    895,
+    193,
+    342,
+    135
+   ],
+   "deltaE": 0.4,
+   "delta": 5,
+   "shift": null,
+   "afterShift": 5,
+   "read": "matches"
+  },
+  {
+   "name": "bar 2 highlighted",
+   "box": [
+    1008,
+    240,
+    46,
+    76
+   ],
+   "deltaE": 0.3,
+   "delta": 5,
+   "shift": null,
+   "afterShift": 5,
+   "read": "matches"
+  },
+  {
+   "name": "bar 4",
+   "box": [
+    1153,
+    230,
+    30,
+    78
+   ],
+   "deltaE": 0.3,
+   "delta": 5,
+   "shift": [
+    6,
+    -8
+   ],
+   "afterShift": 4,
+   "read": "matches"
+  },
+  {
+   "name": "chart grid backdrop",
+   "box": [
+    857,
+    135,
+    418,
+    190
+   ],
+   "deltaE": 0.2,
+   "delta": 4,
+   "shift": null,
+   "afterShift": 4,
+   "read": "matches"
+  },
+  {
+   "name": "mouse cursor",
+   "box": [
+    640,
+    255,
+    14,
+    18
+   ],
+   "deltaE": 0.5,
+   "delta": 4,
+   "shift": [
+    -4,
+    -2
+   ],
+   "afterShift": 3,
+   "read": "matches"
+  },
+  {
+   "name": "pen",
+   "box": [
+    540,
+    160,
+    155,
+    85
+   ],
+   "deltaE": 0.3,
+   "delta": 3,
+   "shift": null,
+   "afterShift": 3,
+   "read": "matches"
+  },
+  {
+   "name": "OS pill",
+   "box": [
+    930,
+    136,
+    272,
+    38
+   ],
+   "deltaE": 0.4,
+   "delta": 3,
+   "shift": null,
+   "afterShift": 3,
+   "read": "matches"
+  },
+  {
+   "name": "bar 3",
+   "box": [
+    1085,
+    213,
+    30,
+    95
+   ],
+   "deltaE": 0.4,
+   "delta": 3,
+   "shift": null,
+   "afterShift": 3,
+   "read": "matches"
+  },
+  {
+   "name": "laptop",
+   "box": [
+    436,
+    680,
+    218,
+    117
+   ],
+   "deltaE": 0.5,
+   "delta": 2,
+   "shift": null,
+   "afterShift": 2,
+   "read": "matches"
+  },
+  {
+   "name": "apple tile",
+   "box": [
+    397,
+    690,
+    78,
+    78
+   ],
+   "deltaE": 0.4,
+   "delta": 1,
+   "shift": null,
+   "afterShift": 1,
+   "read": "matches"
+  },
+  {
+   "name": "windows tile",
+   "box": [
+    504,
+    690,
+    78,
+    78
+   ],
+   "deltaE": 0.4,
+   "delta": 1,
+   "shift": null,
+   "afterShift": 1,
+   "read": "matches"
+  },
+  {
+   "name": "linux tile",
+   "box": [
+    621,
+    692,
+    78,
+    78
+   ],
+   "deltaE": 0.4,
+   "delta": 1,
+   "shift": null,
+   "afterShift": 1,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "the render changes where the clip changes",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "0.5s",
+    "clip": 0.7,
+    "render": 0.7,
+    "read": "both move"
+   },
+   {
+    "from": "0.5s",
+    "to": "1s",
+    "clip": 0.9,
+    "render": 1,
+    "read": "both move"
+   },
+   {
+    "from": "1s",
+    "to": "1.2s",
+    "clip": 0.9,
+    "render": 0.2,
+    "read": "both move"
+   },
+   {
+    "from": "1.2s",
+    "to": "1.5s",
+    "clip": 0.5,
+    "render": 0.3,
+    "read": "both move"
+   },
+   {
+    "from": "1.5s",
+    "to": "2.5s",
+    "clip": 0.9,
+    "render": 1.1,
+    "read": "both move"
+   },
+   {
+    "from": "2.5s",
+    "to": "kf1",
+    "clip": 0.4,
+    "render": 0.1,
+    "read": "both move"
+   },
+   {
+    "from": "kf1",
+    "to": "3.25s",
+    "clip": 0.4,
+    "render": 0.3,
+    "read": "both move"
+   },
+   {
+    "from": "3.25s",
+    "to": "5.4s",
+    "clip": 0.4,
+    "render": 0.2,
+    "read": "both move"
+   }
+  ],
+  "trajectories": [
+   {
+    "element": "#ebebeb",
+    "box": [
+     447,
+     48,
+     716,
+     80
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 1.2,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 1.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 2.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 2.75,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 3.25,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 5.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     }
+    ],
+    "read": "in step"
+   },
+   {
+    "element": "#e0e0e0",
+    "box": [
+     394,
+     680,
+     306,
+     117
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 2
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 2
+     },
+     {
+      "at": 1,
+      "dx": 0,
+      "dy": -12,
+      "delta": 9
+     },
+     {
+      "at": 1.2,
+      "dx": 0,
+      "dy": 0,
+      "delta": 2
+     },
+     {
+      "at": 1.5,
+      "dx": 0,
+      "dy": 10,
+      "delta": 5
+     },
+     {
+      "at": 2.5,
+      "dx": -2,
+      "dy": 0,
+      "delta": 23
+     },
+     {
+      "at": 2.75,
+      "dx": 0,
+      "dy": 6,
+      "delta": 19
+     },
+     {
+      "at": 3.25,
+      "dx": 0,
+      "dy": 2,
+      "delta": 15
+     },
+     {
+      "at": 5.4,
+      "dx": -2,
+      "dy": -2,
+      "delta": 20
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   },
+   {
+    "element": "#f5f5f5",
+    "box": [
+     503,
+     688,
+     80,
+     80
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 1
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 1
+     },
+     {
+      "at": 1,
+      "dx": -12,
+      "dy": -12,
+      "delta": 15
+     },
+     {
+      "at": 1.2,
+      "dx": 0,
+      "dy": 0,
+      "delta": 2
+     },
+     {
+      "at": 1.5,
+      "dx": 0,
+      "dy": 10,
+      "delta": 1
+     },
+     {
+      "at": 2.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 20
+     },
+     {
+      "at": 2.75,
+      "dx": 0,
+      "dy": 6,
+      "delta": 14
+     },
+     {
+      "at": 3.25,
+      "dx": 0,
+      "dy": 0,
+      "delta": 20
+     },
+     {
+      "at": 5.4,
+      "dx": -2,
+      "dy": -2,
+      "delta": 22
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   },
+   {
+    "element": "#cfcfd0",
+    "box": [
+     1004,
+     698,
+     123,
+     77
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": -2,
+      "delta": 24
+     },
+     {
+      "at": 0.5,
+      "dx": 2,
+      "dy": -2,
+      "delta": 23
+     },
+     {
+      "at": 1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 23
+     },
+     {
+      "at": 1.2,
+      "dx": 0,
+      "dy": 0,
+      "delta": 23
+     },
+     {
+      "at": 1.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 23
+     },
+     {
+      "at": 2.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 25
+     },
+     {
+      "at": 2.75,
+      "dx": 0,
+      "dy": 0,
+      "delta": 27
+     },
+     {
+      "at": 3.25,
+      "dx": 0,
+      "dy": 0,
+      "delta": 23
+     },
+     {
+      "at": 5.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 23
+     }
+    ],
+    "read": "in step"
+   }
+  ]
+ },
+ "scale": {
+  "ok": true,
+  "changed": 3.3,
+  "read": "scales: the half-size render matches the full one (difference 3.3)"
+ },
+ "rubric": {
+  "file": "factory/kn7m8-todesktop-s-bento-grid/rubric.json",
+  "total": 45,
+  "counted": 45,
+  "pass": 39,
+  "fail": 6,
+  "unsure": 0,
+  "unjudged": 0,
+  "passRate": 87,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "position",
+    "element": "bento grid",
+    "check": "Four equal cards sit in a 2×2 grid: columns starting x≈298 and x≈819, rows starting y≈98 and y≈580, each ≈494×455 px, with a ≈26px gap",
+    "box": [
+     298,
+     98,
+     1015,
+     937
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Four cards in a 2×2 grid at the same positions and gaps as the clip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "style",
+    "element": "cards",
+    "check": "Cards are a flat light grey (#f5f5f5) on a lighter near-white page (#fdfdfd), with no border line and corner radius ≈28px",
+    "box": [
+     298,
+     98,
+     494,
+     455
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Flat light grey cards on a lighter page, no border, radius matches the clip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "position",
+    "element": "nav pill bar",
+    "check": "A white fully rounded nav pill spans x≈450–1160, y≈26–91, centred above the grid, with a soft wide shadow",
+    "box": [
+     440,
+     20,
+     730,
+     80
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White rounded pill with soft shadow spans the same width and position as the clip's. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "text",
+    "element": "nav links",
+    "check": "Nav reads, left to right: logo, 'Products' with a down chevron, 'Docs', 'Changelog', 'Blog', in dark ~16px type",
+    "box": [
+     470,
+     40,
+     410,
+     40
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Logo, Products with chevron, Docs, Changelog and Blog in matching dark type and spacing. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "style",
+    "element": "Sign up button",
+    "check": "'Sign up' is a solid vivid blue (#1754ff) pill with white text at x≈1060–1147",
+    "box": [
+     1055,
+     36,
+     96,
+     45
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Vivid blue pill with white 'Sign up', same size and weight as the clip's. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "style",
+    "element": "Log in button",
+    "check": "'Log in' is a white pill with a thin light grey outline and dark text, left of Sign up",
+    "box": [
+     970,
+     36,
+     84,
+     45
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White pill with thin grey outline and dark 'Log in', same as the clip's. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "imagery",
+    "element": "ToDesktop logo",
+    "check": "Logo is a ≈35px blue rounded square with a white 'b'-shaped mark, an original drawing with the same silhouette and colour",
+    "box": [
+     468,
+     38,
+     42,
+     42
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "Blue square matches, but the white 'b' mark has thinner strokes and a different silhouette than the clip's bolder mark. [votes: no/no/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "text",
+    "element": "card titles",
+    "check": "Titles read exactly 'Code signing made easy', 'Measure app success', 'Distribution. Sorted!', 'Performance. Benchmarked!' in near-black ~18px medium, centred in their cards at y≈371 and y≈854",
+    "box": [
+     298,
+     355,
+     1015,
+     515
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "All four titles read the same, in near-black medium type at the same positions. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "text",
+    "element": "body copy",
+    "check": "Top-left card body reads 'Our guided process makes purchasing and using / certificates a breeze. Our secure hardware storage and / expiry notifications give you peace of mind.' in three centred lines",
+    "box": [
+     340,
+     430,
+     410,
+     70
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same three centred lines of text, same wrap and grey tone. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "text",
+    "element": "body copy",
+    "check": "Bottom-right body reads 'Measure launch time, memory, and CPU usage. / Compare across versions and other industry-standard / Electron apps.'",
+    "box": [
+     865,
+     912,
+     400,
+     72
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same three lines and wrap as the clip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "style",
+    "element": "body copy",
+    "check": "Body copy is mid grey (~#666), clearly lighter than the near-black titles, ~16px with ~24px line spacing",
+    "box": [
+     340,
+     430,
+     930,
+     555
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Body copy is mid grey, lighter than the titles, with similar size and line spacing. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "present",
+    "element": "dividers",
+    "check": "Each card has a thin 1px light grey horizontal divider ≈294px wide centred between title and body (y≈408 top row, y≈890 bottom row)",
+    "box": [
+     390,
+     400,
+     830,
+     500
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Thin light grey divider centred between title and body in each card, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "present",
+    "element": "binary digit grid",
+    "check": "The top-left card shows a grid of monospace 0 and 1 digits, 14 columns by 8 rows at ~30px pitch spanning x≈348–742, y≈147–359",
+    "box": [
+     340,
+     140,
+     410,
+     225
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Monospace 0/1 grid with similar columns, rows and pitch, spanning the same area. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "style",
+    "element": "binary digit grid",
+    "check": "Digits are mixed grey shades (some dark, many pale) and the bottom two rows fade to nearly invisible; no digits are black or coloured",
+    "box": [
+     340,
+     140,
+     410,
+     225
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Mixed grey digits, none black or coloured, with the bottom rows fading out as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "motion",
+    "element": "binary digit grid",
+    "check": "Individual digits change brightness (and some flip value) between the two moments while the grid positions stay fixed",
+    "box": [
+     340,
+     140,
+     410,
+     225
+    ],
+    "at": 2.75,
+    "then": 3.25,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Digits change brightness and value between 2.75s and 3.25s while the grid stays fixed. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "present",
+    "element": "signature window card",
+    "check": "A white rounded window card (≈174×104 at x≈458, y≈171) with three grey dots top-left and a small '×' plus baseline sits in the middle of the digit grid, hiding the digits behind it",
+    "box": [
+     450,
+     165,
+     190,
+     115
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White rounded window with three grey dots, × and baseline hides the digits; the clip's header divider line is missing but the rest matches. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "imagery",
+    "element": "rosette badge",
+    "check": "An orange rosette badge with a white-ringed checkmark and two orange ribbon tails overlaps the card's lower-left corner at x≈444–510, y≈233–318",
+    "box": [
+     440,
+     228,
+     75,
+     95
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "Rosette is a flatter orange badge with a thin light ring. The clip's has a dark brown ring and glossy shading, and its ribbon tails differ. [votes: no/no/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "imagery",
+    "element": "pen",
+    "check": "A white/silver pen with a blue grip band lies diagonally (tip lower-left, cap upper-right) with its tip on the signature line, casting a soft grey shadow on the card",
+    "box": [
+     530,
+     155,
+     170,
+     95
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "Pen is fatter, with an oversized blue band and a different cap. The clip's shadow is a sharp wedge and the rebuild's is a soft diffuse blur. [votes: no/no/no]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "motion",
+    "element": "pen",
+    "check": "At 0s no pen and no signature are visible on the window card; by 0.5s the pen has appeared with its tip at the baseline's left",
+    "box": [
+     450,
+     150,
+     260,
+     130
+    ],
+    "at": 0,
+    "then": 0.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "No pen at 0s; by 0.5s the pen appears with its tip at the left of the baseline by the ×. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "motion",
+    "element": "signature squiggle",
+    "check": "Between 0.5s and 2.5s a grey handwritten squiggle signature appears on the line, drawn left-to-right behind the moving pen tip",
+    "box": [
+     515,
+     210,
+     80,
+     50
+    ],
+    "at": 0.5,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "No signature at 0.5s; by 2.5s a grey squiggle is drawn on the line behind the pen tip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "present",
+    "element": "chart panel",
+    "check": "A white rounded panel (≈342×135 at x≈895, y≈193) with a fine light grey grid sits on a larger faint gridded backdrop in the top-right card",
+    "box": [
+     855,
+     130,
+     425,
+     200
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White rounded chart panel with fine grey grid on a gridded backdrop; rebuild's grid lines are a bit stronger but same structure. [votes: no/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "present",
+    "element": "chart bars",
+    "check": "The chart shows exactly 4 vertical stacked bars, each ~30px wide, made of 2–3 rounded segments, standing on a common baseline at y≈308",
+    "box": [
+     940,
+     205,
+     250,
+     115
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Four bars of 2–3 rounded segments on a common baseline, ~30px wide, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "style",
+    "element": "bar 2 highlighted",
+    "check": "The second bar is coloured top to bottom orange (#f6a623-ish), thin blue, then charcoal, inside a raised white rounded capsule; the other three bars stay grey",
+    "box": [
+     1004,
+     236,
+     54,
+     84
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Bar 2 is orange, thin blue, charcoal in a raised white capsule; other bars grey, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "motion",
+    "element": "chart bars",
+    "check": "At 0s only one tall grey bar and a small pale square are present; by 1s all four grey bars have grown in",
+    "box": [
+     940,
+     200,
+     250,
+     120
+    ],
+    "at": 0,
+    "then": 1,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 0s one tall bar plus a pale square; at 1s all four grey bars present, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "motion",
+    "element": "bar 2 highlighted",
+    "check": "Bar 2 is plain grey at 1s and has turned orange/blue/charcoal inside its white capsule by 2.5s",
+    "box": [
+     1004,
+     236,
+     54,
+     84
+    ],
+    "at": 1,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Bar 2 grey at 1s and orange/blue/charcoal in a capsule at 2.5s, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "text",
+    "element": "OS pill",
+    "check": "A white pill above the chart reads '[apple] MacOS | [windows] Windows | [flame/penguin] Linux' with MacOS black, Windows blue, Linux orange, separated by thin grey dividers",
+    "box": [
+     928,
+     134,
+     276,
+     42
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White pill with black MacOS, blue Windows, orange Linux and thin dividers, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "motion",
+    "element": "OS pill",
+    "check": "The OS pill is absent at 1s and fully visible at 2.5s (it fades in around 1.4s)",
+    "box": [
+     928,
+     134,
+     276,
+     42
+    ],
+    "at": 1,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Pill absent at 1s and fully visible at 2.5s in both. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "text",
+    "element": "download link pill",
+    "check": "A white pill at x≈467–624, y≈615–643 shows a sky-blue download-arrow icon and the text 'builder.acme.com' in sky blue (~#0a8ad8)",
+    "box": [
+     462,
+     610,
+     167,
+     38
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White pill with sky-blue download icon and 'builder.acme.com' text matches the clip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "motion",
+    "element": "laptop",
+    "check": "At 0.5s the laptop is only a flat closed grey base bar at y≈790; by 1.0s its lid has risen to show a screen",
+    "box": [
+     430,
+     670,
+     230,
+     135
+    ],
+    "at": 0.5,
+    "then": 1,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Flat closed base at 0.5s; by 1s the lid is up showing the screen (fully open vs the clip's mid-rise). [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "imagery",
+    "element": "laptop",
+    "check": "The open laptop screen shows a soft greyscale dune/mountain wallpaper (photo-like, no colour), framed by a light grey bezel and a thin base",
+    "box": [
+     436,
+     680,
+     218,
+     117
+    ],
+    "at": 1.2,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Greyscale dune wallpaper with light bezel and thin base, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "present",
+    "element": "OS tiles",
+    "check": "Exactly 3 white rounded-square tiles (~78px) with soft drop shadows float in front of the laptop: Apple (left), Windows 4-pane (centre), Linux penguin (right), each icon black",
+    "box": [
+     385,
+     680,
+     325,
+     100
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Three white rounded tiles with black Apple, Windows and penguin icons and soft shadows, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "motion",
+    "element": "OS tiles",
+    "check": "No app tiles are visible at 1.5s; all three are visible over the laptop by 2.5s",
+    "box": [
+     385,
+     680,
+     325,
+     100
+    ],
+    "at": 1.5,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "No tiles at 1.5s; all three over the laptop at 2.5s, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "motion",
+    "element": "OS tiles",
+    "check": "After appearing the tiles keep drifting: between 2.75s and 3.25s each tile shifts a few px and/or tilts slightly (Apple tile visibly rotated at 2.5s)",
+    "box": [
+     385,
+     680,
+     325,
+     100
+    ],
+    "at": 2.75,
+    "then": 3.25,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Tiles shift by a few px and tilt slightly between 2.75s and 3.25s, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "position",
+    "element": "speedometer",
+    "check": "A circular gauge ≈170px across is centred near (1066,712) in the bottom-right card, overlapping a faded white browser window",
+    "box": [
+     975,
+     622,
+     182,
+     182
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Circular gauge ~165px across, centred in the card, matching the clip's size and position. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "style",
+    "element": "speedometer",
+    "check": "The gauge reads as a raised skeuomorphic dial: thick white outer bezel with soft shadow, a darker grey inner ring, a light grey radial face; not a flat outlined circle",
+    "box": [
+     975,
+     622,
+     182,
+     182
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "Rebuild's bezel is brighter pure white and its inner ring a thin flat grey stroke, whereas the clip has a darker, bevelled grey ring with depth. [votes: no/yes/no]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "style",
+    "element": "speedometer",
+    "check": "The dial face carries exactly 11 short grey tick marks around its upper ~270°, a faint inner circle, a grey hub, and a faint grey ToDesktop logo below the hub",
+    "box": [
+     990,
+     640,
+     150,
+     150
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "About 11 short grey ticks over the upper arc, faint inner circle, grey hub and faint logo below, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "style",
+    "element": "speedometer needle",
+    "check": "The needle is a vivid blue tapered spike from a blue hub dot, and a blue arc runs along the inner rim from the lower-left up to the needle's angle",
+    "box": [
+     990,
+     640,
+     150,
+     150
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Vivid blue tapered needle from a blue hub dot with a blue arc along the lower-left rim, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "motion",
+    "element": "speedometer needle",
+    "check": "The needle swings: it points to about 1 o'clock at 0.5s and to about 10–11 o'clock at 1s, with the blue arc shrinking to follow it",
+    "box": [
+     990,
+     640,
+     150,
+     150
+    ],
+    "at": 0.5,
+    "then": 1,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Needle at about 1 o'clock at 0.5s and 10–11 o'clock at 1s with the arc shrinking, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "motion",
+    "element": "speedometer needle",
+    "check": "The needle points to ~9 o'clock at 2.75s and has swung up to ~12 o'clock at 3.25s",
+    "box": [
+     990,
+     640,
+     150,
+     150
+    ],
+    "at": 2.75,
+    "then": 3.25,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Needle at about 9 o'clock at 2.75s and straight up at 3.25s, close to the clip's ~9:30 and ~11:30. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c39.png"
+   },
+   {
+    "id": "c40",
+    "axis": "text",
+    "element": "latency labels",
+    "check": "Scattered grey monospace labels in the form two digits + 'MS' (e.g. '94MS', '43MS', '89MS') appear around the gauge across the card's upper half",
+    "box": [
+     819,
+     585,
+     494,
+     200
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "Rebuild has fewer, sparser MS labels that are darker and bolder (e.g. 84MS, 62MS) than the clip's dense, lighter grey ones. [votes: no/yes/no]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c40.png"
+   },
+   {
+    "id": "c41",
+    "axis": "style",
+    "element": "latency labels",
+    "check": "Latency labels are pale grey, several are blurred or horizontally smeared, and they sit behind the gauge; none are dark or coloured",
+    "box": [
+     819,
+     585,
+     494,
+     200
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "Rebuild labels are darker and crisper (e.g. 62MS, 84MS, 55MS near dark grey) versus the clip's pale blurred ones, and the gauge looks whiter/brighter. [votes: yes/no/no]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c41.png"
+   },
+   {
+    "id": "c42",
+    "axis": "motion",
+    "element": "latency labels",
+    "check": "The set and positions of MS labels differ between the two moments (labels drift and new ones appear), while the card itself is still",
+    "box": [
+     819,
+     585,
+     494,
+     200
+    ],
+    "at": 2.75,
+    "then": 3.25,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild's label set and positions change between 2.75s and 3.25s (62MS, 84MS give way to 98MS, 89MS, 43MS) while the card stays still, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c42.png"
+   },
+   {
+    "id": "c43",
+    "axis": "style",
+    "element": "faded browser window",
+    "check": "Behind the gauge sits a white window (x≈874–1258, from y≈705) with three grey dots top-left whose lower part fades into the card with no bottom edge",
+    "box": [
+     870,
+     700,
+     392,
+     135
+    ],
+    "at": 2.75,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild has a white window with three grey dots top-left whose lower part fades out with no bottom edge, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c43.png"
+   },
+   {
+    "id": "c44",
+    "axis": "motion",
+    "element": "static chrome",
+    "check": "Nav bar, card outlines, titles, dividers and body copy do not move or change between 0.5s and 5.4s",
+    "box": [
+     0,
+     0,
+     1620,
+     1080
+    ],
+    "at": 0.5,
+    "then": 5.4,
+    "policy": null,
+    "pass": "yes",
+    "seen": "In the rebuild the nav, card outlines, titles and body copy sit in the same places at 0.5s and 5.4s, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c44.png"
+   },
+   {
+    "id": "c45",
+    "axis": "motion",
+    "element": "illustrations",
+    "check": "All four illustrations animate simultaneously from 0s (not one-at-a-time on hover): pen, bars, laptop and needle all change between 0s and 1s",
+    "box": [
+     298,
+     98,
+     1015,
+     730
+    ],
+    "at": 0,
+    "then": 1,
+    "policy": null,
+    "pass": "yes",
+    "seen": "In the rebuild the pen, bars, laptop and needle all change between 0s and 1s, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/kn7m8-todesktop-s-bento-grid/judge/c45.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 0.744,
+  "calls": 9,
+  "images": "factory/kn7m8-todesktop-s-bento-grid/judge",
+  "votes": 3,
+  "spread": [
+   39,
+   41,
+   41
+  ]
+ }
+}

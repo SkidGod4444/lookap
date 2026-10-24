@@ -1,0 +1,272 @@
+<!doctype html>
+<!--
+  Expanding Search Interaction: rebuild of the lookap entry by sucodee
+  Source: https://x.com/sucodeee/status/2106690154429841524 (x.com/sucodeee)
+  Everything is drawn in CSS and inline SVG; nothing was sampled from the clip.
+  ?demo=1 replays the clip's 7.45 s sequence as seekable Web Animations.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Expanding Search Interaction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html, body { margin: 0; overflow: hidden; background: #f5f4f0; }
+#stage {
+  --u: 1px;
+  position: relative; width: calc(1020 * var(--u)); height: calc(720 * var(--u));
+  background: #f5f4f0; overflow: hidden;
+  font-family: Inter, -apple-system, "SF Pro Text", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.col { position: absolute; left: 0; width: calc(1017 * var(--u)); top: calc(137 * var(--u)); }
+#bar {
+  position: relative; margin: 0 auto; width: calc(112 * var(--u)); height: calc(112 * var(--u));
+  border-radius: calc(56 * var(--u)); background: #fefdfc; overflow: hidden; cursor: pointer;
+  box-shadow: 0 0 0 calc(1 * var(--u)) rgba(60, 50, 40, .075),
+    0 calc(1.5 * var(--u)) calc(1.5 * var(--u)) rgba(0, 0, 0, .09),
+    0 calc(10 * var(--u)) calc(30 * var(--u)) rgba(70, 60, 40, .07);
+  transition: width .5s cubic-bezier(.3, 1.22, .45, 1);
+  z-index: 2;
+}
+#field { position: absolute; inset: calc(11 * var(--u)); border-radius: calc(45 * var(--u)); background: #ebe9e4; }
+.mag { position: absolute; left: calc(41 * var(--u)); top: calc(42 * var(--u)); width: calc(28 * var(--u)); height: calc(28 * var(--u)); }
+.fade { opacity: 0; transition: opacity .25s ease, filter .25s ease; }
+.open .fade { opacity: 1; }
+#q {
+  position: absolute; left: calc(96 * var(--u)); top: calc(36 * var(--u)); width: calc(330 * var(--u)); height: calc(40 * var(--u));
+  border: 0; outline: 0; background: transparent; padding: 0; margin: 0;
+  font: 400 calc(27 * var(--u)) / calc(40 * var(--u)) Inter, system-ui, sans-serif; letter-spacing: calc(-.15 * var(--u));
+  color: #1c1c1c; caret-color: #3d3df2; pointer-events: none;
+}
+.open #q { pointer-events: auto; cursor: text; }
+#q::placeholder { color: #a8a7a3; }
+.x {
+  position: absolute; right: calc(24 * var(--u)); top: calc(24 * var(--u)); width: calc(64 * var(--u)); height: calc(64 * var(--u));
+  border: 0; padding: 0; border-radius: 50%; background: transparent; cursor: pointer; transition: opacity .25s, background .15s;
+}
+.x:hover, .x.hov { background: #e1dfd9; }
+.x svg { width: calc(22 * var(--u)); height: calc(22 * var(--u)); display: block; margin: auto; }
+.open #bar { width: calc(542 * var(--u)); cursor: default; }
+.closed .x { pointer-events: none; }
+/* demo-only fake field */
+.fake { display: none; }
+.demo .fake { display: block; }
+.demo #q { visibility: hidden; }
+.clip { position: absolute; left: 0; top: 0; bottom: 0; right: calc(101 * var(--u)); overflow: hidden; }
+.ph, .qt { position: absolute; top: calc(36 * var(--u)); font: 400 calc(27 * var(--u)) / calc(40 * var(--u)) Inter, sans-serif; letter-spacing: calc(-.15 * var(--u)); white-space: nowrap; }
+.ph { left: calc(101 * var(--u)); color: #a8a7a3; }
+.qt { left: calc(98 * var(--u)); color: #1c1c1c; }
+.caret { position: absolute; left: calc(96 * var(--u)); top: calc(39 * var(--u)); width: calc(3 * var(--u)); height: calc(34 * var(--u)); border-radius: calc(1.5 * var(--u)); background: #3d3df2; }
+#panel {
+  position: absolute; top: calc(126 * var(--u)); left: 0; right: 0; margin: 0 auto;
+  width: calc(542 * var(--u)); height: 0; opacity: 0; border-radius: calc(40 * var(--u));
+  background: #fdfdfd; overflow: hidden;
+  box-shadow: 0 0 0 calc(1 * var(--u)) rgba(0, 0, 0, .035),
+    0 calc(1 * var(--u)) calc(2 * var(--u)) rgba(0, 0, 0, .06),
+    0 calc(22 * var(--u)) calc(56 * var(--u)) rgba(60, 50, 30, .11);
+  transition: height .55s cubic-bezier(.3, 1.3, .45, 1), opacity .15s, width .5s cubic-bezier(.3, 1.22, .45, 1);
+}
+.open #panel { opacity: 1; }
+.hl {
+  position: absolute; left: calc(11 * var(--u)); right: calc(11 * var(--u)); top: calc(12 * var(--u)); height: calc(80 * var(--u));
+  border-radius: calc(40 * var(--u)); background: #ebe9e4; transition: transform .32s cubic-bezier(.25, .9, .3, 1);
+}
+.list { position: absolute; left: 0; right: 0; top: 0; }
+.row {
+  position: absolute; left: calc(39 * var(--u)); right: calc(11 * var(--u)); height: calc(81 * var(--u));
+  font: 500 calc(27 * var(--u)) / calc(81 * var(--u)) Inter, sans-serif; letter-spacing: calc(-.2 * var(--u));
+  color: #1c1c1c; white-space: nowrap; cursor: pointer; transform-origin: calc(232 * var(--u)) center;
+}
+.row.f { color: #7d7d7a; font-weight: 400; }
+.row.f b { color: #111; font-weight: 600; }
+@media (prefers-reduced-motion: reduce) {
+  #bar, #panel, .hl, .fade, .x { transition: none !important; }
+}
+</style>
+<style id="patches"></style>
+</head>
+<body>
+<div id="stage" class="closed">
+  <div class="col">
+    <div id="bar" role="search">
+      <div id="field"></div>
+      <svg class="mag" viewBox="0 0 28 28" fill="none" stroke="#1f1e1a" stroke-width="3.5" stroke-linecap="round" aria-hidden="true">
+        <circle cx="11.4" cy="11.2" r="9.4"/><path d="M18.4 18.2l5.8 5.8"/>
+      </svg>
+      <input id="q" class="fade" placeholder="Search components" autocomplete="off" spellcheck="false" aria-label="Search components">
+      <div class="fake">
+        <div class="clip"><span class="ph" id="ph">Search components</span>
+        <span class="qt" id="q1">t</span><span class="qt" id="q2">to</span></div>
+        <span class="caret" id="caret"></span>
+      </div>
+      <button class="x fade" id="x" aria-label="Clear">
+        <svg viewBox="0 0 22 22" fill="none" stroke="#6a6965" stroke-width="2.6" stroke-linecap="round"><path d="M2.5 2.5l17 17M19.5 2.5l-17 17"/></svg>
+      </button>
+    </div>
+    <div id="panel"><div class="hl" id="hl"></div></div>
+  </div>
+</div>
+<script>
+const stage = document.getElementById('stage'), bar = document.getElementById('bar'), panel = document.getElementById('panel');
+const hl = document.getElementById('hl'), q = document.getElementById('q'), x = document.getElementById('x');
+const U = n => `calc(${n} * var(--u))`;
+const ALL = ['Action Button', 'Toast', 'Code Input', 'Segmented Control', 'Tab Bar', 'Quantity Stepper', 'Invite Field', 'Hold to Confirm'];
+const PITCH = 81, TOP = 12;
+const heightFor = n => TOP + n * PITCH + 11;
+const esc = s => s.replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' })[c]);
+function results(query) {
+  const s = query.trim().toLowerCase();
+  if (!s) return ALL.slice(0, 4).map(n => ({ n, i: -1 }));
+  return ALL.map(n => ({ n, i: n.toLowerCase().indexOf(s) })).filter(r => r.i >= 0)
+    .sort((a, b) => a.i - b.i).slice(0, 5);
+}
+function makeList(items, len) {
+  const list = document.createElement('div');
+  list.className = 'list';
+  items.forEach((r, k) => {
+    const row = document.createElement('div');
+    row.className = 'row' + (r.i >= 0 ? ' f' : '');
+    row.style.top = U(TOP + k * PITCH);
+    row.dataset.k = k;
+    row.innerHTML = r.i < 0 ? esc(r.n)
+      : esc(r.n.slice(0, r.i)) + '<b>' + esc(r.n.slice(r.i, r.i + len)) + '</b>' + esc(r.n.slice(r.i + len));
+    list.appendChild(row);
+  });
+  panel.appendChild(list);
+  return list;
+}
+const rowIn = [
+  { opacity: 0, filter: `blur(${U(8)})`, transform: `translateX(${U(46)}) scale(1.12)` },
+  { opacity: 1, filter: 'blur(0px)', transform: 'translateX(0px) scale(1.08)', offset: .35 },
+  { opacity: 1, filter: 'blur(0px)', transform: 'translateX(0px) scale(1)' }];
+const rowOut = [
+  { opacity: 1, filter: 'blur(0px)', transform: 'translateY(0px)' },
+  { opacity: 0, filter: `blur(${U(6)})`, transform: `translateY(${U(-6)})` }];
+
+const demo = new URLSearchParams(location.search).has('demo');
+if (demo) runDemo(); else interactive();
+
+/* ---------- pointer mode ---------- */
+function interactive() {
+  let list = null, open = false;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function render(enterDelay) {
+    const items = results(q.value);
+    if (list) {
+      const old = list; list = null;
+      if (reduce) old.remove();
+      else old.animate(rowOut, { duration: 220, easing: 'ease-out', fill: 'forwards' }).onfinish = () => old.remove();
+    }
+    list = makeList(items, q.value.trim().length);
+    if (!reduce) [...list.children].forEach((r, k) =>
+      r.animate(rowIn, { duration: 320, delay: enterDelay + k * 65, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }));
+    hl.style.transform = 'translateY(0px)';
+    hl.style.opacity = items.length ? 1 : 0;
+    panel.style.height = U(items.length ? heightFor(items.length) : 0);
+  }
+  function setOpen(v) {
+    if (v === open) return;
+    open = v;
+    stage.classList.toggle('open', v); stage.classList.toggle('closed', !v);
+    if (v) { render(60); q.focus(); }
+    else {
+      q.blur();
+      if (list && !reduce) list.animate(rowOut, { duration: 180, fill: 'forwards' });
+      panel.style.height = '0px';
+    }
+  }
+  bar.addEventListener('click', () => setOpen(true));
+  q.addEventListener('input', () => render(0));
+  x.addEventListener('click', e => { e.stopPropagation(); q.value = ''; render(0); q.focus(); });
+  document.addEventListener('pointerdown', e => { if (open && !e.target.closest('#bar, #panel')) setOpen(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setOpen(false); });
+  panel.addEventListener('pointermove', e => {
+    const row = e.target.closest('.row');
+    if (row && list && list.contains(row)) hl.style.transform = `translateY(${U(row.dataset.k * PITCH)})`;
+  });
+}
+
+/* ---------- demo: the clip's own timeline, seekable ---------- */
+function runDemo() {
+  stage.classList.add('demo', 'open');
+  stage.classList.remove('closed');
+  const D = 7.45;
+  document.querySelectorAll('#bar, #panel, .hl, .fade, .x').forEach(e => e.style.transition = 'none');
+  // track(el, [[t, props, easing?], ...]) -> one animation spanning the clip
+  function track(el, stops) {
+    const kf = stops.map(([t, p, e]) => Object.assign({ offset: t / D, easing: e || 'ease-in-out' }, p));
+    if (kf[0].offset > 0) kf.unshift(Object.assign({}, kf[0], { offset: 0 }));
+    if (kf[kf.length - 1].offset < 1) kf.push(Object.assign({}, kf[kf.length - 1], { offset: 1 }));
+    el.animate(kf, { duration: D * 1000, fill: 'both' });
+  }
+  const W = (t, w) => [t, { width: U(w) }];
+  const widths = [W(0.35, 112), W(0.4, 172), W(0.5, 405), W(0.55, 470), W(0.6, 525), W(0.65, 549), W(0.75, 544), W(0.85, 542),
+    W(7.1, 542), W(7.2, 252), W(7.25, 160), W(7.3, 108), W(7.38, 112)];
+  track(bar, widths);
+  track(panel, widths);
+  const H = (t, h, o = 1) => [t, { height: U(h), opacity: o }];
+  track(panel, [H(0.47, 24, 0), H(0.5, 40), H(0.55, 122), H(0.6, 280), H(0.65, 347), H(0.7, 372), H(0.8, 364), H(0.9, 350), H(0.95, 347),
+    H(4.17, 347), H(4.3, 410), H(4.43, 435), H(4.5, 430), H(4.6, 300), H(4.7, 262), H(4.8, 266),
+    H(6.0, 266), H(6.1, 330), H(6.2, 358), H(6.3, 350), H(6.4, 347),
+    H(6.97, 347), H(7.03, 300), H(7.1, 121), H(7.16, 30, 1), H(7.2, 12, 0)]);
+  // field chrome: placeholder, ×, caret, typed text
+  const O = (t, o, extra) => [t, Object.assign({ opacity: o }, extra)];
+  const B = (t, o, b) => [t, { opacity: o, filter: `blur(${U(b)})` }];
+  track(x, [B(0.4, 0, 4), B(0.48, 1, 0), B(7.08, 1, 0), B(7.18, 0, 4)]);
+  track(x, [[5.55, { backgroundColor: 'rgba(225,223,217,0)' }], [5.65, { backgroundColor: 'rgba(225,223,217,1)' }],
+    [7.1, { backgroundColor: 'rgba(225,223,217,1)' }], [7.18, { backgroundColor: 'rgba(225,223,217,0)' }]]);
+  const ph = document.getElementById('ph');
+  track(ph, [B(0.4, 0, 4), B(0.48, 1, 0), [4.16, { opacity: 1, filter: 'blur(0px)' }, 'step-end'], B(4.17, 0, 0),
+    [5.98, { opacity: 0, filter: 'blur(0px)' }, 'step-end'], B(5.99, 1, 0), B(7.08, 1, 0), B(7.18, 0, 5)]);
+  track(document.getElementById('q1'), [O(4.16, 0, {}), O(4.17, 1, {}), [4.47, { opacity: 1 }, 'step-end'], O(4.48, 0, {})]);
+  track(document.getElementById('q2'), [O(4.47, 0, {}), O(4.48, 1, {}), [5.98, { opacity: 1 }, 'step-end'], O(5.99, 0, {})]);
+  // caret: blinks while idle, jumps after each typed letter
+  const on = [[0.4, 0], [0.48, 1], [1.75, 1], [1.78, 0], [2.05, 0], [2.08, 1], [2.9, 1], [2.93, 0], [3.15, 0], [3.18, 1],
+    [3.95, 1], [3.98, 0], [4.15, 0], [4.17, 1], [5.05, 1], [5.08, 0], [5.38, 0], [5.41, 1], [6.5, 1], [6.53, 0], [6.8, 0], [6.83, 1], [7.0, 1], [7.05, 0]];
+  track(document.getElementById('caret'), on.map(([t, o]) => [t, { opacity: o }, 'linear']));
+  track(document.getElementById('caret'), [[4.16, { transform: 'translateX(0px)' }, 'step-end'], [4.17, { transform: `translateX(${U(10)})` }, 'step-end'],
+    [4.48, { transform: `translateX(${U(27)})` }, 'step-end'], [5.99, { transform: 'translateX(0px)' }]]);
+  // highlight glides row to row behind the cursor
+  const Y = (t, k, o = 1) => [t, { transform: `translateY(${U(k * PITCH)})`, opacity: o }, 'cubic-bezier(.3,.7,.3,1)'];
+  track(hl, [Y(0.5, 0, 0), Y(0.58, 0, 1), Y(1.57, 0), Y(1.72, 1), [2.065, { transform: `translateY(${U(PITCH)})`, opacity: 1 }, 'cubic-bezier(.4,0,.2,1)'], Y(2.34, 2), Y(2.58, 2), Y(2.74, 3), Y(2.95, 3), [3.01, { transform: `translateY(${U(2.4 * PITCH)})`, opacity: 1 }, 'linear'],
+    [3.08, { transform: `translateY(${U(1.5 * PITCH)})`, opacity: 1 }, 'cubic-bezier(.3,.7,.3,1)'], Y(3.24, 0),
+    Y(6.98, 0), Y(7.1, 0, 0.5), Y(7.17, 0, 0)]);
+  // row groups: the four defaults, the 't' results and the 'to' results
+  const base = makeList(results(''), 0), t1 = makeList(results('t'), 1), t2 = makeList(results('to'), 2);
+  const IN = { opacity: 1, filter: 'blur(0px)', transform: 'translate(0px, 0px) scale(1)' };
+  const BIG = { opacity: 1, filter: 'blur(0px)', transform: 'translate(0px, 0px) scale(1.08)' };
+  const PRE = { opacity: .15, filter: `blur(${U(9)})`, transform: `translate(${U(20)}, 0px) scale(.9)` };
+  const MID = { opacity: 1, filter: `blur(${U(3.5)})`, transform: `translate(${U(6)}, 0px) scale(.96)` };
+  const POST = { opacity: 0, filter: `blur(${U(6)})`, transform: `translate(0px, ${U(-6)}) scale(1)` };
+  const BLUR = { opacity: .6, filter: `blur(${U(9)})`, transform: 'translate(0px, 0px) scale(1)' };
+  const ease = 'cubic-bezier(.3,.7,.3,1)';
+  // span: a enter, gap stagger, dur, settle (1.08 -> 1), b leave, out(k) leave length (0 = instant swap),
+  // from[k] rows a shared item glides from across a re-filter, end custom leave stops
+  function rows(list, spans) {
+    [...list.children].forEach((r, k) => {
+      const st = [[0, POST]];
+      spans.forEach(sp => {
+        const f = sp.from ? sp.from[k] : undefined;
+        const s = sp.a + (f === undefined ? k * sp.gap : 0);
+        st.push([s - 0.002, POST, 'step-end']);
+        if (f !== undefined) st.push([s - 0.001, Object.assign({}, IN, { transform: `translate(0px, ${U(f * PITCH)}) scale(1)` }), 'cubic-bezier(.5,0,.3,1)'], [s + (f ? sp.dur : 0.001), IN]);
+        else st.push([s - 0.001, PRE, 'linear'], [s + sp.dur * .6, MID, 'ease-out'], [s + sp.dur, BIG, 'ease-out'], [s + sp.dur + sp.settle, IN]);
+        if (sp.end) { st.push(...sp.end); return; }
+        const o = sp.out(k);
+        if (o) st.push([sp.b, IN, 'ease-in'], [sp.b + o, POST]);
+        else st.push([sp.b, IN, 'step-end'], [sp.b + 0.001, POST]);
+      });
+      track(r, st);
+    });
+  }
+  rows(base, [{ a: 0.5, gap: 0.045, dur: 0.14, settle: 0.3, b: 4.197, out: k => k < 2 ? 0 : 0.16 },
+    { a: 5.98, gap: 0.03, dur: 0.12, settle: 0.25, end: [[7.0, IN, 'ease-in'], [7.1, BLUR], [7.17, POST]] }]);
+  rows(t1, [{ a: 4.2, gap: 0.035, dur: 0.16, settle: 0, b: 4.5, from: { 0: 1, 2: -2 }, out: k => k === 0 || k === 2 ? 0 : 0.12 }]);
+  rows(t2, [{ a: 4.5, gap: 0.05, dur: 0.14, settle: 0.25, b: 5.98, from: { 0: 0, 2: 0 }, out: () => 0.12 }]);
+}
+</script>
+</body>
+</html>
