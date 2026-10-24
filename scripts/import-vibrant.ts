@@ -4,6 +4,7 @@
 
      bun scripts/import-vibrant.ts <url> [<url> ...]   then: bun scripts/measure.ts <slug>, bun scripts/build-drafts.ts */
 import { readFileSync, writeFileSync } from "node:fs";
+import { spawnSync } from "node:child_process";
 import sharp from "sharp";
 
 const urls = process.argv.slice(2).filter((a) => a.startsWith("https://vibrant.design/"));
@@ -67,4 +68,12 @@ for (const url of urls) {
   console.log(`added: ${title} (${row.kind}, ${category}, ${tone}, ${author})`);
 }
 writeFileSync(FILE, src);
+/* new entries' clips and posters go to lookap's own bucket straight away (and, once the catalogue points at it,
+   their links too): nothing new depends on vibrant's servers */
+if (urls.length) {
+  const dl = spawnSync("bun", ["scripts/mirror-media.ts", "download"], { encoding: "utf8" }); process.stdout.write(dl.stdout);
+  const up = spawnSync("bun", ["scripts/mirror-media.ts", "upload"], { encoding: "utf8" }); process.stdout.write(up.stdout || up.stderr);
+  const host = process.env.MEDIA_HOST ?? "lookap.s3.ap-south-1.amazonaws.com";
+  if (readFileSync(FILE, "utf8").includes(`https://${host}/`)) writeFileSync(FILE, readFileSync(FILE, "utf8").replaceAll("https://cdn.vibrant.design/", `https://${host}/`));
+}
 if (stills.length) { writeFileSync("measure/stills.json", JSON.stringify(stills, null, 1)); console.log(`${stills.length} stills: run bun scripts/still-clip.ts`); }
