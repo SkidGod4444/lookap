@@ -1,0 +1,674 @@
+{
+ "slug": "s9yg0m-hanging-team-profile-cards",
+ "title": "Hanging Team Profile Cards",
+ "measured": false,
+ "recipe": null,
+ "what": "A playful team section with 3D character avatars on clipped photo cards suspended from a wire, built as a new Framer component.",
+ "frame": {
+  "ratio": 1.44,
+  "shape": "landscape",
+  "media": "clip"
+ },
+ "tone": "light surface, dark type",
+ "traits": [
+  "Team",
+  "Cards",
+  "3D"
+ ],
+ "section": "Careers",
+ "steps": [
+  "Call see_design for the frame and read the layout from it: regions, alignment, type scale, corner radii, spacing rhythm.",
+  "The media is a clip: name each state you can see (rest, hover, press, open) and the order they occur in.",
+  "Build with the project's own stack and tokens; match proportion and hierarchy before matching pixels.",
+  "A draft measurement is attached: its phases, moves and palette are measured from the clip; its boxes are a first pass to check against the keyframes."
+ ],
+ "draft": {
+  "frame": {
+   "w": 1556,
+   "h": 1080
+  },
+  "duration": 13.63,
+  "phases": [
+   [
+    0.05,
+    0.25
+   ],
+   [
+    0.45,
+    0.45
+   ],
+   [
+    0.8,
+    1.45
+   ],
+   [
+    1.6,
+    1.7
+   ],
+   [
+    1.8,
+    2.15
+   ],
+   [
+    2.3,
+    2.4
+   ],
+   [
+    2.8,
+    3.45
+   ],
+   [
+    3.6,
+    5.9
+   ],
+   [
+    6.05,
+    6.3
+   ],
+   [
+    6.55,
+    6.65
+   ],
+   [
+    7.3,
+    7.45
+   ],
+   [
+    7.65,
+    7.75
+   ],
+   [
+    7.95,
+    8
+   ],
+   [
+    8.5,
+    8.55
+   ],
+   [
+    8.9,
+    8.95
+   ],
+   [
+    9.2,
+    9.2
+   ],
+   [
+    9.35,
+    9.4
+   ],
+   [
+    9.6,
+    9.75
+   ],
+   [
+    9.85,
+    13.35
+   ],
+   [
+    13.45,
+    13.5
+   ],
+   [
+    13.6,
+    13.6
+   ]
+  ],
+  "keyframes": [
+   {
+    "name": "kf1",
+    "at": 0.65,
+    "hold": [
+     0.5,
+     0.75
+    ]
+   },
+   {
+    "name": "kf2",
+    "at": 2.6,
+    "hold": [
+     2.45,
+     2.75
+    ]
+   },
+   {
+    "name": "kf3",
+    "at": 7,
+    "hold": [
+     6.7,
+     7.25
+    ]
+   },
+   {
+    "name": "kf4",
+    "at": 8.25,
+    "hold": [
+     8.05,
+     8.45
+    ]
+   }
+  ],
+  "moments": [
+   {
+    "at": 0.15,
+    "name": "mid-phase"
+   },
+   {
+    "at": 0.65,
+    "name": "kf1"
+   },
+   {
+    "at": 1.13,
+    "name": "mid-phase"
+   },
+   {
+    "at": 1.98,
+    "name": "mid-phase"
+   },
+   {
+    "at": 2.35,
+    "name": "mid-phase"
+   },
+   {
+    "at": 2.6,
+    "name": "kf2"
+   },
+   {
+    "at": 3.13,
+    "name": "mid-phase"
+   },
+   {
+    "at": 4.75,
+    "name": "mid-phase"
+   },
+   {
+    "at": 6.17,
+    "name": "mid-phase"
+   },
+   {
+    "at": 6.6,
+    "name": "mid-phase"
+   },
+   {
+    "at": 7,
+    "name": "kf3"
+   },
+   {
+    "at": 8.25,
+    "name": "kf4"
+   }
+  ],
+  "anchors": [
+   {
+    "phase": [
+     0.05,
+     0.25
+    ],
+    "read": "none of the content's edges moved: the change is inside the box",
+    "moved": {
+     "top": 0,
+     "bottom": 0,
+     "left": 0,
+     "right": 0
+    },
+    "reliable": true
+   },
+   {
+    "phase": [
+     0.8,
+     1.45
+    ],
+    "read": "none of the content's edges moved: the change is inside the box",
+    "moved": {
+     "top": 0,
+     "bottom": 0,
+     "left": 0,
+     "right": 0
+    },
+    "reliable": true
+   },
+   {
+    "phase": [
+     1.8,
+     2.15
+    ],
+    "read": "none of the content's edges moved: the change is inside the box",
+    "moved": {
+     "top": 0,
+     "bottom": 0,
+     "left": 0,
+     "right": 0
+    },
+    "reliable": true
+   },
+   {
+    "phase": [
+     2.3,
+     2.4
+    ],
+    "read": "none of the content's edges moved: the change is inside the box",
+    "moved": {
+     "top": 0,
+     "bottom": 0,
+     "left": 0,
+     "right": 0
+    },
+    "reliable": true
+   },
+   {
+    "phase": [
+     2.8,
+     3.45
+    ],
+    "read": "none of the content's edges moved: the change is inside the box",
+    "moved": {
+     "top": 0,
+     "bottom": 0,
+     "left": 0,
+     "right": 0
+    },
+    "reliable": true
+   },
+   {
+    "phase": [
+     3.6,
+     5.9
+    ],
+    "read": "top and bottom and left fixed, right +28",
+    "moved": {
+     "top": 0,
+     "bottom": 0,
+     "left": 0,
+     "right": 28
+    },
+    "reliable": true
+   },
+   {
+    "phase": [
+     6.05,
+     6.3
+    ],
+    "read": "none of the content's edges moved: the change is inside the box",
+    "moved": {
+     "top": 0,
+     "bottom": 0,
+     "left": 0,
+     "right": 0
+    },
+    "reliable": true
+   },
+   {
+    "phase": [
+     6.55,
+     6.65
+    ],
+    "read": "none of the content's edges moved: the change is inside the box",
+    "moved": {
+     "top": 0,
+     "bottom": 0,
+     "left": 0,
+     "right": 0
+    },
+    "reliable": true
+   },
+   {
+    "phase": [
+     7.3,
+     7.45
+    ],
+    "read": "none of the content's edges moved: the change is inside the box",
+    "moved": {
+     "top": 0,
+     "bottom": 0,
+     "left": 0,
+     "right": 0
+    },
+    "reliable": true
+   }
+  ],
+  "background": "#fcfcfc",
+  "palette": [
+   {
+    "hex": "#fcfcfc",
+    "share": 80.9
+   },
+   {
+    "hex": "#ddd7e8",
+    "share": 3
+   },
+   {
+    "hex": "#e4c07a",
+    "share": 1.3
+   },
+   {
+    "hex": "#e8e9e9",
+    "share": 1
+   },
+   {
+    "hex": "#d6e9e5",
+    "share": 0.8
+   },
+   {
+    "hex": "#e4eada",
+    "share": 0.7
+   },
+   {
+    "hex": "#e1dae9",
+    "share": 0.5
+   },
+   {
+    "hex": "#d7cae9",
+    "share": 0.5
+   }
+  ],
+  "elements": [
+   {
+    "box": [
+     140,
+     367,
+     151,
+     410
+    ],
+    "fill": "#cfe3ea"
+   },
+   {
+    "box": [
+     822,
+     444,
+     252,
+     138
+    ],
+    "fill": "#e4c07a"
+   },
+   {
+    "box": [
+     480,
+     485,
+     254,
+     196
+    ],
+    "fill": "#dcd5e5"
+   },
+   {
+    "box": [
+     200,
+     368,
+     238,
+     408
+    ],
+    "fill": "#e0dce1"
+   },
+   {
+    "box": [
+     338,
+     498,
+     108,
+     272
+    ],
+    "fill": "#d5c3ef"
+   },
+   {
+    "box": [
+     824,
+     560,
+     96,
+     68
+    ],
+    "fill": "#d8b573"
+   },
+   {
+    "box": [
+     972,
+     568,
+     102,
+     58
+    ],
+    "fill": "#d8b673"
+   },
+   {
+    "box": [
+     479,
+     583,
+     87,
+     78
+    ],
+    "fill": "#cabfd5"
+   },
+   {
+    "box": [
+     1304,
+     628,
+     84,
+     52
+    ],
+    "fill": "#d1cbdb"
+   },
+   {
+    "box": [
+     479,
+     624,
+     85,
+     58
+    ],
+    "fill": "#bcafc5"
+   }
+  ],
+  "motion": [
+   {
+    "element": "#e5ede4",
+    "box": [
+     179,
+     360,
+     244,
+     312
+    ],
+    "moves": [
+     {
+      "from": 0,
+      "to": 0.35,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 350
+     },
+     {
+      "from": 0.4,
+      "to": 0.6,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 200
+     },
+     {
+      "from": 0.7,
+      "to": 1.35,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 650
+     },
+     {
+      "from": 1.4,
+      "to": 2,
+      "dTop": -5,
+      "dLeft": 0,
+      "ms": 600
+     }
+    ]
+   },
+   {
+    "element": "#dedaea",
+    "box": [
+     1138,
+     481,
+     256,
+     179
+    ],
+    "moves": [
+     {
+      "from": 1.75,
+      "to": 2.1,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 350
+     },
+     {
+      "from": 2.2,
+      "to": 2.3,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 2.35,
+      "to": 4.35,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 2000
+     },
+     {
+      "from": 4.55,
+      "to": 5.65,
+      "dTop": 0,
+      "dLeft": -101,
+      "ms": 1100
+     }
+    ]
+   },
+   {
+    "element": "#cfe3ea",
+    "box": [
+     140,
+     367,
+     151,
+     410
+    ],
+    "moves": [
+     {
+      "from": 0,
+      "to": 0.3,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 300
+     },
+     {
+      "from": 0.4,
+      "to": 0.6,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 200
+     },
+     {
+      "from": 0.7,
+      "to": 1.35,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 650
+     },
+     {
+      "from": 1.45,
+      "to": 1.5,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     }
+    ]
+   },
+   {
+    "element": "#e4c07a",
+    "box": [
+     822,
+     444,
+     252,
+     138
+    ],
+    "moves": [
+     {
+      "from": 1.75,
+      "to": 2.5,
+      "dTop": 15,
+      "dLeft": -19,
+      "ms": 750
+     },
+     {
+      "from": 2.55,
+      "to": 3,
+      "dTop": -15,
+      "dLeft": 19,
+      "ms": 450
+     },
+     {
+      "from": 3.05,
+      "to": 3.15,
+      "dTop": -2,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 3.2,
+      "to": 3.25,
+      "dTop": -2,
+      "dLeft": 0,
+      "ms": 50
+     }
+    ]
+   }
+  ],
+  "coverage": "flat regions found; boxes and fills are usable as given",
+  "confidence": {
+   "phases": "measured: sampled every 50 ms",
+   "motion": "measured: moves of the first keyframe's big parts, edges read at full resolution; dTop and dLeft are the distance in source px",
+   "palette": "measured for areas; small things do not reach it",
+   "anchors": "measured where the content stands clear of its background (reliable true): the box of everything that is not background at a phase's start and end, and which edges moved; where the content fills the frame the field says so and look_at what=track is the way to read an edge",
+   "elements": "draft: flat regions at the first keyframe; nested parts split or merge, text and thin parts are missing; check each box against the keyframe (see_design with at) before trusting it"
+  }
+ },
+ "motion": {
+  "status": "draft measured: draft.phases say when things move, draft.anchors which edges, draft.motion how far; the presets below are only for states the clip never shows",
+  "enter": "fade up 12 px, 320 ms, cubic-bezier(0.2, 0.8, 0.2, 1)",
+  "hover": "colour or ring only, 150 ms",
+  "press": "scale 0.98, 120 ms",
+  "reducedMotion": "respect prefers-reduced-motion: no entrance, instant hover"
+ },
+ "text": null,
+ "notes": [
+  {
+   "slug": "motion-from-stills",
+   "title": "Giving motion to a still, honestly"
+  }
+ ],
+ "credit": {
+  "author": "Hayriye",
+  "x": "hayriyeakguller",
+  "source": "https://x.com/hayriyeakguller/status/2109612639231856876"
+ },
+ "method": [
+  "Fetch the clip; read size, fps and duration from the container.",
+  "Dump frames at 2 fps plus a contact sheet; pick the idle and active moments and dump those at full resolution.",
+  "Convert the chosen frames to raw RGB and measure: bounding boxes of every element, exact hex at flat regions, luminance profiles across edges for the lighting, a per-frame luma trace of the moving region for timing.",
+  "Build with one unit, --u, equal to one source pixel at the design size, and write every size as calc(N * var(--u)).",
+  "Light rounded objects with inset box-shadows on one overlay (rim, near glow, wide falloff); stacked linear gradients show a seam at the corner.",
+  "Render the build headless at --u: 1px, crop to the frame, put it beside the source frame, and look. Fix the three largest differences. Repeat."
+ ],
+ "build": null,
+ "oneShot": "No measured recipe, but a draft: build from draft.elements and draft.motion, look at each keyframe with see_design (at), then call check_rebuild with a screenshot; its regions are reliable, its element rows are as good as the draft boxes.",
+ "keyframeFiles": [
+  {
+   "name": "kf1",
+   "at": 0.65,
+   "file": "public/drafts/jfx2jxe/kf1.jpg"
+  },
+  {
+   "name": "kf2",
+   "at": 2.6,
+   "file": "public/drafts/jfx2jxe/kf2.jpg"
+  },
+  {
+   "name": "kf3",
+   "at": 7,
+   "file": "public/drafts/jfx2jxe/kf3.jpg"
+  },
+  {
+   "name": "kf4",
+   "at": 8.25,
+   "file": "public/drafts/jfx2jxe/kf4.jpg"
+  }
+ ]
+}

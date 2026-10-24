@@ -1,0 +1,1142 @@
+{
+ "slug": "s9yg0m-hanging-team-profile-cards",
+ "frame": {
+  "w": 1556,
+  "h": 1080
+ },
+ "at": "2026-10-22T22:08:28.245Z",
+ "model": "opus",
+ "costUsd": 0.798,
+ "summary": "A light (#fcfcfc) careers/team section. Top-left: a tiny tracked uppercase eyebrow \"OUR STUDIO · THE PEOPLE\" with a violet dot, then a two-line large sans headline, \"Meet the people\" in near-black and \"behind the work.\" in soft lavender (#a497dc-ish), ~60px type. Top-right: a two-line grey paragraph and a green-dot uppercase tag \"04 PEOPLE, ONE TEAM\". Across the middle a thin grey wire runs from x≈247 to x≈1310 and sags in a shallow curve (ends y≈303, middle y≈327). It has four small grey round pins at x≈282/613/944/1275. From each pin a hairline string drops to a grey ring-clip at the top centre of a hanging card. The four cards (~300×415, radius ~22, light grey #f2f2f2 with a soft drop shadow) each hang at a slight rest tilt (about −2°, +1°, −1°, +1.5°) and at staggered heights: card tops ≈362, 445, 402, 440. Each front has a small \"PEOPLE · STUDIO\" label and \"#0n\" number, a rounded square 3D-character avatar render on a tinted backdrop (pink, lilac, mustard, lilac), a large name, a grey role, a hairline divider, \"VIEW PROFILE\" and a black circle with a white ↗ arrow. Clicking a card flips it 180° on its vertical axis, a perspective rotateY of ~0.5–0.65s. The back is a holographic card: a soft iridescent pastel gradient (cyan, pink, mint-yellow, violet) that drifts with the pointer. It holds \"PROFILE / 0n\", a round avatar, name and role, location, a one-line bio, \"SELECTED PROJECTS\" with two ruled rows, \"LET'S CONNECT\" plus an email, and a QR code with \"SCAN ME\", with a round flip-back icon at top right. Only one card shows its back at a time: opening the next card flips the open one back to its front in the same moment (Maya at 0–0.5s, Leo at ~0.8–1.45s, Noah at ~1.8–2.4s, Noah back to front ~2.8–3.45s, Leo again ~6.05–6.65s, and so on). Hovering a card tilts it in 3D toward the pointer (up to ~8–10° tilt, the card skews in perspective) and lays the same iridescent shimmer over its front (3.6–5.9s on Noah and Amina). The wire, strings, header and footer never move, and cards that are not hovered or flipping hold still. The footer has two small tracked grey captions: \"THE PEOPLE MAKE THE WORK.\" at left and \"HOVER TO SHIMMER · CLICK / TAP TO FLIP\" at right.",
+ "elements": [
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1556,
+    1080
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "flat #fcfcfc"
+  },
+  {
+   "name": "eyebrow 'OUR STUDIO · THE PEOPLE' with violet dot",
+   "box": [
+    95,
+    75,
+    170,
+    12
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "~10px tracked uppercase grey, 5px violet dot at x≈99"
+  },
+  {
+   "name": "headline line 1 'Meet the people'",
+   "box": [
+    85,
+    124,
+    375,
+    52
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "~58px sans, near-black, tight tracking"
+  },
+  {
+   "name": "headline line 2 'behind the work.'",
+   "box": [
+    85,
+    182,
+    425,
+    56
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "same size, lavender ~#a597dd"
+  },
+  {
+   "name": "intro paragraph",
+   "box": [
+    1190,
+    153,
+    255,
+    40
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'Different minds, shared curiosity. A small / team making thoughtful things together.' ~13px grey, 2 lines"
+  },
+  {
+   "name": "tag '04 PEOPLE, ONE TEAM' with green dot",
+   "box": [
+    1189,
+    219,
+    143,
+    12
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "~10px tracked uppercase grey, green dot"
+  },
+  {
+   "name": "hanging wire",
+   "box": [
+    247,
+    300,
+    1064,
+    30
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "1.5px grey #8f8f95 curve, sags from y≈303 at ends to ≈327 in middle"
+  },
+  {
+   "name": "wire pins x4",
+   "box": [
+    276,
+    300,
+    1005,
+    32
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "~11px light grey round beads at x≈282,613,944,1275"
+  },
+  {
+   "name": "hanging strings x4",
+   "box": [
+    281,
+    307,
+    994,
+    135
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "1px grey vertical hairlines from pins to card clips"
+  },
+  {
+   "name": "card clips x4",
+   "box": [
+    272,
+    352,
+    1010,
+    100
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "grey semicircular ring-clip ~24px wide with a dot centre, sitting on the card's top edge at its centre"
+  },
+  {
+   "name": "card 1 Maya Bennett (front)",
+   "box": [
+    140,
+    362,
+    305,
+    416
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "#f2f2f2 card r≈22, soft shadow, tilted ≈−2°; pink backdrop avatar; name 'Maya Bennett', 'Creative Director', '#01'"
+  },
+  {
+   "name": "card 2 Leo Carter (front)",
+   "box": [
+    455,
+    445,
+    300,
+    413
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "tilted ≈+1°; lilac backdrop; 'Leo Carter','Motion Designer','#02'"
+  },
+  {
+   "name": "card 3 Noah Williams (front)",
+   "box": [
+    800,
+    402,
+    300,
+    414
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "tilted ≈−1°; mustard #e4c07a backdrop; 'Noah Williams','Product Designer','#03'"
+  },
+  {
+   "name": "card 4 Amina Yusuf (front)",
+   "box": [
+    1110,
+    440,
+    305,
+    417
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "tilted ≈+1.5°; lilac backdrop; 'Amina Yusuf','Brand Designer','#04'"
+  },
+  {
+   "name": "avatar renders x4",
+   "box": [
+    160,
+    402,
+    1235,
+    310
+   ],
+   "kind": "image",
+   "class": "photo",
+   "note": "3D clay-style character busts in rounded-square frames ~250×225, r≈14"
+  },
+  {
+   "name": "card front label 'PEOPLE · STUDIO' and number",
+   "box": [
+    160,
+    382,
+    1235,
+    96
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "~9px tracked uppercase grey, '#0n' at the right"
+  },
+  {
+   "name": "card name and role",
+   "box": [
+    168,
+    640,
+    1115,
+    130
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "name ~26px dark grey, tight tracking; role ~15px mid grey"
+  },
+  {
+   "name": "VIEW PROFILE row with arrow button",
+   "box": [
+    172,
+    710,
+    1210,
+    130
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "hairline divider; 'VIEW PROFILE' ~9px tracked dark; ~26px black circle with white ↗"
+  },
+  {
+   "name": "holographic card back (shown on Leo at 2.6s rest is front; back e.g. Noah at 2.6s)",
+   "box": [
+    770,
+    397,
+    313,
+    425
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "iridescent pastel gradient: cyan, pink, mint-yellow, violet, soft and blurred, no hard bands"
+  },
+  {
+   "name": "back header 'PROFILE / 03' and flip-back icon",
+   "box": [
+    810,
+    425,
+    255,
+    30
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "tracked uppercase small; ~22px translucent grey circle with ↰ glyph top-right"
+  },
+  {
+   "name": "back identity block",
+   "box": [
+    808,
+    455,
+    250,
+    100
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "~40px round avatar, 'Noah Williams' ~17px, 'Product Designer' ~10px, '⌖ New York, US', bio 'Designing small details that make the big picture work.'"
+  },
+  {
+   "name": "back selected projects",
+   "box": [
+    800,
+    578,
+    255,
+    80
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'SELECTED PROJECTS' tracked caption; rows 'Product / Atlas', 'System / Mono' with hairline rules"
+  },
+  {
+   "name": "back connect + QR",
+   "box": [
+    790,
+    720,
+    265,
+    80
+   ],
+   "kind": "text",
+   "class": "structured",
+   "note": "'LET'S CONNECT', 'noah@example.com', ~60px black QR code with 'SCAN ME' under it"
+  },
+  {
+   "name": "footer left caption",
+   "box": [
+    84,
+    920,
+    173,
+    11
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'THE PEOPLE MAKE THE WORK.' ~10px tracked grey"
+  },
+  {
+   "name": "footer right caption",
+   "box": [
+    1233,
+    920,
+    240,
+    11
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "'HOVER TO SHIMMER · CLICK / TAP TO FLIP' ~10px tracked grey"
+  },
+  {
+   "name": "cursor",
+   "box": [
+    960,
+    595,
+    20,
+    22
+   ],
+   "kind": "chrome",
+   "class": null,
+   "note": "system pointer from screen recording, not part of the design"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "page background",
+   "axis": "style",
+   "check": "The page background is a flat near-white (#fcfcfc), with no gradient, texture or panel behind the cards",
+   "box": [
+    0,
+    0,
+    1556,
+    1080
+   ],
+   "scope": "frame",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "eyebrow",
+   "axis": "text",
+   "check": "A small tracked uppercase grey label reads exactly 'OUR STUDIO · THE PEOPLE', preceded by a small violet dot, at top-left around x≈95–265, y≈81",
+   "box": [
+    90,
+    70,
+    180,
+    22
+   ],
+   "scope": "crop",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "headline line 1",
+   "axis": "text",
+   "check": "Headline first line reads exactly 'Meet the people' in near-black, ~58px, left edge x≈85, baseline region y≈125–175",
+   "box": [
+    80,
+    118,
+    390,
+    62
+   ],
+   "scope": "crop",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "headline line 2",
+   "axis": "style",
+   "check": "Second line 'behind the work.' is the same size as line 1 but coloured soft lavender (~#a597dd), not black and not saturated purple",
+   "box": [
+    80,
+    178,
+    440,
+    64
+   ],
+   "scope": "crop",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "intro paragraph",
+   "axis": "text",
+   "check": "Top-right grey paragraph reads 'Different minds, shared curiosity. A small' / 'team making thoughtful things together.' over two lines starting at x≈1190, y≈155",
+   "box": [
+    1185,
+    148,
+    265,
+    48
+   ],
+   "scope": "crop",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "team tag",
+   "axis": "text",
+   "check": "Below the paragraph, a green dot then tracked uppercase '04 PEOPLE, ONE TEAM' at y≈225",
+   "box": [
+    1185,
+    216,
+    150,
+    18
+   ],
+   "scope": "crop",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "footer captions",
+   "axis": "text",
+   "check": "Bottom-left caption reads 'THE PEOPLE MAKE THE WORK.' (x≈84, y≈925) and bottom-right reads 'HOVER TO SHIMMER · CLICK / TAP TO FLIP' ending x≈1473, both small tracked grey",
+   "box": [
+    80,
+    915,
+    1400,
+    20
+   ],
+   "scope": "frame",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "hanging wire",
+   "axis": "position",
+   "check": "A thin grey wire spans from x≈247 to x≈1310, ends at y≈303, sagging in a smooth curve to y≈327 near the centre (not a straight line)",
+   "box": [
+    240,
+    295,
+    1080,
+    40
+   ],
+   "scope": "frame",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "wire pins",
+   "axis": "present",
+   "check": "Exactly 4 small light-grey round beads sit on the wire, at x≈282, 613, 944, 1275",
+   "box": [
+    270,
+    298,
+    1020,
+    36
+   ],
+   "scope": "crop",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "strings",
+   "axis": "style",
+   "check": "From each bead a 1px grey hairline drops straight down to its card, lengths ≈55, 118, 76, 133px (cards hang at different heights)",
+   "box": [
+    275,
+    305,
+    1005,
+    140
+   ],
+   "scope": "crop",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "card clips",
+   "axis": "style",
+   "check": "Each string ends in a grey semicircular ring-clip (~24px wide, with a small dot at its centre) that overlaps the card's top edge at its centre",
+   "box": [
+    260,
+    345,
+    60,
+    30
+   ],
+   "scope": "crop",
+   "at": 0.65,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "cards",
+   "axis": "present",
+   "check": "Exactly four portrait cards hang from the wire, left to right Maya Bennett, Leo Carter, Noah Williams, Amina Yusuf",
+   "box": [
+    135,
+    355,
+    1285,
+    510
+   ],
+   "scope": "frame",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "card tops",
+   "axis": "position",
+   "check": "Card tops are staggered: card 1 ≈362, card 2 ≈445, card 3 ≈402, card 4 ≈440; cards 2 and 4 hang lowest, card 1 highest",
+   "box": [
+    135,
+    355,
+    1285,
+    510
+   ],
+   "scope": "frame",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "card rest tilt",
+   "axis": "position",
+   "check": "At rest each card is slightly rotated, not square: card 1 ≈−2° (right side higher), card 2 ≈+1°, card 3 ≈−1°, card 4 ≈+1.5°",
+   "box": [
+    135,
+    355,
+    1285,
+    510
+   ],
+   "scope": "frame",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "card front surface",
+   "axis": "style",
+   "check": "Card front is a light grey (#f2f2f2) slab ~300×415 with ~22px corner radius and a soft diffuse drop shadow, with no visible border stroke",
+   "box": [
+    1105,
+    435,
+    315,
+    425
+   ],
+   "scope": "crop",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "card front header",
+   "axis": "text",
+   "check": "Card 4 front top row reads 'PEOPLE · STUDIO' at left and '#04' at right, tiny tracked grey uppercase",
+   "box": [
+    1135,
+    455,
+    265,
+    25
+   ],
+   "scope": "crop",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "avatar frame",
+   "axis": "style",
+   "check": "Avatar render sits in a rounded square (~250×225, radius ~14) inset ~20px from the card edges, edge-to-edge image with no border",
+   "box": [
+    1130,
+    475,
+    270,
+    240
+   ],
+   "scope": "crop",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "card 3 backdrop",
+   "axis": "style",
+   "check": "Noah Williams' avatar backdrop is warm mustard (#e4c07a); Maya's is pink, Leo's and Amina's are pale lilac",
+   "box": [
+    800,
+    400,
+    756,
+    320
+   ],
+   "scope": "frame",
+   "at": 0.65,
+   "then": null
+  },
+  {
+   "id": "c19",
+   "element": "card name",
+   "axis": "text",
+   "check": "Card 3 front shows 'Noah Williams' (~26px, dark grey) with 'Product Designer' (~15px, mid grey) under it",
+   "box": [
+    818,
+    678,
+    180,
+    50
+   ],
+   "scope": "crop",
+   "at": 2.35,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "card roles",
+   "axis": "text",
+   "check": "Roles read 'Creative Director' (Maya), 'Motion Designer' (Leo), 'Product Designer' (Noah), 'Brand Designer' (Amina)",
+   "box": [
+    160,
+    640,
+    1140,
+    130
+   ],
+   "scope": "frame",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "view profile row",
+   "axis": "style",
+   "check": "Under a hairline divider each front shows 'VIEW PROFILE' in tiny tracked dark caps at left and a ~26px solid black circle with a white ↗ arrow at right",
+   "box": [
+    1125,
+    790,
+    265,
+    50
+   ],
+   "scope": "crop",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "avatar renders",
+   "axis": "imagery",
+   "check": "Avatars are the clip's own 3D clay-style character busts (magenta-haired woman, dark-quiffed man, curly-haired man in teal tee, black-bob woman with hoop earrings), not flat icons or initials",
+   "box": [
+    160,
+    400,
+    1240,
+    315
+   ],
+   "scope": "crop",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "card back",
+   "axis": "present",
+   "check": "Exactly one card shows its back at a time: at 2.6s only Noah's card (3rd) is on its holographic back while the other three show fronts",
+   "box": [
+    135,
+    355,
+    1285,
+    510
+   ],
+   "scope": "frame",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "card back material",
+   "axis": "style",
+   "check": "The back is a soft iridescent holographic gradient blending pale cyan, pink, mint-yellow and violet, smoothly blurred like foil sheen",
+   "box": [
+    770,
+    395,
+    315,
+    430
+   ],
+   "scope": "crop",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c25",
+   "element": "card back material",
+   "axis": "style",
+   "check": "The holographic back has NO hard colour bands, stripes or rainbow lines and no grain; hues fade into each other and the white-grey card base shows through",
+   "box": [
+    770,
+    395,
+    315,
+    430
+   ],
+   "scope": "crop",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c26",
+   "element": "card back header",
+   "axis": "text",
+   "check": "Back top-left reads 'PROFILE / 03' in tracked small caps; top-right is a ~22px translucent grey circle with a ↰ return glyph",
+   "box": [
+    805,
+    420,
+    265,
+    40
+   ],
+   "scope": "crop",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c27",
+   "element": "card back identity",
+   "axis": "text",
+   "check": "Back shows a ~40px round avatar thumbnail beside 'Noah Williams' with 'Product Designer' under it, then '⌖ New York, US'",
+   "box": [
+    805,
+    450,
+    200,
+    75
+   ],
+   "scope": "crop",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "card back bio",
+   "axis": "text",
+   "check": "Bio reads 'Designing small details that make the big picture work.' wrapping to two lines",
+   "box": [
+    800,
+    525,
+    260,
+    35
+   ],
+   "scope": "crop",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c29",
+   "element": "card back projects",
+   "axis": "text",
+   "check": "'SELECTED PROJECTS' caption followed by 2 ruled rows 'Product / Atlas' and 'System / Mono', each separated by a hairline",
+   "box": [
+    795,
+    575,
+    265,
+    85
+   ],
+   "scope": "crop",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c30",
+   "element": "card back connect",
+   "axis": "text",
+   "check": "Bottom-left reads 'LET'S CONNECT' (tracked caps) above 'noah@example.com'",
+   "box": [
+    788,
+    750,
+    120,
+    35
+   ],
+   "scope": "crop",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c31",
+   "element": "QR code",
+   "axis": "imagery",
+   "check": "Bottom-right of the back has a ~60px black-on-white QR code pattern with three finder squares and the caption 'SCAN ME' below it",
+   "box": [
+    975,
+    718,
+    80,
+    85
+   ],
+   "scope": "crop",
+   "at": 2.6,
+   "then": null
+  },
+  {
+   "id": "c32",
+   "element": "Leo back text",
+   "axis": "text",
+   "check": "Leo's back reads 'PROFILE / 02', 'Leo Carter', 'Motion Designer', 'Berlin, DE', 'Making everyday interactions feel a little more alive.', projects 'Motion / Orbit' and 'Launch / Loop', email 'leo@example.com'",
+   "box": [
+    465,
+    445,
+    300,
+    420
+   ],
+   "scope": "crop",
+   "at": 1.13,
+   "then": null
+  },
+  {
+   "id": "c33",
+   "element": "Maya back text",
+   "axis": "text",
+   "check": "Maya's back reads 'PROFILE / 01', 'London, UK', 'Turning interesting ideas into things people remember.', projects 'Identity / Forma' and 'Campaign / Light', 'maya@example.com'",
+   "box": [
+    140,
+    360,
+    310,
+    420
+   ],
+   "scope": "crop",
+   "at": 0.65,
+   "then": null
+  },
+  {
+   "id": "c34",
+   "element": "card 1 flip",
+   "axis": "motion",
+   "check": "Card 1 turns on its vertical axis in perspective: at 0.15s it is seen edge-on as a narrow skewed sliver (~95px wide), and by 0.65s it is fully open, ~305px wide, showing its back",
+   "box": [
+    135,
+    330,
+    320,
+    470
+   ],
+   "scope": "frame",
+   "at": 0.15,
+   "then": 0.65
+  },
+  {
+   "id": "c35",
+   "element": "flip handoff",
+   "axis": "motion",
+   "check": "Between 0.65s and 1.13s Maya's card flips from back to front while Leo's card flips from front to back in the same span (~0.6s), so still only one back shows",
+   "box": [
+    135,
+    355,
+    640,
+    510
+   ],
+   "scope": "frame",
+   "at": 0.65,
+   "then": 1.13
+  },
+  {
+   "id": "c36",
+   "element": "flip handoff 2",
+   "axis": "motion",
+   "check": "Between 1.13s and 2.6s Leo returns to front and Noah's card turns to its back; at 1.98s Leo's card is visibly foreshortened mid-turn (narrower, ~245px)",
+   "box": [
+    455,
+    395,
+    640,
+    480
+   ],
+   "scope": "frame",
+   "at": 1.13,
+   "then": 2.6
+  },
+  {
+   "id": "c37",
+   "element": "flip perspective",
+   "axis": "motion",
+   "check": "Mid-flip the card shows real 3D perspective: the near vertical edge is taller than the far edge (trapezoid), not a flat horizontal squash",
+   "box": [
+    240,
+    330,
+    110,
+    470
+   ],
+   "scope": "crop",
+   "at": 0.15,
+   "then": null
+  },
+  {
+   "id": "c38",
+   "element": "flip pivot",
+   "axis": "motion",
+   "check": "During a flip the card stays hung from its clip: the clip and string stay at the same x and the card turns about its own vertical centre line, with no slide sideways",
+   "box": [
+    455,
+    300,
+    320,
+    570
+   ],
+   "scope": "frame",
+   "at": 1.98,
+   "then": 2.6
+  },
+  {
+   "id": "c39",
+   "element": "hover shimmer",
+   "axis": "motion",
+   "check": "Hovering a front card (Noah, Amina at ~4.75s) lays the iridescent pastel sheen over its grey front and tilts it in 3D toward the pointer, about 5–10°, so the card reads as a skewed quad. At 2.6s the same fronts are flat grey",
+   "box": [
+    740,
+    375,
+    680,
+    490
+   ],
+   "scope": "frame",
+   "at": 2.6,
+   "then": 4.75
+  },
+  {
+   "id": "c40",
+   "element": "hover tilt follow",
+   "axis": "motion",
+   "check": "While the pointer moves over an open back, that card's tilt and sheen shift with it (Leo's card at 7.0s leans left/top, unlike its pose at 6.6s) and nothing else moves",
+   "box": [
+    440,
+    435,
+    330,
+    430
+   ],
+   "scope": "frame",
+   "at": 6.6,
+   "then": 7
+  },
+  {
+   "id": "c41",
+   "element": "idle cards",
+   "axis": "motion",
+   "check": "Cards that are neither hovered nor flipping hold perfectly still. They do not sway, bob or swing between 0.5s and 0.75s: Noah's and Amina's cards are pixel-identical",
+   "box": [
+    800,
+    395,
+    620,
+    465
+   ],
+   "scope": "frame",
+   "at": 0.5,
+   "then": 0.75
+  },
+  {
+   "id": "c42",
+   "element": "static chrome",
+   "axis": "motion",
+   "check": "Wire, beads, strings, headline, paragraph and footer captions never move across the whole clip",
+   "box": [
+    0,
+    0,
+    1556,
+    1080
+   ],
+   "scope": "frame",
+   "at": 0.65,
+   "then": 8.25
+  },
+  {
+   "id": "c43",
+   "element": "later flips",
+   "axis": "motion",
+   "check": "Flipping continues through the clip: by ~6.6s Leo's card is on its back again, and later Amina's card (4th) is also shown on its back ('PROFILE / 04'), always one back at a time",
+   "box": [
+    135,
+    355,
+    1285,
+    510
+   ],
+   "scope": "frame",
+   "at": 6.6,
+   "then": 13.5
+  }
+ ],
+ "imagery": [
+  {
+   "name": "Maya Bennett avatar",
+   "box": [
+    162,
+    402,
+    256,
+    228
+   ],
+   "class": "photo",
+   "what": "3D clay character woman with tall magenta-to-orange hair, purple hoodie, on a pink backdrop",
+   "at": 2.6
+  },
+  {
+   "name": "Leo Carter avatar",
+   "box": [
+    478,
+    485,
+    255,
+    225
+   ],
+   "class": "photo",
+   "what": "3D clay man with a black swooping quiff, peach skin, brown tee, on pale lilac",
+   "at": 2.6
+  },
+  {
+   "name": "Noah Williams avatar",
+   "box": [
+    822,
+    443,
+    253,
+    225
+   ],
+   "class": "photo",
+   "what": "3D clay man with dark curly hair, brown skin, teal tee, on mustard yellow",
+   "at": 0.65
+  },
+  {
+   "name": "Amina Yusuf avatar",
+   "box": [
+    1137,
+    481,
+    256,
+    228
+   ],
+   "class": "photo",
+   "what": "3D clay woman with a black bob and fringe, hoop earrings, mauve top, on pale lilac",
+   "at": 2.6
+  },
+  {
+   "name": "holographic card back",
+   "box": [
+    770,
+    397,
+    313,
+    425
+   ],
+   "class": "css",
+   "what": "soft iridescent foil gradient (cyan, pink, mint-yellow, violet) over a pale card, moving with the pointer",
+   "at": 2.6
+  },
+  {
+   "name": "back avatar thumbnails",
+   "box": [
+    808,
+    455,
+    44,
+    44
+   ],
+   "class": "photo",
+   "what": "circular crops of the same 3D avatar render",
+   "at": 2.6
+  },
+  {
+   "name": "QR code",
+   "box": [
+    982,
+    722,
+    64,
+    60
+   ],
+   "class": "structured",
+   "what": "black QR pattern with three finder squares, 'SCAN ME' caption",
+   "at": 2.6
+  },
+  {
+   "name": "wire, beads, strings, clips",
+   "box": [
+    247,
+    300,
+    1064,
+    155
+   ],
+   "class": "css",
+   "what": "thin grey sagging wire with round beads, hairline strings and semicircular ring-clips",
+   "at": 2.6
+  }
+ ],
+ "moves": [
+  {
+   "element": "card 1 (Maya)",
+   "what": "flips front→back on its vertical axis (perspective rotateY 180°)",
+   "from": 0.05,
+   "to": 0.5,
+   "px": null
+  },
+  {
+   "element": "card 1 (Maya)",
+   "what": "flips back→front",
+   "from": 0.8,
+   "to": 1.45,
+   "px": null
+  },
+  {
+   "element": "card 2 (Leo)",
+   "what": "flips front→back as Maya closes",
+   "from": 0.8,
+   "to": 1.45,
+   "px": null
+  },
+  {
+   "element": "card 2 (Leo)",
+   "what": "flips back→front",
+   "from": 1.6,
+   "to": 2.15,
+   "px": null
+  },
+  {
+   "element": "card 3 (Noah)",
+   "what": "flips front→back as Leo closes; settles with a small tilt correction",
+   "from": 1.75,
+   "to": 2.45,
+   "px": 19
+  },
+  {
+   "element": "card 3 (Noah)",
+   "what": "flips back→front",
+   "from": 2.8,
+   "to": 3.45,
+   "px": null
+  },
+  {
+   "element": "cards 3, 4, 1 (hovered)",
+   "what": "hover: the card tilts in 3D toward the pointer and an iridescent sheen sweeps over the front; it lets go when the pointer leaves",
+   "from": 3.6,
+   "to": 5.9,
+   "px": 28
+  },
+  {
+   "element": "card 2 (Leo)",
+   "what": "flips front→back again",
+   "from": 6.05,
+   "to": 6.65,
+   "px": null
+  },
+  {
+   "element": "card 2 (Leo) back",
+   "what": "pointer-following tilt and sheen shift while hovered",
+   "from": 7,
+   "to": 8.75,
+   "px": null
+  },
+  {
+   "element": "cards 1–4",
+   "what": "further click flips in sequence (Maya, Leo, Amina, Noah), one back open at a time",
+   "from": 9.2,
+   "to": 13.6,
+   "px": null
+  }
+ ]
+}

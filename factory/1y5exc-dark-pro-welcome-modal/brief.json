@@ -1,0 +1,586 @@
+{
+ "slug": "1y5exc-dark-pro-welcome-modal",
+ "title": "Dark Pro Welcome Modal",
+ "measured": false,
+ "recipe": null,
+ "what": "A sleek dark onboarding modal greets a Pro user above a moody 3D device render, with a pill CTA linking Figma plugin and MCP agent access.",
+ "frame": {
+  "ratio": 1.333,
+  "shape": "landscape",
+  "media": "clip"
+ },
+ "tone": "dark surface, light type",
+ "traits": [
+  "Onboarding",
+  "Dark",
+  "CTA"
+ ],
+ "section": "Modal",
+ "steps": [
+  "Call see_design for the frame and read the layout from it: regions, alignment, type scale, corner radii, spacing rhythm.",
+  "The media is a clip: name each state you can see (rest, hover, press, open) and the order they occur in.",
+  "Build with the project's own stack and tokens; match proportion and hierarchy before matching pixels.",
+  "A draft measurement is attached: its phases, moves and palette are measured from the clip; its boxes are a first pass to check against the keyframes."
+ ],
+ "draft": {
+  "frame": {
+   "w": 1440,
+   "h": 1080
+  },
+  "duration": 11.18,
+  "phases": [
+   [
+    0.05,
+    0.05
+   ],
+   [
+    0.45,
+    0.5
+   ],
+   [
+    0.7,
+    0.75
+   ],
+   [
+    0.95,
+    1.05
+   ],
+   [
+    1.25,
+    1.3
+   ],
+   [
+    1.5,
+    1.55
+   ],
+   [
+    1.75,
+    1.85
+   ],
+   [
+    2.05,
+    2.3
+   ],
+   [
+    2.4,
+    2.45
+   ],
+   [
+    2.7,
+    2.85
+   ],
+   [
+    3.7,
+    3.75
+   ],
+   [
+    4.2,
+    4.95
+   ],
+   [
+    5.8,
+    6.4
+   ],
+   [
+    7.5,
+    8.3
+   ],
+   [
+    8.7,
+    9.05
+   ],
+   [
+    9.15,
+    9.5
+   ]
+  ],
+  "keyframes": [
+   {
+    "name": "kf1",
+    "at": 3.3,
+    "hold": [
+     2.9,
+     3.65
+    ]
+   },
+   {
+    "name": "kf2",
+    "at": 4,
+    "hold": [
+     3.8,
+     4.15
+    ]
+   },
+   {
+    "name": "kf3",
+    "at": 5.4,
+    "hold": [
+     5,
+     5.75
+    ]
+   },
+   {
+    "name": "kf4",
+    "at": 6.95,
+    "hold": [
+     6.45,
+     7.45
+    ]
+   }
+  ],
+  "moments": [
+   {
+    "at": 1,
+    "name": "mid-phase"
+   },
+   {
+    "at": 1.8,
+    "name": "mid-phase"
+   },
+   {
+    "at": 2.17,
+    "name": "mid-phase"
+   },
+   {
+    "at": 2.78,
+    "name": "mid-phase"
+   },
+   {
+    "at": 3.3,
+    "name": "kf1"
+   },
+   {
+    "at": 4,
+    "name": "kf2"
+   },
+   {
+    "at": 4.58,
+    "name": "mid-phase"
+   },
+   {
+    "at": 5.4,
+    "name": "kf3"
+   },
+   {
+    "at": 6.1,
+    "name": "mid-phase"
+   },
+   {
+    "at": 6.95,
+    "name": "kf4"
+   },
+   {
+    "at": 7.9,
+    "name": "mid-phase"
+   },
+   {
+    "at": 8.88,
+    "name": "mid-phase"
+   }
+  ],
+  "anchors": [
+   {
+    "phase": [
+     0.95,
+     1.05
+    ],
+    "read": "none of the content's edges moved: the change is inside the box",
+    "moved": {
+     "top": 0,
+     "bottom": 0,
+     "left": 0,
+     "right": 0
+    },
+    "reliable": true
+   },
+   {
+    "phase": [
+     1.75,
+     1.85
+    ],
+    "read": "none of the content's edges moved: the change is inside the box",
+    "moved": {
+     "top": 0,
+     "bottom": 0,
+     "left": 0,
+     "right": 0
+    },
+    "reliable": true
+   },
+   {
+    "phase": [
+     2.05,
+     2.3
+    ],
+    "read": "none of the content's edges moved: the change is inside the box",
+    "moved": {
+     "top": 0,
+     "bottom": 0,
+     "left": 0,
+     "right": 0
+    },
+    "reliable": true
+   },
+   {
+    "phase": [
+     2.7,
+     2.85
+    ],
+    "read": "none of the content's edges moved: the change is inside the box",
+    "moved": {
+     "top": 0,
+     "bottom": 0,
+     "left": 0,
+     "right": 0
+    },
+    "reliable": true
+   },
+   {
+    "phase": [
+     4.2,
+     4.95
+    ],
+    "read": "none of the content's edges moved: the change is inside the box",
+    "moved": {
+     "top": 0,
+     "bottom": 0,
+     "left": 0,
+     "right": 0
+    },
+    "reliable": true
+   }
+  ],
+  "background": "#0b0b0b",
+  "palette": [
+   {
+    "hex": "#0a0a0a",
+    "share": 64.6
+   },
+   {
+    "hex": "#1d1d1d",
+    "share": 19.4
+   },
+   {
+    "hex": "#ffffff",
+    "share": 2.7
+   },
+   {
+    "hex": "#242425",
+    "share": 2.7
+   },
+   {
+    "hex": "#a4b8c4",
+    "share": 1.3
+   },
+   {
+    "hex": "#97a8b9",
+    "share": 1.2
+   },
+   {
+    "hex": "#9cb3b9",
+    "share": 1
+   },
+   {
+    "hex": "#1f1f21",
+    "share": 0.6
+   }
+  ],
+  "elements": [
+   {
+    "box": [
+     618,
+     189,
+     324,
+     257
+    ],
+    "fill": "#99a9b8"
+   },
+   {
+    "box": [
+     439,
+     810,
+     562,
+     73
+    ],
+    "fill": "#ffffff"
+   },
+   {
+    "box": [
+     568,
+     164,
+     374,
+     162
+    ],
+    "fill": "#a3b7c2"
+   },
+   {
+    "box": [
+     445,
+     461,
+     550,
+     50
+    ],
+    "fill": "#2f2e31"
+   },
+   {
+    "box": [
+     495,
+     176,
+     171,
+     270
+    ],
+    "fill": "#e8fae3"
+   },
+   {
+    "box": [
+     521,
+     164,
+     177,
+     282
+    ],
+    "fill": "#f5c1cd"
+   },
+   {
+    "box": [
+     548,
+     164,
+     138,
+     245
+    ],
+    "fill": "#ceb1c2"
+   },
+   {
+    "box": [
+     495,
+     209,
+     87,
+     191
+    ],
+    "fill": "#c3f9ea"
+   },
+   {
+    "box": [
+     495,
+     321,
+     90,
+     125
+    ],
+    "fill": "#acaaf8"
+   }
+  ],
+  "motion": [
+   {
+    "element": "#1f1f1f",
+    "box": [
+     400,
+     511,
+     640,
+     465
+    ],
+    "moves": [
+     {
+      "from": 0.65,
+      "to": 0.75,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 0.95,
+      "to": 1,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 1.15,
+      "to": 1.3,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 150
+     },
+     {
+      "from": 1.45,
+      "to": 1.6,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 150
+     }
+    ]
+   },
+   {
+    "element": "#1d1d1d",
+    "box": [
+     400,
+     106,
+     640,
+     207
+    ],
+    "moves": [
+     {
+      "from": 0.65,
+      "to": 0.75,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 0.9,
+      "to": 1,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 1.2,
+      "to": 1.3,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 1.45,
+      "to": 1.5,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     }
+    ]
+   },
+   {
+    "element": "#99a9b8",
+    "box": [
+     618,
+     189,
+     324,
+     257
+    ],
+    "moves": [
+     {
+      "from": 0.45,
+      "to": 0.6,
+      "dTop": -22,
+      "dLeft": 5,
+      "ms": 150
+     },
+     {
+      "from": 0.65,
+      "to": 1.15,
+      "dTop": -94,
+      "dLeft": -4,
+      "ms": 500
+     },
+     {
+      "from": 1.2,
+      "to": 1.65,
+      "dTop": -94,
+      "dLeft": 5,
+      "ms": 450
+     },
+     {
+      "from": 1.7,
+      "to": 3,
+      "dTop": -94,
+      "dLeft": -4,
+      "ms": 1300
+     }
+    ]
+   },
+   {
+    "element": "#ffffff",
+    "box": [
+     439,
+     810,
+     562,
+     73
+    ],
+    "moves": [
+     {
+      "from": 0.05,
+      "to": 0.15,
+      "dTop": -4,
+      "dLeft": 0,
+      "ms": 100
+     },
+     {
+      "from": 9.8,
+      "to": 9.85,
+      "dTop": 0,
+      "dLeft": 0,
+      "ms": 50
+     },
+     {
+      "from": 9.95,
+      "to": 10,
+      "dTop": 5,
+      "dLeft": 0,
+      "ms": 50
+     }
+    ]
+   }
+  ],
+  "coverage": "flat regions found; boxes and fills are usable as given",
+  "confidence": {
+   "phases": "measured: sampled every 50 ms",
+   "motion": "measured: moves of the first keyframe's big parts, edges read at full resolution; dTop and dLeft are the distance in source px",
+   "palette": "measured for areas; small things do not reach it",
+   "anchors": "measured where the content stands clear of its background (reliable true): the box of everything that is not background at a phase's start and end, and which edges moved; where the content fills the frame the field says so and look_at what=track is the way to read an edge",
+   "elements": "draft: flat regions at the first keyframe; nested parts split or merge, text and thin parts are missing; check each box against the keyframe (see_design with at) before trusting it"
+  }
+ },
+ "motion": {
+  "status": "draft measured: draft.phases say when things move, draft.anchors which edges, draft.motion how far; the presets below are only for states the clip never shows",
+  "enter": "fade up 12 px, 320 ms, cubic-bezier(0.2, 0.8, 0.2, 1)",
+  "hover": "colour or ring only, 150 ms",
+  "press": "scale 0.98, 120 ms",
+  "reducedMotion": "respect prefers-reduced-motion: no entrance, instant hover"
+ },
+ "text": null,
+ "notes": [
+  {
+   "slug": "dark-silver-tokens",
+   "title": "A dark, silver, single-accent system"
+  },
+  {
+   "slug": "motion-from-stills",
+   "title": "Giving motion to a still, honestly"
+  }
+ ],
+ "credit": {
+  "author": "Craftwork",
+  "x": "craftworkdesign",
+  "source": "https://x.com/craftworkdesign/status/2105643365383700505"
+ },
+ "method": [
+  "Fetch the clip; read size, fps and duration from the container.",
+  "Dump frames at 2 fps plus a contact sheet; pick the idle and active moments and dump those at full resolution.",
+  "Convert the chosen frames to raw RGB and measure: bounding boxes of every element, exact hex at flat regions, luminance profiles across edges for the lighting, a per-frame luma trace of the moving region for timing.",
+  "Build with one unit, --u, equal to one source pixel at the design size, and write every size as calc(N * var(--u)).",
+  "Light rounded objects with inset box-shadows on one overlay (rim, near glow, wide falloff); stacked linear gradients show a seam at the corner.",
+  "Render the build headless at --u: 1px, crop to the frame, put it beside the source frame, and look. Fix the three largest differences. Repeat."
+ ],
+ "build": null,
+ "oneShot": "No measured recipe, but a draft: build from draft.elements and draft.motion, look at each keyframe with see_design (at), then call check_rebuild with a screenshot; its regions are reliable, its element rows are as good as the draft boxes.",
+ "keyframeFiles": [
+  {
+   "name": "kf1",
+   "at": 3.3,
+   "file": "public/drafts/5mvem33/kf1.jpg"
+  },
+  {
+   "name": "kf2",
+   "at": 4,
+   "file": "public/drafts/5mvem33/kf2.jpg"
+  },
+  {
+   "name": "kf3",
+   "at": 5.4,
+   "file": "public/drafts/5mvem33/kf3.jpg"
+  },
+  {
+   "name": "kf4",
+   "at": 6.95,
+   "file": "public/drafts/5mvem33/kf4.jpg"
+  }
+ ]
+}

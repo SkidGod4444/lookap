@@ -1,0 +1,1857 @@
+{
+ "slug": "s9yg0m-hanging-team-profile-cards",
+ "at": "2026-10-24T01:27:02.335Z",
+ "runs": 17,
+ "html": "factory/s9yg0m-hanging-team-profile-cards/index.html",
+ "pixel": {
+  "score": 79,
+  "stills": 81,
+  "motion": 79,
+  "moments": 18
+ },
+ "animations": 20,
+ "rank": 83,
+ "allPass": false,
+ "elements": [
+  {
+   "name": "headline line 1 'Meet the people'",
+   "box": [
+    85,
+    124,
+    375,
+    52
+   ],
+   "deltaE": 2.3,
+   "delta": 30,
+   "shift": [
+    2,
+    -2
+   ],
+   "afterShift": 23,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "card 2 Leo Carter (front)",
+   "box": [
+    455,
+    445,
+    300,
+    413
+   ],
+   "deltaE": 0.7,
+   "delta": 23,
+   "shift": [
+    8,
+    2
+   ],
+   "afterShift": 12,
+   "read": "misplaced by 8 x 2 px"
+  },
+  {
+   "name": "card 4 Amina Yusuf (front)",
+   "box": [
+    1110,
+    440,
+    305,
+    417
+   ],
+   "deltaE": 0.7,
+   "delta": 21,
+   "shift": [
+    6,
+    -2
+   ],
+   "afterShift": 11,
+   "read": "misplaced by 6 x 2 px"
+  },
+  {
+   "name": "headline line 2 'behind the work.'",
+   "box": [
+    85,
+    182,
+    425,
+    56
+   ],
+   "deltaE": 0.9,
+   "delta": 20,
+   "shift": [
+    -4,
+    0
+   ],
+   "afterShift": 20,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "card name and role",
+   "box": [
+    168,
+    640,
+    1115,
+    130
+   ],
+   "deltaE": 0.3,
+   "delta": 20,
+   "shift": [
+    0,
+    2
+   ],
+   "afterShift": 18,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "VIEW PROFILE row with arrow button",
+   "box": [
+    172,
+    710,
+    1210,
+    130
+   ],
+   "deltaE": 0.3,
+   "delta": 20,
+   "shift": [
+    8,
+    2
+   ],
+   "afterShift": 17,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "back header 'PROFILE / 03' and flip-back icon",
+   "box": [
+    810,
+    425,
+    255,
+    30
+   ],
+   "deltaE": 5,
+   "delta": 17,
+   "shift": [
+    -2,
+    -4
+   ],
+   "afterShift": 8,
+   "read": "misplaced by 2 x 4 px"
+  },
+  {
+   "name": "avatar renders x4",
+   "box": [
+    160,
+    402,
+    1235,
+    310
+   ],
+   "deltaE": 1,
+   "delta": 16,
+   "shift": null,
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "card 1 Maya Bennett (front)",
+   "box": [
+    140,
+    362,
+    305,
+    416
+   ],
+   "deltaE": 0.7,
+   "delta": 15,
+   "shift": [
+    -4,
+    0
+   ],
+   "afterShift": 11,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "eyebrow 'OUR STUDIO · THE PEOPLE' with violet dot",
+   "box": [
+    95,
+    75,
+    170,
+    12
+   ],
+   "deltaE": 1.1,
+   "delta": 13,
+   "shift": [
+    -6,
+    0
+   ],
+   "afterShift": 9,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "intro paragraph",
+   "box": [
+    1190,
+    153,
+    255,
+    40
+   ],
+   "deltaE": 0.9,
+   "delta": 13,
+   "shift": [
+    -8,
+    -2
+   ],
+   "afterShift": 11,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "back connect + QR",
+   "box": [
+    790,
+    720,
+    265,
+    80
+   ],
+   "deltaE": 0.2,
+   "delta": 13,
+   "shift": [
+    -6,
+    2
+   ],
+   "afterShift": 11,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "hanging wire",
+   "box": [
+    247,
+    300,
+    1064,
+    30
+   ],
+   "deltaE": 0.6,
+   "delta": 12,
+   "shift": [
+    -8,
+    -2
+   ],
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1556,
+    1080
+   ],
+   "deltaE": 0.5,
+   "delta": 11,
+   "shift": null,
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "wire pins x4",
+   "box": [
+    276,
+    300,
+    1005,
+    32
+   ],
+   "deltaE": 0.6,
+   "delta": 11,
+   "shift": null,
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "card 3 Noah Williams (front)",
+   "box": [
+    800,
+    402,
+    300,
+    414
+   ],
+   "deltaE": 1,
+   "delta": 11,
+   "shift": [
+    -2,
+    0
+   ],
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "holographic card back (shown on Leo at 2.6s rest is front; back e.g. Noah at 2.6s)",
+   "box": [
+    770,
+    397,
+    313,
+    425
+   ],
+   "deltaE": 1.1,
+   "delta": 11,
+   "shift": [
+    -2,
+    0
+   ],
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "footer right caption",
+   "box": [
+    1233,
+    920,
+    240,
+    11
+   ],
+   "deltaE": 2,
+   "delta": 11,
+   "shift": [
+    -2,
+    -2
+   ],
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "back identity block",
+   "box": [
+    808,
+    455,
+    250,
+    100
+   ],
+   "deltaE": 1.2,
+   "delta": 10,
+   "shift": [
+    -2,
+    -4
+   ],
+   "afterShift": 6,
+   "read": "matches"
+  },
+  {
+   "name": "footer left caption",
+   "box": [
+    84,
+    920,
+    173,
+    11
+   ],
+   "deltaE": 2.4,
+   "delta": 10,
+   "shift": [
+    0,
+    -2
+   ],
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "card front label 'PEOPLE · STUDIO' and number",
+   "box": [
+    160,
+    382,
+    1235,
+    96
+   ],
+   "deltaE": 0.6,
+   "delta": 9,
+   "shift": [
+    -4,
+    -4
+   ],
+   "afterShift": 7,
+   "read": "matches"
+  },
+  {
+   "name": "tag '04 PEOPLE, ONE TEAM' with green dot",
+   "box": [
+    1189,
+    219,
+    143,
+    12
+   ],
+   "deltaE": 0.4,
+   "delta": 8,
+   "shift": null,
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "hanging strings x4",
+   "box": [
+    281,
+    307,
+    994,
+    135
+   ],
+   "deltaE": 0.5,
+   "delta": 8,
+   "shift": [
+    0,
+    -2
+   ],
+   "afterShift": 7,
+   "read": "matches"
+  },
+  {
+   "name": "card clips x4",
+   "box": [
+    272,
+    352,
+    1010,
+    100
+   ],
+   "deltaE": 0.6,
+   "delta": 7,
+   "shift": [
+    0,
+    -4
+   ],
+   "afterShift": 5,
+   "read": "matches"
+  },
+  {
+   "name": "back selected projects",
+   "box": [
+    800,
+    578,
+    255,
+    80
+   ],
+   "deltaE": 1.6,
+   "delta": 7,
+   "shift": [
+    -4,
+    0
+   ],
+   "afterShift": 4,
+   "read": "matches"
+  },
+  {
+   "name": "cursor",
+   "box": [
+    960,
+    595,
+    20,
+    22
+   ],
+   "deltaE": 1,
+   "delta": 3,
+   "shift": [
+    -2,
+    2
+   ],
+   "afterShift": 3,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "the render stays still in 3 of 17 spans where the clip moves",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "0.15s",
+    "clip": 4.7,
+    "render": 4,
+    "read": "both move"
+   },
+   {
+    "from": "0.15s",
+    "to": "0.5s",
+    "clip": 5.9,
+    "render": 5,
+    "read": "both move"
+   },
+   {
+    "from": "0.5s",
+    "to": "kf1",
+    "clip": 1.4,
+    "render": 0,
+    "read": "render still where the clip moves"
+   },
+   {
+    "from": "kf1",
+    "to": "1.13s",
+    "clip": 7.8,
+    "render": 8.5,
+    "read": "both move"
+   },
+   {
+    "from": "1.13s",
+    "to": "1.98s",
+    "clip": 9.1,
+    "render": 8.8,
+    "read": "both move"
+   },
+   {
+    "from": "1.98s",
+    "to": "2.35s",
+    "clip": 3.9,
+    "render": 3.5,
+    "read": "both move"
+   },
+   {
+    "from": "2.35s",
+    "to": "kf2",
+    "clip": 3.1,
+    "render": 0.2,
+    "read": "render still where the clip moves"
+   },
+   {
+    "from": "kf2",
+    "to": "3.13s",
+    "clip": 6.8,
+    "render": 8.3,
+    "read": "both move"
+   },
+   {
+    "from": "3.13s",
+    "to": "4.75s",
+    "clip": 8.6,
+    "render": 11.1,
+    "read": "both move"
+   },
+   {
+    "from": "4.75s",
+    "to": "6.17s",
+    "clip": 11.5,
+    "render": 15.2,
+    "read": "both move"
+   },
+   {
+    "from": "6.17s",
+    "to": "6.6s",
+    "clip": 3.3,
+    "render": 0.8,
+    "read": "both move"
+   },
+   {
+    "from": "6.6s",
+    "to": "kf3",
+    "clip": 3,
+    "render": 1.5,
+    "read": "both move"
+   },
+   {
+    "from": "kf3",
+    "to": "7.38s",
+    "clip": 3.8,
+    "render": 0.4,
+    "read": "render still where the clip moves"
+   },
+   {
+    "from": "7.38s",
+    "to": "kf4",
+    "clip": 3.8,
+    "render": 0.8,
+    "read": "both move"
+   },
+   {
+    "from": "kf4",
+    "to": "9.68s",
+    "clip": 4,
+    "render": 0.9,
+    "read": "both move"
+   },
+   {
+    "from": "9.68s",
+    "to": "11.6s",
+    "clip": 7.3,
+    "render": 8.6,
+    "read": "both move"
+   },
+   {
+    "from": "11.6s",
+    "to": "13.5s",
+    "clip": 7,
+    "render": 8.1,
+    "read": "both move"
+   }
+  ],
+  "trajectories": [
+   {
+    "element": "#e5ede4",
+    "box": [
+     179,
+     360,
+     244,
+     312
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": -4,
+      "dy": 0,
+      "delta": 10
+     },
+     {
+      "at": 0.15,
+      "dx": -2,
+      "dy": -8,
+      "delta": 14
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": -6,
+      "delta": 17
+     },
+     {
+      "at": 0.65,
+      "dx": -6,
+      "dy": -8,
+      "delta": 19
+     },
+     {
+      "at": 1.13,
+      "dx": -2,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 1.98,
+      "dx": -2,
+      "dy": -2,
+      "delta": 9
+     },
+     {
+      "at": 2.35,
+      "dx": -2,
+      "dy": -2,
+      "delta": 9
+     },
+     {
+      "at": 2.6,
+      "dx": -2,
+      "dy": -2,
+      "delta": 9
+     },
+     {
+      "at": 3.13,
+      "dx": -2,
+      "dy": -2,
+      "delta": 9
+     },
+     {
+      "at": 4.75,
+      "dx": -12,
+      "dy": 0,
+      "delta": 30
+     },
+     {
+      "at": 6.17,
+      "dx": -2,
+      "dy": -2,
+      "delta": 9
+     },
+     {
+      "at": 6.6,
+      "dx": -2,
+      "dy": -2,
+      "delta": 9
+     },
+     {
+      "at": 7,
+      "dx": -2,
+      "dy": -2,
+      "delta": 9
+     },
+     {
+      "at": 7.38,
+      "dx": -2,
+      "dy": -2,
+      "delta": 9
+     },
+     {
+      "at": 8.25,
+      "dx": -2,
+      "dy": -2,
+      "delta": 9
+     },
+     {
+      "at": 9.68,
+      "dx": -2,
+      "dy": -2,
+      "delta": 9
+     },
+     {
+      "at": 11.6,
+      "dx": -12,
+      "dy": -12,
+      "delta": 61
+     },
+     {
+      "at": 13.5,
+      "dx": -2,
+      "dy": -2,
+      "delta": 9
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   },
+   {
+    "element": "#dedaea",
+    "box": [
+     1138,
+     481,
+     256,
+     179
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 6,
+      "dy": -2,
+      "delta": 5
+     },
+     {
+      "at": 0.15,
+      "dx": 6,
+      "dy": -2,
+      "delta": 5
+     },
+     {
+      "at": 0.5,
+      "dx": 6,
+      "dy": -2,
+      "delta": 5
+     },
+     {
+      "at": 0.65,
+      "dx": 6,
+      "dy": -2,
+      "delta": 5
+     },
+     {
+      "at": 1.13,
+      "dx": 6,
+      "dy": -2,
+      "delta": 5
+     },
+     {
+      "at": 1.98,
+      "dx": 6,
+      "dy": -2,
+      "delta": 5
+     },
+     {
+      "at": 2.35,
+      "dx": 6,
+      "dy": -2,
+      "delta": 5
+     },
+     {
+      "at": 2.6,
+      "dx": 6,
+      "dy": -2,
+      "delta": 5
+     },
+     {
+      "at": 3.13,
+      "dx": 4,
+      "dy": -12,
+      "delta": 64
+     },
+     {
+      "at": 4.75,
+      "dx": 12,
+      "dy": 2,
+      "delta": 47
+     },
+     {
+      "at": 6.17,
+      "dx": 6,
+      "dy": -2,
+      "delta": 5
+     },
+     {
+      "at": 6.6,
+      "dx": 6,
+      "dy": -2,
+      "delta": 5
+     },
+     {
+      "at": 7,
+      "dx": 6,
+      "dy": -2,
+      "delta": 5
+     },
+     {
+      "at": 7.38,
+      "dx": 6,
+      "dy": -2,
+      "delta": 5
+     },
+     {
+      "at": 8.25,
+      "dx": 6,
+      "dy": -2,
+      "delta": 5
+     },
+     {
+      "at": 9.68,
+      "dx": 6,
+      "dy": -2,
+      "delta": 5
+     },
+     {
+      "at": 11.6,
+      "dx": -12,
+      "dy": -4,
+      "delta": 41
+     },
+     {
+      "at": 13.5,
+      "dx": 12,
+      "dy": -6,
+      "delta": 28
+     }
+    ],
+    "read": "drifts: the gap grows over time (wrong speed or start)"
+   },
+   {
+    "element": "#cfe3ea",
+    "box": [
+     140,
+     367,
+     151,
+     410
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": -6,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 0.15,
+      "dx": 0,
+      "dy": -6,
+      "delta": 15
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": -4,
+      "delta": 20
+     },
+     {
+      "at": 0.65,
+      "dx": -10,
+      "dy": -6,
+      "delta": 20
+     },
+     {
+      "at": 1.13,
+      "dx": -4,
+      "dy": -2,
+      "delta": 10
+     },
+     {
+      "at": 1.98,
+      "dx": -4,
+      "dy": -2,
+      "delta": 10
+     },
+     {
+      "at": 2.35,
+      "dx": -4,
+      "dy": -2,
+      "delta": 10
+     },
+     {
+      "at": 2.6,
+      "dx": -4,
+      "dy": -2,
+      "delta": 10
+     },
+     {
+      "at": 3.13,
+      "dx": -4,
+      "dy": -2,
+      "delta": 10
+     },
+     {
+      "at": 4.75,
+      "dx": -12,
+      "dy": 0,
+      "delta": 32
+     },
+     {
+      "at": 6.17,
+      "dx": -4,
+      "dy": -2,
+      "delta": 10
+     },
+     {
+      "at": 6.6,
+      "dx": -4,
+      "dy": -2,
+      "delta": 10
+     },
+     {
+      "at": 7,
+      "dx": -4,
+      "dy": -2,
+      "delta": 10
+     },
+     {
+      "at": 7.38,
+      "dx": -4,
+      "dy": -2,
+      "delta": 10
+     },
+     {
+      "at": 8.25,
+      "dx": -4,
+      "dy": -2,
+      "delta": 10
+     },
+     {
+      "at": 9.68,
+      "dx": -4,
+      "dy": -2,
+      "delta": 10
+     },
+     {
+      "at": 11.6,
+      "dx": -12,
+      "dy": -12,
+      "delta": 57
+     },
+     {
+      "at": 13.5,
+      "dx": -4,
+      "dy": -2,
+      "delta": 10
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   },
+   {
+    "element": "#e4c07a",
+    "box": [
+     822,
+     444,
+     252,
+     138
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": -2,
+      "dy": -2,
+      "delta": 5
+     },
+     {
+      "at": 0.15,
+      "dx": -2,
+      "dy": -2,
+      "delta": 5
+     },
+     {
+      "at": 0.5,
+      "dx": -2,
+      "dy": -2,
+      "delta": 5
+     },
+     {
+      "at": 0.65,
+      "dx": -2,
+      "dy": -2,
+      "delta": 5
+     },
+     {
+      "at": 1.13,
+      "dx": -2,
+      "dy": -2,
+      "delta": 5
+     },
+     {
+      "at": 1.98,
+      "dx": 2,
+      "dy": -6,
+      "delta": 20
+     },
+     {
+      "at": 2.35,
+      "dx": -6,
+      "dy": -8,
+      "delta": 17
+     },
+     {
+      "at": 2.6,
+      "dx": 8,
+      "dy": -4,
+      "delta": 21
+     },
+     {
+      "at": 3.13,
+      "dx": 0,
+      "dy": -2,
+      "delta": 8
+     },
+     {
+      "at": 4.75,
+      "dx": 12,
+      "dy": -6,
+      "delta": 46
+     },
+     {
+      "at": 6.17,
+      "dx": -4,
+      "dy": -2,
+      "delta": 6
+     },
+     {
+      "at": 6.6,
+      "dx": -2,
+      "dy": -2,
+      "delta": 6
+     },
+     {
+      "at": 7,
+      "dx": -2,
+      "dy": -2,
+      "delta": 6
+     },
+     {
+      "at": 7.38,
+      "dx": -2,
+      "dy": -2,
+      "delta": 6
+     },
+     {
+      "at": 8.25,
+      "dx": -2,
+      "dy": -2,
+      "delta": 6
+     },
+     {
+      "at": 9.68,
+      "dx": -2,
+      "dy": -2,
+      "delta": 6
+     },
+     {
+      "at": 11.6,
+      "dx": -6,
+      "dy": -2,
+      "delta": 5
+     },
+     {
+      "at": 13.5,
+      "dx": -4,
+      "dy": -2,
+      "delta": 6
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   }
+  ]
+ },
+ "scale": {
+  "ok": true,
+  "changed": 3.6,
+  "read": "scales: the half-size render matches the full one (difference 3.6)"
+ },
+ "rubric": {
+  "file": "factory/s9yg0m-hanging-team-profile-cards/rubric.json",
+  "total": 43,
+  "counted": 43,
+  "pass": 41,
+  "fail": 1,
+  "unsure": 1,
+  "unjudged": 0,
+  "passRate": 95,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "style",
+    "element": "page background",
+    "check": "The page background is a flat near-white (#fcfcfc), with no gradient, texture or panel behind the cards",
+    "box": [
+     0,
+     0,
+     1556,
+     1080
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Flat near-white background with no panel behind the cards, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "text",
+    "element": "eyebrow",
+    "check": "A small tracked uppercase grey label reads exactly 'OUR STUDIO · THE PEOPLE', preceded by a small violet dot, at top-left around x≈95–265, y≈81",
+    "box": [
+     90,
+     70,
+     180,
+     22
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same text, violet dot and tracking; the rebuild's label is slightly lighter grey. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "text",
+    "element": "headline line 1",
+    "check": "Headline first line reads exactly 'Meet the people' in near-black, ~58px, left edge x≈85, baseline region y≈125–175",
+    "box": [
+     80,
+     118,
+     390,
+     62
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'Meet the people' matches in size, position and near-black colour. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "style",
+    "element": "headline line 2",
+    "check": "Second line 'behind the work.' is the same size as line 1 but coloured soft lavender (~#a597dd), not black and not saturated purple",
+    "box": [
+     80,
+     178,
+     440,
+     64
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'behind the work.' is the same size and soft lavender in both. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "text",
+    "element": "intro paragraph",
+    "check": "Top-right grey paragraph reads 'Different minds, shared curiosity. A small' / 'team making thoughtful things together.' over two lines starting at x≈1190, y≈155",
+    "box": [
+     1185,
+     148,
+     265,
+     48
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same two-line grey paragraph at the same size and position. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "text",
+    "element": "team tag",
+    "check": "Below the paragraph, a green dot then tracked uppercase '04 PEOPLE, ONE TEAM' at y≈225",
+    "box": [
+     1185,
+     216,
+     150,
+     18
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Green dot and tracked '04 PEOPLE, ONE TEAM' match the clip. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "text",
+    "element": "footer captions",
+    "check": "Bottom-left caption reads 'THE PEOPLE MAKE THE WORK.' (x≈84, y≈925) and bottom-right reads 'HOVER TO SHIMMER · CLICK / TAP TO FLIP' ending x≈1473, both small tracked grey",
+    "box": [
+     80,
+     915,
+     1400,
+     20
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both footer captions are present, small and grey, at matching positions. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "position",
+    "element": "hanging wire",
+    "check": "A thin grey wire spans from x≈247 to x≈1310, ends at y≈303, sagging in a smooth curve to y≈327 near the centre (not a straight line)",
+    "box": [
+     240,
+     295,
+     1080,
+     40
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Thin grey wire sagging smoothly, spanning and ending at the same points as the clip. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "present",
+    "element": "wire pins",
+    "check": "Exactly 4 small light-grey round beads sit on the wire, at x≈282, 613, 944, 1275",
+    "box": [
+     270,
+     298,
+     1020,
+     36
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Four light-grey beads at the same x positions as the clip. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "style",
+    "element": "strings",
+    "check": "From each bead a 1px grey hairline drops straight down to its card, lengths ≈55, 118, 76, 133px (cards hang at different heights)",
+    "box": [
+     275,
+     305,
+     1005,
+     140
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Hairline strings drop from each bead at the clip's lengths and staggering. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "style",
+    "element": "card clips",
+    "check": "Each string ends in a grey semicircular ring-clip (~24px wide, with a small dot at its centre) that overlaps the card's top edge at its centre",
+    "box": [
+     260,
+     345,
+     60,
+     30
+    ],
+    "at": 0.65,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Grey semicircular clip with a centre dot overlaps the card top, about the same size as the clip's. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "present",
+    "element": "cards",
+    "check": "Exactly four portrait cards hang from the wire, left to right Maya Bennett, Leo Carter, Noah Williams, Amina Yusuf",
+    "box": [
+     135,
+     355,
+     1285,
+     510
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Four cards in the order Maya, Leo, Noah, Amina. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "position",
+    "element": "card tops",
+    "check": "Card tops are staggered: card 1 ≈362, card 2 ≈445, card 3 ≈402, card 4 ≈440; cards 2 and 4 hang lowest, card 1 highest",
+    "box": [
+     135,
+     355,
+     1285,
+     510
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Card tops are staggered the same way: card 2 lowest, card 1 highest, and each within about 3 px of the clip. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "position",
+    "element": "card rest tilt",
+    "check": "At rest each card is slightly rotated, not square: card 1 ≈−2° (right side higher), card 2 ≈+1°, card 3 ≈−1°, card 4 ≈+1.5°",
+    "box": [
+     135,
+     355,
+     1285,
+     510
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "no",
+    "seen": "The rebuild's cards, especially card 1, look nearly level where the clip's are visibly tilted (about -2° on card 1). [votes: no/no/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "style",
+    "element": "card front surface",
+    "check": "Card front is a light grey (#f2f2f2) slab ~300×415 with ~22px corner radius and a soft diffuse drop shadow, with no visible border stroke",
+    "box": [
+     1105,
+     435,
+     315,
+     425
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Light-grey slab, similar corner radius and soft shadow with no border, matching the clip. [votes: no/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "text",
+    "element": "card front header",
+    "check": "Card 4 front top row reads 'PEOPLE · STUDIO' at left and '#04' at right, tiny tracked grey uppercase",
+    "box": [
+     1135,
+     455,
+     265,
+     25
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'PEOPLE · STUDIO' at left and '#04' at right, tiny tracked grey, same as the clip. [votes: yes/no/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "style",
+    "element": "avatar frame",
+    "check": "Avatar render sits in a rounded square (~250×225, radius ~14) inset ~20px from the card edges, edge-to-edge image with no border",
+    "box": [
+     1130,
+     475,
+     270,
+     240
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rounded-square avatar inset in the card, edge-to-edge image with no border, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "style",
+    "element": "card 3 backdrop",
+    "check": "Noah Williams' avatar backdrop is warm mustard (#e4c07a); Maya's is pink, Leo's and Amina's are pale lilac",
+    "box": [
+     800,
+     400,
+     756,
+     320
+    ],
+    "at": 0.65,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Noah's backdrop is mustard, Leo's and Amina's are pale lilac, and Maya's is pink, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "text",
+    "element": "card name",
+    "check": "Card 3 front shows 'Noah Williams' (~26px, dark grey) with 'Product Designer' (~15px, mid grey) under it",
+    "box": [
+     818,
+     678,
+     180,
+     50
+    ],
+    "at": 2.35,
+    "then": null,
+    "policy": null,
+    "pass": "unsure",
+    "seen": "The tile shows only an empty gradient area with a thin line, so I can't read the name or role text. [votes: unsure/unsure/unsure]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "text",
+    "element": "card roles",
+    "check": "Roles read 'Creative Director' (Maya), 'Motion Designer' (Leo), 'Product Designer' (Noah), 'Brand Designer' (Amina)",
+    "box": [
+     160,
+     640,
+     1140,
+     130
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Roles read Creative Director, Motion Designer, Product Designer, Brand Designer, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "style",
+    "element": "view profile row",
+    "check": "Under a hairline divider each front shows 'VIEW PROFILE' in tiny tracked dark caps at left and a ~26px solid black circle with a white ↗ arrow at right",
+    "box": [
+     1125,
+     790,
+     265,
+     50
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Tracked dark VIEW PROFILE at left and ~26px black circle with white arrow at right match; arrow slightly bolder. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "imagery",
+    "element": "avatar renders",
+    "check": "Avatars are the clip's own 3D clay-style character busts (magenta-haired woman, dark-quiffed man, curly-haired man in teal tee, black-bob woman with hoop earrings), not flat icons or initials",
+    "box": [
+     160,
+     400,
+     1240,
+     315
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "All four clay 3D busts match the clip: magenta-haired woman, dark quiff man, curly man, black-bob woman with hoops. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "present",
+    "element": "card back",
+    "check": "Exactly one card shows its back at a time: at 2.6s only Noah's card (3rd) is on its holographic back while the other three show fronts",
+    "box": [
+     135,
+     355,
+     1285,
+     510
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Only Noah's third card shows its holographic back; the other three show grey fronts, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "style",
+    "element": "card back material",
+    "check": "The back is a soft iridescent holographic gradient blending pale cyan, pink, mint-yellow and violet, smoothly blurred like foil sheen",
+    "box": [
+     770,
+     395,
+     315,
+     430
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Soft blurred pink, cyan, mint-yellow and violet sheen, slightly bluer than the clip but the same blend. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "style",
+    "element": "card back material",
+    "check": "The holographic back has NO hard colour bands, stripes or rainbow lines and no grain; hues fade into each other and the white-grey card base shows through",
+    "box": [
+     770,
+     395,
+     315,
+     430
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "No hard bands, stripes or grain; hues fade smoothly into a white-grey base, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "text",
+    "element": "card back header",
+    "check": "Back top-left reads 'PROFILE / 03' in tracked small caps; top-right is a ~22px translucent grey circle with a ↰ return glyph",
+    "box": [
+     805,
+     420,
+     265,
+     40
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "PROFILE / 03 in tracked caps top-left and a translucent grey circle with a return glyph top-right match. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "text",
+    "element": "card back identity",
+    "check": "Back shows a ~40px round avatar thumbnail beside 'Noah Williams' with 'Product Designer' under it, then '⌖ New York, US'",
+    "box": [
+     805,
+     450,
+     200,
+     75
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "~40px round thumbnail beside Noah Williams, Product Designer and New York, US; the thumbnail crop differs a little, the text is a touch lighter. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "text",
+    "element": "card back bio",
+    "check": "Bio reads 'Designing small details that make the big picture work.' wrapping to two lines",
+    "box": [
+     800,
+     525,
+     260,
+     35
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Bio wraps to two lines with 'work.' on the second line, same as the clip. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "text",
+    "element": "card back projects",
+    "check": "'SELECTED PROJECTS' caption followed by 2 ruled rows 'Product / Atlas' and 'System / Mono', each separated by a hairline",
+    "box": [
+     795,
+     575,
+     265,
+     85
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "SELECTED PROJECTS caption plus Product / Atlas and System / Mono, each under a hairline, match the clip. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "text",
+    "element": "card back connect",
+    "check": "Bottom-left reads 'LET'S CONNECT' (tracked caps) above 'noah@example.com'",
+    "box": [
+     788,
+     750,
+     120,
+     35
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "LET'S CONNECT caps above noah@example.com in the same position; caption is a bit lighter. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "imagery",
+    "element": "QR code",
+    "check": "Bottom-right of the back has a ~60px black-on-white QR code pattern with three finder squares and the caption 'SCAN ME' below it",
+    "box": [
+     975,
+     718,
+     80,
+     85
+    ],
+    "at": 2.6,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "About 60px black-on-white QR with three finder squares and SCAN ME caption below, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "text",
+    "element": "Leo back text",
+    "check": "Leo's back reads 'PROFILE / 02', 'Leo Carter', 'Motion Designer', 'Berlin, DE', 'Making everyday interactions feel a little more alive.', projects 'Motion / Orbit' and 'Launch / Loop', email 'leo@example.com'",
+    "box": [
+     465,
+     445,
+     300,
+     420
+    ],
+    "at": 1.13,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Leo's back text matches the clip line for line: PROFILE / 02, Leo Carter, Berlin, bio, projects, leo@example.com. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "text",
+    "element": "Maya back text",
+    "check": "Maya's back reads 'PROFILE / 01', 'London, UK', 'Turning interesting ideas into things people remember.', projects 'Identity / Forma' and 'Campaign / Light', 'maya@example.com'",
+    "box": [
+     140,
+     360,
+     310,
+     420
+    ],
+    "at": 0.65,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Maya's back text matches the clip line for line: PROFILE / 01, London, bio, Forma/Light, maya@example.com. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "motion",
+    "element": "card 1 flip",
+    "check": "Card 1 turns on its vertical axis in perspective: at 0.15s it is seen edge-on as a narrow skewed sliver (~95px wide), and by 0.65s it is fully open, ~305px wide, showing its back",
+    "box": [
+     135,
+     330,
+     320,
+     470
+    ],
+    "at": 0.15,
+    "then": 0.65,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Card 1 is a ~50px skewed sliver at 0.15s and fully open (~150px in the tile) showing its back at 0.65s, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "motion",
+    "element": "flip handoff",
+    "check": "Between 0.65s and 1.13s Maya's card flips from back to front while Leo's card flips from front to back in the same span (~0.6s), so still only one back shows",
+    "box": [
+     135,
+     355,
+     640,
+     510
+    ],
+    "at": 0.65,
+    "then": 1.13,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Maya goes back to front while Leo goes front to back between 0.65s and 1.13s; one back shows at a time, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "motion",
+    "element": "flip handoff 2",
+    "check": "Between 1.13s and 2.6s Leo returns to front and Noah's card turns to its back; at 1.98s Leo's card is visibly foreshortened mid-turn (narrower, ~245px)",
+    "box": [
+     455,
+     395,
+     640,
+     480
+    ],
+    "at": 1.13,
+    "then": 2.6,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Leo is on its back at 1.13s and Noah flips to its back by 2.6s with Leo front again; matches the clip. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "motion",
+    "element": "flip perspective",
+    "check": "Mid-flip the card shows real 3D perspective: the near vertical edge is taller than the far edge (trapezoid), not a flat horizontal squash",
+    "box": [
+     240,
+     330,
+     110,
+     470
+    ],
+    "at": 0.15,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Mid-flip card is a trapezoid with a taller near edge in perspective, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "motion",
+    "element": "flip pivot",
+    "check": "During a flip the card stays hung from its clip: the clip and string stay at the same x and the card turns about its own vertical centre line, with no slide sideways",
+    "box": [
+     455,
+     300,
+     320,
+     570
+    ],
+    "at": 1.98,
+    "then": 2.6,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 1.98s Noah's card is narrowed mid-turn about its own centre with the clip and string fixed in x; no sideways slide. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "motion",
+    "element": "hover shimmer",
+    "check": "Hovering a front card (Noah, Amina at ~4.75s) lays the iridescent pastel sheen over its grey front and tilts it in 3D toward the pointer, about 5–10°, so the card reads as a skewed quad. At 2.6s the same fronts are flat grey",
+    "box": [
+     740,
+     375,
+     680,
+     490
+    ],
+    "at": 2.6,
+    "then": 4.75,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Fronts are flat grey at 2.6s and at 4.75s Noah and Amina carry a pastel sheen and tilt in 3D, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c39.png"
+   },
+   {
+    "id": "c40",
+    "axis": "motion",
+    "element": "hover tilt follow",
+    "check": "While the pointer moves over an open back, that card's tilt and sheen shift with it (Leo's card at 7.0s leans left/top, unlike its pose at 6.6s) and nothing else moves",
+    "box": [
+     440,
+     435,
+     330,
+     430
+    ],
+    "at": 6.6,
+    "then": 7,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Leo's card tilts and its sheen shifts between 6.6s and 7s while the other cards stay still, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c40.png"
+   },
+   {
+    "id": "c41",
+    "axis": "motion",
+    "element": "idle cards",
+    "check": "Cards that are neither hovered nor flipping hold perfectly still. They do not sway, bob or swing between 0.5s and 0.75s: Noah's and Amina's cards are pixel-identical",
+    "box": [
+     800,
+     395,
+     620,
+     465
+    ],
+    "at": 0.5,
+    "then": 0.75,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Noah's and Amina's cards sit at the same spot in the rebuild at 0.5s and 0.75s (Noah name at y≈340/798 in both rows), with no sway, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c41.png"
+   },
+   {
+    "id": "c42",
+    "axis": "motion",
+    "element": "static chrome",
+    "check": "Wire, beads, strings, headline, paragraph and footer captions never move across the whole clip",
+    "box": [
+     0,
+     0,
+     1556,
+     1080
+    ],
+    "at": 0.65,
+    "then": 8.25,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Wire, beads, headline, paragraph and footer captions are in the same place at 0.65s and 8.25s in the rebuild, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c42.png"
+   },
+   {
+    "id": "c43",
+    "axis": "motion",
+    "element": "later flips",
+    "check": "Flipping continues through the clip: by ~6.6s Leo's card is on its back again, and later Amina's card (4th) is also shown on its back ('PROFILE / 04'), always one back at a time",
+    "box": [
+     135,
+     355,
+     1285,
+     510
+    ],
+    "at": 6.6,
+    "then": 13.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows Leo's card on its back at 6.6s and Amina's 'PROFILE / 04' back at 13.5s, with one back at a time, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/s9yg0m-hanging-team-profile-cards/judge/c43.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 1.085,
+  "calls": 9,
+  "images": "factory/s9yg0m-hanging-team-profile-cards/judge",
+  "votes": 3,
+  "spread": [
+   40,
+   40,
+   42
+  ]
+ }
+}

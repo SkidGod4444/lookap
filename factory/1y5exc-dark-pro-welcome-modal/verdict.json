@@ -1,0 +1,1837 @@
+{
+ "slug": "1y5exc-dark-pro-welcome-modal",
+ "at": "2026-10-23T23:07:33.390Z",
+ "runs": 16,
+ "html": "factory/1y5exc-dark-pro-welcome-modal/index.html",
+ "pixel": {
+  "score": 87,
+  "stills": 88,
+  "motion": 86,
+  "moments": 24
+ },
+ "animations": 9,
+ "rank": 96,
+ "allPass": false,
+ "elements": [
+  {
+   "name": "headline",
+   "box": [
+    439,
+    622,
+    356,
+    38
+   ],
+   "deltaE": 5.6,
+   "delta": 30,
+   "shift": null,
+   "afterShift": 30,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "close X",
+   "box": [
+    986,
+    141,
+    18,
+    18
+   ],
+   "deltaE": 5.8,
+   "delta": 17,
+   "shift": null,
+   "afterShift": 17,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Connect your AI agent link",
+   "box": [
+    589,
+    906,
+    262,
+    30
+   ],
+   "deltaE": 4.1,
+   "delta": 17,
+   "shift": null,
+   "afterShift": 17,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "body copy",
+   "box": [
+    439,
+    674,
+    543,
+    102
+   ],
+   "deltaE": 2.5,
+   "delta": 16,
+   "shift": null,
+   "afterShift": 16,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "status LED",
+   "box": [
+    947,
+    543,
+    10,
+    10
+   ],
+   "deltaE": 6.2,
+   "delta": 11,
+   "shift": null,
+   "afterShift": 11,
+   "read": "matches"
+  },
+  {
+   "name": "modal",
+   "box": [
+    400,
+    106,
+    640,
+    870
+   ],
+   "deltaE": 1.2,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  },
+  {
+   "name": "Start exploring button",
+   "box": [
+    439,
+    810,
+    562,
+    73
+   ],
+   "deltaE": 0.6,
+   "delta": 9,
+   "shift": [
+    0,
+    2
+   ],
+   "afterShift": 8,
+   "read": "matches"
+  },
+  {
+   "name": "card reader deck",
+   "box": [
+    445,
+    461,
+    550,
+    50
+   ],
+   "deltaE": 1.3,
+   "delta": 6,
+   "shift": null,
+   "afterShift": 6,
+   "read": "matches"
+  },
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1440,
+    1080
+   ],
+   "deltaE": 0.8,
+   "delta": 5,
+   "shift": null,
+   "afterShift": 5,
+   "read": "matches"
+  },
+  {
+   "name": "card slot",
+   "box": [
+    486,
+    481,
+    468,
+    10
+   ],
+   "deltaE": 2.5,
+   "delta": 5,
+   "shift": null,
+   "afterShift": 5,
+   "read": "matches"
+  },
+  {
+   "name": "card logo badge",
+   "box": [
+    521,
+    188,
+    36,
+    36
+   ],
+   "deltaE": 2.5,
+   "delta": 5,
+   "shift": null,
+   "afterShift": 5,
+   "read": "matches"
+  },
+  {
+   "name": "card PRO label",
+   "box": [
+    871,
+    189,
+    45,
+    16
+   ],
+   "deltaE": 2.4,
+   "delta": 5,
+   "shift": null,
+   "afterShift": 5,
+   "read": "matches"
+  },
+  {
+   "name": "reader body",
+   "box": [
+    445,
+    510,
+    550,
+    75
+   ],
+   "deltaE": 1.9,
+   "delta": 4,
+   "shift": null,
+   "afterShift": 4,
+   "read": "matches"
+  },
+  {
+   "name": "holographic PRO card",
+   "box": [
+    495,
+    162,
+    450,
+    285
+   ],
+   "deltaE": 1.7,
+   "delta": 4,
+   "shift": null,
+   "afterShift": 4,
+   "read": "matches"
+  },
+  {
+   "name": "cursor",
+   "box": [
+    690,
+    262,
+    36,
+    52
+   ],
+   "deltaE": 2,
+   "delta": 4,
+   "shift": [
+    -8,
+    8
+   ],
+   "afterShift": 3,
+   "read": "matches"
+  },
+  {
+   "name": "hero area",
+   "box": [
+    400,
+    106,
+    640,
+    479
+   ],
+   "deltaE": 1,
+   "delta": 3,
+   "shift": null,
+   "afterShift": 3,
+   "read": "matches"
+  },
+  {
+   "name": "card name",
+   "box": [
+    521,
+    380,
+    70,
+    20
+   ],
+   "deltaE": 1.3,
+   "delta": 3,
+   "shift": [
+    8,
+    8
+   ],
+   "afterShift": 2,
+   "read": "matches"
+  },
+  {
+   "name": "card plan",
+   "box": [
+    845,
+    404,
+    72,
+    18
+   ],
+   "deltaE": 0.8,
+   "delta": 2,
+   "shift": [
+    -8,
+    8
+   ],
+   "afterShift": 1,
+   "read": "matches"
+  },
+  {
+   "name": "card member line",
+   "box": [
+    521,
+    404,
+    180,
+    18
+   ],
+   "deltaE": 0.1,
+   "delta": 1,
+   "shift": null,
+   "afterShift": 1,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "the render changes where the clip changes",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "0.05s",
+    "clip": 3.1,
+    "render": 2.6,
+    "read": "both move"
+   },
+   {
+    "from": "0.05s",
+    "to": "0.3s",
+    "clip": 0.1,
+    "render": 0.5,
+    "read": "both still"
+   },
+   {
+    "from": "0.3s",
+    "to": "0.5s",
+    "clip": 1.3,
+    "render": 1.2,
+    "read": "both move"
+   },
+   {
+    "from": "0.5s",
+    "to": "0.8s",
+    "clip": 1.7,
+    "render": 1.7,
+    "read": "both move"
+   },
+   {
+    "from": "0.8s",
+    "to": "1s",
+    "clip": 1.4,
+    "render": 1.6,
+    "read": "both move"
+   },
+   {
+    "from": "1s",
+    "to": "1.1s",
+    "clip": 0.8,
+    "render": 0.3,
+    "read": "both move"
+   },
+   {
+    "from": "1.1s",
+    "to": "1.8s",
+    "clip": 6.5,
+    "render": 6.3,
+    "read": "both move"
+   },
+   {
+    "from": "1.8s",
+    "to": "2.17s",
+    "clip": 7.9,
+    "render": 6.6,
+    "read": "both move"
+   },
+   {
+    "from": "2.17s",
+    "to": "2.25s",
+    "clip": 1.4,
+    "render": 1.5,
+    "read": "both move"
+   },
+   {
+    "from": "2.25s",
+    "to": "2.5s",
+    "clip": 4.3,
+    "render": 6,
+    "read": "both move"
+   },
+   {
+    "from": "2.5s",
+    "to": "2.78s",
+    "clip": 5.7,
+    "render": 7.5,
+    "read": "both move"
+   },
+   {
+    "from": "2.78s",
+    "to": "kf1",
+    "clip": 3.9,
+    "render": 4.1,
+    "read": "both move"
+   },
+   {
+    "from": "kf1",
+    "to": "kf2",
+    "clip": 2.6,
+    "render": 3.8,
+    "read": "both move"
+   },
+   {
+    "from": "kf2",
+    "to": "4.58s",
+    "clip": 6.2,
+    "render": 7.1,
+    "read": "both move"
+   },
+   {
+    "from": "4.58s",
+    "to": "kf3",
+    "clip": 7.2,
+    "render": 6.9,
+    "read": "both move"
+   },
+   {
+    "from": "kf3",
+    "to": "5.9s",
+    "clip": 3.5,
+    "render": 3.8,
+    "read": "both move"
+   },
+   {
+    "from": "5.9s",
+    "to": "6.1s",
+    "clip": 6.1,
+    "render": 8.1,
+    "read": "both move"
+   },
+   {
+    "from": "6.1s",
+    "to": "kf4",
+    "clip": 6.4,
+    "render": 6.4,
+    "read": "both move"
+   },
+   {
+    "from": "kf4",
+    "to": "7.45s",
+    "clip": 2.6,
+    "render": 2.1,
+    "read": "both move"
+   },
+   {
+    "from": "7.45s",
+    "to": "7.9s",
+    "clip": 6,
+    "render": 7,
+    "read": "both move"
+   },
+   {
+    "from": "7.9s",
+    "to": "8.88s",
+    "clip": 3.6,
+    "render": 3.5,
+    "read": "both move"
+   },
+   {
+    "from": "8.88s",
+    "to": "9s",
+    "clip": 5.4,
+    "render": 5,
+    "read": "both move"
+   },
+   {
+    "from": "9s",
+    "to": "9.32s",
+    "clip": 5.4,
+    "render": 2.5,
+    "read": "both move"
+   }
+  ],
+  "trajectories": [
+   {
+    "element": "#1f1f1f",
+    "box": [
+     400,
+     511,
+     640,
+     465
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 14
+     },
+     {
+      "at": 0.05,
+      "dx": 0,
+      "dy": 0,
+      "delta": 13
+     },
+     {
+      "at": 0.3,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 0.8,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 1.1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 1.8,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 2.17,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 2.25,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 2.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 2.78,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 3.3,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 4.58,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 5.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 5.9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 6.1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 6.95,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 7.45,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 7.9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 8.88,
+      "dx": 0,
+      "dy": 0,
+      "delta": 12
+     },
+     {
+      "at": 9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 13
+     },
+     {
+      "at": 9.32,
+      "dx": 0,
+      "dy": 0,
+      "delta": 13
+     }
+    ],
+    "read": "in step"
+   },
+   {
+    "element": "#1d1d1d",
+    "box": [
+     400,
+     106,
+     640,
+     207
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 4
+     },
+     {
+      "at": 0.05,
+      "dx": 0,
+      "dy": 0,
+      "delta": 1
+     },
+     {
+      "at": 0.3,
+      "dx": 0,
+      "dy": 0,
+      "delta": 1
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 1
+     },
+     {
+      "at": 0.8,
+      "dx": 0,
+      "dy": 0,
+      "delta": 1
+     },
+     {
+      "at": 1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 1
+     },
+     {
+      "at": 1.1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 1
+     },
+     {
+      "at": 1.8,
+      "dx": 0,
+      "dy": -4,
+      "delta": 12
+     },
+     {
+      "at": 2.17,
+      "dx": -8,
+      "dy": -2,
+      "delta": 20
+     },
+     {
+      "at": 2.25,
+      "dx": -6,
+      "dy": 0,
+      "delta": 22
+     },
+     {
+      "at": 2.5,
+      "dx": 2,
+      "dy": -2,
+      "delta": 29
+     },
+     {
+      "at": 2.78,
+      "dx": 0,
+      "dy": -2,
+      "delta": 17
+     },
+     {
+      "at": 3.3,
+      "dx": 2,
+      "dy": -2,
+      "delta": 12
+     },
+     {
+      "at": 4,
+      "dx": 0,
+      "dy": -2,
+      "delta": 13
+     },
+     {
+      "at": 4.58,
+      "dx": 2,
+      "dy": -2,
+      "delta": 19
+     },
+     {
+      "at": 5.4,
+      "dx": 8,
+      "dy": -2,
+      "delta": 17
+     },
+     {
+      "at": 5.9,
+      "dx": 6,
+      "dy": -2,
+      "delta": 22
+     },
+     {
+      "at": 6.1,
+      "dx": 2,
+      "dy": -2,
+      "delta": 22
+     },
+     {
+      "at": 6.95,
+      "dx": -2,
+      "dy": -4,
+      "delta": 12
+     },
+     {
+      "at": 7.45,
+      "dx": 0,
+      "dy": -2,
+      "delta": 15
+     },
+     {
+      "at": 7.9,
+      "dx": 2,
+      "dy": 0,
+      "delta": 18
+     },
+     {
+      "at": 8.88,
+      "dx": 2,
+      "dy": -2,
+      "delta": 16
+     },
+     {
+      "at": 9,
+      "dx": 2,
+      "dy": -2,
+      "delta": 15
+     },
+     {
+      "at": 9.32,
+      "dx": 2,
+      "dy": -2,
+      "delta": 18
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   },
+   {
+    "element": "#99a9b8",
+    "box": [
+     618,
+     189,
+     324,
+     257
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 0,
+      "delta": 3
+     },
+     {
+      "at": 0.05,
+      "dx": 0,
+      "dy": 0,
+      "delta": 2
+     },
+     {
+      "at": 0.3,
+      "dx": 0,
+      "dy": 0,
+      "delta": 2
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 2
+     },
+     {
+      "at": 0.8,
+      "dx": 2,
+      "dy": 0,
+      "delta": 9
+     },
+     {
+      "at": 1,
+      "dx": 2,
+      "dy": -6,
+      "delta": 10
+     },
+     {
+      "at": 1.1,
+      "dx": 0,
+      "dy": 2,
+      "delta": 11
+     },
+     {
+      "at": 1.8,
+      "dx": -12,
+      "dy": -6,
+      "delta": 16
+     },
+     {
+      "at": 2.17,
+      "dx": -12,
+      "dy": 0,
+      "delta": 20
+     },
+     {
+      "at": 2.25,
+      "dx": -2,
+      "dy": 4,
+      "delta": 22
+     },
+     {
+      "at": 2.5,
+      "dx": 4,
+      "dy": 6,
+      "delta": 45
+     },
+     {
+      "at": 2.78,
+      "dx": 4,
+      "dy": 2,
+      "delta": 17
+     },
+     {
+      "at": 3.3,
+      "dx": 0,
+      "dy": 0,
+      "delta": 15
+     },
+     {
+      "at": 4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 15
+     },
+     {
+      "at": 4.58,
+      "dx": -12,
+      "dy": -2,
+      "delta": 29
+     },
+     {
+      "at": 5.4,
+      "dx": 6,
+      "dy": -2,
+      "delta": 13
+     },
+     {
+      "at": 5.9,
+      "dx": 4,
+      "dy": 0,
+      "delta": 25
+     },
+     {
+      "at": 6.1,
+      "dx": -12,
+      "dy": -2,
+      "delta": 30
+     },
+     {
+      "at": 6.95,
+      "dx": -2,
+      "dy": -4,
+      "delta": 15
+     },
+     {
+      "at": 7.45,
+      "dx": 0,
+      "dy": 0,
+      "delta": 18
+     },
+     {
+      "at": 7.9,
+      "dx": -12,
+      "dy": 0,
+      "delta": 24
+     },
+     {
+      "at": 8.88,
+      "dx": 0,
+      "dy": 0,
+      "delta": 21
+     },
+     {
+      "at": 9,
+      "dx": 4,
+      "dy": 0,
+      "delta": 18
+     },
+     {
+      "at": 9.32,
+      "dx": -12,
+      "dy": -2,
+      "delta": 26
+     }
+    ],
+    "read": "drifts: the gap grows over time (wrong speed or start)"
+   },
+   {
+    "element": "#ffffff",
+    "box": [
+     439,
+     810,
+     562,
+     73
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 0,
+      "dy": 2,
+      "delta": 8
+     },
+     {
+      "at": 0.05,
+      "dx": 0,
+      "dy": 0,
+      "delta": 18
+     },
+     {
+      "at": 0.3,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 0.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 0.8,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 1.1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 1.8,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 2.17,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 2.25,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 2.5,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 2.78,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 3.3,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 4.58,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 5.4,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 5.9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 6.1,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 6.95,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 7.45,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 7.9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 8.88,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 9,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     },
+     {
+      "at": 9.32,
+      "dx": 0,
+      "dy": 0,
+      "delta": 7
+     }
+    ],
+    "read": "in step"
+   }
+  ]
+ },
+ "scale": {
+  "ok": true,
+  "changed": 2.6,
+  "read": "scales: the half-size render matches the full one (difference 2.6)"
+ },
+ "rubric": {
+  "file": "factory/1y5exc-dark-pro-welcome-modal/rubric.json",
+  "total": 40,
+  "counted": 40,
+  "pass": 39,
+  "fail": 1,
+  "unsure": 0,
+  "unjudged": 0,
+  "passRate": 98,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "style",
+    "element": "page background",
+    "check": "Page around the modal is a flat near-black (~#0a0a0a) with no gradient or texture",
+    "box": [
+     0,
+     0,
+     1440,
+     1080
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Page is the same flat near-black in both. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "position",
+    "element": "modal",
+    "check": "Modal spans x≈400-1040 and y≈106-976 (640x870), horizontally centred in the frame",
+    "box": [
+     400,
+     106,
+     640,
+     870
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Modal edges and size match the clip, with the right edge at about x=830 of the tile in both. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "style",
+    "element": "modal",
+    "check": "Modal corners are rounded at ~32px radius and the panel has no visible border stroke",
+    "box": [
+     400,
+     106,
+     640,
+     870
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both have ~32px rounded corners and no border stroke. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "style",
+    "element": "modal",
+    "check": "Lower half of modal (below y≈585) is a flat dark grey ~#1d1d1d, lighter than the page",
+    "box": [
+     400,
+     585,
+     640,
+     391
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Lower panel is the same flat ~#1d1d1d grey in both. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "style",
+    "element": "hero area",
+    "check": "Hero area (y 106-585) is darker than the lower panel, with a soft vignette; a straight horizontal seam separates it from the lower panel at y≈585",
+    "box": [
+     400,
+     106,
+     640,
+     480
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Hero is darker than the lower panel with a straight seam at the same height; the vignette is slightly subtler in the rebuild. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "position",
+    "element": "close X",
+    "check": "A thin light-grey X close icon, ~18px, centred near (995,150) in the top-right of the modal",
+    "box": [
+     976,
+     131,
+     38,
+     38
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Thin light-grey X at the same spot and size (~18px). [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "present",
+    "element": "card reader deck",
+    "check": "A matte black trapezoid card-reader deck sits across the hero at y≈461-510, widening from ~497-943 at its top to ~445-995 at its base",
+    "box": [
+     440,
+     455,
+     560,
+     135
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Black trapezoid deck at the same position and widths; the clip's top corners are a bit rounder. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "style",
+    "element": "card slot",
+    "check": "The deck has one long thin black rounded slot running ~x486-954 at y≈486",
+    "box": [
+     480,
+     476,
+     480,
+     20
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Long thin black rounded slot spans the same width in both. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "style",
+    "element": "status LED",
+    "check": "Small round LED at ~(952,548), ~8px, glowing green after the card has lifted",
+    "box": [
+     937,
+     533,
+     30,
+     30
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Green LED at the same position, slightly smaller (~8px against ~10px) and with a softer glow. [votes: yes/yes/no]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "motion",
+    "element": "status LED",
+    "check": "LED is amber/orange while the card is still feeding and turns green once the card lifts clear",
+    "box": [
+     937,
+     533,
+     30,
+     30
+    ],
+    "at": 1,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both LEDs are amber at 1s and green at 2.5s. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "text",
+    "element": "headline",
+    "check": "Headline reads exactly \"Welcome to Pro, Denis\"",
+    "box": [
+     439,
+     618,
+     360,
+     46
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both read 'Welcome to Pro, Denis'. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "style",
+    "element": "headline",
+    "check": "Headline is pure white, bold, ~34px, left edge at x≈439",
+    "box": [
+     439,
+     618,
+     360,
+     46
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White bold headline of the same size, with its left edge at the same x. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "text",
+    "element": "body copy",
+    "check": "Body reads \"Download packs and assets, insert them in / Figma with the plugin, or let your AI agent fetch / them over MCP.\" broken over exactly 3 lines at those points",
+    "box": [
+     439,
+     672,
+     550,
+     106
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same text with the same three line breaks. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "style",
+    "element": "body copy",
+    "check": "Body copy is mid-grey (~#9a9a9a), clearly dimmer than the white headline, ~24px regular",
+    "box": [
+     439,
+     672,
+     550,
+     106
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same mid-grey regular text at the same size. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "position",
+    "element": "Start exploring button",
+    "check": "CTA spans x≈439-1001, y≈810-883 (562x73), aligned with the text column",
+    "box": [
+     439,
+     810,
+     562,
+     73
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Button has the same position and width, aligned with the text column. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "style",
+    "element": "Start exploring button",
+    "check": "CTA is a solid white fill with ~14px corner radius (rounded rect, not a full pill)",
+    "box": [
+     434,
+     805,
+     572,
+     83
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Solid white fill with ~14px radius in both, not a pill. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "text",
+    "element": "Start exploring button",
+    "check": "CTA label reads \"Start exploring\" in black semibold ~24px, centred at x≈720",
+    "box": [
+     439,
+     810,
+     562,
+     73
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Black semibold 'Start exploring', centred, at the same size. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "text",
+    "element": "Connect your AI agent link",
+    "check": "Below the button, centred at x≈720 y≈921, grey text reads \"Connect your AI agent\" with no button background and no underline",
+    "box": [
+     580,
+     900,
+     280,
+     42
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Grey 'Connect your AI agent' with no underline or background, centred at the same position. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "position",
+    "element": "holographic PRO card",
+    "check": "Floating card spans ≈x495-945, y≈162-447 (≈450x285), its bottom ~15px above the reader deck",
+    "box": [
+     485,
+     150,
+     470,
+     310
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Card has the same extent and the same gap above the deck. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "style",
+    "element": "holographic PRO card",
+    "check": "Card corners are rounded at ~16px with a thin bright rim along its edge",
+    "box": [
+     485,
+     150,
+     470,
+     310
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both cards have ~16px rounded corners and a thin light rim; the rebuild's rim is slightly brighter. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "style",
+    "element": "holographic PRO card",
+    "check": "Card material is holographic foil: a pale silver-lilac base with fine horizontal brushed streaks plus a diagonal rainbow band (pink, mint green, violet) running from upper-middle to lower-left",
+    "box": [
+     495,
+     162,
+     450,
+     285
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild has silver base, fine brushed streaks and a pink/mint/violet diagonal band, though the band is wider and more saturated than the clip's. [votes: yes/no/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "style",
+    "element": "holographic PRO card",
+    "check": "The rainbow band is soft, grainy and posterised at its edges, NOT a smooth flat linear gradient with crisp hard stripes",
+    "box": [
+     495,
+     162,
+     450,
+     285
+    ],
+    "at": 5.4,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Band edges in the rebuild are grainy and posterised like the clip's, though the base is tan rather than pale cream. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "style",
+    "element": "holographic PRO card",
+    "check": "The card has no dark outline or stroke; its edge reads as light catching a rim",
+    "box": [
+     485,
+     150,
+     470,
+     310
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "No dark outline on the rebuild; the edge is a thin light rim like the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "imagery",
+    "element": "card logo badge",
+    "check": "Top-left of the card: a ~36px black circle holding a small white three-leaf sprout glyph at ~(539,206)",
+    "box": [
+     515,
+     182,
+     50,
+     50
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Black circle of about 36px with a cream three-leaf sprout, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "text",
+    "element": "card PRO label",
+    "check": "Top-right of the card reads \"PRO\" in dark bold caps with wide letter-spacing",
+    "box": [
+     860,
+     182,
+     70,
+     30
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Dark bold wide-tracked PRO, same size and weight as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "text",
+    "element": "card name",
+    "check": "Lower-left of the card reads \"DENIS\" in dark bold tracked caps",
+    "box": [
+     515,
+     374,
+     90,
+     30
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Dark bold tracked DENIS, same size and position as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "text",
+    "element": "card member line",
+    "check": "Under the name it reads \"Member since Oct 2026\" in smaller dark-grey regular type",
+    "box": [
+     515,
+     400,
+     200,
+     26
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Dark-grey regular 'Member since Oct 2026' at the same size as the clip. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "text",
+    "element": "card plan",
+    "check": "Bottom-right of the card reads \"Quarterly\" in small dark-grey type, baseline level with the member line",
+    "box": [
+     835,
+     400,
+     95,
+     26
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Dark-grey 'Quarterly' at bottom right, level with the member line, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "present",
+    "element": "holographic PRO card",
+    "check": "At 0.05s no card is visible: the reader slot is empty",
+    "box": [
+     440,
+     150,
+     560,
+     440
+    ],
+    "at": 0.05,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "No card at 0.05s, only the empty slot, matching the clip. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "motion",
+    "element": "card slot",
+    "check": "Between 0.05s and 0.5s a bright white glow appears along the slot, spreading wider than the slot itself, before any card shows",
+    "box": [
+     440,
+     440,
+     560,
+     80
+    ],
+    "at": 0.05,
+    "then": 0.3,
+    "policy": null,
+    "pass": "no",
+    "seen": "At 0.3s the rebuild shows a glow only inside the slot, not spreading wider than it, and the clip tile shows no matching glow. [votes: yes/no/no]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "motion",
+    "element": "holographic PRO card",
+    "check": "The card emerges from the slot top-first: at 0.5s only a ~35px sliver with \"PRO\" is above the slot; by 1.0s the top is at y≈366 with the logo visible",
+    "box": [
+     440,
+     150,
+     560,
+     360
+    ],
+    "at": 0.5,
+    "then": 1,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 0.5s a ~35px sliver with PRO sits above the slot; at 1s the top is at about the same y as the clip's with the logo visible. The slot glow is fainter than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "motion",
+    "element": "holographic PRO card",
+    "check": "The card rises in discrete ratchet steps of ~47px (≈0.45, 0.7, 0.95, 1.22, 1.5, 1.75s, each ~100ms), holding still between steps, NOT one smooth slide",
+    "box": [
+     440,
+     150,
+     560,
+     360
+    ],
+    "at": 0.8,
+    "then": 1.1,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The card top is at about the same height as the clip's at 0.8s and 1.1s (within ~4px), so the step positions match. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "motion",
+    "element": "holographic PRO card",
+    "check": "While feeding, the card's lower part is hidden inside the slot (clipped at the slot line y≈490) and a white glow lights the card where it exits",
+    "box": [
+     440,
+     350,
+     560,
+     160
+    ],
+    "at": 1.8,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The card's lower part is clipped at the slot line and white glow lights the card at the exit, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "motion",
+    "element": "holographic PRO card",
+    "check": "Between 1.8s and 2.25s the card lifts completely out of the slot, top going from y≈209 to ≈154, leaving a dark gap above the deck",
+    "box": [
+     440,
+     140,
+     560,
+     370
+    ],
+    "at": 1.8,
+    "then": 2.25,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The card lifts clear of the slot with top y within ~4px of the clip's at both moments, leaving a dark gap above the deck. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "motion",
+    "element": "holographic PRO card",
+    "check": "After lifting, the card shows a small 3D perspective tilt: its top and bottom edges are slightly non-parallel (a few px skew) and the tilt changes over time",
+    "box": [
+     485,
+     150,
+     470,
+     310
+    ],
+    "at": 2.17,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The rebuild is near-straight at 2.17s and skewed by about 8px at 2.5s, so it shows a tilt that changes over time like the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "motion",
+    "element": "holographic PRO card",
+    "check": "The rainbow band slides across the card as it tilts: at 4.58s it lies through the card's centre/right, at 5.9s near the top-right corner",
+    "box": [
+     495,
+     162,
+     450,
+     285
+    ],
+    "at": 4.58,
+    "then": 5.9,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The band runs through the centre/right at 4.58s and reaches the top-right corner at 5.9s, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "motion",
+    "element": "holographic PRO card",
+    "check": "Card tilt and foil follow the pointer; between 6.95s and 7.45s the band shifts while the card stays within ~10px of its rest box",
+    "box": [
+     485,
+     150,
+     470,
+     310
+    ],
+    "at": 6.95,
+    "then": 7.45,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The band shifts between the two moments (pink from the left edge at 7.45s) and the card stays at its rest box. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c37.png"
+   },
+   {
+    "id": "c38",
+    "axis": "motion",
+    "element": "modal",
+    "check": "The headline, body, CTA, link, close X and reader do not move at any point (only the card, the slot glow and the LED change)",
+    "box": [
+     400,
+     106,
+     640,
+     870
+    ],
+    "at": 2.5,
+    "then": 9,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Headline, body, CTA, link, X and reader sit at identical positions at 2.5s and 9s; only the card changes. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c38.png"
+   },
+   {
+    "id": "c39",
+    "axis": "style",
+    "element": "holographic PRO card",
+    "check": "A soft dark drop shadow sits under the floating card, with no hard edge",
+    "box": [
+     480,
+     420,
+     480,
+     50
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "A soft dark shadow with no hard edge sits under the card, like the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c39.png"
+   },
+   {
+    "id": "c40",
+    "axis": "style",
+    "element": "card reader deck",
+    "check": "The reader looks like matte black plastic with a faint top-lip highlight, NOT a glossy or outlined shape",
+    "box": [
+     440,
+     455,
+     560,
+     135
+    ],
+    "at": 3.3,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Matte black deck with a faint top-lip highlight and no gloss or outline; the slot is slightly blacker and thicker than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/1y5exc-dark-pro-welcome-modal/judge/c40.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 0.525,
+  "calls": 6,
+  "images": "factory/1y5exc-dark-pro-welcome-modal/judge",
+  "votes": 3,
+  "spread": [
+   40,
+   38,
+   38
+  ]
+ }
+}

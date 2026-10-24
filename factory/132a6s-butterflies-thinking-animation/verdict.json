@@ -1,0 +1,1243 @@
+{
+ "slug": "132a6s-butterflies-thinking-animation",
+ "at": "2026-10-24T01:43:50.249Z",
+ "runs": 24,
+ "html": "factory/132a6s-butterflies-thinking-animation/index.html",
+ "pixel": {
+  "score": 66,
+  "stills": 77,
+  "motion": 63,
+  "moments": 13
+ },
+ "animations": 306,
+ "rank": 93,
+ "allPass": true,
+ "elements": [
+  {
+   "name": "Headline 'Thinking...'",
+   "box": [
+    218,
+    280,
+    716,
+    155
+   ],
+   "deltaE": 0.6,
+   "delta": 50,
+   "shift": [
+    -2,
+    0
+   ],
+   "afterShift": 40,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Download icon",
+   "box": [
+    1076,
+    33,
+    13,
+    14
+   ],
+   "deltaE": 5.4,
+   "delta": 47,
+   "shift": [
+    -2,
+    -2
+   ],
+   "afterShift": 22,
+   "read": "misplaced by 2 x 2 px"
+  },
+  {
+   "name": "Single butterfly (sample)",
+   "box": [
+    440,
+    280,
+    90,
+    90
+   ],
+   "deltaE": 1.1,
+   "delta": 35,
+   "shift": [
+    -2,
+    -2
+   ],
+   "afterShift": 34,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "Background",
+   "box": [
+    0,
+    0,
+    1160,
+    720
+   ],
+   "deltaE": 0.1,
+   "delta": 14,
+   "shift": null,
+   "afterShift": 14,
+   "read": "different drawing: size, shape or texture"
+  },
+  {
+   "name": "GIF download pill",
+   "box": [
+    1055,
+    18,
+    86,
+    44
+   ],
+   "deltaE": 0.3,
+   "delta": 10,
+   "shift": null,
+   "afterShift": 10,
+   "read": "matches"
+  }
+ ],
+ "motion": {
+  "read": "the render changes where the clip changes",
+  "changes": [
+   {
+    "from": "0s",
+    "to": "kf1",
+    "clip": 0.1,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "kf1",
+    "to": "0.5s",
+    "clip": 0.9,
+    "render": 1.3,
+    "read": "both move"
+   },
+   {
+    "from": "0.5s",
+    "to": "0.65s",
+    "clip": 2.3,
+    "render": 2.8,
+    "read": "both move"
+   },
+   {
+    "from": "0.65s",
+    "to": "1s",
+    "clip": 3.9,
+    "render": 4.7,
+    "read": "both move"
+   },
+   {
+    "from": "1s",
+    "to": "1.72s",
+    "clip": 5.5,
+    "render": 5.7,
+    "read": "both move"
+   },
+   {
+    "from": "1.72s",
+    "to": "2.5s",
+    "clip": 5.3,
+    "render": 7.4,
+    "read": "both move"
+   },
+   {
+    "from": "2.5s",
+    "to": "3.2s",
+    "clip": 2.5,
+    "render": 3.8,
+    "read": "both move"
+   },
+   {
+    "from": "3.2s",
+    "to": "kf2",
+    "clip": 0.3,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "kf2",
+    "to": "4.45s",
+    "clip": 0,
+    "render": 0,
+    "read": "both still"
+   },
+   {
+    "from": "4.45s",
+    "to": "5.97s",
+    "clip": 4,
+    "render": 4.2,
+    "read": "both move"
+   },
+   {
+    "from": "5.97s",
+    "to": "7.47s",
+    "clip": 4.7,
+    "render": 5.5,
+    "read": "both move"
+   },
+   {
+    "from": "7.47s",
+    "to": "kf3",
+    "clip": 0.7,
+    "render": 1.2,
+    "read": "both move"
+   }
+  ],
+  "trajectories": [
+   {
+    "element": "#090909",
+    "box": [
+     742,
+     319,
+     78,
+     114
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": -8,
+      "dy": 0,
+      "delta": 35
+     },
+     {
+      "at": 0.15,
+      "dx": -8,
+      "dy": 0,
+      "delta": 35
+     },
+     {
+      "at": 0.5,
+      "dx": -8,
+      "dy": 0,
+      "delta": 35
+     },
+     {
+      "at": 0.65,
+      "dx": -8,
+      "dy": 0,
+      "delta": 35
+     },
+     {
+      "at": 1,
+      "dx": -8,
+      "dy": 0,
+      "delta": 48
+     },
+     {
+      "at": 1.72,
+      "dx": -8,
+      "dy": 6,
+      "delta": 70
+     },
+     {
+      "at": 2.5,
+      "dx": -6,
+      "dy": 2,
+      "delta": 65
+     },
+     {
+      "at": 3.2,
+      "dx": -8,
+      "dy": 0,
+      "delta": 34
+     },
+     {
+      "at": 3.95,
+      "dx": -8,
+      "dy": 0,
+      "delta": 34
+     },
+     {
+      "at": 4.45,
+      "dx": -8,
+      "dy": 0,
+      "delta": 35
+     },
+     {
+      "at": 5.97,
+      "dx": -8,
+      "dy": 4,
+      "delta": 69
+     },
+     {
+      "at": 7.47,
+      "dx": -6,
+      "dy": 2,
+      "delta": 39
+     },
+     {
+      "at": 8.1,
+      "dx": -8,
+      "dy": 0,
+      "delta": 35
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   },
+   {
+    "element": "#090909",
+    "box": [
+     322,
+     289,
+     73,
+     114
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": 2,
+      "dy": 0,
+      "delta": 47
+     },
+     {
+      "at": 0.15,
+      "dx": 2,
+      "dy": 0,
+      "delta": 46
+     },
+     {
+      "at": 0.5,
+      "dx": 2,
+      "dy": 0,
+      "delta": 61
+     },
+     {
+      "at": 0.65,
+      "dx": -2,
+      "dy": -4,
+      "delta": 77
+     },
+     {
+      "at": 1,
+      "dx": 2,
+      "dy": -2,
+      "delta": 72
+     },
+     {
+      "at": 1.72,
+      "dx": 2,
+      "dy": -2,
+      "delta": 70
+     },
+     {
+      "at": 2.5,
+      "dx": 2,
+      "dy": 0,
+      "delta": 46
+     },
+     {
+      "at": 3.2,
+      "dx": 2,
+      "dy": 0,
+      "delta": 46
+     },
+     {
+      "at": 3.95,
+      "dx": 2,
+      "dy": 0,
+      "delta": 46
+     },
+     {
+      "at": 4.45,
+      "dx": 2,
+      "dy": 0,
+      "delta": 47
+     },
+     {
+      "at": 5.97,
+      "dx": 0,
+      "dy": 0,
+      "delta": 72
+     },
+     {
+      "at": 7.47,
+      "dx": 2,
+      "dy": 0,
+      "delta": 45
+     },
+     {
+      "at": 8.1,
+      "dx": 2,
+      "dy": 0,
+      "delta": 47
+     }
+    ],
+    "read": "varies: the gap changes between moments (wrong timing)"
+   },
+   {
+    "element": "#080808",
+    "box": [
+     539,
+     289,
+     71,
+     114
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": -4,
+      "dy": -2,
+      "delta": 15
+     },
+     {
+      "at": 0.15,
+      "dx": -4,
+      "dy": -2,
+      "delta": 15
+     },
+     {
+      "at": 0.5,
+      "dx": -4,
+      "dy": -2,
+      "delta": 17
+     },
+     {
+      "at": 0.65,
+      "dx": -4,
+      "dy": -2,
+      "delta": 15
+     },
+     {
+      "at": 1,
+      "dx": -4,
+      "dy": -4,
+      "delta": 73
+     },
+     {
+      "at": 1.72,
+      "dx": -4,
+      "dy": -2,
+      "delta": 60
+     },
+     {
+      "at": 2.5,
+      "dx": -4,
+      "dy": -2,
+      "delta": 33
+     },
+     {
+      "at": 3.2,
+      "dx": -4,
+      "dy": -2,
+      "delta": 15
+     },
+     {
+      "at": 3.95,
+      "dx": -4,
+      "dy": -2,
+      "delta": 15
+     },
+     {
+      "at": 4.45,
+      "dx": -4,
+      "dy": -2,
+      "delta": 15
+     },
+     {
+      "at": 5.97,
+      "dx": -4,
+      "dy": -2,
+      "delta": 61
+     },
+     {
+      "at": 7.47,
+      "dx": -4,
+      "dy": -2,
+      "delta": 15
+     },
+     {
+      "at": 8.1,
+      "dx": -4,
+      "dy": -2,
+      "delta": 15
+     }
+    ],
+    "read": "offset by about 5 px throughout"
+   },
+   {
+    "element": "#090909",
+    "box": [
+     449,
+     318,
+     71,
+     85
+    ],
+    "shifts": [
+     {
+      "at": 0,
+      "dx": -2,
+      "dy": 0,
+      "delta": 19
+     },
+     {
+      "at": 0.15,
+      "dx": -2,
+      "dy": 0,
+      "delta": 19
+     },
+     {
+      "at": 0.5,
+      "dx": -2,
+      "dy": 0,
+      "delta": 19
+     },
+     {
+      "at": 0.65,
+      "dx": -2,
+      "dy": -4,
+      "delta": 51
+     },
+     {
+      "at": 1,
+      "dx": -2,
+      "dy": 4,
+      "delta": 56
+     },
+     {
+      "at": 1.72,
+      "dx": -2,
+      "dy": 4,
+      "delta": 64
+     },
+     {
+      "at": 2.5,
+      "dx": -2,
+      "dy": 0,
+      "delta": 25
+     },
+     {
+      "at": 3.2,
+      "dx": -2,
+      "dy": 0,
+      "delta": 19
+     },
+     {
+      "at": 3.95,
+      "dx": -2,
+      "dy": 0,
+      "delta": 19
+     },
+     {
+      "at": 4.45,
+      "dx": -2,
+      "dy": 0,
+      "delta": 19
+     },
+     {
+      "at": 5.97,
+      "dx": -2,
+      "dy": 4,
+      "delta": 66
+     },
+     {
+      "at": 7.47,
+      "dx": -2,
+      "dy": 0,
+      "delta": 18
+     },
+     {
+      "at": 8.1,
+      "dx": -2,
+      "dy": 0,
+      "delta": 19
+     }
+    ],
+    "read": "offset by about 3 px throughout"
+   }
+  ]
+ },
+ "scale": {
+  "ok": true,
+  "changed": 3.9,
+  "read": "scales: the half-size render matches the full one (difference 3.9)"
+ },
+ "rubric": {
+  "file": "factory/132a6s-butterflies-thinking-animation/rubric.json",
+  "total": 37,
+  "counted": 37,
+  "pass": 37,
+  "fail": 0,
+  "unsure": 0,
+  "unjudged": 0,
+  "passRate": 100,
+  "licensed": true,
+  "criteria": [
+   {
+    "id": "c01",
+    "axis": "style",
+    "element": "Background",
+    "check": "Background is a flat near-white (#fdfdfd-ish) with no gradient, texture or vignette",
+    "box": [
+     0,
+     0,
+     1160,
+     720
+    ],
+    "at": 3.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Both flat near-white, no gradient or vignette. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c01.png"
+   },
+   {
+    "id": "c02",
+    "axis": "text",
+    "element": "Headline 'Thinking...'",
+    "check": "Headline reads exactly 'Thinking...' (capital T, three periods)",
+    "box": [
+     218,
+     280,
+     716,
+     155
+    ],
+    "at": 3.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Reads 'Thinking...' in both. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c02.png"
+   },
+   {
+    "id": "c03",
+    "axis": "style",
+    "element": "Headline 'Thinking...'",
+    "check": "Headline is solid near-black (#090909) on white, no outline or shadow",
+    "box": [
+     218,
+     280,
+     716,
+     155
+    ],
+    "at": 3.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Solid near-black, no outline or shadow in both. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c03.png"
+   },
+   {
+    "id": "c04",
+    "axis": "style",
+    "element": "Headline 'Thinking...'",
+    "check": "Headline is a neutral geometric/grotesque sans at regular-to-medium weight (not bold, not serif); stem width ~20px",
+    "box": [
+     218,
+     280,
+     716,
+     155
+    ],
+    "at": 3.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same grotesque sans, same regular weight and stem width. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c04.png"
+   },
+   {
+    "id": "c05",
+    "axis": "position",
+    "element": "Headline 'Thinking...'",
+    "check": "Headline spans x ~218 to ~934 with the T's top at y ~283",
+    "box": [
+     200,
+     270,
+     750,
+     170
+    ],
+    "at": 3.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Headline span and T top match the clip. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c05.png"
+   },
+   {
+    "id": "c06",
+    "axis": "position",
+    "element": "Headline 'Thinking...'",
+    "check": "Baseline sits at y ~405 and the g descender reaches y ~435",
+    "box": [
+     730,
+     380,
+     100,
+     60
+    ],
+    "at": 3.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Baseline and g descender line up with the clip. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c06.png"
+   },
+   {
+    "id": "c07",
+    "axis": "position",
+    "element": "Headline 'Thinking...'",
+    "check": "Headline is horizontally near centre of the frame (centre x ~576) and its vertical centre slightly above the frame middle (~y350)",
+    "box": [
+     0,
+     0,
+     1160,
+     720
+    ],
+    "at": 3.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Headline centred at the same spot as the clip. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c07.png"
+   },
+   {
+    "id": "c08",
+    "axis": "style",
+    "element": "Headline 'Thinking...'",
+    "check": "The three trailing dots are filled circles ~22px across, evenly spaced ~37px apart, sitting on the baseline",
+    "box": [
+     830,
+     370,
+     110,
+     45
+    ],
+    "at": 3.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Three filled dots of about the same size and spacing on the baseline. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c08.png"
+   },
+   {
+    "id": "c09",
+    "axis": "motion",
+    "element": "Headline 'Thinking...'",
+    "check": "Headline does not move, scale or change colour between the two moments",
+    "box": [
+     218,
+     280,
+     716,
+     155
+    ],
+    "at": 0.15,
+    "then": 3.95,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Headline identical at 0.15s and 3.95s in both. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c09.png"
+   },
+   {
+    "id": "c10",
+    "axis": "present",
+    "element": "GIF download pill",
+    "check": "A small pill button sits in the top-right corner",
+    "box": [
+     1040,
+     10,
+     110,
+     60
+    ],
+    "at": 3.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Same small pill at top right. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c10.png"
+   },
+   {
+    "id": "c11",
+    "axis": "position",
+    "element": "GIF download pill",
+    "check": "Pill box is ~[1055,18,86,44], ~20px from top and right edges",
+    "box": [
+     1040,
+     10,
+     110,
+     60
+    ],
+    "at": 3.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Pill position and size match the clip. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c11.png"
+   },
+   {
+    "id": "c12",
+    "axis": "style",
+    "element": "GIF download pill",
+    "check": "Pill is white with a 1px very light grey border and fully rounded ends, no shadow",
+    "box": [
+     1050,
+     15,
+     95,
+     50
+    ],
+    "at": 3.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "White pill, faint grey border, rounded ends, no shadow in both. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c12.png"
+   },
+   {
+    "id": "c13",
+    "axis": "text",
+    "element": "GIF download pill",
+    "check": "Pill label reads 'GIF' in dark grey sans ~15px, to the right of the icon",
+    "box": [
+     1090,
+     28,
+     40,
+     25
+    ],
+    "at": 3.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "'GIF' in dark sans right of the icon, same size. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c13.png"
+   },
+   {
+    "id": "c14",
+    "axis": "imagery",
+    "element": "Download icon",
+    "check": "Icon is a thin down arrow landing on a short horizontal bar, drawn in dark stroke",
+    "box": [
+     1072,
+     30,
+     20,
+     20
+    ],
+    "at": 3.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Thin down arrow onto a short bar, same dark stroke. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c14.png"
+   },
+   {
+    "id": "c15",
+    "axis": "present",
+    "element": "Butterfly swarm",
+    "check": "At rest between swarms the frame shows only text and pill, no butterflies",
+    "box": [
+     0,
+     0,
+     1160,
+     720
+    ],
+    "at": 3.95,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Only text and pill, no butterflies in either. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c15.png"
+   },
+   {
+    "id": "c16",
+    "axis": "present",
+    "element": "Butterfly swarm",
+    "check": "Near the start only 1-3 butterflies are visible, near the left half of the word",
+    "box": [
+     0,
+     0,
+     1160,
+     720
+    ],
+    "at": 0.15,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Two butterflies near the left of the word, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c16.png"
+   },
+   {
+    "id": "c17",
+    "axis": "position",
+    "element": "Butterfly swarm",
+    "check": "Early in the cycle butterflies cluster at the left of the word (over 'Th', x ~200-450) while the right of the word is clear",
+    "box": [
+     100,
+     150,
+     850,
+     450
+    ],
+    "at": 0.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Butterflies cluster over 'Th' with the right side clear; the rebuild is denser than the clip. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c17.png"
+   },
+   {
+    "id": "c18",
+    "axis": "motion",
+    "element": "Butterfly swarm",
+    "check": "The swarm spreads left to right across the word: at 0.5s it covers 'Th', by 1.0s it reaches the 'g'",
+    "box": [
+     150,
+     200,
+     850,
+     300
+    ],
+    "at": 0.5,
+    "then": 1,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Swarm covers 'Th' at 0.5s and reaches 'g' by 1s, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c18.png"
+   },
+   {
+    "id": "c19",
+    "axis": "present",
+    "element": "Butterfly swarm",
+    "check": "At peak, dozens (50+) of butterflies sit densely on the letter shapes so the word reads as patterned with butterflies",
+    "box": [
+     200,
+     250,
+     760,
+     200
+    ],
+    "at": 1.72,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Dozens of butterflies densely cover the letters at 1.72s. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c19.png"
+   },
+   {
+    "id": "c20",
+    "axis": "position",
+    "element": "Butterfly swarm",
+    "check": "At peak the butterflies concentrate on the glyph strokes (following the letter shapes), not as a random cloud over the whole frame",
+    "box": [
+     200,
+     250,
+     760,
+     200
+    ],
+    "at": 1.72,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Butterflies follow the glyph strokes, with some faded ghosts around them. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c20.png"
+   },
+   {
+    "id": "c21",
+    "axis": "style",
+    "element": "Butterfly swarm",
+    "check": "Butterflies are drawn on top of the black type (they occlude it)",
+    "box": [
+     300,
+     280,
+     160,
+     140
+    ],
+    "at": 1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild butterflies sit over the black letters and hide parts of them, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c21.png"
+   },
+   {
+    "id": "c22",
+    "axis": "motion",
+    "element": "Butterfly swarm",
+    "check": "Butterflies lift off the left letters first and drift up and to the right: at 2.5s the left of the word is clear while a flock rises above 'king'",
+    "box": [
+     150,
+     50,
+     850,
+     400
+    ],
+    "at": 1.72,
+    "then": 2.5,
+    "policy": null,
+    "pass": "yes",
+    "seen": "At 2.5s the rebuild's left of the word is clear and a flock hangs above 'ing', though it is denser than the clip's. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c22.png"
+   },
+   {
+    "id": "c23",
+    "axis": "position",
+    "element": "Butterfly swarm",
+    "check": "Departing butterflies fly toward the upper right (y < 250, x 400-950)",
+    "box": [
+     350,
+     40,
+     650,
+     260
+    ],
+    "at": 2.5,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild flock sits upper-right of the word, roughly y 20-200 and x 700-950 in the box, like the clip. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c23.png"
+   },
+   {
+    "id": "c24",
+    "axis": "motion",
+    "element": "Butterfly swarm",
+    "check": "By ~3.2s every butterfly is gone and the frame holds plain text until ~4.65s",
+    "box": [
+     0,
+     0,
+     1160,
+     720
+    ],
+    "at": 3.2,
+    "then": 4.45,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild is plain text at 3.2s and at 4.45s, with no butterflies. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c24.png"
+   },
+   {
+    "id": "c25",
+    "axis": "motion",
+    "element": "Butterfly swarm",
+    "check": "The swarm cycle repeats: a second swarm builds on the word from ~4.7s, peaks ~6s and departs up-right by ~7.6s",
+    "box": [
+     0,
+     0,
+     1160,
+     720
+    ],
+    "at": 4.45,
+    "then": 5.97,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild is empty at 4.45s and has a swarm on the word at 5.97s, with a few faded stragglers below it. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c25.png"
+   },
+   {
+    "id": "c26",
+    "axis": "present",
+    "element": "Butterfly swarm",
+    "check": "Late in the second cycle only a few butterflies remain upper-right (e.g. one purple near x820,y105)",
+    "box": [
+     700,
+     60,
+     250,
+     100
+    ],
+    "at": 8.1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "One purple butterfly sits upper-right at about the same spot as the clip's (x~372 vs ~370 in the panel). [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c26.png"
+   },
+   {
+    "id": "c27",
+    "axis": "imagery",
+    "element": "Single butterfly (sample)",
+    "check": "Each butterfly is a flat cartoon illustration: four rounded wing lobes, thin dark body, two antennae (structured, not photo)",
+    "box": [
+     300,
+     280,
+     160,
+     140
+    ],
+    "at": 1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild butterflies are flat cartoons with four rounded lobes, a dark body and two antennae, like the clip's. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c27.png"
+   },
+   {
+    "id": "c28",
+    "axis": "style",
+    "element": "Single butterfly (sample)",
+    "check": "Upper and lower wings of one butterfly are different colours (e.g. pink over orange, purple over blue)",
+    "box": [
+     300,
+     280,
+     160,
+     140
+    ],
+    "at": 1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Upper and lower wings differ in colour in the rebuild (orange over purple, green over blue), as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c28.png"
+   },
+   {
+    "id": "c29",
+    "axis": "style",
+    "element": "Single butterfly (sample)",
+    "check": "Each wing lobe carries a small white highlight dot",
+    "box": [
+     300,
+     280,
+     160,
+     140
+    ],
+    "at": 1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Each rebuild lobe has a small white highlight dot, as in the clip. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c29.png"
+   },
+   {
+    "id": "c30",
+    "axis": "style",
+    "element": "Butterfly swarm",
+    "check": "Palette of wings includes purple, pink, orange, yellow, teal/mint and sky blue, all saturated",
+    "box": [
+     200,
+     250,
+     760,
+     200
+    ],
+    "at": 1.72,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows purple, pink, orange, yellow, teal and sky blue, all saturated. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c30.png"
+   },
+   {
+    "id": "c31",
+    "axis": "style",
+    "element": "Butterfly swarm",
+    "check": "Wings have no dark outline stroke; shapes are flat fills with soft rounded edges",
+    "box": [
+     300,
+     280,
+     160,
+     140
+    ],
+    "at": 1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild wings are flat fills with soft rounded edges and no dark outline. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c31.png"
+   },
+   {
+    "id": "c32",
+    "axis": "style",
+    "element": "Butterfly swarm",
+    "check": "Butterflies vary in size, roughly 15px to 35px across",
+    "box": [
+     150,
+     150,
+     850,
+     350
+    ],
+    "at": 0.65,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild butterflies range from small to about 30px, close to the clip's range. [votes: yes/no/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c32.png"
+   },
+   {
+    "id": "c33",
+    "axis": "style",
+    "element": "Butterfly swarm",
+    "check": "Some butterflies away from the word are translucent and blurred (depth fade), others crisp",
+    "box": [
+     150,
+     80,
+     900,
+     550
+    ],
+    "at": 0.65,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild has a few faint, blurred butterflies away from the word while the ones on the word are crisp, though fewer than in the clip. [votes: yes/no/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c33.png"
+   },
+   {
+    "id": "c34",
+    "axis": "motion",
+    "element": "Butterfly swarm",
+    "check": "Butterflies flap: a butterfly's wing silhouette changes (open vs folded) between nearby moments",
+    "box": [
+     300,
+     280,
+     160,
+     140
+    ],
+    "at": 0.65,
+    "then": 1,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows both open and folded narrow wing silhouettes, and they differ between 0.65s and 1s. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c34.png"
+   },
+   {
+    "id": "c35",
+    "axis": "motion",
+    "element": "Butterfly swarm",
+    "check": "Butterflies fade in/out with opacity at entry and exit rather than popping",
+    "box": [
+     300,
+     40,
+     700,
+     250
+    ],
+    "at": 2.5,
+    "then": 3.2,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild shows faded, ghosted butterflies at its edges at 2.5s and none by 3.2s, so it fades out rather than popping. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c35.png"
+   },
+   {
+    "id": "c36",
+    "axis": "style",
+    "element": "Butterfly swarm",
+    "check": "Butterflies are rotated at varied angles (not all upright)",
+    "box": [
+     200,
+     250,
+     760,
+     200
+    ],
+    "at": 1,
+    "then": null,
+    "policy": null,
+    "pass": "yes",
+    "seen": "Rebuild butterflies are tilted at varied angles, not all upright. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c36.png"
+   },
+   {
+    "id": "c37",
+    "axis": "motion",
+    "element": "GIF download pill",
+    "check": "Pill does not move or change during the swarm",
+    "box": [
+     1050,
+     15,
+     95,
+     50
+    ],
+    "at": 0.15,
+    "then": 1.72,
+    "policy": null,
+    "pass": "yes",
+    "seen": "The GIF pill is identical at 0.15s and 1.72s in the rebuild, with no movement. [votes: yes/yes/yes]",
+    "image": "factory/132a6s-butterflies-thinking-animation/judge/c37.png"
+   }
+  ]
+ },
+ "judge": {
+  "model": "sonnet",
+  "costUsd": 0.436,
+  "calls": 6,
+  "images": "factory/132a6s-butterflies-thinking-animation/judge",
+  "votes": 3,
+  "spread": [
+   37,
+   35,
+   37
+  ]
+ }
+}

@@ -1,0 +1,243 @@
+<!doctype html>
+<!--
+  Dark Pro Welcome Modal — rebuild of the design by Craftwork
+  Source: https://x.com/craftworkdesign/status/2105643365383700505
+  Everything is drawn (CSS + inline SVG); nothing sampled from the clip.
+  ?demo=1 replays the clip's 11.18 s timeline (card feed, lift, foil + tilt following the clip's cursor path).
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dark Pro Welcome Modal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style id="patches"></style>
+<style>
+html, body { margin: 0; padding: 0; overflow: hidden; background: #0b0b0b; }
+#stage {
+  --u: 1px;
+  position: relative; width: calc(1440 * var(--u)); height: calc(1080 * var(--u));
+  background: #0b0b0b; overflow: hidden; font-family: 'Figtree', system-ui, sans-serif;
+}
+.abs { position: absolute; }
+#modal {
+  left: calc(400 * var(--u)); top: calc(106 * var(--u));
+  width: calc(640 * var(--u)); height: calc(870 * var(--u));
+  border-radius: calc(32 * var(--u)); overflow: hidden; background: #1e1e1e;
+}
+/* hero: lighter at top centre, darkening to #141414 at the base and sides */
+#hero {
+  left: 0; top: 0; width: 100%; height: calc(479 * var(--u));
+  background:
+    radial-gradient(ellipse calc(300 * var(--u)) calc(260 * var(--u)) at 50% 74%, rgba(0,0,0,.35), rgba(0,0,0,0) 70%),
+    radial-gradient(ellipse calc(520 * var(--u)) calc(420 * var(--u)) at 50% 0%, #222222 0%, #1d1d1d 40%, #171717 75%, #141414 100%);
+}
+/* reader: positions in modal coords (frame - 400, frame - 106) */
+#body { left: calc(45 * var(--u)); top: calc(405 * var(--u)); width: calc(550 * var(--u)); height: calc(74 * var(--u));
+  background: linear-gradient(#202022, #1e1e20 50%, #1a1a1a); }
+#deck { left: calc(45 * var(--u)); top: calc(355 * var(--u)); width: calc(550 * var(--u)); height: calc(50 * var(--u)); }
+#slot { left: calc(86 * var(--u)); top: calc(375 * var(--u)); width: calc(468 * var(--u)); height: calc(10 * var(--u));
+  border-radius: calc(5 * var(--u)); background: linear-gradient(#000, #030303 60%, #07070a);
+  box-shadow: 0 calc(2 * var(--u)) 0 #3c3c3f; }
+#led { left: calc(547 * var(--u)); top: calc(438 * var(--u)); width: calc(10 * var(--u)); height: calc(10 * var(--u));
+  border-radius: 50%; background: #5a4822; box-shadow: inset 0 0 0 calc(1 * var(--u)) rgba(190,160,90,.35), 0 0 calc(4 * var(--u)) calc(1 * var(--u)) rgba(120,90,30,.35); }
+/* bloom spans the whole slot (clip 0.4 s: deck lit #92 at the slot lip, #43 16 px out, gone by 25 px); brightest mid-slot, still lit at the ends */
+#glow { left: calc(70 * var(--u)); top: calc(352 * var(--u)); width: calc(500 * var(--u)); height: calc(56 * var(--u)); opacity: 0;
+  background:
+    linear-gradient(rgba(255,255,255,0) 44%, rgba(255,255,255,.55) 49%, rgba(255,255,255,.55) 53%, rgba(255,255,255,0) 58%),
+    linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.1) 20%, rgba(255,255,255,.42) 46%, rgba(255,255,255,.42) 56%, rgba(255,255,255,.08) 80%, rgba(255,255,255,0));
+  -webkit-mask-image: linear-gradient(90deg, transparent, rgba(0,0,0,.45) 7%, #000 35%, #000 65%, rgba(0,0,0,.45) 93%, transparent);
+          mask-image: linear-gradient(90deg, transparent, rgba(0,0,0,.45) 7%, #000 35%, #000 65%, rgba(0,0,0,.45) 93%, transparent);
+  mix-blend-mode: screen; pointer-events: none; }
+/* the card lives in a window whose floor is the slot line, so it is hidden below it while feeding */
+#win { left: 0; top: 0; width: 100%; height: calc(380 * var(--u)); overflow: hidden; perspective: calc(1100 * var(--u)); }
+#card { left: calc(95 * var(--u)); top: calc(55 * var(--u)); width: calc(450 * var(--u)); height: calc(285 * var(--u));
+  transform-origin: 50% 50%; will-change: transform; }
+/* soft drop shadow: a blurred dark slab under the card, wider and lower than it, no hard edge */
+#cshadow { left: calc(-14 * var(--u)); right: calc(-14 * var(--u)); top: calc(30 * var(--u)); bottom: calc(-22 * var(--u));
+  border-radius: calc(30 * var(--u)); background: rgba(0,0,0,.75); filter: blur(calc(16 * var(--u))); opacity: 0; }
+/* darker gap directly under the card (clip 3.3 s: #0f under the card against the #14 hero) */
+#shadow { left: calc(85 * var(--u)); top: calc(318 * var(--u)); width: calc(470 * var(--u)); height: calc(52 * var(--u));
+  background: radial-gradient(ellipse 50% 50% at 50% 45%, rgba(0,0,0,.85), rgba(0,0,0,.5) 55%, rgba(0,0,0,0) 100%); filter: blur(calc(5 * var(--u))); opacity: 0; }
+#face { inset: 0; border-radius: calc(16 * var(--u)); overflow: hidden; background: #b0b4c4;
+  box-shadow: inset 0 0 0 calc(1 * var(--u)) rgba(255,255,255,.75), inset 0 calc(1.5 * var(--u)) calc(1 * var(--u)) rgba(255,255,255,.6); }
+#foil { left: calc(-800 * var(--u)); top: calc(-30 * var(--u)); width: calc(1600 * var(--u)); height: calc(345 * var(--u));
+  background: linear-gradient(62deg,
+    #cfc8a2 0%, #d3cbaa 22%, #cdbcac 30%, #c4adc0 35%, #a890e8 39%, #9a92f2 44%, #92b8f4 46%, #a8f0d4 48%, #e0fae4 49.5%,
+    #f8eef0 50.5%, #f7b0cb 52%, #ef9cbf 54.5%, #c8a2c8 57%, #a8a8c6 60%, #a3b0c2 63%, #9fb5bd 72%, #a6c2b6 86%, #b2c8b0 100%);
+  filter: url(#grain); will-change: transform; }
+#brush { inset: 0; filter: url(#brushed); opacity: .14; }
+#rim { inset: 0; border-radius: calc(16 * var(--u)); pointer-events: none;
+  box-shadow: inset 0 0 0 calc(1 * var(--u)) rgba(255,255,255,.7), inset 0 0 calc(6 * var(--u)) rgba(255,255,255,.35); }
+#exit { left: 0; right: 0; bottom: 0; height: calc(60 * var(--u)); opacity: 0; mix-blend-mode: screen;
+  background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.55) 70%, #fff); }
+.ct { color: #2a2a31; }
+#logo { left: calc(25 * var(--u)); top: calc(24 * var(--u)); width: calc(36 * var(--u)); height: calc(36 * var(--u)); }
+#pro { right: calc(28 * var(--u)); top: calc(28 * var(--u)); font-weight: 800; color: #141418; font-size: calc(16 * var(--u));
+  letter-spacing: calc(4.2 * var(--u)); margin-right: calc(-4.2 * var(--u)); line-height: 1; }
+#name { left: calc(28 * var(--u)); top: calc(219 * var(--u)); font-weight: 700; font-size: calc(20 * var(--u));
+  letter-spacing: calc(1.6 * var(--u)); line-height: 1; }
+#since, #plan { top: calc(247 * var(--u)); font-size: calc(15.5 * var(--u)); line-height: 1; color: #4a4b55; font-weight: 400; }
+#since { left: calc(28 * var(--u)); }
+#plan { right: calc(28 * var(--u)); }
+#close { left: calc(586 * var(--u)); top: calc(35 * var(--u)); width: calc(18 * var(--u)); height: calc(18 * var(--u)); cursor: pointer; }
+#copy { left: calc(39 * var(--u)); top: calc(512 * var(--u)); width: calc(580 * var(--u)); }
+h1 { margin: 0 0 0 calc(1.5 * var(--u)); color: #fff; font-weight: 500; font-size: calc(35.5 * var(--u)); line-height: calc(48 * var(--u)); letter-spacing: calc(-0.5 * var(--u)); }
+#copy p { margin: calc(6 * var(--u)) 0 0; color: #9a9a9a; font-size: calc(25.5 * var(--u)); line-height: calc(36 * var(--u)); font-weight: 400; }
+#cta { left: calc(39 * var(--u)); top: calc(704 * var(--u)); width: calc(562 * var(--u)); height: calc(73 * var(--u));
+  border: 0; border-radius: calc(14 * var(--u)); background: #fff; color: #0d0d0d; font: 600 calc(25.5 * var(--u)) 'Figtree', sans-serif;
+  cursor: pointer; transition: background .15s; }
+#cta:hover { background: #f4f4f4; }
+#cta:active { background: #dcdcdc; }
+#link { left: 0; width: 100%; top: calc(799 * var(--u)); text-align: center; color: #b4b4b4; font-size: calc(25.8 * var(--u)); line-height: calc(32 * var(--u)); cursor: pointer; }
+#link:hover { color: #e0e0e0; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <!-- grainy, posterised edges for the rainbow band -->
+    <filter id="grain" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05 0.06" numOctaves="3" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="44" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <!-- fine speckle so the band's edge breaks into small posterised flecks -->
+      <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="1" seed="2" result="f"/>
+      <feDisplacementMap in="d" in2="f" scale="7" xChannelSelector="R" yChannelSelector="B"/>
+    </filter>
+    <!-- horizontal brushed-metal streaks -->
+    <filter id="brushed" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.004 0.45" numOctaves="2" seed="9"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 .2  0 0 0 0 .22  0 0 0 0 .28  1.6 0 0 0 -.62"/>
+    </filter>
+  </defs>
+</svg>
+<div id="stage">
+  <div id="modal" class="abs">
+    <div id="hero" class="abs"></div>
+    <div id="shadow" class="abs"></div>
+    <div id="body" class="abs"></div>
+    <!-- matte top deck: trapezoid with rounded shoulders, faint lip at the top and at the front edge -->
+    <svg id="deck" class="abs" viewBox="0 0 550 50" preserveAspectRatio="none" aria-hidden="true">
+      <defs><linearGradient id="dk" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#363638"/><stop offset=".08" stop-color="#2d2d2f"/><stop offset=".4" stop-color="#262628"/>
+        <stop offset=".62" stop-color="#29292c"/><stop offset=".94" stop-color="#2b2b2e"/><stop offset=".97" stop-color="#444446"/><stop offset="1" stop-color="#2e2e30"/>
+      </linearGradient></defs>
+      <path d="M0 50 L38 10 Q47 0 62 0 L488 0 Q503 0 512 10 L550 50 Z" fill="url(#dk)"/>
+    </svg>
+    <div id="slot" class="abs"></div>
+    <div id="led" class="abs"></div>
+    <div id="win" class="abs">
+      <div id="card" class="abs">
+        <div id="cshadow" class="abs"></div>
+        <div id="face" class="abs">
+          <div id="foil" class="abs"></div>
+          <div id="brush" class="abs"></div>
+          <div id="exit" class="abs"></div>
+          <div id="rim" class="abs"></div>
+          <svg id="logo" class="abs" viewBox="0 0 36 36" aria-hidden="true">
+            <circle cx="18" cy="18" r="18" fill="#141416"/>
+            <!-- three soft leaves meeting at one base point, no stem -->
+            <g fill="#f1ecdc">
+              <path d="M18 9.6C21.3 12.4 21.6 18.6 18 22.6C14.4 18.6 14.7 12.4 18 9.6Z"/>
+              <path d="M17.2 25.6C12.6 25.4 10.1 21.2 10.4 15.9C14.6 16.7 17.6 20.2 17.2 25.6Z"/>
+              <path d="M18.8 25.6C23.4 25.4 25.9 21.2 25.6 15.9C21.4 16.7 18.4 20.2 18.8 25.6Z"/>
+            </g>
+          </svg>
+          <div id="pro" class="abs ct">PRO</div>
+          <div id="name" class="abs ct">DENIS</div>
+          <div id="since" class="abs">Member since Oct 2026</div>
+          <div id="plan" class="abs">Quarterly</div>
+        </div>
+      </div>
+    </div>
+    <div id="glow" class="abs"></div>
+    <svg id="close" class="abs" viewBox="0 0 18 18" aria-label="Close" style="overflow:visible">
+      <path d="M2.5 2.5l13 13M15.5 2.5l-13 13" stroke="#c4c4c4" stroke-width="1.9" stroke-linecap="round"/>
+    </svg>
+    <div id="copy" class="abs">
+      <h1>Welcome to Pro, Denis</h1>
+      <p>Download packs and assets, insert them in<br>Figma with the plugin, or let your AI agent fetch<br>them over MCP.</p>
+    </div>
+    <button id="cta" class="abs">Start exploring</button>
+    <div id="link" class="abs">Connect your AI agent</div>
+  </div>
+</div>
+<script>
+(() => {
+  const D = 11180, demo = new URLSearchParams(location.search).get('demo') === '1';
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = s => document.querySelector(s);
+  const u = n => `calc(${n} * var(--u))`;
+  // keys: [t seconds, props, easing into next]
+  const play = (el, keys, total) => {
+    const dur = total || keys[keys.length - 1][0] * 1000;
+    const frames = keys.map(([t, p, e]) => Object.assign({ offset: Math.min(1, t * 1000 / dur), easing: e || 'linear' }, p));
+    const a = el.animate(frames, { duration: dur, fill: 'both' });
+    if (reduce) a.finish();
+    return a;
+  };
+  const total = demo ? D : 2600;
+  const ty = n => ({ transform: `translateY(${u(n)})` });
+  const eo = 'cubic-bezier(.2,.7,.3,1)';
+  // feed: six ~100 ms ratchet steps of ~47 px (tracked tops 482,447,400,352,304,257,209), then lift to rest top 161
+  play($('#card'), [[0, ty(332)], [.45, ty(332), eo], [.56, ty(286)], [.70, ty(286), eo], [.81, ty(239)], [.95, ty(239), eo],
+    [1.06, ty(191)], [1.22, ty(191), eo], [1.33, ty(143)], [1.48, ty(143), eo], [1.59, ty(96)], [1.73, ty(96), eo],
+    [1.85, ty(48)], [2.02, ty(48), 'cubic-bezier(.4,0,.2,1)'], [2.22, ty(-7), 'ease-in-out'], [2.5, ty(0)], [total / 1000, ty(0)]], total);
+  play($('#glow'), [[0, { opacity: 0, transform: 'scaleX(.85)' }], [.18, { opacity: 0, transform: 'scaleX(.85)' }],
+    [.42, { opacity: 1, transform: 'scaleX(1)' }], [.5, { opacity: .85, transform: 'scaleX(1)' }], [1.95, { opacity: .8, transform: 'scaleX(1)' }],
+    [2.25, { opacity: 0, transform: 'scaleX(1)' }], [total / 1000, { opacity: 0, transform: 'scaleX(1)' }]], total);
+  play($('#exit'), [[0, { opacity: 0 }], [.4, { opacity: 0 }], [.5, { opacity: 1 }], [1.9, { opacity: 1 }], [2.15, { opacity: 0 }], [total / 1000, { opacity: 0 }]], total);
+  play($('#shadow'), [[0, { opacity: 0 }], [2.02, { opacity: 0 }], [2.4, { opacity: 1 }], [total / 1000, { opacity: 1 }]], total);
+  play($('#cshadow'), [[0, { opacity: 0 }], [2.0, { opacity: 0 }], [2.4, { opacity: 1 }], [total / 1000, { opacity: 1 }]], total);
+  // clip (centre pixel sampled every 0.1 s): amber blinks ~every 0.42 s while feeding, bright #b1822d / dim #4c3d20,
+  // then green core #25984f with a faint halo after the lift
+  const amber = { background: '#b1822d', boxShadow: `0 0 ${u(6)} ${u(1)} rgba(200,140,40,.4)` };
+  const dim = { background: '#4c3d20', boxShadow: `inset 0 0 0 ${u(1)} rgba(190,160,90,.3), 0 0 ${u(3)} 0 rgba(120,90,30,.2)` };
+  const green = { background: '#2a9f54', boxShadow: `0 0 ${u(8)} ${u(2)} rgba(40,170,85,.28)` };
+  play($('#led'), [[0, amber], [.4, amber], [.5, dim], [.6, dim], [.75, amber], [.85, amber], [1.0, dim], [1.2, amber], [1.4, dim],
+    [1.62, amber], [1.72, amber], [1.85, dim], [1.92, dim], [2.0, amber], [2.04, amber], [2.1, green], [total / 1000, green]], total);
+
+  // foil band position b (0 = off lower-left, 1 = top-right) and tilt, both driven by the pointer on the card
+  const REST = [0.72, 0.64];
+  // tilt is large enough that the card's top and bottom edges visibly go out of parallel (clip: 5-8 px across the card)
+  const state = (nx, ny, rz = 0) => {
+    const b = 1 - (0.75 * nx + 0.25 * ny);
+    const rx = (REST[1] - ny) * 14, ry = (nx - REST[0]) * 16;
+    return { foil: { transform: `translateX(${u(-255 + 1030 * b)})` },
+      tilt: `perspective(${u(900)}) rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg) rotateZ(${rz.toFixed(2)}deg)` };
+  };
+  const foil = $('#foil'), face = $('#face');
+  if (demo) {
+    // the clip's cursor path over the card (card-normalised), read from the 10 fps sheets
+    // the lift ends in a wobble: right side nearer at 2.17 s, turned ~1 deg clockwise at 2.5 s
+    // (optional 4th value = rotateZ, 5th = the x the tilt reads instead of the foil's)
+    const path = [[0, .66, .46], [2.02, .66, .46, 0, .72], [2.17, .6, .47, .3, 1.05], [2.45, .45, .5, 1.1], [2.8, .62, .6, .4], [3.1, .72, .64], [3.6, .72, .64], [3.7, 1, .95], [4.1, .98, .9], [4.2, .8, .8], [4.3, .7, .7], [4.5, .55, .5],
+      [4.7, .45, .4], [4.9, .25, .3], [5.3, .06, .55], [5.4, .02, .6], [5.75, .02, .62], [5.9, .1, .8], [6.1, .4, 1.05], [6.3, .65, 1.1],
+      [6.5, .85, 1.05], [6.95, .97, .9], [7.15, .97, .88], [7.45, .95, .3], [7.6, .9, .1], [7.9, .65, .15], [8.1, .55, .25],
+      // after the cursor leaves the card the band swings left then back (clip band top at card x 330, 230, 150, 190, 285)
+      [8.3, .4, .4], [8.6, .26, .75], [8.88, .4, .72], [9.0, .51, .7], [9.32, .47, .66], [9.6, .36, .62], [11.18, .36, .62]];
+    play(foil, path.map(([t, x, y]) => [t, state(x, y).foil, 'ease-in-out']), D);
+    play(face, path.map(([t, x, y, z, tx]) => [t, { transform: state(tx ?? x, y, z).tilt }, 'ease-in-out']), D);
+    // the clip loops: frame 0 still shows the grey (#c9c9c9) left from the previous pass; hover #f4f4f4 from 9.6 s
+    play($('#cta'), [[0, { background: '#c9c9c9' }], [.04, { background: '#fff' }], [9.55, { background: '#fff' }], [9.7, { background: '#f4f4f4' }], [11.18, { background: '#f4f4f4' }]], D);
+  } else {
+    const s0 = state(...REST);
+    foil.style.transform = s0.foil.transform;
+    let ready = reduce;
+    setTimeout(() => { ready = true; }, reduce ? 0 : 2500);
+    $('#stage').addEventListener('pointermove', e => {
+      if (!ready) return;
+      const r = $('#card').getBoundingClientRect();
+      const nx = (e.clientX - r.left) / r.width, ny = (e.clientY - r.top) / r.height;
+      if (nx < -.05 || nx > 1.05 || ny < -.05 || ny > 1.25) return; // the card keeps its last pose when the pointer leaves
+      const s = state(nx, ny);
+      foil.style.transition = face.style.transition = 'transform .25s ease-out';
+      foil.style.transform = s.foil.transform;
+      face.style.transform = s.tilt;
+    });
+  }
+})();
+</script>
+</body>
+</html>

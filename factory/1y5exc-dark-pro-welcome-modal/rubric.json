@@ -1,0 +1,949 @@
+{
+ "slug": "1y5exc-dark-pro-welcome-modal",
+ "frame": {
+  "w": 1440,
+  "h": 1080
+ },
+ "at": "2026-10-22T23:07:23.519Z",
+ "model": "opus",
+ "costUsd": 1.016,
+ "summary": "A single dark modal (640x870, ~32px radius, #1d1d1d lower panel) is centred on a near-black #0a0a0a page. Its top 480px is a moody hero: a dark vignette gradient over which sits a matte black 3D card-reader (a trapezoid top deck with a long black slot and a small status LED at its lower right). Below the hero, left-aligned at x=439, come a white bold headline \"Welcome to Pro, Denis\", three lines of mid-grey body copy, a full-width white pill-rect CTA \"Start exploring\" (562x73, ~14px radius, black text) and a centred grey text link \"Connect your AI agent\". A close X sits top-right at (995,150). Motion: at 0.03-0.3s a white light glows along the slot. Then from 0.45s to 1.87s a holographic PRO membership card is fed up out of the slot in 6 ratchet steps, each a ~100ms jump of ~47px about every 0.25s (the card's top goes from y≈482 to 209). Meanwhile the slot keeps emitting a white glow where the card leaves it, and the LED glows amber. At 2.03-2.25s the card lifts clear of the slot, rising to top≈154 so its bottom floats ~15px above the deck, and the LED switches to green. From ~3s a cursor moves over the card and the card follows it with a small 3D perspective tilt (edges skew a few px). As it tilts, the foil's rainbow band (pink/green/violet, grainy and posterised, over a horizontally brushed silver-lilac base) slides across the card. The modal's text, button, close and reader never move.",
+ "elements": [
+  {
+   "name": "page background",
+   "box": [
+    0,
+    0,
+    1440,
+    1080
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "flat #0a0a0a"
+  },
+  {
+   "name": "modal",
+   "box": [
+    400,
+    106,
+    640,
+    870
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "#1d1d1d panel, ~32px corner radius, no visible border"
+  },
+  {
+   "name": "hero area",
+   "box": [
+    400,
+    106,
+    640,
+    479
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "darker #141414-#1d1d1d radial vignette, soft dark ellipse near top; ends with a hard horizontal seam at y≈585 against the #1d1d1d lower panel"
+  },
+  {
+   "name": "close X",
+   "box": [
+    986,
+    141,
+    18,
+    18
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "thin light-grey X, ~2px stroke"
+  },
+  {
+   "name": "card reader deck",
+   "box": [
+    445,
+    461,
+    550,
+    50
+   ],
+   "kind": "image",
+   "class": "css",
+   "note": "matte black trapezoid deck, top edge 497-943 widening to 445-995, soft highlight on its front lip"
+  },
+  {
+   "name": "card slot",
+   "box": [
+    486,
+    481,
+    468,
+    10
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "long black rounded slot; glows white while the card feeds"
+  },
+  {
+   "name": "reader body",
+   "box": [
+    445,
+    510,
+    550,
+    75
+   ],
+   "kind": "surface",
+   "class": "css",
+   "note": "dark front face fading into the hero background"
+  },
+  {
+   "name": "status LED",
+   "box": [
+    947,
+    543,
+    10,
+    10
+   ],
+   "kind": "decoration",
+   "class": "css",
+   "note": "small dot with a soft glow: amber (~#e0902a) while feeding, green (~#22c55e) from ~2.1s"
+  },
+  {
+   "name": "holographic PRO card",
+   "box": [
+    495,
+    162,
+    450,
+    285
+   ],
+   "kind": "image",
+   "class": "css",
+   "note": "~16px radius; brushed horizontal-grain silver-lilac foil with a moving diagonal rainbow band; thin bright rim"
+  },
+  {
+   "name": "card logo badge",
+   "box": [
+    521,
+    188,
+    36,
+    36
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "black circle with a white three-leaf sprout"
+  },
+  {
+   "name": "card PRO label",
+   "box": [
+    871,
+    189,
+    45,
+    16
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "\"PRO\" dark, bold, wide letter-spacing, ~16px"
+  },
+  {
+   "name": "card name",
+   "box": [
+    521,
+    380,
+    70,
+    20
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "\"DENIS\" dark, bold, tracked caps ~20px"
+  },
+  {
+   "name": "card member line",
+   "box": [
+    521,
+    404,
+    180,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "\"Member since Oct 2026\" dark grey ~16px"
+  },
+  {
+   "name": "card plan",
+   "box": [
+    845,
+    404,
+    72,
+    18
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "\"Quarterly\" dark grey ~16px, right aligned"
+  },
+  {
+   "name": "headline",
+   "box": [
+    439,
+    622,
+    356,
+    38
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "\"Welcome to Pro, Denis\" white, bold ~34px"
+  },
+  {
+   "name": "body copy",
+   "box": [
+    439,
+    674,
+    543,
+    102
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "3 lines, mid-grey ~#9a9a9a, ~24px, line height 35px"
+  },
+  {
+   "name": "Start exploring button",
+   "box": [
+    439,
+    810,
+    562,
+    73
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "white fill, ~14px radius, black semibold ~24px centred label"
+  },
+  {
+   "name": "Connect your AI agent link",
+   "box": [
+    589,
+    906,
+    262,
+    30
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "light-grey ~#bdbdbd ~24px text, centred at x=720, no underline"
+  },
+  {
+   "name": "cursor",
+   "box": [
+    690,
+    262,
+    36,
+    52
+   ],
+   "kind": "chrome",
+   "class": null,
+   "note": "system arrow pointer from the recording, wanders over the card from ~3.3s"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "page background",
+   "axis": "style",
+   "check": "Page around the modal is a flat near-black (~#0a0a0a) with no gradient or texture",
+   "box": [
+    0,
+    0,
+    1440,
+    1080
+   ],
+   "scope": "frame",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "modal",
+   "axis": "position",
+   "check": "Modal spans x≈400-1040 and y≈106-976 (640x870), horizontally centred in the frame",
+   "box": [
+    400,
+    106,
+    640,
+    870
+   ],
+   "scope": "frame",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "modal",
+   "axis": "style",
+   "check": "Modal corners are rounded at ~32px radius and the panel has no visible border stroke",
+   "box": [
+    400,
+    106,
+    640,
+    870
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "modal",
+   "axis": "style",
+   "check": "Lower half of modal (below y≈585) is a flat dark grey ~#1d1d1d, lighter than the page",
+   "box": [
+    400,
+    585,
+    640,
+    391
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "hero area",
+   "axis": "style",
+   "check": "Hero area (y 106-585) is darker than the lower panel, with a soft vignette; a straight horizontal seam separates it from the lower panel at y≈585",
+   "box": [
+    400,
+    106,
+    640,
+    480
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "close X",
+   "axis": "position",
+   "check": "A thin light-grey X close icon, ~18px, centred near (995,150) in the top-right of the modal",
+   "box": [
+    976,
+    131,
+    38,
+    38
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "card reader deck",
+   "axis": "present",
+   "check": "A matte black trapezoid card-reader deck sits across the hero at y≈461-510, widening from ~497-943 at its top to ~445-995 at its base",
+   "box": [
+    440,
+    455,
+    560,
+    135
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "card slot",
+   "axis": "style",
+   "check": "The deck has one long thin black rounded slot running ~x486-954 at y≈486",
+   "box": [
+    480,
+    476,
+    480,
+    20
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "status LED",
+   "axis": "style",
+   "check": "Small round LED at ~(952,548), ~8px, glowing green after the card has lifted",
+   "box": [
+    937,
+    533,
+    30,
+    30
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c10",
+   "element": "status LED",
+   "axis": "motion",
+   "check": "LED is amber/orange while the card is still feeding and turns green once the card lifts clear",
+   "box": [
+    937,
+    533,
+    30,
+    30
+   ],
+   "scope": "crop",
+   "at": 1,
+   "then": 2.5
+  },
+  {
+   "id": "c11",
+   "element": "headline",
+   "axis": "text",
+   "check": "Headline reads exactly \"Welcome to Pro, Denis\"",
+   "box": [
+    439,
+    618,
+    360,
+    46
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "headline",
+   "axis": "style",
+   "check": "Headline is pure white, bold, ~34px, left edge at x≈439",
+   "box": [
+    439,
+    618,
+    360,
+    46
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "body copy",
+   "axis": "text",
+   "check": "Body reads \"Download packs and assets, insert them in / Figma with the plugin, or let your AI agent fetch / them over MCP.\" broken over exactly 3 lines at those points",
+   "box": [
+    439,
+    672,
+    550,
+    106
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "body copy",
+   "axis": "style",
+   "check": "Body copy is mid-grey (~#9a9a9a), clearly dimmer than the white headline, ~24px regular",
+   "box": [
+    439,
+    672,
+    550,
+    106
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "Start exploring button",
+   "axis": "position",
+   "check": "CTA spans x≈439-1001, y≈810-883 (562x73), aligned with the text column",
+   "box": [
+    439,
+    810,
+    562,
+    73
+   ],
+   "scope": "frame",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "Start exploring button",
+   "axis": "style",
+   "check": "CTA is a solid white fill with ~14px corner radius (rounded rect, not a full pill)",
+   "box": [
+    434,
+    805,
+    572,
+    83
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "Start exploring button",
+   "axis": "text",
+   "check": "CTA label reads \"Start exploring\" in black semibold ~24px, centred at x≈720",
+   "box": [
+    439,
+    810,
+    562,
+    73
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "Connect your AI agent link",
+   "axis": "text",
+   "check": "Below the button, centred at x≈720 y≈921, grey text reads \"Connect your AI agent\" with no button background and no underline",
+   "box": [
+    580,
+    900,
+    280,
+    42
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c19",
+   "element": "holographic PRO card",
+   "axis": "position",
+   "check": "Floating card spans ≈x495-945, y≈162-447 (≈450x285), its bottom ~15px above the reader deck",
+   "box": [
+    485,
+    150,
+    470,
+    310
+   ],
+   "scope": "frame",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "holographic PRO card",
+   "axis": "style",
+   "check": "Card corners are rounded at ~16px with a thin bright rim along its edge",
+   "box": [
+    485,
+    150,
+    470,
+    310
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "holographic PRO card",
+   "axis": "style",
+   "check": "Card material is holographic foil: a pale silver-lilac base with fine horizontal brushed streaks plus a diagonal rainbow band (pink, mint green, violet) running from upper-middle to lower-left",
+   "box": [
+    495,
+    162,
+    450,
+    285
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "holographic PRO card",
+   "axis": "style",
+   "check": "The rainbow band is soft, grainy and posterised at its edges, NOT a smooth flat linear gradient with crisp hard stripes",
+   "box": [
+    495,
+    162,
+    450,
+    285
+   ],
+   "scope": "crop",
+   "at": 5.4,
+   "then": null
+  },
+  {
+   "id": "c23",
+   "element": "holographic PRO card",
+   "axis": "style",
+   "check": "The card has no dark outline or stroke; its edge reads as light catching a rim",
+   "box": [
+    485,
+    150,
+    470,
+    310
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "card logo badge",
+   "axis": "imagery",
+   "check": "Top-left of the card: a ~36px black circle holding a small white three-leaf sprout glyph at ~(539,206)",
+   "box": [
+    515,
+    182,
+    50,
+    50
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c25",
+   "element": "card PRO label",
+   "axis": "text",
+   "check": "Top-right of the card reads \"PRO\" in dark bold caps with wide letter-spacing",
+   "box": [
+    860,
+    182,
+    70,
+    30
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c26",
+   "element": "card name",
+   "axis": "text",
+   "check": "Lower-left of the card reads \"DENIS\" in dark bold tracked caps",
+   "box": [
+    515,
+    374,
+    90,
+    30
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c27",
+   "element": "card member line",
+   "axis": "text",
+   "check": "Under the name it reads \"Member since Oct 2026\" in smaller dark-grey regular type",
+   "box": [
+    515,
+    400,
+    200,
+    26
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "card plan",
+   "axis": "text",
+   "check": "Bottom-right of the card reads \"Quarterly\" in small dark-grey type, baseline level with the member line",
+   "box": [
+    835,
+    400,
+    95,
+    26
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c29",
+   "element": "holographic PRO card",
+   "axis": "present",
+   "check": "At 0.05s no card is visible: the reader slot is empty",
+   "box": [
+    440,
+    150,
+    560,
+    440
+   ],
+   "scope": "crop",
+   "at": 0.05,
+   "then": null
+  },
+  {
+   "id": "c30",
+   "element": "card slot",
+   "axis": "motion",
+   "check": "Between 0.05s and 0.5s a bright white glow appears along the slot, spreading wider than the slot itself, before any card shows",
+   "box": [
+    440,
+    440,
+    560,
+    80
+   ],
+   "scope": "crop",
+   "at": 0.05,
+   "then": 0.3
+  },
+  {
+   "id": "c31",
+   "element": "holographic PRO card",
+   "axis": "motion",
+   "check": "The card emerges from the slot top-first: at 0.5s only a ~35px sliver with \"PRO\" is above the slot; by 1.0s the top is at y≈366 with the logo visible",
+   "box": [
+    440,
+    150,
+    560,
+    360
+   ],
+   "scope": "crop",
+   "at": 0.5,
+   "then": 1
+  },
+  {
+   "id": "c32",
+   "element": "holographic PRO card",
+   "axis": "motion",
+   "check": "The card rises in discrete ratchet steps of ~47px (≈0.45, 0.7, 0.95, 1.22, 1.5, 1.75s, each ~100ms), holding still between steps, NOT one smooth slide",
+   "box": [
+    440,
+    150,
+    560,
+    360
+   ],
+   "scope": "crop",
+   "at": 0.8,
+   "then": 1.1
+  },
+  {
+   "id": "c33",
+   "element": "holographic PRO card",
+   "axis": "motion",
+   "check": "While feeding, the card's lower part is hidden inside the slot (clipped at the slot line y≈490) and a white glow lights the card where it exits",
+   "box": [
+    440,
+    350,
+    560,
+    160
+   ],
+   "scope": "crop",
+   "at": 1.8,
+   "then": null
+  },
+  {
+   "id": "c34",
+   "element": "holographic PRO card",
+   "axis": "motion",
+   "check": "Between 1.8s and 2.25s the card lifts completely out of the slot, top going from y≈209 to ≈154, leaving a dark gap above the deck",
+   "box": [
+    440,
+    140,
+    560,
+    370
+   ],
+   "scope": "crop",
+   "at": 1.8,
+   "then": 2.25
+  },
+  {
+   "id": "c35",
+   "element": "holographic PRO card",
+   "axis": "motion",
+   "check": "After lifting, the card shows a small 3D perspective tilt: its top and bottom edges are slightly non-parallel (a few px skew) and the tilt changes over time",
+   "box": [
+    485,
+    150,
+    470,
+    310
+   ],
+   "scope": "crop",
+   "at": 2.17,
+   "then": 2.5
+  },
+  {
+   "id": "c36",
+   "element": "holographic PRO card",
+   "axis": "motion",
+   "check": "The rainbow band slides across the card as it tilts: at 4.58s it lies through the card's centre/right, at 5.9s near the top-right corner",
+   "box": [
+    495,
+    162,
+    450,
+    285
+   ],
+   "scope": "crop",
+   "at": 4.58,
+   "then": 5.9
+  },
+  {
+   "id": "c37",
+   "element": "holographic PRO card",
+   "axis": "motion",
+   "check": "Card tilt and foil follow the pointer; between 6.95s and 7.45s the band shifts while the card stays within ~10px of its rest box",
+   "box": [
+    485,
+    150,
+    470,
+    310
+   ],
+   "scope": "crop",
+   "at": 6.95,
+   "then": 7.45
+  },
+  {
+   "id": "c38",
+   "element": "modal",
+   "axis": "motion",
+   "check": "The headline, body, CTA, link, close X and reader do not move at any point (only the card, the slot glow and the LED change)",
+   "box": [
+    400,
+    106,
+    640,
+    870
+   ],
+   "scope": "frame",
+   "at": 2.5,
+   "then": 9
+  },
+  {
+   "id": "c39",
+   "element": "holographic PRO card",
+   "axis": "style",
+   "check": "A soft dark drop shadow sits under the floating card, with no hard edge",
+   "box": [
+    480,
+    420,
+    480,
+    50
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  },
+  {
+   "id": "c40",
+   "element": "card reader deck",
+   "axis": "style",
+   "check": "The reader looks like matte black plastic with a faint top-lip highlight, NOT a glossy or outlined shape",
+   "box": [
+    440,
+    455,
+    560,
+    135
+   ],
+   "scope": "crop",
+   "at": 3.3,
+   "then": null
+  }
+ ],
+ "imagery": [
+  {
+   "name": "holographic PRO card",
+   "box": [
+    495,
+    162,
+    450,
+    285
+   ],
+   "class": "css",
+   "what": "Membership card in holographic foil: brushed silver-lilac base with a grainy diagonal rainbow band whose position shifts with tilt, carrying the logo, \"PRO\", \"DENIS\", \"Member since Oct 2026\", \"Quarterly\"",
+   "at": 3.3
+  },
+  {
+   "name": "card reader",
+   "box": [
+    445,
+    461,
+    550,
+    124
+   ],
+   "class": "css",
+   "what": "Matte black 3D card-reader deck with a long slot and a status LED (amber, then green)",
+   "at": 3.3
+  },
+  {
+   "name": "hero vignette",
+   "box": [
+    400,
+    106,
+    640,
+    479
+   ],
+   "class": "css",
+   "what": "Dark radial vignette backdrop behind the reader",
+   "at": 3.3
+  },
+  {
+   "name": "card logo badge",
+   "box": [
+    521,
+    188,
+    36,
+    36
+   ],
+   "class": "structured",
+   "what": "Black circle with a white three-leaf sprout mark",
+   "at": 3.3
+  },
+  {
+   "name": "slot glow",
+   "box": [
+    480,
+    450,
+    480,
+    60
+   ],
+   "class": "css",
+   "what": "White light bloom along the slot as the card feeds out",
+   "at": 0.3
+  }
+ ],
+ "moves": [
+  {
+   "element": "slot glow",
+   "what": "white glow blooms along the reader slot",
+   "from": 0.03,
+   "to": 0.3,
+   "px": null
+  },
+  {
+   "element": "holographic PRO card",
+   "what": "card feeds up out of the slot in 6 ratchet steps (~100ms each, ~0.25s apart), top y 482→209",
+   "from": 0.45,
+   "to": 1.87,
+   "px": 273
+  },
+  {
+   "element": "holographic PRO card",
+   "what": "card lifts clear of the slot and floats, top y 209→154",
+   "from": 2.03,
+   "to": 2.25,
+   "px": 55
+  },
+  {
+   "element": "status LED",
+   "what": "LED switches from amber to green",
+   "from": 1.9,
+   "to": 2.17,
+   "px": null
+  },
+  {
+   "element": "holographic PRO card",
+   "what": "card tilts in 3D after the pointer, rainbow foil band slides across it",
+   "from": 2.3,
+   "to": 11.18,
+   "px": 10
+  },
+  {
+   "element": "cursor",
+   "what": "recording pointer enters bottom-right, wanders over the card, ends on the CTA",
+   "from": 3.3,
+   "to": 11.18,
+   "px": null
+  }
+ ]
+}

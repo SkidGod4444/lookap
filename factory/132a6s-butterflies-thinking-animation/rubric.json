@@ -1,0 +1,712 @@
+{
+ "slug": "132a6s-butterflies-thinking-animation",
+ "frame": {
+  "w": 1160,
+  "h": 720
+ },
+ "at": "2026-10-22T21:54:57.723Z",
+ "model": "opus",
+ "costUsd": 0.567,
+ "summary": "A near-white (#fdfdfd) 1160x720 canvas with one huge black line of type, \"Thinking...\" in a neutral grotesque sans (Inter/SF-like, regular-medium weight, cap height ~120px), spanning x 218-934, baseline ~y405, with the g descender to ~y435. Top-right sits a small pill button \"GIF\" with a download-arrow icon (box ~1055,18,86,44), white fill, 1px very light grey border, fully rounded. The text and button never move. The motion is a looping swarm of small flat-illustrated butterflies (~15-35px), each with two-tone wings (upper and lower wings in different saturated colours: purple, pink, orange, yellow, teal, mint, sky blue), a white highlight dot on each wing lobe, a thin dark body and two antennae. A cycle runs ~4.3s and plays twice (0.3-3.15s and 4.7-7.6s): butterflies enter from the left of the word, flock onto the letters left to right until the glyphs are densely covered (peak ~1.0-1.7s and ~5.3-6.0s, with \"Thinking\" heavily covered and the dots partly), then lift off and drift up and to the right, fading and blurring as they recede (distant ones are translucent and soft), leaving the screen empty by ~3.2s and ~7.6s. Between swarms (3.2-4.65s) the frame holds plain text only; the butterflies flap (wings change silhouette frame to frame) and sit on top of the type.",
+ "elements": [
+  {
+   "name": "Background",
+   "box": [
+    0,
+    0,
+    1160,
+    720
+   ],
+   "kind": "surface",
+   "class": null,
+   "note": "flat near-white #fdfdfd, no texture or gradient"
+  },
+  {
+   "name": "Headline 'Thinking...'",
+   "box": [
+    218,
+    280,
+    716,
+    155
+   ],
+   "kind": "text",
+   "class": null,
+   "note": "black #090909 sans, cap/ascender top ~y283, baseline ~y405, g descender to ~y435, three round period dots at x~847, 884, 921"
+  },
+  {
+   "name": "GIF download pill",
+   "box": [
+    1055,
+    18,
+    86,
+    44
+   ],
+   "kind": "control",
+   "class": null,
+   "note": "white pill, 1px light grey (#eaeaea) border, full radius, contains icon and 'GIF' label in dark grey ~15px"
+  },
+  {
+   "name": "Download icon",
+   "box": [
+    1076,
+    33,
+    13,
+    14
+   ],
+   "kind": "icon",
+   "class": "structured",
+   "note": "down arrow onto a short baseline bar, thin dark stroke"
+  },
+  {
+   "name": "Butterfly swarm",
+   "box": [
+    100,
+    20,
+    850,
+    580
+   ],
+   "kind": "motion",
+   "class": "structured",
+   "note": "dozens of small flat butterflies (15-35px) with two-tone wings, white wing highlight dots, dark body and antennae; near ones crisp and saturated, far ones translucent and blurred"
+  },
+  {
+   "name": "Single butterfly (sample)",
+   "box": [
+    440,
+    280,
+    90,
+    90
+   ],
+   "kind": "image",
+   "class": "structured",
+   "note": "e.g. purple upper wings over blue lower wings, white dot on each lobe, black thorax line, two antennae"
+  }
+ ],
+ "criteria": [
+  {
+   "id": "c01",
+   "element": "Background",
+   "axis": "style",
+   "check": "Background is a flat near-white (#fdfdfd-ish) with no gradient, texture or vignette",
+   "box": [
+    0,
+    0,
+    1160,
+    720
+   ],
+   "scope": "frame",
+   "at": 3.95,
+   "then": null
+  },
+  {
+   "id": "c02",
+   "element": "Headline 'Thinking...'",
+   "axis": "text",
+   "check": "Headline reads exactly 'Thinking...' (capital T, three periods)",
+   "box": [
+    218,
+    280,
+    716,
+    155
+   ],
+   "scope": "crop",
+   "at": 3.95,
+   "then": null
+  },
+  {
+   "id": "c03",
+   "element": "Headline 'Thinking...'",
+   "axis": "style",
+   "check": "Headline is solid near-black (#090909) on white, no outline or shadow",
+   "box": [
+    218,
+    280,
+    716,
+    155
+   ],
+   "scope": "crop",
+   "at": 3.95,
+   "then": null
+  },
+  {
+   "id": "c04",
+   "element": "Headline 'Thinking...'",
+   "axis": "style",
+   "check": "Headline is a neutral geometric/grotesque sans at regular-to-medium weight (not bold, not serif); stem width ~20px",
+   "box": [
+    218,
+    280,
+    716,
+    155
+   ],
+   "scope": "crop",
+   "at": 3.95,
+   "then": null
+  },
+  {
+   "id": "c05",
+   "element": "Headline 'Thinking...'",
+   "axis": "position",
+   "check": "Headline spans x ~218 to ~934 with the T's top at y ~283",
+   "box": [
+    200,
+    270,
+    750,
+    170
+   ],
+   "scope": "frame",
+   "at": 3.95,
+   "then": null
+  },
+  {
+   "id": "c06",
+   "element": "Headline 'Thinking...'",
+   "axis": "position",
+   "check": "Baseline sits at y ~405 and the g descender reaches y ~435",
+   "box": [
+    730,
+    380,
+    100,
+    60
+   ],
+   "scope": "crop",
+   "at": 3.95,
+   "then": null
+  },
+  {
+   "id": "c07",
+   "element": "Headline 'Thinking...'",
+   "axis": "position",
+   "check": "Headline is horizontally near centre of the frame (centre x ~576) and its vertical centre slightly above the frame middle (~y350)",
+   "box": [
+    0,
+    0,
+    1160,
+    720
+   ],
+   "scope": "frame",
+   "at": 3.95,
+   "then": null
+  },
+  {
+   "id": "c08",
+   "element": "Headline 'Thinking...'",
+   "axis": "style",
+   "check": "The three trailing dots are filled circles ~22px across, evenly spaced ~37px apart, sitting on the baseline",
+   "box": [
+    830,
+    370,
+    110,
+    45
+   ],
+   "scope": "crop",
+   "at": 3.95,
+   "then": null
+  },
+  {
+   "id": "c09",
+   "element": "Headline 'Thinking...'",
+   "axis": "motion",
+   "check": "Headline does not move, scale or change colour between the two moments",
+   "box": [
+    218,
+    280,
+    716,
+    155
+   ],
+   "scope": "crop",
+   "at": 0.15,
+   "then": 3.95
+  },
+  {
+   "id": "c10",
+   "element": "GIF download pill",
+   "axis": "present",
+   "check": "A small pill button sits in the top-right corner",
+   "box": [
+    1040,
+    10,
+    110,
+    60
+   ],
+   "scope": "crop",
+   "at": 3.95,
+   "then": null
+  },
+  {
+   "id": "c11",
+   "element": "GIF download pill",
+   "axis": "position",
+   "check": "Pill box is ~[1055,18,86,44], ~20px from top and right edges",
+   "box": [
+    1040,
+    10,
+    110,
+    60
+   ],
+   "scope": "crop",
+   "at": 3.95,
+   "then": null
+  },
+  {
+   "id": "c12",
+   "element": "GIF download pill",
+   "axis": "style",
+   "check": "Pill is white with a 1px very light grey border and fully rounded ends, no shadow",
+   "box": [
+    1050,
+    15,
+    95,
+    50
+   ],
+   "scope": "crop",
+   "at": 3.95,
+   "then": null
+  },
+  {
+   "id": "c13",
+   "element": "GIF download pill",
+   "axis": "text",
+   "check": "Pill label reads 'GIF' in dark grey sans ~15px, to the right of the icon",
+   "box": [
+    1090,
+    28,
+    40,
+    25
+   ],
+   "scope": "crop",
+   "at": 3.95,
+   "then": null
+  },
+  {
+   "id": "c14",
+   "element": "Download icon",
+   "axis": "imagery",
+   "check": "Icon is a thin down arrow landing on a short horizontal bar, drawn in dark stroke",
+   "box": [
+    1072,
+    30,
+    20,
+    20
+   ],
+   "scope": "crop",
+   "at": 3.95,
+   "then": null
+  },
+  {
+   "id": "c15",
+   "element": "Butterfly swarm",
+   "axis": "present",
+   "check": "At rest between swarms the frame shows only text and pill, no butterflies",
+   "box": [
+    0,
+    0,
+    1160,
+    720
+   ],
+   "scope": "frame",
+   "at": 3.95,
+   "then": null
+  },
+  {
+   "id": "c16",
+   "element": "Butterfly swarm",
+   "axis": "present",
+   "check": "Near the start only 1-3 butterflies are visible, near the left half of the word",
+   "box": [
+    0,
+    0,
+    1160,
+    720
+   ],
+   "scope": "frame",
+   "at": 0.15,
+   "then": null
+  },
+  {
+   "id": "c17",
+   "element": "Butterfly swarm",
+   "axis": "position",
+   "check": "Early in the cycle butterflies cluster at the left of the word (over 'Th', x ~200-450) while the right of the word is clear",
+   "box": [
+    100,
+    150,
+    850,
+    450
+   ],
+   "scope": "frame",
+   "at": 0.5,
+   "then": null
+  },
+  {
+   "id": "c18",
+   "element": "Butterfly swarm",
+   "axis": "motion",
+   "check": "The swarm spreads left to right across the word: at 0.5s it covers 'Th', by 1.0s it reaches the 'g'",
+   "box": [
+    150,
+    200,
+    850,
+    300
+   ],
+   "scope": "frame",
+   "at": 0.5,
+   "then": 1
+  },
+  {
+   "id": "c19",
+   "element": "Butterfly swarm",
+   "axis": "present",
+   "check": "At peak, dozens (50+) of butterflies sit densely on the letter shapes so the word reads as patterned with butterflies",
+   "box": [
+    200,
+    250,
+    760,
+    200
+   ],
+   "scope": "frame",
+   "at": 1.72,
+   "then": null
+  },
+  {
+   "id": "c20",
+   "element": "Butterfly swarm",
+   "axis": "position",
+   "check": "At peak the butterflies concentrate on the glyph strokes (following the letter shapes), not as a random cloud over the whole frame",
+   "box": [
+    200,
+    250,
+    760,
+    200
+   ],
+   "scope": "crop",
+   "at": 1.72,
+   "then": null
+  },
+  {
+   "id": "c21",
+   "element": "Butterfly swarm",
+   "axis": "style",
+   "check": "Butterflies are drawn on top of the black type (they occlude it)",
+   "box": [
+    300,
+    280,
+    160,
+    140
+   ],
+   "scope": "crop",
+   "at": 1,
+   "then": null
+  },
+  {
+   "id": "c22",
+   "element": "Butterfly swarm",
+   "axis": "motion",
+   "check": "Butterflies lift off the left letters first and drift up and to the right: at 2.5s the left of the word is clear while a flock rises above 'king'",
+   "box": [
+    150,
+    50,
+    850,
+    400
+   ],
+   "scope": "frame",
+   "at": 1.72,
+   "then": 2.5
+  },
+  {
+   "id": "c23",
+   "element": "Butterfly swarm",
+   "axis": "position",
+   "check": "Departing butterflies fly toward the upper right (y < 250, x 400-950)",
+   "box": [
+    350,
+    40,
+    650,
+    260
+   ],
+   "scope": "frame",
+   "at": 2.5,
+   "then": null
+  },
+  {
+   "id": "c24",
+   "element": "Butterfly swarm",
+   "axis": "motion",
+   "check": "By ~3.2s every butterfly is gone and the frame holds plain text until ~4.65s",
+   "box": [
+    0,
+    0,
+    1160,
+    720
+   ],
+   "scope": "frame",
+   "at": 3.2,
+   "then": 4.45
+  },
+  {
+   "id": "c25",
+   "element": "Butterfly swarm",
+   "axis": "motion",
+   "check": "The swarm cycle repeats: a second swarm builds on the word from ~4.7s, peaks ~6s and departs up-right by ~7.6s",
+   "box": [
+    0,
+    0,
+    1160,
+    720
+   ],
+   "scope": "frame",
+   "at": 4.45,
+   "then": 5.97
+  },
+  {
+   "id": "c26",
+   "element": "Butterfly swarm",
+   "axis": "present",
+   "check": "Late in the second cycle only a few butterflies remain upper-right (e.g. one purple near x820,y105)",
+   "box": [
+    700,
+    60,
+    250,
+    100
+   ],
+   "scope": "frame",
+   "at": 8.1,
+   "then": null
+  },
+  {
+   "id": "c27",
+   "element": "Single butterfly (sample)",
+   "axis": "imagery",
+   "check": "Each butterfly is a flat cartoon illustration: four rounded wing lobes, thin dark body, two antennae (structured, not photo)",
+   "box": [
+    300,
+    280,
+    160,
+    140
+   ],
+   "scope": "crop",
+   "at": 1,
+   "then": null
+  },
+  {
+   "id": "c28",
+   "element": "Single butterfly (sample)",
+   "axis": "style",
+   "check": "Upper and lower wings of one butterfly are different colours (e.g. pink over orange, purple over blue)",
+   "box": [
+    300,
+    280,
+    160,
+    140
+   ],
+   "scope": "crop",
+   "at": 1,
+   "then": null
+  },
+  {
+   "id": "c29",
+   "element": "Single butterfly (sample)",
+   "axis": "style",
+   "check": "Each wing lobe carries a small white highlight dot",
+   "box": [
+    300,
+    280,
+    160,
+    140
+   ],
+   "scope": "crop",
+   "at": 1,
+   "then": null
+  },
+  {
+   "id": "c30",
+   "element": "Butterfly swarm",
+   "axis": "style",
+   "check": "Palette of wings includes purple, pink, orange, yellow, teal/mint and sky blue, all saturated",
+   "box": [
+    200,
+    250,
+    760,
+    200
+   ],
+   "scope": "frame",
+   "at": 1.72,
+   "then": null
+  },
+  {
+   "id": "c31",
+   "element": "Butterfly swarm",
+   "axis": "style",
+   "check": "Wings have no dark outline stroke; shapes are flat fills with soft rounded edges",
+   "box": [
+    300,
+    280,
+    160,
+    140
+   ],
+   "scope": "crop",
+   "at": 1,
+   "then": null
+  },
+  {
+   "id": "c32",
+   "element": "Butterfly swarm",
+   "axis": "style",
+   "check": "Butterflies vary in size, roughly 15px to 35px across",
+   "box": [
+    150,
+    150,
+    850,
+    350
+   ],
+   "scope": "frame",
+   "at": 0.65,
+   "then": null
+  },
+  {
+   "id": "c33",
+   "element": "Butterfly swarm",
+   "axis": "style",
+   "check": "Some butterflies away from the word are translucent and blurred (depth fade), others crisp",
+   "box": [
+    150,
+    80,
+    900,
+    550
+   ],
+   "scope": "frame",
+   "at": 0.65,
+   "then": null
+  },
+  {
+   "id": "c34",
+   "element": "Butterfly swarm",
+   "axis": "motion",
+   "check": "Butterflies flap: a butterfly's wing silhouette changes (open vs folded) between nearby moments",
+   "box": [
+    300,
+    280,
+    160,
+    140
+   ],
+   "scope": "crop",
+   "at": 0.65,
+   "then": 1
+  },
+  {
+   "id": "c35",
+   "element": "Butterfly swarm",
+   "axis": "motion",
+   "check": "Butterflies fade in/out with opacity at entry and exit rather than popping",
+   "box": [
+    300,
+    40,
+    700,
+    250
+   ],
+   "scope": "frame",
+   "at": 2.5,
+   "then": 3.2
+  },
+  {
+   "id": "c36",
+   "element": "Butterfly swarm",
+   "axis": "style",
+   "check": "Butterflies are rotated at varied angles (not all upright)",
+   "box": [
+    200,
+    250,
+    760,
+    200
+   ],
+   "scope": "crop",
+   "at": 1,
+   "then": null
+  },
+  {
+   "id": "c37",
+   "element": "GIF download pill",
+   "axis": "motion",
+   "check": "Pill does not move or change during the swarm",
+   "box": [
+    1050,
+    15,
+    95,
+    50
+   ],
+   "scope": "crop",
+   "at": 0.15,
+   "then": 1.72
+  }
+ ],
+ "imagery": [
+  {
+   "name": "Butterfly swarm",
+   "box": [
+    200,
+    250,
+    760,
+    200
+   ],
+   "class": "structured",
+   "what": "dozens of flat cartoon butterflies with two-tone wings (purple, pink, orange, yellow, teal, sky blue), white wing highlight dots, dark bodies and antennae, sitting on the letters of 'Thinking...'",
+   "at": 1.72
+  },
+  {
+   "name": "Download icon",
+   "box": [
+    1076,
+    33,
+    13,
+    14
+   ],
+   "class": "structured",
+   "what": "down arrow onto a baseline bar",
+   "at": 3.95
+  }
+ ],
+ "moves": [
+  {
+   "element": "Butterfly swarm",
+   "what": "butterflies enter from the left and settle onto 'Th'",
+   "from": 0.3,
+   "to": 0.65,
+   "px": null
+  },
+  {
+   "element": "Butterfly swarm",
+   "what": "swarm spreads left to right across the word until the glyphs are densely covered",
+   "from": 0.65,
+   "to": 1.72,
+   "px": 700
+  },
+  {
+   "element": "Butterfly swarm",
+   "what": "butterflies lift off left-first and drift up-right, fading and blurring",
+   "from": 1.72,
+   "to": 3.15,
+   "px": 300
+  },
+  {
+   "element": "Butterfly swarm",
+   "what": "empty hold: text only",
+   "from": 3.2,
+   "to": 4.65,
+   "px": null
+  },
+  {
+   "element": "Butterfly swarm",
+   "what": "second cycle: enter, cover the word, depart up-right",
+   "from": 4.7,
+   "to": 7.6,
+   "px": null
+  },
+  {
+   "element": "Butterfly swarm",
+   "what": "continuous wing flapping on every butterfly while visible",
+   "from": 0.3,
+   "to": 7.6,
+   "px": null
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+{
+ "model": "Claude Opus 5.5",
+ "modelId": "claude-opus-5-5",
+ "date": "2026-10-24",
+ "run": {
+  "model": "Claude Opus 5.5",
+  "turns": 171,
+  "outputTokens": 87105,
+  "totalTokens": 9132251,
+  "costUsd": 12.45,
+  "minutes": 63.9,
+  "score": 79
+ },
+ "hand": "fixed by hand after 4 judged rounds (round 4 kept): the strings 2 px and the wire darker, measured from the clip; rubric 41 of 43 under a three-vote judge, reviewed by eye; the avatars are sampled from the clip",
+ "hint": "Hover a card to tilt it and lay the holographic sheen; click to flip it."
+}

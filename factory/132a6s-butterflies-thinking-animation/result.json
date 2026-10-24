@@ -1,0 +1,114 @@
+{
+ "slug": "132a6s-butterflies-thinking-animation",
+ "title": "Butterflies Thinking Animation",
+ "author": "sucodee",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "pass",
+ "ended": "all criteria pass",
+ "bestRound": 2,
+ "rank": 93,
+ "allPass": true,
+ "rubric": {
+  "pass": 37,
+  "fail": 0,
+  "unsure": 0,
+  "of": 37,
+  "failed": [],
+  "counted": 37
+ },
+ "score": 66,
+ "motion": "the render changes where the clip changes",
+ "imagery": [
+  {
+   "name": "Butterfly swarm",
+   "class": "structured",
+   "box": [
+    200,
+    250,
+    760,
+    200
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "Download icon",
+   "class": "structured",
+   "box": [
+    1076,
+    33,
+    13,
+    14
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 14.1,
+   "turns": 60,
+   "costUsd": 3.258933,
+   "tokens": {
+    "written": 40632,
+    "read": 2492148
+   },
+   "judgeUsd": 0.715,
+   "ended": "completed",
+   "score": 66,
+   "rank": 91,
+   "allPass": false,
+   "rubric": {
+    "pass": 36,
+    "fail": 1,
+    "unsure": 0,
+    "of": 37
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 15.1,
+   "turns": 38,
+   "costUsd": 1.4371190000000003,
+   "tokens": {
+    "written": 18917,
+    "read": 2094823
+   },
+   "judgeUsd": 0.452,
+   "ended": "completed",
+   "score": 66,
+   "rank": 93,
+   "allPass": true,
+   "rubric": {
+    "pass": 37,
+    "fail": 0,
+    "unsure": 0,
+    "of": 37
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  }
+ ],
+ "minutes": 29.2,
+ "tokens": {
+  "written": 59549,
+  "read": 4586971
+ },
+ "cost": {
+  "codingUsd": 4.7,
+  "judgeUsd": 1.17,
+  "rubricUsd": 0.567,
+  "totalUsd": 6.43
+ },
+ "notes": true,
+ "at": "2026-10-23T19:39:38.898Z",
+ "handFix": {
+  "on": "2026-10-24",
+  "what": "the two scouts fade in a little later, so none shows as the loop restarts",
+  "judge": "37/37 pass, 0 fail, 0 unsure, 3 votes"
+ }
+}

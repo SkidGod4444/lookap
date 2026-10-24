@@ -1,0 +1,16 @@
+{
+ "model": "Claude Opus 5.5",
+ "modelId": "claude-opus-5-5",
+ "date": "2026-10-24",
+ "run": {
+  "model": "Claude Opus 5.5",
+  "turns": 119,
+  "outputTokens": 107522,
+  "totalTokens": 13684368,
+  "costUsd": 12.73,
+  "minutes": 207.9,
+  "score": 87
+ },
+ "hand": "none: the factory alone, 4 judged rounds, best round 4 kept; rubric 39 of 40 under a three-vote judge, reviewed by eye",
+ "hint": "Move the pointer over the card: it tilts and the holographic foil follows."
+}

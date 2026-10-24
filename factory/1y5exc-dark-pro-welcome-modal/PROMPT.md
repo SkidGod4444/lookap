@@ -1,0 +1,109 @@
+Rebuild the lookap entry "Dark Pro Welcome Modal" by Craftwork as one self-contained HTML file at factory/1y5exc-dark-pro-welcome-modal/index.html.
+
+What you have
+- factory/1y5exc-dark-pro-welcome-modal/brief.json: the record, the draft measurement (frame, phases, keyframes with their times, background, palette, element boxes, moves), the credit, and the measuring method behind every recipe.
+- factory/1y5exc-dark-pro-welcome-modal/rubric.json: the checklist this rebuild is judged against, written from the clip. Its summary: A single dark modal (640x870, ~32px radius, #1d1d1d lower panel) is centred on a near-black #0a0a0a page. Its top 480px is a moody hero: a dark vignette gradient over which sits a matte black 3D card-reader (a trapezoid top deck with a long black slot and a small status LED at its lower right). Below the hero, left-aligned at x=439, come a white bold headline "Welcome to Pro, Denis", three lines of mid-grey body copy, a full-width white pill-rect CTA "Start exploring" (562x73, ~14px radius, black text) and a centred grey text link "Connect your AI agent". A close X sits top-right at (995,150). Motion: at 0.03-0.3s a white light glows along the slot. Then from 0.45s to 1.87s a holographic PRO membership card is fed up out of the slot in 6 ratchet steps, each a ~100ms jump of ~47px about every 0.25s (the card's top goes from y≈482 to 209). Meanwhile the slot keeps emitting a white glow where the card leaves it, and the LED glows amber. At 2.03-2.25s the card lifts clear of the slot, rising to top≈154 so its bottom floats ~15px above the deck, and the LED switches to green. From ~3s a cursor moves over the card and the card follows it with a small 3D perspective tilt (edges skew a few px). As it tilts, the foil's rainbow band (pink/green/violet, grainy and posterised, over a horizontally brushed silver-lilac base) slides across the card. The modal's text, button, close and reader never move.
+- The designer's clip at its keyframes (frame 1440 x 1080, 11.18s):
+  - kf1 at 3.3s: public/drafts/5mvem33/kf1.jpg
+  - kf2 at 4s: public/drafts/5mvem33/kf2.jpg
+  - kf3 at 5.4s: public/drafts/5mvem33/kf3.jpg
+  - kf4 at 6.95s: public/drafts/5mvem33/kf4.jpg
+  Read every one of them before writing anything, then describe the layout to yourself in one paragraph: regions, alignment, type scale, radii, spacing rhythm, what moves between the keyframes.
+- The clip itself, through `bun scripts/probe.ts 1y5exc-dark-pro-welcome-modal`:
+    --sheet a,b                 a contact sheet of that span at 10 fps (36 frames), written to factory/1y5exc-dark-pro-welcome-modal/sheets/; cover the whole clip in 3.6 s spans and Read every sheet
+    --diff a,b                  the clip at a, at b, and what changed between them in white: which thing moves, which only has something pass over it; written to factory/1y5exc-dark-pro-welcome-modal/diff/
+    --col x --t t1,t2           light/mid/dark runs down column x at those times: row heights, gaps, borders, where things sit
+    --col x --t t --hex a,b     exact colours, one per pixel, from y a to b: the true gradient of a surface, a border's real colour, a gap's shade
+    --row y --t t [--hex a,b]   the same along a row
+    --track x --from a --to b   the top and bottom edge of the red/dark/light stuff in column x per frame at 60 fps: a motion's start, end, distance and shape
+    --zoom x,y,w,h --t t        that crop of the clip at up to 4x beside the same crop of your render at that moment (run the checker with --at t first), written to factory/1y5exc-dark-pro-welcome-modal/zoom/
+    --patch x,y,w,h --t t --as name
+                                a texture tile from the clip as a small JPEG, written to factory/1y5exc-dark-pro-welcome-modal/patches/ and set into your index.html as --patch-name in <style id="patches">, for background-image: var(--patch-name). The only way to sample; never retype base64 yourself. Refused above a tile's size.
+    --placeholder x,y,w,h --t t --as name
+                                a coarse colour grid of that region, set as --placeholder-name: the stand-in for a photograph, painting or screenshot the rebuild may not copy.
+    --drive "press x,y; move x,y; shot name; release; wait ms; click x,y; hover x,y"
+                                real pointer gestures on your page, screenshots to factory/1y5exc-dark-pro-welcome-modal/drive/
+  Keyframes are moments when nothing moves. Everything between them (how a thing enters, stretches, snaps, settles, in what order) is only in the frames, so look there before you decide the timeline.
+- The checker: `bun --conditions=react-server scripts/check-build.ts 1y5exc-dark-pro-welcome-modal`. It renders your file at the frame size, seeks every animation on the page to each moment, screenshots, and compares with the clip at the keyframes, the middle of every measured phase and the rubric's moments. It prints: a pixel score per moment (a floor, not a goal: it cannot tell a drawn ring from a glass lens or a nine-spoke spinner from a disc), the elements whose colour (deltaE) or place (shift) differ, whether your render moves where the clip moves, and how each measured moving part keeps step. It writes factory/1y5exc-dark-pro-welcome-modal/side.png (designer left, yours right, one row per moment) and factory/1y5exc-dark-pro-welcome-modal/verdict.json. --at t1,t2 adds moments; --quick scores only the keyframes and your --at moments. The rubric itself is judged by a separate vision model after your session ends, criterion by criterion on crop pairs; you cannot run it, so check each criterion by eye with --zoom before you stop.
+
+The checklist (every line must be true of your file; the judge looks at a crop of the clip beside the same crop of your render):
+  c01 [style, page background] Page around the modal is a flat near-black (~#0a0a0a) with no gradient or texture (look at 3.3s)
+  c02 [position, modal] Modal spans x≈400-1040 and y≈106-976 (640x870), horizontally centred in the frame (look at 3.3s)
+  c03 [style, modal] Modal corners are rounded at ~32px radius and the panel has no visible border stroke (look at 3.3s)
+  c04 [style, modal] Lower half of modal (below y≈585) is a flat dark grey ~#1d1d1d, lighter than the page (look at 3.3s)
+  c05 [style, hero area] Hero area (y 106-585) is darker than the lower panel, with a soft vignette; a straight horizontal seam separates it from the lower panel at y≈585 (look at 3.3s)
+  c06 [position, close X] A thin light-grey X close icon, ~18px, centred near (995,150) in the top-right of the modal (look at 3.3s)
+  c07 [present, card reader deck] A matte black trapezoid card-reader deck sits across the hero at y≈461-510, widening from ~497-943 at its top to ~445-995 at its base (look at 3.3s)
+  c08 [style, card slot] The deck has one long thin black rounded slot running ~x486-954 at y≈486 (look at 3.3s)
+  c09 [style, status LED] Small round LED at ~(952,548), ~8px, glowing green after the card has lifted (look at 3.3s)
+  c10 [motion, status LED] LED is amber/orange while the card is still feeding and turns green once the card lifts clear (compare 1s with 2.5s)
+  c11 [text, headline] Headline reads exactly "Welcome to Pro, Denis" (look at 3.3s)
+  c12 [style, headline] Headline is pure white, bold, ~34px, left edge at x≈439 (look at 3.3s)
+  c13 [text, body copy] Body reads "Download packs and assets, insert them in / Figma with the plugin, or let your AI agent fetch / them over MCP." broken over exactly 3 lines at those points (look at 3.3s)
+  c14 [style, body copy] Body copy is mid-grey (~#9a9a9a), clearly dimmer than the white headline, ~24px regular (look at 3.3s)
+  c15 [position, Start exploring button] CTA spans x≈439-1001, y≈810-883 (562x73), aligned with the text column (look at 3.3s)
+  c16 [style, Start exploring button] CTA is a solid white fill with ~14px corner radius (rounded rect, not a full pill) (look at 3.3s)
+  c17 [text, Start exploring button] CTA label reads "Start exploring" in black semibold ~24px, centred at x≈720 (look at 3.3s)
+  c18 [text, Connect your AI agent link] Below the button, centred at x≈720 y≈921, grey text reads "Connect your AI agent" with no button background and no underline (look at 3.3s)
+  c19 [position, holographic PRO card] Floating card spans ≈x495-945, y≈162-447 (≈450x285), its bottom ~15px above the reader deck (look at 3.3s)
+  c20 [style, holographic PRO card] Card corners are rounded at ~16px with a thin bright rim along its edge (look at 3.3s)
+  c21 [style, holographic PRO card] Card material is holographic foil: a pale silver-lilac base with fine horizontal brushed streaks plus a diagonal rainbow band (pink, mint green, violet) running from upper-middle to lower-left (look at 3.3s)
+  c22 [style, holographic PRO card] The rainbow band is soft, grainy and posterised at its edges, NOT a smooth flat linear gradient with crisp hard stripes (look at 5.4s)
+  c23 [style, holographic PRO card] The card has no dark outline or stroke; its edge reads as light catching a rim (look at 3.3s)
+  c24 [imagery, card logo badge] Top-left of the card: a ~36px black circle holding a small white three-leaf sprout glyph at ~(539,206) (look at 3.3s)
+  c25 [text, card PRO label] Top-right of the card reads "PRO" in dark bold caps with wide letter-spacing (look at 3.3s)
+  c26 [text, card name] Lower-left of the card reads "DENIS" in dark bold tracked caps (look at 3.3s)
+  c27 [text, card member line] Under the name it reads "Member since Oct 2026" in smaller dark-grey regular type (look at 3.3s)
+  c28 [text, card plan] Bottom-right of the card reads "Quarterly" in small dark-grey type, baseline level with the member line (look at 3.3s)
+  c29 [present, holographic PRO card] At 0.05s no card is visible: the reader slot is empty (look at 0.05s)
+  c30 [motion, card slot] Between 0.05s and 0.5s a bright white glow appears along the slot, spreading wider than the slot itself, before any card shows (compare 0.05s with 0.3s)
+  c31 [motion, holographic PRO card] The card emerges from the slot top-first: at 0.5s only a ~35px sliver with "PRO" is above the slot; by 1.0s the top is at y≈366 with the logo visible (compare 0.5s with 1s)
+  c32 [motion, holographic PRO card] The card rises in discrete ratchet steps of ~47px (≈0.45, 0.7, 0.95, 1.22, 1.5, 1.75s, each ~100ms), holding still between steps, NOT one smooth slide (compare 0.8s with 1.1s)
+  c33 [motion, holographic PRO card] While feeding, the card's lower part is hidden inside the slot (clipped at the slot line y≈490) and a white glow lights the card where it exits (look at 1.8s)
+  c34 [motion, holographic PRO card] Between 1.8s and 2.25s the card lifts completely out of the slot, top going from y≈209 to ≈154, leaving a dark gap above the deck (compare 1.8s with 2.25s)
+  c35 [motion, holographic PRO card] After lifting, the card shows a small 3D perspective tilt: its top and bottom edges are slightly non-parallel (a few px skew) and the tilt changes over time (compare 2.17s with 2.5s)
+  c36 [motion, holographic PRO card] The rainbow band slides across the card as it tilts: at 4.58s it lies through the card's centre/right, at 5.9s near the top-right corner (compare 4.58s with 5.9s)
+  c37 [motion, holographic PRO card] Card tilt and foil follow the pointer; between 6.95s and 7.45s the band shifts while the card stays within ~10px of its rest box (compare 6.95s with 7.45s)
+  c38 [motion, modal] The headline, body, CTA, link, close X and reader do not move at any point (only the card, the slot glow and the LED change) (compare 2.5s with 9s)
+  c39 [style, holographic PRO card] A soft dark drop shadow sits under the floating card, with no hard edge (look at 3.3s)
+  c40 [style, card reader deck] The reader looks like matte black plastic with a faint top-lip highlight, NOT a glossy or outlined shape (look at 3.3s)
+
+Imagery (what the clip shows that is not plain UI, and the rule for each):
+  - holographic PRO card [495,162,450,285] is css: Membership card in holographic foil: brushed silver-lilac base with a grainy diagonal rainbow band whose position shifts with tilt, carrying the logo, "PRO", "DENIS", "Member since Oct 2026", "Quarterly". Rule: draw it: CSS or inline SVG, exact to the crops (gradients, rings, glass, lenses, spinners, shadows, text art are all drawable)
+  - card reader [445,461,550,124] is css: Matte black 3D card-reader deck with a long slot and a status LED (amber, then green). Rule: draw it: CSS or inline SVG, exact to the crops (gradients, rings, glass, lenses, spinners, shadows, text art are all drawable)
+  - hero vignette [400,106,640,479] is css: Dark radial vignette backdrop behind the reader. Rule: draw it: CSS or inline SVG, exact to the crops (gradients, rings, glass, lenses, spinners, shadows, text art are all drawable)
+  - card logo badge [521,188,36,36] is structured: Black circle with a white three-leaf sprout mark. Rule: draw an original SVG with the same silhouette, weight and colours; it is judged on silhouette and colour, not pixels
+  - slot glow [480,450,480,60] is css: White light bloom along the slot as the card feeds out. Rule: draw it: CSS or inline SVG, exact to the crops (gradients, rings, glass, lenses, spinners, shadows, text art are all drawable)
+
+How to look (this is where rebuilds go wrong)
+- Find what moves with --diff before you decide the timeline: two frames half a second apart, in two or three parts of the clip. The draft's motion rows can be fooled by a thing passing over a region. Then --track the moving edge for its start, end, distance and speed.
+- Track something that should not move. Run --track through the heading with --class dark over the whole clip. If the heading moves when a panel opens or the thing enters, the page is a centred column that reflows, and you copy that layout rule rather than absolute coordinates. If it does not move during a drag, that gesture is a transform, not layout.
+- Zoom before you draw. For every surface, --zoom a 150 x 130 crop of its edge at the rest moment and read it: how thick is the edge, what colour, is there a gap behind it, which side is lit. Then --hex a column through it for the real numbers.
+- Materials are part of the design: a glass ring refracts what is behind it at its rim (the background shifts and a highlight runs along the edge), it is not an outline; a frosted panel shows the picture through it; rims, bevels, inner highlights, the lip under a key, the shade inside a fold. Draw what the crop shows, not what a component library would do.
+- Known ways rebuilds fail, in order of how often: a water ripple or lens drawn as hard concentric rings or a stroked outline, where the clip shows the picture beneath bending softly with a faint crest (build it as displacement or magnification of the background with soft falloff, never as a drawn ring); type dimmer, lighter or a different weight than the clip's; a texture as a flat gradient where the clip has grain; a seam where a patch tiles; a page that does not move while the clip does (the checker says STATIC); a wrong count (spokes, dots, rows, rings); the wrong thing moving (the background drifting when it is the rings that grow); timing read from the stills instead of tracked.
+- Interaction is the design. Whatever the clip's cursor does (hover, click, press, drag) the page must do for a real pointer, with the same response and timing. Test with --drive and Read the screenshots.
+
+Rules for the file
+- The page is exactly the frame: html and body margin 0, overflow hidden, a #stage of 1440 x 1080 px, background #0b0b0b. Set --u: 1px on #stage and write every size as calc(N * var(--u)), including an inline SVG's size (give it a CSS width and height in var(--u), not only width and height attributes) and every length the script sets or animates (calc(${n} * var(--u)), never ${n}px). The site shows the file at any size by changing --u; the checker renders it at half size and fails it if anything stays full size. Nothing outside the stage.
+- Place elements from the keyframes and crops you looked at. The draft boxes are a first pass and the rubric boxes a second: trust your eyes over both. Fills from --hex, exact. Match proportion and hierarchy first, then colour, then motion.
+- Demo mode for the checker: when the URL has ?demo=1 the page replays the clip's sequence on the clip's own timeline (animation-delay for when each move starts, duration and distance from draft.phases, draft.motion and your own probing) as CSS animations or element.animate calls created at load, so the state at t seconds matches the clip at t and the checker can seek it. Without ?demo the page only answers the pointer (a load-time entrance is fine if the clip has one). No JS timers for the timeline. Respect prefers-reduced-motion.
+- Sampling: a texture that is not UI and cannot be drawn (marble, wood, fabric, grain) is taken from the clip with --patch as a tile, cropped where nothing sits on it, at a moment when it is at rest, and tiled, stretched or layered by you; keep each under 60 KB. A photograph, painting or screenshot is a photo-class region and follows its rule above (this entry is licensed: the picture itself may be sampled). Never paste a block with its chrome, text or controls: those you draw. Say in the header comment and in NOTES.md exactly what was sampled or stood in, and from which frame.
+- Fonts only from Google Fonts through a <link>; no other network. Credit the designer in a comment at the top with the source link from brief.json. Keep the file under 500 lines.
+
+What earlier rebuilds got wrong (each failed the judge on real entries; check every one before you call a round done)
+- Glows and washes flat, mis-centred or the wrong strength. A radial glow or colour wash has a centre, a peak colour and a falloff. Agents draw an even tint across the whole element. Find where it is strongest, sample the peak and two points on the way out, and build the gradient from those stops. Halftone and dot fields: match dot size, spacing and where they fade.
+- Text the right words but the wrong width. A substituted or wrongly weighted font sets the same words 5 to 10 percent wider or narrower. Measure the pixel width of one full line in the clip and adjust font-size, weight and letter-spacing until your line matches it within 2 percent. Script and handwritten faces need the right family, not the nearest script.
+- Motion the right kind but the wrong distance or speed. Agents get what moves right and how far wrong: a slide of 88 px built as 19, a rise twice as fast. Track every moving element and read its start, end and timing from the clip. A move is right when its position matches at three moments, not when it looks similar.
+- Library outline icons where the clip has its own glyphs. Agents reach for an outline icon set. The clip's icons are often filled, chunky or glossy, and of a different shape. Match fill against outline, the weight and the silhouette; draw the SVG path from the zoomed frame instead of picking the nearest named icon.
+- Blur used to fake texture or glass. A painting, canvas, grain or foliage is not a blurred gradient, and glass is not a stroked outline. Painted or photographic imagery comes from the clip itself (sampled, under the imagery rule) or is drawn with real texture. Glass shows the background displaced and magnified inside the shape, with a bright rim.
+- Strokes and small marks drawn too thin or too small. Rings, spinners, chevrons, ticks, dashes, dots and outlines come out thinner and smaller than the clip's almost every time: an agent's default is a 1.5 px line icon. Measure the stroke width and the mark's outer size in source pixels and use those numbers. A spinner is usually a thick ring on a faint track, not a thin open arc.
+- Positions and spacing off by tens of pixels. Parts land 20 to 40 px from where the clip has them, and repeated parts get uneven spacing. Read every box from the clip, not by eye: the brief's boxes are a first pass, so confirm each against a frame. Repeated parts (rings, rows, cards) share one pitch; measure it once and step by it.
+- Shapes simplified and small parts dropped. A bubble's tail, an antenna, the gaps in staggered bars, a curved bulge built as a straight wedge, a sliver of an avatar: agents simplify the outline and drop small parts. Before drawing any shape, zoom on it and list its parts; check each part is in your render.
+
+Loop
+1. Read the sheets and two or three --diff pairs for the whole clip. Track the moving edge and the heading. Write the timeline as a list of events with numbers (what, from when to when, how far, which easing), and the layout from --col, --hex and the keyframes. Then build.
+2. Run the checker, read side.png, then --zoom the worst region of the worst moment, the edge of each surface, and every rubric criterion you are not sure of. Fix what the crops show: layout first, then materials, then motion. Run the checker again. Stop when the crops match the clip for every criterion, or after four runs of the checker: more runs past that have not bought anything in earlier entries, and the judge runs when you stop.
+3. --drive the interactions the clip shows and Read the screenshots. Fix what does not answer the pointer.
+4. Write factory/1y5exc-dark-pro-welcome-modal/NOTES.md with three parts: "Timeline" (the event list from step 1, as measured), "Differences" (what still differs, with numbers, and every photo-class region stood in rather than reproduced) and "Pattern" (one thing you learned that applies beyond this entry, written as a design note of 3 to 6 factual sentences under a short name).
+
+Do not create or change any file outside factory/1y5exc-dark-pro-welcome-modal/. Do not run anything other than the probe and the checker.

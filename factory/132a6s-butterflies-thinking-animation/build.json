@@ -1,0 +1,16 @@
+{
+ "model": "Claude Opus 5.5",
+ "modelId": "claude-opus-5-5",
+ "date": "2026-10-24",
+ "run": {
+  "model": "Claude Opus 5.5",
+  "turns": 98,
+  "outputTokens": 59549,
+  "totalTokens": 4646520,
+  "costUsd": 6.43,
+  "minutes": 29.2,
+  "score": 66
+ },
+ "hand": "fixed by hand after 2 judged rounds: the two scouts fade in a little later, so none shows as the loop restarts; rubric 37 of 37 under a three-vote judge, reviewed by eye",
+ "hint": "Watch the swarm gather on the word, then lift off up and to the right."
+}

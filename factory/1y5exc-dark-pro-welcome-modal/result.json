@@ -1,0 +1,192 @@
+{
+ "slug": "1y5exc-dark-pro-welcome-modal",
+ "title": "Dark Pro Welcome Modal",
+ "author": "Craftwork",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "review",
+ "ended": "round limit",
+ "bestRound": 4,
+ "rank": 96,
+ "allPass": false,
+ "rubric": {
+  "pass": 39,
+  "fail": 1,
+  "unsure": 0,
+  "of": 40,
+  "failed": [
+   "c30 Between 0.05s and 0.5s a bright white glow appears along the slot, spreading wider than the slot itself, before any card shows"
+  ]
+ },
+ "score": 87,
+ "motion": "the render changes where the clip changes",
+ "imagery": [
+  {
+   "name": "holographic PRO card",
+   "class": "css",
+   "box": [
+    495,
+    162,
+    450,
+    285
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "card reader",
+   "class": "css",
+   "box": [
+    445,
+    461,
+    550,
+    124
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "hero vignette",
+   "class": "css",
+   "box": [
+    400,
+    106,
+    640,
+    479
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "card logo badge",
+   "class": "structured",
+   "box": [
+    521,
+    188,
+    36,
+    36
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "slot glow",
+   "class": "css",
+   "box": [
+    480,
+    450,
+    480,
+    60
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 31.3,
+   "turns": 78,
+   "costUsd": 4.1960236,
+   "tokens": {
+    "written": 51384,
+    "read": 4263592
+   },
+   "judgeUsd": 0.816,
+   "ended": "budget_exhausted",
+   "score": 87,
+   "rank": 79,
+   "allPass": false,
+   "rubric": {
+    "pass": 35,
+    "fail": 4,
+    "unsure": 1,
+    "of": 40
+   },
+   "motion": "the render stays still in 3 of 23 spans where the clip moves",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 56.2,
+   "turns": 35,
+   "costUsd": 1.0461686000000001,
+   "tokens": {
+    "written": 14122,
+    "read": 1260730
+   },
+   "judgeUsd": 0.447,
+   "ended": "completed",
+   "score": 86,
+   "rank": 84,
+   "allPass": false,
+   "rubric": {
+    "pass": 38,
+    "fail": 0,
+    "unsure": 2,
+    "of": 40
+   },
+   "motion": "the render stays still in 3 of 23 spans where the clip moves",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 70.2,
+   "turns": 5,
+   "costUsd": 2.5748824000000003,
+   "tokens": {
+    "written": 28717,
+    "read": 5538396
+   },
+   "judgeUsd": 0.714,
+   "ended": "completed",
+   "score": 86,
+   "rank": 87,
+   "allPass": false,
+   "rubric": {
+    "pass": 40,
+    "fail": 0,
+    "unsure": 0,
+    "of": 40
+   },
+   "motion": "the render stays still in 1 of 23 spans where the clip moves",
+   "kept": true
+  },
+  {
+   "round": 4,
+   "minutes": 50.2,
+   "turns": 1,
+   "costUsd": 1.3966364000000002,
+   "tokens": {
+    "written": 13299,
+    "read": 2514128
+   },
+   "judgeUsd": 0.525,
+   "ended": "completed",
+   "score": 87,
+   "rank": 96,
+   "allPass": false,
+   "rubric": {
+    "pass": 39,
+    "fail": 1,
+    "unsure": 0,
+    "of": 40
+   },
+   "motion": "the render changes where the clip changes",
+   "kept": true
+  }
+ ],
+ "minutes": 207.9,
+ "tokens": {
+  "written": 107522,
+  "read": 13576846
+ },
+ "cost": {
+  "codingUsd": 9.21,
+  "judgeUsd": 2.5,
+  "rubricUsd": 1.016,
+  "totalUsd": 12.73
+ },
+ "notes": true,
+ "at": "2026-10-23T23:07:33.472Z"
+}

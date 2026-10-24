@@ -1,0 +1,1570 @@
+{
+ "slug": "132a6s-butterflies-thinking-animation",
+ "measured": "draft",
+ "frame": {
+  "w": 1160,
+  "h": 720
+ },
+ "animations": 306,
+ "score": 66,
+ "stills": 77,
+ "motion": 63,
+ "keyframes": [
+  {
+   "keyframe": "0s",
+   "at": 0,
+   "still": false,
+   "score": 77,
+   "overall": 14,
+   "elements": [
+    {
+     "name": "draft 9 #080808",
+     "box": [
+      622,
+      320,
+      16,
+      83
+     ],
+     "reference": "#080808",
+     "yours": "#464646",
+     "delta": 101,
+     "colour": 62,
+     "deltaE": 27.6,
+     "shift": [
+      -4,
+      -2
+     ],
+     "afterShift": 4,
+     "cause": "misplaced: yours sits 4 px right and 2 px below the reference"
+    },
+    {
+     "name": "draft 7 #fdfdfd",
+     "box": [
+      760,
+      333,
+      43,
+      56
+     ],
+     "reference": "#d5d5d5",
+     "yours": "#b4b4b4",
+     "delta": 86,
+     "colour": 33,
+     "deltaE": 12,
+     "shift": [
+      -8,
+      -2
+     ],
+     "afterShift": 21,
+     "cause": "misplaced: yours sits 8 px right and 2 px below the reference"
+    },
+    {
+     "name": "draft 1 #090909",
+     "box": [
+      742,
+      319,
+      78,
+      114
+     ],
+     "reference": "#757575",
+     "yours": "#808080",
+     "delta": 82,
+     "colour": 11,
+     "deltaE": 4.4,
+     "shift": [
+      -8,
+      0
+     ],
+     "afterShift": 35,
+     "cause": "misplaced: yours sits 8 px right the reference"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "D4",
+     "box": [
+      580,
+      360,
+      193,
+      120
+     ],
+     "delta": 61,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    },
+    {
+     "cell": "C4",
+     "box": [
+      580,
+      240,
+      193,
+      120
+     ],
+     "delta": 56,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    },
+    {
+     "cell": "D5",
+     "box": [
+      773,
+      360,
+      193,
+      120
+     ],
+     "delta": 35,
+     "over": [
+      "draft 1 #090909",
+      "draft 7 #fdfdfd"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "kf1",
+   "at": 0.15,
+   "still": true,
+   "score": 77,
+   "overall": 15,
+   "elements": [
+    {
+     "name": "draft 9 #080808",
+     "box": [
+      622,
+      320,
+      16,
+      83
+     ],
+     "reference": "#080808",
+     "yours": "#464646",
+     "delta": 101,
+     "colour": 62,
+     "deltaE": 27.6,
+     "shift": [
+      -4,
+      -2
+     ],
+     "afterShift": 4,
+     "cause": "misplaced: yours sits 4 px right and 2 px below the reference"
+    },
+    {
+     "name": "draft 7 #fdfdfd",
+     "box": [
+      760,
+      333,
+      43,
+      56
+     ],
+     "reference": "#d5d5d5",
+     "yours": "#b4b4b4",
+     "delta": 86,
+     "colour": 33,
+     "deltaE": 12,
+     "shift": [
+      -8,
+      -2
+     ],
+     "afterShift": 21,
+     "cause": "misplaced: yours sits 8 px right and 2 px below the reference"
+    },
+    {
+     "name": "draft 1 #090909",
+     "box": [
+      742,
+      319,
+      78,
+      114
+     ],
+     "reference": "#757575",
+     "yours": "#808080",
+     "delta": 82,
+     "colour": 11,
+     "deltaE": 4.4,
+     "shift": [
+      -8,
+      0
+     ],
+     "afterShift": 35,
+     "cause": "misplaced: yours sits 8 px right the reference"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "D4",
+     "box": [
+      580,
+      360,
+      193,
+      120
+     ],
+     "delta": 61,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    },
+    {
+     "cell": "C4",
+     "box": [
+      580,
+      240,
+      193,
+      120
+     ],
+     "delta": 56,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    },
+    {
+     "cell": "D5",
+     "box": [
+      773,
+      360,
+      193,
+      120
+     ],
+     "delta": 35,
+     "over": [
+      "draft 1 #090909",
+      "draft 7 #fdfdfd"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "0.5s",
+   "at": 0.5,
+   "still": false,
+   "score": 65,
+   "overall": 22,
+   "elements": [
+    {
+     "name": "draft 9 #080808",
+     "box": [
+      622,
+      320,
+      16,
+      83
+     ],
+     "reference": "#080808",
+     "yours": "#464646",
+     "delta": 100,
+     "colour": 62,
+     "deltaE": 27.6,
+     "shift": [
+      -4,
+      -2
+     ],
+     "afterShift": 4,
+     "cause": "misplaced: yours sits 4 px right and 2 px below the reference"
+    },
+    {
+     "name": "draft 7 #fdfdfd",
+     "box": [
+      760,
+      333,
+      43,
+      56
+     ],
+     "reference": "#d5d5d5",
+     "yours": "#b4b4b4",
+     "delta": 86,
+     "colour": 33,
+     "deltaE": 12,
+     "shift": [
+      -8,
+      -2
+     ],
+     "afterShift": 21,
+     "cause": "misplaced: yours sits 8 px right and 2 px below the reference"
+    },
+    {
+     "name": "draft 1 #090909",
+     "box": [
+      742,
+      319,
+      78,
+      114
+     ],
+     "reference": "#757575",
+     "yours": "#808080",
+     "delta": 82,
+     "colour": 11,
+     "deltaE": 4.4,
+     "shift": [
+      -8,
+      0
+     ],
+     "afterShift": 35,
+     "cause": "misplaced: yours sits 8 px right the reference"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "D4",
+     "box": [
+      580,
+      360,
+      193,
+      120
+     ],
+     "delta": 60,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    },
+    {
+     "cell": "C2",
+     "box": [
+      193,
+      240,
+      193,
+      120
+     ],
+     "delta": 56,
+     "over": [
+      "draft 2 #090909",
+      "draft 6 #090909"
+     ]
+    },
+    {
+     "cell": "C4",
+     "box": [
+      580,
+      240,
+      193,
+      120
+     ],
+     "delta": 56,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "0.65s",
+   "at": 0.65,
+   "still": false,
+   "score": 59,
+   "overall": 26,
+   "elements": [
+    {
+     "name": "draft 9 #080808",
+     "box": [
+      622,
+      320,
+      16,
+      83
+     ],
+     "reference": "#080808",
+     "yours": "#464646",
+     "delta": 100,
+     "colour": 62,
+     "deltaE": 27.7,
+     "shift": [
+      -4,
+      -2
+     ],
+     "afterShift": 4,
+     "cause": "misplaced: yours sits 4 px right and 2 px below the reference"
+    },
+    {
+     "name": "draft 7 #fdfdfd",
+     "box": [
+      760,
+      333,
+      43,
+      56
+     ],
+     "reference": "#d5d5d5",
+     "yours": "#b4b4b4",
+     "delta": 86,
+     "colour": 33,
+     "deltaE": 12,
+     "shift": [
+      -8,
+      -2
+     ],
+     "afterShift": 21,
+     "cause": "misplaced: yours sits 8 px right and 2 px below the reference"
+    },
+    {
+     "name": "draft 1 #090909",
+     "box": [
+      742,
+      319,
+      78,
+      114
+     ],
+     "reference": "#757575",
+     "yours": "#808080",
+     "delta": 82,
+     "colour": 11,
+     "deltaE": 4.4,
+     "shift": [
+      -8,
+      0
+     ],
+     "afterShift": 35,
+     "cause": "misplaced: yours sits 8 px right the reference"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "D4",
+     "box": [
+      580,
+      360,
+      193,
+      120
+     ],
+     "delta": 61,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    },
+    {
+     "cell": "C2",
+     "box": [
+      193,
+      240,
+      193,
+      120
+     ],
+     "delta": 59,
+     "over": [
+      "draft 2 #090909",
+      "draft 6 #090909"
+     ]
+    },
+    {
+     "cell": "C4",
+     "box": [
+      580,
+      240,
+      193,
+      120
+     ],
+     "delta": 56,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "1s",
+   "at": 1,
+   "still": false,
+   "score": 51,
+   "overall": 31,
+   "elements": [
+    {
+     "name": "draft 9 #080808",
+     "box": [
+      622,
+      320,
+      16,
+      83
+     ],
+     "reference": "#1c111d",
+     "yours": "#5a666e",
+     "delta": 88,
+     "colour": 76,
+     "deltaE": 37.1,
+     "shift": [
+      -2,
+      2
+     ],
+     "afterShift": 70,
+     "cause": "wrong colour"
+    },
+    {
+     "name": "draft 7 #fdfdfd",
+     "box": [
+      760,
+      333,
+      43,
+      56
+     ],
+     "reference": "#d6d5db",
+     "yours": "#b4b4b4",
+     "delta": 86,
+     "colour": 35,
+     "deltaE": 12.5,
+     "shift": [
+      -8,
+      -2
+     ],
+     "afterShift": 27,
+     "cause": "misplaced: yours sits 8 px right and 2 px below the reference"
+    },
+    {
+     "name": "draft 1 #090909",
+     "box": [
+      742,
+      319,
+      78,
+      114
+     ],
+     "reference": "#807b85",
+     "yours": "#828082",
+     "delta": 83,
+     "colour": 3,
+     "deltaE": 5.3,
+     "shift": [
+      -8,
+      0
+     ],
+     "afterShift": 48,
+     "cause": "different drawing: size, shape or texture"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "D4",
+     "box": [
+      580,
+      360,
+      193,
+      120
+     ],
+     "delta": 71,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    },
+    {
+     "cell": "C4",
+     "box": [
+      580,
+      240,
+      193,
+      120
+     ],
+     "delta": 63,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    },
+    {
+     "cell": "D3",
+     "box": [
+      387,
+      360,
+      193,
+      120
+     ],
+     "delta": 62,
+     "over": [
+      "draft 2 #090909",
+      "draft 3 #080808",
+      "draft 4 #090909",
+      "draft 8 #080808"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "1.72s",
+   "at": 1.72,
+   "still": false,
+   "score": 50,
+   "overall": 31,
+   "elements": [
+    {
+     "name": "draft 8 #080808",
+     "box": [
+      414,
+      320,
+      16,
+      83
+     ],
+     "reference": "#1b1119",
+     "yours": "#506571",
+     "delta": 93,
+     "colour": 74,
+     "deltaE": 37.1,
+     "shift": [
+      0,
+      -8
+     ],
+     "afterShift": 84,
+     "cause": "wrong colour"
+    },
+    {
+     "name": "draft 5 #090909",
+     "box": [
+      657,
+      318,
+      71,
+      85
+     ],
+     "reference": "#a3a19c",
+     "yours": "#938f97",
+     "delta": 78,
+     "colour": 13,
+     "deltaE": 9.2,
+     "shift": [
+      -6,
+      -4
+     ],
+     "afterShift": 68,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #090909",
+     "box": [
+      742,
+      319,
+      78,
+      114
+     ],
+     "reference": "#a19187",
+     "yours": "#979899",
+     "delta": 73,
+     "colour": 12,
+     "deltaE": 9.3,
+     "shift": [
+      -8,
+      6
+     ],
+     "afterShift": 70,
+     "cause": "different drawing: size, shape or texture"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "C3",
+     "box": [
+      387,
+      240,
+      193,
+      120
+     ],
+     "delta": 64,
+     "over": [
+      "draft 2 #090909",
+      "draft 3 #080808",
+      "draft 4 #090909",
+      "draft 8 #080808"
+     ]
+    },
+    {
+     "cell": "D3",
+     "box": [
+      387,
+      360,
+      193,
+      120
+     ],
+     "delta": 60,
+     "over": [
+      "draft 2 #090909",
+      "draft 3 #080808",
+      "draft 4 #090909",
+      "draft 8 #080808"
+     ]
+    },
+    {
+     "cell": "D4",
+     "box": [
+      580,
+      360,
+      193,
+      120
+     ],
+     "delta": 60,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "2.5s",
+   "at": 2.5,
+   "still": false,
+   "score": 52,
+   "overall": 30,
+   "elements": [
+    {
+     "name": "draft 9 #080808",
+     "box": [
+      622,
+      320,
+      16,
+      83
+     ],
+     "reference": "#231f22",
+     "yours": "#464646",
+     "delta": 97,
+     "colour": 37,
+     "deltaE": 17.6,
+     "shift": [
+      -4,
+      -6
+     ],
+     "afterShift": 48,
+     "cause": "misplaced: yours sits 4 px right and 6 px below the reference"
+    },
+    {
+     "name": "draft 5 #090909",
+     "box": [
+      657,
+      318,
+      71,
+      85
+     ],
+     "reference": "#878c87",
+     "yours": "#84878a",
+     "delta": 82,
+     "colour": 4,
+     "deltaE": 5.1,
+     "shift": [
+      -4,
+      -2
+     ],
+     "afterShift": 68,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #090909",
+     "box": [
+      742,
+      319,
+      78,
+      114
+     ],
+     "reference": "#817d7d",
+     "yours": "#84898f",
+     "delta": 81,
+     "colour": 11,
+     "deltaE": 6.7,
+     "shift": [
+      -6,
+      2
+     ],
+     "afterShift": 65,
+     "cause": "different drawing: size, shape or texture"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "C4",
+     "box": [
+      580,
+      240,
+      193,
+      120
+     ],
+     "delta": 72,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    },
+    {
+     "cell": "D4",
+     "box": [
+      580,
+      360,
+      193,
+      120
+     ],
+     "delta": 64,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    },
+    {
+     "cell": "B4",
+     "box": [
+      580,
+      120,
+      193,
+      120
+     ],
+     "delta": 57,
+     "over": []
+    }
+   ]
+  },
+  {
+   "keyframe": "3.2s",
+   "at": 3.2,
+   "still": false,
+   "score": 75,
+   "overall": 16,
+   "elements": [
+    {
+     "name": "draft 9 #080808",
+     "box": [
+      622,
+      320,
+      16,
+      83
+     ],
+     "reference": "#080808",
+     "yours": "#464646",
+     "delta": 98,
+     "colour": 62,
+     "deltaE": 27.7,
+     "shift": [
+      -4,
+      -2
+     ],
+     "afterShift": 3,
+     "cause": "misplaced: yours sits 4 px right and 2 px below the reference"
+    },
+    {
+     "name": "draft 7 #fdfdfd",
+     "box": [
+      760,
+      333,
+      43,
+      56
+     ],
+     "reference": "#d5d5d5",
+     "yours": "#b4b4b4",
+     "delta": 86,
+     "colour": 33,
+     "deltaE": 12,
+     "shift": [
+      -8,
+      -2
+     ],
+     "afterShift": 21,
+     "cause": "misplaced: yours sits 8 px right and 2 px below the reference"
+    },
+    {
+     "name": "draft 1 #090909",
+     "box": [
+      742,
+      319,
+      78,
+      114
+     ],
+     "reference": "#757576",
+     "yours": "#808080",
+     "delta": 81,
+     "colour": 11,
+     "deltaE": 4.3,
+     "shift": [
+      -8,
+      0
+     ],
+     "afterShift": 34,
+     "cause": "misplaced: yours sits 8 px right the reference"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "D4",
+     "box": [
+      580,
+      360,
+      193,
+      120
+     ],
+     "delta": 60,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    },
+    {
+     "cell": "C4",
+     "box": [
+      580,
+      240,
+      193,
+      120
+     ],
+     "delta": 56,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    },
+    {
+     "cell": "D5",
+     "box": [
+      773,
+      360,
+      193,
+      120
+     ],
+     "delta": 36,
+     "over": [
+      "draft 1 #090909",
+      "draft 7 #fdfdfd"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "kf2",
+   "at": 3.95,
+   "still": true,
+   "score": 77,
+   "overall": 14,
+   "elements": [
+    {
+     "name": "draft 9 #080808",
+     "box": [
+      622,
+      320,
+      16,
+      83
+     ],
+     "reference": "#080808",
+     "yours": "#464646",
+     "delta": 98,
+     "colour": 62,
+     "deltaE": 27.7,
+     "shift": [
+      -4,
+      -2
+     ],
+     "afterShift": 3,
+     "cause": "misplaced: yours sits 4 px right and 2 px below the reference"
+    },
+    {
+     "name": "draft 7 #fdfdfd",
+     "box": [
+      760,
+      333,
+      43,
+      56
+     ],
+     "reference": "#d5d5d5",
+     "yours": "#b4b4b4",
+     "delta": 86,
+     "colour": 33,
+     "deltaE": 12,
+     "shift": [
+      -8,
+      -2
+     ],
+     "afterShift": 21,
+     "cause": "misplaced: yours sits 8 px right and 2 px below the reference"
+    },
+    {
+     "name": "draft 1 #090909",
+     "box": [
+      742,
+      319,
+      78,
+      114
+     ],
+     "reference": "#757576",
+     "yours": "#808080",
+     "delta": 81,
+     "colour": 11,
+     "deltaE": 4.4,
+     "shift": [
+      -8,
+      0
+     ],
+     "afterShift": 34,
+     "cause": "misplaced: yours sits 8 px right the reference"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "D4",
+     "box": [
+      580,
+      360,
+      193,
+      120
+     ],
+     "delta": 60,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    },
+    {
+     "cell": "C4",
+     "box": [
+      580,
+      240,
+      193,
+      120
+     ],
+     "delta": 55,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    },
+    {
+     "cell": "D5",
+     "box": [
+      773,
+      360,
+      193,
+      120
+     ],
+     "delta": 36,
+     "over": [
+      "draft 1 #090909",
+      "draft 7 #fdfdfd"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "4.45s",
+   "at": 4.45,
+   "still": false,
+   "score": 77,
+   "overall": 14,
+   "elements": [
+    {
+     "name": "draft 9 #080808",
+     "box": [
+      622,
+      320,
+      16,
+      83
+     ],
+     "reference": "#080808",
+     "yours": "#464646",
+     "delta": 102,
+     "colour": 62,
+     "deltaE": 27.6,
+     "shift": [
+      -4,
+      -2
+     ],
+     "afterShift": 5,
+     "cause": "misplaced: yours sits 4 px right and 2 px below the reference"
+    },
+    {
+     "name": "draft 7 #fdfdfd",
+     "box": [
+      760,
+      333,
+      43,
+      56
+     ],
+     "reference": "#d5d5d5",
+     "yours": "#b4b4b4",
+     "delta": 87,
+     "colour": 33,
+     "deltaE": 11.9,
+     "shift": [
+      -8,
+      -2
+     ],
+     "afterShift": 22,
+     "cause": "misplaced: yours sits 8 px right and 2 px below the reference"
+    },
+    {
+     "name": "draft 1 #090909",
+     "box": [
+      742,
+      319,
+      78,
+      114
+     ],
+     "reference": "#757575",
+     "yours": "#808080",
+     "delta": 82,
+     "colour": 12,
+     "deltaE": 4.6,
+     "shift": [
+      -8,
+      0
+     ],
+     "afterShift": 35,
+     "cause": "misplaced: yours sits 8 px right the reference"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "D4",
+     "box": [
+      580,
+      360,
+      193,
+      120
+     ],
+     "delta": 62,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    },
+    {
+     "cell": "C4",
+     "box": [
+      580,
+      240,
+      193,
+      120
+     ],
+     "delta": 56,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    },
+    {
+     "cell": "D5",
+     "box": [
+      773,
+      360,
+      193,
+      120
+     ],
+     "delta": 35,
+     "over": [
+      "draft 1 #090909",
+      "draft 7 #fdfdfd"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "5.97s",
+   "at": 5.97,
+   "still": false,
+   "score": 51,
+   "overall": 31,
+   "elements": [
+    {
+     "name": "draft 5 #090909",
+     "box": [
+      657,
+      318,
+      71,
+      85
+     ],
+     "reference": "#a3a19a",
+     "yours": "#8e969d",
+     "delta": 80,
+     "colour": 12,
+     "deltaE": 10.1,
+     "shift": [
+      -6,
+      -4
+     ],
+     "afterShift": 70,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 1 #090909",
+     "box": [
+      742,
+      319,
+      78,
+      114
+     ],
+     "reference": "#a09483",
+     "yours": "#919396",
+     "delta": 78,
+     "colour": 12,
+     "deltaE": 12.4,
+     "shift": [
+      -8,
+      4
+     ],
+     "afterShift": 69,
+     "cause": "different drawing: size, shape or texture"
+    },
+    {
+     "name": "draft 8 #080808",
+     "box": [
+      414,
+      320,
+      16,
+      83
+     ],
+     "reference": "#482845",
+     "yours": "#4d4a65",
+     "delta": 75,
+     "colour": 24,
+     "deltaE": 17,
+     "shift": [
+      -4,
+      6
+     ],
+     "afterShift": 68,
+     "cause": "different drawing: size, shape or texture"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "C2",
+     "box": [
+      193,
+      240,
+      193,
+      120
+     ],
+     "delta": 61,
+     "over": [
+      "draft 2 #090909",
+      "draft 6 #090909"
+     ]
+    },
+    {
+     "cell": "C3",
+     "box": [
+      387,
+      240,
+      193,
+      120
+     ],
+     "delta": 61,
+     "over": [
+      "draft 2 #090909",
+      "draft 3 #080808",
+      "draft 4 #090909",
+      "draft 8 #080808"
+     ]
+    },
+    {
+     "cell": "D4",
+     "box": [
+      580,
+      360,
+      193,
+      120
+     ],
+     "delta": 61,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "7.47s",
+   "at": 7.47,
+   "still": false,
+   "score": 71,
+   "overall": 18,
+   "elements": [
+    {
+     "name": "draft 9 #080808",
+     "box": [
+      622,
+      320,
+      16,
+      83
+     ],
+     "reference": "#080708",
+     "yours": "#464646",
+     "delta": 94,
+     "colour": 63,
+     "deltaE": 27.7,
+     "shift": [
+      -4,
+      -2
+     ],
+     "afterShift": 4,
+     "cause": "misplaced: yours sits 4 px right and 2 px below the reference"
+    },
+    {
+     "name": "draft 7 #fdfdfd",
+     "box": [
+      760,
+      333,
+      43,
+      56
+     ],
+     "reference": "#d1dad8",
+     "yours": "#b4b4b4",
+     "delta": 82,
+     "colour": 35,
+     "deltaE": 13.3,
+     "shift": [
+      -8,
+      0
+     ],
+     "afterShift": 31,
+     "cause": "misplaced: yours sits 8 px right the reference"
+    },
+    {
+     "name": "draft 1 #090909",
+     "box": [
+      742,
+      319,
+      78,
+      114
+     ],
+     "reference": "#75777b",
+     "yours": "#808080",
+     "delta": 80,
+     "colour": 9,
+     "deltaE": 4.2,
+     "shift": [
+      -6,
+      2
+     ],
+     "afterShift": 39,
+     "cause": "misplaced: yours sits 6 px right and 2 px above the reference"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "C4",
+     "box": [
+      580,
+      240,
+      193,
+      120
+     ],
+     "delta": 61,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    },
+    {
+     "cell": "D4",
+     "box": [
+      580,
+      360,
+      193,
+      120
+     ],
+     "delta": 60,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    },
+    {
+     "cell": "D5",
+     "box": [
+      773,
+      360,
+      193,
+      120
+     ],
+     "delta": 36,
+     "over": [
+      "draft 1 #090909",
+      "draft 7 #fdfdfd"
+     ]
+    }
+   ]
+  },
+  {
+   "keyframe": "kf3",
+   "at": 8.1,
+   "still": true,
+   "score": 77,
+   "overall": 15,
+   "elements": [
+    {
+     "name": "draft 9 #080808",
+     "box": [
+      622,
+      320,
+      16,
+      83
+     ],
+     "reference": "#070707",
+     "yours": "#464646",
+     "delta": 97,
+     "colour": 63,
+     "deltaE": 27.7,
+     "shift": [
+      -4,
+      -2
+     ],
+     "afterShift": 4,
+     "cause": "misplaced: yours sits 4 px right and 2 px below the reference"
+    },
+    {
+     "name": "draft 7 #fdfdfd",
+     "box": [
+      760,
+      333,
+      43,
+      56
+     ],
+     "reference": "#d5d5d5",
+     "yours": "#b4b4b4",
+     "delta": 86,
+     "colour": 33,
+     "deltaE": 12,
+     "shift": [
+      -8,
+      -2
+     ],
+     "afterShift": 21,
+     "cause": "misplaced: yours sits 8 px right and 2 px below the reference"
+    },
+    {
+     "name": "draft 1 #090909",
+     "box": [
+      742,
+      319,
+      78,
+      114
+     ],
+     "reference": "#757575",
+     "yours": "#808080",
+     "delta": 83,
+     "colour": 11,
+     "deltaE": 4.5,
+     "shift": [
+      -8,
+      0
+     ],
+     "afterShift": 35,
+     "cause": "misplaced: yours sits 8 px right the reference"
+    }
+   ],
+   "regions": [
+    {
+     "cell": "D4",
+     "box": [
+      580,
+      360,
+      193,
+      120
+     ],
+     "delta": 61,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    },
+    {
+     "cell": "C4",
+     "box": [
+      580,
+      240,
+      193,
+      120
+     ],
+     "delta": 56,
+     "over": [
+      "draft 1 #090909",
+      "draft 3 #080808",
+      "draft 5 #090909",
+      "draft 7 #fdfdfd",
+      "draft 9 #080808"
+     ]
+    },
+    {
+     "cell": "D5",
+     "box": [
+      773,
+      360,
+      193,
+      120
+     ],
+     "delta": 35,
+     "over": [
+      "draft 1 #090909",
+      "draft 7 #fdfdfd"
+     ]
+    }
+   ]
+  }
+ ],
+ "runs": 24,
+ "at": "2026-10-24T01:43:50.249Z",
+ "rank": 93,
+ "allPass": true,
+ "rubric": {
+  "pass": 37,
+  "fail": 0,
+  "unsure": 0,
+  "of": 37
+ }
+}

@@ -1,0 +1,234 @@
+{
+ "slug": "s9yg0m-hanging-team-profile-cards",
+ "title": "Hanging Team Profile Cards",
+ "author": "Hayriye",
+ "model": "opus",
+ "judgeModel": "sonnet",
+ "bucket": "review",
+ "ended": "round limit",
+ "bestRound": 3,
+ "rank": 83,
+ "allPass": false,
+ "rubric": {
+  "pass": 41,
+  "fail": 1,
+  "unsure": 1,
+  "of": 43,
+  "failed": [
+   "c14 At rest each card is slightly rotated, not square: card 1 \u2248\u22122\u00b0 (right side higher), card 2 \u2248+1\u00b0, card 3 \u2248\u22121\u00b0, card 4 \u2248+1.5\u00b0"
+  ],
+  "counted": 43
+ },
+ "score": 79,
+ "motion": "the render stays still in 3 of 17 spans where the clip moves",
+ "imagery": [
+  {
+   "name": "Maya Bennett avatar",
+   "class": "photo",
+   "box": [
+    162,
+    402,
+    256,
+    228
+   ],
+   "reproduced": true,
+   "how": "sampled under licence"
+  },
+  {
+   "name": "Leo Carter avatar",
+   "class": "photo",
+   "box": [
+    478,
+    485,
+    255,
+    225
+   ],
+   "reproduced": true,
+   "how": "sampled under licence"
+  },
+  {
+   "name": "Noah Williams avatar",
+   "class": "photo",
+   "box": [
+    822,
+    443,
+    253,
+    225
+   ],
+   "reproduced": true,
+   "how": "sampled under licence"
+  },
+  {
+   "name": "Amina Yusuf avatar",
+   "class": "photo",
+   "box": [
+    1137,
+    481,
+    256,
+    228
+   ],
+   "reproduced": true,
+   "how": "sampled under licence"
+  },
+  {
+   "name": "holographic card back",
+   "class": "css",
+   "box": [
+    770,
+    397,
+    313,
+    425
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  },
+  {
+   "name": "back avatar thumbnails",
+   "class": "photo",
+   "box": [
+    808,
+    455,
+    44,
+    44
+   ],
+   "reproduced": true,
+   "how": "sampled under licence"
+  },
+  {
+   "name": "QR code",
+   "class": "structured",
+   "box": [
+    982,
+    722,
+    64,
+    60
+   ],
+   "reproduced": true,
+   "how": "original SVG"
+  },
+  {
+   "name": "wire, beads, strings, clips",
+   "class": "css",
+   "box": [
+    247,
+    300,
+    1064,
+    155
+   ],
+   "reproduced": true,
+   "how": "drawn"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 1,
+   "minutes": 20.8,
+   "turns": 61,
+   "costUsd": 3.6839091999999996,
+   "tokens": {
+    "written": 45053,
+    "read": 3100756
+   },
+   "judgeUsd": 1.06,
+   "ended": "completed",
+   "score": 75,
+   "rank": 75,
+   "allPass": false,
+   "rubric": {
+    "pass": 37,
+    "fail": 5,
+    "unsure": 1,
+    "of": 43
+   },
+   "motion": "the render stays still in 4 of 17 spans where the clip moves",
+   "kept": true
+  },
+  {
+   "round": 2,
+   "minutes": 16,
+   "turns": 56,
+   "costUsd": 2.1226842,
+   "tokens": {
+    "written": 23844,
+    "read": 3236700
+   },
+   "judgeUsd": 0.991,
+   "ended": "completed",
+   "score": 78,
+   "rank": 77,
+   "allPass": false,
+   "rubric": {
+    "pass": 38,
+    "fail": 3,
+    "unsure": 2,
+    "of": 43
+   },
+   "motion": "the render stays still in 4 of 17 spans where the clip moves",
+   "kept": true
+  },
+  {
+   "round": 3,
+   "minutes": 13.8,
+   "turns": 35,
+   "costUsd": 1.1212026000000002,
+   "tokens": {
+    "written": 10542,
+    "read": 1601993
+   },
+   "judgeUsd": 1.055,
+   "ended": "completed",
+   "score": 79,
+   "rank": 83,
+   "allPass": false,
+   "rubric": {
+    "pass": 41,
+    "fail": 1,
+    "unsure": 1,
+    "of": 43
+   },
+   "motion": "the render stays still in 3 of 17 spans where the clip moves",
+   "kept": true
+  },
+  {
+   "round": 4,
+   "minutes": 13.3,
+   "turns": 19,
+   "costUsd": 0.9287244000000001,
+   "tokens": {
+    "written": 7666,
+    "read": 1105697
+   },
+   "judgeUsd": 0.685,
+   "ended": "completed",
+   "score": 79,
+   "rank": 79,
+   "allPass": false,
+   "rubric": {
+    "pass": 39,
+    "fail": 3,
+    "unsure": 1,
+    "of": 43
+   },
+   "motion": "the render stays still in 3 of 17 spans where the clip moves",
+   "kept": false
+  }
+ ],
+ "minutes": 63.9,
+ "tokens": {
+  "written": 87105,
+  "read": 9045146
+ },
+ "cost": {
+  "codingUsd": 7.86,
+  "judgeUsd": 3.79,
+  "rubricUsd": 0.798,
+  "totalUsd": 12.45
+ },
+ "notes": true,
+ "at": "2026-10-23T19:10:25.208Z",
+ "handFix": {
+  "on": "2026-10-24",
+  "what": "the strings 2 px and the wire darker, measured from the clip",
+  "judge": "41/43 pass, 1 fail, 1 unsure, 3 votes"
+ }
+}
